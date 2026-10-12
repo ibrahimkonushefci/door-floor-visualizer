@@ -1,0 +1,25 @@
+{
+  "presentation": {
+    "ms": 0.699999988079071,
+    "selection": {
+      "doorFinishId": "kashmir",
+      "doorProductId": "dera-bardhe",
+      "floorProductId": "lis-natyral-10",
+      "floorRotationDeg": 0,
+      "frameMode": "door",
+      "sceneId": "living-standard",
+      "skirtingMode": "floor",
+      "version": 1
+    },
+    "width": 712
+  },
+  "timing": {
+    "cacheHit": true,
+    "mode": "cache",
+    "ms": 0,
+    "prepareMs": 0,
+    "quality": "settled",
+    "renderMs": 0,
+    "textureBytes": 5081460
+  }
+}

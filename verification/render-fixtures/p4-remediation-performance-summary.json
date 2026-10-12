@@ -1,0 +1,50 @@
+{
+  "metric": "request handler to final canvas draw submission; browser paint not separately measured",
+  "environment": "Codex In-app Browser macOS arm64 DPR1; request to canvas submission, not physical phone",
+  "warm": {
+    "n": 20,
+    "p50": 118.19999998807909,
+    "p95": 123.80000001192091,
+    "max": 125.69999998807909,
+    "allLatestSelections": true,
+    "allFinalQuality": true,
+    "allUncached": true
+  },
+  "initial": {
+    "presentation": 319.5,
+    "cacheHit": false,
+    "mode": "worker",
+    "ms": 318.39999997615814,
+    "prepareMs": 178,
+    "quality": "settled",
+    "renderMs": 140.39999997615814,
+    "textureBytes": 870792
+  },
+  "cache": {
+    "presentation": {
+      "ms": 0.699999988079071,
+      "selection": {
+        "doorFinishId": "kashmir",
+        "doorProductId": "dera-bardhe",
+        "floorProductId": "lis-natyral-10",
+        "floorRotationDeg": 0,
+        "frameMode": "door",
+        "sceneId": "living-standard",
+        "skirtingMode": "floor",
+        "version": 1
+      },
+      "width": 712
+    },
+    "timing": {
+      "cacheHit": true,
+      "mode": "cache",
+      "ms": 0,
+      "prepareMs": 0,
+      "quality": "settled",
+      "renderMs": 0,
+      "textureBytes": 5081460
+    }
+  },
+  "physicalPhone": "pending",
+  "visiblePreviewMetric": "retired"
+}

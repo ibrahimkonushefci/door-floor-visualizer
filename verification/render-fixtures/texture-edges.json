@@ -1,0 +1,83 @@
+{
+  "note": "Grayscale albedo/board-edge differences are diagnostics, not an automatic seamlessness pass. Repeats retain native aspect.",
+  "results": [
+    {
+      "path": "/media/textures/floors/lis-natyral-10/atlas.png",
+      "repeatEvidence": "floors-lis-natyral-10-atlas-3x3.png",
+      "leftRightMeanByteDifference": 9.226107226107226,
+      "topBottomMeanByteDifference": 15.428059895833334
+    },
+    {
+      "path": "/media/textures/floors/lis-natyral-10/trim.png",
+      "repeatEvidence": "floors-lis-natyral-10-trim-3x3.png",
+      "leftRightMeanByteDifference": 12.295833333333334,
+      "topBottomMeanByteDifference": 15.888888888888888
+    },
+    {
+      "path": "/media/textures/floors/dushk-fshatar-8/atlas.png",
+      "repeatEvidence": "floors-dushk-fshatar-8-atlas-3x3.png",
+      "leftRightMeanByteDifference": 9.125230202578269,
+      "topBottomMeanByteDifference": 15.4404296875
+    },
+    {
+      "path": "/media/textures/floors/dushk-fshatar-8/trim.png",
+      "repeatEvidence": "floors-dushk-fshatar-8-trim-3x3.png",
+      "leftRightMeanByteDifference": 12.295833333333334,
+      "topBottomMeanByteDifference": 15.888888888888888
+    },
+    {
+      "path": "/media/textures/floors/peshk-natyral-12/atlas.png",
+      "repeatEvidence": "floors-peshk-natyral-12-atlas-3x3.png",
+      "leftRightMeanByteDifference": 15.39422510312316,
+      "topBottomMeanByteDifference": 15.929876252209782
+    },
+    {
+      "path": "/media/textures/floors/peshk-natyral-12/trim.png",
+      "repeatEvidence": "floors-peshk-natyral-12-trim-3x3.png",
+      "leftRightMeanByteDifference": 12.295833333333334,
+      "topBottomMeanByteDifference": 15.888888888888888
+    },
+    {
+      "path": "/media/textures/floors/arre-klasike-12/atlas.png",
+      "repeatEvidence": "floors-arre-klasike-12-atlas-3x3.png",
+      "leftRightMeanByteDifference": 6.741258741258741,
+      "topBottomMeanByteDifference": 9.720540364583334
+    },
+    {
+      "path": "/media/textures/floors/arre-klasike-12/trim.png",
+      "repeatEvidence": "floors-arre-klasike-12-trim-3x3.png",
+      "leftRightMeanByteDifference": 10.012500000000001,
+      "topBottomMeanByteDifference": 11.28277777777778
+    },
+    {
+      "path": "/media/textures/floors/hirte-skandinave-8/atlas.png",
+      "repeatEvidence": "floors-hirte-skandinave-8-atlas-3x3.png",
+      "leftRightMeanByteDifference": 11.118881118881118,
+      "topBottomMeanByteDifference": 13.368001302083334
+    },
+    {
+      "path": "/media/textures/floors/hirte-skandinave-8/trim.png",
+      "repeatEvidence": "floors-hirte-skandinave-8-trim-3x3.png",
+      "leftRightMeanByteDifference": 7.583333333333333,
+      "topBottomMeanByteDifference": 10.99888888888889
+    },
+    {
+      "path": "/media/textures/doors/lis-natyral.png",
+      "repeatEvidence": "doors-lis-natyral-3x3.png",
+      "leftRightMeanByteDifference": 13.715217391304348,
+      "topBottomMeanByteDifference": 16.430193236714974
+    },
+    {
+      "path": "/media/textures/doors/arre-erret.png",
+      "repeatEvidence": "doors-arre-erret-3x3.png",
+      "leftRightMeanByteDifference": 11.316666666666668,
+      "topBottomMeanByteDifference": 12.03792270531401
+    },
+    {
+      "path": "/media/textures/doors/dushk-hirte.png",
+      "repeatEvidence": "doors-dushk-hirte-3x3.png",
+      "leftRightMeanByteDifference": 7.808695652173913,
+      "topBottomMeanByteDifference": 13.564975845410629
+    }
+  ]
+}

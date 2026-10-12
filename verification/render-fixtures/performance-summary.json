@@ -1,0 +1,20 @@
+{
+  "hardware": "macOS arm64 desktop, Codex In-app Browser; no physical phone",
+  "sampleContext": "Warm and material-change runs at768x1024 CSS viewport, preview<=480 and settled<=960; first cold sample retained separately in raw list. Includes preparation/decode; cache hits emit no timing.",
+  "results": [
+    {
+      "quality": "preview",
+      "n": 20,
+      "p95Ms": 199.19999998807907,
+      "minMs": 154,
+      "maxMs": 308.19999998807907
+    },
+    {
+      "quality": "settled",
+      "n": 20,
+      "p95Ms": 315.5999999642372,
+      "minMs": 257.69999998807907,
+      "maxMs": 317.39999997615814
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "porta-dysheme",
+  "companyName": "Porta & Dysheme",
+  "shortName": "Porta & Dysheme",
+  "tagline": {
+    "sq": "Dyer të brendshme dhe dysheme cilësore në Kosovë",
+    "en": "Quality interior doors and flooring in Kosovo",
+    "de": "Qualitätstüren und Böden im Kosovo"
+  },
+  "logo": {
+    "src": "/brand/logo.svg",
+    "width": 28,
+    "height": 28,
+    "alt": {
+      "sq": "Porta & Dysheme",
+      "en": "Porta & Dysheme",
+      "de": "Porta & Dysheme"
+    }
+  },
+  "favicon": "/brand/favicon.svg",
+  "colors": {
+    "primary": "#202421",
+    "accent": "#A37D52",
+    "background": "#F7F5F0"
+  },
+  "contact": {
+    "phone": "+38344000000",
+    "whatsapp": "+38344000000",
+    "viber": "+38344000000"
+  },
+  "siteUrl": null,
+  "city": {
+    "sq": "Prishtinë",
+    "en": "Prishtina",
+    "de": "Pristina"
+  },
+  "locales": [
+    "sq",
+    "en",
+    "de"
+  ],
+  "defaultLocale": "sq",
+  "demoMode": true,
+  "demoNotice": {
+    "sq": "Demonstrim — të dhëna ilustruese",
+    "en": "Demo — illustrative data",
+    "de": "Demo — illustrative Angaben"
+  },
+  "catalogVersion": "phase-1",
+  "offline": {
+    "enabled": false,
+    "maxStudioDownloadBytes": 20971520
+  }
+}

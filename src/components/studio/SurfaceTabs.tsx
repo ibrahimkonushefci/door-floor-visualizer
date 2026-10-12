@@ -1,0 +1,2 @@
+import type { Messages } from '@/lib/i18n/messages';
+export function SurfaceTabs({value,onChange,messages:m}:{value:'door'|'floor';onChange:(v:'door'|'floor')=>void;messages:Messages}){return <div className="surface-tabs" role="group" aria-label={m['studio.surface']}>{(['door','floor'] as const).map(v=><button key={v} aria-pressed={value===v} onClick={()=>onChange(v)}>{m[`studio.${v}`]}</button>)}</div>;}

@@ -1,0 +1,12 @@
+import { describe,it,expect } from 'vitest';
+import { mkdtemp,writeFile,mkdir,rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { resolve } from 'node:path';
+import { createExportServer,resolveExportPath } from '../scripts/serve-export.mjs';
+describe('static path resolution and real status codes',()=>{
+ it('resolves encoded Unicode, query/fragment and relative CSS references',()=>{expect(resolveExportPath('/tmp/out','/media/der%C3%AB.webp?rev=abc#x')).toBe('/tmp/out/media/derë.webp');expect(resolveExportPath('/tmp/out','font.woff2','/_next/static/fonts/style.css')).toBe('/tmp/out/_next/static/fonts/font.woff2');expect(resolveExportPath('/tmp/out','/sq/?saved=1')).toBe('/tmp/out/sq');});
+ it.each(['/../secret','/%2e%2e/secret','/media/%2e%2e/secret','/bad%00file','/%ZZ','/foo%5cbar'])('rejects %s',v=>expect(()=>resolveExportPath('/tmp/out',v)).toThrow());
+ it('allows relative font parents inside out but rejects escaping root',()=>{expect(resolveExportPath('/tmp/out','../media/font.woff2','/_next/static/chunks/style.css')).toBe('/tmp/out/_next/static/media/font.woff2');expect(()=>resolveExportPath('/tmp/out','../../../secret','/sq/')).toThrow();});
+ it('distinguishes remote references',()=>expect(resolveExportPath('/tmp/out','https://example.com')).toBeNull());
+ it('serves directory pages, HEAD, real 404 and rejects traversal',async()=>{const root=await mkdtemp(resolve(tmpdir(),'pd-export-'));await mkdir(resolve(root,'sq'));await writeFile(resolve(root,'sq/index.html'),'SQ');await writeFile(resolve(root,'404.html'),'NOT FOUND');const server=createExportServer(root);await new Promise<void>(done=>server.listen(0,'127.0.0.1',done));try{const addr=server.address();if(!addr||typeof addr==='string')throw new Error('No address');const base=`http://127.0.0.1:${addr.port}`;expect(await (await fetch(base+'/sq/?x=1')).text()).toBe('SQ');const missing=await fetch(base+'/fr/');expect(missing.status).toBe(404);expect(await missing.text()).toBe('NOT FOUND');const missingAsset=await fetch(base+'/missing.js');expect(missingAsset.status).toBe(404);expect(missingAsset.headers.get('content-type')).toContain('text/plain');expect(await missingAsset.text()).toBe('Not found');expect(await (await fetch(base+'/sq/',{method:'HEAD'})).text()).toBe('');expect((await fetch(base+'/sq/',{method:'POST'})).status).toBe(405);expect((await fetch(base+'/%2e%2e%2fsecret')).status).toBe(400);}finally{await new Promise<void>(done=>server.close(()=>done()));await rm(root,{recursive:true});}});
+});

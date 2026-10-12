@@ -1,0 +1,582 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "source": "brand/assets/scenes/living-standard/base.png",
+      "output": "/media/scenes/living-standard/base.webp",
+      "sha256": "815df7ff40c8c23dd2b9353514b0c26dec7b468ec652d02c1a176079f3612988",
+      "sourceSha256": "0d75a8bae67dc84db8f1c759a91b45f44798474be3cf5d75a3ee439404d37398",
+      "bytes": 46398,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/floor-diffuse.png",
+      "output": "/media/scenes/living-standard/floor-diffuse.png",
+      "sha256": "2b0bed23354bbfca9a02939d2d98de9c44677c1af7cc13d7335421a41308694e",
+      "sourceSha256": "2b0bed23354bbfca9a02939d2d98de9c44677c1af7cc13d7335421a41308694e",
+      "bytes": 350931,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/floor-mask.png",
+      "output": "/media/scenes/living-standard/floor-mask.png",
+      "sha256": "7faa28a153aff2c580299eeaf9f40461098184feeb69b9d9a5c497843791cdae",
+      "sourceSha256": "7faa28a153aff2c580299eeaf9f40461098184feeb69b9d9a5c497843791cdae",
+      "bytes": 31551,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/frame-left-diffuse.png",
+      "output": "/media/scenes/living-standard/frame-left-diffuse.png",
+      "sha256": "12f2d3eca4967b82c2c9c694305b1a789d47bdd1443d80a12ac7b8fa788299d4",
+      "sourceSha256": "12f2d3eca4967b82c2c9c694305b1a789d47bdd1443d80a12ac7b8fa788299d4",
+      "bytes": 56656,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/frame-left-mask.png",
+      "output": "/media/scenes/living-standard/frame-left-mask.png",
+      "sha256": "9f109151b025712149cc2fd68dbbbdb4dffda0faeba0714269557eb93d93dab9",
+      "sourceSha256": "9f109151b025712149cc2fd68dbbbdb4dffda0faeba0714269557eb93d93dab9",
+      "bytes": 41639,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/frame-right-diffuse.png",
+      "output": "/media/scenes/living-standard/frame-right-diffuse.png",
+      "sha256": "dd284ce24d7b5ee6e5c57c91101644c9fa0ce03063c517ec02005dc71c1a9920",
+      "sourceSha256": "dd284ce24d7b5ee6e5c57c91101644c9fa0ce03063c517ec02005dc71c1a9920",
+      "bytes": 54853,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/frame-right-mask.png",
+      "output": "/media/scenes/living-standard/frame-right-mask.png",
+      "sha256": "5aea50a50d33b880a49d9e72d30b735b4852b717066f5506f365f7f37a08dc7a",
+      "sourceSha256": "5aea50a50d33b880a49d9e72d30b735b4852b717066f5506f365f7f37a08dc7a",
+      "bytes": 42199,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/frame-top-diffuse.png",
+      "output": "/media/scenes/living-standard/frame-top-diffuse.png",
+      "sha256": "47c2dac705022463b34fe7a8ddd6cfd103c8493505124183d2226ef0117c665d",
+      "sourceSha256": "47c2dac705022463b34fe7a8ddd6cfd103c8493505124183d2226ef0117c665d",
+      "bytes": 46432,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/frame-top-mask.png",
+      "output": "/media/scenes/living-standard/frame-top-mask.png",
+      "sha256": "99620a15a49a3391ac38c37144b058a5afa2f7abc7efd0102327123678456881",
+      "sourceSha256": "99620a15a49a3391ac38c37144b058a5afa2f7abc7efd0102327123678456881",
+      "bytes": 39844,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/leaf-diffuse.png",
+      "output": "/media/scenes/living-standard/leaf-diffuse.png",
+      "sha256": "c7c773c3e5666516ed4a5daafb9d95f6866e1da50149093b52398f621aa02c5e",
+      "sourceSha256": "c7c773c3e5666516ed4a5daafb9d95f6866e1da50149093b52398f621aa02c5e",
+      "bytes": 135683,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/leaf-mask.png",
+      "output": "/media/scenes/living-standard/leaf-mask.png",
+      "sha256": "80943dd047d4a04d4b7b00f2e8c4da9dacfdd0e244391347f1f6d434b990a65b",
+      "sourceSha256": "80943dd047d4a04d4b7b00f2e8c4da9dacfdd0e244391347f1f6d434b990a65b",
+      "bytes": 40880,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/protected-mask.png",
+      "output": "/media/scenes/living-standard/protected-mask.png",
+      "sha256": "e9b054d9f253d88a66748a8ada816daa1c4458dae18c5fdc997df7ab0e41c242",
+      "sourceSha256": "e9b054d9f253d88a66748a8ada816daa1c4458dae18c5fdc997df7ab0e41c242",
+      "bytes": 41296,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/skirting-back-left-diffuse.png",
+      "output": "/media/scenes/living-standard/skirting-back-left-diffuse.png",
+      "sha256": "0c7b9b81c33bf83189075dd2acb9c916b3f022ea11e53ea4a1fbbdcfb4bb06d4",
+      "sourceSha256": "0c7b9b81c33bf83189075dd2acb9c916b3f022ea11e53ea4a1fbbdcfb4bb06d4",
+      "bytes": 54304,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/skirting-back-left-mask.png",
+      "output": "/media/scenes/living-standard/skirting-back-left-mask.png",
+      "sha256": "050aaebc96dc4e608add680ea7e4468d77a8121ef4b8e6c7b680066a73891939",
+      "sourceSha256": "050aaebc96dc4e608add680ea7e4468d77a8121ef4b8e6c7b680066a73891939",
+      "bytes": 39748,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/skirting-back-right-diffuse.png",
+      "output": "/media/scenes/living-standard/skirting-back-right-diffuse.png",
+      "sha256": "b275c269d273dd211fa4d4bbbc72d3b89981e5536c7966684859be105a20aac4",
+      "sourceSha256": "b275c269d273dd211fa4d4bbbc72d3b89981e5536c7966684859be105a20aac4",
+      "bytes": 45925,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/skirting-back-right-mask.png",
+      "output": "/media/scenes/living-standard/skirting-back-right-mask.png",
+      "sha256": "2517b8f76196a7eefcaf046453ca310ee2e64296f792bd0c509e0a39b29e906a",
+      "sourceSha256": "2517b8f76196a7eefcaf046453ca310ee2e64296f792bd0c509e0a39b29e906a",
+      "bytes": 39902,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/skirting-left-diffuse.png",
+      "output": "/media/scenes/living-standard/skirting-left-diffuse.png",
+      "sha256": "9d8152a94ed1859ead63eb3758661b5db2ebe885294403686d12d16f864f8b7d",
+      "sourceSha256": "9d8152a94ed1859ead63eb3758661b5db2ebe885294403686d12d16f864f8b7d",
+      "bytes": 17777,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/skirting-left-mask.png",
+      "output": "/media/scenes/living-standard/skirting-left-mask.png",
+      "sha256": "4073c704f11478db0d45bb3a51465044dd3a46d98aac2bead7deab96b98b7245",
+      "sourceSha256": "4073c704f11478db0d45bb3a51465044dd3a46d98aac2bead7deab96b98b7245",
+      "bytes": 39854,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/skirting-right-diffuse.png",
+      "output": "/media/scenes/living-standard/skirting-right-diffuse.png",
+      "sha256": "a76fad123a03449e1b571a224117906159b520743913d33d6fa9e71d7fb56266",
+      "sourceSha256": "a76fad123a03449e1b571a224117906159b520743913d33d6fa9e71d7fb56266",
+      "bytes": 46378,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/skirting-right-mask.png",
+      "output": "/media/scenes/living-standard/skirting-right-mask.png",
+      "sha256": "8b80ab7e2a84c8129ac4e625246bb866705ef0ec27281264d9185572b724f54a",
+      "sourceSha256": "8b80ab7e2a84c8129ac4e625246bb866705ef0ec27281264d9185572b724f54a",
+      "bytes": 41062,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/smoke-glass-black-mask.png",
+      "output": "/media/scenes/living-standard/smoke-glass-black-mask.png",
+      "sha256": "0f1bc582764a0b2ae37d5dbd0feb45500510bdc5b67dce464e10fe041897b683",
+      "sourceSha256": "0f1bc582764a0b2ae37d5dbd0feb45500510bdc5b67dce464e10fe041897b683",
+      "bytes": 40381,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/smoke-glass-black-protected-mask.png",
+      "output": "/media/scenes/living-standard/smoke-glass-black-protected-mask.png",
+      "sha256": "2f9024908e8cd423024a3632b3856657f89c4d64c4596203ef705dd349f71756",
+      "sourceSha256": "2f9024908e8cd423024a3632b3856657f89c4d64c4596203ef705dd349f71756",
+      "bytes": 39701,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/smoke-glass-black.png",
+      "output": "/media/scenes/living-standard/smoke-glass-black.png",
+      "sha256": "bf572664156cb9b43a360e3b54e83015064cd3f07ba0b8847cfc00b8108fb0ef",
+      "sourceSha256": "bf572664156cb9b43a360e3b54e83015064cd3f07ba0b8847cfc00b8108fb0ef",
+      "bytes": 2314399,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/thumbnail.png",
+      "output": "/media/scenes/living-standard/thumbnail.webp",
+      "sha256": "7f3a12a3dd3c80ae9fa476ecbf99a69a0cf1ea08f84f3fcb1e82f0449f5726a7",
+      "sourceSha256": "9ea159d8693d5e843dd6a15e84d082891d5daa51222a43605e5ba0ded3e64441",
+      "bytes": 2624,
+      "width": 320,
+      "height": 240
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/base.png",
+      "output": "/media/scenes/corridor-standard/base.webp",
+      "sha256": "8d03212bcc0aaa1e72d0b98f78df38299a21690037fdfe5a132a4fef86fb58c7",
+      "sourceSha256": "9873ac3018b18a23078b927846dcaf07f6bca6a60fca864e98d6c63e406f77a3",
+      "bytes": 55854,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/floor-diffuse.png",
+      "output": "/media/scenes/corridor-standard/floor-diffuse.png",
+      "sha256": "261aa28c1f1468ee40b7445ced602b19e248e3a15ac91aab4da5ca85fc05a678",
+      "sourceSha256": "261aa28c1f1468ee40b7445ced602b19e248e3a15ac91aab4da5ca85fc05a678",
+      "bytes": 510762,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/floor-mask.png",
+      "output": "/media/scenes/corridor-standard/floor-mask.png",
+      "sha256": "a866a744f5e09a132b88caaa47f030b3d9b3a409dcf5a44adabf4fef24c7b632",
+      "sourceSha256": "a866a744f5e09a132b88caaa47f030b3d9b3a409dcf5a44adabf4fef24c7b632",
+      "bytes": 34871,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/frame-left-diffuse.png",
+      "output": "/media/scenes/corridor-standard/frame-left-diffuse.png",
+      "sha256": "10b8aa83c0905a4a4f0d752f99d3763dba4726637e8a98db767b5e235303c1fa",
+      "sourceSha256": "10b8aa83c0905a4a4f0d752f99d3763dba4726637e8a98db767b5e235303c1fa",
+      "bytes": 53474,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/frame-left-mask.png",
+      "output": "/media/scenes/corridor-standard/frame-left-mask.png",
+      "sha256": "f6e8a78ac5b6db7bd55499233f77fa0074a7e9897a5e815e143121c7e90d6c21",
+      "sourceSha256": "f6e8a78ac5b6db7bd55499233f77fa0074a7e9897a5e815e143121c7e90d6c21",
+      "bytes": 41187,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/frame-right-diffuse.png",
+      "output": "/media/scenes/corridor-standard/frame-right-diffuse.png",
+      "sha256": "e67db7ad5bd9efcaf6e38d8a23c6f053f1ee3498c02ad30deaf84f7f28fc3dda",
+      "sourceSha256": "e67db7ad5bd9efcaf6e38d8a23c6f053f1ee3498c02ad30deaf84f7f28fc3dda",
+      "bytes": 55453,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/frame-right-mask.png",
+      "output": "/media/scenes/corridor-standard/frame-right-mask.png",
+      "sha256": "b202e752a7d81ddd8420ecc89a4d85af59e3e4cc56bdd0dfb025e50203f15de8",
+      "sourceSha256": "b202e752a7d81ddd8420ecc89a4d85af59e3e4cc56bdd0dfb025e50203f15de8",
+      "bytes": 41370,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/frame-top-diffuse.png",
+      "output": "/media/scenes/corridor-standard/frame-top-diffuse.png",
+      "sha256": "88d84c319fe6c4257033506546fd905b2b335e0bcd38b010c5db3f0b6687c3cd",
+      "sourceSha256": "88d84c319fe6c4257033506546fd905b2b335e0bcd38b010c5db3f0b6687c3cd",
+      "bytes": 44592,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/frame-top-mask.png",
+      "output": "/media/scenes/corridor-standard/frame-top-mask.png",
+      "sha256": "7996ef573b49ddcbf2f1491419f30231ab8a2f34e4d794ce23e37b7f8958a03c",
+      "sourceSha256": "7996ef573b49ddcbf2f1491419f30231ab8a2f34e4d794ce23e37b7f8958a03c",
+      "bytes": 39810,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/leaf-diffuse.png",
+      "output": "/media/scenes/corridor-standard/leaf-diffuse.png",
+      "sha256": "ac01e325ed558e52dc7238115e2a783d585ef51edd095ba1994ce782a29f6887",
+      "sourceSha256": "ac01e325ed558e52dc7238115e2a783d585ef51edd095ba1994ce782a29f6887",
+      "bytes": 120967,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/leaf-mask.png",
+      "output": "/media/scenes/corridor-standard/leaf-mask.png",
+      "sha256": "862c54e467b81a1d53bc45b22a0e7130cffd98d929cf159e73efee7a4c37cca2",
+      "sourceSha256": "862c54e467b81a1d53bc45b22a0e7130cffd98d929cf159e73efee7a4c37cca2",
+      "bytes": 39216,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/protected-mask.png",
+      "output": "/media/scenes/corridor-standard/protected-mask.png",
+      "sha256": "5b5981b7ca725e4edbe8e8db3cfe9d7af68662206a9403e5e103685e5804760e",
+      "sourceSha256": "5b5981b7ca725e4edbe8e8db3cfe9d7af68662206a9403e5e103685e5804760e",
+      "bytes": 40590,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/skirting-back-left-diffuse.png",
+      "output": "/media/scenes/corridor-standard/skirting-back-left-diffuse.png",
+      "sha256": "6b4683d792c485dab4012bb58f62fd747e36546fa24b11876f399947f1a7b5ab",
+      "sourceSha256": "6b4683d792c485dab4012bb58f62fd747e36546fa24b11876f399947f1a7b5ab",
+      "bytes": 44495,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/skirting-back-left-mask.png",
+      "output": "/media/scenes/corridor-standard/skirting-back-left-mask.png",
+      "sha256": "193825d2e6ad20b1851e7c7e5466b5b63cb03b69b690b4217ed33402b2c496c9",
+      "sourceSha256": "193825d2e6ad20b1851e7c7e5466b5b63cb03b69b690b4217ed33402b2c496c9",
+      "bytes": 39755,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/skirting-back-right-diffuse.png",
+      "output": "/media/scenes/corridor-standard/skirting-back-right-diffuse.png",
+      "sha256": "9fd6de2df83c35daf0976e91fb65b46b099883dc962465c382b8def004d04581",
+      "sourceSha256": "9fd6de2df83c35daf0976e91fb65b46b099883dc962465c382b8def004d04581",
+      "bytes": 44193,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/skirting-back-right-mask.png",
+      "output": "/media/scenes/corridor-standard/skirting-back-right-mask.png",
+      "sha256": "1860e6200cde89282b83d2ba362304e25d2b816be3d1560401d36fc4353c95fe",
+      "sourceSha256": "1860e6200cde89282b83d2ba362304e25d2b816be3d1560401d36fc4353c95fe",
+      "bytes": 39755,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/skirting-left-diffuse.png",
+      "output": "/media/scenes/corridor-standard/skirting-left-diffuse.png",
+      "sha256": "96aa03f121f0ee57699e7f5ea92377143cd8f9b6fc0467427b754c3d71c9b7f8",
+      "sourceSha256": "96aa03f121f0ee57699e7f5ea92377143cd8f9b6fc0467427b754c3d71c9b7f8",
+      "bytes": 43890,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/skirting-left-mask.png",
+      "output": "/media/scenes/corridor-standard/skirting-left-mask.png",
+      "sha256": "16879c82a612cecf9f6921f792434f1d40c9e49ff4a1b3ac7d7157ce6366f882",
+      "sourceSha256": "16879c82a612cecf9f6921f792434f1d40c9e49ff4a1b3ac7d7157ce6366f882",
+      "bytes": 40640,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/skirting-left-near-diffuse.png",
+      "output": "/media/scenes/corridor-standard/skirting-left-near-diffuse.png",
+      "sha256": "f21fa11d6f737f2f9072e9b2184ff5e0aa5bd0484ebda7257c4cef2f7d9f3cc2",
+      "sourceSha256": "f21fa11d6f737f2f9072e9b2184ff5e0aa5bd0484ebda7257c4cef2f7d9f3cc2",
+      "bytes": 88110,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/skirting-left-near-mask.png",
+      "output": "/media/scenes/corridor-standard/skirting-left-near-mask.png",
+      "sha256": "a58656f348d88621da5412f169ddd19a8a5033588a602786fa332ff1942b6a5f",
+      "sourceSha256": "a58656f348d88621da5412f169ddd19a8a5033588a602786fa332ff1942b6a5f",
+      "bytes": 44578,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/skirting-right-diffuse.png",
+      "output": "/media/scenes/corridor-standard/skirting-right-diffuse.png",
+      "sha256": "70970246222df37d6ec932d26742531f46041201a4e9d55f4dbe34fa3a25561c",
+      "sourceSha256": "70970246222df37d6ec932d26742531f46041201a4e9d55f4dbe34fa3a25561c",
+      "bytes": 51792,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/skirting-right-mask.png",
+      "output": "/media/scenes/corridor-standard/skirting-right-mask.png",
+      "sha256": "f3cb3c1ab68c5166c76e82cbc70b2af484a74cba8c5a9deb2a6ec818100baaaa",
+      "sourceSha256": "f3cb3c1ab68c5166c76e82cbc70b2af484a74cba8c5a9deb2a6ec818100baaaa",
+      "bytes": 40896,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/skirting-right-near-diffuse.png",
+      "output": "/media/scenes/corridor-standard/skirting-right-near-diffuse.png",
+      "sha256": "5acbf55ab646c3206c0efe4327e8176c54bd278076ae26a255b88cf34d43f9b1",
+      "sourceSha256": "5acbf55ab646c3206c0efe4327e8176c54bd278076ae26a255b88cf34d43f9b1",
+      "bytes": 59149,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/skirting-right-near-mask.png",
+      "output": "/media/scenes/corridor-standard/skirting-right-near-mask.png",
+      "sha256": "0e9695ec2a9808be2f807fd8d9ce047baa649a35fa433c79e37163e2cd9595e3",
+      "sourceSha256": "0e9695ec2a9808be2f807fd8d9ce047baa649a35fa433c79e37163e2cd9595e3",
+      "bytes": 41902,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/thumbnail.png",
+      "output": "/media/scenes/corridor-standard/thumbnail.webp",
+      "sha256": "e5be432a583e958ad767f1ef3c775be97d83e249ac5231412196a631275c1f82",
+      "sourceSha256": "f7b90aed5e6a20bc6d60a99f54a7284cfe8bac7100fe2d14436d67677bd99b52",
+      "bytes": 2862,
+      "width": 320,
+      "height": 240
+    },
+    {
+      "source": "brand/assets/textures/doors/arre-erret.png",
+      "output": "/media/textures/doors/arre-erret.webp",
+      "sha256": "f77b46cc923edf07c4431213cd1c89be89aa6e7148c430f339a0fdebecbb04af",
+      "sourceSha256": "527927a89592c44924adec20c38135390ce202b25c741f86c4275d4acd422262",
+      "bytes": 82274,
+      "width": 512,
+      "height": 171
+    },
+    {
+      "source": "brand/assets/textures/doors/dushk-hirte.png",
+      "output": "/media/textures/doors/dushk-hirte.webp",
+      "sha256": "4cc6ab239c8b7682c306409fa9d60eb554b15d28a6543917047f448ad4a15ad2",
+      "sourceSha256": "de4b96bd3d44f6ca951bac99f420bcc4e6b91805be52d7a58fd6fe2f786fe778",
+      "bytes": 85672,
+      "width": 512,
+      "height": 171
+    },
+    {
+      "source": "brand/assets/textures/doors/lis-natyral.png",
+      "output": "/media/textures/doors/lis-natyral.webp",
+      "sha256": "50280360dbd923fdb349132bab1279940c4bab86d393234fba36f291f0f606fa",
+      "sourceSha256": "43a3511f14766a9bc472829cad1e376c9c9fa7f6d8ccceab971e6746fb164814",
+      "bytes": 95222,
+      "width": 512,
+      "height": 171
+    },
+    {
+      "source": "brand/assets/textures/floors/arre-klasike-12/atlas.png",
+      "output": "/media/textures/floors/arre-klasike-12/atlas.webp",
+      "sha256": "82f73f1f5a851f0b1369cce419b4b715f50684b60c6c5999202f7a0038d3e157",
+      "sourceSha256": "9a567f40660107620b518e9b3d5c60655aa2c95a7d7187c607e04a81ce6daf13",
+      "bytes": 49704,
+      "width": 600,
+      "height": 84
+    },
+    {
+      "source": "brand/assets/textures/floors/arre-klasike-12/trim.png",
+      "output": "/media/textures/floors/arre-klasike-12/trim.webp",
+      "sha256": "bd865897cc6ad6061ec32a59310b382074349425250f960e9aa0502171751375",
+      "sourceSha256": "d0134ff04a16ce5a2cd662f897f660d1f1f6a6c922220be06a883f7036bf8000",
+      "bytes": 17080,
+      "width": 512,
+      "height": 34
+    },
+    {
+      "source": "brand/assets/textures/floors/dushk-fshatar-8/atlas.png",
+      "output": "/media/textures/floors/dushk-fshatar-8/atlas.webp",
+      "sha256": "df9e3b907cd05f1b3a468a714f79db3054dc9868036ea8a444a7ed2803ae1356",
+      "sourceSha256": "6d86b06308b1155c6c26fa107ab84fe9b6667a15f7458cd5fbbe1a6aaf84dfc7",
+      "bytes": 73488,
+      "width": 600,
+      "height": 106
+    },
+    {
+      "source": "brand/assets/textures/floors/dushk-fshatar-8/trim.png",
+      "output": "/media/textures/floors/dushk-fshatar-8/trim.webp",
+      "sha256": "53fcab0175ea81f987b8f9c8a2091b1b751d783a449e2406ee62a296784e2f9f",
+      "sourceSha256": "f05c451af0126d520df683cc95ba34e3f2b198c6af4ed8d9cc30a53c33013ef3",
+      "bytes": 18672,
+      "width": 512,
+      "height": 34
+    },
+    {
+      "source": "brand/assets/textures/floors/hirte-skandinave-8/atlas.png",
+      "output": "/media/textures/floors/hirte-skandinave-8/atlas.webp",
+      "sha256": "2da584605f9a66b20472757fc5024661785360b395f5ab87f98c85291e4ac5da",
+      "sourceSha256": "bed7466021f87bbc3ae27557b220e4a3b4f1fe718d0935b342d72bdd7d65b63f",
+      "bytes": 50678,
+      "width": 600,
+      "height": 84
+    },
+    {
+      "source": "brand/assets/textures/floors/hirte-skandinave-8/trim.png",
+      "output": "/media/textures/floors/hirte-skandinave-8/trim.webp",
+      "sha256": "82e195ef5635a78130adb62ea034ab0db0e078a8ee4072f4c3b0f62d6631bbde",
+      "sourceSha256": "c3910eed6f25037bbe35f602ac314cb64c7f035a6b15750adbbf6c7fe3d604fd",
+      "bytes": 17144,
+      "width": 512,
+      "height": 34
+    },
+    {
+      "source": "brand/assets/textures/floors/lis-natyral-10/atlas.png",
+      "output": "/media/textures/floors/lis-natyral-10/atlas.webp",
+      "sha256": "870ef581f87cfbd9666a84dbc1dc82f1b30466823c63c4426148065b4ed83d0f",
+      "sourceSha256": "751d1b30f5a85b110eb537dec78110162f85f3492d79957eff75d196cc6b1b17",
+      "bytes": 58350,
+      "width": 600,
+      "height": 84
+    },
+    {
+      "source": "brand/assets/textures/floors/lis-natyral-10/trim.png",
+      "output": "/media/textures/floors/lis-natyral-10/trim.webp",
+      "sha256": "53fcab0175ea81f987b8f9c8a2091b1b751d783a449e2406ee62a296784e2f9f",
+      "sourceSha256": "f05c451af0126d520df683cc95ba34e3f2b198c6af4ed8d9cc30a53c33013ef3",
+      "bytes": 18672,
+      "width": 512,
+      "height": 34
+    },
+    {
+      "source": "brand/assets/textures/floors/peshk-natyral-12/atlas.png",
+      "output": "/media/textures/floors/peshk-natyral-12/atlas.webp",
+      "sha256": "18e450c4a7169b6c426e23e90d5aa36c808a99ebccb88d7c76fe9a9ba5813ea2",
+      "sourceSha256": "4ab4bd4506c9a202cc3ec6560ce5561e2206e06f861303de0c68ef8088db2198",
+      "bytes": 290176,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "source": "brand/assets/textures/floors/peshk-natyral-12/trim.png",
+      "output": "/media/textures/floors/peshk-natyral-12/trim.webp",
+      "sha256": "53fcab0175ea81f987b8f9c8a2091b1b751d783a449e2406ee62a296784e2f9f",
+      "sourceSha256": "f05c451af0126d520df683cc95ba34e3f2b198c6af4ed8d9cc30a53c33013ef3",
+      "bytes": 18672,
+      "width": 512,
+      "height": 34
+    },
+    {
+      "source": "brand/assets/scenes/living-standard/calibration.json",
+      "output": "/media/scenes/living-standard/fallback.webp",
+      "sha256": "0a95436bb14c67ad7620f25d8012d3639a9bddfbaa5a37991b70b68caa12cd88",
+      "sourceSha256": "582c74fd4f74d320397c2cbb43d90ba524d4ba433a2137cb4148a9f24b1cd695",
+      "bytes": 31242,
+      "width": 960,
+      "height": 720
+    },
+    {
+      "source": "brand/assets/scenes/corridor-standard/calibration.json",
+      "output": "/media/scenes/corridor-standard/fallback.webp",
+      "sha256": "cdce6c6ccf90a3e11e4fdab8355f108c2c443d687fe9f813669d0e67fdb9fbfb",
+      "sourceSha256": "a474f322cacfd3e06fe352f18ec65a26d58d4362df91611523ae5053e45b07a8",
+      "bytes": 33792,
+      "width": 960,
+      "height": 720
+    }
+  ],
+  "calibrationStatus": "virtual-authoring; independent metric reference pending"
+}

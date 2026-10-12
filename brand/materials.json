@@ -1,0 +1,2231 @@
+{
+  "schemaVersion": 1,
+  "doorFinishes": [
+    {
+      "id": "bardhe-mat",
+      "kind": "opaque",
+      "name": {
+        "sq": "E bardhë mat",
+        "en": "Matte white",
+        "de": "Mattweiß"
+      },
+      "swatchColorSrgb": "#E7E5DF",
+      "appearance": {
+        "kind": "solid",
+        "colorSrgb": "#E7E5DF"
+      },
+      "sheen": "matte",
+      "specularStrength": 0.02,
+      "trim": {
+        "appearance": {
+          "kind": "solid",
+          "colorSrgb": "#E7E5DF"
+        },
+        "specularStrength": 0.02
+      }
+    },
+    {
+      "id": "kashmir",
+      "kind": "opaque",
+      "name": {
+        "sq": "Kashmir",
+        "en": "Cashmere",
+        "de": "Kaschmir"
+      },
+      "swatchColorSrgb": "#BBAE9B",
+      "appearance": {
+        "kind": "solid",
+        "colorSrgb": "#BBAE9B"
+      },
+      "sheen": "matte",
+      "specularStrength": 0.02,
+      "trim": {
+        "appearance": {
+          "kind": "solid",
+          "colorSrgb": "#BBAE9B"
+        },
+        "specularStrength": 0.02
+      }
+    },
+    {
+      "id": "lis-natyral",
+      "kind": "opaque",
+      "name": {
+        "sq": "Lis natyral",
+        "en": "Natural oak",
+        "de": "Natureiche"
+      },
+      "swatchColorSrgb": "#cd9f69",
+      "appearance": {
+        "kind": "texture",
+        "texture": "/media/textures/doors/lis-natyral.webp",
+        "physicalSizeMm": [
+          1380,
+          460
+        ],
+        "grainAxis": "u",
+        "fit": "repeat",
+        "fallbackColorSrgb": "#cd9f69"
+      },
+      "sheen": "matte",
+      "specularStrength": 0.02,
+      "trim": {
+        "appearance": {
+          "kind": "texture",
+          "texture": "/media/textures/doors/lis-natyral.webp",
+          "physicalSizeMm": [
+            1380,
+            460
+          ],
+          "grainAxis": "u",
+          "fit": "repeat",
+          "fallbackColorSrgb": "#cd9f69"
+        },
+        "specularStrength": 0.02
+      }
+    },
+    {
+      "id": "arre-erret",
+      "kind": "opaque",
+      "name": {
+        "sq": "Arrë e errët",
+        "en": "Dark walnut",
+        "de": "Dunkler Nussbaum"
+      },
+      "swatchColorSrgb": "#4c3324",
+      "appearance": {
+        "kind": "texture",
+        "texture": "/media/textures/doors/arre-erret.webp",
+        "physicalSizeMm": [
+          1380,
+          460
+        ],
+        "grainAxis": "u",
+        "fit": "repeat",
+        "fallbackColorSrgb": "#4c3324"
+      },
+      "sheen": "matte",
+      "specularStrength": 0.02,
+      "trim": {
+        "appearance": {
+          "kind": "texture",
+          "texture": "/media/textures/doors/arre-erret.webp",
+          "physicalSizeMm": [
+            1380,
+            460
+          ],
+          "grainAxis": "u",
+          "fit": "repeat",
+          "fallbackColorSrgb": "#4c3324"
+        },
+        "specularStrength": 0.02
+      }
+    },
+    {
+      "id": "dushk-hirte",
+      "kind": "opaque",
+      "name": {
+        "sq": "Dushk i hirtë",
+        "en": "Grey oak",
+        "de": "Graue Eiche"
+      },
+      "swatchColorSrgb": "#a79f95",
+      "appearance": {
+        "kind": "texture",
+        "texture": "/media/textures/doors/dushk-hirte.webp",
+        "physicalSizeMm": [
+          1380,
+          460
+        ],
+        "grainAxis": "u",
+        "fit": "repeat",
+        "fallbackColorSrgb": "#a79f95"
+      },
+      "sheen": "matte",
+      "specularStrength": 0.02,
+      "trim": {
+        "appearance": {
+          "kind": "texture",
+          "texture": "/media/textures/doors/dushk-hirte.webp",
+          "physicalSizeMm": [
+            1380,
+            460
+          ],
+          "grainAxis": "u",
+          "fit": "repeat",
+          "fallbackColorSrgb": "#a79f95"
+        },
+        "specularStrength": 0.02
+      }
+    },
+    {
+      "id": "antracit",
+      "kind": "opaque",
+      "name": {
+        "sq": "Antracit",
+        "en": "Anthracite",
+        "de": "Anthrazit"
+      },
+      "swatchColorSrgb": "#333737",
+      "appearance": {
+        "kind": "solid",
+        "colorSrgb": "#333737"
+      },
+      "sheen": "matte",
+      "specularStrength": 0.02,
+      "trim": {
+        "appearance": {
+          "kind": "solid",
+          "colorSrgb": "#333737"
+        },
+        "specularStrength": 0.02
+      }
+    },
+    {
+      "id": "xham-erret",
+      "kind": "glass",
+      "name": {
+        "sq": "Xham i errët",
+        "en": "Smoke glass",
+        "de": "Rauchglas"
+      },
+      "swatchColorSrgb": "#3B3A37",
+      "variantKey": "smoke-glass-black",
+      "trim": {
+        "appearance": {
+          "kind": "solid",
+          "colorSrgb": "#202321"
+        },
+        "specularStrength": 0.02
+      }
+    }
+  ],
+  "floorCollections": [
+    {
+      "id": "lis-natyral-10",
+      "name": {
+        "sq": "Lis natyral 10mm",
+        "en": "Natural oak 10mm",
+        "de": "Natureiche 10mm"
+      },
+      "thicknessMm": 10,
+      "bevel": "4v",
+      "atlas": {
+        "image": "/media/textures/floors/lis-natyral-10/atlas.webp",
+        "repeatSizeMm": [
+          5520,
+          772
+        ],
+        "repeatPixels": [
+          600,
+          84
+        ],
+        "boardSizeMm": {
+          "length": 1380,
+          "width": 193
+        },
+        "pattern": "straight",
+        "boardsPerRepeat": 16,
+        "bevelWidthMm": 1.2,
+        "chevronCutAngleDeg": null
+      },
+      "trim": {
+        "appearance": {
+          "kind": "texture",
+          "texture": "/media/textures/floors/lis-natyral-10/trim.webp",
+          "physicalSizeMm": [
+            1200,
+            80
+          ],
+          "grainAxis": "u",
+          "fit": "repeat",
+          "fallbackColorSrgb": "#cb9d68"
+        },
+        "specularStrength": 0.02
+      },
+      "swatchColorSrgb": "#cb9d68",
+      "specularStrength": 0.04,
+      "kind": "laminate",
+      "acClass": "AC5",
+      "usageClass": 33
+    },
+    {
+      "id": "dushk-fshatar-8",
+      "name": {
+        "sq": "Dushk fshatar 8mm",
+        "en": "Rustic oak 8mm",
+        "de": "Rustikale Eiche 8mm"
+      },
+      "thicknessMm": 8,
+      "bevel": "4v",
+      "atlas": {
+        "image": "/media/textures/floors/dushk-fshatar-8/atlas.webp",
+        "repeatSizeMm": [
+          5520,
+          976
+        ],
+        "repeatPixels": [
+          600,
+          106
+        ],
+        "boardSizeMm": {
+          "length": 1380,
+          "width": 244
+        },
+        "pattern": "straight",
+        "boardsPerRepeat": 16,
+        "bevelWidthMm": 1.2,
+        "chevronCutAngleDeg": null
+      },
+      "trim": {
+        "appearance": {
+          "kind": "texture",
+          "texture": "/media/textures/floors/dushk-fshatar-8/trim.webp",
+          "physicalSizeMm": [
+            1200,
+            80
+          ],
+          "grainAxis": "u",
+          "fit": "repeat",
+          "fallbackColorSrgb": "#cb9d68"
+        },
+        "specularStrength": 0.02
+      },
+      "swatchColorSrgb": "#cb9d68",
+      "specularStrength": 0.04,
+      "kind": "laminate",
+      "acClass": "AC4",
+      "usageClass": 32
+    },
+    {
+      "id": "peshk-natyral-12",
+      "name": {
+        "sq": "Parket natyral ribë peshku",
+        "en": "Natural herringbone parquet",
+        "de": "Naturparkett Fischgrät"
+      },
+      "thicknessMm": 12,
+      "bevel": "flat",
+      "atlas": {
+        "image": "/media/textures/floors/peshk-natyral-12/atlas.webp",
+        "repeatSizeMm": [
+          1697.0562748477141,
+          1697.0562748477141
+        ],
+        "repeatPixels": [
+          512,
+          512
+        ],
+        "boardSizeMm": {
+          "length": 600,
+          "width": 120
+        },
+        "pattern": "herringbone",
+        "boardsPerRepeat": 40,
+        "bevelWidthMm": 1.2,
+        "chevronCutAngleDeg": null
+      },
+      "trim": {
+        "appearance": {
+          "kind": "texture",
+          "texture": "/media/textures/floors/peshk-natyral-12/trim.webp",
+          "physicalSizeMm": [
+            1200,
+            80
+          ],
+          "grainAxis": "u",
+          "fit": "repeat",
+          "fallbackColorSrgb": "#ca9d68"
+        },
+        "specularStrength": 0.02
+      },
+      "swatchColorSrgb": "#ca9d68",
+      "specularStrength": 0.04,
+      "kind": "parquet",
+      "construction": "engineered",
+      "woodSpecies": {
+        "sq": "Lis",
+        "en": "Oak",
+        "de": "Eiche"
+      },
+      "wearLayerMm": 3
+    },
+    {
+      "id": "arre-klasike-12",
+      "name": {
+        "sq": "Arrë klasike 12mm",
+        "en": "Classic walnut 12mm",
+        "de": "Klassischer Nussbaum 12mm"
+      },
+      "thicknessMm": 12,
+      "bevel": "4v",
+      "atlas": {
+        "image": "/media/textures/floors/arre-klasike-12/atlas.webp",
+        "repeatSizeMm": [
+          5520,
+          772
+        ],
+        "repeatPixels": [
+          600,
+          84
+        ],
+        "boardSizeMm": {
+          "length": 1380,
+          "width": 193
+        },
+        "pattern": "straight",
+        "boardsPerRepeat": 16,
+        "bevelWidthMm": 1.2,
+        "chevronCutAngleDeg": null
+      },
+      "trim": {
+        "appearance": {
+          "kind": "texture",
+          "texture": "/media/textures/floors/arre-klasike-12/trim.webp",
+          "physicalSizeMm": [
+            1200,
+            80
+          ],
+          "grainAxis": "u",
+          "fit": "repeat",
+          "fallbackColorSrgb": "#4b3324"
+        },
+        "specularStrength": 0.02
+      },
+      "swatchColorSrgb": "#4b3324",
+      "specularStrength": 0.04,
+      "kind": "laminate",
+      "acClass": "AC5",
+      "usageClass": 33
+    },
+    {
+      "id": "hirte-skandinave-8",
+      "name": {
+        "sq": "Hirtë skandinave 8mm",
+        "en": "Scandinavian grey 8mm",
+        "de": "Skandinavisches Grau 8mm"
+      },
+      "thicknessMm": 8,
+      "bevel": "flat",
+      "atlas": {
+        "image": "/media/textures/floors/hirte-skandinave-8/atlas.webp",
+        "repeatSizeMm": [
+          5520,
+          772
+        ],
+        "repeatPixels": [
+          600,
+          84
+        ],
+        "boardSizeMm": {
+          "length": 1380,
+          "width": 193
+        },
+        "pattern": "straight",
+        "boardsPerRepeat": 16,
+        "bevelWidthMm": 0,
+        "chevronCutAngleDeg": null
+      },
+      "trim": {
+        "appearance": {
+          "kind": "texture",
+          "texture": "/media/textures/floors/hirte-skandinave-8/trim.webp",
+          "physicalSizeMm": [
+            1200,
+            80
+          ],
+          "grainAxis": "u",
+          "fit": "repeat",
+          "fallbackColorSrgb": "#a69e94"
+        },
+        "specularStrength": 0.02
+      },
+      "swatchColorSrgb": "#a69e94",
+      "specularStrength": 0.04,
+      "kind": "laminate",
+      "acClass": "AC4",
+      "usageClass": 32
+    }
+  ],
+  "scenes": [
+    {
+      "id": "living-standard",
+      "name": {
+        "sq": "Dhoma e ditës",
+        "en": "Living room",
+        "de": "Wohnraum"
+      },
+      "description": {
+        "sq": "Skenë demonstrimi e gjeneruar",
+        "en": "Generated demo scene",
+        "de": "Generierte Demoszene"
+      },
+      "width": 1600,
+      "height": 1200,
+      "base": "/media/scenes/living-standard/base.webp",
+      "thumbnail": "/media/scenes/living-standard/thumbnail.webp",
+      "fallback": "/media/scenes/living-standard/fallback.webp",
+      "frameType": "standard-casing",
+      "depictedDoorSizeMm": {
+        "width": 900,
+        "height": 2000
+      },
+      "surfaces": [
+        {
+          "id": "floor",
+          "role": "floor",
+          "mask": {
+            "alpha": "/media/scenes/living-standard/floor-mask.png",
+            "boundsPx": [
+              0,
+              770,
+              1600,
+              430
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/living-standard/floor-diffuse.png",
+            "baselineLinear": 0.3662525955988395,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                4500,
+                0
+              ],
+              [
+                4500,
+                5000
+              ],
+              [
+                0,
+                5000
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.086626254180602,
+                0.6443478260869565
+              ],
+              [
+                0.9444857859531772,
+                0.6433946488294314
+              ],
+              [
+                1.0510033444816054,
+                1.1438127090301002
+              ],
+              [
+                -0.09280936454849499,
+                1.1438127090301002
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 4500,
+              "referenceImageSegment01": [
+                [
+                  0.086626254180602,
+                  0.6443478260869565
+                ],
+                [
+                  0.9444857859531772,
+                  0.6433946488294314
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  4500,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        },
+        {
+          "id": "leaf",
+          "role": "door-leaf",
+          "mask": {
+            "alpha": "/media/scenes/living-standard/leaf-mask.png",
+            "boundsPx": [
+              787,
+              60,
+              331,
+              708
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/living-standard/leaf-diffuse.png",
+            "baselineLinear": 0.33245153634617935,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                900,
+                0
+              ],
+              [
+                900,
+                2000
+              ],
+              [
+                0,
+                2000
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.4919648829431438,
+                0.050518394648829436
+              ],
+              [
+                0.6985660535117058,
+                0.050518394648829436
+              ],
+              [
+                0.6985660535117058,
+                0.6395819397993311
+              ],
+              [
+                0.4919648829431438,
+                0.6395819397993311
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 900,
+              "referenceImageSegment01": [
+                [
+                  0.4919648829431438,
+                  0.050518394648829436
+                ],
+                [
+                  0.6985660535117058,
+                  0.050518394648829436
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  900,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 90
+        },
+        {
+          "id": "frame-left",
+          "role": "frame",
+          "mask": {
+            "alpha": "/media/scenes/living-standard/frame-left-mask.png",
+            "boundsPx": [
+              748,
+              59,
+              33,
+              712
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/living-standard/frame-left-diffuse.png",
+            "baselineLinear": 0.35153259950043936,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ],
+              [
+                70,
+                2000
+              ],
+              [
+                0,
+                2000
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.4676588628762543,
+                0.04956521739130435
+              ],
+              [
+                0.48767558528428095,
+                0.04956521739130435
+              ],
+              [
+                0.48767558528428095,
+                0.6424414715719063
+              ],
+              [
+                0.4676588628762543,
+                0.6424414715719063
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 70,
+              "referenceImageSegment01": [
+                [
+                  0.4676588628762543,
+                  0.04956521739130435
+                ],
+                [
+                  0.48767558528428095,
+                  0.04956521739130435
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  70,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 90
+        },
+        {
+          "id": "frame-right",
+          "role": "frame",
+          "mask": {
+            "alpha": "/media/scenes/living-standard/frame-right-mask.png",
+            "boundsPx": [
+              1128,
+              59,
+              30,
+              712
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/living-standard/frame-right-diffuse.png",
+            "baselineLinear": 0.26225065752969623,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ],
+              [
+                70,
+                2000
+              ],
+              [
+                0,
+                2000
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.705,
+                0.04956521739130435
+              ],
+              [
+                0.7235869565217391,
+                0.04956521739130435
+              ],
+              [
+                0.7235869565217391,
+                0.6424414715719063
+              ],
+              [
+                0.705,
+                0.6424414715719063
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 70,
+              "referenceImageSegment01": [
+                [
+                  0.705,
+                  0.04956521739130435
+                ],
+                [
+                  0.7235869565217391,
+                  0.04956521739130435
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  70,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 90
+        },
+        {
+          "id": "frame-top",
+          "role": "frame",
+          "mask": {
+            "alpha": "/media/scenes/living-standard/frame-top-mask.png",
+            "boundsPx": [
+              748,
+              21,
+              410,
+              32
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/living-standard/frame-top-diffuse.png",
+            "baselineLinear": 0.25015828472995344,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1040,
+                0
+              ],
+              [
+                1040,
+                70
+              ],
+              [
+                0,
+                70
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.4676588628762543,
+                0.018110367892976587
+              ],
+              [
+                0.7235869565217391,
+                0.018110367892976587
+              ],
+              [
+                0.7235869565217391,
+                0.04384615384615385
+              ],
+              [
+                0.4676588628762543,
+                0.04384615384615385
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 1040,
+              "referenceImageSegment01": [
+                [
+                  0.4676588628762543,
+                  0.018110367892976587
+                ],
+                [
+                  0.7235869565217391,
+                  0.018110367892976587
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1040,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        },
+        {
+          "id": "skirting-back-left",
+          "role": "skirting",
+          "mask": {
+            "alpha": "/media/scenes/living-standard/skirting-back-left-mask.png",
+            "boundsPx": [
+              140,
+              734,
+              608,
+              37
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/living-standard/skirting-back-left-diffuse.png",
+            "baselineLinear": 0.20507873639031693,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                2000,
+                0
+              ],
+              [
+                2000,
+                80
+              ],
+              [
+                0,
+                80
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.08805602006688963,
+                0.6119397993311037
+              ],
+              [
+                0.4669439799331104,
+                0.6119397993311037
+              ],
+              [
+                0.4669439799331104,
+                0.6424414715719063
+              ],
+              [
+                0.08805602006688963,
+                0.6424414715719063
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 2000,
+              "referenceImageSegment01": [
+                [
+                  0.08805602006688963,
+                  0.6119397993311037
+                ],
+                [
+                  0.4669439799331104,
+                  0.6119397993311037
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  2000,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        },
+        {
+          "id": "skirting-back-right",
+          "role": "skirting",
+          "mask": {
+            "alpha": "/media/scenes/living-standard/skirting-back-right-mask.png",
+            "boundsPx": [
+              1160,
+              734,
+              351,
+              37
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/living-standard/skirting-back-right-diffuse.png",
+            "baselineLinear": 0.20155625379439707,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1300,
+                0
+              ],
+              [
+                1300,
+                80
+              ],
+              [
+                0,
+                80
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.7250167224080267,
+                0.6119397993311037
+              ],
+              [
+                0.9437709030100335,
+                0.6119397993311037
+              ],
+              [
+                0.9437709030100335,
+                0.6424414715719063
+              ],
+              [
+                0.7250167224080267,
+                0.6424414715719063
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 1300,
+              "referenceImageSegment01": [
+                [
+                  0.7250167224080267,
+                  0.6119397993311037
+                ],
+                [
+                  0.9437709030100335,
+                  0.6119397993311037
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1300,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        },
+        {
+          "id": "skirting-right",
+          "role": "skirting",
+          "mask": {
+            "alpha": "/media/scenes/living-standard/skirting-right-mask.png",
+            "boundsPx": [
+              1512,
+              734,
+              88,
+              77
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/living-standard/skirting-right-diffuse.png",
+            "baselineLinear": 0.39675523072562685,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1800,
+                0
+              ],
+              [
+                1800,
+                80
+              ],
+              [
+                0,
+                80
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.945200668896321,
+                0.6119397993311037
+              ],
+              [
+                1.0510033444816054,
+                0.6710367892976589
+              ],
+              [
+                1.0510033444816054,
+                0.706304347826087
+              ],
+              [
+                0.945200668896321,
+                0.6424414715719063
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 720,
+              "referenceImageSegment01": [
+                [
+                  0.9452006688963209,
+                  0.6119397993311035
+                ],
+                [
+                  0.9838942188246534,
+                  0.6335524128045866
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  720,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        }
+      ],
+      "protectedMask": {
+        "alpha": "/media/scenes/living-standard/protected-mask.png",
+        "boundsPx": [
+          72,
+          440,
+          1039,
+          417
+        ]
+      },
+      "foreground": null,
+      "doorInserts": [
+        {
+          "variantKey": "smoke-glass-black",
+          "rgba": "/media/scenes/living-standard/smoke-glass-black.png",
+          "replacementMask": {
+            "alpha": "/media/scenes/living-standard/smoke-glass-black-mask.png",
+            "boundsPx": [
+              747,
+              20,
+              412,
+              751
+            ]
+          },
+          "protectedMask": {
+            "alpha": "/media/scenes/living-standard/smoke-glass-black-protected-mask.png",
+            "boundsPx": [
+              0,
+              0,
+              1600,
+              1200
+            ]
+          },
+          "allowedFrameModes": [
+            "black"
+          ],
+          "sourceNote": "ImageGen edit of exact new living plate. Complete old leaf/casing/hardware replaced; immutable base supplies all pixels outside opening."
+        }
+      ],
+      "allowedDoorProductIds": [
+        "dera-bardhe",
+        "dera-lis",
+        "dera-xham"
+      ],
+      "allowedFloorProductIds": [
+        "lis-natyral-10",
+        "dushk-fshatar-8",
+        "peshk-natyral-12",
+        "arre-klasike-12",
+        "hirte-skandinave-8"
+      ],
+      "allowedFrameModes": [
+        "door",
+        "floor",
+        "black"
+      ],
+      "allowedSkirtingModes": [
+        "door",
+        "floor",
+        "black"
+      ],
+      "defaultSelection": {
+        "version": 1,
+        "sceneId": "living-standard",
+        "doorProductId": "dera-bardhe",
+        "doorFinishId": "bardhe-mat",
+        "floorProductId": "lis-natyral-10",
+        "frameMode": "door",
+        "skirtingMode": "floor",
+        "floorRotationDeg": 0
+      },
+      "assetRevision": "a4c3c434ca9850a839d070cb8c84f5f49d902f05aa1a693802131b8560223f64"
+    },
+    {
+      "id": "corridor-standard",
+      "name": {
+        "sq": "Korridori",
+        "en": "Hallway",
+        "de": "Flur"
+      },
+      "description": {
+        "sq": "Skenë demonstrimi e gjeneruar",
+        "en": "Generated demo scene",
+        "de": "Generierte Demoszene"
+      },
+      "width": 1600,
+      "height": 1200,
+      "base": "/media/scenes/corridor-standard/base.webp",
+      "thumbnail": "/media/scenes/corridor-standard/thumbnail.webp",
+      "fallback": "/media/scenes/corridor-standard/fallback.webp",
+      "frameType": "standard-casing",
+      "depictedDoorSizeMm": {
+        "width": 900,
+        "height": 2000
+      },
+      "surfaces": [
+        {
+          "id": "floor",
+          "role": "floor",
+          "mask": {
+            "alpha": "/media/scenes/corridor-standard/floor-mask.png",
+            "boundsPx": [
+              0,
+              684,
+              1600,
+              516
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/corridor-standard/floor-diffuse.png",
+            "baselineLinear": 0.2831487404299921,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                4500,
+                0
+              ],
+              [
+                4500,
+                5000
+              ],
+              [
+                0,
+                5000
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.24,
+                0.57
+              ],
+              [
+                0.7525,
+                0.57
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 4500,
+              "referenceImageSegment01": [
+                [
+                  0.24,
+                  0.57
+                ],
+                [
+                  0.7525,
+                  0.57
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  4500,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        },
+        {
+          "id": "leaf",
+          "role": "door-leaf",
+          "mask": {
+            "alpha": "/media/scenes/corridor-standard/leaf-mask.png",
+            "boundsPx": [
+              658,
+              63,
+              279,
+              618
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/corridor-standard/leaf-diffuse.png",
+            "baselineLinear": 0.3467040563550296,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                900,
+                0
+              ],
+              [
+                900,
+                2000
+              ],
+              [
+                0,
+                2000
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.41125,
+                0.0525
+              ],
+              [
+                0.585625,
+                0.0525
+              ],
+              [
+                0.585625,
+                0.5675
+              ],
+              [
+                0.41125,
+                0.5675
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 900,
+              "referenceImageSegment01": [
+                [
+                  0.41125,
+                  0.0525
+                ],
+                [
+                  0.585625,
+                  0.0525
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  900,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 90
+        },
+        {
+          "id": "frame-left",
+          "role": "frame",
+          "mask": {
+            "alpha": "/media/scenes/corridor-standard/frame-left-mask.png",
+            "boundsPx": [
+              626,
+              59,
+              25,
+              624
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/corridor-standard/frame-left-diffuse.png",
+            "baselineLinear": 0.2874408377269175,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ],
+              [
+                70,
+                2000
+              ],
+              [
+                0,
+                2000
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.39125,
+                0.049166666666666664
+              ],
+              [
+                0.406875,
+                0.049166666666666664
+              ],
+              [
+                0.406875,
+                0.5691666666666667
+              ],
+              [
+                0.39125,
+                0.5691666666666667
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 70,
+              "referenceImageSegment01": [
+                [
+                  0.39125,
+                  0.049166666666666664
+                ],
+                [
+                  0.406875,
+                  0.049166666666666664
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  70,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 90
+        },
+        {
+          "id": "frame-right",
+          "role": "frame",
+          "mask": {
+            "alpha": "/media/scenes/corridor-standard/frame-right-mask.png",
+            "boundsPx": [
+              944,
+              59,
+              27,
+              624
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/corridor-standard/frame-right-diffuse.png",
+            "baselineLinear": 0.3049873140698863,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ],
+              [
+                70,
+                2000
+              ],
+              [
+                0,
+                2000
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.59,
+                0.049166666666666664
+              ],
+              [
+                0.606875,
+                0.049166666666666664
+              ],
+              [
+                0.606875,
+                0.5691666666666667
+              ],
+              [
+                0.59,
+                0.5691666666666667
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 70,
+              "referenceImageSegment01": [
+                [
+                  0.59,
+                  0.049166666666666664
+                ],
+                [
+                  0.606875,
+                  0.049166666666666664
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  70,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 90
+        },
+        {
+          "id": "frame-top",
+          "role": "frame",
+          "mask": {
+            "alpha": "/media/scenes/corridor-standard/frame-top-mask.png",
+            "boundsPx": [
+              626,
+              30,
+              345,
+              25
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/corridor-standard/frame-top-diffuse.png",
+            "baselineLinear": 0.2581828529215958,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1040,
+                0
+              ],
+              [
+                1040,
+                70
+              ],
+              [
+                0,
+                70
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.39125,
+                0.025
+              ],
+              [
+                0.606875,
+                0.025
+              ],
+              [
+                0.606875,
+                0.04583333333333333
+              ],
+              [
+                0.39125,
+                0.04583333333333333
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 1040,
+              "referenceImageSegment01": [
+                [
+                  0.39125,
+                  0.025
+                ],
+                [
+                  0.606875,
+                  0.025
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1040,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        },
+        {
+          "id": "skirting-back-left",
+          "role": "skirting",
+          "mask": {
+            "alpha": "/media/scenes/corridor-standard/skirting-back-left-mask.png",
+            "boundsPx": [
+              384,
+              653,
+              241,
+              29
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/corridor-standard/skirting-back-left-diffuse.png",
+            "baselineLinear": 0.1714411007328226,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1100,
+                0
+              ],
+              [
+                1100,
+                80
+              ],
+              [
+                0,
+                80
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.24,
+                0.5441666666666667
+              ],
+              [
+                0.390625,
+                0.5441666666666667
+              ],
+              [
+                0.390625,
+                0.5683333333333334
+              ],
+              [
+                0.24,
+                0.5683333333333334
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 1100,
+              "referenceImageSegment01": [
+                [
+                  0.24,
+                  0.5441666666666667
+                ],
+                [
+                  0.390625,
+                  0.5441666666666667
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1100,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        },
+        {
+          "id": "skirting-back-right",
+          "role": "skirting",
+          "mask": {
+            "alpha": "/media/scenes/corridor-standard/skirting-back-right-mask.png",
+            "boundsPx": [
+              973,
+              653,
+              230,
+              29
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/corridor-standard/skirting-back-right-diffuse.png",
+            "baselineLinear": 0.1946178304415758,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1100,
+                0
+              ],
+              [
+                1100,
+                80
+              ],
+              [
+                0,
+                80
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.608125,
+                0.5441666666666667
+              ],
+              [
+                0.751875,
+                0.5441666666666667
+              ],
+              [
+                0.751875,
+                0.5683333333333334
+              ],
+              [
+                0.608125,
+                0.5683333333333334
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 1100,
+              "referenceImageSegment01": [
+                [
+                  0.608125,
+                  0.5441666666666667
+                ],
+                [
+                  0.751875,
+                  0.5441666666666667
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1100,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        },
+        {
+          "id": "skirting-left",
+          "role": "skirting",
+          "mask": {
+            "alpha": "/media/scenes/corridor-standard/skirting-left-mask.png",
+            "boundsPx": [
+              342,
+              653,
+              41,
+              62
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/corridor-standard/skirting-left-diffuse.png",
+            "baselineLinear": 0.14412847085805777,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                500,
+                0
+              ],
+              [
+                500,
+                80
+              ],
+              [
+                0,
+                80
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.21375,
+                0.5633333333333334
+              ],
+              [
+                0.239375,
+                0.5441666666666667
+              ],
+              [
+                0.239375,
+                0.5691666666666667
+              ],
+              [
+                0.21375,
+                0.5958333333333333
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 500,
+              "referenceImageSegment01": [
+                [
+                  0.21375,
+                  0.5633333333333334
+                ],
+                [
+                  0.239375,
+                  0.5441666666666667
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  500,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        },
+        {
+          "id": "skirting-right",
+          "role": "skirting",
+          "mask": {
+            "alpha": "/media/scenes/corridor-standard/skirting-right-mask.png",
+            "boundsPx": [
+              1205,
+              653,
+              100,
+              105
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/corridor-standard/skirting-right-diffuse.png",
+            "baselineLinear": 0.39157247774972326,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1100,
+                0
+              ],
+              [
+                1100,
+                80
+              ],
+              [
+                0,
+                80
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.753125,
+                0.5441666666666667
+              ],
+              [
+                0.815625,
+                0.5983333333333334
+              ],
+              [
+                0.815625,
+                0.6316666666666667
+              ],
+              [
+                0.753125,
+                0.5691666666666667
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 1100,
+              "referenceImageSegment01": [
+                [
+                  0.753125,
+                  0.5441666666666667
+                ],
+                [
+                  0.815625,
+                  0.5983333333333334
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1100,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        },
+        {
+          "id": "skirting-left-near",
+          "role": "skirting",
+          "mask": {
+            "alpha": "/media/scenes/corridor-standard/skirting-left-near-mask.png",
+            "boundsPx": [
+              0,
+              760,
+              243,
+              255
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/corridor-standard/skirting-left-near-diffuse.png",
+            "baselineLinear": 0.23074004852434915,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                2000,
+                0
+              ],
+              [
+                2000,
+                80
+              ],
+              [
+                0,
+                80
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0,
+                0.8141666666666667
+              ],
+              [
+                0.151875,
+                0.6333333333333333
+              ],
+              [
+                0.151875,
+                0.665
+              ],
+              [
+                0,
+                0.8458333333333333
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 2000,
+              "referenceImageSegment01": [
+                [
+                  0,
+                  0.8141666666666667
+                ],
+                [
+                  0.151875,
+                  0.6333333333333333
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  2000,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        },
+        {
+          "id": "skirting-right-near",
+          "role": "skirting",
+          "mask": {
+            "alpha": "/media/scenes/corridor-standard/skirting-right-near-mask.png",
+            "boundsPx": [
+              1454,
+              820,
+              146,
+              136
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/corridor-standard/skirting-right-near-diffuse.png",
+            "baselineLinear": 0.31854677812509186,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1600,
+                0
+              ],
+              [
+                1600,
+                80
+              ],
+              [
+                0,
+                80
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.90875,
+                0.6833333333333333
+              ],
+              [
+                1,
+                0.7575
+              ],
+              [
+                1,
+                0.7966666666666666
+              ],
+              [
+                0.90875,
+                0.715
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+              "referenceLengthMm": 1600,
+              "referenceImageSegment01": [
+                [
+                  0.90875,
+                  0.6833333333333333
+                ],
+                [
+                  1,
+                  0.7575
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1600,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        }
+      ],
+      "protectedMask": {
+        "alpha": "/media/scenes/corridor-standard/protected-mask.png",
+        "boundsPx": [
+          670,
+          121,
+          274,
+          503
+        ]
+      },
+      "foreground": null,
+      "doorInserts": [],
+      "allowedDoorProductIds": [
+        "dera-bardhe",
+        "dera-lis"
+      ],
+      "allowedFloorProductIds": [
+        "lis-natyral-10",
+        "dushk-fshatar-8",
+        "peshk-natyral-12",
+        "arre-klasike-12",
+        "hirte-skandinave-8"
+      ],
+      "allowedFrameModes": [
+        "door",
+        "floor",
+        "black"
+      ],
+      "allowedSkirtingModes": [
+        "door",
+        "floor",
+        "black"
+      ],
+      "defaultSelection": {
+        "version": 1,
+        "sceneId": "corridor-standard",
+        "doorProductId": "dera-bardhe",
+        "doorFinishId": "kashmir",
+        "floorProductId": "peshk-natyral-12",
+        "frameMode": "door",
+        "skirtingMode": "floor",
+        "floorRotationDeg": 0
+      },
+      "assetRevision": "f2c2b170d9e8b76611b967e4ce51d9046e882203a1a1cfe8658581e9706ee166"
+    }
+  ]
+}

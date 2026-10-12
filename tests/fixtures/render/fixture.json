@@ -1,0 +1,9 @@
+{
+  "description": "Independent scalar sRGB formula, base64/80/96, coverage128/255, albedo128, neutral diffuse128 baseline0.21586050011389926, no reflection",
+  "expectedRgb": [
+    102,
+    107,
+    113
+  ],
+  "review": "Initial scalar math reviewed; expected.png is immutable during render:fixtures"
+}

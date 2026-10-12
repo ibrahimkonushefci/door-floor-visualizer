@@ -1,0 +1,23 @@
+{
+  "note": "Conservative analytical bound includes controller + worker clones, full 10MiB result LRU, three960x720output arrays and one full sourceRGBAdecode; excludes browser/framework/canvas overhead. Not a physical-device heap profile.",
+  "results": [
+    {
+      "scene": "living-standard",
+      "sceneBytes": 22990100,
+      "largestPreparedMaterialsBytes": 13213968,
+      "persistentBoundBytes": 91188296,
+      "withOneSourceDecodeBytes": 98868296,
+      "budgetBytes": 100663296,
+      "withinBudget": true
+    },
+    {
+      "scene": "corridor-hidden",
+      "sceneBytes": 11352196,
+      "largestPreparedMaterialsBytes": 13213968,
+      "persistentBoundBytes": 67912488,
+      "withOneSourceDecodeBytes": 75592488,
+      "budgetBytes": 100663296,
+      "withinBudget": true
+    }
+  ]
+}

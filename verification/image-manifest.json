@@ -1,0 +1,2186 @@
+{
+  "dera-bardhe-01": {
+    "id": "dera-bardhe-01",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "product",
+    "avif": [
+      {
+        "src": "/media/products/dera-bardhe-01/320.avif?rev=2483cbe2445bb4d9f5ca3644d64d789f7dde678f0270b61e07e5df95079c0355",
+        "width": 320,
+        "height": 160,
+        "bytes": 3641,
+        "sha256": "2483cbe2445bb4d9f5ca3644d64d789f7dde678f0270b61e07e5df95079c0355"
+      },
+      {
+        "src": "/media/products/dera-bardhe-01/640.avif?rev=d5be42ef245f77728b4a768820c8e8aa1bf0231b43727d266de7b668d8c0214d",
+        "width": 640,
+        "height": 320,
+        "bytes": 11053,
+        "sha256": "d5be42ef245f77728b4a768820c8e8aa1bf0231b43727d266de7b668d8c0214d"
+      },
+      {
+        "src": "/media/products/dera-bardhe-01/960.avif?rev=a5473da94b9124c55ce9bb0b7f4848303c8c492eccd38970c4bfd8bc39ddb696",
+        "width": 960,
+        "height": 480,
+        "bytes": 21487,
+        "sha256": "a5473da94b9124c55ce9bb0b7f4848303c8c492eccd38970c4bfd8bc39ddb696"
+      },
+      {
+        "src": "/media/products/dera-bardhe-01/1600.avif?rev=78cc9e2574d86c930a888fed85472338eed0885800d3fa958eb642300fd9a7ef",
+        "width": 1600,
+        "height": 800,
+        "bytes": 44298,
+        "sha256": "78cc9e2574d86c930a888fed85472338eed0885800d3fa958eb642300fd9a7ef"
+      },
+      {
+        "src": "/media/products/dera-bardhe-01/1774.avif?rev=856ffdbb0a4c3fc7a75d48ea9c291292a8acf1c87109ea449e0b6f957f5030a7",
+        "width": 1774,
+        "height": 887,
+        "bytes": 52319,
+        "sha256": "856ffdbb0a4c3fc7a75d48ea9c291292a8acf1c87109ea449e0b6f957f5030a7"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/dera-bardhe-01/320.webp?rev=1f341e618d31898f09f442e2c5b7573de9bf0c016248ec9404712369d7225f37",
+        "width": 320,
+        "height": 160,
+        "bytes": 6472,
+        "sha256": "1f341e618d31898f09f442e2c5b7573de9bf0c016248ec9404712369d7225f37"
+      },
+      {
+        "src": "/media/products/dera-bardhe-01/640.webp?rev=e903a32d692aae26ffe090835dd2404a2118710e8330ec6607b7abeec02221f3",
+        "width": 640,
+        "height": 320,
+        "bytes": 20810,
+        "sha256": "e903a32d692aae26ffe090835dd2404a2118710e8330ec6607b7abeec02221f3"
+      },
+      {
+        "src": "/media/products/dera-bardhe-01/960.webp?rev=0b107dd913e47141b5dfc6ce74c854489ce57851d6ff24f715691aeff1cafe20",
+        "width": 960,
+        "height": 480,
+        "bytes": 40730,
+        "sha256": "0b107dd913e47141b5dfc6ce74c854489ce57851d6ff24f715691aeff1cafe20"
+      },
+      {
+        "src": "/media/products/dera-bardhe-01/1600.webp?rev=5194153d4d2692eb242745101fa98d81c8a6a979f275fd27a160638c41aff749",
+        "width": 1600,
+        "height": 800,
+        "bytes": 89528,
+        "sha256": "5194153d4d2692eb242745101fa98d81c8a6a979f275fd27a160638c41aff749"
+      },
+      {
+        "src": "/media/products/dera-bardhe-01/1774.webp?rev=612ed063fd18dc84b0700b298a9a28b71924d01c195f2018c0954e31bc8fbd71",
+        "width": 1774,
+        "height": 887,
+        "bytes": 107872,
+        "sha256": "612ed063fd18dc84b0700b298a9a28b71924d01c195f2018c0954e31bc8fbd71"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/dera-bardhe-01/960.webp?rev=0b107dd913e47141b5dfc6ce74c854489ce57851d6ff24f715691aeff1cafe20",
+      "width": 960,
+      "height": 480,
+      "bytes": 40730,
+      "sha256": "0b107dd913e47141b5dfc6ce74c854489ce57851d6ff24f715691aeff1cafe20"
+    }
+  },
+  "lis-natyral-10-01": {
+    "id": "lis-natyral-10-01",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "room",
+    "avif": [
+      {
+        "src": "/media/products/lis-natyral-10-01/320.avif?rev=ca60eb71a56f208580f7f5cde5298f9812aea6783470d8adda65a6676a8167f4",
+        "width": 320,
+        "height": 160,
+        "bytes": 4312,
+        "sha256": "ca60eb71a56f208580f7f5cde5298f9812aea6783470d8adda65a6676a8167f4"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-01/640.avif?rev=40a5172ac8c663991b3eca9dc6400ad0cbbb259f207a388f910e6ea25f908793",
+        "width": 640,
+        "height": 320,
+        "bytes": 16067,
+        "sha256": "40a5172ac8c663991b3eca9dc6400ad0cbbb259f207a388f910e6ea25f908793"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-01/960.avif?rev=8b5514451dd00009772477724e00eef658245104c65f484211ae27ae71420636",
+        "width": 960,
+        "height": 480,
+        "bytes": 36131,
+        "sha256": "8b5514451dd00009772477724e00eef658245104c65f484211ae27ae71420636"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-01/1600.avif?rev=100b79881555ae1547a25cdf98caa3e8f415dd1ca8518d6ea8ae233313a89ec1",
+        "width": 1600,
+        "height": 800,
+        "bytes": 93394,
+        "sha256": "100b79881555ae1547a25cdf98caa3e8f415dd1ca8518d6ea8ae233313a89ec1"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-01/1774.avif?rev=db7ba720dbbb5a1b9673d3ffbcc6492d59f6f50efbd929cb1e0da639b2d84058",
+        "width": 1774,
+        "height": 887,
+        "bytes": 110904,
+        "sha256": "db7ba720dbbb5a1b9673d3ffbcc6492d59f6f50efbd929cb1e0da639b2d84058"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/lis-natyral-10-01/320.webp?rev=2b54961315138ac4270174c93b8a045b8cfeb2724ab884a11b033325c748c3a1",
+        "width": 320,
+        "height": 160,
+        "bytes": 8576,
+        "sha256": "2b54961315138ac4270174c93b8a045b8cfeb2724ab884a11b033325c748c3a1"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-01/640.webp?rev=b8741a97259a7de0f0b427959bc3446b94753e5227f9d212acc8f02045b372c0",
+        "width": 640,
+        "height": 320,
+        "bytes": 33832,
+        "sha256": "b8741a97259a7de0f0b427959bc3446b94753e5227f9d212acc8f02045b372c0"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-01/960.webp?rev=9c48e748496364b010b16025efe43f7c0be4606da9e6ef76c4042182d39d217e",
+        "width": 960,
+        "height": 480,
+        "bytes": 77940,
+        "sha256": "9c48e748496364b010b16025efe43f7c0be4606da9e6ef76c4042182d39d217e"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-01/1600.webp?rev=fde9085b3b829fe8659edbef6630e9f7c96ee0cca109038e13c061962a9d7219",
+        "width": 1600,
+        "height": 800,
+        "bytes": 194798,
+        "sha256": "fde9085b3b829fe8659edbef6630e9f7c96ee0cca109038e13c061962a9d7219"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-01/1774.webp?rev=76f260d9208691a87306a1d0c85099f802e8ca066586c8db49ed53c1f0150157",
+        "width": 1774,
+        "height": 887,
+        "bytes": 234794,
+        "sha256": "76f260d9208691a87306a1d0c85099f802e8ca066586c8db49ed53c1f0150157"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/lis-natyral-10-01/960.webp?rev=9c48e748496364b010b16025efe43f7c0be4606da9e6ef76c4042182d39d217e",
+      "width": 960,
+      "height": 480,
+      "bytes": 77940,
+      "sha256": "9c48e748496364b010b16025efe43f7c0be4606da9e6ef76c4042182d39d217e"
+    }
+  },
+  "dera-lis-01": {
+    "id": "dera-lis-01",
+    "width": 1773,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "product",
+    "avif": [
+      {
+        "src": "/media/products/dera-lis-01/320.avif?rev=bf0443057be98466d8074b057e03edde5dd4bc42ba3f14f7d0658340753932fa",
+        "width": 320,
+        "height": 160,
+        "bytes": 3431,
+        "sha256": "bf0443057be98466d8074b057e03edde5dd4bc42ba3f14f7d0658340753932fa"
+      },
+      {
+        "src": "/media/products/dera-lis-01/640.avif?rev=80bd8b397226a489dc9f60a16f2ae2862b6464bb8b0482549d04a8bc76e39f7e",
+        "width": 640,
+        "height": 320,
+        "bytes": 12148,
+        "sha256": "80bd8b397226a489dc9f60a16f2ae2862b6464bb8b0482549d04a8bc76e39f7e"
+      },
+      {
+        "src": "/media/products/dera-lis-01/960.avif?rev=09d1b8354808b3c200dcc5438fde2ce479e31701d28681344cd5f17148a5a3a3",
+        "width": 960,
+        "height": 480,
+        "bytes": 24631,
+        "sha256": "09d1b8354808b3c200dcc5438fde2ce479e31701d28681344cd5f17148a5a3a3"
+      },
+      {
+        "src": "/media/products/dera-lis-01/1600.avif?rev=bb7d9b63f1416a6b33bdb7394b69f38f12db35687b54e281a65b41b83f912cd0",
+        "width": 1600,
+        "height": 800,
+        "bytes": 57441,
+        "sha256": "bb7d9b63f1416a6b33bdb7394b69f38f12db35687b54e281a65b41b83f912cd0"
+      },
+      {
+        "src": "/media/products/dera-lis-01/1773.avif?rev=0dbcd5ea0eb543c62b889dfa50692002bbcc8bef7dd08794f2a3772c2ab8a6bf",
+        "width": 1773,
+        "height": 887,
+        "bytes": 69919,
+        "sha256": "0dbcd5ea0eb543c62b889dfa50692002bbcc8bef7dd08794f2a3772c2ab8a6bf"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/dera-lis-01/320.webp?rev=5204341512f05cc7f2ecfe75596789248bdb8a9b49038bf3328143a07b6a1083",
+        "width": 320,
+        "height": 160,
+        "bytes": 6206,
+        "sha256": "5204341512f05cc7f2ecfe75596789248bdb8a9b49038bf3328143a07b6a1083"
+      },
+      {
+        "src": "/media/products/dera-lis-01/640.webp?rev=052f36da91312f12693cf076b08b8bd2c7ca6d91b1b365828eb343673e9064a5",
+        "width": 640,
+        "height": 320,
+        "bytes": 23266,
+        "sha256": "052f36da91312f12693cf076b08b8bd2c7ca6d91b1b365828eb343673e9064a5"
+      },
+      {
+        "src": "/media/products/dera-lis-01/960.webp?rev=0e1f4013fe8131fd04828c07cf4d4ddcab83c8b8039fc231c32b27b841a00fd1",
+        "width": 960,
+        "height": 480,
+        "bytes": 49672,
+        "sha256": "0e1f4013fe8131fd04828c07cf4d4ddcab83c8b8039fc231c32b27b841a00fd1"
+      },
+      {
+        "src": "/media/products/dera-lis-01/1600.webp?rev=550ca22b4f9fed040b677acf1ecd3104ba2887d3010d1ca28d1ae609a26e16dc",
+        "width": 1600,
+        "height": 800,
+        "bytes": 120106,
+        "sha256": "550ca22b4f9fed040b677acf1ecd3104ba2887d3010d1ca28d1ae609a26e16dc"
+      },
+      {
+        "src": "/media/products/dera-lis-01/1773.webp?rev=70dfabfe0c9beeb13da5bf005367ee188724c01758c3d9d17b156eed8bf16956",
+        "width": 1773,
+        "height": 887,
+        "bytes": 147170,
+        "sha256": "70dfabfe0c9beeb13da5bf005367ee188724c01758c3d9d17b156eed8bf16956"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/dera-lis-01/960.webp?rev=0e1f4013fe8131fd04828c07cf4d4ddcab83c8b8039fc231c32b27b841a00fd1",
+      "width": 960,
+      "height": 480,
+      "bytes": 49672,
+      "sha256": "0e1f4013fe8131fd04828c07cf4d4ddcab83c8b8039fc231c32b27b841a00fd1"
+    }
+  },
+  "dushk-fshatar-8-01": {
+    "id": "dushk-fshatar-8-01",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "room",
+    "avif": [
+      {
+        "src": "/media/products/dushk-fshatar-8-01/320.avif?rev=8a001059b1abaea413f92f1591c3867b40f5702aa072e463bc2545fff86033de",
+        "width": 320,
+        "height": 160,
+        "bytes": 5057,
+        "sha256": "8a001059b1abaea413f92f1591c3867b40f5702aa072e463bc2545fff86033de"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-01/640.avif?rev=8986d6b7f26ed16b6184dce640272ab461b921dc883e819634af607127e39923",
+        "width": 640,
+        "height": 320,
+        "bytes": 17310,
+        "sha256": "8986d6b7f26ed16b6184dce640272ab461b921dc883e819634af607127e39923"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-01/960.avif?rev=aa0e546ee91040c7f5939505add8d4cb7e15b8a458d9b9e98830f90b4753e382",
+        "width": 960,
+        "height": 480,
+        "bytes": 37353,
+        "sha256": "aa0e546ee91040c7f5939505add8d4cb7e15b8a458d9b9e98830f90b4753e382"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-01/1600.avif?rev=0ed46cba826f5ea466878b7804f3f4015a60f8ffdfeab12f842e1b6f3370c012",
+        "width": 1600,
+        "height": 800,
+        "bytes": 93813,
+        "sha256": "0ed46cba826f5ea466878b7804f3f4015a60f8ffdfeab12f842e1b6f3370c012"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-01/1774.avif?rev=da4be3a5f80b3b0b39a1b67d149e22b233b51ede6d7a603908af9d7831b56912",
+        "width": 1774,
+        "height": 887,
+        "bytes": 112033,
+        "sha256": "da4be3a5f80b3b0b39a1b67d149e22b233b51ede6d7a603908af9d7831b56912"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/dushk-fshatar-8-01/320.webp?rev=c306e5a5f5136a8cea72be48082ec38210de62f749f660bd4a4cf31fa34c18d8",
+        "width": 320,
+        "height": 160,
+        "bytes": 10274,
+        "sha256": "c306e5a5f5136a8cea72be48082ec38210de62f749f660bd4a4cf31fa34c18d8"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-01/640.webp?rev=3cf687e78962097a9ad6a2f8c6cc19da8e1dc173074c2967b23318da6c98b903",
+        "width": 640,
+        "height": 320,
+        "bytes": 37922,
+        "sha256": "3cf687e78962097a9ad6a2f8c6cc19da8e1dc173074c2967b23318da6c98b903"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-01/960.webp?rev=51975a2f517cf8a1f9b44fbc6eca850c8635878245f5ed7e2f8455afdd9c5a93",
+        "width": 960,
+        "height": 480,
+        "bytes": 80096,
+        "sha256": "51975a2f517cf8a1f9b44fbc6eca850c8635878245f5ed7e2f8455afdd9c5a93"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-01/1600.webp?rev=c04e4d1de62595e7a585152533212b1e5d8036b8752a0923ffe02727ce947262",
+        "width": 1600,
+        "height": 800,
+        "bytes": 189540,
+        "sha256": "c04e4d1de62595e7a585152533212b1e5d8036b8752a0923ffe02727ce947262"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-01/1774.webp?rev=a8c55a465af9e5fe2a317fe1c40aea3107ae4fb7166e05d85ac6ad548d2db813",
+        "width": 1774,
+        "height": 887,
+        "bytes": 228762,
+        "sha256": "a8c55a465af9e5fe2a317fe1c40aea3107ae4fb7166e05d85ac6ad548d2db813"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/dushk-fshatar-8-01/960.webp?rev=51975a2f517cf8a1f9b44fbc6eca850c8635878245f5ed7e2f8455afdd9c5a93",
+      "width": 960,
+      "height": 480,
+      "bytes": 80096,
+      "sha256": "51975a2f517cf8a1f9b44fbc6eca850c8635878245f5ed7e2f8455afdd9c5a93"
+    }
+  },
+  "dera-kashmir-01": {
+    "id": "dera-kashmir-01",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "product",
+    "avif": [
+      {
+        "src": "/media/products/dera-kashmir-01/320.avif?rev=a3900dcae680a88a840c60c4953f717f5a6a74458a465ba5cb364a92bececbf9",
+        "width": 320,
+        "height": 160,
+        "bytes": 3418,
+        "sha256": "a3900dcae680a88a840c60c4953f717f5a6a74458a465ba5cb364a92bececbf9"
+      },
+      {
+        "src": "/media/products/dera-kashmir-01/640.avif?rev=c4475e2ebb276b7cc73d4b15c55c95531b24f159db32f01c7ac4be8bac610c98",
+        "width": 640,
+        "height": 320,
+        "bytes": 10053,
+        "sha256": "c4475e2ebb276b7cc73d4b15c55c95531b24f159db32f01c7ac4be8bac610c98"
+      },
+      {
+        "src": "/media/products/dera-kashmir-01/960.avif?rev=937926e5db296d29f43efd6bad28f2c7fba70f790c5ded3a2ae727a4cf4330cc",
+        "width": 960,
+        "height": 480,
+        "bytes": 19390,
+        "sha256": "937926e5db296d29f43efd6bad28f2c7fba70f790c5ded3a2ae727a4cf4330cc"
+      },
+      {
+        "src": "/media/products/dera-kashmir-01/1600.avif?rev=16f2c4bc2b788d4f64f2a5c3c78786976df58758c697a90cca701602884032e9",
+        "width": 1600,
+        "height": 800,
+        "bytes": 46514,
+        "sha256": "16f2c4bc2b788d4f64f2a5c3c78786976df58758c697a90cca701602884032e9"
+      },
+      {
+        "src": "/media/products/dera-kashmir-01/1774.avif?rev=76c27ea90d38490a6053b5ef89d0189aaa7d2191d7d61f97efb5040c25d2eaad",
+        "width": 1774,
+        "height": 887,
+        "bytes": 54643,
+        "sha256": "76c27ea90d38490a6053b5ef89d0189aaa7d2191d7d61f97efb5040c25d2eaad"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/dera-kashmir-01/320.webp?rev=f091ab37e46ec579af40124bd255e73b7509f09014b0a76475c403772c2a190f",
+        "width": 320,
+        "height": 160,
+        "bytes": 5706,
+        "sha256": "f091ab37e46ec579af40124bd255e73b7509f09014b0a76475c403772c2a190f"
+      },
+      {
+        "src": "/media/products/dera-kashmir-01/640.webp?rev=d229ef708ad643cd4de104f356b56069426ba8621f64c55e5ac3ce4d11072e74",
+        "width": 640,
+        "height": 320,
+        "bytes": 18654,
+        "sha256": "d229ef708ad643cd4de104f356b56069426ba8621f64c55e5ac3ce4d11072e74"
+      },
+      {
+        "src": "/media/products/dera-kashmir-01/960.webp?rev=c9e2cde857d53e27700c288af14964f9239757c51c05aa63a1e0cb37e7dc46e3",
+        "width": 960,
+        "height": 480,
+        "bytes": 37428,
+        "sha256": "c9e2cde857d53e27700c288af14964f9239757c51c05aa63a1e0cb37e7dc46e3"
+      },
+      {
+        "src": "/media/products/dera-kashmir-01/1600.webp?rev=ebb1e18154dfeb2d565cd52df26cabfeacaae2ca9adb6db3dccc1215403b0660",
+        "width": 1600,
+        "height": 800,
+        "bytes": 88504,
+        "sha256": "ebb1e18154dfeb2d565cd52df26cabfeacaae2ca9adb6db3dccc1215403b0660"
+      },
+      {
+        "src": "/media/products/dera-kashmir-01/1774.webp?rev=1caa03b628a59deb3c677697f7a7a4ae40a57a1df9e24bda5f2d7bee635b1960",
+        "width": 1774,
+        "height": 887,
+        "bytes": 108042,
+        "sha256": "1caa03b628a59deb3c677697f7a7a4ae40a57a1df9e24bda5f2d7bee635b1960"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/dera-kashmir-01/960.webp?rev=c9e2cde857d53e27700c288af14964f9239757c51c05aa63a1e0cb37e7dc46e3",
+      "width": 960,
+      "height": 480,
+      "bytes": 37428,
+      "sha256": "c9e2cde857d53e27700c288af14964f9239757c51c05aa63a1e0cb37e7dc46e3"
+    }
+  },
+  "peshk-natyral-12-01": {
+    "id": "peshk-natyral-12-01",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "room",
+    "avif": [
+      {
+        "src": "/media/products/peshk-natyral-12-01/320.avif?rev=a18fb2dc688efcc8a6791902993a72bb56de1c5ba95729207f53681516792086",
+        "width": 320,
+        "height": 160,
+        "bytes": 4352,
+        "sha256": "a18fb2dc688efcc8a6791902993a72bb56de1c5ba95729207f53681516792086"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-01/640.avif?rev=a76e41b721cf8361179fe4437d24663e7a16dadc59c98d7f6eb012d57306fafb",
+        "width": 640,
+        "height": 320,
+        "bytes": 14145,
+        "sha256": "a76e41b721cf8361179fe4437d24663e7a16dadc59c98d7f6eb012d57306fafb"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-01/960.avif?rev=236503c327e0225ee6b11cf3db719bae5a8885a1d43819242ce3b0caa8420b98",
+        "width": 960,
+        "height": 480,
+        "bytes": 29301,
+        "sha256": "236503c327e0225ee6b11cf3db719bae5a8885a1d43819242ce3b0caa8420b98"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-01/1600.avif?rev=02d21a5b87cb6a76b28c9042e993832feefd9719eed7afbf62fa13adef0c3fbc",
+        "width": 1600,
+        "height": 800,
+        "bytes": 73211,
+        "sha256": "02d21a5b87cb6a76b28c9042e993832feefd9719eed7afbf62fa13adef0c3fbc"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-01/1774.avif?rev=1acdcc179d5e2bcbb22865dbbd5e4b4e0fa84727234deeb830ba32a868aa1db0",
+        "width": 1774,
+        "height": 887,
+        "bytes": 87616,
+        "sha256": "1acdcc179d5e2bcbb22865dbbd5e4b4e0fa84727234deeb830ba32a868aa1db0"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/peshk-natyral-12-01/320.webp?rev=8ab1ed5ade39a6349577c45d7cda2ff6af026392cb8cc3068b99529880a97583",
+        "width": 320,
+        "height": 160,
+        "bytes": 8308,
+        "sha256": "8ab1ed5ade39a6349577c45d7cda2ff6af026392cb8cc3068b99529880a97583"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-01/640.webp?rev=61b9efb8477cb24311499a5a909d9a84d7281fdb2e6184f2911c9c70d3c67e41",
+        "width": 640,
+        "height": 320,
+        "bytes": 28522,
+        "sha256": "61b9efb8477cb24311499a5a909d9a84d7281fdb2e6184f2911c9c70d3c67e41"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-01/960.webp?rev=9dd5a2c0c7c48e7453a62cbea3b787fb60c5b9192a073da34e02a19191446a9a",
+        "width": 960,
+        "height": 480,
+        "bytes": 60124,
+        "sha256": "9dd5a2c0c7c48e7453a62cbea3b787fb60c5b9192a073da34e02a19191446a9a"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-01/1600.webp?rev=852934685d83d16ecf88680fe99a255278e583469a531c61ecadc5510f50d92e",
+        "width": 1600,
+        "height": 800,
+        "bytes": 140730,
+        "sha256": "852934685d83d16ecf88680fe99a255278e583469a531c61ecadc5510f50d92e"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-01/1774.webp?rev=5498817e706b6ade3153467b0bd096c7adf71a79b81cce5eba8cfc4ac04aa524",
+        "width": 1774,
+        "height": 887,
+        "bytes": 169318,
+        "sha256": "5498817e706b6ade3153467b0bd096c7adf71a79b81cce5eba8cfc4ac04aa524"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/peshk-natyral-12-01/960.webp?rev=9dd5a2c0c7c48e7453a62cbea3b787fb60c5b9192a073da34e02a19191446a9a",
+      "width": 960,
+      "height": 480,
+      "bytes": 60124,
+      "sha256": "9dd5a2c0c7c48e7453a62cbea3b787fb60c5b9192a073da34e02a19191446a9a"
+    }
+  },
+  "dera-bardhe-02": {
+    "id": "dera-bardhe-02",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/dera-bardhe-02/320.avif?rev=578a24dbc5d805befea817974e7438630dd5d130041e39589b42a5e2125ac375",
+        "width": 320,
+        "height": 160,
+        "bytes": 1849,
+        "sha256": "578a24dbc5d805befea817974e7438630dd5d130041e39589b42a5e2125ac375"
+      },
+      {
+        "src": "/media/products/dera-bardhe-02/640.avif?rev=85ca75c63f777e510c2dc95df674381f390455112c0e30538bbc1c6353f51a0c",
+        "width": 640,
+        "height": 320,
+        "bytes": 4219,
+        "sha256": "85ca75c63f777e510c2dc95df674381f390455112c0e30538bbc1c6353f51a0c"
+      },
+      {
+        "src": "/media/products/dera-bardhe-02/960.avif?rev=146e4a0c7f2847b803370fbea12aad080cc457a8d29b794a6663a38ebeb73fcd",
+        "width": 960,
+        "height": 480,
+        "bytes": 7454,
+        "sha256": "146e4a0c7f2847b803370fbea12aad080cc457a8d29b794a6663a38ebeb73fcd"
+      },
+      {
+        "src": "/media/products/dera-bardhe-02/1600.avif?rev=cc0e7249fa71fa35805f111a46d647f2cfb0efb322af663796d122ebfd009b18",
+        "width": 1600,
+        "height": 800,
+        "bytes": 16011,
+        "sha256": "cc0e7249fa71fa35805f111a46d647f2cfb0efb322af663796d122ebfd009b18"
+      },
+      {
+        "src": "/media/products/dera-bardhe-02/1774.avif?rev=bd4a574c39f04f746c11834bb48fce85eb5d81db5fafcd66483d0498dca6c2bb",
+        "width": 1774,
+        "height": 887,
+        "bytes": 19272,
+        "sha256": "bd4a574c39f04f746c11834bb48fce85eb5d81db5fafcd66483d0498dca6c2bb"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/dera-bardhe-02/320.webp?rev=3ba58e17bb935e66af6cb372bc9fb3e555bd1b58ce3fe5ffb80f13f0221c1db6",
+        "width": 320,
+        "height": 160,
+        "bytes": 2698,
+        "sha256": "3ba58e17bb935e66af6cb372bc9fb3e555bd1b58ce3fe5ffb80f13f0221c1db6"
+      },
+      {
+        "src": "/media/products/dera-bardhe-02/640.webp?rev=c8007f9c70e70e46cee3fe4a3dfe9cc41d6e57951c44655478e2b5bf42279127",
+        "width": 640,
+        "height": 320,
+        "bytes": 7118,
+        "sha256": "c8007f9c70e70e46cee3fe4a3dfe9cc41d6e57951c44655478e2b5bf42279127"
+      },
+      {
+        "src": "/media/products/dera-bardhe-02/960.webp?rev=b24b937857ea3a0e55bcfe6e9d9cdd446ada984d6158d0e4503edef685a07bef",
+        "width": 960,
+        "height": 480,
+        "bytes": 12892,
+        "sha256": "b24b937857ea3a0e55bcfe6e9d9cdd446ada984d6158d0e4503edef685a07bef"
+      },
+      {
+        "src": "/media/products/dera-bardhe-02/1600.webp?rev=3f07f99f68e3d32823d8f5d27b3197966a8e70fba47e206aa2c36033e7b8b30e",
+        "width": 1600,
+        "height": 800,
+        "bytes": 28964,
+        "sha256": "3f07f99f68e3d32823d8f5d27b3197966a8e70fba47e206aa2c36033e7b8b30e"
+      },
+      {
+        "src": "/media/products/dera-bardhe-02/1774.webp?rev=3e44554bd45a5a4dd52af92bc629808d9bdb336c2a2f9bc3af5884649c263e85",
+        "width": 1774,
+        "height": 887,
+        "bytes": 35196,
+        "sha256": "3e44554bd45a5a4dd52af92bc629808d9bdb336c2a2f9bc3af5884649c263e85"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/dera-bardhe-02/960.webp?rev=b24b937857ea3a0e55bcfe6e9d9cdd446ada984d6158d0e4503edef685a07bef",
+      "width": 960,
+      "height": 480,
+      "bytes": 12892,
+      "sha256": "b24b937857ea3a0e55bcfe6e9d9cdd446ada984d6158d0e4503edef685a07bef"
+    }
+  },
+  "lis-natyral-10-02": {
+    "id": "lis-natyral-10-02",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/lis-natyral-10-02/320.avif?rev=66c851691f4b5ef34147e7c19acb003e39b23ee5f453afab6bf01ac5b06e2cca",
+        "width": 320,
+        "height": 160,
+        "bytes": 4765,
+        "sha256": "66c851691f4b5ef34147e7c19acb003e39b23ee5f453afab6bf01ac5b06e2cca"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-02/640.avif?rev=b20d73b0b51296cecaa7f172adb50a54462f5a337fc3abf17c7f47cbc8fd4b6c",
+        "width": 640,
+        "height": 320,
+        "bytes": 17562,
+        "sha256": "b20d73b0b51296cecaa7f172adb50a54462f5a337fc3abf17c7f47cbc8fd4b6c"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-02/960.avif?rev=fe874c4b97c52ce19ac2194539096e14772ac3e75cf2024ad28e050a748f6bb4",
+        "width": 960,
+        "height": 480,
+        "bytes": 36551,
+        "sha256": "fe874c4b97c52ce19ac2194539096e14772ac3e75cf2024ad28e050a748f6bb4"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-02/1600.avif?rev=196b7d06690d81489c3d85c4ff5db3909daeb4f91888f3ec5fbfd8efe6c236ad",
+        "width": 1600,
+        "height": 800,
+        "bytes": 82782,
+        "sha256": "196b7d06690d81489c3d85c4ff5db3909daeb4f91888f3ec5fbfd8efe6c236ad"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-02/1774.avif?rev=f01f4603c930ec8648bc84151ae496ab969756a8bdfaea4eb191b7c2986a6647",
+        "width": 1774,
+        "height": 887,
+        "bytes": 95672,
+        "sha256": "f01f4603c930ec8648bc84151ae496ab969756a8bdfaea4eb191b7c2986a6647"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/lis-natyral-10-02/320.webp?rev=4a2ea86428dfcd56f50c933913281a13000f383047744128b9f16c11b5dd1a4a",
+        "width": 320,
+        "height": 160,
+        "bytes": 10024,
+        "sha256": "4a2ea86428dfcd56f50c933913281a13000f383047744128b9f16c11b5dd1a4a"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-02/640.webp?rev=49fb3621c4d2ee9d2e27a039a4f2f5f81e5ce57189ef51ec0b40c564a9611067",
+        "width": 640,
+        "height": 320,
+        "bytes": 38372,
+        "sha256": "49fb3621c4d2ee9d2e27a039a4f2f5f81e5ce57189ef51ec0b40c564a9611067"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-02/960.webp?rev=2b3e3311400871ed736f8f642245ccfa4b27fd124050d329fe4c01f8f8ce9551",
+        "width": 960,
+        "height": 480,
+        "bytes": 80010,
+        "sha256": "2b3e3311400871ed736f8f642245ccfa4b27fd124050d329fe4c01f8f8ce9551"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-02/1600.webp?rev=9789a4684fa1816c9996c52c0ac59dcc806d534d34201abf9bc1b0e146270a2d",
+        "width": 1600,
+        "height": 800,
+        "bytes": 172608,
+        "sha256": "9789a4684fa1816c9996c52c0ac59dcc806d534d34201abf9bc1b0e146270a2d"
+      },
+      {
+        "src": "/media/products/lis-natyral-10-02/1774.webp?rev=f27835eeecefb695b83f76e72c0b68b32ea2a672243930e724d8cbfd71521ab5",
+        "width": 1774,
+        "height": 887,
+        "bytes": 200940,
+        "sha256": "f27835eeecefb695b83f76e72c0b68b32ea2a672243930e724d8cbfd71521ab5"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/lis-natyral-10-02/960.webp?rev=2b3e3311400871ed736f8f642245ccfa4b27fd124050d329fe4c01f8f8ce9551",
+      "width": 960,
+      "height": 480,
+      "bytes": 80010,
+      "sha256": "2b3e3311400871ed736f8f642245ccfa4b27fd124050d329fe4c01f8f8ce9551"
+    }
+  },
+  "dera-lis-02": {
+    "id": "dera-lis-02",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/dera-lis-02/320.avif?rev=f813d65d00246aaa8d0cc79c80d087f85ef66ac8c7e1c3baafa1e3d424d1e590",
+        "width": 320,
+        "height": 160,
+        "bytes": 3268,
+        "sha256": "f813d65d00246aaa8d0cc79c80d087f85ef66ac8c7e1c3baafa1e3d424d1e590"
+      },
+      {
+        "src": "/media/products/dera-lis-02/640.avif?rev=14ed1d52f663878972e266a0a0f9a3f32e17d63aeec36e20d012fe888a6a279f",
+        "width": 640,
+        "height": 320,
+        "bytes": 8925,
+        "sha256": "14ed1d52f663878972e266a0a0f9a3f32e17d63aeec36e20d012fe888a6a279f"
+      },
+      {
+        "src": "/media/products/dera-lis-02/960.avif?rev=2ef8133be1e10ca0bb3bd67ec2aaa3d980c59bc298ec1d58698d9c534dd32074",
+        "width": 960,
+        "height": 480,
+        "bytes": 16340,
+        "sha256": "2ef8133be1e10ca0bb3bd67ec2aaa3d980c59bc298ec1d58698d9c534dd32074"
+      },
+      {
+        "src": "/media/products/dera-lis-02/1600.avif?rev=8afa427e356ced31beca5fdf59cc424582820be66f588f4d7ed48cbd13732a88",
+        "width": 1600,
+        "height": 800,
+        "bytes": 33841,
+        "sha256": "8afa427e356ced31beca5fdf59cc424582820be66f588f4d7ed48cbd13732a88"
+      },
+      {
+        "src": "/media/products/dera-lis-02/1774.avif?rev=b67686998ea94e0aaa721c4a16852ac1d19557a83c33562f418716d409c0b764",
+        "width": 1774,
+        "height": 887,
+        "bytes": 40425,
+        "sha256": "b67686998ea94e0aaa721c4a16852ac1d19557a83c33562f418716d409c0b764"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/dera-lis-02/320.webp?rev=0cbcade4b5ada082055fe08661ec6e201e37bd9cfe0deb1a72c904709d4e6289",
+        "width": 320,
+        "height": 160,
+        "bytes": 5688,
+        "sha256": "0cbcade4b5ada082055fe08661ec6e201e37bd9cfe0deb1a72c904709d4e6289"
+      },
+      {
+        "src": "/media/products/dera-lis-02/640.webp?rev=58b50f5137c4cbaeff284de110c9b1212837295c59866fedb9e7db432c3dedb8",
+        "width": 640,
+        "height": 320,
+        "bytes": 16990,
+        "sha256": "58b50f5137c4cbaeff284de110c9b1212837295c59866fedb9e7db432c3dedb8"
+      },
+      {
+        "src": "/media/products/dera-lis-02/960.webp?rev=4399733ec93800d1bdf8e8997c759c556c896f3bb4053a14f5436be06a56ce54",
+        "width": 960,
+        "height": 480,
+        "bytes": 31836,
+        "sha256": "4399733ec93800d1bdf8e8997c759c556c896f3bb4053a14f5436be06a56ce54"
+      },
+      {
+        "src": "/media/products/dera-lis-02/1600.webp?rev=0691906971cb85307bdf9a2457b8daa39447e9ddddbe0e944b31b998697291f7",
+        "width": 1600,
+        "height": 800,
+        "bytes": 71796,
+        "sha256": "0691906971cb85307bdf9a2457b8daa39447e9ddddbe0e944b31b998697291f7"
+      },
+      {
+        "src": "/media/products/dera-lis-02/1774.webp?rev=6d9682373abc78dfd60395689716d4f84b825e871a00ddc7b176af3b57592abb",
+        "width": 1774,
+        "height": 887,
+        "bytes": 85632,
+        "sha256": "6d9682373abc78dfd60395689716d4f84b825e871a00ddc7b176af3b57592abb"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/dera-lis-02/960.webp?rev=4399733ec93800d1bdf8e8997c759c556c896f3bb4053a14f5436be06a56ce54",
+      "width": 960,
+      "height": 480,
+      "bytes": 31836,
+      "sha256": "4399733ec93800d1bdf8e8997c759c556c896f3bb4053a14f5436be06a56ce54"
+    }
+  },
+  "dushk-fshatar-8-02": {
+    "id": "dushk-fshatar-8-02",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/dushk-fshatar-8-02/320.avif?rev=454338653061e4db0a605032004fa904d9c213edcbf2c04bd2aaff4638399ae0",
+        "width": 320,
+        "height": 160,
+        "bytes": 5382,
+        "sha256": "454338653061e4db0a605032004fa904d9c213edcbf2c04bd2aaff4638399ae0"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-02/640.avif?rev=5cd4ea62fbb0bf7f721b6170b3dbc3f2a320516da1bad06e83791e7582e8d042",
+        "width": 640,
+        "height": 320,
+        "bytes": 19153,
+        "sha256": "5cd4ea62fbb0bf7f721b6170b3dbc3f2a320516da1bad06e83791e7582e8d042"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-02/960.avif?rev=ca992cd78bc9d8b5731e768c6b0c33e74c665678bcc5d7d3497b9e4a3df4fbb5",
+        "width": 960,
+        "height": 480,
+        "bytes": 39023,
+        "sha256": "ca992cd78bc9d8b5731e768c6b0c33e74c665678bcc5d7d3497b9e4a3df4fbb5"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-02/1600.avif?rev=c40ae6e804229e852c5b777c84c62650a7d7da78c83062c7cfffb092e88037ba",
+        "width": 1600,
+        "height": 800,
+        "bytes": 86521,
+        "sha256": "c40ae6e804229e852c5b777c84c62650a7d7da78c83062c7cfffb092e88037ba"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-02/1774.avif?rev=c5f3e69ff225817bd6937fba31d0873710da28d61e1ae0fa8f6052bf9359dfeb",
+        "width": 1774,
+        "height": 887,
+        "bytes": 99885,
+        "sha256": "c5f3e69ff225817bd6937fba31d0873710da28d61e1ae0fa8f6052bf9359dfeb"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/dushk-fshatar-8-02/320.webp?rev=f6239e5b37d3922679ab1e201bbbc783bb45a17dd68be87d0f0c21132650fd65",
+        "width": 320,
+        "height": 160,
+        "bytes": 11632,
+        "sha256": "f6239e5b37d3922679ab1e201bbbc783bb45a17dd68be87d0f0c21132650fd65"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-02/640.webp?rev=4d4efa680b582f40154fe4c64a429853e22b50b373f416beed95338c3dfb3df5",
+        "width": 640,
+        "height": 320,
+        "bytes": 41738,
+        "sha256": "4d4efa680b582f40154fe4c64a429853e22b50b373f416beed95338c3dfb3df5"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-02/960.webp?rev=cae579e1023bd1701af989f55752623a4e2e11e09c01fb6c72b3d7836cf2a9d6",
+        "width": 960,
+        "height": 480,
+        "bytes": 82748,
+        "sha256": "cae579e1023bd1701af989f55752623a4e2e11e09c01fb6c72b3d7836cf2a9d6"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-02/1600.webp?rev=47391ce617d944edb81c2bcf1b091b86445def85914577130e69d021f8734ec0",
+        "width": 1600,
+        "height": 800,
+        "bytes": 172570,
+        "sha256": "47391ce617d944edb81c2bcf1b091b86445def85914577130e69d021f8734ec0"
+      },
+      {
+        "src": "/media/products/dushk-fshatar-8-02/1774.webp?rev=e1798a3816177a602f7fc12a00828bb56f14801962c00e113e76141c122edfdb",
+        "width": 1774,
+        "height": 887,
+        "bytes": 200846,
+        "sha256": "e1798a3816177a602f7fc12a00828bb56f14801962c00e113e76141c122edfdb"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/dushk-fshatar-8-02/960.webp?rev=cae579e1023bd1701af989f55752623a4e2e11e09c01fb6c72b3d7836cf2a9d6",
+      "width": 960,
+      "height": 480,
+      "bytes": 82748,
+      "sha256": "cae579e1023bd1701af989f55752623a4e2e11e09c01fb6c72b3d7836cf2a9d6"
+    }
+  },
+  "dera-kashmir-02": {
+    "id": "dera-kashmir-02",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/dera-kashmir-02/320.avif?rev=f16f7346d5914442d837a28cded371ab27bd64fc4217e21da494a016a370accf",
+        "width": 320,
+        "height": 160,
+        "bytes": 2969,
+        "sha256": "f16f7346d5914442d837a28cded371ab27bd64fc4217e21da494a016a370accf"
+      },
+      {
+        "src": "/media/products/dera-kashmir-02/640.avif?rev=5b83e0dea618846af16a14cb2ea4e34e82f84657a2d5680b940690197accd3f2",
+        "width": 640,
+        "height": 320,
+        "bytes": 6768,
+        "sha256": "5b83e0dea618846af16a14cb2ea4e34e82f84657a2d5680b940690197accd3f2"
+      },
+      {
+        "src": "/media/products/dera-kashmir-02/960.avif?rev=f40eed6ad6eb15c239289d064f5cbd30f0eae05606737381fb7dd3ab0c846b35",
+        "width": 960,
+        "height": 480,
+        "bytes": 12356,
+        "sha256": "f40eed6ad6eb15c239289d064f5cbd30f0eae05606737381fb7dd3ab0c846b35"
+      },
+      {
+        "src": "/media/products/dera-kashmir-02/1600.avif?rev=c70677e99fcf2674fea4223b3eb1a86faef23d440f0f555f9edefaf86dcfd0dc",
+        "width": 1600,
+        "height": 800,
+        "bytes": 36383,
+        "sha256": "c70677e99fcf2674fea4223b3eb1a86faef23d440f0f555f9edefaf86dcfd0dc"
+      },
+      {
+        "src": "/media/products/dera-kashmir-02/1774.avif?rev=03341d85bb2a77ddbd2457ecfd35a19255cd136676c8de2095e9cf9bc87fd10d",
+        "width": 1774,
+        "height": 887,
+        "bytes": 47166,
+        "sha256": "03341d85bb2a77ddbd2457ecfd35a19255cd136676c8de2095e9cf9bc87fd10d"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/dera-kashmir-02/320.webp?rev=ea377d3293b5d1e36c8057982b9789071656957212897ea24539d51136a97ad4",
+        "width": 320,
+        "height": 160,
+        "bytes": 4528,
+        "sha256": "ea377d3293b5d1e36c8057982b9789071656957212897ea24539d51136a97ad4"
+      },
+      {
+        "src": "/media/products/dera-kashmir-02/640.webp?rev=792a7c3e219770227774fe720b19bf955ba0b7120dfc555b33f29bbc150665f4",
+        "width": 640,
+        "height": 320,
+        "bytes": 12500,
+        "sha256": "792a7c3e219770227774fe720b19bf955ba0b7120dfc555b33f29bbc150665f4"
+      },
+      {
+        "src": "/media/products/dera-kashmir-02/960.webp?rev=9985a55c384fff11024004a95fa98ceb587cab5b362c0caf4089ea4cac7c4f86",
+        "width": 960,
+        "height": 480,
+        "bytes": 25824,
+        "sha256": "9985a55c384fff11024004a95fa98ceb587cab5b362c0caf4089ea4cac7c4f86"
+      },
+      {
+        "src": "/media/products/dera-kashmir-02/1600.webp?rev=248928f556adb89c4e2e42af85b5dbe3bdb3a3429a20d2ced12c2f9e3bedc8b4",
+        "width": 1600,
+        "height": 800,
+        "bytes": 76948,
+        "sha256": "248928f556adb89c4e2e42af85b5dbe3bdb3a3429a20d2ced12c2f9e3bedc8b4"
+      },
+      {
+        "src": "/media/products/dera-kashmir-02/1774.webp?rev=7282fde86cf941655e988699f9e03df0329edad2db99c8b569b53f705f82ac22",
+        "width": 1774,
+        "height": 887,
+        "bytes": 98818,
+        "sha256": "7282fde86cf941655e988699f9e03df0329edad2db99c8b569b53f705f82ac22"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/dera-kashmir-02/960.webp?rev=9985a55c384fff11024004a95fa98ceb587cab5b362c0caf4089ea4cac7c4f86",
+      "width": 960,
+      "height": 480,
+      "bytes": 25824,
+      "sha256": "9985a55c384fff11024004a95fa98ceb587cab5b362c0caf4089ea4cac7c4f86"
+    }
+  },
+  "peshk-natyral-12-02": {
+    "id": "peshk-natyral-12-02",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/peshk-natyral-12-02/320.avif?rev=d5f72c18f0828a38846e089a716e1860f5ce372016adc74c0147dfdadde3ffee",
+        "width": 320,
+        "height": 160,
+        "bytes": 4754,
+        "sha256": "d5f72c18f0828a38846e089a716e1860f5ce372016adc74c0147dfdadde3ffee"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-02/640.avif?rev=b71a69b0992cd218c3e48fa7b9fb630aae985e484f66201d2b005c33f1c11d3a",
+        "width": 640,
+        "height": 320,
+        "bytes": 17245,
+        "sha256": "b71a69b0992cd218c3e48fa7b9fb630aae985e484f66201d2b005c33f1c11d3a"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-02/960.avif?rev=f77171ac5c54c3938ddf9c75c432b40cdde0fb25b07efa513d68cb7feac49b0c",
+        "width": 960,
+        "height": 480,
+        "bytes": 35248,
+        "sha256": "f77171ac5c54c3938ddf9c75c432b40cdde0fb25b07efa513d68cb7feac49b0c"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-02/1600.avif?rev=4c5968783603999aba7801cd7c6b488a25f3fb2d7f16042a9123d7bfecdb8df5",
+        "width": 1600,
+        "height": 800,
+        "bytes": 81864,
+        "sha256": "4c5968783603999aba7801cd7c6b488a25f3fb2d7f16042a9123d7bfecdb8df5"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-02/1774.avif?rev=ef2a529cba447d075d7340a3d6ad15b3dbe8e13610e6304e2cfb444b7a7e4c7a",
+        "width": 1774,
+        "height": 887,
+        "bytes": 96234,
+        "sha256": "ef2a529cba447d075d7340a3d6ad15b3dbe8e13610e6304e2cfb444b7a7e4c7a"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/peshk-natyral-12-02/320.webp?rev=2b2a03eade90b6412f75afc08943c23d137ffdc245e5cd26edd16d5baf070de8",
+        "width": 320,
+        "height": 160,
+        "bytes": 9350,
+        "sha256": "2b2a03eade90b6412f75afc08943c23d137ffdc245e5cd26edd16d5baf070de8"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-02/640.webp?rev=8302f23388e97a61a083664045c041c870bbdcbcd8a880746f10c1c787b97357",
+        "width": 640,
+        "height": 320,
+        "bytes": 34722,
+        "sha256": "8302f23388e97a61a083664045c041c870bbdcbcd8a880746f10c1c787b97357"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-02/960.webp?rev=565c32646036c74effc3071eaf79eb0145a3a14f75d1ca4464ff4225619730d4",
+        "width": 960,
+        "height": 480,
+        "bytes": 73134,
+        "sha256": "565c32646036c74effc3071eaf79eb0145a3a14f75d1ca4464ff4225619730d4"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-02/1600.webp?rev=b5836eda75ff2a86b8d61f0af076a0862642ad5b0d203001cd9146b56c747065",
+        "width": 1600,
+        "height": 800,
+        "bytes": 162212,
+        "sha256": "b5836eda75ff2a86b8d61f0af076a0862642ad5b0d203001cd9146b56c747065"
+      },
+      {
+        "src": "/media/products/peshk-natyral-12-02/1774.webp?rev=46f69c8d7520c33cee7a893654cebf74e4ecfda8fd551b4c9e6008cc92d3028a",
+        "width": 1774,
+        "height": 887,
+        "bytes": 192222,
+        "sha256": "46f69c8d7520c33cee7a893654cebf74e4ecfda8fd551b4c9e6008cc92d3028a"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/peshk-natyral-12-02/960.webp?rev=565c32646036c74effc3071eaf79eb0145a3a14f75d1ca4464ff4225619730d4",
+      "width": 960,
+      "height": 480,
+      "bytes": 73134,
+      "sha256": "565c32646036c74effc3071eaf79eb0145a3a14f75d1ca4464ff4225619730d4"
+    }
+  },
+  "dera-antracit-01": {
+    "id": "dera-antracit-01",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.25,
+      0.5
+    ],
+    "role": "product",
+    "avif": [
+      {
+        "src": "/media/products/dera-antracit-01/320.avif?rev=1f1a538a2152dcb42884936a0a768b1c2437630ababee84c69b37c88d51dc1a8",
+        "width": 320,
+        "height": 160,
+        "bytes": 2697,
+        "sha256": "1f1a538a2152dcb42884936a0a768b1c2437630ababee84c69b37c88d51dc1a8"
+      },
+      {
+        "src": "/media/products/dera-antracit-01/640.avif?rev=8076d97e99e8cc3509c63aff95f5c4db6722134e8be4122585ca47519a0c98a5",
+        "width": 640,
+        "height": 320,
+        "bytes": 7347,
+        "sha256": "8076d97e99e8cc3509c63aff95f5c4db6722134e8be4122585ca47519a0c98a5"
+      },
+      {
+        "src": "/media/products/dera-antracit-01/960.avif?rev=0a90ef97df2084279bd1fab0740144f9327c689b264a47dfb180e4e221e0f0db",
+        "width": 960,
+        "height": 480,
+        "bytes": 15680,
+        "sha256": "0a90ef97df2084279bd1fab0740144f9327c689b264a47dfb180e4e221e0f0db"
+      },
+      {
+        "src": "/media/products/dera-antracit-01/1600.avif?rev=4c17cbfa997def4b2bf28c7decc4af8c86da6cdb5bb5f6a5843c39d055cbffca",
+        "width": 1600,
+        "height": 800,
+        "bytes": 50986,
+        "sha256": "4c17cbfa997def4b2bf28c7decc4af8c86da6cdb5bb5f6a5843c39d055cbffca"
+      },
+      {
+        "src": "/media/products/dera-antracit-01/1774.avif?rev=7da8659221ca876a6714cb1cd4824ba46c0394c3e7d03e7867308a1dc72b3502",
+        "width": 1774,
+        "height": 887,
+        "bytes": 62036,
+        "sha256": "7da8659221ca876a6714cb1cd4824ba46c0394c3e7d03e7867308a1dc72b3502"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/dera-antracit-01/320.webp?rev=3597e144e33619d285ee6f57e04cabbf676f9aa778a2fd50fe040a6d582c4fe7",
+        "width": 320,
+        "height": 160,
+        "bytes": 3990,
+        "sha256": "3597e144e33619d285ee6f57e04cabbf676f9aa778a2fd50fe040a6d582c4fe7"
+      },
+      {
+        "src": "/media/products/dera-antracit-01/640.webp?rev=0730904072ab19f9174c7be450f83103bcf66d8d305234cbef236656c8ae89b9",
+        "width": 640,
+        "height": 320,
+        "bytes": 13088,
+        "sha256": "0730904072ab19f9174c7be450f83103bcf66d8d305234cbef236656c8ae89b9"
+      },
+      {
+        "src": "/media/products/dera-antracit-01/960.webp?rev=330eb83d6e737c9385be8c1ab5c9455a601d6c8137edc1eac5cc88d1cf706616",
+        "width": 960,
+        "height": 480,
+        "bytes": 32502,
+        "sha256": "330eb83d6e737c9385be8c1ab5c9455a601d6c8137edc1eac5cc88d1cf706616"
+      },
+      {
+        "src": "/media/products/dera-antracit-01/1600.webp?rev=c1595c7726f02364f4be157d7214b396b11a74d31a1064cdaf29de308fa67ab9",
+        "width": 1600,
+        "height": 800,
+        "bytes": 107774,
+        "sha256": "c1595c7726f02364f4be157d7214b396b11a74d31a1064cdaf29de308fa67ab9"
+      },
+      {
+        "src": "/media/products/dera-antracit-01/1774.webp?rev=342da7fbd1b4e13b7860e655fff58bd81007297fda7a3388e57e034e52c20d70",
+        "width": 1774,
+        "height": 887,
+        "bytes": 136974,
+        "sha256": "342da7fbd1b4e13b7860e655fff58bd81007297fda7a3388e57e034e52c20d70"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/dera-antracit-01/960.webp?rev=330eb83d6e737c9385be8c1ab5c9455a601d6c8137edc1eac5cc88d1cf706616",
+      "width": 960,
+      "height": 480,
+      "bytes": 32502,
+      "sha256": "330eb83d6e737c9385be8c1ab5c9455a601d6c8137edc1eac5cc88d1cf706616"
+    }
+  },
+  "dera-antracit-02": {
+    "id": "dera-antracit-02",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.25,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/dera-antracit-02/320.avif?rev=4c8087fae29763b333d8e69c2240c8c39aa281a88d790f0777b474ac6b75cdb1",
+        "width": 320,
+        "height": 160,
+        "bytes": 2216,
+        "sha256": "4c8087fae29763b333d8e69c2240c8c39aa281a88d790f0777b474ac6b75cdb1"
+      },
+      {
+        "src": "/media/products/dera-antracit-02/640.avif?rev=5dd22e37a74d01169ffb83ba5b02cf84045deec2d2c97156c12956b349b20167",
+        "width": 640,
+        "height": 320,
+        "bytes": 5471,
+        "sha256": "5dd22e37a74d01169ffb83ba5b02cf84045deec2d2c97156c12956b349b20167"
+      },
+      {
+        "src": "/media/products/dera-antracit-02/960.avif?rev=66fa1faab49ee025aeba214bd03bb61c12325e659e97b34b9dd665156393da33",
+        "width": 960,
+        "height": 480,
+        "bytes": 9238,
+        "sha256": "66fa1faab49ee025aeba214bd03bb61c12325e659e97b34b9dd665156393da33"
+      },
+      {
+        "src": "/media/products/dera-antracit-02/1600.avif?rev=80d7e26fb12df394ecf5978bc7257499bcf706fa7fc9dc5a1a1e97fea6a956b3",
+        "width": 1600,
+        "height": 800,
+        "bytes": 22027,
+        "sha256": "80d7e26fb12df394ecf5978bc7257499bcf706fa7fc9dc5a1a1e97fea6a956b3"
+      },
+      {
+        "src": "/media/products/dera-antracit-02/1774.avif?rev=738c3219c18b319d7896360cd2da2b03694a045476583a9403902bcde615b382",
+        "width": 1774,
+        "height": 887,
+        "bytes": 28856,
+        "sha256": "738c3219c18b319d7896360cd2da2b03694a045476583a9403902bcde615b382"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/dera-antracit-02/320.webp?rev=b3701ae6756a43658c7bbdfb859885fb4a7969cc503651f2c90d47862af5bad2",
+        "width": 320,
+        "height": 160,
+        "bytes": 3692,
+        "sha256": "b3701ae6756a43658c7bbdfb859885fb4a7969cc503651f2c90d47862af5bad2"
+      },
+      {
+        "src": "/media/products/dera-antracit-02/640.webp?rev=695029d162454705f7195c94fabb3b7c625ba0b0f7aad4ce303bf097963f8d2b",
+        "width": 640,
+        "height": 320,
+        "bytes": 9494,
+        "sha256": "695029d162454705f7195c94fabb3b7c625ba0b0f7aad4ce303bf097963f8d2b"
+      },
+      {
+        "src": "/media/products/dera-antracit-02/960.webp?rev=73f5bc9cc17048a9d4c6397219d879be7905945c56c275ac54e8745b410e48b5",
+        "width": 960,
+        "height": 480,
+        "bytes": 18614,
+        "sha256": "73f5bc9cc17048a9d4c6397219d879be7905945c56c275ac54e8745b410e48b5"
+      },
+      {
+        "src": "/media/products/dera-antracit-02/1600.webp?rev=7b9fb4bed10d9256b17cbb462c48beeeca1a34e171094be22af7c692d0404bfd",
+        "width": 1600,
+        "height": 800,
+        "bytes": 51282,
+        "sha256": "7b9fb4bed10d9256b17cbb462c48beeeca1a34e171094be22af7c692d0404bfd"
+      },
+      {
+        "src": "/media/products/dera-antracit-02/1774.webp?rev=9caa99e91cfeca3460bdf987e0bd5a387d54af13434a3e06e0df265d3b85998f",
+        "width": 1774,
+        "height": 887,
+        "bytes": 68438,
+        "sha256": "9caa99e91cfeca3460bdf987e0bd5a387d54af13434a3e06e0df265d3b85998f"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/dera-antracit-02/960.webp?rev=73f5bc9cc17048a9d4c6397219d879be7905945c56c275ac54e8745b410e48b5",
+      "width": 960,
+      "height": 480,
+      "bytes": 18614,
+      "sha256": "73f5bc9cc17048a9d4c6397219d879be7905945c56c275ac54e8745b410e48b5"
+    }
+  },
+  "arre-klasike-12-01": {
+    "id": "arre-klasike-12-01",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.25,
+      0.5
+    ],
+    "role": "product",
+    "avif": [
+      {
+        "src": "/media/products/arre-klasike-12-01/320.avif?rev=f47ff220ba2de3cfa4c213d68370f5d40c6b93a80e5c57ccdd14eab83067b828",
+        "width": 320,
+        "height": 160,
+        "bytes": 4692,
+        "sha256": "f47ff220ba2de3cfa4c213d68370f5d40c6b93a80e5c57ccdd14eab83067b828"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-01/640.avif?rev=db58e9cd3b46271b19bdfa7955ba2fa44f3a909562f5412cc56b46130e959c26",
+        "width": 640,
+        "height": 320,
+        "bytes": 16255,
+        "sha256": "db58e9cd3b46271b19bdfa7955ba2fa44f3a909562f5412cc56b46130e959c26"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-01/960.avif?rev=94f424696493f9a24c42f23bbb9062e93d23f3833f3f1f81a5632d235ece035a",
+        "width": 960,
+        "height": 480,
+        "bytes": 35437,
+        "sha256": "94f424696493f9a24c42f23bbb9062e93d23f3833f3f1f81a5632d235ece035a"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-01/1600.avif?rev=bac9251186a4a685730ab842d0d46513281f756e39cbfcfee13b516941c23840",
+        "width": 1600,
+        "height": 800,
+        "bytes": 89019,
+        "sha256": "bac9251186a4a685730ab842d0d46513281f756e39cbfcfee13b516941c23840"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-01/1774.avif?rev=c9e02a893df7d0b82379a82d5b83aa3bdd77e9895e7067cdba412690124b8412",
+        "width": 1774,
+        "height": 887,
+        "bytes": 105638,
+        "sha256": "c9e02a893df7d0b82379a82d5b83aa3bdd77e9895e7067cdba412690124b8412"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/arre-klasike-12-01/320.webp?rev=5057ccb88cd7daa16810ac239770dc735771046f5e9ef09e5bdb7803f5b715b7",
+        "width": 320,
+        "height": 160,
+        "bytes": 8990,
+        "sha256": "5057ccb88cd7daa16810ac239770dc735771046f5e9ef09e5bdb7803f5b715b7"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-01/640.webp?rev=86a3d566e3a77726466399ed2313a2b1cd23cd6d2ce7fea62c3a50f06df5e172",
+        "width": 640,
+        "height": 320,
+        "bytes": 34350,
+        "sha256": "86a3d566e3a77726466399ed2313a2b1cd23cd6d2ce7fea62c3a50f06df5e172"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-01/960.webp?rev=6c37600f90a015819a45d81a2927f598109e3773060abb046308f57aeb7509ff",
+        "width": 960,
+        "height": 480,
+        "bytes": 77578,
+        "sha256": "6c37600f90a015819a45d81a2927f598109e3773060abb046308f57aeb7509ff"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-01/1600.webp?rev=2813904d5f82a5f575ea6e2efe3fa84f089902add11128c23ac1a7c15314852f",
+        "width": 1600,
+        "height": 800,
+        "bytes": 191332,
+        "sha256": "2813904d5f82a5f575ea6e2efe3fa84f089902add11128c23ac1a7c15314852f"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-01/1774.webp?rev=cf199282bf4306159e444ec45069b82ec0de0519cfa76eea1be20c8e7cd3a870",
+        "width": 1774,
+        "height": 887,
+        "bytes": 230830,
+        "sha256": "cf199282bf4306159e444ec45069b82ec0de0519cfa76eea1be20c8e7cd3a870"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/arre-klasike-12-01/960.webp?rev=6c37600f90a015819a45d81a2927f598109e3773060abb046308f57aeb7509ff",
+      "width": 960,
+      "height": 480,
+      "bytes": 77578,
+      "sha256": "6c37600f90a015819a45d81a2927f598109e3773060abb046308f57aeb7509ff"
+    }
+  },
+  "arre-klasike-12-02": {
+    "id": "arre-klasike-12-02",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.25,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/arre-klasike-12-02/320.avif?rev=5c916f9a9e651fe28d25a026c4e268690ca330665f1b76eea5152e79b423e8cb",
+        "width": 320,
+        "height": 160,
+        "bytes": 4466,
+        "sha256": "5c916f9a9e651fe28d25a026c4e268690ca330665f1b76eea5152e79b423e8cb"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-02/640.avif?rev=5b43e5ebf7cf62055e697519bde2efca8c69da095758b41444851337825859dc",
+        "width": 640,
+        "height": 320,
+        "bytes": 16233,
+        "sha256": "5b43e5ebf7cf62055e697519bde2efca8c69da095758b41444851337825859dc"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-02/960.avif?rev=0a41942fae62c123c8a5e383785129bd26541e13291435e5dad78a9728a2a043",
+        "width": 960,
+        "height": 480,
+        "bytes": 35638,
+        "sha256": "0a41942fae62c123c8a5e383785129bd26541e13291435e5dad78a9728a2a043"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-02/1600.avif?rev=819666d8ce34b6b7579645544791842fd15fa9825236a699b755a97a7672fc19",
+        "width": 1600,
+        "height": 800,
+        "bytes": 90667,
+        "sha256": "819666d8ce34b6b7579645544791842fd15fa9825236a699b755a97a7672fc19"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-02/1774.avif?rev=07141286606ceec0bdfd921e59962e3700dc7d29b9f4388afd13364d05e9a106",
+        "width": 1774,
+        "height": 887,
+        "bytes": 108701,
+        "sha256": "07141286606ceec0bdfd921e59962e3700dc7d29b9f4388afd13364d05e9a106"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/arre-klasike-12-02/320.webp?rev=2bbabfd5fb233206fc9632c3ef8c7b80997a01e0dd44241619cd71098c8b08d0",
+        "width": 320,
+        "height": 160,
+        "bytes": 9030,
+        "sha256": "2bbabfd5fb233206fc9632c3ef8c7b80997a01e0dd44241619cd71098c8b08d0"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-02/640.webp?rev=9310a725ac9454a577e1296eec054ce6ce19c07a2e819efacb74414739963901",
+        "width": 640,
+        "height": 320,
+        "bytes": 34880,
+        "sha256": "9310a725ac9454a577e1296eec054ce6ce19c07a2e819efacb74414739963901"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-02/960.webp?rev=5b4b82d4e5157d482a89c2a81fe5efc1a54577e9d8451f20ee9878d4e59e332e",
+        "width": 960,
+        "height": 480,
+        "bytes": 80758,
+        "sha256": "5b4b82d4e5157d482a89c2a81fe5efc1a54577e9d8451f20ee9878d4e59e332e"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-02/1600.webp?rev=605b87f01c313087a198804e41f2783ecce71fe70e84e057ab12f6544fc7f6dc",
+        "width": 1600,
+        "height": 800,
+        "bytes": 200680,
+        "sha256": "605b87f01c313087a198804e41f2783ecce71fe70e84e057ab12f6544fc7f6dc"
+      },
+      {
+        "src": "/media/products/arre-klasike-12-02/1774.webp?rev=6e5617380a7881ff83bd482058817ebd06fe832507e4b0465d835cef930248d9",
+        "width": 1774,
+        "height": 887,
+        "bytes": 241494,
+        "sha256": "6e5617380a7881ff83bd482058817ebd06fe832507e4b0465d835cef930248d9"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/arre-klasike-12-02/960.webp?rev=5b4b82d4e5157d482a89c2a81fe5efc1a54577e9d8451f20ee9878d4e59e332e",
+      "width": 960,
+      "height": 480,
+      "bytes": 80758,
+      "sha256": "5b4b82d4e5157d482a89c2a81fe5efc1a54577e9d8451f20ee9878d4e59e332e"
+    }
+  },
+  "dera-xham-01": {
+    "id": "dera-xham-01",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.25,
+      0.5
+    ],
+    "role": "product",
+    "avif": [
+      {
+        "src": "/media/products/dera-xham-01/320.avif?rev=8684ab3d6771689c69598d659e29fcd0be29f8bf7fdeab5c3b30fe6ebb3773f6",
+        "width": 320,
+        "height": 160,
+        "bytes": 3571,
+        "sha256": "8684ab3d6771689c69598d659e29fcd0be29f8bf7fdeab5c3b30fe6ebb3773f6"
+      },
+      {
+        "src": "/media/products/dera-xham-01/640.avif?rev=2a3aed492cab73e7bc9bc5afba3eb5b2019aa14212382f8dea8b14ed83a326eb",
+        "width": 640,
+        "height": 320,
+        "bytes": 9400,
+        "sha256": "2a3aed492cab73e7bc9bc5afba3eb5b2019aa14212382f8dea8b14ed83a326eb"
+      },
+      {
+        "src": "/media/products/dera-xham-01/960.avif?rev=39b40915c5a4c315983bae06cf837d6a651478be7cc7914f63a45e2581997e59",
+        "width": 960,
+        "height": 480,
+        "bytes": 19069,
+        "sha256": "39b40915c5a4c315983bae06cf837d6a651478be7cc7914f63a45e2581997e59"
+      },
+      {
+        "src": "/media/products/dera-xham-01/1600.avif?rev=982a8294676addf15f5d5f549b0b2b02048d687f203348dacf13c3414d1b1752",
+        "width": 1600,
+        "height": 800,
+        "bytes": 42897,
+        "sha256": "982a8294676addf15f5d5f549b0b2b02048d687f203348dacf13c3414d1b1752"
+      },
+      {
+        "src": "/media/products/dera-xham-01/1774.avif?rev=df3b5e841b3c92d5ac8b3c311fe585a5f26d94e253e5e27656e1c1ec5fdb69eb",
+        "width": 1774,
+        "height": 887,
+        "bytes": 51389,
+        "sha256": "df3b5e841b3c92d5ac8b3c311fe585a5f26d94e253e5e27656e1c1ec5fdb69eb"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/dera-xham-01/320.webp?rev=a5040d27931852d732bd442bcdfb4b8df056585476b0824ce3c96b9e35623692",
+        "width": 320,
+        "height": 160,
+        "bytes": 6336,
+        "sha256": "a5040d27931852d732bd442bcdfb4b8df056585476b0824ce3c96b9e35623692"
+      },
+      {
+        "src": "/media/products/dera-xham-01/640.webp?rev=436df642a977ce6d4d49a1ccb299d13c0ec72b92db2ab3b537c01218ee8e1c7f",
+        "width": 640,
+        "height": 320,
+        "bytes": 18056,
+        "sha256": "436df642a977ce6d4d49a1ccb299d13c0ec72b92db2ab3b537c01218ee8e1c7f"
+      },
+      {
+        "src": "/media/products/dera-xham-01/960.webp?rev=31f42a9afd631293b407bf95c4204bf7c30c634e787decdb7768ca34cacddd10",
+        "width": 960,
+        "height": 480,
+        "bytes": 35452,
+        "sha256": "31f42a9afd631293b407bf95c4204bf7c30c634e787decdb7768ca34cacddd10"
+      },
+      {
+        "src": "/media/products/dera-xham-01/1600.webp?rev=c3acb28bbd21bcf552ed3600c2cc311653fd7b2c41801d524157114de66cb8ac",
+        "width": 1600,
+        "height": 800,
+        "bytes": 81296,
+        "sha256": "c3acb28bbd21bcf552ed3600c2cc311653fd7b2c41801d524157114de66cb8ac"
+      },
+      {
+        "src": "/media/products/dera-xham-01/1774.webp?rev=26b8c2a3c801490531299846d7b7ab43ad468759298a717b8c9197f6c962b41e",
+        "width": 1774,
+        "height": 887,
+        "bytes": 96742,
+        "sha256": "26b8c2a3c801490531299846d7b7ab43ad468759298a717b8c9197f6c962b41e"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/dera-xham-01/960.webp?rev=31f42a9afd631293b407bf95c4204bf7c30c634e787decdb7768ca34cacddd10",
+      "width": 960,
+      "height": 480,
+      "bytes": 35452,
+      "sha256": "31f42a9afd631293b407bf95c4204bf7c30c634e787decdb7768ca34cacddd10"
+    }
+  },
+  "dera-xham-02": {
+    "id": "dera-xham-02",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.25,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/dera-xham-02/320.avif?rev=74192cf726da2ed3fc6cc8cc48d90044c87110e45d0cf347ead9d7d12cc47d4f",
+        "width": 320,
+        "height": 160,
+        "bytes": 4326,
+        "sha256": "74192cf726da2ed3fc6cc8cc48d90044c87110e45d0cf347ead9d7d12cc47d4f"
+      },
+      {
+        "src": "/media/products/dera-xham-02/640.avif?rev=3dbcbac96ec253a2b6bba383e6b0251d1f0ce26620d77519976d478f25c82c69",
+        "width": 640,
+        "height": 320,
+        "bytes": 10509,
+        "sha256": "3dbcbac96ec253a2b6bba383e6b0251d1f0ce26620d77519976d478f25c82c69"
+      },
+      {
+        "src": "/media/products/dera-xham-02/960.avif?rev=f5659dd50eddf2aca475336b351c2e6fa98c106840a76f4997bb4127252c4f05",
+        "width": 960,
+        "height": 480,
+        "bytes": 16559,
+        "sha256": "f5659dd50eddf2aca475336b351c2e6fa98c106840a76f4997bb4127252c4f05"
+      },
+      {
+        "src": "/media/products/dera-xham-02/1600.avif?rev=bcf41551312e240828444c3ff9e176819dcf81f7e3ddc09eac04b8ec1e279a93",
+        "width": 1600,
+        "height": 800,
+        "bytes": 30548,
+        "sha256": "bcf41551312e240828444c3ff9e176819dcf81f7e3ddc09eac04b8ec1e279a93"
+      },
+      {
+        "src": "/media/products/dera-xham-02/1774.avif?rev=78d007b15706e2388d85675a2c2b29f6076de15832c63bdd0b691e223c3c8d5a",
+        "width": 1774,
+        "height": 887,
+        "bytes": 34571,
+        "sha256": "78d007b15706e2388d85675a2c2b29f6076de15832c63bdd0b691e223c3c8d5a"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/dera-xham-02/320.webp?rev=4eca10a67f47fef028faf7141909ee23c0517a02ceb775e139b4f8353f4370c3",
+        "width": 320,
+        "height": 160,
+        "bytes": 8098,
+        "sha256": "4eca10a67f47fef028faf7141909ee23c0517a02ceb775e139b4f8353f4370c3"
+      },
+      {
+        "src": "/media/products/dera-xham-02/640.webp?rev=681c1b6f9507e759662f3df89bb6b04ee5f40f65cf04d16034c85e83bc5d3779",
+        "width": 640,
+        "height": 320,
+        "bytes": 18486,
+        "sha256": "681c1b6f9507e759662f3df89bb6b04ee5f40f65cf04d16034c85e83bc5d3779"
+      },
+      {
+        "src": "/media/products/dera-xham-02/960.webp?rev=f61b623c3118e551eff1c436b8c34d2d3edf35e8aa4c31f588335adb3f664c8a",
+        "width": 960,
+        "height": 480,
+        "bytes": 29184,
+        "sha256": "f61b623c3118e551eff1c436b8c34d2d3edf35e8aa4c31f588335adb3f664c8a"
+      },
+      {
+        "src": "/media/products/dera-xham-02/1600.webp?rev=ea8e3a6cbb136f25bea2fb2b9aa8f3e1b55f8487bd64917ac3caacd8471f9c5a",
+        "width": 1600,
+        "height": 800,
+        "bytes": 52820,
+        "sha256": "ea8e3a6cbb136f25bea2fb2b9aa8f3e1b55f8487bd64917ac3caacd8471f9c5a"
+      },
+      {
+        "src": "/media/products/dera-xham-02/1774.webp?rev=1f68400278f4555a84b67798f74bb0cfd8016d700aa806b5643a77e0113baca7",
+        "width": 1774,
+        "height": 887,
+        "bytes": 60090,
+        "sha256": "1f68400278f4555a84b67798f74bb0cfd8016d700aa806b5643a77e0113baca7"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/dera-xham-02/960.webp?rev=f61b623c3118e551eff1c436b8c34d2d3edf35e8aa4c31f588335adb3f664c8a",
+      "width": 960,
+      "height": 480,
+      "bytes": 29184,
+      "sha256": "f61b623c3118e551eff1c436b8c34d2d3edf35e8aa4c31f588335adb3f664c8a"
+    }
+  },
+  "hirte-skandinave-8-01": {
+    "id": "hirte-skandinave-8-01",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.25,
+      0.5
+    ],
+    "role": "product",
+    "avif": [
+      {
+        "src": "/media/products/hirte-skandinave-8-01/320.avif?rev=d6ea3171d527d804e052db3f9852675125663db0432ef53e83601622b0856e05",
+        "width": 320,
+        "height": 160,
+        "bytes": 3795,
+        "sha256": "d6ea3171d527d804e052db3f9852675125663db0432ef53e83601622b0856e05"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-01/640.avif?rev=3725204b4f53e2d7961443735aa7f7d49f6c58ce990469719f9613179420249c",
+        "width": 640,
+        "height": 320,
+        "bytes": 12649,
+        "sha256": "3725204b4f53e2d7961443735aa7f7d49f6c58ce990469719f9613179420249c"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-01/960.avif?rev=64c84eacb0a09faead926a2c2db833576e0b91d21f80a0525a1005b6beec270a",
+        "width": 960,
+        "height": 480,
+        "bytes": 26998,
+        "sha256": "64c84eacb0a09faead926a2c2db833576e0b91d21f80a0525a1005b6beec270a"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-01/1600.avif?rev=76589e5b7d650e5ba510fbbe039326ea0f60e4db414e8e88ab3acf9f134dbeed",
+        "width": 1600,
+        "height": 800,
+        "bytes": 68483,
+        "sha256": "76589e5b7d650e5ba510fbbe039326ea0f60e4db414e8e88ab3acf9f134dbeed"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-01/1774.avif?rev=45f9b96bff6dec88e936a528fecd4c98657bd5bea6447b2cf60be25f053b0b41",
+        "width": 1774,
+        "height": 887,
+        "bytes": 82214,
+        "sha256": "45f9b96bff6dec88e936a528fecd4c98657bd5bea6447b2cf60be25f053b0b41"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/hirte-skandinave-8-01/320.webp?rev=46f0ad810d4684ab241222bbb082869bf9d91be9aba475d54f4d3929ed87644a",
+        "width": 320,
+        "height": 160,
+        "bytes": 7014,
+        "sha256": "46f0ad810d4684ab241222bbb082869bf9d91be9aba475d54f4d3929ed87644a"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-01/640.webp?rev=9dba50acf8531325ceabe26561abaa7ebf72810c77461c30613e67514939b3e8",
+        "width": 640,
+        "height": 320,
+        "bytes": 25566,
+        "sha256": "9dba50acf8531325ceabe26561abaa7ebf72810c77461c30613e67514939b3e8"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-01/960.webp?rev=447806b5f9aa6c82170295c55921ce237dc951c2613160ca3587ca61bdd23791",
+        "width": 960,
+        "height": 480,
+        "bytes": 56614,
+        "sha256": "447806b5f9aa6c82170295c55921ce237dc951c2613160ca3587ca61bdd23791"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-01/1600.webp?rev=a89e9ed7e27cf691f78cad95f18fc6ac9dbe3ae33408c2aaad621329c0acbb09",
+        "width": 1600,
+        "height": 800,
+        "bytes": 137144,
+        "sha256": "a89e9ed7e27cf691f78cad95f18fc6ac9dbe3ae33408c2aaad621329c0acbb09"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-01/1774.webp?rev=c511ceedd99ca0ef6ee31a03f30a506a3bc162555a49bcefaba3aa7a4f3ef589",
+        "width": 1774,
+        "height": 887,
+        "bytes": 163096,
+        "sha256": "c511ceedd99ca0ef6ee31a03f30a506a3bc162555a49bcefaba3aa7a4f3ef589"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/hirte-skandinave-8-01/960.webp?rev=447806b5f9aa6c82170295c55921ce237dc951c2613160ca3587ca61bdd23791",
+      "width": 960,
+      "height": 480,
+      "bytes": 56614,
+      "sha256": "447806b5f9aa6c82170295c55921ce237dc951c2613160ca3587ca61bdd23791"
+    }
+  },
+  "hirte-skandinave-8-02": {
+    "id": "hirte-skandinave-8-02",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.25,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/hirte-skandinave-8-02/320.avif?rev=2aa33814acf11330c4d0f6cbc4e1862cdb5403f91cf4774cf2855b64f8917bbe",
+        "width": 320,
+        "height": 160,
+        "bytes": 3748,
+        "sha256": "2aa33814acf11330c4d0f6cbc4e1862cdb5403f91cf4774cf2855b64f8917bbe"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-02/640.avif?rev=fb389a780ef279311c875a91caf23173a08209d3e7ec74ff40e30393a63e7421",
+        "width": 640,
+        "height": 320,
+        "bytes": 13895,
+        "sha256": "fb389a780ef279311c875a91caf23173a08209d3e7ec74ff40e30393a63e7421"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-02/960.avif?rev=c4257fac3fdf01596e68498c29595c681549c48e36fc83d98d4f0f5a69831926",
+        "width": 960,
+        "height": 480,
+        "bytes": 30379,
+        "sha256": "c4257fac3fdf01596e68498c29595c681549c48e36fc83d98d4f0f5a69831926"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-02/1600.avif?rev=9b761130417a48c607b45675a777cefa7a31833d1f6cd5484e6eb352ff3c6c9a",
+        "width": 1600,
+        "height": 800,
+        "bytes": 78594,
+        "sha256": "9b761130417a48c607b45675a777cefa7a31833d1f6cd5484e6eb352ff3c6c9a"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-02/1774.avif?rev=9cd6e1191264769c40787208d64d322389f39f1d8feb5cae4749660ce2196617",
+        "width": 1774,
+        "height": 887,
+        "bytes": 92924,
+        "sha256": "9cd6e1191264769c40787208d64d322389f39f1d8feb5cae4749660ce2196617"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/hirte-skandinave-8-02/320.webp?rev=9e4ae6aa3a2e537801536c3ebbc776d3c7079f987b1782d94d930204bf6324eb",
+        "width": 320,
+        "height": 160,
+        "bytes": 7446,
+        "sha256": "9e4ae6aa3a2e537801536c3ebbc776d3c7079f987b1782d94d930204bf6324eb"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-02/640.webp?rev=3eb1763867a65fa4570e0a5bb488f0f6ae7f9199defe04ed8d4b462860b9dac0",
+        "width": 640,
+        "height": 320,
+        "bytes": 29664,
+        "sha256": "3eb1763867a65fa4570e0a5bb488f0f6ae7f9199defe04ed8d4b462860b9dac0"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-02/960.webp?rev=eee9d5a8111f245b041ca27ac2f23f12c98937b6153f32d2c5c5d3bc85ed220b",
+        "width": 960,
+        "height": 480,
+        "bytes": 67840,
+        "sha256": "eee9d5a8111f245b041ca27ac2f23f12c98937b6153f32d2c5c5d3bc85ed220b"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-02/1600.webp?rev=12169f4fb9f1e4c19f4673dae95950c43cf376c7a93d48781ec31c7459249f63",
+        "width": 1600,
+        "height": 800,
+        "bytes": 166052,
+        "sha256": "12169f4fb9f1e4c19f4673dae95950c43cf376c7a93d48781ec31c7459249f63"
+      },
+      {
+        "src": "/media/products/hirte-skandinave-8-02/1774.webp?rev=728cdf8a19034b7d1599b72aa5e6b282bf356892162a24ae995f54a82595ce91",
+        "width": 1774,
+        "height": 887,
+        "bytes": 199670,
+        "sha256": "728cdf8a19034b7d1599b72aa5e6b282bf356892162a24ae995f54a82595ce91"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/hirte-skandinave-8-02/960.webp?rev=eee9d5a8111f245b041ca27ac2f23f12c98937b6153f32d2c5c5d3bc85ed220b",
+      "width": 960,
+      "height": 480,
+      "bytes": 67840,
+      "sha256": "eee9d5a8111f245b041ca27ac2f23f12c98937b6153f32d2c5c5d3bc85ed220b"
+    }
+  },
+  "pervaze-mdf-01": {
+    "id": "pervaze-mdf-01",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "room",
+    "avif": [
+      {
+        "src": "/media/products/pervaze-mdf-01/320.avif?rev=8328c2e1470ad995132c1d8e2963361961c0750ea01fc39230dbf3cd728367a7",
+        "width": 320,
+        "height": 160,
+        "bytes": 3294,
+        "sha256": "8328c2e1470ad995132c1d8e2963361961c0750ea01fc39230dbf3cd728367a7"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-01/640.avif?rev=8b290f58f87ad09d00920fdb7f63582776680d2fbc86b8375b7cbe94c6bc1b1b",
+        "width": 640,
+        "height": 320,
+        "bytes": 10376,
+        "sha256": "8b290f58f87ad09d00920fdb7f63582776680d2fbc86b8375b7cbe94c6bc1b1b"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-01/960.avif?rev=38f7a78d325a41f903921bf6a0ca4a54901f36daf13bde271a74644d7c984635",
+        "width": 960,
+        "height": 480,
+        "bytes": 19754,
+        "sha256": "38f7a78d325a41f903921bf6a0ca4a54901f36daf13bde271a74644d7c984635"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-01/1600.avif?rev=4b717bad524f7ed93541da75905cc9f12cd931d0bcc48d1223e60e33848c12aa",
+        "width": 1600,
+        "height": 800,
+        "bytes": 44879,
+        "sha256": "4b717bad524f7ed93541da75905cc9f12cd931d0bcc48d1223e60e33848c12aa"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-01/1774.avif?rev=dcab1f0324944d0818c1019fcc7561c5618f4a30e82b8b2966799498440abaf9",
+        "width": 1774,
+        "height": 887,
+        "bytes": 52719,
+        "sha256": "dcab1f0324944d0818c1019fcc7561c5618f4a30e82b8b2966799498440abaf9"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/pervaze-mdf-01/320.webp?rev=646aed377373e71abe86f7ce0d061db71b0ada809282f7c0209cced0ec316172",
+        "width": 320,
+        "height": 160,
+        "bytes": 5468,
+        "sha256": "646aed377373e71abe86f7ce0d061db71b0ada809282f7c0209cced0ec316172"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-01/640.webp?rev=fbfcbf27ecf08b6fc7ba670721a37129fbbb0d9328c077c63af091b4c12b32eb",
+        "width": 640,
+        "height": 320,
+        "bytes": 18712,
+        "sha256": "fbfcbf27ecf08b6fc7ba670721a37129fbbb0d9328c077c63af091b4c12b32eb"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-01/960.webp?rev=348534098f3ad13620a8e477b2dd88d32581048e56038785c26cbd8781cd1125",
+        "width": 960,
+        "height": 480,
+        "bytes": 37770,
+        "sha256": "348534098f3ad13620a8e477b2dd88d32581048e56038785c26cbd8781cd1125"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-01/1600.webp?rev=812b63ef14814bfdc771cf05b5c38d75193009bb8620d6fe6d88a5a609e39c36",
+        "width": 1600,
+        "height": 800,
+        "bytes": 89556,
+        "sha256": "812b63ef14814bfdc771cf05b5c38d75193009bb8620d6fe6d88a5a609e39c36"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-01/1774.webp?rev=945c841a1f2b4e2174feef4e7dc36bb7a0f12735802ab95d8e03f1991aaadf22",
+        "width": 1774,
+        "height": 887,
+        "bytes": 109006,
+        "sha256": "945c841a1f2b4e2174feef4e7dc36bb7a0f12735802ab95d8e03f1991aaadf22"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/pervaze-mdf-01/960.webp?rev=348534098f3ad13620a8e477b2dd88d32581048e56038785c26cbd8781cd1125",
+      "width": 960,
+      "height": 480,
+      "bytes": 37770,
+      "sha256": "348534098f3ad13620a8e477b2dd88d32581048e56038785c26cbd8781cd1125"
+    }
+  },
+  "pervaze-mdf-02": {
+    "id": "pervaze-mdf-02",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/pervaze-mdf-02/320.avif?rev=34b38422359f472bfad70efc9dfb6723387179cd553fde287f5c779033b511e9",
+        "width": 320,
+        "height": 160,
+        "bytes": 1657,
+        "sha256": "34b38422359f472bfad70efc9dfb6723387179cd553fde287f5c779033b511e9"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-02/640.avif?rev=ebc6ca9a2eb3531996be2482f574bd4a2e6731c8e787b8372bb9952a9ccd1535",
+        "width": 640,
+        "height": 320,
+        "bytes": 5106,
+        "sha256": "ebc6ca9a2eb3531996be2482f574bd4a2e6731c8e787b8372bb9952a9ccd1535"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-02/960.avif?rev=158396e8d483e6512c80a93797338e696d1d76d706dd535a2ab6c35afebc7ff9",
+        "width": 960,
+        "height": 480,
+        "bytes": 9593,
+        "sha256": "158396e8d483e6512c80a93797338e696d1d76d706dd535a2ab6c35afebc7ff9"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-02/1600.avif?rev=172e2b591d77747238e5b0ebc63ec338781e381110b89b516bcf64724a4d8ff8",
+        "width": 1600,
+        "height": 800,
+        "bytes": 22363,
+        "sha256": "172e2b591d77747238e5b0ebc63ec338781e381110b89b516bcf64724a4d8ff8"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-02/1774.avif?rev=b3e8c0fd1e3d4b010bedcf70c3c61ea518b35db9f0358d2a1db72a08cac9d1f6",
+        "width": 1774,
+        "height": 887,
+        "bytes": 27567,
+        "sha256": "b3e8c0fd1e3d4b010bedcf70c3c61ea518b35db9f0358d2a1db72a08cac9d1f6"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/pervaze-mdf-02/320.webp?rev=3c2f09437f37a6e185466d7d9eb67fa190026446eb4c2a37b299449b2b24bb1b",
+        "width": 320,
+        "height": 160,
+        "bytes": 2814,
+        "sha256": "3c2f09437f37a6e185466d7d9eb67fa190026446eb4c2a37b299449b2b24bb1b"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-02/640.webp?rev=c5ab4d159035168b919a40026650da4debd974038855045d5e21b26691d3e5df",
+        "width": 640,
+        "height": 320,
+        "bytes": 9946,
+        "sha256": "c5ab4d159035168b919a40026650da4debd974038855045d5e21b26691d3e5df"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-02/960.webp?rev=4b444a635a4f08e55c194ba03f840144fc8d0c8702d662d4ca3997aa9848c79b",
+        "width": 960,
+        "height": 480,
+        "bytes": 20564,
+        "sha256": "4b444a635a4f08e55c194ba03f840144fc8d0c8702d662d4ca3997aa9848c79b"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-02/1600.webp?rev=396f3ea71863a390188df6c9d1b42be3f9185e2f8811b43bcff8885a43c8a93c",
+        "width": 1600,
+        "height": 800,
+        "bytes": 48430,
+        "sha256": "396f3ea71863a390188df6c9d1b42be3f9185e2f8811b43bcff8885a43c8a93c"
+      },
+      {
+        "src": "/media/products/pervaze-mdf-02/1774.webp?rev=c01a32055baed3cb8d3ff7a8bb7af2a1d99df158d37c2dbe072eb9b85b56bde7",
+        "width": 1774,
+        "height": 887,
+        "bytes": 60186,
+        "sha256": "c01a32055baed3cb8d3ff7a8bb7af2a1d99df158d37c2dbe072eb9b85b56bde7"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/pervaze-mdf-02/960.webp?rev=4b444a635a4f08e55c194ba03f840144fc8d0c8702d662d4ca3997aa9848c79b",
+      "width": 960,
+      "height": 480,
+      "bytes": 20564,
+      "sha256": "4b444a635a4f08e55c194ba03f840144fc8d0c8702d662d4ca3997aa9848c79b"
+    }
+  },
+  "lajsne-mdf-01": {
+    "id": "lajsne-mdf-01",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "room",
+    "avif": [
+      {
+        "src": "/media/products/lajsne-mdf-01/320.avif?rev=c653bbcab5ce9470ec108e818d28cb490e1a14c011e7516d9bddfc38a4efc85b",
+        "width": 320,
+        "height": 160,
+        "bytes": 2992,
+        "sha256": "c653bbcab5ce9470ec108e818d28cb490e1a14c011e7516d9bddfc38a4efc85b"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-01/640.avif?rev=831476dfb4bab81e92390478492d22617b506764e72b0e3f86a5df168b40cf85",
+        "width": 640,
+        "height": 320,
+        "bytes": 9150,
+        "sha256": "831476dfb4bab81e92390478492d22617b506764e72b0e3f86a5df168b40cf85"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-01/960.avif?rev=fe6fe551e496f298b52a73ae2a9a7511685331a519c2bf6256513ae50c57fa7a",
+        "width": 960,
+        "height": 480,
+        "bytes": 17256,
+        "sha256": "fe6fe551e496f298b52a73ae2a9a7511685331a519c2bf6256513ae50c57fa7a"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-01/1600.avif?rev=e4c301a7bc02ccd65df197342a3500331a88414f906b19167cfab5a5c1dfe227",
+        "width": 1600,
+        "height": 800,
+        "bytes": 36197,
+        "sha256": "e4c301a7bc02ccd65df197342a3500331a88414f906b19167cfab5a5c1dfe227"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-01/1774.avif?rev=6dd150b336942adfd4b8782f70ad87f62571398693226ce569be9a3c3b1cb36c",
+        "width": 1774,
+        "height": 887,
+        "bytes": 42362,
+        "sha256": "6dd150b336942adfd4b8782f70ad87f62571398693226ce569be9a3c3b1cb36c"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/lajsne-mdf-01/320.webp?rev=bdd7c47bf5df6d4a9afcf1ae61497bb8bcdb1431848c41cc516e1fc51c3ddb48",
+        "width": 320,
+        "height": 160,
+        "bytes": 5310,
+        "sha256": "bdd7c47bf5df6d4a9afcf1ae61497bb8bcdb1431848c41cc516e1fc51c3ddb48"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-01/640.webp?rev=156428eeba5a9a53e5de4b71bc2c99685fd6d5f7ef3ec1b52dcec09812c96930",
+        "width": 640,
+        "height": 320,
+        "bytes": 16718,
+        "sha256": "156428eeba5a9a53e5de4b71bc2c99685fd6d5f7ef3ec1b52dcec09812c96930"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-01/960.webp?rev=dfc53d918246201152da44c270757e5b2a7d100cdf7f09dd2cc37da62d7c6de7",
+        "width": 960,
+        "height": 480,
+        "bytes": 31508,
+        "sha256": "dfc53d918246201152da44c270757e5b2a7d100cdf7f09dd2cc37da62d7c6de7"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-01/1600.webp?rev=90130eae6fd9a87ba1040ca46ae505866cbb97d231b9109a365821098a208e13",
+        "width": 1600,
+        "height": 800,
+        "bytes": 69838,
+        "sha256": "90130eae6fd9a87ba1040ca46ae505866cbb97d231b9109a365821098a208e13"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-01/1774.webp?rev=40577c8cbdc8b4ca0257d1b83b262d1c7f4e46a620e2e8d6b0b843e5c1dca96c",
+        "width": 1774,
+        "height": 887,
+        "bytes": 84490,
+        "sha256": "40577c8cbdc8b4ca0257d1b83b262d1c7f4e46a620e2e8d6b0b843e5c1dca96c"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/lajsne-mdf-01/960.webp?rev=dfc53d918246201152da44c270757e5b2a7d100cdf7f09dd2cc37da62d7c6de7",
+      "width": 960,
+      "height": 480,
+      "bytes": 31508,
+      "sha256": "dfc53d918246201152da44c270757e5b2a7d100cdf7f09dd2cc37da62d7c6de7"
+    }
+  },
+  "lajsne-mdf-02": {
+    "id": "lajsne-mdf-02",
+    "width": 1774,
+    "height": 887,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/lajsne-mdf-02/320.avif?rev=5b93a761a8134a26d094b5bf8c65ba0d1f2bc96a9bcab14bf20ba7f9a399d559",
+        "width": 320,
+        "height": 160,
+        "bytes": 2180,
+        "sha256": "5b93a761a8134a26d094b5bf8c65ba0d1f2bc96a9bcab14bf20ba7f9a399d559"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-02/640.avif?rev=f607f27770208060f8696672d651da537baea31671bde869c023ed1e7a46b5b1",
+        "width": 640,
+        "height": 320,
+        "bytes": 6064,
+        "sha256": "f607f27770208060f8696672d651da537baea31671bde869c023ed1e7a46b5b1"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-02/960.avif?rev=7e62eed8b77b74c8a2d6f6f1c8ac5d490337c6a93ed80cbe770057ce7ea6c23c",
+        "width": 960,
+        "height": 480,
+        "bytes": 11940,
+        "sha256": "7e62eed8b77b74c8a2d6f6f1c8ac5d490337c6a93ed80cbe770057ce7ea6c23c"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-02/1600.avif?rev=f74a42041f2834a58514f96ae3187c45efd5394f95819bc43cf6b80db5f6488a",
+        "width": 1600,
+        "height": 800,
+        "bytes": 30528,
+        "sha256": "f74a42041f2834a58514f96ae3187c45efd5394f95819bc43cf6b80db5f6488a"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-02/1774.avif?rev=915e92b23b73fc0f1741559de7a5765f54768b736c991eed0a90e8fa6b7d84cf",
+        "width": 1774,
+        "height": 887,
+        "bytes": 37361,
+        "sha256": "915e92b23b73fc0f1741559de7a5765f54768b736c991eed0a90e8fa6b7d84cf"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/lajsne-mdf-02/320.webp?rev=ff3e5a8b67f5811484f5dabac5ae5531fbc7f6f5cf38861237ddae1b3df9cf8d",
+        "width": 320,
+        "height": 160,
+        "bytes": 3354,
+        "sha256": "ff3e5a8b67f5811484f5dabac5ae5531fbc7f6f5cf38861237ddae1b3df9cf8d"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-02/640.webp?rev=65fb784198d71dcdba5801a54cd0d608d194845ce2af9baa06d0bc1ee63faddd",
+        "width": 640,
+        "height": 320,
+        "bytes": 10376,
+        "sha256": "65fb784198d71dcdba5801a54cd0d608d194845ce2af9baa06d0bc1ee63faddd"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-02/960.webp?rev=14334ff98811720162a79ec221921943ac5f1c065f36327f60ea4fdd4518cfdf",
+        "width": 960,
+        "height": 480,
+        "bytes": 22550,
+        "sha256": "14334ff98811720162a79ec221921943ac5f1c065f36327f60ea4fdd4518cfdf"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-02/1600.webp?rev=95958f68b4bb2446e262a3708ce21ef917ee03e5128b1d19f1081d61dd83c662",
+        "width": 1600,
+        "height": 800,
+        "bytes": 60054,
+        "sha256": "95958f68b4bb2446e262a3708ce21ef917ee03e5128b1d19f1081d61dd83c662"
+      },
+      {
+        "src": "/media/products/lajsne-mdf-02/1774.webp?rev=e1f29268d37540f50bcbf3c8364d15303f767d09b6627eafa6230bfe815e2011",
+        "width": 1774,
+        "height": 887,
+        "bytes": 74696,
+        "sha256": "e1f29268d37540f50bcbf3c8364d15303f767d09b6627eafa6230bfe815e2011"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/lajsne-mdf-02/960.webp?rev=14334ff98811720162a79ec221921943ac5f1c065f36327f60ea4fdd4518cfdf",
+      "width": 960,
+      "height": 480,
+      "bytes": 22550,
+      "sha256": "14334ff98811720162a79ec221921943ac5f1c065f36327f60ea4fdd4518cfdf"
+    }
+  }
+}

@@ -1,0 +1,1107 @@
+{
+  "schemaVersion": 1,
+  "scene": {
+    "id": "living-standard",
+    "name": {
+      "sq": "Dhoma e ditës",
+      "en": "Living room",
+      "de": "Wohnraum"
+    },
+    "description": {
+      "sq": "Skenë demonstrimi e gjeneruar",
+      "en": "Generated demo scene",
+      "de": "Generierte Demoszene"
+    },
+    "width": 1600,
+    "height": 1200,
+    "base": "/media/scenes/living-standard/base.webp",
+    "thumbnail": "/media/scenes/living-standard/thumbnail.webp",
+    "fallback": "/media/scenes/living-standard/fallback.webp",
+    "frameType": "standard-casing",
+    "depictedDoorSizeMm": {
+      "width": 900,
+      "height": 2000
+    },
+    "surfaces": [
+      {
+        "id": "floor",
+        "role": "floor",
+        "mask": {
+          "alpha": "/media/scenes/living-standard/floor-mask.png",
+          "boundsPx": [
+            0,
+            770,
+            1600,
+            430
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/living-standard/floor-diffuse.png",
+          "baselineLinear": 0.3662525955988395,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              4500,
+              0
+            ],
+            [
+              4500,
+              5000
+            ],
+            [
+              0,
+              5000
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.086626254180602,
+              0.6443478260869565
+            ],
+            [
+              0.9444857859531772,
+              0.6433946488294314
+            ],
+            [
+              1.0510033444816054,
+              1.1438127090301002
+            ],
+            [
+              -0.09280936454849499,
+              1.1438127090301002
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+            "referenceLengthMm": 4500,
+            "referenceImageSegment01": [
+              [
+                0.086626254180602,
+                0.6443478260869565
+              ],
+              [
+                0.9444857859531772,
+                0.6433946488294314
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                4500,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "leaf",
+        "role": "door-leaf",
+        "mask": {
+          "alpha": "/media/scenes/living-standard/leaf-mask.png",
+          "boundsPx": [
+            787,
+            60,
+            331,
+            708
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/living-standard/leaf-diffuse.png",
+          "baselineLinear": 0.33245153634617935,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              900,
+              0
+            ],
+            [
+              900,
+              2000
+            ],
+            [
+              0,
+              2000
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.4919648829431438,
+              0.050518394648829436
+            ],
+            [
+              0.6985660535117058,
+              0.050518394648829436
+            ],
+            [
+              0.6985660535117058,
+              0.6395819397993311
+            ],
+            [
+              0.4919648829431438,
+              0.6395819397993311
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+            "referenceLengthMm": 900,
+            "referenceImageSegment01": [
+              [
+                0.4919648829431438,
+                0.050518394648829436
+              ],
+              [
+                0.6985660535117058,
+                0.050518394648829436
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                900,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-left",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/living-standard/frame-left-mask.png",
+          "boundsPx": [
+            748,
+            59,
+            33,
+            712
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/living-standard/frame-left-diffuse.png",
+          "baselineLinear": 0.35153259950043936,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              70,
+              0
+            ],
+            [
+              70,
+              2000
+            ],
+            [
+              0,
+              2000
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.4676588628762543,
+              0.04956521739130435
+            ],
+            [
+              0.48767558528428095,
+              0.04956521739130435
+            ],
+            [
+              0.48767558528428095,
+              0.6424414715719063
+            ],
+            [
+              0.4676588628762543,
+              0.6424414715719063
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+            "referenceLengthMm": 70,
+            "referenceImageSegment01": [
+              [
+                0.4676588628762543,
+                0.04956521739130435
+              ],
+              [
+                0.48767558528428095,
+                0.04956521739130435
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-right",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/living-standard/frame-right-mask.png",
+          "boundsPx": [
+            1128,
+            59,
+            30,
+            712
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/living-standard/frame-right-diffuse.png",
+          "baselineLinear": 0.26225065752969623,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              70,
+              0
+            ],
+            [
+              70,
+              2000
+            ],
+            [
+              0,
+              2000
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.705,
+              0.04956521739130435
+            ],
+            [
+              0.7235869565217391,
+              0.04956521739130435
+            ],
+            [
+              0.7235869565217391,
+              0.6424414715719063
+            ],
+            [
+              0.705,
+              0.6424414715719063
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+            "referenceLengthMm": 70,
+            "referenceImageSegment01": [
+              [
+                0.705,
+                0.04956521739130435
+              ],
+              [
+                0.7235869565217391,
+                0.04956521739130435
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-top",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/living-standard/frame-top-mask.png",
+          "boundsPx": [
+            748,
+            21,
+            410,
+            32
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/living-standard/frame-top-diffuse.png",
+          "baselineLinear": 0.25015828472995344,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              1040,
+              0
+            ],
+            [
+              1040,
+              70
+            ],
+            [
+              0,
+              70
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.4676588628762543,
+              0.018110367892976587
+            ],
+            [
+              0.7235869565217391,
+              0.018110367892976587
+            ],
+            [
+              0.7235869565217391,
+              0.04384615384615385
+            ],
+            [
+              0.4676588628762543,
+              0.04384615384615385
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+            "referenceLengthMm": 1040,
+            "referenceImageSegment01": [
+              [
+                0.4676588628762543,
+                0.018110367892976587
+              ],
+              [
+                0.7235869565217391,
+                0.018110367892976587
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1040,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-back-left",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/living-standard/skirting-back-left-mask.png",
+          "boundsPx": [
+            140,
+            734,
+            608,
+            37
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/living-standard/skirting-back-left-diffuse.png",
+          "baselineLinear": 0.20507873639031693,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              2000,
+              0
+            ],
+            [
+              2000,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.08805602006688963,
+              0.6119397993311037
+            ],
+            [
+              0.4669439799331104,
+              0.6119397993311037
+            ],
+            [
+              0.4669439799331104,
+              0.6424414715719063
+            ],
+            [
+              0.08805602006688963,
+              0.6424414715719063
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+            "referenceLengthMm": 2000,
+            "referenceImageSegment01": [
+              [
+                0.08805602006688963,
+                0.6119397993311037
+              ],
+              [
+                0.4669439799331104,
+                0.6119397993311037
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                2000,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-back-right",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/living-standard/skirting-back-right-mask.png",
+          "boundsPx": [
+            1160,
+            734,
+            351,
+            37
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/living-standard/skirting-back-right-diffuse.png",
+          "baselineLinear": 0.20155625379439707,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              1300,
+              0
+            ],
+            [
+              1300,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.7250167224080267,
+              0.6119397993311037
+            ],
+            [
+              0.9437709030100335,
+              0.6119397993311037
+            ],
+            [
+              0.9437709030100335,
+              0.6424414715719063
+            ],
+            [
+              0.7250167224080267,
+              0.6424414715719063
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+            "referenceLengthMm": 1300,
+            "referenceImageSegment01": [
+              [
+                0.7250167224080267,
+                0.6119397993311037
+              ],
+              [
+                0.9437709030100335,
+                0.6119397993311037
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1300,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-right",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/living-standard/skirting-right-mask.png",
+          "boundsPx": [
+            1512,
+            734,
+            88,
+            77
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/living-standard/skirting-right-diffuse.png",
+          "baselineLinear": 0.39675523072562685,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              1800,
+              0
+            ],
+            [
+              1800,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.945200668896321,
+              0.6119397993311037
+            ],
+            [
+              1.0510033444816054,
+              0.6710367892976589
+            ],
+            [
+              1.0510033444816054,
+              0.706304347826087
+            ],
+            [
+              0.945200668896321,
+              0.6424414715719063
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Artist-fitted illustrative virtual plane; not independently measured physical scale. See AUTHORING.md.",
+            "referenceLengthMm": 720,
+            "referenceImageSegment01": [
+              [
+                0.9452006688963209,
+                0.6119397993311035
+              ],
+              [
+                0.9838942188246534,
+                0.6335524128045866
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                720,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      }
+    ],
+    "protectedMask": {
+      "alpha": "/media/scenes/living-standard/protected-mask.png",
+      "boundsPx": [
+        72,
+        440,
+        1039,
+        417
+      ]
+    },
+    "foreground": null,
+    "doorInserts": [
+      {
+        "variantKey": "smoke-glass-black",
+        "rgba": "/media/scenes/living-standard/smoke-glass-black.png",
+        "replacementMask": {
+          "alpha": "/media/scenes/living-standard/smoke-glass-black-mask.png",
+          "boundsPx": [
+            747,
+            20,
+            412,
+            751
+          ]
+        },
+        "protectedMask": {
+          "alpha": "/media/scenes/living-standard/smoke-glass-black-protected-mask.png",
+          "boundsPx": [
+            0,
+            0,
+            1600,
+            1200
+          ]
+        },
+        "allowedFrameModes": [
+          "black"
+        ],
+        "sourceNote": "ImageGen edit of exact new living plate. Complete old leaf/casing/hardware replaced; immutable base supplies all pixels outside opening."
+      }
+    ],
+    "allowedDoorProductIds": [
+      "dera-bardhe",
+      "dera-lis",
+      "dera-xham"
+    ],
+    "allowedFloorProductIds": [
+      "lis-natyral-10",
+      "dushk-fshatar-8",
+      "peshk-natyral-12",
+      "arre-klasike-12",
+      "hirte-skandinave-8"
+    ],
+    "allowedFrameModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "allowedSkirtingModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "defaultSelection": {
+      "version": 1,
+      "sceneId": "living-standard",
+      "doorProductId": "dera-bardhe",
+      "doorFinishId": "bardhe-mat",
+      "floorProductId": "lis-natyral-10",
+      "frameMode": "door",
+      "skirtingMode": "floor",
+      "floorRotationDeg": 0
+    },
+    "assetRevision": "pending"
+  },
+  "sourceCrop": {
+    "originalWidth": 1448,
+    "originalHeight": 1086,
+    "cropPx": [
+      151,
+      35,
+      1196,
+      897
+    ],
+    "outputWidth": 1600,
+    "outputHeight": 1200
+  },
+  "neutralPatches": [
+    {
+      "surfaceId": "floor",
+      "polygon01": [
+        [
+          0.49625,
+          0.8925
+        ],
+        [
+          0.498125,
+          0.8925
+        ],
+        [
+          0.498125,
+          0.895
+        ],
+        [
+          0.49625,
+          0.895
+        ]
+      ],
+      "medianLinear": 0.3662525955988395,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "leaf",
+      "polygon01": [
+        [
+          0.594375,
+          0.3441666666666667
+        ],
+        [
+          0.59625,
+          0.3441666666666667
+        ],
+        [
+          0.59625,
+          0.3466666666666667
+        ],
+        [
+          0.594375,
+          0.3466666666666667
+        ]
+      ],
+      "medianLinear": 0.33245153634617935,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "frame-left",
+      "polygon01": [
+        [
+          0.476875,
+          0.345
+        ],
+        [
+          0.47875,
+          0.345
+        ],
+        [
+          0.47875,
+          0.3475
+        ],
+        [
+          0.476875,
+          0.3475
+        ]
+      ],
+      "medianLinear": 0.35153259950043936,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "frame-right",
+      "polygon01": [
+        [
+          0.713125,
+          0.345
+        ],
+        [
+          0.715,
+          0.345
+        ],
+        [
+          0.715,
+          0.3475
+        ],
+        [
+          0.713125,
+          0.3475
+        ]
+      ],
+      "medianLinear": 0.26225065752969623,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "frame-top",
+      "polygon01": [
+        [
+          0.594375,
+          0.03
+        ],
+        [
+          0.59625,
+          0.03
+        ],
+        [
+          0.59625,
+          0.0325
+        ],
+        [
+          0.594375,
+          0.0325
+        ]
+      ],
+      "medianLinear": 0.25015828472995344,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "skirting-back-left",
+      "polygon01": [
+        [
+          0.276875,
+          0.6258333333333334
+        ],
+        [
+          0.27875,
+          0.6258333333333334
+        ],
+        [
+          0.27875,
+          0.6283333333333333
+        ],
+        [
+          0.276875,
+          0.6283333333333333
+        ]
+      ],
+      "medianLinear": 0.20507873639031693,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "skirting-back-right",
+      "polygon01": [
+        [
+          0.83375,
+          0.6258333333333334
+        ],
+        [
+          0.835625,
+          0.6258333333333334
+        ],
+        [
+          0.835625,
+          0.6283333333333333
+        ],
+        [
+          0.83375,
+          0.6283333333333333
+        ]
+      ],
+      "medianLinear": 0.20155625379439707,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "skirting-right",
+      "polygon01": [
+        [
+          0.996875,
+          0.6566666666666666
+        ],
+        [
+          0.99875,
+          0.6566666666666666
+        ],
+        [
+          0.99875,
+          0.6591666666666667
+        ],
+        [
+          0.996875,
+          0.6591666666666667
+        ]
+      ],
+      "medianLinear": 0.39675523072562685,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    }
+  ],
+  "references": [
+    {
+      "label": "floor virtual edge",
+      "planeSurfaceId": "floor",
+      "lengthMm": 4500,
+      "imageSegment01": [
+        [
+          0.086626254180602,
+          0.6443478260869565
+        ],
+        [
+          0.9444857859531772,
+          0.6433946488294314
+        ]
+      ],
+      "provenance": "Authored illustrative dimensions, no independent measured same-plane reference."
+    },
+    {
+      "label": "leaf virtual edge",
+      "planeSurfaceId": "leaf",
+      "lengthMm": 900,
+      "imageSegment01": [
+        [
+          0.4919648829431438,
+          0.050518394648829436
+        ],
+        [
+          0.6985660535117058,
+          0.050518394648829436
+        ]
+      ],
+      "provenance": "Authored illustrative dimensions, no independent measured same-plane reference."
+    },
+    {
+      "label": "frame-left virtual edge",
+      "planeSurfaceId": "frame-left",
+      "lengthMm": 70,
+      "imageSegment01": [
+        [
+          0.4676588628762543,
+          0.04956521739130435
+        ],
+        [
+          0.48767558528428095,
+          0.04956521739130435
+        ]
+      ],
+      "provenance": "Authored illustrative dimensions, no independent measured same-plane reference."
+    },
+    {
+      "label": "frame-right virtual edge",
+      "planeSurfaceId": "frame-right",
+      "lengthMm": 70,
+      "imageSegment01": [
+        [
+          0.705,
+          0.04956521739130435
+        ],
+        [
+          0.7235869565217391,
+          0.04956521739130435
+        ]
+      ],
+      "provenance": "Authored illustrative dimensions, no independent measured same-plane reference."
+    },
+    {
+      "label": "frame-top virtual edge",
+      "planeSurfaceId": "frame-top",
+      "lengthMm": 1040,
+      "imageSegment01": [
+        [
+          0.4676588628762543,
+          0.018110367892976587
+        ],
+        [
+          0.7235869565217391,
+          0.018110367892976587
+        ]
+      ],
+      "provenance": "Authored illustrative dimensions, no independent measured same-plane reference."
+    },
+    {
+      "label": "skirting-back-left virtual edge",
+      "planeSurfaceId": "skirting-back-left",
+      "lengthMm": 2000,
+      "imageSegment01": [
+        [
+          0.08805602006688963,
+          0.6119397993311037
+        ],
+        [
+          0.4669439799331104,
+          0.6119397993311037
+        ]
+      ],
+      "provenance": "Authored illustrative dimensions, no independent measured same-plane reference."
+    },
+    {
+      "label": "skirting-back-right virtual edge",
+      "planeSurfaceId": "skirting-back-right",
+      "lengthMm": 1300,
+      "imageSegment01": [
+        [
+          0.7250167224080267,
+          0.6119397993311037
+        ],
+        [
+          0.9437709030100335,
+          0.6119397993311037
+        ]
+      ],
+      "provenance": "Authored illustrative dimensions, no independent measured same-plane reference."
+    },
+    {
+      "label": "skirting-right virtual edge",
+      "planeSurfaceId": "skirting-right",
+      "lengthMm": 720,
+      "imageSegment01": [
+        [
+          0.9452006688963209,
+          0.6119397993311035
+        ],
+        [
+          0.9838942188246534,
+          0.6335524128045866
+        ]
+      ],
+      "provenance": "Authored illustrative dimensions, no independent measured same-plane reference."
+    }
+  ]
+}

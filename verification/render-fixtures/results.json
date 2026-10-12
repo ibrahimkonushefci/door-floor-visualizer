@@ -1,0 +1,49 @@
+{
+  "maxByteError": 0,
+  "approvedExpected": "50% byte128 albedo over64/80/96 base:102/107/113 (independent sRGB formula); fixed golden never overwritten",
+  "environment": "Node24 macOS arm64; synchronous fixture kernel, not phone latency",
+  "timings": [
+    {
+      "scene": "living-standard",
+      "name": "default",
+      "width": 960,
+      "ms": 157.41820800000002
+    },
+    {
+      "scene": "living-standard",
+      "name": "magenta",
+      "width": 1600,
+      "ms": 278.51741699999997
+    },
+    {
+      "scene": "living-standard",
+      "name": "scale-grid",
+      "width": 1600,
+      "ms": 288.959125
+    },
+    {
+      "scene": "living-standard",
+      "name": "glass",
+      "width": 1600,
+      "ms": 307.73900000000003
+    },
+    {
+      "scene": "corridor-standard",
+      "name": "default",
+      "width": 960,
+      "ms": 165.3258340000002
+    },
+    {
+      "scene": "corridor-standard",
+      "name": "magenta",
+      "width": 1600,
+      "ms": 316.2867919999999
+    },
+    {
+      "scene": "corridor-standard",
+      "name": "scale-grid",
+      "width": 1600,
+      "ms": 322.74625000000015
+    }
+  ]
+}

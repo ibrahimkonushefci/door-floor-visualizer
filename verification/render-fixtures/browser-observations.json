@@ -1,0 +1,613 @@
+[
+  {
+    "test": "living floor",
+    "name": "Natural oak 10mm",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":303.2000000476837,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":276.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":260.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":371.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":275.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":345.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":273.0999999642372,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":174.80000001192093,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "living floor",
+    "name": "Rustic oak 8mm",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"dushk-fshatar-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"dushk-fshatar-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":303.2000000476837,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":276.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":260.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":371.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":275.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":345.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":273.0999999642372,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":174.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":175.5999999642372,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "living floor",
+    "name": "Natural herringbone parquet",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":303.2000000476837,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":276.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":260.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":371.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":275.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":345.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":273.0999999642372,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":174.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":175.5999999642372,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "living floor",
+    "name": "Classic walnut 12mm",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"arre-klasike-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"arre-klasike-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":303.2000000476837,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":276.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":260.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":371.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":275.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":345.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":273.0999999642372,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":174.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":175.5999999642372,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":185,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "living floor",
+    "name": "Scandinavian grey 8mm",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":303.2000000476837,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":276.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":260.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":371.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":275.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":345.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":273.0999999642372,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":174.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":175.5999999642372,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":185,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":179.5999999642372,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "finish",
+    "name": "Matte white",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":308.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":167,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":298.0999999642372,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "finish",
+    "name": "Cashmere",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"kashmir\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"kashmir\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":308.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":167,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":298.0999999642372,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":172.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":295.9000000357628,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "finish",
+    "name": "Natural oak",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"lis-natyral\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"lis-natyral\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":308.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":167,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":298.0999999642372,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":172.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":295.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":194.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":308.5,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "finish",
+    "name": "Dark walnut",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":308.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":167,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":298.0999999642372,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":172.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":295.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":194.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":308.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":195.30000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":313.69999998807907,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "finish",
+    "name": "Grey oak",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"dushk-hirte\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"dushk-hirte\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":308.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":167,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":298.0999999642372,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":172.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":295.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":194.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":308.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":195.30000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":313.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":199.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":317.39999997615814,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "finish",
+    "name": "Anthracite",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":308.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":167,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":298.0999999642372,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":172.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":295.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":194.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":308.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":195.30000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":313.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":199.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":317.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":307.69999998807907,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "p4-living-white-oak-390",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=living-standard&door=dera-bardhe&finish=bardhe-mat&floor=lis-natyral-10&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-living-walnut-grey-390",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=living-standard&door=dera-bardhe&finish=arre-erret&floor=hirte-skandinave-8&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-living-glass-390",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=living-standard&door=dera-xham&finish=xham-erret&floor=hirte-skandinave-8&frame=black&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-hidden-kashmir-herringbone-390",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"kashmir\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"kashmir\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=corridor-hidden&door=dera-kashmir&finish=kashmir&floor=peshk-natyral-12&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-hidden-anthracite-herringbone-1280",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":212.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373.10000002384186,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=peshk-natyral-12&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-floor-rotation-0",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":212.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373.10000002384186,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=peshk-natyral-12&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-floor-rotation-90",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":212.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":153.69999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=peshk-natyral-12&frame=door&skirting=floor&rot=90"
+  },
+  {
+    "test": "hidden finish",
+    "name": "E bardhë mat",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":212.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":153.69999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":200.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":376.39999997615814,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "hidden finish",
+    "name": "Kashmir",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"kashmir\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"kashmir\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":212.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":153.69999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":200.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":376.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":206.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":383.5,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "hidden finish",
+    "name": "Lis natyral",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"lis-natyral\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"lis-natyral\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":212.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":153.69999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":200.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":376.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":206.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":383.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":225.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":399.30000001192093,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "hidden finish",
+    "name": "Antracit",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":212.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":153.69999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":200.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":376.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":206.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":383.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":225.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":399.30000001192093,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "hidden floor",
+    "name": "Lis natyral 10mm",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":212.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":153.69999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":200.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":376.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":206.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":383.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":225.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":399.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":166.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":368.7000000476837,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "hidden floor",
+    "name": "Dushk fshatar 8mm",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"dushk-fshatar-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"dushk-fshatar-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":212.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":153.69999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":200.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":376.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":206.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":383.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":225.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":399.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":166.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":368.7000000476837,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":173.0999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":384.9000000357628,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "hidden floor",
+    "name": "Parket natyral ribë peshku",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":212.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":153.69999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":200.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":376.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":206.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":383.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":225.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":399.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":166.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":368.7000000476837,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":173.0999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":384.9000000357628,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "hidden floor",
+    "name": "Arrë klasike 12mm",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"arre-klasike-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"arre-klasike-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":212.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":153.69999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":200.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":376.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":206.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":383.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":225.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":399.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":166.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":368.7000000476837,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":173.0999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":384.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":174.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":381.30000001192093,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "hidden floor",
+    "name": "Hirtë skandinave 8mm",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":212.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":153.69999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":200.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":376.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":206.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":383.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":225.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":399.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":166.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":368.7000000476837,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":173.0999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":384.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":174.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":381.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":170.70000004768372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":376,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "20 rapid changes + scene + resize",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":98.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":111.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":115.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":298.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":118.19999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":105.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":205,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":149.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":103.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":212.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":153.69999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":373,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":200.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":376.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":206.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":383.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":225.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":399.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":166.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":368.7000000476837,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":173.0999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":384.9000000357628,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":174.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":381.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":170.70000004768372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":376,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":173.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":171.89999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":181.39999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":250.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":107,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "DE320",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":231.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":88.69999998807907,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "tablet768",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":231.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":88.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":78.89999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":162.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":289,\"mode\":\"worker\"}]"
+    }
+  },
+  {
+    "test": "product selected walnut to Studio",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":359.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":301.30000001192093,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/de/studio/?v=1&scene=living-standard&door=dera-bardhe&finish=arre-erret&floor=lis-natyral-10&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "shared link refresh",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":361.69999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":302.80000001192093,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/de/studio/?v=1&scene=living-standard&door=dera-bardhe&finish=arre-erret&floor=lis-natyral-10&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-living-white-oak-390",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":330.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":283.5,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=living-standard&door=dera-bardhe&finish=bardhe-mat&floor=lis-natyral-10&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-living-walnut-grey-390",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":330.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":283.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":165.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":207.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":308.2000000476837,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=living-standard&door=dera-bardhe&finish=arre-erret&floor=hirte-skandinave-8&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-living-glass-390",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":330.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":283.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":165.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":207.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":308.2000000476837,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":383.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":285.69999998807907,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=living-standard&door=dera-xham&finish=xham-erret&floor=hirte-skandinave-8&frame=black&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-living-white-oak-390",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":330.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":283.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":165.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":207.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":308.2000000476837,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":383.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":285.69999998807907,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=living-standard&door=dera-xham&finish=xham-erret&floor=hirte-skandinave-8&frame=black&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-living-walnut-grey-390",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":330.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":283.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":165.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":207.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":308.2000000476837,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":383.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":285.69999998807907,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=living-standard&door=dera-xham&finish=xham-erret&floor=hirte-skandinave-8&frame=black&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-living-glass-390",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":330.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":283.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":165.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":207.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":308.2000000476837,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":383.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":285.69999998807907,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=living-standard&door=dera-xham&finish=xham-erret&floor=hirte-skandinave-8&frame=black&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-hidden-kashmir-herringbone-390",
+    "state": {
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "timings": "[{\"quality\":\"preview\",\"ms\":330.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":283.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":165.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":207.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":308.2000000476837,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":383.39999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":285.69999998807907,\"mode\":\"worker\"}]"
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=living-standard&door=dera-xham&finish=xham-erret&floor=hirte-skandinave-8&frame=black&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-hidden-kashmir-herringbone-390",
+    "state": {
+      "height": 844,
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"kashmir\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"kashmir\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "stage": {
+        "bottom": 446.5,
+        "height": 274.5,
+        "left": 12,
+        "right": 378,
+        "top": 172,
+        "width": 366,
+        "x": 12,
+        "y": 172
+      },
+      "timings": "[{\"quality\":\"preview\",\"ms\":267.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":129.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":101.89999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":327.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":119.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":224.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":159.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":99.69999998807907,\"mode\":\"worker\"}]",
+      "width": 390
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=corridor-hidden&door=dera-kashmir&finish=kashmir&floor=peshk-natyral-12&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-living-white-oak-390",
+    "state": {
+      "height": 844,
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"bardhe-mat\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "stage": {
+        "bottom": 446.5,
+        "height": 274.5,
+        "left": 12,
+        "right": 378,
+        "top": 172,
+        "width": 366,
+        "x": 12,
+        "y": 172
+      },
+      "timings": "[{\"quality\":\"preview\",\"ms\":267.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":129.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":101.89999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":327.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":119.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":224.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":159.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":99.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":113,\"mode\":\"worker\"}]",
+      "width": 390
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=living-standard&door=dera-bardhe&finish=bardhe-mat&floor=lis-natyral-10&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-living-walnut-grey-390",
+    "state": {
+      "height": 844,
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "stage": {
+        "bottom": 446.5,
+        "height": 274.5,
+        "left": 12,
+        "right": 378,
+        "top": 172,
+        "width": 366,
+        "x": 12,
+        "y": 172
+      },
+      "timings": "[{\"quality\":\"preview\",\"ms\":267.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":129.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":101.89999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":327.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":119.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":224.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":159.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":99.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":113,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":136.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":110.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":139.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":108.80000001192093,\"mode\":\"worker\"}]",
+      "width": 390
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=living-standard&door=dera-bardhe&finish=arre-erret&floor=hirte-skandinave-8&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-living-glass-390",
+    "state": {
+      "height": 844,
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-xham\",\"doorFinishId\":\"xham-erret\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "stage": {
+        "bottom": 446.5,
+        "height": 274.5,
+        "left": 12,
+        "right": 378,
+        "top": 172,
+        "width": 366,
+        "x": 12,
+        "y": 172
+      },
+      "timings": "[{\"quality\":\"preview\",\"ms\":267.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":129.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":101.89999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":327.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":119.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":224.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":159.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":99.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":113,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":136.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":110.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":139.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":108.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":110.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":318,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":122.40000003576279,\"mode\":\"worker\"}]",
+      "width": 390
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=living-standard&door=dera-xham&finish=xham-erret&floor=hirte-skandinave-8&frame=black&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-hidden-anthracite-herringbone-1280",
+    "state": {
+      "height": 900,
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "stage": {
+        "bottom": 739,
+        "height": 672,
+        "left": 24,
+        "right": 920,
+        "top": 67,
+        "width": 896,
+        "x": 24,
+        "y": 67
+      },
+      "timings": "[{\"quality\":\"preview\",\"ms\":267.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":129.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":101.89999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":327.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":119.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":224.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":159.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":99.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":113,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":136.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":110.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":139.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":108.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":110.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":318,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":122.40000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":157.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":200.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":368.30000001192093,\"mode\":\"worker\"}]",
+      "width": 1280
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=peshk-natyral-12&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-floor-rotation-0",
+    "state": {
+      "height": 900,
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+      "stage": {
+        "bottom": 739,
+        "height": 672,
+        "left": 24,
+        "right": 920,
+        "top": 67,
+        "width": 896,
+        "x": 24,
+        "y": 67
+      },
+      "timings": "[{\"quality\":\"preview\",\"ms\":267.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":129.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":101.89999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":327.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":119.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":224.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":159.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":99.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":113,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":136.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":110.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":139.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":108.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":110.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":318,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":122.40000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":157.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":200.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":368.30000001192093,\"mode\":\"worker\"}]",
+      "width": 1280
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=peshk-natyral-12&frame=door&skirting=floor&rot=0"
+  },
+  {
+    "test": "p4-floor-rotation-90",
+    "state": {
+      "height": 900,
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "stage": {
+        "bottom": 739,
+        "height": 672,
+        "left": 24,
+        "right": 920,
+        "top": 67,
+        "width": 896,
+        "x": 24,
+        "y": 67
+      },
+      "timings": "[{\"quality\":\"preview\",\"ms\":267.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":129.5999999642372,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":104,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":140.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":101.89999997615814,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":327.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":119.60000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":224.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.90000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":159.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":96.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":99.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":261.19999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":113,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":109.09999996423721,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":136.89999997615814,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":110.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":139.80000001192093,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":108.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":110.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":318,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":122.40000003576279,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":157.5,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":154,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":200.10000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":368.30000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":151.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":387.60000002384186,\"mode\":\"worker\"}]",
+      "width": 1280
+    },
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=peshk-natyral-12&frame=door&skirting=floor&rot=90"
+  },
+  {
+    "test": "final combination inquiry",
+    "message": "Përshëndetje, dua informacion për dyer dhe dysheme.\nDhoma: Korridori · Filomuro\nProdukti: Derë e fshehur Kashmir (PD-DEMO-05)\nPërmasa: 80 × 200 cm\nFinitura: Antracit\nProdukti: Parket natyral ribë peshku (PD-DEMO-06)\n12 mm · Lis\nPervazi: Si dera\nLajsna: Si dyshemeja\nDrejtimi: 90°\nhttp://127.0.0.1:43872/sq/studio/?v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=peshk-natyral-12&frame=door&skirting=floor&rot=90",
+    "url": "http://127.0.0.1:43872/sq/studio/?v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=peshk-natyral-12&frame=door&skirting=floor&rot=90"
+  },
+  {
+    "test": "p4-de-320-controls",
+    "state": {
+      "height": 740,
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "stage": {
+        "bottom": 394,
+        "height": 222,
+        "left": 12,
+        "right": 308,
+        "top": 172,
+        "width": 296,
+        "x": 12,
+        "y": 172
+      },
+      "timings": "[{\"quality\":\"preview\",\"ms\":287.60000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":81.80000001192093,\"mode\":\"worker\"}]",
+      "width": 320
+    },
+    "url": "http://127.0.0.1:43872/de/studio/?v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=peshk-natyral-12&frame=door&skirting=floor&rot=90"
+  },
+  {
+    "test": "p4-tablet-768",
+    "state": {
+      "height": 1024,
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"corridor-hidden\",\"doorProductId\":\"dera-kashmir\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "stage": {
+        "bottom": 553,
+        "height": 546,
+        "left": 20,
+        "right": 748,
+        "top": 7,
+        "width": 728,
+        "x": 20,
+        "y": 7
+      },
+      "timings": "[{\"quality\":\"preview\",\"ms\":287.60000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":81.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":71.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":163.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":268.69999998807907,\"mode\":\"worker\"}]",
+      "width": 768
+    },
+    "url": "http://127.0.0.1:43872/de/studio/?v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=peshk-natyral-12&frame=door&skirting=floor&rot=90"
+  },
+  {
+    "test": "final 20 rapid changes scene resize390x667",
+    "state": {
+      "height": 667,
+      "overflow": 0,
+      "rendered": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"peshk-natyral-12\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":90}",
+      "stage": {
+        "bottom": 45.25,
+        "height": 263.25,
+        "left": 12,
+        "right": 363,
+        "top": -218,
+        "width": 351,
+        "x": 12,
+        "y": -218
+      },
+      "timings": "[{\"quality\":\"preview\",\"ms\":287.60000002384186,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":81.80000001192093,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":71.10000002384186,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":163.5,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":268.69999998807907,\"mode\":\"worker\"},{\"quality\":\"preview\",\"ms\":308.69999998807907,\"mode\":\"worker\"},{\"quality\":\"settled\",\"ms\":119.80000001192093,\"mode\":\"worker\"}]",
+      "width": 375
+    }
+  }
+]

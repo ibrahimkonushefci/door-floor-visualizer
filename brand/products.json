@@ -1,0 +1,1012 @@
+{
+  "schemaVersion": 1,
+  "images": [
+    {
+      "id": "dera-bardhe-01",
+      "source": "brand/assets/products/dera-bardhe/01.jpg",
+      "alt": {
+        "sq": "Derë e bardhë mat — pamje demonstrimi e gjeneruar",
+        "en": "Matte white door — generated demo view",
+        "de": "Matte weiße Tür — generierte Demoabbildung"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "product"
+    },
+    {
+      "id": "lis-natyral-10-01",
+      "source": "brand/assets/products/lis-natyral-10/01.jpg",
+      "alt": {
+        "sq": "Lis natyral 10mm — pamje demonstrimi e gjeneruar",
+        "en": "Natural oak 10mm — generated demo view",
+        "de": "Natureiche 10mm — generierte Demoabbildung"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "room"
+    },
+    {
+      "id": "dera-lis-01",
+      "source": "brand/assets/products/dera-lis/01.jpg",
+      "alt": {
+        "sq": "Derë lis natyral — pamje demonstrimi e gjeneruar",
+        "en": "Natural oak door — generated demo view",
+        "de": "Natureiche-Tür — generierte Demoabbildung"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "product"
+    },
+    {
+      "id": "dushk-fshatar-8-01",
+      "source": "brand/assets/products/dushk-fshatar-8/01.jpg",
+      "alt": {
+        "sq": "Dushk fshatar 8mm — pamje demonstrimi e gjeneruar",
+        "en": "Rustic oak 8mm — generated demo view",
+        "de": "Rustikale Eiche 8mm — generierte Demoabbildung"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "room"
+    },
+    {
+      "id": "dera-kashmir-01",
+      "source": "brand/assets/products/dera-kashmir/01.jpg",
+      "alt": {
+        "sq": "Derë e fshehur Kashmir — pamje demonstrimi e gjeneruar",
+        "en": "Hidden Kashmir door — generated demo view",
+        "de": "Flächenbündige Tür Kashmir — generierte Demoabbildung"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "product"
+    },
+    {
+      "id": "peshk-natyral-12-01",
+      "source": "brand/assets/products/peshk-natyral-12/01.jpg",
+      "alt": {
+        "sq": "Parket natyral ribë peshku — pamje demonstrimi e gjeneruar",
+        "en": "Natural herringbone parquet — generated demo view",
+        "de": "Naturparkett Fischgrät — generierte Demoabbildung"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "room"
+    },
+    {
+      "id": "dera-bardhe-02",
+      "source": "brand/assets/products/dera-bardhe/02.jpg",
+      "alt": {
+        "sq": "Derë e bardhë mat — detaj i gjeneruar për demonstrim",
+        "en": "Matte white door — generated demo detail view",
+        "de": "Matte weiße Tür — generierte Demo-Detailansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "lis-natyral-10-02",
+      "source": "brand/assets/products/lis-natyral-10/02.jpg",
+      "alt": {
+        "sq": "Lis natyral 10mm — detaj i gjeneruar për demonstrim",
+        "en": "Natural oak 10mm — generated demo detail view",
+        "de": "Natureiche 10mm — generierte Demo-Detailansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "dera-lis-02",
+      "source": "brand/assets/products/dera-lis/02.jpg",
+      "alt": {
+        "sq": "Derë lis natyral — detaj i gjeneruar për demonstrim",
+        "en": "Natural oak door — generated demo detail view",
+        "de": "Natureiche-Tür — generierte Demo-Detailansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "dushk-fshatar-8-02",
+      "source": "brand/assets/products/dushk-fshatar-8/02.jpg",
+      "alt": {
+        "sq": "Dushk fshatar 8mm — detaj i gjeneruar për demonstrim",
+        "en": "Rustic oak 8mm — generated demo detail view",
+        "de": "Rustikale Eiche 8mm — generierte Demo-Detailansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "dera-kashmir-02",
+      "source": "brand/assets/products/dera-kashmir/02.jpg",
+      "alt": {
+        "sq": "Derë e fshehur Kashmir — detaj i gjeneruar për demonstrim",
+        "en": "Hidden Kashmir door — generated demo detail view",
+        "de": "Flächenbündige Tür Kashmir — generierte Demo-Detailansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "peshk-natyral-12-02",
+      "source": "brand/assets/products/peshk-natyral-12/02.jpg",
+      "alt": {
+        "sq": "Parket natyral ribë peshku — detaj i gjeneruar për demonstrim",
+        "en": "Natural herringbone parquet — generated demo detail view",
+        "de": "Naturparkett Fischgrät — generierte Demo-Detailansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "dera-antracit-01",
+      "source": "brand/assets/products/dera-antracit/01.jpg",
+      "alt": {
+        "sq": "Derë e fshehur antracit — pamje ilustruese e gjeneruar",
+        "en": "Hidden anthracite door — generated illustrative view",
+        "de": "Flächenbündige Tür Anthrazit — generierte illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.25,
+        0.5
+      ],
+      "role": "product"
+    },
+    {
+      "id": "dera-antracit-02",
+      "source": "brand/assets/products/dera-antracit/02.jpg",
+      "alt": {
+        "sq": "Derë e fshehur antracit — pamje ilustruese e gjeneruar",
+        "en": "Hidden anthracite door — generated illustrative view",
+        "de": "Flächenbündige Tür Anthrazit — generierte illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.25,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "arre-klasike-12-01",
+      "source": "brand/assets/products/arre-klasike-12/01.jpg",
+      "alt": {
+        "sq": "Arrë klasike 12mm — pamje ilustruese e gjeneruar",
+        "en": "Classic walnut 12mm — generated illustrative view",
+        "de": "Klassischer Nussbaum 12mm — generierte illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.25,
+        0.5
+      ],
+      "role": "product"
+    },
+    {
+      "id": "arre-klasike-12-02",
+      "source": "brand/assets/products/arre-klasike-12/02.jpg",
+      "alt": {
+        "sq": "Arrë klasike 12mm — pamje ilustruese e gjeneruar",
+        "en": "Classic walnut 12mm — generated illustrative view",
+        "de": "Klassischer Nussbaum 12mm — generierte illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.25,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "dera-xham-01",
+      "source": "brand/assets/products/dera-xham/01.jpg",
+      "alt": {
+        "sq": "Xham i errët, profil i zi — pamje ilustruese e gjeneruar",
+        "en": "Smoke glass, black profile — generated illustrative view",
+        "de": "Rauchglas, schwarzes Profil — generierte illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.25,
+        0.5
+      ],
+      "role": "product"
+    },
+    {
+      "id": "dera-xham-02",
+      "source": "brand/assets/products/dera-xham/02.jpg",
+      "alt": {
+        "sq": "Xham i errët, profil i zi — pamje ilustruese e gjeneruar",
+        "en": "Smoke glass, black profile — generated illustrative view",
+        "de": "Rauchglas, schwarzes Profil — generierte illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.25,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "hirte-skandinave-8-01",
+      "source": "brand/assets/products/hirte-skandinave-8/01.jpg",
+      "alt": {
+        "sq": "Hirtë skandinave 8mm — pamje ilustruese e gjeneruar",
+        "en": "Scandinavian grey 8mm — generated illustrative view",
+        "de": "Skandinavisches Grau 8mm — generierte illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.25,
+        0.5
+      ],
+      "role": "product"
+    },
+    {
+      "id": "hirte-skandinave-8-02",
+      "source": "brand/assets/products/hirte-skandinave-8/02.jpg",
+      "alt": {
+        "sq": "Hirtë skandinave 8mm — pamje ilustruese e gjeneruar",
+        "en": "Scandinavian grey 8mm — generated illustrative view",
+        "de": "Skandinavisches Grau 8mm — generierte illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.25,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "pervaze-mdf-01",
+      "source": "brand/assets/products/pervaze-mdf/01.jpg",
+      "alt": {
+        "sq": "Pervazë e bardhë MDF rreth një dere lisi — ilustrim",
+        "en": "White MDF architrave around an oak door — illustration",
+        "de": "Weiße MDF-Türbekleidung um eine Eichentür — Illustration"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "room"
+    },
+    {
+      "id": "pervaze-mdf-02",
+      "source": "brand/assets/products/pervaze-mdf/02.jpg",
+      "alt": {
+        "sq": "Detaj i këndit të pervazës së bardhë MDF — ilustrim",
+        "en": "White MDF architrave corner detail — illustration",
+        "de": "Eckdetail einer weißen MDF-Türbekleidung — Illustration"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "lajsne-mdf-01",
+      "source": "brand/assets/products/lajsne-mdf/01.jpg",
+      "alt": {
+        "sq": "Lajsne e bardhë MDF pranë dyshemesë së lisit — ilustrim",
+        "en": "White MDF skirting along an oak floor — illustration",
+        "de": "Weiße MDF-Sockelleiste am Eichenboden — Illustration"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "room"
+    },
+    {
+      "id": "lajsne-mdf-02",
+      "source": "brand/assets/products/lajsne-mdf/02.jpg",
+      "alt": {
+        "sq": "Mostra të lajsnes MDF me prerje të dukshme — ilustrim",
+        "en": "MDF skirting samples with visible cut ends — illustration",
+        "de": "MDF-Sockelleistenmuster mit sichtbarem Querschnitt — Illustration"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    }
+  ],
+  "products": [
+    {
+      "id": "dera-bardhe",
+      "slug": "dera-bardhe",
+      "sku": "PD-DEMO-01",
+      "kind": "door",
+      "name": {
+        "sq": "Derë e bardhë mat",
+        "en": "Matte white door",
+        "de": "Matte weiße Tür"
+      },
+      "summary": {
+        "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+        "en": "Demo product with generated illustrative imagery.",
+        "de": "Demoprodukt mit generierter illustrativer Abbildung."
+      },
+      "originCountry": "TR",
+      "manufacturer": null,
+      "imageIds": [
+        "dera-bardhe-01",
+        "dera-bardhe-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "demo",
+        "sourceUrl": null,
+        "checkedAt": null,
+        "note": {
+          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+          "en": "Demo product with generated illustrative imagery.",
+          "de": "Demoprodukt mit generierter illustrativer Abbildung."
+        }
+      },
+      "displayOrder": 0,
+      "published": true,
+      "doorType": "standard",
+      "frameType": "standard-casing",
+      "construction": "mdf",
+      "surface": "cpl",
+      "roomUses": [
+        "living",
+        "bedroom"
+      ],
+      "sizes": [
+        {
+          "id": "leaf-700",
+          "leafWidthMm": 700,
+          "leafHeightMm": 2000,
+          "leafThicknessMm": null,
+          "roughOpeningWidthMm": null,
+          "roughOpeningHeightMm": null
+        },
+        {
+          "id": "leaf-800",
+          "leafWidthMm": 800,
+          "leafHeightMm": 2000,
+          "leafThicknessMm": null,
+          "roughOpeningWidthMm": null,
+          "roughOpeningHeightMm": null
+        },
+        {
+          "id": "leaf-900",
+          "leafWidthMm": 900,
+          "leafHeightMm": 2000,
+          "leafThicknessMm": null,
+          "roughOpeningWidthMm": null,
+          "roughOpeningHeightMm": null
+        }
+      ],
+      "defaultSizeId": "leaf-900",
+      "finishIds": [
+        "bardhe-mat",
+        "kashmir",
+        "lis-natyral",
+        "arre-erret",
+        "dushk-hirte",
+        "antracit"
+      ],
+      "defaultFinishId": "bardhe-mat",
+      "compatibleSceneIds": [
+        "living-standard",
+        "corridor-standard"
+      ]
+    },
+    {
+      "id": "lis-natyral-10",
+      "slug": "lis-natyral-10",
+      "sku": "PD-DEMO-02",
+      "kind": "floor",
+      "name": {
+        "sq": "Lis natyral 10mm",
+        "en": "Natural oak 10mm",
+        "de": "Natureiche 10mm"
+      },
+      "summary": {
+        "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+        "en": "Demo product with generated illustrative imagery.",
+        "de": "Demoprodukt mit generierter illustrativer Abbildung."
+      },
+      "originCountry": "DE",
+      "manufacturer": null,
+      "imageIds": [
+        "lis-natyral-10-01",
+        "lis-natyral-10-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "demo",
+        "sourceUrl": null,
+        "checkedAt": null,
+        "note": {
+          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+          "en": "Demo product with generated illustrative imagery.",
+          "de": "Demoprodukt mit generierter illustrativer Abbildung."
+        }
+      },
+      "displayOrder": 1,
+      "published": true,
+      "collectionId": "lis-natyral-10",
+      "compatibleSceneIds": [
+        "living-standard",
+        "corridor-standard"
+      ]
+    },
+    {
+      "id": "dera-lis",
+      "slug": "dera-lis",
+      "sku": "PD-DEMO-03",
+      "kind": "door",
+      "name": {
+        "sq": "Derë lis natyral",
+        "en": "Natural oak door",
+        "de": "Natureiche-Tür"
+      },
+      "summary": {
+        "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+        "en": "Demo product with generated illustrative imagery.",
+        "de": "Demoprodukt mit generierter illustrativer Abbildung."
+      },
+      "originCountry": "SI",
+      "manufacturer": null,
+      "imageIds": [
+        "dera-lis-01",
+        "dera-lis-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "demo",
+        "sourceUrl": null,
+        "checkedAt": null,
+        "note": {
+          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+          "en": "Demo product with generated illustrative imagery.",
+          "de": "Demoprodukt mit generierter illustrativer Abbildung."
+        }
+      },
+      "displayOrder": 2,
+      "published": true,
+      "doorType": "standard",
+      "frameType": "standard-casing",
+      "construction": "solid-core",
+      "surface": "cpl",
+      "roomUses": [
+        "living",
+        "bedroom"
+      ],
+      "sizes": [
+        {
+          "id": "leaf-700",
+          "leafWidthMm": 700,
+          "leafHeightMm": 2000,
+          "leafThicknessMm": null,
+          "roughOpeningWidthMm": null,
+          "roughOpeningHeightMm": null
+        },
+        {
+          "id": "leaf-800",
+          "leafWidthMm": 800,
+          "leafHeightMm": 2000,
+          "leafThicknessMm": null,
+          "roughOpeningWidthMm": null,
+          "roughOpeningHeightMm": null
+        },
+        {
+          "id": "leaf-900",
+          "leafWidthMm": 900,
+          "leafHeightMm": 2000,
+          "leafThicknessMm": null,
+          "roughOpeningWidthMm": null,
+          "roughOpeningHeightMm": null
+        }
+      ],
+      "defaultSizeId": "leaf-800",
+      "finishIds": [
+        "bardhe-mat",
+        "kashmir",
+        "lis-natyral",
+        "arre-erret",
+        "dushk-hirte",
+        "antracit"
+      ],
+      "defaultFinishId": "lis-natyral",
+      "compatibleSceneIds": [
+        "living-standard",
+        "corridor-standard"
+      ]
+    },
+    {
+      "id": "dushk-fshatar-8",
+      "slug": "dushk-fshatar-8",
+      "sku": "PD-DEMO-04",
+      "kind": "floor",
+      "name": {
+        "sq": "Dushk fshatar 8mm",
+        "en": "Rustic oak 8mm",
+        "de": "Rustikale Eiche 8mm"
+      },
+      "summary": {
+        "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+        "en": "Demo product with generated illustrative imagery.",
+        "de": "Demoprodukt mit generierter illustrativer Abbildung."
+      },
+      "originCountry": "AT",
+      "manufacturer": null,
+      "imageIds": [
+        "dushk-fshatar-8-01",
+        "dushk-fshatar-8-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "demo",
+        "sourceUrl": null,
+        "checkedAt": null,
+        "note": {
+          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+          "en": "Demo product with generated illustrative imagery.",
+          "de": "Demoprodukt mit generierter illustrativer Abbildung."
+        }
+      },
+      "displayOrder": 3,
+      "published": true,
+      "collectionId": "dushk-fshatar-8",
+      "compatibleSceneIds": [
+        "living-standard",
+        "corridor-standard"
+      ]
+    },
+    {
+      "id": "dera-kashmir",
+      "slug": "dera-kashmir",
+      "sku": "PD-DEMO-05",
+      "kind": "door",
+      "name": {
+        "sq": "Derë e fshehur Kashmir",
+        "en": "Hidden Kashmir door",
+        "de": "Flächenbündige Tür Kashmir"
+      },
+      "summary": {
+        "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+        "en": "Demo product with generated illustrative imagery.",
+        "de": "Demoprodukt mit generierter illustrativer Abbildung."
+      },
+      "originCountry": "TR",
+      "manufacturer": null,
+      "imageIds": [
+        "dera-kashmir-01",
+        "dera-kashmir-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "demo",
+        "sourceUrl": null,
+        "checkedAt": null,
+        "note": {
+          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+          "en": "Demo product with generated illustrative imagery.",
+          "de": "Demoprodukt mit generierter illustrativer Abbildung."
+        }
+      },
+      "displayOrder": 4,
+      "published": true,
+      "doorType": "hidden",
+      "frameType": "concealed-aluminium",
+      "construction": "mdf",
+      "surface": "paint",
+      "roomUses": [
+        "living",
+        "bedroom"
+      ],
+      "sizes": [
+        {
+          "id": "leaf-800",
+          "leafWidthMm": 800,
+          "leafHeightMm": 2000,
+          "leafThicknessMm": null,
+          "roughOpeningWidthMm": null,
+          "roughOpeningHeightMm": null
+        },
+        {
+          "id": "leaf-900",
+          "leafWidthMm": 900,
+          "leafHeightMm": 2000,
+          "leafThicknessMm": null,
+          "roughOpeningWidthMm": null,
+          "roughOpeningHeightMm": null
+        }
+      ],
+      "defaultSizeId": "leaf-800",
+      "finishIds": [
+        "bardhe-mat",
+        "kashmir",
+        "lis-natyral",
+        "antracit"
+      ],
+      "defaultFinishId": "kashmir",
+      "compatibleSceneIds": []
+    },
+    {
+      "id": "peshk-natyral-12",
+      "slug": "peshk-natyral-12",
+      "sku": "PD-DEMO-06",
+      "kind": "floor",
+      "name": {
+        "sq": "Parket natyral ribë peshku",
+        "en": "Natural herringbone parquet",
+        "de": "Naturparkett Fischgrät"
+      },
+      "summary": {
+        "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+        "en": "Demo product with generated illustrative imagery.",
+        "de": "Demoprodukt mit generierter illustrativer Abbildung."
+      },
+      "originCountry": "DE",
+      "manufacturer": null,
+      "imageIds": [
+        "peshk-natyral-12-01",
+        "peshk-natyral-12-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "demo",
+        "sourceUrl": null,
+        "checkedAt": null,
+        "note": {
+          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+          "en": "Demo product with generated illustrative imagery.",
+          "de": "Demoprodukt mit generierter illustrativer Abbildung."
+        }
+      },
+      "displayOrder": 5,
+      "published": true,
+      "collectionId": "peshk-natyral-12",
+      "compatibleSceneIds": [
+        "living-standard",
+        "corridor-standard"
+      ]
+    },
+    {
+      "id": "dera-antracit",
+      "slug": "dera-antracit",
+      "sku": "PD-DEMO-07",
+      "kind": "door",
+      "name": {
+        "sq": "Derë e fshehur antracit",
+        "en": "Hidden anthracite door",
+        "de": "Flächenbündige Tür Anthrazit"
+      },
+      "summary": {
+        "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+        "en": "Demo product with generated illustrative imagery.",
+        "de": "Demoprodukt mit generierter illustrativer Abbildung."
+      },
+      "originCountry": "DE",
+      "manufacturer": null,
+      "imageIds": [
+        "dera-antracit-01",
+        "dera-antracit-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "demo",
+        "sourceUrl": null,
+        "checkedAt": null,
+        "note": {
+          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+          "en": "Demo product with generated illustrative imagery.",
+          "de": "Demoprodukt mit generierter illustrativer Abbildung."
+        }
+      },
+      "displayOrder": 6,
+      "published": true,
+      "doorType": "hidden",
+      "frameType": "concealed-aluminium",
+      "construction": "mdf",
+      "surface": "paint",
+      "roomUses": [
+        "living",
+        "bedroom"
+      ],
+      "sizes": [
+        {
+          "id": "leaf-800",
+          "leafWidthMm": 800,
+          "leafHeightMm": 2000,
+          "leafThicknessMm": null,
+          "roughOpeningWidthMm": null,
+          "roughOpeningHeightMm": null
+        },
+        {
+          "id": "leaf-900",
+          "leafWidthMm": 900,
+          "leafHeightMm": 2000,
+          "leafThicknessMm": null,
+          "roughOpeningWidthMm": null,
+          "roughOpeningHeightMm": null
+        }
+      ],
+      "defaultSizeId": "leaf-800",
+      "finishIds": [
+        "bardhe-mat",
+        "kashmir",
+        "lis-natyral",
+        "antracit"
+      ],
+      "defaultFinishId": "antracit",
+      "compatibleSceneIds": []
+    },
+    {
+      "id": "arre-klasike-12",
+      "slug": "arre-klasike-12",
+      "sku": "PD-DEMO-08",
+      "kind": "floor",
+      "name": {
+        "sq": "Arrë klasike 12mm",
+        "en": "Classic walnut 12mm",
+        "de": "Klassischer Nussbaum 12mm"
+      },
+      "summary": {
+        "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+        "en": "Demo product with generated illustrative imagery.",
+        "de": "Demoprodukt mit generierter illustrativer Abbildung."
+      },
+      "originCountry": "TR",
+      "manufacturer": null,
+      "imageIds": [
+        "arre-klasike-12-01",
+        "arre-klasike-12-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "demo",
+        "sourceUrl": null,
+        "checkedAt": null,
+        "note": {
+          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+          "en": "Demo product with generated illustrative imagery.",
+          "de": "Demoprodukt mit generierter illustrativer Abbildung."
+        }
+      },
+      "displayOrder": 7,
+      "published": true,
+      "collectionId": "arre-klasike-12",
+      "compatibleSceneIds": [
+        "living-standard",
+        "corridor-standard"
+      ]
+    },
+    {
+      "id": "dera-xham",
+      "slug": "dera-xham",
+      "sku": "PD-DEMO-09",
+      "kind": "door",
+      "name": {
+        "sq": "Xham i errët, profil i zi",
+        "en": "Smoke glass, black profile",
+        "de": "Rauchglas, schwarzes Profil"
+      },
+      "summary": {
+        "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+        "en": "Demo product with generated illustrative imagery.",
+        "de": "Demoprodukt mit generierter illustrativer Abbildung."
+      },
+      "originCountry": "TR",
+      "manufacturer": null,
+      "imageIds": [
+        "dera-xham-01",
+        "dera-xham-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "demo",
+        "sourceUrl": null,
+        "checkedAt": null,
+        "note": {
+          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+          "en": "Demo product with generated illustrative imagery.",
+          "de": "Demoprodukt mit generierter illustrativer Abbildung."
+        }
+      },
+      "displayOrder": 8,
+      "published": true,
+      "doorType": "glass",
+      "frameType": "slim-aluminium",
+      "construction": "aluminium-glass",
+      "surface": "glass",
+      "roomUses": [
+        "living",
+        "bedroom"
+      ],
+      "sizes": [
+        {
+          "id": "leaf-900",
+          "leafWidthMm": 900,
+          "leafHeightMm": 2000,
+          "leafThicknessMm": null,
+          "roughOpeningWidthMm": null,
+          "roughOpeningHeightMm": null
+        }
+      ],
+      "defaultSizeId": "leaf-900",
+      "finishIds": [
+        "xham-erret"
+      ],
+      "defaultFinishId": "xham-erret",
+      "compatibleSceneIds": [
+        "living-standard"
+      ]
+    },
+    {
+      "id": "hirte-skandinave-8",
+      "slug": "hirte-skandinave-8",
+      "sku": "PD-DEMO-10",
+      "kind": "floor",
+      "name": {
+        "sq": "Hirtë skandinave 8mm",
+        "en": "Scandinavian grey 8mm",
+        "de": "Skandinavisches Grau 8mm"
+      },
+      "summary": {
+        "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+        "en": "Demo product with generated illustrative imagery.",
+        "de": "Demoprodukt mit generierter illustrativer Abbildung."
+      },
+      "originCountry": "DE",
+      "manufacturer": null,
+      "imageIds": [
+        "hirte-skandinave-8-01",
+        "hirte-skandinave-8-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "demo",
+        "sourceUrl": null,
+        "checkedAt": null,
+        "note": {
+          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
+          "en": "Demo product with generated illustrative imagery.",
+          "de": "Demoprodukt mit generierter illustrativer Abbildung."
+        }
+      },
+      "displayOrder": 9,
+      "published": true,
+      "collectionId": "hirte-skandinave-8",
+      "compatibleSceneIds": [
+        "living-standard",
+        "corridor-standard"
+      ]
+    },
+    {
+      "id": "pervaze-mdf",
+      "slug": "pervaze-mdf",
+      "sku": "PD-DEMO-11",
+      "name": {
+        "sq": "Pervaza MDF",
+        "en": "MDF architrave",
+        "de": "MDF-Türbekleidung"
+      },
+      "summary": {
+        "sq": "Pervazë e rrafshët MDF për derë të brendshme; profil demonstrues 2200 × 70 × 16 mm.",
+        "en": "Flat MDF interior-door architrave; illustrative 2200 × 70 × 16 mm profile.",
+        "de": "Flache MDF-Türbekleidung für Innentüren; Demoprofil 2200 × 70 × 16 mm."
+      },
+      "originCountry": null,
+      "manufacturer": null,
+      "imageIds": [
+        "pervaze-mdf-01",
+        "pervaze-mdf-02"
+      ],
+      "relatedProductIds": [
+        "lajsne-mdf",
+        "dera-bardhe",
+        "dera-lis"
+      ],
+      "evidence": {
+        "status": "demo",
+        "sourceUrl": null,
+        "checkedAt": null,
+        "note": {
+          "sq": "Profil demonstrues; përmasat dhe pamja janë ilustruese.",
+          "en": "Demo profile; dimensions and imagery are illustrative.",
+          "de": "Demoprofil; Maße und Bilder dienen zur Illustration."
+        }
+      },
+      "displayOrder": 11,
+      "published": true,
+      "kind": "trim",
+      "trimType": "architrave",
+      "dimensionsMm": {
+        "length": 2200,
+        "height": 70,
+        "depth": 16
+      },
+      "material": "mdf",
+      "supportedModes": [
+        "door",
+        "floor",
+        "black"
+      ]
+    },
+    {
+      "id": "lajsne-mdf",
+      "slug": "lajsne-mdf",
+      "sku": "PD-DEMO-12",
+      "name": {
+        "sq": "Lajsne MDF",
+        "en": "MDF skirting",
+        "de": "MDF-Sockelleiste"
+      },
+      "summary": {
+        "sq": "Lajsne e rrafshët MDF për bashkimin e murit me dyshemenë; profil demonstrues 2400 × 80 × 16 mm.",
+        "en": "Flat MDF wall-to-floor skirting; illustrative 2400 × 80 × 16 mm profile.",
+        "de": "Flache MDF-Sockelleiste für den Wand-Boden-Abschluss; Demoprofil 2400 × 80 × 16 mm."
+      },
+      "originCountry": null,
+      "manufacturer": null,
+      "imageIds": [
+        "lajsne-mdf-01",
+        "lajsne-mdf-02"
+      ],
+      "relatedProductIds": [
+        "pervaze-mdf",
+        "lis-natyral-10",
+        "peshk-natyral-12"
+      ],
+      "evidence": {
+        "status": "demo",
+        "sourceUrl": null,
+        "checkedAt": null,
+        "note": {
+          "sq": "Profil demonstrues; përmasat dhe pamja janë ilustruese.",
+          "en": "Demo profile; dimensions and imagery are illustrative.",
+          "de": "Demoprofil; Maße und Bilder dienen zur Illustration."
+        }
+      },
+      "displayOrder": 12,
+      "published": true,
+      "kind": "trim",
+      "trimType": "skirting",
+      "dimensionsMm": {
+        "length": 2400,
+        "height": 80,
+        "depth": 16
+      },
+      "material": "mdf",
+      "supportedModes": [
+        "door",
+        "floor",
+        "black"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "scene": "living-standard",
+    "floorCoverage": 0.34629799223856217,
+    "required": 0.3
+  },
+  {
+    "scene": "corridor-hidden",
+    "floorCoverage": 0.2968214726307188,
+    "required": 0.3
+  }
+]

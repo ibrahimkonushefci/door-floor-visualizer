@@ -1,0 +1,56 @@
+{
+  "batch": "6.100000023841858",
+  "presentations": [
+    {
+      "ms": 246.30000001192093,
+      "selection": {
+        "doorFinishId": "bardhe-mat",
+        "doorProductId": "dera-bardhe",
+        "floorProductId": "lis-natyral-10",
+        "floorRotationDeg": 0,
+        "frameMode": "door",
+        "sceneId": "living-standard",
+        "skirtingMode": "floor",
+        "version": 1
+      },
+      "width": 712
+    },
+    {
+      "ms": 120.19999998807909,
+      "selection": {
+        "doorFinishId": "arre-erret",
+        "doorProductId": "dera-bardhe",
+        "floorProductId": "lis-natyral-10",
+        "floorRotationDeg": 0,
+        "frameMode": "door",
+        "sceneId": "living-standard",
+        "skirtingMode": "floor",
+        "version": 1
+      },
+      "width": 712
+    }
+  ],
+  "presented": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+  "quality": "settled",
+  "requested": "{\"version\":1,\"sceneId\":\"living-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"arre-erret\",\"floorProductId\":\"lis-natyral-10\",\"frameMode\":\"door\",\"skirtingMode\":\"floor\",\"floorRotationDeg\":0}",
+  "timings": [
+    {
+      "cacheHit": false,
+      "mode": "main",
+      "ms": 245.0999999642372,
+      "prepareMs": 154.80000001192093,
+      "quality": "settled",
+      "renderMs": 90.29999995231628,
+      "textureBytes": 870792
+    },
+    {
+      "cacheHit": false,
+      "mode": "main",
+      "ms": 116.39999997615814,
+      "prepareMs": 14.5,
+      "quality": "settled",
+      "renderMs": 101.89999997615814,
+      "textureBytes": 2274348
+    }
+  ]
+}

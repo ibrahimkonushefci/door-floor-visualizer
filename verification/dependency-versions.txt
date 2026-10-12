@@ -1,0 +1,40 @@
+Phase 1 dependency evidence — 11 October 2026
+Node: 24.19.0
+pnpm: 11.25.0
+Platform: macOS Darwin arm64
+Next registry engines: >=20.9.0; React peers permit ^19.0.0
+Package versions (exact; no caret/tilde):
+@fontsource/manrope: 5.3.0
+next: 16.4.0
+react: 19.3.0
+react-dom: 19.3.0
+@tailwindcss/postcss: 4.3.3
+@types/node: 22.20.5
+@types/react: 19.3.0
+@types/react-dom: 19.3.0
+cheerio: 1.2.0
+eslint: 9.39.5
+eslint-config-next: 16.4.0
+postcss: 8.5.23
+tailwindcss: 4.3.3
+tsx: 4.23.15
+typescript: 5.9.3
+vitest: 5.0.3
+zod: 4.6.5
+Approved dependency build scripts: esbuild@0.28.2, unrs-resolver@1.12.2
+Registry deprecations observed: eslint@9.39.5, transitive whatwg-encoding@3.1.1
+The requested ESLint 9 major is retained; no upgrade is implied.
+Next build ID: e-pZ6Jrf74ioGU74cWB4b
+Lockfile SHA-256: ddb3fcdf097436f86cd9c9b5bdbe634138221c2f0a712b20bc555134fddd54f8
+
+Phase 2 dependency evidence — 11 October 2026
+Sharp: 0.35.5 (exact devDependency; installed via pnpm add -D --save-exact sharp)
+Existing dependency versions retained; no additional build approval required.
+Next build ID: n9i5wAomFJyRxYYawJlDo
+Lockfile SHA-256: ce5aa96c672081c2250a2bc1ea0531f0ad649005495e6392640f45e7167be722
+
+Phase 3 dependency evidence — 11 October 2026
+PhotoSwipe: 5.4.4 (exact runtime dependency; installed via pnpm add --save-exact photoswipe)
+Existing dependency versions retained. PhotoSwipe JS and CSS are locally bundled and imported on gallery activation.
+Next build ID: vOqqm_LHIfORyBnCHydfR
+Lockfile SHA-256: 00bf68e2a09898d665655d2774d9a67babc548ca94965584d49ec59c8a3f044e

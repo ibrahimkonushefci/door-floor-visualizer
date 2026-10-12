@@ -1,0 +1,902 @@
+{
+  "schemaVersion": 1,
+  "buildId": "tchNbWpuL6ly_VgYVxS8p",
+  "method": "Production export. Unique initial script tags per route; gzip and Brotli per file. CSS gzip plus used WOFF2 bytes. Images: conservative 640px variants at 390px viewport. File sizes do not establish LCP, INP, CLS or device latency.",
+  "limits": {
+    "feedInitialJsGzip": 204800,
+    "feedCssAndFonts": 143360,
+    "firstFourImages": 245760,
+    "firstScreen": 716800,
+    "cardWebp640": 81920,
+    "cardAvif640": 61440,
+    "sceneFallback960": 225280,
+    "studioFirstScene": 2621440,
+    "studioOfflinePack": 20971520,
+    "ownedRenderBuffers": 100663296,
+    "cls": 0.1,
+    "lcpMs": 2500,
+    "inpMs": 200,
+    "phoneFinalFrameP95Ms": 250
+  },
+  "routes": [
+    {
+      "route": "/sq/",
+      "js": {
+        "files": [
+          {
+            "url": "/_next/static/chunks/0crsalinxe3ir.js",
+            "raw": 4697,
+            "gzip": 1902,
+            "brotli": 1682
+          },
+          {
+            "url": "/_next/static/chunks/0cz1d0mv5g_q7.js",
+            "raw": 112594,
+            "gzip": 39627,
+            "brotli": 35158
+          },
+          {
+            "url": "/_next/static/chunks/0y9julz13_dbn.js",
+            "raw": 166166,
+            "gzip": 45769,
+            "brotli": 38743
+          },
+          {
+            "url": "/_next/static/chunks/0zt_bbsn6rdvo.js",
+            "raw": 13814,
+            "gzip": 3511,
+            "brotli": 3138
+          },
+          {
+            "url": "/_next/static/chunks/1vs-p1s5kv1zg.js",
+            "raw": 5581,
+            "gzip": 2032,
+            "brotli": 1719
+          },
+          {
+            "url": "/_next/static/chunks/1zbljc24byur7.js",
+            "raw": 31430,
+            "gzip": 8534,
+            "brotli": 7506
+          },
+          {
+            "url": "/_next/static/chunks/27drpx4fc5v-g.js",
+            "raw": 525,
+            "gzip": 369,
+            "brotli": 301
+          },
+          {
+            "url": "/_next/static/chunks/2a81nwq1j3kf_.js",
+            "raw": 55850,
+            "gzip": 18766,
+            "brotli": 16606
+          },
+          {
+            "url": "/_next/static/chunks/43s17wzwltcop.js",
+            "raw": 229594,
+            "gzip": 71903,
+            "brotli": 61445
+          },
+          {
+            "url": "/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+            "raw": 10030,
+            "gzip": 3940,
+            "brotli": 3512
+          }
+        ],
+        "raw": 630281,
+        "gzip": 196353,
+        "brotli": 169810
+      },
+      "css": {
+        "files": [
+          {
+            "url": "/_next/static/chunks/0-p3hzm9umkyv.css",
+            "raw": 24227,
+            "gzip": 5579,
+            "brotli": 4922
+          }
+        ],
+        "raw": 24227,
+        "gzip": 5579,
+        "brotli": 4922
+      },
+      "fonts": {
+        "files": [
+          {
+            "url": "/_next/static/media/manrope-latin-400-normal.2xa18tgv2np2i.woff2",
+            "raw": 14108,
+            "gzip": 14131,
+            "brotli": 14111
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-500-normal.23dhs730snm70.woff2",
+            "raw": 14044,
+            "gzip": 14067,
+            "brotli": 14036
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-600-normal.2ybi4mo9-3upl.woff2",
+            "raw": 14172,
+            "gzip": 14195,
+            "brotli": 14170
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-700-normal.22dwiag9_pj68.woff2",
+            "raw": 14212,
+            "gzip": 14235,
+            "brotli": 14212
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-ext-400-normal.3kpz2pq12o9y7.woff2",
+            "raw": 8292,
+            "gzip": 8315,
+            "brotli": 8296
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-ext-500-normal.2m4b1kv6exkn9.woff2",
+            "raw": 8192,
+            "gzip": 8215,
+            "brotli": 8196
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-ext-600-normal.0rboslp6omgc3.woff2",
+            "raw": 8304,
+            "gzip": 8327,
+            "brotli": 8305
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-ext-700-normal.14ezai-4kezdq.woff2",
+            "raw": 8276,
+            "gzip": 8299,
+            "brotli": 8280
+          }
+        ],
+        "raw": 89600,
+        "gzip": 89784,
+        "brotli": 89606
+      },
+      "cssAndFonts": 95179,
+      "firstScreen": 434353
+    },
+    {
+      "route": "/en/",
+      "js": {
+        "files": [
+          {
+            "url": "/_next/static/chunks/0crsalinxe3ir.js",
+            "raw": 4697,
+            "gzip": 1902,
+            "brotli": 1682
+          },
+          {
+            "url": "/_next/static/chunks/0cz1d0mv5g_q7.js",
+            "raw": 112594,
+            "gzip": 39627,
+            "brotli": 35158
+          },
+          {
+            "url": "/_next/static/chunks/0y9julz13_dbn.js",
+            "raw": 166166,
+            "gzip": 45769,
+            "brotli": 38743
+          },
+          {
+            "url": "/_next/static/chunks/0zt_bbsn6rdvo.js",
+            "raw": 13814,
+            "gzip": 3511,
+            "brotli": 3138
+          },
+          {
+            "url": "/_next/static/chunks/1vs-p1s5kv1zg.js",
+            "raw": 5581,
+            "gzip": 2032,
+            "brotli": 1719
+          },
+          {
+            "url": "/_next/static/chunks/1zbljc24byur7.js",
+            "raw": 31430,
+            "gzip": 8534,
+            "brotli": 7506
+          },
+          {
+            "url": "/_next/static/chunks/27drpx4fc5v-g.js",
+            "raw": 525,
+            "gzip": 369,
+            "brotli": 301
+          },
+          {
+            "url": "/_next/static/chunks/2a81nwq1j3kf_.js",
+            "raw": 55850,
+            "gzip": 18766,
+            "brotli": 16606
+          },
+          {
+            "url": "/_next/static/chunks/43s17wzwltcop.js",
+            "raw": 229594,
+            "gzip": 71903,
+            "brotli": 61445
+          },
+          {
+            "url": "/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+            "raw": 10030,
+            "gzip": 3940,
+            "brotli": 3512
+          }
+        ],
+        "raw": 630281,
+        "gzip": 196353,
+        "brotli": 169810
+      },
+      "css": {
+        "files": [
+          {
+            "url": "/_next/static/chunks/0-p3hzm9umkyv.css",
+            "raw": 24227,
+            "gzip": 5579,
+            "brotli": 4922
+          }
+        ],
+        "raw": 24227,
+        "gzip": 5579,
+        "brotli": 4922
+      },
+      "fonts": {
+        "files": [
+          {
+            "url": "/_next/static/media/manrope-latin-400-normal.2xa18tgv2np2i.woff2",
+            "raw": 14108,
+            "gzip": 14131,
+            "brotli": 14111
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-500-normal.23dhs730snm70.woff2",
+            "raw": 14044,
+            "gzip": 14067,
+            "brotli": 14036
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-600-normal.2ybi4mo9-3upl.woff2",
+            "raw": 14172,
+            "gzip": 14195,
+            "brotli": 14170
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-700-normal.22dwiag9_pj68.woff2",
+            "raw": 14212,
+            "gzip": 14235,
+            "brotli": 14212
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-ext-400-normal.3kpz2pq12o9y7.woff2",
+            "raw": 8292,
+            "gzip": 8315,
+            "brotli": 8296
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-ext-500-normal.2m4b1kv6exkn9.woff2",
+            "raw": 8192,
+            "gzip": 8215,
+            "brotli": 8196
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-ext-600-normal.0rboslp6omgc3.woff2",
+            "raw": 8304,
+            "gzip": 8327,
+            "brotli": 8305
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-ext-700-normal.14ezai-4kezdq.woff2",
+            "raw": 8276,
+            "gzip": 8299,
+            "brotli": 8280
+          }
+        ],
+        "raw": 89600,
+        "gzip": 89784,
+        "brotli": 89606
+      },
+      "cssAndFonts": 95179,
+      "firstScreen": 433766
+    },
+    {
+      "route": "/de/",
+      "js": {
+        "files": [
+          {
+            "url": "/_next/static/chunks/0crsalinxe3ir.js",
+            "raw": 4697,
+            "gzip": 1902,
+            "brotli": 1682
+          },
+          {
+            "url": "/_next/static/chunks/0cz1d0mv5g_q7.js",
+            "raw": 112594,
+            "gzip": 39627,
+            "brotli": 35158
+          },
+          {
+            "url": "/_next/static/chunks/0y9julz13_dbn.js",
+            "raw": 166166,
+            "gzip": 45769,
+            "brotli": 38743
+          },
+          {
+            "url": "/_next/static/chunks/0zt_bbsn6rdvo.js",
+            "raw": 13814,
+            "gzip": 3511,
+            "brotli": 3138
+          },
+          {
+            "url": "/_next/static/chunks/1vs-p1s5kv1zg.js",
+            "raw": 5581,
+            "gzip": 2032,
+            "brotli": 1719
+          },
+          {
+            "url": "/_next/static/chunks/1zbljc24byur7.js",
+            "raw": 31430,
+            "gzip": 8534,
+            "brotli": 7506
+          },
+          {
+            "url": "/_next/static/chunks/27drpx4fc5v-g.js",
+            "raw": 525,
+            "gzip": 369,
+            "brotli": 301
+          },
+          {
+            "url": "/_next/static/chunks/2a81nwq1j3kf_.js",
+            "raw": 55850,
+            "gzip": 18766,
+            "brotli": 16606
+          },
+          {
+            "url": "/_next/static/chunks/43s17wzwltcop.js",
+            "raw": 229594,
+            "gzip": 71903,
+            "brotli": 61445
+          },
+          {
+            "url": "/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+            "raw": 10030,
+            "gzip": 3940,
+            "brotli": 3512
+          }
+        ],
+        "raw": 630281,
+        "gzip": 196353,
+        "brotli": 169810
+      },
+      "css": {
+        "files": [
+          {
+            "url": "/_next/static/chunks/0-p3hzm9umkyv.css",
+            "raw": 24227,
+            "gzip": 5579,
+            "brotli": 4922
+          }
+        ],
+        "raw": 24227,
+        "gzip": 5579,
+        "brotli": 4922
+      },
+      "fonts": {
+        "files": [
+          {
+            "url": "/_next/static/media/manrope-latin-400-normal.2xa18tgv2np2i.woff2",
+            "raw": 14108,
+            "gzip": 14131,
+            "brotli": 14111
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-500-normal.23dhs730snm70.woff2",
+            "raw": 14044,
+            "gzip": 14067,
+            "brotli": 14036
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-600-normal.2ybi4mo9-3upl.woff2",
+            "raw": 14172,
+            "gzip": 14195,
+            "brotli": 14170
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-700-normal.22dwiag9_pj68.woff2",
+            "raw": 14212,
+            "gzip": 14235,
+            "brotli": 14212
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-ext-400-normal.3kpz2pq12o9y7.woff2",
+            "raw": 8292,
+            "gzip": 8315,
+            "brotli": 8296
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-ext-500-normal.2m4b1kv6exkn9.woff2",
+            "raw": 8192,
+            "gzip": 8215,
+            "brotli": 8196
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-ext-600-normal.0rboslp6omgc3.woff2",
+            "raw": 8304,
+            "gzip": 8327,
+            "brotli": 8305
+          },
+          {
+            "url": "/_next/static/media/manrope-latin-ext-700-normal.14ezai-4kezdq.woff2",
+            "raw": 8276,
+            "gzip": 8299,
+            "brotli": 8280
+          }
+        ],
+        "raw": 89600,
+        "gzip": 89784,
+        "brotli": 89606
+      },
+      "cssAndFonts": 95179,
+      "firstScreen": 434360
+    }
+  ],
+  "firstImages": {
+    "avif": 56578,
+    "webp": 115830
+  },
+  "scenes": [
+    {
+      "id": "living-standard",
+      "bytes": 1303945,
+      "files": [
+        "/media/scenes/living-standard/base.webp",
+        "/media/scenes/living-standard/fallback.webp",
+        "/media/scenes/living-standard/protected-mask.png",
+        "/media/scenes/living-standard/floor-mask.png",
+        "/media/scenes/living-standard/floor-diffuse.png",
+        "/media/scenes/living-standard/leaf-mask.png",
+        "/media/scenes/living-standard/leaf-diffuse.png",
+        "/media/scenes/living-standard/frame-left-mask.png",
+        "/media/scenes/living-standard/frame-left-diffuse.png",
+        "/media/scenes/living-standard/frame-right-mask.png",
+        "/media/scenes/living-standard/frame-right-diffuse.png",
+        "/media/scenes/living-standard/frame-top-mask.png",
+        "/media/scenes/living-standard/frame-top-diffuse.png",
+        "/media/scenes/living-standard/skirting-back-left-mask.png",
+        "/media/scenes/living-standard/skirting-back-left-diffuse.png",
+        "/media/scenes/living-standard/skirting-back-right-mask.png",
+        "/media/scenes/living-standard/skirting-back-right-diffuse.png",
+        "/media/scenes/living-standard/skirting-right-mask.png",
+        "/media/scenes/living-standard/skirting-right-diffuse.png",
+        "/media/textures/floors/lis-natyral-10/atlas.webp",
+        "/media/textures/floors/lis-natyral-10/trim.webp"
+      ]
+    },
+    {
+      "id": "corridor-standard",
+      "bytes": 1999941,
+      "files": [
+        "/media/scenes/corridor-standard/base.webp",
+        "/media/scenes/corridor-standard/fallback.webp",
+        "/media/scenes/corridor-standard/protected-mask.png",
+        "/media/scenes/corridor-standard/floor-mask.png",
+        "/media/scenes/corridor-standard/floor-diffuse.png",
+        "/media/scenes/corridor-standard/leaf-mask.png",
+        "/media/scenes/corridor-standard/leaf-diffuse.png",
+        "/media/scenes/corridor-standard/frame-left-mask.png",
+        "/media/scenes/corridor-standard/frame-left-diffuse.png",
+        "/media/scenes/corridor-standard/frame-right-mask.png",
+        "/media/scenes/corridor-standard/frame-right-diffuse.png",
+        "/media/scenes/corridor-standard/frame-top-mask.png",
+        "/media/scenes/corridor-standard/frame-top-diffuse.png",
+        "/media/scenes/corridor-standard/skirting-back-left-mask.png",
+        "/media/scenes/corridor-standard/skirting-back-left-diffuse.png",
+        "/media/scenes/corridor-standard/skirting-back-right-mask.png",
+        "/media/scenes/corridor-standard/skirting-back-right-diffuse.png",
+        "/media/scenes/corridor-standard/skirting-left-mask.png",
+        "/media/scenes/corridor-standard/skirting-left-diffuse.png",
+        "/media/scenes/corridor-standard/skirting-right-mask.png",
+        "/media/scenes/corridor-standard/skirting-right-diffuse.png",
+        "/media/scenes/corridor-standard/skirting-left-near-mask.png",
+        "/media/scenes/corridor-standard/skirting-left-near-diffuse.png",
+        "/media/scenes/corridor-standard/skirting-right-near-mask.png",
+        "/media/scenes/corridor-standard/skirting-right-near-diffuse.png",
+        "/media/textures/floors/peshk-natyral-12/atlas.webp",
+        "/media/textures/floors/peshk-natyral-12/trim.webp"
+      ]
+    }
+  ],
+  "offlinePack": {
+    "files": 106,
+    "bytes": 7472380
+  },
+  "emittedJsChunks": 21,
+  "checks": [
+    {
+      "metric": "firstFourImages",
+      "value": 115830,
+      "limit": 245760,
+      "status": "pass"
+    },
+    {
+      "metric": "sq.feedInitialJsGzip",
+      "value": 196353,
+      "limit": 204800,
+      "status": "pass"
+    },
+    {
+      "metric": "sq.feedCssAndFonts",
+      "value": 95179,
+      "limit": 143360,
+      "status": "pass"
+    },
+    {
+      "metric": "sq.firstScreen",
+      "value": 434353,
+      "limit": 716800,
+      "status": "pass"
+    },
+    {
+      "metric": "en.feedInitialJsGzip",
+      "value": 196353,
+      "limit": 204800,
+      "status": "pass"
+    },
+    {
+      "metric": "en.feedCssAndFonts",
+      "value": 95179,
+      "limit": 143360,
+      "status": "pass"
+    },
+    {
+      "metric": "en.firstScreen",
+      "value": 433766,
+      "limit": 716800,
+      "status": "pass"
+    },
+    {
+      "metric": "de.feedInitialJsGzip",
+      "value": 196353,
+      "limit": 204800,
+      "status": "pass"
+    },
+    {
+      "metric": "de.feedCssAndFonts",
+      "value": 95179,
+      "limit": 143360,
+      "status": "pass"
+    },
+    {
+      "metric": "de.firstScreen",
+      "value": 434360,
+      "limit": 716800,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-bardhe-01.640.webp",
+      "value": 20810,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-bardhe-01.640.avif",
+      "value": 11053,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "lis-natyral-10-01.640.webp",
+      "value": 33832,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "lis-natyral-10-01.640.avif",
+      "value": 16067,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-lis-01.640.webp",
+      "value": 23266,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-lis-01.640.avif",
+      "value": 12148,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "dushk-fshatar-8-01.640.webp",
+      "value": 37922,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "dushk-fshatar-8-01.640.avif",
+      "value": 17310,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-kashmir-01.640.webp",
+      "value": 18654,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-kashmir-01.640.avif",
+      "value": 10053,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "peshk-natyral-12-01.640.webp",
+      "value": 28522,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "peshk-natyral-12-01.640.avif",
+      "value": 14145,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-bardhe-02.640.webp",
+      "value": 7118,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-bardhe-02.640.avif",
+      "value": 4219,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "lis-natyral-10-02.640.webp",
+      "value": 38372,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "lis-natyral-10-02.640.avif",
+      "value": 17562,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-lis-02.640.webp",
+      "value": 16990,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-lis-02.640.avif",
+      "value": 8925,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "dushk-fshatar-8-02.640.webp",
+      "value": 41738,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "dushk-fshatar-8-02.640.avif",
+      "value": 19153,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-kashmir-02.640.webp",
+      "value": 12500,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-kashmir-02.640.avif",
+      "value": 6768,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "peshk-natyral-12-02.640.webp",
+      "value": 34722,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "peshk-natyral-12-02.640.avif",
+      "value": 17245,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-antracit-01.640.webp",
+      "value": 13088,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-antracit-01.640.avif",
+      "value": 7347,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-antracit-02.640.webp",
+      "value": 9494,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-antracit-02.640.avif",
+      "value": 5471,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "arre-klasike-12-01.640.webp",
+      "value": 34350,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "arre-klasike-12-01.640.avif",
+      "value": 16255,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "arre-klasike-12-02.640.webp",
+      "value": 34880,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "arre-klasike-12-02.640.avif",
+      "value": 16233,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-xham-01.640.webp",
+      "value": 18056,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-xham-01.640.avif",
+      "value": 9400,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-xham-02.640.webp",
+      "value": 18486,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "dera-xham-02.640.avif",
+      "value": 10509,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "hirte-skandinave-8-01.640.webp",
+      "value": 25566,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "hirte-skandinave-8-01.640.avif",
+      "value": 12649,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "hirte-skandinave-8-02.640.webp",
+      "value": 29664,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "hirte-skandinave-8-02.640.avif",
+      "value": 13895,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "pervaze-mdf-01.640.webp",
+      "value": 18712,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "pervaze-mdf-01.640.avif",
+      "value": 10376,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "pervaze-mdf-02.640.webp",
+      "value": 9946,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "pervaze-mdf-02.640.avif",
+      "value": 5106,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "lajsne-mdf-01.640.webp",
+      "value": 16718,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "lajsne-mdf-01.640.avif",
+      "value": 9150,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "lajsne-mdf-02.640.webp",
+      "value": 10376,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "lajsne-mdf-02.640.avif",
+      "value": 6064,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "living-standard.fallback",
+      "value": 31242,
+      "limit": 225280,
+      "status": "pass"
+    },
+    {
+      "metric": "living-standard.firstUseful",
+      "value": 1303945,
+      "limit": 2621440,
+      "status": "pass"
+    },
+    {
+      "metric": "corridor-standard.fallback",
+      "value": 33792,
+      "limit": 225280,
+      "status": "pass"
+    },
+    {
+      "metric": "corridor-standard.firstUseful",
+      "value": 1999941,
+      "limit": 2621440,
+      "status": "pass"
+    },
+    {
+      "metric": "studioOfflinePack",
+      "value": 7472380,
+      "limit": 20971520,
+      "status": "pass"
+    }
+  ],
+  "failures": [],
+  "runtime": {
+    "cls": "pending production browser observer",
+    "lcp": "pending named mobile network/CPU conditions",
+    "inp": "pending real interaction dataset",
+    "phoneFinalFrameP95": "pending physical phone",
+    "ownedBuffers": "See scripts/profile-studio-assets.ts; analytical bound, not heap profiling"
+  }
+}

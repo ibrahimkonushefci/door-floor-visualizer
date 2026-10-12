@@ -1,0 +1,7 @@
+{
+  "build": "tchNbWpuL6ly_VgYVxS8p",
+  "sharedUrl": "http://127.0.0.1:43880/sq/studio/?v=1&scene=corridor-standard&door=dera-bardhe&finish=antracit&floor=hirte-skandinave-8&frame=black&skirting=black&rot=90",
+  "selection": "{\"version\":1,\"sceneId\":\"corridor-standard\",\"doorProductId\":\"dera-bardhe\",\"doorFinishId\":\"antracit\",\"floorProductId\":\"hirte-skandinave-8\",\"frameMode\":\"black\",\"skirtingMode\":\"black\",\"floorRotationDeg\":90}",
+  "copySucceeded": true,
+  "allTrimModes": true
+}
