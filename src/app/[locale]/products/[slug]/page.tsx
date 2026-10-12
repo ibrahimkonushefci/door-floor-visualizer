@@ -53,7 +53,8 @@ export default async function ProductPage({
   const manifest: ImageManifest = JSON.parse(
     readFileSync('verification/image-manifest.json', 'utf8'),
   );
-  const name = localize(product.name, locale);
+  const name = localize(product.name, locale),
+    card = toProductCard(product, data, locale, manifest);
   const images = product.imageIds.map(id => ({
     ...manifest[id],
     alt: localize(data.products.images.find(i => i.id === id)!.alt, locale),
@@ -61,38 +62,35 @@ export default async function ProductPage({
   return (
     <article className="product-detail" data-detail-id={product.id}>
       <CatalogBackLink locale={locale} label={m['error.back']} />
-      <div className="product-heading">
+      <header className="product-heading">
         <div>
+          <p className="eyebrow">{card.badge}</p>
           <h1>{name}</h1>
-          <p className="product-sku">
-            {product.sku} · {m['catalog.illustrative']}
-          </p>
+          <p className="product-sku">{product.sku}</p>
         </div>
         <div className="detail-favorite">
           <FavoriteButton productId={product.id} productName={name} />
         </div>
-      </div>
-      <div className="product-layout">
-        <ProductGallery images={images} productName={name}>
-          <section className="product-info" aria-label={m['product.details']}>
-            <p>{localize(product.summary, locale)}</p>
-            {product.kind === 'door' ? (
-              <ProductVariants
-                product={product}
-                finishes={data.materials.doorFinishes}
-                locale={locale}
-              />
-            ) : (
-              <ProductInquiry productId={product.id} />
-            )}
-            <p className="product-note">{m['product.colors']}</p>
-            <ProductSpecs
-              rows={buildSpecRows(product, data.materials, locale)}
-              caption={m['product.specs']}
+      </header>
+      <ProductGallery images={images} productName={name}>
+        <section className="product-info" aria-label={m['product.details']}>
+          <p className="product-summary">{localize(product.summary, locale)}</p>
+          {product.kind === 'door' ? (
+            <ProductVariants
+              product={product}
+              finishes={data.materials.doorFinishes}
+              locale={locale}
             />
-          </section>
-        </ProductGallery>
-      </div>
+          ) : (
+            <ProductInquiry productId={product.id} />
+          )}
+          <p className="product-note">{m['product.colors']}</p>
+          <ProductSpecs
+            rows={buildSpecRows(product, data.materials, locale)}
+            caption={m['product.specs']}
+          />
+        </section>
+      </ProductGallery>
       <RelatedProducts
         products={relatedProducts(product, data).map(p => toProductCard(p, data, locale, manifest))}
         locale={locale}

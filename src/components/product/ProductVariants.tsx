@@ -59,7 +59,11 @@ export function ProductVariants({
               key={f.id}
               label={localize(f.name, locale)}
               color={f.swatchColorSrgb}
-              texture={f.kind === 'opaque' && f.appearance.kind === 'texture' ? f.appearance.texture : undefined}
+              texture={
+                f.kind === 'opaque' && f.appearance.kind === 'texture'
+                  ? f.appearance.texture
+                  : undefined
+              }
               selected={f.id === finishId}
               onSelect={() => updateProductQuery(product, { sizeId, finishId: f.id })}
             />
