@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import '../globals.css';
-import { loadSiteData, IMPLEMENTATION_PHASE } from '@/lib/data/load';
+import { loadSiteData } from '@/lib/data/load';
 import { isLocale, locales } from '@/lib/i18n/locales';
 import { getMessages } from '@/lib/i18n/messages';
 import { buildThemeVars } from '@/lib/brand/theme';
@@ -45,7 +45,7 @@ export default async function LocaleLayout({
             brand={data.brand}
             locale={locale}
             messages={messages}
-            studioEnabled={IMPLEMENTATION_PHASE >= 4}
+            studioEnabled={data.materials.scenes.length > 0}
           >
             {children}
           </AppShell>

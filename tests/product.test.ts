@@ -5,7 +5,7 @@ import { catalogReturnQuery, mergeProductQuery, parseProductQuery } from '../src
 import { buildInquiryMessage, buildInquiryUrl } from '../src/lib/inquiry/message';
 import { resolveContactAction } from '../src/lib/inquiry/links';
 import { localeHref } from '../src/lib/i18n/locales';
-const data = loadSiteData(5);
+const data = loadSiteData();
 const door = data.products.products.find(p => p.id === 'dera-bardhe')!;
 if (door.kind !== 'door') throw Error('Fixture door required');
 const inquiryData = {

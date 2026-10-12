@@ -2,10 +2,12 @@ import type { StudioSelection, Locale } from '../data/types';
 import type { StudioCatalog, StudioAction } from './types';
 import { compatibleDoor } from './compatibility';
 import { localize } from '../i18n/messages';
+export const isGlass = (finishId: string, catalog: StudioCatalog) =>
+  catalog.materials.doorFinishes.find(f => f.id === finishId)?.kind === 'glass';
 export function normalizeSelection(candidate: Partial<StudioSelection>, catalog: StudioCatalog) {
   const warnings: string[] = [];
-  const sceneId = candidate.sceneId === 'corridor-hidden' ? 'corridor-standard' : candidate.sceneId;
-  const scene = catalog.materials.scenes.find(s => s.id === sceneId) || catalog.materials.scenes[0];
+  const scene =
+    catalog.materials.scenes.find(s => s.id === candidate.sceneId) || catalog.materials.scenes[0];
   if (!scene) throw new Error('Studio: no scenes');
   if (candidate.version !== undefined && candidate.version !== 1)
     return { selection: scene.defaultSelection, warnings: ['version'] };
@@ -66,12 +68,7 @@ export function reduceSelection(s: StudioSelection, a: StudioAction, c: StudioCa
           ...s,
           doorProductId: a.productId,
           doorFinishId: a.finishId,
-          frameMode:
-            a.finishId === 'xham-erret'
-              ? 'black'
-              : s.doorFinishId === 'xham-erret'
-                ? 'door'
-                : s.frameMode,
+          frameMode: isGlass(a.finishId, c) ? 'black' : isGlass(s.doorFinishId, c) ? 'door' : s.frameMode,
         },
         c,
       ).selection;

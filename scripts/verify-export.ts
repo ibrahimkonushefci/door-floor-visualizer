@@ -5,8 +5,7 @@ import { sha } from './offline-export';
 import type { OfflineManifest } from '../src/lib/offline/messages';
 import { load } from 'cheerio';
 import { resolveExportPath } from './serve-export.mjs';
-import { loadSiteData, IMPLEMENTATION_PHASE } from '../src/lib/data/load';
-import { parsePhase } from '../src/lib/data/validate';
+import { loadSiteData } from '../src/lib/data/load';
 import { buildSpecRows } from '../src/lib/catalog/selectors';
 import { localize } from '../src/lib/i18n/messages';
 export { resolveExportPath } from './serve-export.mjs';
@@ -20,8 +19,8 @@ async function walk(root: string): Promise<string[]> {
     )
   ).flat();
 }
-export async function verifyExport(phase: 1 | 2 | 3 | 4 | 5) {
-  const data = loadSiteData(phase);
+export async function verifyExport() {
+  const data = loadSiteData();
   const root = resolve('out');
   const files = await walk(root);
   let references = 0;
@@ -52,14 +51,10 @@ export async function verifyExport(phase: 1 | 2 | 3 | 4 | 5) {
     '/sq/',
     '/en/',
     '/de/',
-    ...(phase >= 4 ? ['/sq/studio/', '/en/studio/', '/de/studio/'] : []),
-    ...(phase >= 3
-      ? ['sq', 'en', 'de'].flatMap(locale =>
-          data.products.products
-            .filter(p => p.published)
-            .map(p => `/${locale}/products/${p.slug}/`),
-        )
-      : []),
+    ...(data.materials.scenes.length ? ['/sq/studio/', '/en/studio/', '/de/studio/'] : []),
+    ...['sq', 'en', 'de'].flatMap(locale =>
+      data.products.products.filter(p => p.published).map(p => `/${locale}/products/${p.slug}/`),
+    ),
   ];
   for (const route of routes) await check(route, '/');
   for (const file of files.filter(f => f.endsWith('.html'))) {
@@ -79,7 +74,7 @@ export async function verifyExport(phase: 1 | 2 | 3 | 4 | 5) {
     }
     if (!$('h1').length && pathname !== '/index.html')
       throw new Error(`Missing heading ${pathname}`);
-    if (phase >= 2 && /^\/(sq|en|de)\/index.html$/.test(pathname)) {
+    if (/^\/(sq|en|de)\/index.html$/.test(pathname)) {
       const cards = $('[data-product-id]');
       if (cards.length !== data.products.products.filter(p => p.published).length)
         throw new Error('Missing server-rendered seed cards');
@@ -103,15 +98,9 @@ export async function verifyExport(phase: 1 | 2 | 3 | 4 | 5) {
           !img.attr('srcset')
         )
           throw new Error('Invalid catalog cover contract');
-        if (phase === 2 && card.find('a').length) throw new Error('Premature detail links');
       });
-      if (
-        (phase < 4 && $('a[href*="/studio"]').length) ||
-        (phase === 2 && $('a[href*="/products/"]').length)
-      )
-        throw new Error('Premature Phase 3/4 route');
     }
-    if (phase >= 3 && pathname.match(/^\/(sq|en|de)\/products\/([^/]+)\/index.html$/)) {
+    if (pathname.match(/^\/(sq|en|de)\/products\/([^/]+)\/index.html$/)) {
       const match = pathname.match(/^\/(sq|en|de)\/products\/([^/]+)\/index.html$/)!;
       const locale = match[1];
       if (locale !== 'sq' && locale !== 'en' && locale !== 'de') throw new Error('Invalid locale');
@@ -164,7 +153,6 @@ export async function verifyExport(phase: 1 | 2 | 3 | 4 | 5) {
         .map(el => $(el).attr('data-product-id'));
       if (related.length > 4 || related.includes(p.id) || new Set(related).size !== related.length)
         throw new Error('Invalid related products');
-      if (phase < 4 && $('a[href*="/studio"]').length) throw new Error('Premature Studio route');
     }
     const base = pathname.endsWith('/index.html') ? pathname.slice(0, -10) : pathname;
     for (const el of $('[href],[src],[srcset]').toArray()) {
@@ -203,7 +191,7 @@ export async function verifyExport(phase: 1 | 2 | 3 | 4 | 5) {
   for (const file of chunks)
     if ((await readFile(file, 'utf8')).includes('pswp__scroll-wrap'))
       galleryChunks.push('/' + relative(root, file));
-  if (phase >= 3) {
+  {
     if (galleryChunks.length === 0) throw new Error('Missing lazy gallery module');
     for (const file of files.filter(f => f.endsWith('.html'))) {
       const $ = load(await readFile(file, 'utf8'));
@@ -217,7 +205,7 @@ export async function verifyExport(phase: 1 | 2 | 3 | 4 | 5) {
       }
     }
   }
-  if (phase >= 4) {
+  if (data.materials.scenes.length) {
     const worker = chunks.filter(f => f.includes('/static/') && f.endsWith('.js'));
     let found = false;
     for (const f of worker)
@@ -244,8 +232,8 @@ export async function verifyExport(phase: 1 | 2 | 3 | 4 | 5) {
         ].includes(f),
     );
   if (actual.length !== expected.length || expected.some(v => !actual.includes(v)))
-    throw new Error(`Unexpected phase route inventory: ${actual.join(', ')}`);
-  if (phase === 5) {
+    throw new Error(`Unexpected route inventory: ${actual.join(', ')}`);
+  {
     const manifest: OfflineManifest = JSON.parse(
       await readFile('out/offline-manifest.json', 'utf8'),
     );
@@ -291,6 +279,6 @@ export async function verifyExport(phase: 1 | 2 | 3 | 4 | 5) {
   };
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
-  const result = await verifyExport(parsePhase(process.argv.slice(2), IMPLEMENTATION_PHASE));
+  const result = await verifyExport();
   console.log('Static export verified:', result);
 }

@@ -9,7 +9,7 @@ import {
 } from '../src/lib/studio/render/sampling';
 import { loadSiteData } from '../src/lib/data/load';
 import { syntheticScene } from '../scripts/render-fixtures';
-const data = loadSiteData(4),
+const data = loadSiteData(),
   catalog = { products: data.products.products, materials: data.materials };
 afterEach(() => vi.unstubAllGlobals());
 it('uses final resolution on every selection, including narrow high-DPR stages', () => {

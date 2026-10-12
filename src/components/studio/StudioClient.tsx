@@ -5,7 +5,7 @@ import type { StudioCatalog, StudioAction, StudioSnapshot } from '@/lib/studio/t
 import { localize, type Messages } from '@/lib/i18n/messages';
 import { QUERY_CHANGE_EVENT } from '@/lib/catalog/query';
 import { parseStudioQuery, serializeStudioQuery } from '@/lib/studio/query';
-import { reduceSelection, buildCombinationTitle } from '@/lib/studio/state';
+import { reduceSelection, buildCombinationTitle, isGlass } from '@/lib/studio/state';
 import { selectionEqual } from '@/lib/studio/compatibility';
 import { createRenderController } from '@/lib/studio/render-controller';
 import { useInquiry } from '../inquiry/InquiryProvider';
@@ -134,7 +134,7 @@ export default function StudioClient({
       window.dispatchEvent(new Event(QUERY_CHANGE_EVENT));
       if (next.doorProductId !== requested.doorProductId) setNotice(m['studio.normalized']);
     }
-    if (a.type === 'door' && a.finishId === 'xham-erret') setNotice(m['studio.glassFrame']);
+    if (a.type === 'door' && isGlass(a.finishId, catalog)) setNotice(m['studio.glassFrame']);
   };
   const doors = catalog.materials.doorFinishes.map(f => {
     const current = catalog.products.find(

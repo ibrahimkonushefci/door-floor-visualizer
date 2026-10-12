@@ -5,7 +5,7 @@ import { normalizeSelection, reduceSelection } from '../src/lib/studio/state';
 import { buildInquiryMessage, buildInquiryUrl } from '../src/lib/inquiry/message';
 import { syntheticScene } from '../scripts/render-fixtures';
 import { createRenderController, renderBatched } from '../src/lib/studio/render-controller';
-const data = loadSiteData(4),
+const data = loadSiteData(),
   catalog = { products: data.products.products, materials: data.materials };
 it('every normalized compatible door/finish/floor/mode/rotation roundtrips exactly', () => {
   for (const scene of data.materials.scenes)
@@ -46,25 +46,22 @@ it('invalid IDs/version and oversized URLs normalize safely and ignore arbitrary
     ).selection,
   ).toEqual(good);
 });
-it('legacy hidden URLs migrate to cased hallway and retain compatible finish/floor/modes', () => {
+it('unknown scene URLs fall back to the first scene and keep compatible choices', () => {
   const parsed = parseStudioQuery(
     new URLSearchParams(
-      'v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=arre-klasike-12&rot=90&frame=floor&skirting=black',
+      'v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=arre-klasike-12&rot=90',
     ),
     catalog,
   );
+  const first = data.materials.scenes[0];
   expect(parsed.selection).toMatchObject({
-    sceneId: 'corridor-standard',
-    doorProductId: 'dera-bardhe',
+    sceneId: first.id,
     doorFinishId: 'antracit',
     floorProductId: 'arre-klasike-12',
     floorRotationDeg: 90,
-    frameMode: 'floor',
-    skirtingMode: 'black',
   });
   expect(parsed.warnings).toContain('sceneId');
-  expect(parsed.warnings).toContain('doorProductId');
-  expect(serializeStudioQuery(parsed.selection).get('scene')).toBe('corridor-standard');
+  expect(serializeStudioQuery(parsed.selection).get('scene')).toBe(first.id);
 });
 it('hallway preserves standard pairs and rejects hidden/glass geometry', () => {
   const initial = {

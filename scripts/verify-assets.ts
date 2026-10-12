@@ -4,8 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 import { z } from 'zod';
-import { loadSiteData, IMPLEMENTATION_PHASE } from '../src/lib/data/load';
-import { parsePhase } from '../src/lib/data/validate';
+import { loadSiteData } from '../src/lib/data/load';
 import { derivativeWidths } from '../src/lib/media/paths';
 import type { ImageManifest, AssetManifest } from '../src/lib/media/types';
 export const sourceLedgerSchema = z.strictObject({
@@ -29,8 +28,8 @@ export const sourceLedgerSchema = z.strictObject({
   ),
 });
 const hash = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
-export async function verifyAssets(phase: 1 | 2 | 3 | 4 | 5) {
-  const data = loadSiteData(phase);
+export async function verifyAssets() {
+  const data = loadSiteData();
   const ledger = sourceLedgerSchema.parse(
     JSON.parse(await readFile('brand/asset-sources.json', 'utf8')),
   );
@@ -130,9 +129,8 @@ export async function verifyAssets(phase: 1 | 2 | 3 | 4 | 5) {
   );
   if (Math.max(firstScreenBytes, webpFirstScreenBytes) > 240 * 1024)
     throw new Error('First four image byte budget exceeded');
-  let sceneAudit = null;
-  if (phase >= 4) {
-    sceneAudit = await prepareScenes(true);
+  const sceneAudit = await prepareScenes(true);
+  {
     for (const a of ledger.assets) {
       if (hash(await readFile(a.localPath)) !== a.sha256)
         throw new Error('Provenance hash drift ' + a.localPath);
@@ -150,11 +148,10 @@ export async function verifyAssets(phase: 1 | 2 | 3 | 4 | 5) {
     totalDerivativeBytes: bytes,
     firstFour640AvifBytes: firstScreenBytes,
     firstFour640WebpBytes: webpFirstScreenBytes,
-    pendingStudioAssets: phase < 4,
   };
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href)
   console.log(
     'Assets verified:',
-    await verifyAssets(parsePhase(process.argv.slice(2), IMPLEMENTATION_PHASE)),
+    await verifyAssets(),
   );

@@ -31,7 +31,7 @@ describe('media', () => {
     ).toBe(false);
   });
   it('verifies actual dimensions, hashes, provenance and byte budget', async () => {
-    const audit = await verifyAssets(5);
+    const audit = await verifyAssets();
     expect(audit.sources).toBe(24);
     expect(audit.derivatives).toBe(240);
     expect(audit.firstFour640WebpBytes).toBeLessThanOrEqual(240 * 1024);

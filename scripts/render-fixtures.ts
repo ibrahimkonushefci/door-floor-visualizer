@@ -8,7 +8,7 @@ import { prepareSceneWith, prepareMaterialsWith } from '../src/lib/studio/asset-
 import { decodeNode } from './prepare-scenes';
 import type { PreparedScene, PreparedMaterials, RenderJob } from '../src/lib/studio/types';
 export function syntheticScene() {
-  const data = loadSiteData(4),
+  const data = loadSiteData(),
     s = structuredClone(data.materials.scenes[0]),
     selection = { ...s.defaultSelection };
   s.width = s.height = 8;
@@ -75,7 +75,7 @@ async function fixtures() {
   await sharp(out.data, { raw: { width: 8, height: 8, channels: 4 } })
     .png()
     .toFile('verification/render-fixtures/actual.png');
-  const data = loadSiteData(4),
+  const data = loadSiteData(),
     catalog = { products: data.products.products, materials: data.materials },
     signal = new AbortController().signal;
   const timings = [];

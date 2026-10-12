@@ -6,7 +6,7 @@ import { walkFiles } from './offline-export';
 import limits from '../verification/budgets.json';
 import type { ImageManifest } from '../src/lib/media/types';
 import type { OfflineManifest } from '../src/lib/offline/messages';
-const data = loadSiteData(5),
+const data = loadSiteData(),
   images: ImageManifest = JSON.parse(await readFile('verification/image-manifest.json', 'utf8')),
   sceneManifest = JSON.parse(await readFile('verification/scene-manifest.json', 'utf8')) as {
     assets: { output: string; bytes: number }[];

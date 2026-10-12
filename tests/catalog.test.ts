@@ -10,7 +10,7 @@ import { validateSiteData } from '../src/lib/data/validate';
 import type { Product } from '../src/lib/data/types';
 import type { ImageManifest } from '../src/lib/media/types';
 import { readFileSync } from 'node:fs';
-const data = loadSiteData(5);
+const data = loadSiteData();
 const images: ImageManifest = JSON.parse(readFileSync('verification/image-manifest.json', 'utf8'));
 describe('catalog', () => {
   it.each([
@@ -82,7 +82,7 @@ describe('catalog', () => {
     const p = data.products.products.find(p => p.id === 'peshk-natyral-12')!;
     expect(toProductCard(p, data, 'en', images).spec).not.toContain('AC');
   });
-  it.each(['scene', 'finish', 'default', 'texture', 'image'])(
+  it.each(['scene', 'finish', 'default', 'image'])(
     'rejects invalid %s references',
     kind => {
       const v = structuredClone(data);
@@ -91,17 +91,13 @@ describe('catalog', () => {
       if (kind === 'scene') p.compatibleSceneIds = ['invented'];
       if (kind === 'finish') p.finishIds = ['invented'];
       if (kind === 'default') p.defaultSizeId = 'invented';
-      if (kind === 'texture')
-        v.materials.floorCollections[0].atlas.image = '/media/textures/floors/invented.png';
       if (kind === 'image') v.products.images[0].source = 'brand/assets/products/other/01.jpg';
-      expect(() => validateSiteData(v, 3)).toThrow();
+      expect(() => validateSiteData(v)).toThrow();
     },
   );
-  it('rejects Phase 3 when second views are missing', () => {
+  it('rejects a published product without photographs', () => {
     const v = structuredClone(data);
-    v.products.products.forEach(p => {
-      p.imageIds = p.imageIds.slice(0, 1);
-    });
-    expect(() => validateSiteData(v, 3)).toThrow('gallery incomplete');
+    v.products.products[0].imageIds = [];
+    expect(() => validateSiteData(v)).toThrow('gallery incomplete');
   });
 });

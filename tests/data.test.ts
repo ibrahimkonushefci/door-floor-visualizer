@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest';
 import brand from './fixtures/brand.json';
 import products from './fixtures/products.json';
 import materials from './fixtures/materials.json';
-import { validateSiteData, parsePhase } from '../src/lib/data/validate';
+import { validateSiteData } from '../src/lib/data/validate';
 import { productsSchema, materialsSchema, assetPathSchema } from '../src/lib/data/schemas';
 const input = () =>
   structuredClone({
@@ -11,11 +11,11 @@ const input = () =>
     products,
     materials,
   });
-describe('strict Phase 1 data', () => {
+describe('strict brand data', () => {
   it('accepts empty foundation and normalizes contacts', () => {
     const value = input();
     value.brand.contact.phone = '+383 44 123 456';
-    expect(validateSiteData(value, 1).brand.contact.phone).toBe('+38344123456');
+    expect(validateSiteData(value).brand.contact.phone).toBe('+38344123456');
   });
   it.each([
     'invalid-id',
@@ -39,9 +39,9 @@ describe('strict Phase 1 data', () => {
     if (kind === 'unsafe-path') v.brand.logo.src = '/brand/../secret';
     if (kind === 'negative-size') v.brand.logo.width = -1;
     if (kind === 'low-contrast') v.brand.colors.background = '#202421';
-    expect(() => validateSiteData(v, 1)).toThrow();
+    expect(() => validateSiteData(v)).toThrow();
   });
-  it('rejects duplicate IDs before phase completeness', () => {
+  it('rejects duplicate IDs', () => {
     const v = input();
     Object.assign(v.products, {
       images: [
@@ -61,11 +61,9 @@ describe('strict Phase 1 data', () => {
         },
       ],
     });
-    expect(() => validateSiteData(v, 1)).toThrow('duplicate');
+    expect(() => validateSiteData(v)).toThrow('duplicate');
   });
-  it('cannot certify a later phase with empty data', () =>
-    expect(() => validateSiteData(input(), 2)).toThrow('incomplete'));
-  it('rejects malformed product and contradictory parquet fields even at P1', () => {
+  it('rejects malformed product and contradictory parquet fields', () => {
     expect(
       productsSchema.safeParse({
         schemaVersion: 1,
@@ -88,21 +86,21 @@ describe('strict Phase 1 data', () => {
     '/brand/foo?url=https://x',
     '/brand/%2e%2e/secret',
   ])('rejects unsafe asset %s', v => expect(assetPathSchema.safeParse(v).success).toBe(false));
-  it('rejects malformed phase flags', () => {
-    expect(parsePhase([], 1)).toBe(1);
-    expect(() => parsePhase(['--phase=6'], 1)).toThrow();
-  });
 });
 
-describe('final catalog completeness', () => {
-  it('rejects extra or unpublished inventory', () => {
-    const data = structuredClone(loadSiteData(5));
-    data.products.products[0].published = false;
-    expect(() => validateSiteData(data, 5)).toThrow('catalog incomplete');
+describe('catalog completeness', () => {
+  it('accepts a catalog of any size', () => {
+    const data = structuredClone(loadSiteData());
+    const trims = new Set(data.products.products.filter(p => p.kind === 'trim').map(p => p.id));
+    data.products.products = data.products.products.filter(p => !trims.has(p.id));
+    data.products.products.forEach(p => {
+      p.relatedProductIds = p.relatedProductIds.filter(id => !trims.has(id));
+    });
+    expect(validateSiteData(data).products.products.length).toBe(12 - trims.size);
   });
-  it('requires real translations rather than relying on final fallback', () => {
-    const data = structuredClone(loadSiteData(5));
+  it('requires real translations rather than relying on fallback', () => {
+    const data = structuredClone(loadSiteData());
     data.products.products[0].name.de = ' ';
-    expect(() => validateSiteData(data, 5)).toThrow('missing final translation');
+    expect(() => validateSiteData(data)).toThrow('missing translation');
   });
 });

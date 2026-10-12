@@ -2,7 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { loadSiteData } from '../src/lib/data/load';
 import { prepareSceneWith, createMaterialLoader } from '../src/lib/studio/asset-loader';
 import { decodeNode } from './prepare-scenes';
-const data = loadSiteData(4),
+const data = loadSiteData(),
   catalog = { products: data.products.products, materials: data.materials },
   signal = new AbortController().signal,
   results = [];
