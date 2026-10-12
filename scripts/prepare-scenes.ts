@@ -145,7 +145,8 @@ export async function prepareScenes(check = false) {
       height: meta.height,
     });
   }
-  for (const id of ['living-standard', 'corridor-standard']) {
+  // Studio scenes, in tab order. Each has brand/assets/scenes/<id>/calibration.json.
+  for (const id of ['living-standard', 'corridor-standard', 'entry-photo']) {
     const dir = `brand/assets/scenes/${id}`,
       calBytes = await readFile(dir + '/calibration.json'),
       cal = calibrationSchema.parse(JSON.parse(calBytes.toString())),

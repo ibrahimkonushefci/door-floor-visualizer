@@ -42,6 +42,27 @@
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 10444800
       }
+    },
+    {
+      "scene": "entry-photo",
+      "editableFloorPercent": 20.60567422385622,
+      "doorLeafHeightPercent": 79.08333333333334,
+      "doorWithCasingHeightPercent": 84.58333333333333,
+      "firstUsefulBytes": 1433666,
+      "firstUsefulTargetBytes": 2621440,
+      "ownedBytes": 179584280,
+      "ownedLimitBytes": 209715200,
+      "scenePreparationBytes": 67322638,
+      "budget": {
+        "controllerAndWorkerScene": 24315420,
+        "controllerTextureCache": 29360128,
+        "twoWorkerMaterialSets": 36922536,
+        "resultCache": 16777216,
+        "incomingMipBuild": 18461268,
+        "fourTransientFrames": 30720000,
+        "threeMaterialDecodeBuffers": 12582912,
+        "displayedAndPreviousFallbackImages": 10444800
+      }
     }
   ]
 }

@@ -1,0 +1,1203 @@
+{
+  "schemaVersion": 1,
+  "scene": {
+    "id": "entry-photo",
+    "name": {
+      "sq": "Hyrja",
+      "en": "Entrance hall",
+      "de": "Diele"
+    },
+    "description": {
+      "sq": "Fotografi e vërtetë",
+      "en": "Real photograph",
+      "de": "Echtes Foto"
+    },
+    "width": 1600,
+    "height": 1200,
+    "base": "/media/scenes/entry-photo/base.webp",
+    "thumbnail": "/media/scenes/entry-photo/thumbnail.webp",
+    "fallback": "/media/scenes/entry-photo/fallback.webp",
+    "frameType": "standard-casing",
+    "depictedDoorSizeMm": {
+      "width": 900,
+      "height": 2000
+    },
+    "surfaces": [
+      {
+        "id": "floor",
+        "role": "floor",
+        "mask": {
+          "alpha": "/media/scenes/entry-photo/floor-mask.png",
+          "boundsPx": [
+            59,
+            763,
+            1508,
+            437
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/entry-photo/floor-diffuse.png",
+          "baselineLinear": 0.44520119451622786,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              1392.571348617265,
+              -11.295296226077198
+            ],
+            [
+              1671.6750303639387,
+              -1266.4938818159749
+            ],
+            [
+              -195.2888123603688,
+              -542.2424186221951
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.208125,
+              0.8383333333333334
+            ],
+            [
+              0.583125,
+              0.765
+            ],
+            [
+              0.979375,
+              1
+            ],
+            [
+              0.075,
+              1
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Floor plane from a calibrated pinhole camera (perpendicular-wall vanishing points, 2000 mm leaf). See AUTHORING.md.",
+            "referenceLengthMm": 557,
+            "referenceImageSegment01": [
+              [
+                0.20812499999999998,
+                0.8383333333333335
+              ],
+              [
+                0.38054855605889026,
+                0.8046149490373727
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                557.0285394469059,
+                -4.518118490430879
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "leaf",
+        "role": "door-leaf",
+        "mask": {
+          "alpha": "/media/scenes/entry-photo/leaf-mask.png",
+          "boundsPx": [
+            335,
+            45,
+            415,
+            949
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/entry-photo/leaf-diffuse.png",
+          "baselineLinear": 0.7304607400903537,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              917,
+              0
+            ],
+            [
+              917,
+              2000
+            ],
+            [
+              0,
+              2000
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.209375,
+              0.0375
+            ],
+            [
+              0.46875,
+              0.10833333333333334
+            ],
+            [
+              0.46875,
+              0.7783333333333333
+            ],
+            [
+              0.209375,
+              0.8283333333333334
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 366.8,
+            "referenceImageSegment01": [
+              [
+                0.20937499999999992,
+                0.03750000000000005
+              ],
+              [
+                0.3235962877030162,
+                0.06869296210363496
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                366.8,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-left",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/entry-photo/frame-left-mask.png",
+          "boundsPx": [
+            290,
+            32,
+            43,
+            983
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/entry-photo/frame-left-diffuse.png",
+          "baselineLinear": 0.768151147247507,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              90,
+              0
+            ],
+            [
+              90,
+              2070
+            ],
+            [
+              0,
+              2070
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.18125,
+              0.02733333333333333
+            ],
+            [
+              0.208125,
+              0.034666666666666665
+            ],
+            [
+              0.208125,
+              0.84
+            ],
+            [
+              0.18125,
+              0.8458333333333333
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 36,
+            "referenceImageSegment01": [
+              [
+                0.18125,
+                0.027333333333333158
+              ],
+              [
+                0.19210476807303228,
+                0.030295254543959118
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                36,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-right",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/entry-photo/frame-right-mask.png",
+          "boundsPx": [
+            753,
+            127,
+            28,
+            819
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/entry-photo/frame-right-diffuse.png",
+          "baselineLinear": 0.7304607400903537,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              90,
+              0
+            ],
+            [
+              90,
+              2070
+            ],
+            [
+              0,
+              2070
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.470625,
+              0.10641666666666667
+            ],
+            [
+              0.488125,
+              0.11116666666666668
+            ],
+            [
+              0.488125,
+              0.785
+            ],
+            [
+              0.470625,
+              0.7883333333333333
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 36,
+            "referenceImageSegment01": [
+              [
+                0.4706249999999999,
+                0.10641666666666666
+              ],
+              [
+                0.4776751427727451,
+                0.1083302768478404
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                36,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-top",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/entry-photo/frame-top-mask.png",
+          "boundsPx": [
+            290,
+            0,
+            491,
+            134
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/entry-photo/frame-top-diffuse.png",
+          "baselineLinear": 0.7083757798916868,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              1043,
+              0
+            ],
+            [
+              1043,
+              90
+            ],
+            [
+              0,
+              90
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.18125,
+              0
+            ],
+            [
+              0.488125,
+              0.08733333333333333
+            ],
+            [
+              0.488125,
+              0.11116666666666668
+            ],
+            [
+              0.18125,
+              0.02733333333333333
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 417.2,
+            "referenceImageSegment01": [
+              [
+                0.18124999999999997,
+                0
+              ],
+              [
+                0.31421565389696166,
+                0.037840598855129894
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                417.20000000000005,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-main-left",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/entry-photo/skirting-main-left-mask.png",
+          "boundsPx": [
+            59,
+            986,
+            232,
+            61
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/entry-photo/skirting-main-left-diffuse.png",
+          "baselineLinear": 0.7230551289219693,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              380,
+              0
+            ],
+            [
+              380,
+              70
+            ],
+            [
+              0,
+              70
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.036875,
+              0.847
+            ],
+            [
+              0.181875,
+              0.8221666666666667
+            ],
+            [
+              0.181875,
+              0.8454166666666667
+            ],
+            [
+              0.036875,
+              0.8720833333333333
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 152,
+            "referenceImageSegment01": [
+              [
+                0.036875000000000005,
+                0.847
+              ],
+              [
+                0.09753518068102869,
+                0.8366110725040536
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                152,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-main-right",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/entry-photo/skirting-main-right-mask.png",
+          "boundsPx": [
+            781,
+            896,
+            152,
+            46
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/entry-photo/skirting-main-right-diffuse.png",
+          "baselineLinear": 0.6795424696330938,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              425,
+              0
+            ],
+            [
+              425,
+              70
+            ],
+            [
+              0,
+              70
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.488125,
+              0.76525
+            ],
+            [
+              0.583125,
+              0.7472500000000001
+            ],
+            [
+              0.583125,
+              0.7645
+            ],
+            [
+              0.488125,
+              0.7845
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 170,
+            "referenceImageSegment01": [
+              [
+                0.48812500000000003,
+                0.76525
+              ],
+              [
+                0.528651315789474,
+                0.757571329639889
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                170,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-corridor",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/entry-photo/skirting-corridor-mask.png",
+          "boundsPx": [
+            933,
+            754,
+            193,
+            77
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/entry-photo/skirting-corridor-diffuse.png",
+          "baselineLinear": 0.5520114015120001,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              1376,
+              0
+            ],
+            [
+              1376,
+              70
+            ],
+            [
+              0,
+              70
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.583125,
+              0.6285000000000001
+            ],
+            [
+              0.70375,
+              0.6803333333333333
+            ],
+            [
+              0.70375,
+              0.6925
+            ],
+            [
+              0.583125,
+              0.6365833333333333
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 550.4,
+            "referenceImageSegment01": [
+              [
+                0.583125,
+                0.6285000000000002
+              ],
+              [
+                0.620152294303797,
+                0.6444108649789029
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                550.4,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-corridor-end",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/entry-photo/skirting-corridor-end-mask.png",
+          "boundsPx": [
+            1318,
+            878,
+            112,
+            59
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/entry-photo/skirting-corridor-end-diffuse.png",
+          "baselineLinear": 0.6866853124353135,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              301,
+              0
+            ],
+            [
+              301,
+              70
+            ],
+            [
+              0,
+              70
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.82375,
+              0.7318333333333333
+            ],
+            [
+              0.89375,
+              0.7619166666666666
+            ],
+            [
+              0.89375,
+              0.7806666666666666
+            ],
+            [
+              0.82375,
+              0.74825
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 120.4,
+            "referenceImageSegment01": [
+              [
+                0.8237500000000002,
+                0.7318333333333334
+              ],
+              [
+                0.8495498129092611,
+                0.7429211100717181
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                120.4,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      }
+    ],
+    "protectedMask": {
+      "alpha": "/media/scenes/entry-photo/protected-mask.png",
+      "boundsPx": [
+        326,
+        140,
+        418,
+        740
+      ]
+    },
+    "foreground": null,
+    "doorInserts": [],
+    "allowedDoorProductIds": [
+      "dera-bardhe",
+      "dera-lis"
+    ],
+    "allowedFloorProductIds": [
+      "lis-natyral-10",
+      "dushk-fshatar-8",
+      "peshk-natyral-12",
+      "arre-klasike-12",
+      "hirte-skandinave-8"
+    ],
+    "allowedFrameModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "allowedSkirtingModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "defaultSelection": {
+      "version": 1,
+      "sceneId": "entry-photo",
+      "doorProductId": "dera-lis",
+      "doorFinishId": "lis-natyral",
+      "floorProductId": "arre-klasike-12",
+      "frameMode": "door",
+      "skirtingMode": "door",
+      "floorRotationDeg": 90
+    },
+    "assetRevision": "pending"
+  },
+  "sourceCrop": {
+    "originalWidth": 2400,
+    "originalHeight": 1600,
+    "cropPx": [
+      0,
+      0,
+      2133,
+      1600
+    ],
+    "outputWidth": 1600,
+    "outputHeight": 1200
+  },
+  "neutralPatches": [
+    {
+      "surfaceId": "floor",
+      "polygon01": [
+        [
+          0.460625,
+          0.9
+        ],
+        [
+          0.4625,
+          0.9
+        ],
+        [
+          0.4625,
+          0.9025
+        ],
+        [
+          0.460625,
+          0.9025
+        ]
+      ],
+      "medianLinear": 0.44520119451622786,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "leaf",
+      "polygon01": [
+        [
+          0.338125,
+          0.43666666666666665
+        ],
+        [
+          0.34,
+          0.43666666666666665
+        ],
+        [
+          0.34,
+          0.43916666666666665
+        ],
+        [
+          0.338125,
+          0.43916666666666665
+        ]
+      ],
+      "medianLinear": 0.7304607400903537,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "frame-left",
+      "polygon01": [
+        [
+          0.19375,
+          0.43583333333333335
+        ],
+        [
+          0.195625,
+          0.43583333333333335
+        ],
+        [
+          0.195625,
+          0.43833333333333335
+        ],
+        [
+          0.19375,
+          0.43833333333333335
+        ]
+      ],
+      "medianLinear": 0.768151147247507,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "frame-right",
+      "polygon01": [
+        [
+          0.47875,
+          0.44666666666666666
+        ],
+        [
+          0.480625,
+          0.44666666666666666
+        ],
+        [
+          0.480625,
+          0.44916666666666666
+        ],
+        [
+          0.47875,
+          0.44916666666666666
+        ]
+      ],
+      "medianLinear": 0.7304607400903537,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "frame-top",
+      "polygon01": [
+        [
+          0.33375,
+          0.055
+        ],
+        [
+          0.335625,
+          0.055
+        ],
+        [
+          0.335625,
+          0.0575
+        ],
+        [
+          0.33375,
+          0.0575
+        ]
+      ],
+      "medianLinear": 0.7083757798916868,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "skirting-main-left",
+      "polygon01": [
+        [
+          0.10875,
+          0.8458333333333333
+        ],
+        [
+          0.110625,
+          0.8458333333333333
+        ],
+        [
+          0.110625,
+          0.8483333333333334
+        ],
+        [
+          0.10875,
+          0.8483333333333334
+        ]
+      ],
+      "medianLinear": 0.7230551289219693,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "skirting-main-right",
+      "polygon01": [
+        [
+          0.535,
+          0.7641666666666667
+        ],
+        [
+          0.536875,
+          0.7641666666666667
+        ],
+        [
+          0.536875,
+          0.7666666666666667
+        ],
+        [
+          0.535,
+          0.7666666666666667
+        ]
+      ],
+      "medianLinear": 0.6795424696330938,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "skirting-corridor",
+      "polygon01": [
+        [
+          0.6425,
+          0.6583333333333333
+        ],
+        [
+          0.644375,
+          0.6583333333333333
+        ],
+        [
+          0.644375,
+          0.6608333333333334
+        ],
+        [
+          0.6425,
+          0.6608333333333334
+        ]
+      ],
+      "medianLinear": 0.5520114015120001,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "skirting-corridor-end",
+      "polygon01": [
+        [
+          0.858125,
+          0.7541666666666667
+        ],
+        [
+          0.86,
+          0.7541666666666667
+        ],
+        [
+          0.86,
+          0.7566666666666667
+        ],
+        [
+          0.858125,
+          0.7566666666666667
+        ]
+      ],
+      "medianLinear": 0.6866853124353135,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    }
+  ],
+  "references": [
+    {
+      "label": "floor measured edge",
+      "planeSurfaceId": "floor",
+      "lengthMm": 557,
+      "imageSegment01": [
+        [
+          0.20812499999999998,
+          0.8383333333333335
+        ],
+        [
+          0.38054855605889026,
+          0.8046149490373727
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "leaf measured edge",
+      "planeSurfaceId": "leaf",
+      "lengthMm": 366.8,
+      "imageSegment01": [
+        [
+          0.20937499999999992,
+          0.03750000000000005
+        ],
+        [
+          0.3235962877030162,
+          0.06869296210363496
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "frame-left measured edge",
+      "planeSurfaceId": "frame-left",
+      "lengthMm": 36,
+      "imageSegment01": [
+        [
+          0.18125,
+          0.027333333333333158
+        ],
+        [
+          0.19210476807303228,
+          0.030295254543959118
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "frame-right measured edge",
+      "planeSurfaceId": "frame-right",
+      "lengthMm": 36,
+      "imageSegment01": [
+        [
+          0.4706249999999999,
+          0.10641666666666666
+        ],
+        [
+          0.4776751427727451,
+          0.1083302768478404
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "frame-top measured edge",
+      "planeSurfaceId": "frame-top",
+      "lengthMm": 417.2,
+      "imageSegment01": [
+        [
+          0.18124999999999997,
+          0
+        ],
+        [
+          0.31421565389696166,
+          0.037840598855129894
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "skirting-main-left measured edge",
+      "planeSurfaceId": "skirting-main-left",
+      "lengthMm": 152,
+      "imageSegment01": [
+        [
+          0.036875000000000005,
+          0.847
+        ],
+        [
+          0.09753518068102869,
+          0.8366110725040536
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "skirting-main-right measured edge",
+      "planeSurfaceId": "skirting-main-right",
+      "lengthMm": 170,
+      "imageSegment01": [
+        [
+          0.48812500000000003,
+          0.76525
+        ],
+        [
+          0.528651315789474,
+          0.757571329639889
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "skirting-corridor measured edge",
+      "planeSurfaceId": "skirting-corridor",
+      "lengthMm": 550.4,
+      "imageSegment01": [
+        [
+          0.583125,
+          0.6285000000000002
+        ],
+        [
+          0.620152294303797,
+          0.6444108649789029
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "skirting-corridor-end measured edge",
+      "planeSurfaceId": "skirting-corridor-end",
+      "lengthMm": 120.4,
+      "imageSegment01": [
+        [
+          0.8237500000000002,
+          0.7318333333333334
+        ],
+        [
+          0.8495498129092611,
+          0.7429211100717181
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    }
+  ]
+}

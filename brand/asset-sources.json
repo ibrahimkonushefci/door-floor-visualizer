@@ -1078,6 +1078,237 @@
       "depictsProductId": "lajsne-mdf",
       "isIllustrative": true,
       "sha256": "aee1668aeedf3db93217e04d3424057d38576020c052b7e0325207aa195a9aea"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-base",
+      "localPath": "brand/assets/scenes/entry-photo/base.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195)",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "ba1482a444771f69408a0bafd886763767d342f91462e718e9bf973b91686b7a"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-floor-diffuse",
+      "localPath": "brand/assets/scenes/entry-photo/floor-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "7a3abfe7c2c097bd0d6d083c11170e2f21cc76daae77ace7468e25e013447e8b"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-floor-mask",
+      "localPath": "brand/assets/scenes/entry-photo/floor-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "fb34c5fc2cb67b3048099383e9d86f1f58c3587119bf6ac74aa2b63ef662fbae"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-frame-left-diffuse",
+      "localPath": "brand/assets/scenes/entry-photo/frame-left-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "6158da7f5ec9a9ceb6056bbdf43ac50d3d109633ed5e9ae70283ac28e4168176"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-frame-left-mask",
+      "localPath": "brand/assets/scenes/entry-photo/frame-left-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "40ed77ba69bfb724f3c1dd8ccdf2c749ec29623141a292975eef6399e9d90ea2"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-frame-right-diffuse",
+      "localPath": "brand/assets/scenes/entry-photo/frame-right-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "5f1ddea90a237fdee77b1dca3c7d2861167a2b88ad9d8a5e636fcef3801ec777"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-frame-right-mask",
+      "localPath": "brand/assets/scenes/entry-photo/frame-right-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "e875668e8c6d423f590cae1e5bc6af6aa832dd3756295086473a8a96cc72e44b"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-frame-top-diffuse",
+      "localPath": "brand/assets/scenes/entry-photo/frame-top-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "e42adcfc871342099c01b3e883334157d08d57ec773b6498583f4efca8b4c078"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-frame-top-mask",
+      "localPath": "brand/assets/scenes/entry-photo/frame-top-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "1a3d78b009d0549704ec3c19428809a1f915b8c2eb09cf6cdf535b637357bc9c"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-leaf-diffuse",
+      "localPath": "brand/assets/scenes/entry-photo/leaf-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "136c27a27293c288d642b9fab29a6d1ceda8e1bd035874c379ed15a93cada77e"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-leaf-mask",
+      "localPath": "brand/assets/scenes/entry-photo/leaf-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "c1284cbd0326ce49e85952aed292fec92871df740eaf46c92265af29df683474"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-protected-mask",
+      "localPath": "brand/assets/scenes/entry-photo/protected-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "fe84210c86221b6a5eac9ba7716c1347dc74d07f05bbddd685d9d096b6cc94da"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-skirting-corridor-diffuse",
+      "localPath": "brand/assets/scenes/entry-photo/skirting-corridor-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "a0371bb47a46b8f64bdff671cded553cfdc6baff120509417095ad972892cb53"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-skirting-corridor-end-diffuse",
+      "localPath": "brand/assets/scenes/entry-photo/skirting-corridor-end-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "65578581d25c839a9e37225aa2bb802db9bdfed56bed09eeed32f7802782eece"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-skirting-corridor-end-mask",
+      "localPath": "brand/assets/scenes/entry-photo/skirting-corridor-end-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "c6587b200ed109d54e2bdfcefd130a2d5107215dd808b2f09ceb3c43d9075eb2"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-skirting-corridor-mask",
+      "localPath": "brand/assets/scenes/entry-photo/skirting-corridor-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "b3bacf59df970b32e9776eef1fec6c998dee675d5b6cd29f51f5e787ee26fd9b"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-skirting-main-left-diffuse",
+      "localPath": "brand/assets/scenes/entry-photo/skirting-main-left-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "4729fb045b8ead6635dbb0077cb0f61a02f4817fbc6ca1faa5e179652576d38f"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-skirting-main-left-mask",
+      "localPath": "brand/assets/scenes/entry-photo/skirting-main-left-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "526dc3e7e630e4bb4dd906797addd2dcb377a484842207a86885256046d53729"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-skirting-main-right-diffuse",
+      "localPath": "brand/assets/scenes/entry-photo/skirting-main-right-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "6d1317d8c1e88c7b2b91332854b92f369503a529fb600179973a9fbe60e74931"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-skirting-main-right-mask",
+      "localPath": "brand/assets/scenes/entry-photo/skirting-main-right-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "e63d658975bb2acb71ccfd40099cc89c06e55becfadbc157d1db169fd8b95647"
+    },
+    {
+      "id": "brand-assets-scenes-entry-photo-thumbnail",
+      "localPath": "brand/assets/scenes/entry-photo/thumbnail.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
+      "usageBasis": "licensed",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "4daa407cc7bd9d9118cf1dc8af0d967857754ab49ba8a3f5b2ae0ad835ec2427"
     }
   ]
 }

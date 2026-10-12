@@ -130,7 +130,8 @@ export function unifyDoorAssembly(
   spread(leafQueue, leafDist);
   spread(frameQueue, frameDist, frameOf);
   // Repeat until stable: filled jamb strips enclose the mitre corners above them.
-  const reveal = new Uint8Array(w * h);
+  const reveal = new Uint8Array(w * h),
+    filled = new Uint8Array(w * h);
   let any = false,
     changed = true;
   for (let pass = 0; changed && pass < 4; pass++) {
@@ -152,9 +153,12 @@ export function unifyDoorAssembly(
         const i = y * w + x,
           p = at(x, y),
           open = 255 - Math.min(255, covered[i]);
-        if (solid[i] || open <= 0 || protectedMask[p] >= 128) continue;
+        // Partially covered antialiased edge pixels inside the assembly are
+        // completed too, otherwise sloped edges leave a dotted original line.
+        if (filled[i] || open <= 0 || protectedMask[p] >= 128) continue;
         const enclosed = (rowMin[y] < x && x < rowMax[y]) || (colMin[x] < y && y < colMax[x]);
         if (!enclosed) continue;
+        filled[i] = 1;
         solid[i] = 1;
         covered[i] = 255;
         changed = true;

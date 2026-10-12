@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "buildId": "XuQS6A0p19aYYVxuKVt1T",
+  "buildId": "pee-YvgjGjGh7hUF7bbNZ",
   "method": "Production export. Unique initial script tags per route; gzip and Brotli per file. CSS gzip plus used WOFF2 bytes. Images: conservative 640px variants at 390px viewport. File sizes do not establish LCP, INP, CLS or device latency.",
   "limits": {
     "feedInitialJsGzip": 204800,
@@ -91,15 +91,15 @@
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/3yl7773p7i_pm.css",
-            "raw": 24331,
-            "gzip": 5810,
-            "brotli": 5116
+            "url": "/_next/static/chunks/2px6qy-8aneqr.css",
+            "raw": 24603,
+            "gzip": 5801,
+            "brotli": 5122
           }
         ],
-        "raw": 24331,
-        "gzip": 5810,
-        "brotli": 5116
+        "raw": 24603,
+        "gzip": 5801,
+        "brotli": 5122
       },
       "fonts": {
         "files": [
@@ -138,8 +138,8 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 104946,
-      "firstScreen": 445024
+      "cssAndFonts": 104937,
+      "firstScreen": 445056
     },
     {
       "route": "/en/",
@@ -213,15 +213,15 @@
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/3yl7773p7i_pm.css",
-            "raw": 24331,
-            "gzip": 5810,
-            "brotli": 5116
+            "url": "/_next/static/chunks/2px6qy-8aneqr.css",
+            "raw": 24603,
+            "gzip": 5801,
+            "brotli": 5122
           }
         ],
-        "raw": 24331,
-        "gzip": 5810,
-        "brotli": 5116
+        "raw": 24603,
+        "gzip": 5801,
+        "brotli": 5122
       },
       "fonts": {
         "files": [
@@ -260,8 +260,8 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 104946,
-      "firstScreen": 444416
+      "cssAndFonts": 104937,
+      "firstScreen": 444449
     },
     {
       "route": "/de/",
@@ -335,15 +335,15 @@
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/3yl7773p7i_pm.css",
-            "raw": 24331,
-            "gzip": 5810,
-            "brotli": 5116
+            "url": "/_next/static/chunks/2px6qy-8aneqr.css",
+            "raw": 24603,
+            "gzip": 5801,
+            "brotli": 5122
           }
         ],
-        "raw": 24331,
-        "gzip": 5810,
-        "brotli": 5116
+        "raw": 24603,
+        "gzip": 5801,
+        "brotli": 5122
       },
       "fonts": {
         "files": [
@@ -382,8 +382,8 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 104946,
-      "firstScreen": 445064
+      "cssAndFonts": 104937,
+      "firstScreen": 445090
     }
   ],
   "firstImages": {
@@ -393,7 +393,7 @@
   "scenes": [
     {
       "id": "living-standard",
-      "bytes": 1542815,
+      "bytes": 1542789,
       "files": [
         "/media/scenes/living-standard/base.webp",
         "/media/scenes/living-standard/fallback.webp",
@@ -420,7 +420,7 @@
     },
     {
       "id": "corridor-standard",
-      "bytes": 2102643,
+      "bytes": 2102677,
       "files": [
         "/media/scenes/corridor-standard/base.webp",
         "/media/scenes/corridor-standard/fallback.webp",
@@ -450,11 +450,40 @@
         "/media/textures/floors/peshk-natyral-12/atlas.webp",
         "/media/textures/floors/peshk-natyral-12/trim.webp"
       ]
+    },
+    {
+      "id": "entry-photo",
+      "bytes": 1384042,
+      "files": [
+        "/media/scenes/entry-photo/base.webp",
+        "/media/scenes/entry-photo/fallback.webp",
+        "/media/scenes/entry-photo/protected-mask.png",
+        "/media/scenes/entry-photo/floor-mask.png",
+        "/media/scenes/entry-photo/floor-diffuse.png",
+        "/media/scenes/entry-photo/leaf-mask.png",
+        "/media/scenes/entry-photo/leaf-diffuse.png",
+        "/media/scenes/entry-photo/frame-left-mask.png",
+        "/media/scenes/entry-photo/frame-left-diffuse.png",
+        "/media/scenes/entry-photo/frame-right-mask.png",
+        "/media/scenes/entry-photo/frame-right-diffuse.png",
+        "/media/scenes/entry-photo/frame-top-mask.png",
+        "/media/scenes/entry-photo/frame-top-diffuse.png",
+        "/media/scenes/entry-photo/skirting-main-left-mask.png",
+        "/media/scenes/entry-photo/skirting-main-left-diffuse.png",
+        "/media/scenes/entry-photo/skirting-main-right-mask.png",
+        "/media/scenes/entry-photo/skirting-main-right-diffuse.png",
+        "/media/scenes/entry-photo/skirting-corridor-mask.png",
+        "/media/scenes/entry-photo/skirting-corridor-diffuse.png",
+        "/media/scenes/entry-photo/skirting-corridor-end-mask.png",
+        "/media/scenes/entry-photo/skirting-corridor-end-diffuse.png",
+        "/media/textures/floors/arre-klasike-12/atlas.webp",
+        "/media/textures/floors/arre-klasike-12/trim.webp"
+      ]
     }
   ],
   "offlinePack": {
-    "files": 95,
-    "bytes": 8442680
+    "files": 117,
+    "bytes": 9601422
   },
   "emittedJsChunks": 21,
   "checks": [
@@ -472,13 +501,13 @@
     },
     {
       "metric": "sq.feedCssAndFonts",
-      "value": 104946,
+      "value": 104937,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "sq.firstScreen",
-      "value": 445024,
+      "value": 445056,
       "limit": 716800,
       "status": "pass"
     },
@@ -490,13 +519,13 @@
     },
     {
       "metric": "en.feedCssAndFonts",
-      "value": 104946,
+      "value": 104937,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "en.firstScreen",
-      "value": 444416,
+      "value": 444449,
       "limit": 716800,
       "status": "pass"
     },
@@ -508,13 +537,13 @@
     },
     {
       "metric": "de.feedCssAndFonts",
-      "value": 104946,
+      "value": 104937,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "de.firstScreen",
-      "value": 445064,
+      "value": 445090,
       "limit": 716800,
       "status": "pass"
     },
@@ -808,31 +837,43 @@
     },
     {
       "metric": "living-standard.fallback",
-      "value": 33408,
+      "value": 33382,
       "limit": 225280,
       "status": "pass"
     },
     {
       "metric": "living-standard.firstUseful",
-      "value": 1542815,
+      "value": 1542789,
       "limit": 2621440,
       "status": "pass"
     },
     {
       "metric": "corridor-standard.fallback",
-      "value": 33412,
+      "value": 33446,
       "limit": 225280,
       "status": "pass"
     },
     {
       "metric": "corridor-standard.firstUseful",
-      "value": 2102643,
+      "value": 2102677,
+      "limit": 2621440,
+      "status": "pass"
+    },
+    {
+      "metric": "entry-photo.fallback",
+      "value": 45598,
+      "limit": 225280,
+      "status": "pass"
+    },
+    {
+      "metric": "entry-photo.firstUseful",
+      "value": 1384042,
       "limit": 2621440,
       "status": "pass"
     },
     {
       "metric": "studioOfflinePack",
-      "value": 8442680,
+      "value": 9601422,
       "limit": 20971520,
       "status": "pass"
     }

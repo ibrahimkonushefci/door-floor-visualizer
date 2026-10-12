@@ -419,7 +419,8 @@
       "defaultFinishId": "bardhe-mat",
       "compatibleSceneIds": [
         "living-standard",
-        "corridor-standard"
+        "corridor-standard",
+        "entry-photo"
       ]
     },
     {
@@ -459,7 +460,8 @@
       "collectionId": "lis-natyral-10",
       "compatibleSceneIds": [
         "living-standard",
-        "corridor-standard"
+        "corridor-standard",
+        "entry-photo"
       ]
     },
     {
@@ -542,7 +544,8 @@
       "defaultFinishId": "lis-natyral",
       "compatibleSceneIds": [
         "living-standard",
-        "corridor-standard"
+        "corridor-standard",
+        "entry-photo"
       ]
     },
     {
@@ -582,7 +585,8 @@
       "collectionId": "dushk-fshatar-8",
       "compatibleSceneIds": [
         "living-standard",
-        "corridor-standard"
+        "corridor-standard",
+        "entry-photo"
       ]
     },
     {
@@ -692,7 +696,8 @@
       "collectionId": "peshk-natyral-12",
       "compatibleSceneIds": [
         "living-standard",
-        "corridor-standard"
+        "corridor-standard",
+        "entry-photo"
       ]
     },
     {
@@ -802,7 +807,8 @@
       "collectionId": "arre-klasike-12",
       "compatibleSceneIds": [
         "living-standard",
-        "corridor-standard"
+        "corridor-standard",
+        "entry-photo"
       ]
     },
     {
@@ -903,7 +909,8 @@
       "collectionId": "hirte-skandinave-8",
       "compatibleSceneIds": [
         "living-standard",
-        "corridor-standard"
+        "corridor-standard",
+        "entry-photo"
       ]
     },
     {
