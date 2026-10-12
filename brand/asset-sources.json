@@ -1080,235 +1080,191 @@
       "sha256": "aee1668aeedf3db93217e04d3424057d38576020c052b7e0325207aa195a9aea"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-base",
-      "localPath": "brand/assets/scenes/entry-photo/base.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-base",
+      "localPath": "brand/assets/scenes/bedroom-photo/base.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195)",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": false,
-      "sha256": "ba1482a444771f69408a0bafd886763767d342f91462e718e9bf973b91686b7a"
+      "sha256": "f2e5c2fa5963e748b05aa619917f1f25973b8ed6ff44e0c55bf86d9d3b8d2d23"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-floor-diffuse",
-      "localPath": "brand/assets/scenes/entry-photo/floor-diffuse.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-floor-diffuse",
+      "localPath": "brand/assets/scenes/bedroom-photo/floor-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "7a3abfe7c2c097bd0d6d083c11170e2f21cc76daae77ace7468e25e013447e8b"
+      "sha256": "2c0eebb5772b3a911646e5ca4aba63f1c4911959ecba629c49c21b2da08d035e"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-floor-mask",
-      "localPath": "brand/assets/scenes/entry-photo/floor-mask.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-floor-mask",
+      "localPath": "brand/assets/scenes/bedroom-photo/floor-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "fb34c5fc2cb67b3048099383e9d86f1f58c3587119bf6ac74aa2b63ef662fbae"
+      "sha256": "c7fb05e3cadfff890909f455bfb8530c5a37cd392cf49b3bd9495403d68e5472"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-frame-left-diffuse",
-      "localPath": "brand/assets/scenes/entry-photo/frame-left-diffuse.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-frame-left-diffuse",
+      "localPath": "brand/assets/scenes/bedroom-photo/frame-left-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "6158da7f5ec9a9ceb6056bbdf43ac50d3d109633ed5e9ae70283ac28e4168176"
+      "sha256": "2bc03695fb36ca95e47301f8dfd89fb13b53eff48522e15dfaa7bb10e7a5c8e8"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-frame-left-mask",
-      "localPath": "brand/assets/scenes/entry-photo/frame-left-mask.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-frame-left-mask",
+      "localPath": "brand/assets/scenes/bedroom-photo/frame-left-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "40ed77ba69bfb724f3c1dd8ccdf2c749ec29623141a292975eef6399e9d90ea2"
+      "sha256": "137c57bbdcc398c08148711154199cef90cd93c6bd6dc4b1e73efce5ae12baf1"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-frame-right-diffuse",
-      "localPath": "brand/assets/scenes/entry-photo/frame-right-diffuse.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-frame-right-diffuse",
+      "localPath": "brand/assets/scenes/bedroom-photo/frame-right-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "5f1ddea90a237fdee77b1dca3c7d2861167a2b88ad9d8a5e636fcef3801ec777"
+      "sha256": "345d8db59e6a9702b046b87ca78a6ff25b39795cb76ec8efe6a2af3101c50c35"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-frame-right-mask",
-      "localPath": "brand/assets/scenes/entry-photo/frame-right-mask.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-frame-right-mask",
+      "localPath": "brand/assets/scenes/bedroom-photo/frame-right-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "e875668e8c6d423f590cae1e5bc6af6aa832dd3756295086473a8a96cc72e44b"
+      "sha256": "d71abfdf7196f5e856494192d1d32329780ea22450e9f48455e10a4fad681abd"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-frame-top-diffuse",
-      "localPath": "brand/assets/scenes/entry-photo/frame-top-diffuse.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-frame-top-diffuse",
+      "localPath": "brand/assets/scenes/bedroom-photo/frame-top-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "e42adcfc871342099c01b3e883334157d08d57ec773b6498583f4efca8b4c078"
+      "sha256": "70cb4262d6ef35290b713b9824c2618b11ff9fa97a37a11ade6fda34041c0ff2"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-frame-top-mask",
-      "localPath": "brand/assets/scenes/entry-photo/frame-top-mask.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-frame-top-mask",
+      "localPath": "brand/assets/scenes/bedroom-photo/frame-top-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "1a3d78b009d0549704ec3c19428809a1f915b8c2eb09cf6cdf535b637357bc9c"
+      "sha256": "9d32d494e673e328ff1d8dd2f82659c584f4e5dcc2494bccf6cc3b3020395e46"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-leaf-diffuse",
-      "localPath": "brand/assets/scenes/entry-photo/leaf-diffuse.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-leaf-diffuse",
+      "localPath": "brand/assets/scenes/bedroom-photo/leaf-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "136c27a27293c288d642b9fab29a6d1ceda8e1bd035874c379ed15a93cada77e"
+      "sha256": "91b63bde7b65322e16ebcf68189fa9cba9d986c5213746b4fc8b7f88793b5f07"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-leaf-mask",
-      "localPath": "brand/assets/scenes/entry-photo/leaf-mask.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-leaf-mask",
+      "localPath": "brand/assets/scenes/bedroom-photo/leaf-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "c1284cbd0326ce49e85952aed292fec92871df740eaf46c92265af29df683474"
+      "sha256": "6972f0b10295c50affc7e4f14f329de036b605d5a69d177d37791726ddbde76b"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-protected-mask",
-      "localPath": "brand/assets/scenes/entry-photo/protected-mask.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-protected-mask",
+      "localPath": "brand/assets/scenes/bedroom-photo/protected-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "fe84210c86221b6a5eac9ba7716c1347dc74d07f05bbddd685d9d096b6cc94da"
+      "sha256": "2cdc967623937e1b5a6a1b23f4ad9112aa1e8e5b737cfa42f07ab323a69e0ed0"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-skirting-corridor-diffuse",
-      "localPath": "brand/assets/scenes/entry-photo/skirting-corridor-diffuse.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-skirting-left-diffuse",
+      "localPath": "brand/assets/scenes/bedroom-photo/skirting-left-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "a0371bb47a46b8f64bdff671cded553cfdc6baff120509417095ad972892cb53"
+      "sha256": "b28d340084bdd2cca7154779d974f84383811d45f3600001491185998ddfc328"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-skirting-corridor-end-diffuse",
-      "localPath": "brand/assets/scenes/entry-photo/skirting-corridor-end-diffuse.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-skirting-left-mask",
+      "localPath": "brand/assets/scenes/bedroom-photo/skirting-left-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "65578581d25c839a9e37225aa2bb802db9bdfed56bed09eeed32f7802782eece"
+      "sha256": "79ef816f98b325cca05486faa73c055bc43c4f432e40923232793a1ebe6b5179"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-skirting-corridor-end-mask",
-      "localPath": "brand/assets/scenes/entry-photo/skirting-corridor-end-mask.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-skirting-right-diffuse",
+      "localPath": "brand/assets/scenes/bedroom-photo/skirting-right-diffuse.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "c6587b200ed109d54e2bdfcefd130a2d5107215dd808b2f09ceb3c43d9075eb2"
+      "sha256": "d8684fc4f2d6e04fe260fce6ef89c60ef7ee51f983ed1b258856c6827238b884"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-skirting-corridor-mask",
-      "localPath": "brand/assets/scenes/entry-photo/skirting-corridor-mask.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-skirting-right-mask",
+      "localPath": "brand/assets/scenes/bedroom-photo/skirting-right-mask.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "b3bacf59df970b32e9776eef1fec6c998dee675d5b6cd29f51f5e787ee26fd9b"
+      "sha256": "2c9c8a67e035bff1cb794d539f27e4f7079ea605da270eb39b574e1dd65afdec"
     },
     {
-      "id": "brand-assets-scenes-entry-photo-skirting-main-left-diffuse",
-      "localPath": "brand/assets/scenes/entry-photo/skirting-main-left-diffuse.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
+      "id": "brand-assets-scenes-bedroom-photo-thumbnail",
+      "localPath": "brand/assets/scenes/bedroom-photo/thumbnail.png",
+      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0",
       "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
       "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
+      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "4729fb045b8ead6635dbb0077cb0f61a02f4817fbc6ca1faa5e179652576d38f"
-    },
-    {
-      "id": "brand-assets-scenes-entry-photo-skirting-main-left-mask",
-      "localPath": "brand/assets/scenes/entry-photo/skirting-main-left-mask.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
-      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
-      "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "526dc3e7e630e4bb4dd906797addd2dcb377a484842207a86885256046d53729"
-    },
-    {
-      "id": "brand-assets-scenes-entry-photo-skirting-main-right-diffuse",
-      "localPath": "brand/assets/scenes/entry-photo/skirting-main-right-diffuse.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
-      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
-      "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "6d1317d8c1e88c7b2b91332854b92f369503a529fb600179973a9fbe60e74931"
-    },
-    {
-      "id": "brand-assets-scenes-entry-photo-skirting-main-right-mask",
-      "localPath": "brand/assets/scenes/entry-photo/skirting-main-right-mask.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
-      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
-      "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "e63d658975bb2acb71ccfd40099cc89c06e55becfadbc157d1db169fd8b95647"
-    },
-    {
-      "id": "brand-assets-scenes-entry-photo-thumbnail",
-      "localPath": "brand/assets/scenes/entry-photo/thumbnail.png",
-      "sourceUrl": "https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w",
-      "author": "Alex Tyson (Unsplash @alextyson195); derivative by scripts/author-photo-scene.mjs",
-      "usageBasis": "licensed",
-      "licenseNote": "Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "4daa407cc7bd9d9118cf1dc8af0d967857754ab49ba8a3f5b2ae0ad835ec2427"
+      "sha256": "713403f5410421e9c7f329dfcfcdb239802e56c4a0c49d2b904b0a5d535bedd1"
     }
   ]
 }

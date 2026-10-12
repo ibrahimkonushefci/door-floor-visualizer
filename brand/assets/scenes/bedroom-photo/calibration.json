@@ -1,0 +1,955 @@
+{
+  "schemaVersion": 1,
+  "scene": {
+    "id": "bedroom-photo",
+    "name": {
+      "sq": "Dhoma e gjumit",
+      "en": "Bedroom",
+      "de": "Schlafzimmer"
+    },
+    "description": {
+      "sq": "Fotografi e vërtetë",
+      "en": "Real photograph",
+      "de": "Echtes Foto"
+    },
+    "width": 1600,
+    "height": 1200,
+    "base": "/media/scenes/bedroom-photo/base.webp",
+    "thumbnail": "/media/scenes/bedroom-photo/thumbnail.webp",
+    "fallback": "/media/scenes/bedroom-photo/fallback.webp",
+    "frameType": "standard-casing",
+    "depictedDoorSizeMm": {
+      "width": 800,
+      "height": 2000
+    },
+    "surfaces": [
+      {
+        "id": "floor",
+        "role": "floor",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-photo/floor-mask.png",
+          "boundsPx": [
+            0,
+            856,
+            1600,
+            344
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-photo/floor-diffuse.png",
+          "baselineLinear": 0.2704977910130658,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              847.1602013795873,
+              -46.20203502021559
+            ],
+            [
+              479.70134727756795,
+              -2139.734384474289
+            ],
+            [
+              -1633.1764502625824,
+              -263.02222655586866
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.42875,
+              0.7603333333333333
+            ],
+            [
+              0.54875,
+              0.7145833333333333
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Floor plane from a calibrated pinhole camera (perpendicular-wall vanishing points, 2000 mm leaf). See AUTHORING.md.",
+            "referenceLengthMm": 339.4,
+            "referenceImageSegment01": [
+              [
+                0.42875,
+                0.7603333333333333
+              ],
+              [
+                0.481730532980533,
+                0.7401345051345051
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                338.86408055183495,
+                -18.480814008086238
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "leaf",
+        "role": "door-leaf",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-photo/leaf-mask.png",
+          "boundsPx": [
+            686,
+            290,
+            171,
+            623
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-photo/leaf-diffuse.png",
+          "baselineLinear": 0.5972017883637634,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              776,
+              0
+            ],
+            [
+              776,
+              2000
+            ],
+            [
+              0,
+              2000
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.42875,
+              0.24208333333333334
+            ],
+            [
+              0.535625,
+              0.2773333333333333
+            ],
+            [
+              0.535625,
+              0.71575
+            ],
+            [
+              0.42875,
+              0.7603333333333333
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 310.4,
+            "referenceImageSegment01": [
+              [
+                0.4287500000000001,
+                0.24208333333333348
+              ],
+              [
+                0.4758536196449454,
+                0.25761926402324514
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                310.40000000000003,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-left",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-photo/frame-left-mask.png",
+          "boundsPx": [
+            657,
+            280,
+            27,
+            646
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-photo/frame-left-diffuse.png",
+          "baselineLinear": 0.6104955708078648,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              90,
+              0
+            ],
+            [
+              90,
+              2070
+            ],
+            [
+              0,
+              2070
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.410625,
+              0.23366666666666666
+            ],
+            [
+              0.4275,
+              0.23916666666666667
+            ],
+            [
+              0.4275,
+              0.7633333333333333
+            ],
+            [
+              0.410625,
+              0.7716666666666666
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 36,
+            "referenceImageSegment01": [
+              [
+                0.410625,
+                0.2336666666666667
+              ],
+              [
+                0.41748076741551815,
+                0.23590113900950227
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                36,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-right",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-photo/frame-right-mask.png",
+          "boundsPx": [
+            863,
+            331,
+            15,
+            530
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-photo/frame-right-diffuse.png",
+          "baselineLinear": 0.5711248294648731,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              90,
+              0
+            ],
+            [
+              90,
+              2070
+            ],
+            [
+              0,
+              2070
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.539375,
+              0.27608333333333335
+            ],
+            [
+              0.54875,
+              0.2791666666666667
+            ],
+            [
+              0.54875,
+              0.7133333333333334
+            ],
+            [
+              0.539375,
+              0.7175
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 36,
+            "referenceImageSegment01": [
+              [
+                0.5393749999999999,
+                0.2760833333333334
+              ],
+              [
+                0.543162322681513,
+                0.2773289416819199
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                36,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-top",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-photo/frame-top-mask.png",
+          "boundsPx": [
+            657,
+            248,
+            221,
+            87
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-photo/frame-top-diffuse.png",
+          "baselineLinear": 0.6172065624196511,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              956,
+              0
+            ],
+            [
+              956,
+              90
+            ],
+            [
+              0,
+              90
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.410625,
+              0.20700000000000002
+            ],
+            [
+              0.54875,
+              0.2525
+            ],
+            [
+              0.54875,
+              0.2791666666666667
+            ],
+            [
+              0.410625,
+              0.23366666666666666
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 382.4,
+            "referenceImageSegment01": [
+              [
+                0.41062499999999996,
+                0.20699999999999996
+              ],
+              [
+                0.4658749999999999,
+                0.22519999999999993
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                382.40000000000003,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-left",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-photo/skirting-left-mask.png",
+          "boundsPx": [
+            0,
+            884,
+            657,
+            261
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-photo/skirting-left-diffuse.png",
+          "baselineLinear": 0.5271151257058131,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              1489,
+              0
+            ],
+            [
+              1489,
+              70
+            ],
+            [
+              0,
+              70
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0,
+              0.8942499999999999
+            ],
+            [
+              0.410625,
+              0.7370833333333333
+            ],
+            [
+              0.410625,
+              0.7755
+            ],
+            [
+              0,
+              0.954
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 595.6,
+            "referenceImageSegment01": [
+              [
+                0,
+                0.8942500000000001
+              ],
+              [
+                0.20902955271565468,
+                0.8142439652112178
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                595.6,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-right",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-photo/skirting-right-mask.png",
+          "boundsPx": [
+            878,
+            819,
+            722,
+            289
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-photo/skirting-right-diffuse.png",
+          "baselineLinear": 0.5457244613701866,
+          "shadeMin": 0.18,
+          "shadeMax": 1.65,
+          "specular": null,
+          "specularIncludedInDiffuse": false
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              2055,
+              0
+            ],
+            [
+              2055,
+              70
+            ],
+            [
+              0,
+              70
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.54875,
+              0.6826666666666668
+            ],
+            [
+              1,
+              0.8655833333333334
+            ],
+            [
+              1,
+              0.92275
+            ],
+            [
+              0.54875,
+              0.7145833333333333
+            ]
+          ],
+          "calibration": {
+            "method": "authored-reference",
+            "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+            "referenceLengthMm": 822,
+            "referenceImageSegment01": [
+              [
+                0.54875,
+                0.6826666666666669
+              ],
+              [
+                0.6711499645892351,
+                0.7322821647780927
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                822,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      }
+    ],
+    "protectedMask": {
+      "alpha": "/media/scenes/bedroom-photo/protected-mask.png",
+      "boundsPx": [
+        692,
+        372,
+        172,
+        442
+      ]
+    },
+    "foreground": null,
+    "doorInserts": [],
+    "allowedDoorProductIds": [
+      "dera-bardhe",
+      "dera-lis"
+    ],
+    "allowedFloorProductIds": [
+      "lis-natyral-10",
+      "dushk-fshatar-8",
+      "peshk-natyral-12",
+      "arre-klasike-12",
+      "hirte-skandinave-8"
+    ],
+    "allowedFrameModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "allowedSkirtingModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "defaultSelection": {
+      "version": 1,
+      "sceneId": "bedroom-photo",
+      "doorProductId": "dera-lis",
+      "doorFinishId": "arre-erret",
+      "floorProductId": "lis-natyral-10",
+      "frameMode": "door",
+      "skirtingMode": "door",
+      "floorRotationDeg": 0
+    },
+    "assetRevision": "pending"
+  },
+  "sourceCrop": {
+    "originalWidth": 2400,
+    "originalHeight": 1600,
+    "cropPx": [
+      0,
+      0,
+      2133,
+      1600
+    ],
+    "outputWidth": 1600,
+    "outputHeight": 1200
+  },
+  "neutralPatches": [
+    {
+      "surfaceId": "floor",
+      "polygon01": [
+        [
+          0.49375,
+          0.8675
+        ],
+        [
+          0.495625,
+          0.8675
+        ],
+        [
+          0.495625,
+          0.87
+        ],
+        [
+          0.49375,
+          0.87
+        ]
+      ],
+      "medianLinear": 0.2704977910130658,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "leaf",
+      "polygon01": [
+        [
+          0.48125,
+          0.4975
+        ],
+        [
+          0.483125,
+          0.4975
+        ],
+        [
+          0.483125,
+          0.5
+        ],
+        [
+          0.48125,
+          0.5
+        ]
+      ],
+      "medianLinear": 0.5972017883637634,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "frame-left",
+      "polygon01": [
+        [
+          0.418125,
+          0.5008333333333334
+        ],
+        [
+          0.42,
+          0.5008333333333334
+        ],
+        [
+          0.42,
+          0.5033333333333333
+        ],
+        [
+          0.418125,
+          0.5033333333333333
+        ]
+      ],
+      "medianLinear": 0.6104955708078648,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "frame-right",
+      "polygon01": [
+        [
+          0.543125,
+          0.495
+        ],
+        [
+          0.545,
+          0.495
+        ],
+        [
+          0.545,
+          0.4975
+        ],
+        [
+          0.543125,
+          0.4975
+        ]
+      ],
+      "medianLinear": 0.5711248294648731,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "frame-top",
+      "polygon01": [
+        [
+          0.47875,
+          0.24166666666666667
+        ],
+        [
+          0.480625,
+          0.24166666666666667
+        ],
+        [
+          0.480625,
+          0.24416666666666667
+        ],
+        [
+          0.47875,
+          0.24416666666666667
+        ]
+      ],
+      "medianLinear": 0.6172065624196511,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "skirting-left",
+      "polygon01": [
+        [
+          0.204375,
+          0.8391666666666666
+        ],
+        [
+          0.20625,
+          0.8391666666666666
+        ],
+        [
+          0.20625,
+          0.8416666666666667
+        ],
+        [
+          0.204375,
+          0.8416666666666667
+        ]
+      ],
+      "medianLinear": 0.5271151257058131,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    },
+    {
+      "surfaceId": "skirting-right",
+      "polygon01": [
+        [
+          0.77375,
+          0.795
+        ],
+        [
+          0.775625,
+          0.795
+        ],
+        [
+          0.775625,
+          0.7975
+        ],
+        [
+          0.77375,
+          0.7975
+        ]
+      ],
+      "medianLinear": 0.5457244613701866,
+      "measurementNote": "Median linear grayscale luminance at the nine pixel centers in the recorded neutral patch."
+    }
+  ],
+  "references": [
+    {
+      "label": "floor measured edge",
+      "planeSurfaceId": "floor",
+      "lengthMm": 339.4,
+      "imageSegment01": [
+        [
+          0.42875,
+          0.7603333333333333
+        ],
+        [
+          0.481730532980533,
+          0.7401345051345051
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "leaf measured edge",
+      "planeSurfaceId": "leaf",
+      "lengthMm": 310.4,
+      "imageSegment01": [
+        [
+          0.4287500000000001,
+          0.24208333333333348
+        ],
+        [
+          0.4758536196449454,
+          0.25761926402324514
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "frame-left measured edge",
+      "planeSurfaceId": "frame-left",
+      "lengthMm": 36,
+      "imageSegment01": [
+        [
+          0.410625,
+          0.2336666666666667
+        ],
+        [
+          0.41748076741551815,
+          0.23590113900950227
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "frame-right measured edge",
+      "planeSurfaceId": "frame-right",
+      "lengthMm": 36,
+      "imageSegment01": [
+        [
+          0.5393749999999999,
+          0.2760833333333334
+        ],
+        [
+          0.543162322681513,
+          0.2773289416819199
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "frame-top measured edge",
+      "planeSurfaceId": "frame-top",
+      "lengthMm": 382.4,
+      "imageSegment01": [
+        [
+          0.41062499999999996,
+          0.20699999999999996
+        ],
+        [
+          0.4658749999999999,
+          0.22519999999999993
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "skirting-left measured edge",
+      "planeSurfaceId": "skirting-left",
+      "lengthMm": 595.6,
+      "imageSegment01": [
+        [
+          0,
+          0.8942500000000001
+        ],
+        [
+          0.20902955271565468,
+          0.8142439652112178
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    },
+    {
+      "label": "skirting-right measured edge",
+      "planeSurfaceId": "skirting-right",
+      "lengthMm": 822,
+      "imageSegment01": [
+        [
+          0.54875,
+          0.6826666666666669
+        ],
+        [
+          0.6711499645892351,
+          0.7322821647780927
+        ]
+      ],
+      "provenance": "Measured from the real photograph with the calibrated camera model."
+    }
+  ]
+}

@@ -2228,11 +2228,11 @@
       "assetRevision": "f2c2b170d9e8b76611b967e4ce51d9046e882203a1a1cfe8658581e9706ee166"
     },
     {
-      "id": "entry-photo",
+      "id": "bedroom-photo",
       "name": {
-        "sq": "Hyrja",
-        "en": "Entrance hall",
-        "de": "Diele"
+        "sq": "Dhoma e gjumit",
+        "en": "Bedroom",
+        "de": "Schlafzimmer"
       },
       "description": {
         "sq": "Fotografi e vërtetë",
@@ -2241,12 +2241,12 @@
       },
       "width": 1600,
       "height": 1200,
-      "base": "/media/scenes/entry-photo/base.webp",
-      "thumbnail": "/media/scenes/entry-photo/thumbnail.webp",
-      "fallback": "/media/scenes/entry-photo/fallback.webp",
+      "base": "/media/scenes/bedroom-photo/base.webp",
+      "thumbnail": "/media/scenes/bedroom-photo/thumbnail.webp",
+      "fallback": "/media/scenes/bedroom-photo/fallback.webp",
       "frameType": "standard-casing",
       "depictedDoorSizeMm": {
-        "width": 900,
+        "width": 800,
         "height": 2000
       },
       "surfaces": [
@@ -2254,17 +2254,17 @@
           "id": "floor",
           "role": "floor",
           "mask": {
-            "alpha": "/media/scenes/entry-photo/floor-mask.png",
+            "alpha": "/media/scenes/bedroom-photo/floor-mask.png",
             "boundsPx": [
-              59,
-              763,
-              1508,
-              437
+              0,
+              856,
+              1600,
+              344
             ]
           },
           "lighting": {
-            "diffuse": "/media/scenes/entry-photo/floor-diffuse.png",
-            "baselineLinear": 0.44520119451622786,
+            "diffuse": "/media/scenes/bedroom-photo/floor-diffuse.png",
+            "baselineLinear": 0.2704977910130658,
             "shadeMin": 0.18,
             "shadeMax": 1.65,
             "specular": null,
@@ -2277,48 +2277,48 @@
                 0
               ],
               [
-                1392.571348617265,
-                -11.295296226077198
+                847.1602013795873,
+                -46.20203502021559
               ],
               [
-                1671.6750303639387,
-                -1266.4938818159749
+                479.70134727756795,
+                -2139.734384474289
               ],
               [
-                -195.2888123603688,
-                -542.2424186221951
+                -1633.1764502625824,
+                -263.02222655586866
               ]
             ],
             "imageQuad01": [
               [
-                0.208125,
-                0.8383333333333334
+                0.42875,
+                0.7603333333333333
               ],
               [
-                0.583125,
-                0.765
+                0.54875,
+                0.7145833333333333
               ],
               [
-                0.979375,
+                1,
                 1
               ],
               [
-                0.075,
+                0,
                 1
               ]
             ],
             "calibration": {
               "method": "authored-reference",
               "note": "Floor plane from a calibrated pinhole camera (perpendicular-wall vanishing points, 2000 mm leaf). See AUTHORING.md.",
-              "referenceLengthMm": 557,
+              "referenceLengthMm": 339.4,
               "referenceImageSegment01": [
                 [
-                  0.20812499999999998,
-                  0.8383333333333335
+                  0.42875,
+                  0.7603333333333333
                 ],
                 [
-                  0.38054855605889026,
-                  0.8046149490373727
+                  0.481730532980533,
+                  0.7401345051345051
                 ]
               ],
               "referenceWorldSegmentMm": [
@@ -2327,8 +2327,8 @@
                   0
                 ],
                 [
-                  557.0285394469059,
-                  -4.518118490430879
+                  338.86408055183495,
+                  -18.480814008086238
                 ]
               ]
             }
@@ -2339,17 +2339,17 @@
           "id": "leaf",
           "role": "door-leaf",
           "mask": {
-            "alpha": "/media/scenes/entry-photo/leaf-mask.png",
+            "alpha": "/media/scenes/bedroom-photo/leaf-mask.png",
             "boundsPx": [
-              335,
-              45,
-              415,
-              949
+              686,
+              290,
+              171,
+              623
             ]
           },
           "lighting": {
-            "diffuse": "/media/scenes/entry-photo/leaf-diffuse.png",
-            "baselineLinear": 0.7304607400903537,
+            "diffuse": "/media/scenes/bedroom-photo/leaf-diffuse.png",
+            "baselineLinear": 0.5972017883637634,
             "shadeMin": 0.18,
             "shadeMax": 1.65,
             "specular": null,
@@ -2362,11 +2362,11 @@
                 0
               ],
               [
-                917,
+                776,
                 0
               ],
               [
-                917,
+                776,
                 2000
               ],
               [
@@ -2376,34 +2376,34 @@
             ],
             "imageQuad01": [
               [
-                0.209375,
-                0.0375
+                0.42875,
+                0.24208333333333334
               ],
               [
-                0.46875,
-                0.10833333333333334
+                0.535625,
+                0.2773333333333333
               ],
               [
-                0.46875,
-                0.7783333333333333
+                0.535625,
+                0.71575
               ],
               [
-                0.209375,
-                0.8283333333333334
+                0.42875,
+                0.7603333333333333
               ]
             ],
             "calibration": {
               "method": "authored-reference",
               "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
-              "referenceLengthMm": 366.8,
+              "referenceLengthMm": 310.4,
               "referenceImageSegment01": [
                 [
-                  0.20937499999999992,
-                  0.03750000000000005
+                  0.4287500000000001,
+                  0.24208333333333348
                 ],
                 [
-                  0.3235962877030162,
-                  0.06869296210363496
+                  0.4758536196449454,
+                  0.25761926402324514
                 ]
               ],
               "referenceWorldSegmentMm": [
@@ -2412,7 +2412,7 @@
                   0
                 ],
                 [
-                  366.8,
+                  310.40000000000003,
                   0
                 ]
               ]
@@ -2424,17 +2424,17 @@
           "id": "frame-left",
           "role": "frame",
           "mask": {
-            "alpha": "/media/scenes/entry-photo/frame-left-mask.png",
+            "alpha": "/media/scenes/bedroom-photo/frame-left-mask.png",
             "boundsPx": [
-              290,
-              32,
-              43,
-              983
+              657,
+              280,
+              27,
+              646
             ]
           },
           "lighting": {
-            "diffuse": "/media/scenes/entry-photo/frame-left-diffuse.png",
-            "baselineLinear": 0.768151147247507,
+            "diffuse": "/media/scenes/bedroom-photo/frame-left-diffuse.png",
+            "baselineLinear": 0.6104955708078648,
             "shadeMin": 0.18,
             "shadeMax": 1.65,
             "specular": null,
@@ -2461,20 +2461,20 @@
             ],
             "imageQuad01": [
               [
-                0.18125,
-                0.02733333333333333
+                0.410625,
+                0.23366666666666666
               ],
               [
-                0.208125,
-                0.034666666666666665
+                0.4275,
+                0.23916666666666667
               ],
               [
-                0.208125,
-                0.84
+                0.4275,
+                0.7633333333333333
               ],
               [
-                0.18125,
-                0.8458333333333333
+                0.410625,
+                0.7716666666666666
               ]
             ],
             "calibration": {
@@ -2483,12 +2483,12 @@
               "referenceLengthMm": 36,
               "referenceImageSegment01": [
                 [
-                  0.18125,
-                  0.027333333333333158
+                  0.410625,
+                  0.2336666666666667
                 ],
                 [
-                  0.19210476807303228,
-                  0.030295254543959118
+                  0.41748076741551815,
+                  0.23590113900950227
                 ]
               ],
               "referenceWorldSegmentMm": [
@@ -2509,17 +2509,17 @@
           "id": "frame-right",
           "role": "frame",
           "mask": {
-            "alpha": "/media/scenes/entry-photo/frame-right-mask.png",
+            "alpha": "/media/scenes/bedroom-photo/frame-right-mask.png",
             "boundsPx": [
-              753,
-              127,
-              28,
-              819
+              863,
+              331,
+              15,
+              530
             ]
           },
           "lighting": {
-            "diffuse": "/media/scenes/entry-photo/frame-right-diffuse.png",
-            "baselineLinear": 0.7304607400903537,
+            "diffuse": "/media/scenes/bedroom-photo/frame-right-diffuse.png",
+            "baselineLinear": 0.5711248294648731,
             "shadeMin": 0.18,
             "shadeMax": 1.65,
             "specular": null,
@@ -2546,20 +2546,20 @@
             ],
             "imageQuad01": [
               [
-                0.470625,
-                0.10641666666666667
+                0.539375,
+                0.27608333333333335
               ],
               [
-                0.488125,
-                0.11116666666666668
+                0.54875,
+                0.2791666666666667
               ],
               [
-                0.488125,
-                0.785
+                0.54875,
+                0.7133333333333334
               ],
               [
-                0.470625,
-                0.7883333333333333
+                0.539375,
+                0.7175
               ]
             ],
             "calibration": {
@@ -2568,12 +2568,12 @@
               "referenceLengthMm": 36,
               "referenceImageSegment01": [
                 [
-                  0.4706249999999999,
-                  0.10641666666666666
+                  0.5393749999999999,
+                  0.2760833333333334
                 ],
                 [
-                  0.4776751427727451,
-                  0.1083302768478404
+                  0.543162322681513,
+                  0.2773289416819199
                 ]
               ],
               "referenceWorldSegmentMm": [
@@ -2594,17 +2594,102 @@
           "id": "frame-top",
           "role": "frame",
           "mask": {
-            "alpha": "/media/scenes/entry-photo/frame-top-mask.png",
+            "alpha": "/media/scenes/bedroom-photo/frame-top-mask.png",
             "boundsPx": [
-              290,
+              657,
+              248,
+              221,
+              87
+            ]
+          },
+          "lighting": {
+            "diffuse": "/media/scenes/bedroom-photo/frame-top-diffuse.png",
+            "baselineLinear": 0.6172065624196511,
+            "shadeMin": 0.18,
+            "shadeMax": 1.65,
+            "specular": null,
+            "specularIncludedInDiffuse": false
+          },
+          "mapping": {
+            "worldQuadMm": [
+              [
+                0,
+                0
+              ],
+              [
+                956,
+                0
+              ],
+              [
+                956,
+                90
+              ],
+              [
+                0,
+                90
+              ]
+            ],
+            "imageQuad01": [
+              [
+                0.410625,
+                0.20700000000000002
+              ],
+              [
+                0.54875,
+                0.2525
+              ],
+              [
+                0.54875,
+                0.2791666666666667
+              ],
+              [
+                0.410625,
+                0.23366666666666666
+              ]
+            ],
+            "calibration": {
+              "method": "authored-reference",
+              "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
+              "referenceLengthMm": 382.4,
+              "referenceImageSegment01": [
+                [
+                  0.41062499999999996,
+                  0.20699999999999996
+                ],
+                [
+                  0.4658749999999999,
+                  0.22519999999999993
+                ]
+              ],
+              "referenceWorldSegmentMm": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  382.40000000000003,
+                  0
+                ]
+              ]
+            }
+          },
+          "uvRotationDeg": 0
+        },
+        {
+          "id": "skirting-left",
+          "role": "skirting",
+          "mask": {
+            "alpha": "/media/scenes/bedroom-photo/skirting-left-mask.png",
+            "boundsPx": [
               0,
-              491,
-              134
+              884,
+              657,
+              261
             ]
           },
           "lighting": {
-            "diffuse": "/media/scenes/entry-photo/frame-top-diffuse.png",
-            "baselineLinear": 0.7083757798916868,
+            "diffuse": "/media/scenes/bedroom-photo/skirting-left-diffuse.png",
+            "baselineLinear": 0.5271151257058131,
             "shadeMin": 0.18,
             "shadeMax": 1.65,
             "specular": null,
@@ -2617,96 +2702,11 @@
                 0
               ],
               [
-                1043,
+                1489,
                 0
               ],
               [
-                1043,
-                90
-              ],
-              [
-                0,
-                90
-              ]
-            ],
-            "imageQuad01": [
-              [
-                0.18125,
-                0
-              ],
-              [
-                0.488125,
-                0.08733333333333333
-              ],
-              [
-                0.488125,
-                0.11116666666666668
-              ],
-              [
-                0.18125,
-                0.02733333333333333
-              ]
-            ],
-            "calibration": {
-              "method": "authored-reference",
-              "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
-              "referenceLengthMm": 417.2,
-              "referenceImageSegment01": [
-                [
-                  0.18124999999999997,
-                  0
-                ],
-                [
-                  0.31421565389696166,
-                  0.037840598855129894
-                ]
-              ],
-              "referenceWorldSegmentMm": [
-                [
-                  0,
-                  0
-                ],
-                [
-                  417.20000000000005,
-                  0
-                ]
-              ]
-            }
-          },
-          "uvRotationDeg": 0
-        },
-        {
-          "id": "skirting-main-left",
-          "role": "skirting",
-          "mask": {
-            "alpha": "/media/scenes/entry-photo/skirting-main-left-mask.png",
-            "boundsPx": [
-              59,
-              986,
-              232,
-              61
-            ]
-          },
-          "lighting": {
-            "diffuse": "/media/scenes/entry-photo/skirting-main-left-diffuse.png",
-            "baselineLinear": 0.7230551289219693,
-            "shadeMin": 0.18,
-            "shadeMax": 1.65,
-            "specular": null,
-            "specularIncludedInDiffuse": false
-          },
-          "mapping": {
-            "worldQuadMm": [
-              [
-                0,
-                0
-              ],
-              [
-                380,
-                0
-              ],
-              [
-                380,
+                1489,
                 70
               ],
               [
@@ -2716,34 +2716,34 @@
             ],
             "imageQuad01": [
               [
-                0.036875,
-                0.847
+                0,
+                0.8942499999999999
               ],
               [
-                0.181875,
-                0.8221666666666667
+                0.410625,
+                0.7370833333333333
               ],
               [
-                0.181875,
-                0.8454166666666667
+                0.410625,
+                0.7755
               ],
               [
-                0.036875,
-                0.8720833333333333
+                0,
+                0.954
               ]
             ],
             "calibration": {
               "method": "authored-reference",
               "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
-              "referenceLengthMm": 152,
+              "referenceLengthMm": 595.6,
               "referenceImageSegment01": [
                 [
-                  0.036875000000000005,
-                  0.847
+                  0,
+                  0.8942500000000001
                 ],
                 [
-                  0.09753518068102869,
-                  0.8366110725040536
+                  0.20902955271565468,
+                  0.8142439652112178
                 ]
               ],
               "referenceWorldSegmentMm": [
@@ -2752,7 +2752,7 @@
                   0
                 ],
                 [
-                  152,
+                  595.6,
                   0
                 ]
               ]
@@ -2761,190 +2761,20 @@
           "uvRotationDeg": 0
         },
         {
-          "id": "skirting-main-right",
+          "id": "skirting-right",
           "role": "skirting",
           "mask": {
-            "alpha": "/media/scenes/entry-photo/skirting-main-right-mask.png",
+            "alpha": "/media/scenes/bedroom-photo/skirting-right-mask.png",
             "boundsPx": [
-              781,
-              896,
-              152,
-              46
-            ]
-          },
-          "lighting": {
-            "diffuse": "/media/scenes/entry-photo/skirting-main-right-diffuse.png",
-            "baselineLinear": 0.6795424696330938,
-            "shadeMin": 0.18,
-            "shadeMax": 1.65,
-            "specular": null,
-            "specularIncludedInDiffuse": false
-          },
-          "mapping": {
-            "worldQuadMm": [
-              [
-                0,
-                0
-              ],
-              [
-                425,
-                0
-              ],
-              [
-                425,
-                70
-              ],
-              [
-                0,
-                70
-              ]
-            ],
-            "imageQuad01": [
-              [
-                0.488125,
-                0.76525
-              ],
-              [
-                0.583125,
-                0.7472500000000001
-              ],
-              [
-                0.583125,
-                0.7645
-              ],
-              [
-                0.488125,
-                0.7845
-              ]
-            ],
-            "calibration": {
-              "method": "authored-reference",
-              "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
-              "referenceLengthMm": 170,
-              "referenceImageSegment01": [
-                [
-                  0.48812500000000003,
-                  0.76525
-                ],
-                [
-                  0.528651315789474,
-                  0.757571329639889
-                ]
-              ],
-              "referenceWorldSegmentMm": [
-                [
-                  0,
-                  0
-                ],
-                [
-                  170,
-                  0
-                ]
-              ]
-            }
-          },
-          "uvRotationDeg": 0
-        },
-        {
-          "id": "skirting-corridor",
-          "role": "skirting",
-          "mask": {
-            "alpha": "/media/scenes/entry-photo/skirting-corridor-mask.png",
-            "boundsPx": [
-              933,
-              754,
-              193,
-              77
-            ]
-          },
-          "lighting": {
-            "diffuse": "/media/scenes/entry-photo/skirting-corridor-diffuse.png",
-            "baselineLinear": 0.5520114015120001,
-            "shadeMin": 0.18,
-            "shadeMax": 1.65,
-            "specular": null,
-            "specularIncludedInDiffuse": false
-          },
-          "mapping": {
-            "worldQuadMm": [
-              [
-                0,
-                0
-              ],
-              [
-                1376,
-                0
-              ],
-              [
-                1376,
-                70
-              ],
-              [
-                0,
-                70
-              ]
-            ],
-            "imageQuad01": [
-              [
-                0.583125,
-                0.6285000000000001
-              ],
-              [
-                0.70375,
-                0.6803333333333333
-              ],
-              [
-                0.70375,
-                0.6925
-              ],
-              [
-                0.583125,
-                0.6365833333333333
-              ]
-            ],
-            "calibration": {
-              "method": "authored-reference",
-              "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
-              "referenceLengthMm": 550.4,
-              "referenceImageSegment01": [
-                [
-                  0.583125,
-                  0.6285000000000002
-                ],
-                [
-                  0.620152294303797,
-                  0.6444108649789029
-                ]
-              ],
-              "referenceWorldSegmentMm": [
-                [
-                  0,
-                  0
-                ],
-                [
-                  550.4,
-                  0
-                ]
-              ]
-            }
-          },
-          "uvRotationDeg": 0
-        },
-        {
-          "id": "skirting-corridor-end",
-          "role": "skirting",
-          "mask": {
-            "alpha": "/media/scenes/entry-photo/skirting-corridor-end-mask.png",
-            "boundsPx": [
-              1318,
               878,
-              112,
-              59
+              819,
+              722,
+              289
             ]
           },
           "lighting": {
-            "diffuse": "/media/scenes/entry-photo/skirting-corridor-end-diffuse.png",
-            "baselineLinear": 0.6866853124353135,
+            "diffuse": "/media/scenes/bedroom-photo/skirting-right-diffuse.png",
+            "baselineLinear": 0.5457244613701866,
             "shadeMin": 0.18,
             "shadeMax": 1.65,
             "specular": null,
@@ -2957,11 +2787,11 @@
                 0
               ],
               [
-                301,
+                2055,
                 0
               ],
               [
-                301,
+                2055,
                 70
               ],
               [
@@ -2971,34 +2801,34 @@
             ],
             "imageQuad01": [
               [
-                0.82375,
-                0.7318333333333333
+                0.54875,
+                0.6826666666666668
               ],
               [
-                0.89375,
-                0.7619166666666666
+                1,
+                0.8655833333333334
               ],
               [
-                0.89375,
-                0.7806666666666666
+                1,
+                0.92275
               ],
               [
-                0.82375,
-                0.74825
+                0.54875,
+                0.7145833333333333
               ]
             ],
             "calibration": {
               "method": "authored-reference",
               "note": "Plane fitted to measured edges of the real photograph; dimensions from the camera model. See AUTHORING.md.",
-              "referenceLengthMm": 120.4,
+              "referenceLengthMm": 822,
               "referenceImageSegment01": [
                 [
-                  0.8237500000000002,
-                  0.7318333333333334
+                  0.54875,
+                  0.6826666666666669
                 ],
                 [
-                  0.8495498129092611,
-                  0.7429211100717181
+                  0.6711499645892351,
+                  0.7322821647780927
                 ]
               ],
               "referenceWorldSegmentMm": [
@@ -3007,7 +2837,7 @@
                   0
                 ],
                 [
-                  120.4,
+                  822,
                   0
                 ]
               ]
@@ -3017,12 +2847,12 @@
         }
       ],
       "protectedMask": {
-        "alpha": "/media/scenes/entry-photo/protected-mask.png",
+        "alpha": "/media/scenes/bedroom-photo/protected-mask.png",
         "boundsPx": [
-          326,
-          140,
-          418,
-          740
+          692,
+          372,
+          172,
+          442
         ]
       },
       "foreground": null,
@@ -3050,15 +2880,15 @@
       ],
       "defaultSelection": {
         "version": 1,
-        "sceneId": "entry-photo",
+        "sceneId": "bedroom-photo",
         "doorProductId": "dera-lis",
-        "doorFinishId": "lis-natyral",
-        "floorProductId": "arre-klasike-12",
+        "doorFinishId": "arre-erret",
+        "floorProductId": "lis-natyral-10",
         "frameMode": "door",
         "skirtingMode": "door",
-        "floorRotationDeg": 90
+        "floorRotationDeg": 0
       },
-      "assetRevision": "64b75c35c68877957048c26e77777d8b9e8441845f42657c40ed44191755ce08"
+      "assetRevision": "07cf6dafd1d3cefdd80f09bc991ebacd702efe086f5b49526d17c9353ff6fd1f"
     }
   ]
 }

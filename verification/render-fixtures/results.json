@@ -7,61 +7,61 @@
       "scene": "living-standard",
       "name": "default",
       "width": 960,
-      "ms": 196.91304200000002
+      "ms": 189.52620899999994
     },
     {
       "scene": "living-standard",
       "name": "magenta",
       "width": 1600,
-      "ms": 291.18562499999996
+      "ms": 295.8115
     },
     {
       "scene": "living-standard",
       "name": "scale-grid",
       "width": 1600,
-      "ms": 309.2444590000001
+      "ms": 418.44325000000003
     },
     {
       "scene": "living-standard",
       "name": "glass",
       "width": 1600,
-      "ms": 350.084875
+      "ms": 356.048667
     },
     {
       "scene": "corridor-standard",
       "name": "default",
       "width": 960,
-      "ms": 173.40750000000003
+      "ms": 174.65820800000006
     },
     {
       "scene": "corridor-standard",
       "name": "magenta",
       "width": 1600,
-      "ms": 321.9664170000001
+      "ms": 327.2013750000001
     },
     {
       "scene": "corridor-standard",
       "name": "scale-grid",
       "width": 1600,
-      "ms": 339.3236670000001
+      "ms": 354.9235829999998
     },
     {
-      "scene": "entry-photo",
+      "scene": "bedroom-photo",
       "name": "default",
       "width": 960,
-      "ms": 168.770583
+      "ms": 143.99754200000007
     },
     {
-      "scene": "entry-photo",
+      "scene": "bedroom-photo",
       "name": "magenta",
       "width": 1600,
-      "ms": 266.429791
+      "ms": 214.89816699999983
     },
     {
-      "scene": "entry-photo",
+      "scene": "bedroom-photo",
       "name": "scale-grid",
       "width": 1600,
-      "ms": 314.3967910000001
+      "ms": 259.1177080000002
     }
   ]
 }

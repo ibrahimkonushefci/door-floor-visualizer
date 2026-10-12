@@ -1,30 +1,29 @@
 // Reproducible scene authoring for a REAL photograph (not generated imagery).
 //
-// Input: brand/assets/scenes/entry-photo/base.png — the frozen 1600×1200 plate,
-// cropped (left 2133×1600 of a 2400×1600 download) and resized from:
-//   Alex Tyson, "An empty room with white doors and wooden floors", Unsplash
-//   https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w
-//   Unsplash License (free commercial use, no attribution required).
-// Re-create the plate with:  node scripts/author-photo-scene.mjs --from <downloaded.jpg>
+// Input: brand/assets/scenes/<id>/base.png — the frozen 1600×1200 plate, made
+// once from the downloaded photograph (crop + resize recorded in SOURCE):
+//   node scripts/author-photo-scene.mjs --from <downloaded.jpg>
+// Every other layer (masks, light plates, calibration, provenance) is derived
+// here and can be regenerated with:  node scripts/author-photo-scene.mjs
 //
-// Geometry was measured from luminance profiles of the plate (edges are straight
-// lines in perspective). Floor and wall planes use a calibrated pinhole camera:
-// the main wall and the corridor wall are perpendicular, so their vanishing points
-// on the horizon fix the focal length, and the 2000 mm leaf fixes camera height.
+// Geometry was measured from luminance edge profiles of the plate; edges are
+// straight lines in perspective. Planes come from a calibrated pinhole camera:
+// the two walls are perpendicular, so their vanishing points on the horizon
+// fix the focal length, and the 2000 mm leaf fixes the camera height.
 import sharp from 'sharp';
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { solveHomography, projectPoint } from '../src/lib/studio/render/homography.ts';
 
-const ID = 'entry-photo',
+const ID = 'bedroom-photo',
   DIR = `brand/assets/scenes/${ID}`,
   W = 1600,
   H = 1200;
 const SOURCE = {
-  url: 'https://unsplash.com/photos/an-empty-room-with-white-doors-and-wooden-floors-K2qofQMdr6w',
+  url: 'https://unsplash.com/photos/an-empty-room-with-white-walls-and-wood-floors-FwqIB7oCyJ0',
   author: 'Alex Tyson (Unsplash @alextyson195)',
   license:
-    'Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Nikon Z 6), not AI-generated.',
+    'Unsplash License: free to use commercially and non-commercially, no permission or attribution required. Real photograph (Canon EOS Rebel SL3), not AI-generated.',
   crop: [0, 0, 2133, 1600],
   original: [2400, 1600],
 };
@@ -40,20 +39,61 @@ if (fromIndex > 0) {
     .toFile(`${DIR}/base.png`);
 }
 
+// ---- Measured geometry (plate pixels) ------------------------------------
+const lineY = (x0, y0, slope) => x => y0 + slope * (x - x0);
+const leafTop = lineY(700, 294, 0.247), // gap line above the leaf
+  floorLine = lineY(700, 909, -0.313), // leaf bottom / floor junction
+  leftSkirtTop = lineY(300, 989, -0.287),
+  leftSkirtBottom = lineY(300, 1047, -0.326),
+  rightSkirtTop = lineY(920, 834, 0.304),
+  rightSkirtBottom = lineY(920, 872, 0.346);
+const P = (x, f) => [x, Math.round(f(x) * 10) / 10];
+const leaf = [P(686, leafTop), P(857, leafTop), P(857, x => floorLine(x) - 1), P(686, x => floorLine(x) - 1)];
+const casingTop = x => leafTop(x) - 35,
+  casingInner = x => leafTop(x) - 3;
+const frameTop = [P(657, casingTop), P(878, casingTop), P(878, casingInner), P(657, casingInner)],
+  frameLeft = [P(657, casingInner), P(684, casingInner), [684, 916], [657, 926]],
+  frameRight = [P(863, casingInner), P(878, casingInner), [878, 856], [863, 861]];
+const skirts = [
+  ['left', [P(0, x => leftSkirtTop(x) - 2), P(657, x => leftSkirtTop(x) - 2), P(657, leftSkirtBottom), P(0, leftSkirtBottom)]],
+  ['right', [P(878, x => rightSkirtTop(x) - 2), P(1600, x => rightSkirtTop(x) - 2), P(1600, rightSkirtBottom), P(878, rightSkirtBottom)]],
+];
+// Floor boundary sits 2px inside the trim so antialiased edges overlap; the
+// partition below gives trim priority, so no original pixels show through.
+const floor = [
+  P(0, x => leftSkirtBottom(x) - 2),
+  P(657, x => leftSkirtBottom(x) - 2),
+  P(686, x => floorLine(x) + 1),
+  P(857, x => floorLine(x) + 1),
+  P(878, x => rightSkirtBottom(x) - 2),
+  P(1600, x => rightSkirtBottom(x) - 2),
+  [1600, 1200],
+  [0, 1200],
+];
+const floorQuad = [leaf[3], P(878, rightSkirtBottom), [1600, 1200], [0, 1200]];
+// Silver hardware (three hinges, lever handle) stays photographic.
+const hardware = [
+  [852, 368, 869, 406],
+  [852, 573, 869, 611],
+  [852, 776, 869, 814],
+  [688, 610, 744, 658],
+];
+
 // ---- Camera model --------------------------------------------------------
-const horizon = 600,
-  principal = [W / 2, H / 2],
-  vpWall = [3046, horizon], // main door wall (measured from leaf top/bottom edges)
-  vpCorridor = [462, horizon], // corridor wall base line
-  focal = Math.sqrt(-((vpWall[0] - principal[0]) * (vpCorridor[0] - principal[0]))),
-  // Leaf: bottom-left (335,994) on the floor, top-left (335,45), 2000 mm tall.
-  cameraHeight = 2000 / (1 + (horizon - 45) / (994 - horizon));
+// Door-wall lines (leaf top/bottom, skirting) meet at ~(1795,564); the right
+// wall's skirting lines meet at ~(15,560). The principal point sits on the horizon.
+const horizon = 562,
+  principal = [W / 2, horizon],
+  vpWall = [1795, horizon],
+  vpOther = [15, horizon],
+  focal = Math.sqrt(-((vpWall[0] - principal[0]) * (vpOther[0] - principal[0]))),
+  cameraHeight = 2000 / (1 + (horizon - leaf[0][1]) / (leaf[3][1] - horizon));
 const wallDir = (() => {
   const v = [vpWall[0] - principal[0], focal],
     n = Math.hypot(...v);
   return [v[0] / n, v[1] / n];
 })();
-// Floor pixel → millimetres in a frame aligned with the main wall (x along it).
+// Floor pixel → millimetres in a frame aligned with the door wall (x along it).
 function floorMm([u, v]) {
   const t = cameraHeight / ((v - horizon) / focal),
     X = ((u - principal[0]) / focal) * t,
@@ -65,64 +105,7 @@ const distance = (a, b) => {
     q = floorMm(b);
   return Math.hypot(p[0] - q[0], p[1] - q[1]);
 };
-
-// ---- Measured geometry (plate pixels) ------------------------------------
-const lineY = (x0, y0, slope) => x => y0 + slope * (x - x0);
-const casingOuterTop = lineY(340, 10, 0.215),
-  leafTop = lineY(340, 46, 0.205),
-  leftSkirtTop = lineY(70, 1015, -0.1286),
-  leftSkirtBottom = lineY(70, 1045, -0.138),
-  rightSkirtTop = lineY(790, 917, -0.142),
-  rightSkirtBottom = lineY(790, 940, -0.158),
-  corridorSkirtTop = lineY(1100, 808, 0.322),
-  corridorSkirtBottom = lineY(1100, 822, 0.348);
-const P = (x, f) => [x, Math.round(f(x) * 10) / 10];
-const leaf = [
-  [335, 45],
-  [750, 130],
-  [750, 934],
-  [335, 994],
-];
-const frameTop = [P(290, casingOuterTop), P(781, casingOuterTop), P(781, x => leafTop(x) - 3), P(290, x => leafTop(x) - 3)].map(
-  ([x, y]) => [x, Math.max(0, y)],
-);
-const frameLeft = [P(290, x => leafTop(x) - 3), P(333, x => leafTop(x) - 3), [333, 1008], [290, 1015]],
-  frameRight = [P(753, x => leafTop(x) - 3), P(781, x => leafTop(x) - 3), [781, 942], [753, 946]];
-const skirts = [
-  ['main-left', [P(59, leftSkirtTop), P(291, leftSkirtTop), P(291, leftSkirtBottom), P(59, leftSkirtBottom)]],
-  ['main-right', [P(781, rightSkirtTop), P(933, rightSkirtTop), P(933, rightSkirtBottom), P(781, rightSkirtBottom)]],
-  ['corridor', [P(933, corridorSkirtTop), P(1126, corridorSkirtTop), P(1126, corridorSkirtBottom), P(933, corridorSkirtBottom)]],
-  ['corridor-end', [P(1318, corridorSkirtTop), P(1430, corridorSkirtTop), P(1430, corridorSkirtBottom), P(1318, corridorSkirtBottom)]],
-];
-// Floor boundary sits 2px inside the trim so antialiased edges overlap; the
-// partition below gives trim priority, so no original pixels show through.
-const floor = [
-  [59, 1044],
-  [291, 1012],
-  [333, 1005],
-  [753, 944],
-  [781, 940],
-  [933, 915],
-  [933, 761],
-  [1432, 934],
-  [1480, 948],
-  [1566, 1036],
-  [1567, 1100],
-  [1567, 1200],
-  [59, 1200],
-];
-const floorQuad = [
-  [333, 1006],
-  [933, 918],
-  [1567, 1200],
-  [120, 1200],
-];
-// Silver hardware (hinges, handle, lock) stays photographic.
-const hardware = [
-  [322, 140, 340, 186],
-  [322, 832, 340, 880],
-  [684, 500, 750, 562],
-];
+const leafWidthMm = distance(leaf[3], leaf[2]);
 
 // ---- Helpers --------------------------------------------------------------
 const normalized = p => p.map(([x, y]) => [x / W, y / H]);
@@ -173,7 +156,8 @@ for (const [x0, y0, x1, y1] of hardware)
   for (let y = y0; y < y1; y++)
     for (let x = x0; x < x1; x++) {
       const i = y * W + x,
-        coverage = Math.round(Math.max(0, Math.min(1, (205 - luminance[i]) / 25)) * 255);
+        // Only metal (well below the ~195-205 white paint) stays photographic.
+        coverage = Math.round(Math.max(0, Math.min(1, (178 - luminance[i]) / 22)) * 255);
       protect[i * 4] = protect[i * 4 + 1] = protect[i * 4 + 2] = coverage;
     }
 const protectedMask = await saveMask('protected-mask', protect);
@@ -211,10 +195,10 @@ const defs = [
     floorQuad.map(floorMm).map(([x, z], _, all) => [x - all[0][0], z - all[0][1]]),
     floorQuad,
   ],
-  ['leaf', 'door-leaf', leaf, rect(Math.round(distance([335, 994], [750, 934])), 2000), leaf],
+  ['leaf', 'door-leaf', leaf, rect(Math.round(leafWidthMm), 2000), leaf],
   ['frame-left', 'frame', frameLeft, rect(90, 2070), frameLeft],
   ['frame-right', 'frame', frameRight, rect(90, 2070), frameRight],
-  ['frame-top', 'frame', frameTop, rect(Math.round(distance([290, 1015], [781, 942])), 90), frameTop],
+  ['frame-top', 'frame', frameTop, rect(Math.round(leafWidthMm + 180), 90), frameTop],
   ...skirts.map(([name, poly]) => [
     `skirting-${name}`,
     'skirting',
@@ -313,7 +297,7 @@ for (const surface of [...surfaces].reverse()) {
 const loc = (sq, en, de) => ({ sq, en, de });
 const scene = {
   id: ID,
-  name: loc('Hyrja', 'Entrance hall', 'Diele'),
+  name: loc('Dhoma e gjumit', 'Bedroom', 'Schlafzimmer'),
   description: loc('Fotografi e vërtetë', 'Real photograph', 'Echtes Foto'),
   width: W,
   height: H,
@@ -321,8 +305,8 @@ const scene = {
   thumbnail: `/media/scenes/${ID}/thumbnail.webp`,
   fallback: `/media/scenes/${ID}/fallback.webp`,
   frameType: 'standard-casing',
-  // Nearest catalogue size to the measured ~917 mm leaf.
-  depictedDoorSizeMm: { width: 900, height: 2000 },
+  // Nearest catalogue size to the measured leaf.
+  depictedDoorSizeMm: { width: 800, height: 2000 },
   surfaces,
   protectedMask,
   foreground: null,
@@ -335,11 +319,11 @@ const scene = {
     version: 1,
     sceneId: ID,
     doorProductId: 'dera-lis',
-    doorFinishId: 'lis-natyral',
-    floorProductId: 'arre-klasike-12',
+    doorFinishId: 'arre-erret',
+    floorProductId: 'lis-natyral-10',
     frameMode: 'door',
     skirtingMode: 'door',
-    floorRotationDeg: 90,
+    floorRotationDeg: 0,
   },
   assetRevision: 'pending',
 };
@@ -365,7 +349,7 @@ await writeFile(
 );
 await writeFile(
   `${DIR}/AUTHORING.md`,
-  `# ${ID} — real photograph\n\nSource: ${SOURCE.author}, ${SOURCE.url}. ${SOURCE.license}\n\nDownloaded at 2400×1600 (JPEG, q92), cropped to ${SOURCE.crop.join(', ')} and resized to 1600×1200 (\`base.png\`, frozen). All other layers are derived by \`scripts/author-photo-scene.mjs\`.\n\nCamera model: horizon y=${horizon}, vanishing points ${vpWall.join(',')} (door wall) and ${vpCorridor.join(',')} (corridor wall), focal ${focal.toFixed(1)} px, camera height ${cameraHeight.toFixed(0)} mm from a 2000 mm leaf. Leaf width ${distance([335, 994], [750, 934]).toFixed(0)} mm.\n\nLighting: painted trim and leaf use the photograph's luminance; the oak floor uses a mask-normalised low-pass (σ 22 px) so the original planks do not print through new floors. The second door, the open door at left and the foreground jamb remain photographic.\n`,
+  `# ${ID} — real photograph\n\nSource: ${SOURCE.author}, ${SOURCE.url}. ${SOURCE.license}\n\nDownloaded at 2400×1600 (JPEG, q92), cropped to ${SOURCE.crop.join(', ')} and resized to 1600×1200 (\`base.png\`, frozen). All other layers are derived by \`scripts/author-photo-scene.mjs\`.\n\nCamera model: horizon y=${horizon}, vanishing points ${vpWall.join(',')} (door wall) and ${vpOther.join(',')} (right wall), focal ${focal.toFixed(1)} px, camera height ${cameraHeight.toFixed(0)} mm from a 2000 mm leaf. Leaf width ${leafWidthMm.toFixed(0)} mm.\n\nLighting: painted trim and leaf use the photograph's luminance; the oak floor uses a mask-normalised low-pass (σ 22 px) so the original planks do not print through new floors. Wall outlets, the light switch and the door hardware remain photographic.\n`,
 );
 const ledger = JSON.parse(await readFile('brand/asset-sources.json', 'utf8'));
 for (const name of (await readdir(DIR)).filter(n => n.endsWith('.png'))) {
@@ -387,6 +371,6 @@ await writeFile('brand/asset-sources.json', JSON.stringify(ledger, null, 2) + '\
 console.log({
   focal: focal.toFixed(1),
   cameraHeightMm: cameraHeight.toFixed(0),
-  leafWidthMm: distance([335, 994], [750, 934]).toFixed(0),
+  leafWidthMm: leafWidthMm.toFixed(0),
   floorQuadMm: surfaces[0].mapping.worldQuadMm.map(p => p.map(v => Math.round(v))),
 });
