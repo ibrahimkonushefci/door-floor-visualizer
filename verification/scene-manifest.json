@@ -751,27 +751,27 @@
     {
       "source": "brand/assets/scenes/living-standard/calibration.json",
       "output": "/media/scenes/living-standard/fallback.webp",
-      "sha256": "9463b7e68293652a85dead3050ebbb878565e7e2a9065034aa5c4910e15203d0",
+      "sha256": "5043b82c8408cc05911bdb82f67014aec89c44557e789af3e4f35686d896f1f8",
       "sourceSha256": "582c74fd4f74d320397c2cbb43d90ba524d4ba433a2137cb4148a9f24b1cd695",
-      "bytes": 33382,
+      "bytes": 33160,
       "width": 960,
       "height": 720
     },
     {
       "source": "brand/assets/scenes/corridor-standard/calibration.json",
       "output": "/media/scenes/corridor-standard/fallback.webp",
-      "sha256": "ed6a1f5e73f626775f171831030d13caa93f54044533800373486c9c375c91ac",
+      "sha256": "de71102cf1b370f6bbf24d0e636510c3faae0e56d8db57dc6a9eb35e05343bb5",
       "sourceSha256": "a474f322cacfd3e06fe352f18ec65a26d58d4362df91611523ae5053e45b07a8",
-      "bytes": 33446,
+      "bytes": 34388,
       "width": 960,
       "height": 720
     },
     {
       "source": "brand/assets/scenes/entry-photo/calibration.json",
       "output": "/media/scenes/entry-photo/fallback.webp",
-      "sha256": "2794b84ee6eb070dd661b87828c6a7116e6ce2a95f6453f5636a2f8d059f71c7",
+      "sha256": "950e953285135c682a130de84163f66d2ad8ad71942cef847fc384a289986743",
       "sourceSha256": "68aea4d532578e0b772634044d00e25a519474b0855236be4fcc2dd2dcd7fd19",
-      "bytes": 45598,
+      "bytes": 45610,
       "width": 960,
       "height": 720
     }

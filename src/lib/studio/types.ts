@@ -32,6 +32,8 @@ export interface PreparedSurface {
   diffuse: Uint8Array;
   specular: PixelBuffer | null;
   bounds: readonly [number, number, number, number];
+  /** Linear lighting level rendered at the material's true colour (defaults to the authored baseline). */
+  baseline?: number;
 }
 export interface PreparedScene {
   scene: RoomScene;

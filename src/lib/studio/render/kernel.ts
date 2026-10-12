@@ -209,7 +209,7 @@ export function renderRows(
           }
           const shade = shadeAt(
             cropped(s, s.diffuse, sx, sy, true),
-            s.definition.lighting.baselineLinear,
+            s.baseline ?? s.definition.lighting.baselineLinear,
           );
           let sr = 0,
             sg = 0,

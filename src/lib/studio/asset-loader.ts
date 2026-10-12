@@ -1,6 +1,7 @@
 import type { RoomScene, StudioSelection } from '../data/types';
 import type { PreparedScene, PreparedMaterials, StudioCatalog } from './types';
 import { buildMipChain, type PixelBuffer } from './render/sampling';
+import { decode } from './render/color';
 import { invertHomography, solveHomography } from './render/homography';
 // Floor atlases are authored up to 2048px; the float mip chain of the largest
 // active set (atlas + finish + trims) stays well under the cache budget.
@@ -49,9 +50,10 @@ export function red(
 // The authored leaf and casing masks leave the photograph's own jambs, mitre
 // joints and leaf gap uncovered, so those pixels would keep the original paint.
 // Unify the door assembly: every uncovered pixel enclosed by the leaf/casing
-// (horizontally or vertically) joins the nearest casing piece, lit from the
-// base photograph; only a hairline band against the leaf stays a shadow reveal.
-const REVEAL_PX = 2;
+// (horizontally or vertically) joins the nearest casing piece, continuing that
+// piece's lighting; only a hairline band against the leaf stays a shadow reveal.
+const REVEAL_PX = 2,
+  JAMB_SHADE = 0.92;
 interface FullSurface {
   definition: RoomScene['surfaces'][number];
   mask: Uint8Array;
@@ -129,6 +131,14 @@ export function unifyDoorAssembly(
   };
   spread(leafQueue, leafDist);
   spread(frameQueue, frameDist, frameOf);
+  const jambLevel = frames.map(f => {
+    const median = medianLevel(f.mask, f.diffuse);
+    if (median === null) return 0;
+    const target = decode[median] * JAMB_SHADE;
+    let level = 0;
+    while (level < 255 && decode[level + 1] <= target) level++;
+    return level;
+  });
   // Repeat until stable: filled jamb strips enclose the mitre corners above them.
   const reveal = new Uint8Array(w * h),
     filled = new Uint8Array(w * h);
@@ -166,17 +176,39 @@ export function unifyDoorAssembly(
           reveal[i] = open;
           any = true;
         } else if (frameOf[i] >= 0) {
-          const frame = frames[frameOf[i]],
-            b = base.data;
-          frame.mask[p] += open;
-          if (!frame.diffuse[p])
-            frame.diffuse[p] = Math.round(
-              0.2126 * b[p * 4] + 0.7152 * b[p * 4 + 1] + 0.0722 * b[p * 4 + 2],
-            );
+          // Jambs and mitres take an even, slightly shaded tone of their piece's
+          // median face light. Copying photo pixels would extend the source
+          // image's one-sided bevel shading into a dark band on one side only.
+          const f = frameOf[i];
+          frames[f].mask[p] += open;
+          if (!frames[f].diffuse[p]) frames[f].diffuse[p] = jambLevel[f];
         }
       }
   }
   return any ? { mask: reveal, bounds: [x0, y0, w, h] } : null;
+}
+function medianLevel(mask: Uint8Array, diffuse: Uint8Array) {
+  const histogram = new Uint32Array(256);
+  let count = 0;
+  for (let i = 0; i < mask.length; i++)
+    if (mask[i] >= 200) {
+      histogram[diffuse[i]]++;
+      count++;
+    }
+  if (!count) return null;
+  let seen = 0,
+    level = 0;
+  while (level < 255 && (seen += histogram[level]) < count / 2) level++;
+  return level;
+}
+// Casing and skirting are each split into several pieces of one material. A
+// per-piece baseline from a 3×3 sample makes pieces render at different tones;
+// normalising each by the median of its whole surface keeps them matched while
+// preserving each piece's own light gradient.
+function trimBaseline(definition: RoomScene['surfaces'][number], mask: Uint8Array, diffuse: Uint8Array) {
+  if (definition.role !== 'frame' && definition.role !== 'skirting') return undefined;
+  const level = medianLevel(mask, diffuse);
+  return level === null ? undefined : Math.max(0.03, decode[level]);
 }
 function boundsOf(mask: Uint8Array, width: number, fallback: readonly [number, number, number, number]) {
   const [fx, fy, fw, fh] = fallback;
@@ -270,6 +302,7 @@ export async function prepareSceneWith(
     }
     return {
       definition: l.definition,
+      baseline: trimBaseline(l.definition, mask, diffuse),
       inverse: invertHomography(
         solveHomography(l.definition.mapping.worldQuadMm, l.definition.mapping.imageQuad01),
       ),

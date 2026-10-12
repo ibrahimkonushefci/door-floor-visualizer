@@ -7,61 +7,61 @@
       "scene": "living-standard",
       "name": "default",
       "width": 960,
-      "ms": 187.178583
+      "ms": 196.91304200000002
     },
     {
       "scene": "living-standard",
       "name": "magenta",
       "width": 1600,
-      "ms": 289.0323330000001
+      "ms": 291.18562499999996
     },
     {
       "scene": "living-standard",
       "name": "scale-grid",
       "width": 1600,
-      "ms": 306.76083400000005
+      "ms": 309.2444590000001
     },
     {
       "scene": "living-standard",
       "name": "glass",
       "width": 1600,
-      "ms": 353.673667
+      "ms": 350.084875
     },
     {
       "scene": "corridor-standard",
       "name": "default",
       "width": 960,
-      "ms": 175.9735830000002
+      "ms": 173.40750000000003
     },
     {
       "scene": "corridor-standard",
       "name": "magenta",
       "width": 1600,
-      "ms": 321.9525410000001
+      "ms": 321.9664170000001
     },
     {
       "scene": "corridor-standard",
       "name": "scale-grid",
       "width": 1600,
-      "ms": 338.35575000000017
+      "ms": 339.3236670000001
     },
     {
       "scene": "entry-photo",
       "name": "default",
       "width": 960,
-      "ms": 170.84045800000013
+      "ms": 168.770583
     },
     {
       "scene": "entry-photo",
       "name": "magenta",
       "width": 1600,
-      "ms": 254.92329199999995
+      "ms": 266.429791
     },
     {
       "scene": "entry-photo",
       "name": "scale-grid",
       "width": 1600,
-      "ms": 323.5217499999999
+      "ms": 314.3967910000001
     }
   ]
 }
