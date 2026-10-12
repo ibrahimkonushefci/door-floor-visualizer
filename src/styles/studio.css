@@ -323,6 +323,7 @@ body:has(.studio-page) .mobile-contact-bar {
   -webkit-backdrop-filter: blur(12px);
 }
 .studio-cta {
+  display: flex;
   max-width: 680px;
   min-height: 52px;
   margin-inline: auto;
