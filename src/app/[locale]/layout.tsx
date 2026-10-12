@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
-import '../globals.css';
+import '@/styles/index.css';
 import { loadSiteData } from '@/lib/data/load';
 import { isLocale, locales } from '@/lib/i18n/locales';
 import { getMessages } from '@/lib/i18n/messages';

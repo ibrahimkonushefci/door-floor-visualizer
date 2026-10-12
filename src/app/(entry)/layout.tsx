@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import '../globals.css';
+import '@/styles/index.css';
 import { loadSiteData } from '@/lib/data/load';
 import { buildMetadata } from '@/lib/brand/metadata';
 import { buildThemeVars } from '@/lib/brand/theme';

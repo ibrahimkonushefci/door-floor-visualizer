@@ -1,0 +1,79 @@
+/*
+ * Design tokens. Brand colors (--color-bg, --color-primary, --color-accent,
+ * --color-primary-text) are overridden per brand by buildThemeVars().
+ */
+:root {
+  /* Color */
+  --color-bg: #f7f5f0;
+  --color-surface: #ffffff;
+  --color-sunk: #ece9e1;
+  --color-text: #202421;
+  --color-muted: #62665f;
+  --color-line: #dedcd5;
+  --color-line-strong: #c8c4ba;
+  --color-primary: #202421;
+  --color-primary-text: #ffffff;
+  --color-accent: #a37d52;
+  --color-error: #9b2525;
+  --color-translucent: rgb(247 245 240 / 0.92);
+  --color-scrim: rgb(18 23 17 / 0.55);
+  --color-focus: var(--color-accent);
+
+  /* Type */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --text-2xs: 10px;
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-md: 13px;
+  --text-body: 15px;
+  --text-lg: 18px;
+  --display-xs: 20px;
+  --display-sm: 24px;
+  --display-md: clamp(28px, 3.2vw, 34px);
+  --display-lg: clamp(32px, 4.4vw, 46px);
+  --tracking-eyebrow: 0.12em;
+
+  /* Space (4px grid) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Shape */
+  --radius-photo: 3px;
+  --radius-control: 4px;
+  --radius-panel: 8px;
+  --radius-pill: 999px;
+  --shadow-float: 0 10px 30px rgb(32 36 33 / 0.12);
+  --shadow-ring: 0 0 0 1px rgb(32 36 33 / 0.08);
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration: 240ms;
+
+  /* Layout */
+  --page-max: 1280px;
+  --gutter: 16px;
+  --header-height: 60px;
+  --bar-height: 64px;
+  --tap: 44px;
+}
+@media (min-width: 768px) {
+  :root {
+    --gutter: 24px;
+    --header-height: 64px;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --gutter: 32px;
+  }
+}
