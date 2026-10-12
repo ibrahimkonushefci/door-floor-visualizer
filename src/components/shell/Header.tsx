@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { useSyncExternalStore } from 'react';
+import { useRef, useSyncExternalStore } from 'react';
 import { useFavorites } from '@/lib/favorites/useFavorites';
 import { parseCatalogQuery, subscribeCatalogQuery, updateCatalogQuery } from '@/lib/catalog/query';
 import { useInquiry } from '../inquiry/InquiryProvider';
@@ -9,6 +9,7 @@ import type { Messages } from '@/lib/i18n/messages';
 import { Icon } from '../ui/Icon';
 import { InquiryButton } from '../inquiry/InquiryButton';
 import { LanguageMenu } from './LanguageMenu';
+import { PRESENTER_EVENT } from '../offline/PresenterTools';
 export function Header({
   brand,
   locale,
@@ -21,6 +22,9 @@ export function Header({
   studioEnabled: boolean;
 }) {
   const { ids, ready } = useFavorites();
+  // Press and hold the logo to open the presenter tools (offline saving).
+  const hold = useRef<{ timer?: ReturnType<typeof setTimeout>; fired: boolean }>({ fired: false });
+  const release = () => clearTimeout(hold.current.timer);
   const { context } = useInquiry();
   const path = useSyncExternalStore(
     subscribeCatalogQuery,
@@ -49,7 +53,26 @@ export function Header({
   return (
     <header className="site-header">
       <div className="header-inner">
-        <a className="brand-link" href={`/${locale}/`} aria-label={brand.companyName}>
+        <a
+          className="brand-link"
+          href={`/${locale}/`}
+          aria-label={brand.companyName}
+          onPointerDown={() => {
+            hold.current.fired = false;
+            hold.current.timer = setTimeout(() => {
+              hold.current.fired = true;
+              window.dispatchEvent(new Event(PRESENTER_EVENT));
+            }, 700);
+          }}
+          onPointerUp={release}
+          onPointerLeave={release}
+          onPointerCancel={release}
+          onContextMenu={e => e.preventDefault()}
+          onClick={e => {
+            if (hold.current.fired) e.preventDefault();
+            hold.current.fired = false;
+          }}
+        >
           <Image
             src={brand.logo.src}
             width={brand.logo.width}

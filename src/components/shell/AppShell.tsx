@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react';
 import type { BrandConfig, Locale } from '@/lib/data/types';
 import type { Messages } from '@/lib/i18n/messages';
-import { GlobalOfflineStatus } from '../offline/OfflineStatus';
+import { OfflineNotice } from '../offline/OfflineStatus';
+import { PresenterTools } from '../offline/PresenterTools';
 import { OfflineProvider } from '../offline/OfflineProvider';
 import { Header } from './Header';
 import { MobileContactBar } from './MobileContactBar';
@@ -21,7 +22,8 @@ export function AppShell({ brand, locale, messages, children, studioEnabled }: A
         {children}
       </main>
       <Footer brand={brand} locale={locale} messages={messages} studioEnabled={studioEnabled} />
-      <GlobalOfflineStatus messages={messages} />
+      <OfflineNotice messages={messages} />
+      <PresenterTools messages={messages} />
       <MobileContactBar locale={locale} messages={messages} />
     </OfflineProvider>
   );

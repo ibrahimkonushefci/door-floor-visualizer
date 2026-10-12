@@ -1,34 +1,18 @@
 'use client';
-import { useOffline } from './OfflineProvider';
-import type { OfflineState } from '@/lib/offline/messages';
 import type { Messages } from '@/lib/i18n/messages';
-export function OfflineStatus({
-  state,
-  onUpdate,
-  messages: m,
-}: {
-  state: OfflineState;
-  onUpdate: () => void;
-  messages: Messages;
-}) {
-  return (
-    <>
-      <p role="status">{m[`offline.${state}`]}</p>
-      {state === 'update-available' && <button onClick={onUpdate}>{m['offline.update']}</button>}
-    </>
-  );
-}
-
-export function GlobalOfflineStatus({ messages }: { messages: Messages }) {
+import { useOffline } from './OfflineProvider';
+// A quiet notice, only when it matters to whoever is holding the device.
+export function OfflineNotice({ messages: m }: { messages: Messages }) {
   const o = useOffline();
-  if (
-    !['offline', 'update-available'].includes(o.state) ||
-    (typeof window !== 'undefined' && window.location.pathname.includes('/studio/'))
-  )
-    return null;
+  if (o.state !== 'offline' && o.state !== 'update-available') return null;
   return (
-    <aside className="offline-controls">
-      <OfflineStatus state={o.state} onUpdate={o.update} messages={messages} />
+    <aside className="offline-notice" role="status">
+      <span>{m[`offline.${o.state}`]}</span>
+      {o.state === 'update-available' && (
+        <button type="button" onClick={o.update}>
+          {m['offline.update']}
+        </button>
+      )}
     </aside>
   );
 }

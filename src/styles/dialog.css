@@ -64,3 +64,23 @@
   font-size: var(--text-sm);
   color: var(--color-muted);
 }
+
+/* Presenter tools */
+.presenter {
+  display: grid;
+  gap: var(--space-4);
+}
+.presenter-status {
+  font-family: var(--font-serif);
+  font-size: var(--display-xs);
+  line-height: 1.25;
+}
+.presenter progress {
+  width: 100%;
+  height: 4px;
+  accent-color: var(--color-accent);
+}
+.presenter-note {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}

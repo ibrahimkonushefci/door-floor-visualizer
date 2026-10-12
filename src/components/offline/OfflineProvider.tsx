@@ -129,9 +129,11 @@ export function OfflineProvider({ enabled, children }: { enabled: boolean; child
         cleanup.push(() => document.removeEventListener('visibilitychange', check));
         void reg.update().catch(() => {});
       } catch (e) {
+        // Setup failures (no HTTPS, private browsing, blocked storage) mean offline
+        // use is unavailable here; 'error' is reserved for a save the user started.
         if (!disposed) {
           setError(e instanceof Error ? e.message : String(e));
-          setState('error');
+          setState('unsupported');
         }
       }
     })();
