@@ -77,9 +77,23 @@ export function prepareRender(job: RenderJob, scene: PreparedScene, materials: P
               : null
             : trim(role === 'frame' ? selection.frameMode : selection.skirtingMode);
     const a = selected?.appearance;
+    // 'stretch-leaf' spans one texture repeat across the whole leaf, like a single
+    // veneer sheet, instead of tiling a visible seam partway up the door.
+    let stretch: { u0: number; v0: number; uSpan: number; vSpan: number } | null = null;
+    if (a?.kind === 'texture' && a.fit === 'stretch-leaf' && role === 'door-leaf') {
+      const quad = s.definition.mapping.worldQuadMm,
+        xs = quad.map(p => p[0]),
+        ys = quad.map(p => p[1]),
+        [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
+      stretch =
+        s.definition.uvRotationDeg === 90
+          ? { u0: y0, uSpan: y1 - y0, v0: -x1, vSpan: x1 - x0 }
+          : { u0: x0, uSpan: x1 - x0, v0: y0, vSpan: y1 - y0 };
+    }
     return {
       s,
       a,
+      stretch,
       strength: selected?.specularStrength || 0,
       solid: a?.kind === 'solid' ? hexLinear(a.colorSrgb) : null,
       mips: a?.kind === 'texture' ? materials.textures.get(a.texture) : null,
@@ -87,7 +101,19 @@ export function prepareRender(job: RenderJob, scene: PreparedScene, materials: P
   });
   const glass = finish.kind === 'glass' ? scene.inserts.get(finish.variantKey) : null,
     gm = finish.kind === 'glass' ? scene.insertMasks.get(finish.variantKey) : null;
-  return { prepared, glass, gm, rgb: [0, 0, 0] };
+  // A real door's reveal reads as a dark shadow tinted by the leaf and frame finishes.
+  const tone = (a: SurfaceAppearance | null | undefined) =>
+    a ? hexLinear(a.kind === 'solid' ? a.colorSrgb : a.fallbackColorSrgb) : null;
+  const leafTone = tone(prepared.find(p => p.s.definition.role === 'door-leaf')?.a),
+    frameTone = tone(prepared.find(p => p.s.definition.role === 'frame')?.a) || leafTone;
+  const reveal =
+    scene.reveal && leafTone && frameTone
+      ? {
+          ...scene.reveal,
+          color: leafTone.map((v, i) => Math.min(v, frameTone[i]) * 0.22) as unknown as number[],
+        }
+      : null;
+  return { prepared, glass, gm, reveal, rgb: [0, 0, 0] };
 }
 export function renderRows(
   job: RenderJob,
@@ -98,7 +124,7 @@ export function renderRows(
   endRow: number,
   compiled = prepareRender(job, scene, materials),
 ) {
-  const { prepared, glass, gm, rgb } = compiled;
+  const { prepared, glass, gm, reveal, rgb } = compiled;
   for (let py = startRow; py < endRow; py++)
     for (let px = 0; px < job.width; px++) {
       const x = (px + 0.5) / job.width,
@@ -127,7 +153,7 @@ export function renderRows(
         total = 0;
       if (protection < 1 && replacement < 1)
         for (const entry of prepared) {
-          const { s, a, solid, mips, strength } = entry;
+          const { s, a, solid, mips, strength, stretch } = entry;
           if (!a) continue;
           const coverage =
             (cropped(s, s.mask, sx, sy) / 255) * (1 - protection) * (1 - replacement);
@@ -165,13 +191,15 @@ export function renderRows(
               dUy = dVy;
               dVy = -ty;
             }
-            const tw = mips[0].width / a.physicalSizeMm[0],
-              th = mips[0].height / a.physicalSizeMm[1];
+            const sizeU = stretch ? stretch.uSpan : a.physicalSizeMm[0],
+              sizeV = stretch ? stretch.vSpan : a.physicalSizeMm[1],
+              tw = mips[0].width / sizeU,
+              th = mips[0].height / sizeV;
             const rho = Math.max(1, Math.hypot(dUx * tw, dVx * th), Math.hypot(dUy * tw, dVy * th));
             sampleTrilinearInto(
               mips,
-              U / a.physicalSizeMm[0],
-              V / a.physicalSizeMm[1],
+              (U - (stretch?.u0 ?? 0)) / sizeU,
+              (V - (stretch?.v0 ?? 0)) / sizeV,
               Math.log2(rho),
               rgb,
             );
@@ -208,6 +236,22 @@ export function renderRows(
         total += coverage;
       }
       if (total > 1 + 1 / 255) throw new Error('Composite: overlapping/invalid masks');
+      if (reveal && total < 1) {
+        const [rx, ry, rw, rh] = reveal.bounds,
+          ix = Math.round(sx) - rx,
+          iy = Math.round(sy) - ry,
+          open =
+            ix >= 0 && iy >= 0 && ix < rw && iy < rh
+              ? (reveal.mask[iy * rw + ix] / 255) * (1 - protection)
+              : 0;
+        if (open > 0) {
+          const amount = Math.min(open, 1 - total);
+          r += reveal.color[0] * amount;
+          g += reveal.color[1] * amount;
+          b += reveal.color[2] * amount;
+          total += amount;
+        }
+      }
       if (!total) {
         output.data[oi] = scene.base.data[bi];
         output.data[oi + 1] = scene.base.data[bi + 1];

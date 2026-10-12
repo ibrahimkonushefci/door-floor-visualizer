@@ -64,7 +64,7 @@
           460
         ],
         "grainAxis": "u",
-        "fit": "repeat",
+        "fit": "stretch-leaf",
         "fallbackColorSrgb": "#cd9f69"
       },
       "sheen": "matte",
@@ -101,7 +101,7 @@
           460
         ],
         "grainAxis": "u",
-        "fit": "repeat",
+        "fit": "stretch-leaf",
         "fallbackColorSrgb": "#4c3324"
       },
       "sheen": "matte",
@@ -138,7 +138,7 @@
           460
         ],
         "grainAxis": "u",
-        "fit": "repeat",
+        "fit": "stretch-leaf",
         "fallbackColorSrgb": "#a79f95"
       },
       "sheen": "matte",
@@ -217,8 +217,8 @@
           772
         ],
         "repeatPixels": [
-          600,
-          84
+          2048,
+          286
         ],
         "boardSizeMm": {
           "length": 1380,
@@ -265,8 +265,8 @@
           976
         ],
         "repeatPixels": [
-          600,
-          106
+          2048,
+          362
         ],
         "boardSizeMm": {
           "length": 1380,
@@ -313,8 +313,8 @@
           1697.0562748477141
         ],
         "repeatPixels": [
-          512,
-          512
+          1024,
+          1024
         ],
         "boardSizeMm": {
           "length": 600,
@@ -366,8 +366,8 @@
           772
         ],
         "repeatPixels": [
-          600,
-          84
+          2048,
+          286
         ],
         "boardSizeMm": {
           "length": 1380,
@@ -414,8 +414,8 @@
           772
         ],
         "repeatPixels": [
-          600,
-          84
+          2048,
+          286
         ],
         "boardSizeMm": {
           "length": 1380,

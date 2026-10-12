@@ -2,6 +2,10 @@ import type { RoomScene, StudioSelection } from '../data/types';
 import type { PreparedScene, PreparedMaterials, StudioCatalog } from './types';
 import { buildMipChain, type PixelBuffer } from './render/sampling';
 import { invertHomography, solveHomography } from './render/homography';
+// Floor atlases are authored up to 2048px; the float mip chain of the largest
+// active set (atlas + finish + trims) stays well under the cache budget.
+export const TEXTURE_MAX_EDGE = 2048;
+export const TEXTURE_CACHE_BYTES = 28 * 1024 * 1024;
 export type DecodeAsset = (
   path: string,
   signal: AbortSignal,
@@ -41,6 +45,75 @@ export function red(
   for (let j = 0; j < h; j++)
     for (let i = 0; i < w; i++) a[j * w + i] = p.data[((j + y) * p.width + i + x) * 4];
   return a;
+}
+// The photographed door's own leaf/frame gap is left uncovered by both masks, so
+// it would keep the original paint colour. Mark pixels that are near both the
+// leaf and a frame, uncovered and unprotected; the kernel shades them as shadow.
+const REVEAL_RADIUS = 5;
+function dilate(src: Uint8Array, w: number, h: number, r: number) {
+  const row = new Uint8Array(w * h),
+    out = new Uint8Array(w * h);
+  for (let y = 0; y < h; y++)
+    for (let x = 0; x < w; x++) {
+      let m = 0;
+      for (let k = Math.max(0, x - r); k <= Math.min(w - 1, x + r) && m < 255; k++)
+        m = Math.max(m, src[y * w + k]);
+      row[y * w + x] = m;
+    }
+  for (let y = 0; y < h; y++)
+    for (let x = 0; x < w; x++) {
+      let m = 0;
+      for (let k = Math.max(0, y - r); k <= Math.min(h - 1, y + r) && m < 255; k++)
+        m = Math.max(m, row[k * w + x]);
+      out[y * w + x] = m;
+    }
+  return out;
+}
+export function revealMask(
+  surfaces: readonly PreparedScene['surfaces'][number][],
+  protectedMask: Uint8Array,
+  sceneWidth: number,
+): PreparedScene['reveal'] {
+  const leaf = surfaces.filter(s => s.definition.role === 'door-leaf'),
+    frames = surfaces.filter(s => s.definition.role === 'frame');
+  if (!leaf.length || !frames.length) return null;
+  const around = [...leaf, ...frames].map(s => s.bounds),
+    x0 = Math.max(0, Math.min(...around.map(b => b[0])) - REVEAL_RADIUS),
+    y0 = Math.max(0, Math.min(...around.map(b => b[1])) - REVEAL_RADIUS),
+    x1 = Math.min(sceneWidth, Math.max(...around.map(b => b[0] + b[2])) + REVEAL_RADIUS),
+    y1 = Math.max(...around.map(b => b[1] + b[3])) + REVEAL_RADIUS,
+    w = x1 - x0,
+    h = y1 - y0;
+  const paint = (list: typeof surfaces) => {
+    const out = new Uint8Array(w * h);
+    for (const s of list) {
+      const [bx, by, bw, bh] = s.bounds;
+      for (let j = 0; j < bh; j++)
+        for (let i = 0; i < bw; i++) {
+          const x = bx + i - x0,
+            y = by + j - y0;
+          if (x >= 0 && y >= 0 && x < w && y < h)
+            out[y * w + x] = Math.min(255, out[y * w + x] + s.mask[j * bw + i]);
+        }
+    }
+    return out;
+  };
+  const covered = paint(surfaces),
+    nearLeaf = dilate(paint(leaf), w, h, REVEAL_RADIUS),
+    nearFrame = dilate(paint(frames), w, h, REVEAL_RADIUS),
+    mask = new Uint8Array(w * h);
+  let any = false;
+  for (let y = 0; y < h; y++)
+    for (let x = 0; x < w; x++) {
+      const i = y * w + x,
+        open = 255 - covered[i],
+        guard = protectedMask[(y + y0) * sceneWidth + x + x0];
+      if (open > 0 && guard < 128 && nearLeaf[i] > 127 && nearFrame[i] > 127) {
+        mask[i] = open;
+        any = true;
+      }
+    }
+  return any ? { mask, bounds: [x0, y0, w, h] } : null;
 }
 export async function prepareSceneWith(
   scene: RoomScene,
@@ -83,6 +156,7 @@ export async function prepareSceneWith(
       bounds,
     });
   }
+  const reveal = revealMask(surfaces, protectedMask, scene.width);
   const inserts = new Map(),
     insertMasks = new Map();
   for (const insert of scene.doorInserts) {
@@ -93,6 +167,7 @@ export async function prepareSceneWith(
     });
   }
   return {
+    reveal,
     scene,
     base,
     protectedMask,
@@ -124,7 +199,7 @@ export async function prepareMaterialsWith(
   const textures = new Map();
   for (const path of paths) {
     signal.throwIfAborted();
-    textures.set(path, buildMipChain(await decode(path, signal, 768)));
+    textures.set(path, buildMipChain(await decode(path, signal, TEXTURE_MAX_EDGE)));
   }
   return { textures, data: c.materials, products: c.products };
 }
@@ -165,7 +240,7 @@ export function createMaterialLoader(decode: DecodeAsset = decodeAsset) {
         cached.delete(path);
         cached.set(path, chain);
       } else {
-        chain = buildMipChain(await decode(path, signal, 512));
+        chain = buildMipChain(await decode(path, signal, TEXTURE_MAX_EDGE));
         signal.throwIfAborted();
         cached.set(path, chain);
         bytes += size(chain);
@@ -177,7 +252,7 @@ export function createMaterialLoader(decode: DecodeAsset = decodeAsset) {
       const path = [...cached.keys()].find(p => atlases.has(p) && p !== floor.atlas.image)!;
       remove(path);
     }
-    while (bytes > 6 * 1024 * 1024) {
+    while (bytes > TEXTURE_CACHE_BYTES) {
       const path = [...cached.keys()].find(p => !paths.has(p));
       if (!path) throw new Error('Active texture set exceeds cache budget');
       remove(path);

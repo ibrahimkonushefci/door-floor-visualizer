@@ -41,6 +41,8 @@ export interface PreparedScene {
   foreground: PixelBuffer | null;
   inserts: ReadonlyMap<string, PixelBuffer>;
   insertMasks: ReadonlyMap<string, { replacement: Uint8Array; protected: Uint8Array }>;
+  /** Uncovered gap between door leaf and frame, shaded as a shadow reveal. */
+  reveal?: { mask: Uint8Array; bounds: readonly [number, number, number, number] } | null;
 }
 export interface PreparedMaterials {
   textures: ReadonlyMap<string, readonly FloatTexture[]>;

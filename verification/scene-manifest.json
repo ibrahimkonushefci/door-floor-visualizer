@@ -472,11 +472,11 @@
     {
       "source": "brand/assets/textures/floors/arre-klasike-12/atlas.png",
       "output": "/media/textures/floors/arre-klasike-12/atlas.webp",
-      "sha256": "82f73f1f5a851f0b1369cce419b4b715f50684b60c6c5999202f7a0038d3e157",
+      "sha256": "4143ce33c7295bc357cb68fa72860fda5a03a3936c055bcf0ae56c39a4ecd240",
       "sourceSha256": "9a567f40660107620b518e9b3d5c60655aa2c95a7d7187c607e04a81ce6daf13",
-      "bytes": 49704,
-      "width": 600,
-      "height": 84
+      "bytes": 248190,
+      "width": 2048,
+      "height": 286
     },
     {
       "source": "brand/assets/textures/floors/arre-klasike-12/trim.png",
@@ -490,11 +490,11 @@
     {
       "source": "brand/assets/textures/floors/dushk-fshatar-8/atlas.png",
       "output": "/media/textures/floors/dushk-fshatar-8/atlas.webp",
-      "sha256": "df9e3b907cd05f1b3a468a714f79db3054dc9868036ea8a444a7ed2803ae1356",
+      "sha256": "2ccfdaf746c4c75a347d192f0927ec736ab2162af0fcaee518fdcd37ac85a918",
       "sourceSha256": "6d86b06308b1155c6c26fa107ab84fe9b6667a15f7458cd5fbbe1a6aaf84dfc7",
-      "bytes": 73488,
-      "width": 600,
-      "height": 106
+      "bytes": 371144,
+      "width": 2048,
+      "height": 362
     },
     {
       "source": "brand/assets/textures/floors/dushk-fshatar-8/trim.png",
@@ -508,11 +508,11 @@
     {
       "source": "brand/assets/textures/floors/hirte-skandinave-8/atlas.png",
       "output": "/media/textures/floors/hirte-skandinave-8/atlas.webp",
-      "sha256": "2da584605f9a66b20472757fc5024661785360b395f5ab87f98c85291e4ac5da",
+      "sha256": "6f8a30d9ef2a88a1184a565381b3fd879842aa6cd4ba86b364def075345d7bca",
       "sourceSha256": "bed7466021f87bbc3ae27557b220e4a3b4f1fe718d0935b342d72bdd7d65b63f",
-      "bytes": 50678,
-      "width": 600,
-      "height": 84
+      "bytes": 279990,
+      "width": 2048,
+      "height": 286
     },
     {
       "source": "brand/assets/textures/floors/hirte-skandinave-8/trim.png",
@@ -526,11 +526,11 @@
     {
       "source": "brand/assets/textures/floors/lis-natyral-10/atlas.png",
       "output": "/media/textures/floors/lis-natyral-10/atlas.webp",
-      "sha256": "870ef581f87cfbd9666a84dbc1dc82f1b30466823c63c4426148065b4ed83d0f",
+      "sha256": "f0b41c0d3453bd2d82404e8d2941fe6de90dee69540dbccc84f89476448441ce",
       "sourceSha256": "751d1b30f5a85b110eb537dec78110162f85f3492d79957eff75d196cc6b1b17",
-      "bytes": 58350,
-      "width": 600,
-      "height": 84
+      "bytes": 295054,
+      "width": 2048,
+      "height": 286
     },
     {
       "source": "brand/assets/textures/floors/lis-natyral-10/trim.png",
@@ -544,11 +544,11 @@
     {
       "source": "brand/assets/textures/floors/peshk-natyral-12/atlas.png",
       "output": "/media/textures/floors/peshk-natyral-12/atlas.webp",
-      "sha256": "18e450c4a7169b6c426e23e90d5aa36c808a99ebccb88d7c76fe9a9ba5813ea2",
+      "sha256": "471140656b229a840a5fd7356a269685531b94a57c47125c30f3d7b1b17b2bf6",
       "sourceSha256": "4ab4bd4506c9a202cc3ec6560ce5561e2206e06f861303de0c68ef8088db2198",
-      "bytes": 290176,
-      "width": 512,
-      "height": 512
+      "bytes": 393258,
+      "width": 1024,
+      "height": 1024
     },
     {
       "source": "brand/assets/textures/floors/peshk-natyral-12/trim.png",
@@ -562,18 +562,18 @@
     {
       "source": "brand/assets/scenes/living-standard/calibration.json",
       "output": "/media/scenes/living-standard/fallback.webp",
-      "sha256": "0a95436bb14c67ad7620f25d8012d3639a9bddfbaa5a37991b70b68caa12cd88",
+      "sha256": "9fad93394fe677205334104bcbb0db0275ecb747125adee11c222537bd8e229e",
       "sourceSha256": "582c74fd4f74d320397c2cbb43d90ba524d4ba433a2137cb4148a9f24b1cd695",
-      "bytes": 31242,
+      "bytes": 33408,
       "width": 960,
       "height": 720
     },
     {
       "source": "brand/assets/scenes/corridor-standard/calibration.json",
       "output": "/media/scenes/corridor-standard/fallback.webp",
-      "sha256": "cdce6c6ccf90a3e11e4fdab8355f108c2c443d687fe9f813669d0e67fdb9fbfb",
+      "sha256": "b8d29378725b429ea1f883d4d6431fe463d59ec32e1c471c1e664fcc97993237",
       "sourceSha256": "a474f322cacfd3e06fe352f18ec65a26d58d4362df91611523ae5053e45b07a8",
-      "bytes": 33792,
+      "bytes": 33412,
       "width": 960,
       "height": 720
     }

@@ -11,6 +11,7 @@ import { renderRows, prepareRender } from './render/kernel';
 import { createByteLru } from './render/cache';
 import type { PixelBuffer } from './render/sampling';
 import { selectionEqual } from './compatibility';
+export const RESULT_CACHE_BYTES = 16 * 1024 * 1024;
 const aborted = () => new DOMException('Superseded render', 'AbortError');
 export async function renderBatched(
   job: RenderJob,
@@ -66,7 +67,8 @@ export function createRenderController(
     worker: Worker | null = null,
     workerFailed = false,
     pending: { reject: (e: unknown) => void } | null = null;
-  const cache = createByteLru<PixelBuffer>(3 * 1024 * 1024, () => {}),
+  // Holds two full-resolution frames so toggling back to a combination is instant.
+  const cache = createByteLru<PixelBuffer>(RESULT_CACHE_BYTES, () => {}),
     textureCache = createMaterialLoader();
   let workerScene: PreparedScene | null = null,
     workerMaterials: PreparedMaterials | null = null;

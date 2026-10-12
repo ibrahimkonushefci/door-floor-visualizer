@@ -22,6 +22,80 @@ export async function decodeNode(
   const { data, info } = await img.ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   return { width: info.width, height: info.height, data: new Uint8ClampedArray(data) };
 }
+// Straight-plank atlases: give each board its own subtle tone and deepen the
+// bevel lines so the floor reads as individual boards rather than one smear.
+// Seam offsets are measured per row from the source; output is deterministic
+// (seeded by collection id) and wrap-safe because board ids repeat modulo width.
+interface StraightAtlas {
+  repeatSizeMm: readonly [number, number];
+  boardSizeMm: { length: number; width: number };
+  boardsPerRepeat: number;
+  bevelWidthMm: number;
+}
+export async function enhanceStraightAtlas(input: Buffer, atlas: StraightAtlas, seed: string) {
+  const { data, info } = await sharp(input)
+    .removeAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  const { width: W, height: H } = info,
+    rows = Math.round(atlas.repeatSizeMm[1] / atlas.boardSizeMm.width),
+    perRow = atlas.boardsPerRepeat / rows,
+    span = W / perRow,
+    rowH = H / rows;
+  let state = createHash('sha256').update(seed).digest().readUInt32LE(0) || 1;
+  const random = () => {
+    state ^= state << 13;
+    state ^= state >>> 17;
+    state ^= state << 5;
+    return (state >>> 0) / 4294967296;
+  };
+  const lum = (i: number) => 0.2126 * data[i] + 0.7152 * data[i + 1] + 0.0722 * data[i + 2];
+  const offsets: number[] = [];
+  for (let r = 0; r < rows; r++) {
+    const top = Math.ceil(r * rowH + rowH * 0.2),
+      bottom = Math.floor((r + 1) * rowH - rowH * 0.2),
+      column = new Float64Array(W);
+    for (let x = 0; x < W; x++) {
+      let n = 0;
+      for (let y = top; y < bottom; y++) n += lum((y * W + x) * 3);
+      column[x] = n / (bottom - top);
+    }
+    let best = 0,
+      bestScore = Infinity;
+    for (let o = 0; o < span; o++) {
+      let score = 0;
+      for (let k = 0; k < perRow; k++) score += column[Math.round(o + k * span) % W];
+      if (score < bestScore) [best, bestScore] = [o, score];
+    }
+    offsets.push(best);
+  }
+  const tones = Array.from({ length: rows * perRow }, () => ({
+    gain: 0.93 + random() * 0.14,
+    warmth: (random() - 0.5) * 0.04,
+  }));
+  const bevel = Math.max(1, (atlas.bevelWidthMm / atlas.repeatSizeMm[0]) * W * 1.6),
+    out = Buffer.alloc(W * H * 3);
+  for (let y = 0; y < H; y++) {
+    const r = Math.min(rows - 1, Math.floor(y / rowH)),
+      dy = Math.min(y - r * rowH, (r + 1) * rowH - 1 - y);
+    for (let x = 0; x < W; x++) {
+      const local = (((x - offsets[r]) % W) + W) % W,
+        k = Math.floor(local / span),
+        dx = Math.min(local - k * span, (k + 1) * span - 1 - local),
+        tone = tones[r * perRow + k],
+        edge = atlas.bevelWidthMm > 0 ? Math.min(dx, dy) : Infinity,
+        shade = edge < bevel ? 0.72 + 0.28 * (edge / bevel) : 1,
+        i = (y * W + x) * 3;
+      out[i] = Math.min(255, data[i] * tone.gain * (1 + tone.warmth) * shade);
+      out[i + 1] = Math.min(255, data[i + 1] * tone.gain * shade);
+      out[i + 2] = Math.min(255, data[i + 2] * tone.gain * (1 - tone.warmth) * shade);
+    }
+  }
+  return sharp(out, { raw: { width: W, height: H, channels: 3 } })
+    .sharpen({ sigma: 0.7 })
+    .png()
+    .toBuffer();
+}
 export async function prepareScenes(check = false) {
   const raw = JSON.parse(await readFile('brand/materials.json', 'utf8'));
   const products = JSON.parse(await readFile('brand/products.json', 'utf8')).products;
@@ -198,8 +272,9 @@ export async function prepareScenes(check = false) {
     }
     scenes.push(s);
   }
-  // Export compact lossless WebP runtime textures. Physical repeat dimensions
-  // remain unchanged; repeatPixels records the actual derivative dimensions.
+  // Floor atlases ship at full source detail as high-quality lossy WebP (planks are
+  // seen up close); small door/trim textures stay lossless. Physical repeat
+  // dimensions remain unchanged; repeatPixels records the derivative dimensions.
   for (const group of ['doors', 'floors']) {
     const dir = `brand/assets/textures/${group}`;
     for (const entry of await readdir(dir, { withFileTypes: true })) {
@@ -213,11 +288,11 @@ export async function prepareScenes(check = false) {
           group === 'floors' && file === 'atlas.png'
             ? raw.floorCollections.find((c: { id: string }) => c.id === entry.name).atlas
             : null;
-        await output(source, target, b =>
+        await output(source, target, async b =>
           atlas
-            ? sharp(b)
+            ? sharp(atlas.pattern === 'straight' ? await enhanceStraightAtlas(b, atlas, entry.name) : b)
                 .resize(atlas.repeatPixels[0], atlas.repeatPixels[1])
-                .webp({ lossless: true })
+                .webp({ quality: 92, smartSubsample: true })
                 .toBuffer()
             : sharp(b)
                 .resize({ width: 512, height: 512, fit: 'inside', withoutEnlargement: true })

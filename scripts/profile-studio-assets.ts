@@ -1,6 +1,15 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { loadSiteData } from '../src/lib/data/load';
-import { prepareSceneWith, createMaterialLoader } from '../src/lib/studio/asset-loader';
+import {
+  prepareSceneWith,
+  createMaterialLoader,
+  TEXTURE_CACHE_BYTES,
+  TEXTURE_MAX_EDGE,
+} from '../src/lib/studio/asset-loader';
+import { MAX_FRAME_WIDTH } from '../src/lib/studio/presentation';
+import { RESULT_CACHE_BYTES } from '../src/lib/studio/render-controller';
+import budgets from '../verification/budgets.json';
+const frameBytes = MAX_FRAME_WIDTH * ((MAX_FRAME_WIDTH * 3) / 4) * 4;
 import { decodeNode } from './prepare-scenes';
 const data = loadSiteData(),
   catalog = { products: data.products.products, materials: data.materials },
@@ -50,20 +59,22 @@ for (const definition of data.materials.scenes) {
         (mask.mask[y * w + x] / 255) * (1 - scene.protectedMask[(y + by) * 1600 + x + bx] / 255);
   const budget = {
     controllerAndWorkerScene: sceneBytes * 2,
-    controllerTextureCache: 6 * 1024 * 1024,
+    controllerTextureCache: TEXTURE_CACHE_BYTES,
     twoWorkerMaterialSets: maxActiveMaterials * 2,
-    resultCache: 3 * 1024 * 1024,
+    resultCache: RESULT_CACHE_BYTES,
     incomingMipBuild: maxActiveMaterials,
-    fourTransientFrames: 4 * 960 * 720 * 4,
-    threeMaterialDecodeBuffers: 3 * 512 * 512 * 4,
+    fourTransientFrames: 4 * frameBytes,
+    threeMaterialDecodeBuffers: 3 * TEXTURE_MAX_EDGE * 512 * 4,
     displayedAndPreviousFallbackImages: 1600 * 1200 * 4 + 960 * 720 * 4,
   };
-  const scenePreparationBytes = sceneBytes + 6 * 1024 * 1024 + 3 * 1600 * 1200 * 4 + 960 * 720 * 4;
+  const scenePreparationBytes =
+    sceneBytes + TEXTURE_CACHE_BYTES + 3 * 1600 * 1200 * 4 + 960 * 720 * 4;
   const total = Math.max(
     scenePreparationBytes,
     Object.values(budget).reduce((n, b) => n + b, 0),
   );
-  if (total > 96 * 1024 * 1024) throw Error(`Owned allocation bound ${definition.id}: ${total}`);
+  if (total > budgets.ownedRenderBuffers)
+    throw Error(`Owned allocation bound ${definition.id}: ${total}`);
   const defaultMat = await loader.prepare(definition.defaultSelection, catalog, signal);
   const sourcePaths = new Set([
     definition.base,
@@ -92,7 +103,7 @@ for (const definition of data.materials.scenes) {
     firstUsefulBytes,
     firstUsefulTargetBytes: 2.5 * 1024 * 1024,
     ownedBytes: total,
-    ownedLimitBytes: 96 * 1024 * 1024,
+    ownedLimitBytes: budgets.ownedRenderBuffers,
     scenePreparationBytes,
     budget,
   });

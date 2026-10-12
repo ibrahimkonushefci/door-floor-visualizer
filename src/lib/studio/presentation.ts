@@ -29,6 +29,13 @@ export function presentFrame(
   back.width = 0;
   back.height = 0;
 }
+// Scenes are authored at 1600×1200; rendering beyond that only upsamples.
+export const MAX_FRAME_WIDTH = 1600;
+export const PREVIEW_FRAME_WIDTH = 720;
 export function finalFrameWidth(cssWidth: number, dpr: number) {
-  return Math.max(4, Math.floor(Math.min(960, cssWidth * Math.min(dpr, 2)) / 4) * 4);
+  return Math.max(4, Math.floor(Math.min(MAX_FRAME_WIDTH, cssWidth * Math.min(dpr, 2)) / 4) * 4);
+}
+// A quick first pass for immediate feedback; only worthwhile when the final frame is much larger.
+export function previewFrameWidth(finalWidth: number) {
+  return finalWidth > PREVIEW_FRAME_WIDTH * 1.4 ? PREVIEW_FRAME_WIDTH : null;
 }
