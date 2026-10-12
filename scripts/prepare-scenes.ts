@@ -96,6 +96,8 @@ export async function enhanceStraightAtlas(input: Buffer, atlas: StraightAtlas, 
     .png()
     .toBuffer();
 }
+// Studio scenes, in tab order. Each has brand/assets/scenes/<id>/calibration.json.
+export const STUDIO_SCENES = ['living-standard', 'corridor-standard', 'bedroom-photo'];
 export async function prepareScenes(check = false) {
   const raw = JSON.parse(await readFile('brand/materials.json', 'utf8'));
   const products = JSON.parse(await readFile('brand/products.json', 'utf8')).products;
@@ -145,8 +147,7 @@ export async function prepareScenes(check = false) {
       height: meta.height,
     });
   }
-  // Studio scenes, in tab order. Each has brand/assets/scenes/<id>/calibration.json.
-  for (const id of ['living-standard', 'corridor-standard', 'bedroom-photo']) {
+  for (const id of STUDIO_SCENES) {
     const dir = `brand/assets/scenes/${id}`,
       calBytes = await readFile(dir + '/calibration.json'),
       cal = calibrationSchema.parse(JSON.parse(calBytes.toString())),

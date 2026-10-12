@@ -7,61 +7,61 @@
       "scene": "living-standard",
       "name": "default",
       "width": 960,
-      "ms": 189.52620899999994
+      "ms": 187.94475
     },
     {
       "scene": "living-standard",
       "name": "magenta",
       "width": 1600,
-      "ms": 295.8115
+      "ms": 303.9724580000001
     },
     {
       "scene": "living-standard",
       "name": "scale-grid",
       "width": 1600,
-      "ms": 418.44325000000003
+      "ms": 310.5219579999999
     },
     {
       "scene": "living-standard",
       "name": "glass",
       "width": 1600,
-      "ms": 356.048667
+      "ms": 356.13741700000014
     },
     {
       "scene": "corridor-standard",
       "name": "default",
       "width": 960,
-      "ms": 174.65820800000006
+      "ms": 176.72645899999998
     },
     {
       "scene": "corridor-standard",
       "name": "magenta",
       "width": 1600,
-      "ms": 327.2013750000001
+      "ms": 323.76158399999986
     },
     {
       "scene": "corridor-standard",
       "name": "scale-grid",
       "width": 1600,
-      "ms": 354.9235829999998
+      "ms": 356.8394589999998
     },
     {
       "scene": "bedroom-photo",
       "name": "default",
       "width": 960,
-      "ms": 143.99754200000007
+      "ms": 140.59037500000022
     },
     {
       "scene": "bedroom-photo",
       "name": "magenta",
       "width": 1600,
-      "ms": 214.89816699999983
+      "ms": 211.22308299999986
     },
     {
       "scene": "bedroom-photo",
       "name": "scale-grid",
       "width": 1600,
-      "ms": 259.1177080000002
+      "ms": 258.92875000000004
     }
   ]
 }

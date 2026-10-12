@@ -181,3 +181,15 @@ section {
     transition-duration: 1ms !important;
   }
 }
+
+/* Gentle cross-fade between pages (Safari 18.2+, Chromium); none for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 220ms;
+    animation-timing-function: var(--ease);
+  }
+}
