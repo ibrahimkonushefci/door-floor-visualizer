@@ -1,4 +1,60 @@
-import type { OfflineProgress,WorkerCommand,WorkerReply } from './messages';
-export async function registerOfflineWorker():Promise<ServiceWorkerRegistration|null>{if(process.env.NODE_ENV!=='production'||!window.isSecureContext||!('serviceWorker' in navigator))return null;return navigator.serviceWorker.register('/sw.js',{scope:'/',updateViaCache:'none'});}
-export function workerRequest(registration:ServiceWorkerRegistration,command:WorkerCommand,onProgress?:(p:OfflineProgress)=>void,signal?:AbortSignal):Promise<WorkerReply>{return new Promise((resolve,reject)=>{const worker=registration.active;if(!worker){reject(new Error('Offline worker unavailable'));return;}const channel=new MessageChannel();const timer=setTimeout(()=>finish(new Error('Offline download timed out')),180000);const abort=()=>{worker.postMessage({type:'CANCEL_SAVE'});finish(new DOMException('Cancelled','AbortError'));};function finish(error?:Error,reply?:WorkerReply){clearTimeout(timer);signal?.removeEventListener('abort',abort);channel.port1.close();if(error)reject(error);else resolve(reply!);}signal?.addEventListener('abort',abort,{once:true});if(signal?.aborted){abort();return;}channel.port1.onmessage=(event:MessageEvent<WorkerReply>)=>{const reply=event.data;if(reply.type==='PROGRESS'){onProgress?.(reply.progress!);return;}if(reply.type==='ERROR')finish(new Error(reply.error));else if(reply.type==='CANCELLED')finish(new DOMException('Cancelled','AbortError'));else finish(undefined,reply);};worker.postMessage(command,[channel.port2]);});}
-export async function requestStudioCache(registration:ServiceWorkerRegistration,onProgress:(p:OfflineProgress)=>void,signal:AbortSignal):Promise<void>{await workerRequest(registration,{type:'SAVE_STUDIO'},onProgress,signal);}
+import type { OfflineProgress, WorkerCommand, WorkerReply } from './messages';
+export async function registerOfflineWorker(): Promise<ServiceWorkerRegistration | null> {
+  if (
+    process.env.NODE_ENV !== 'production' ||
+    !window.isSecureContext ||
+    !('serviceWorker' in navigator)
+  )
+    return null;
+  return navigator.serviceWorker.register('/sw.js', { scope: '/', updateViaCache: 'none' });
+}
+export function workerRequest(
+  registration: ServiceWorkerRegistration,
+  command: WorkerCommand,
+  onProgress?: (p: OfflineProgress) => void,
+  signal?: AbortSignal,
+): Promise<WorkerReply> {
+  return new Promise((resolve, reject) => {
+    const worker = registration.active;
+    if (!worker) {
+      reject(new Error('Offline worker unavailable'));
+      return;
+    }
+    const channel = new MessageChannel();
+    const timer = setTimeout(() => finish(new Error('Offline download timed out')), 180000);
+    const abort = () => {
+      worker.postMessage({ type: 'CANCEL_SAVE' });
+      finish(new DOMException('Cancelled', 'AbortError'));
+    };
+    function finish(error?: Error, reply?: WorkerReply) {
+      clearTimeout(timer);
+      signal?.removeEventListener('abort', abort);
+      channel.port1.close();
+      if (error) reject(error);
+      else resolve(reply!);
+    }
+    signal?.addEventListener('abort', abort, { once: true });
+    if (signal?.aborted) {
+      abort();
+      return;
+    }
+    channel.port1.onmessage = (event: MessageEvent<WorkerReply>) => {
+      const reply = event.data;
+      if (reply.type === 'PROGRESS') {
+        onProgress?.(reply.progress!);
+        return;
+      }
+      if (reply.type === 'ERROR') finish(new Error(reply.error));
+      else if (reply.type === 'CANCELLED') finish(new DOMException('Cancelled', 'AbortError'));
+      else finish(undefined, reply);
+    };
+    worker.postMessage(command, [channel.port2]);
+  });
+}
+export async function requestStudioCache(
+  registration: ServiceWorkerRegistration,
+  onProgress: (p: OfflineProgress) => void,
+  signal: AbortSignal,
+): Promise<void> {
+  await workerRequest(registration, { type: 'SAVE_STUDIO' }, onProgress, signal);
+}

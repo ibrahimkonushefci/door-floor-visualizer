@@ -1,20 +1,166 @@
-import { describe,it,expect } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { loadSiteData } from '../src/lib/data/load';
-import { buildSpecRows,relatedProducts } from '../src/lib/catalog/selectors';
-import { catalogReturnQuery,mergeProductQuery,parseProductQuery } from '../src/lib/catalog/query';
-import { buildInquiryMessage,buildInquiryUrl } from '../src/lib/inquiry/message';
+import { buildSpecRows, relatedProducts } from '../src/lib/catalog/selectors';
+import { catalogReturnQuery, mergeProductQuery, parseProductQuery } from '../src/lib/catalog/query';
+import { buildInquiryMessage, buildInquiryUrl } from '../src/lib/inquiry/message';
 import { resolveContactAction } from '../src/lib/inquiry/links';
 import { localeHref } from '../src/lib/i18n/locales';
-const data=loadSiteData(5);const door=data.products.products.find(p=>p.id==='dera-bardhe')!;if(door.kind!=='door')throw Error('Fixture door required');
-const inquiryData={brand:data.brand,products:data.products.products,materials:data.materials,scenes:data.materials.scenes};
-describe('product details',()=>{
- it('has two distinct, owned gallery views per published seed',()=>{expect(data.products.products).toHaveLength(12);for(const p of data.products.products){expect(p.imageIds).toHaveLength(2);expect(new Set(p.imageIds).size).toBe(2);for(const id of p.imageIds)expect(data.products.images.find(i=>i.id===id)?.source).toContain(`/${p.id}/`);}});
- it('valid variant query round trips and retains catalog state',()=>{const params=new URLSearchParams('category=interior-doors&saved=1&size=leaf-700&finish=kashmir');expect(parseProductQuery(params,door)).toEqual({sizeId:'leaf-700',finishId:'kashmir'});const merged=mergeProductQuery(params,door,parseProductQuery(params,door));expect(merged.toString()).toBe(params.toString());expect(catalogReturnQuery(params)).toBe('?category=interior-doors&saved=1');expect(localeHref('/sq/products/dera-bardhe/',params,'de')).toContain('/de/products/dera-bardhe/?category=interior-doors&saved=1&size=leaf-700&finish=kashmir');});
- it.each(['size=nope&finish=nope','size=%00&finish=xham-erret','x='+ 'x'.repeat(2100)])('normalizes invalid variants %s',raw=>{const params=new URLSearchParams(raw);const selected=parseProductQuery(params,door);expect(selected).toEqual({sizeId:door.defaultSizeId,finishId:door.defaultFinishId});expect(mergeProductQuery(params,door,selected).has('size')).toBe(false);expect(mergeProductQuery(params,door,selected).has('finish')).toBe(false);});
- it('omits unknown door dimensions and localizes engineering fields',()=>{const rows=buildSpecRows(door,data.materials,'en');expect(rows).toContainEqual({label:'Door leaf sizes',value:'70 × 200 cm / 80 × 200 cm / 90 × 200 cm'});expect(rows.some(r=>/rough|thickness/i.test(r.label))).toBe(false);expect(rows).toContainEqual({label:'Construction',value:'MDF'});expect(buildSpecRows(door,data.materials,'de')).toContainEqual({label:'Oberfläche',value:'CPL'});});
- it('keeps laminate ratings separate and omits AC/usage for parquet',()=>{const laminate=data.products.products.find(p=>p.id==='lis-natyral-10')!;expect(buildSpecRows(laminate,data.materials,'en')).toContainEqual({label:'AC class',value:'AC5'});expect(buildSpecRows(laminate,data.materials,'en')).toContainEqual({label:'Usage class',value:'33'});const parquet=data.products.products.find(p=>p.id==='peshk-natyral-12')!;const rows=buildSpecRows(parquet,data.materials,'en');expect(rows).toContainEqual({label:'Board dimensions',value:'600 × 120 mm'});expect(rows).toContainEqual({label:'Wear layer',value:'3 mm'});expect(rows.some(r=>/AC|Usage/.test(r.label))).toBe(false);});
- it('fills related products by category then stable order, excluding self/unpublished/duplicates',()=>{const product={...door,relatedProductIds:['dera-lis','dera-lis','dera-bardhe']};const related=relatedProducts(product,data);expect(related).toHaveLength(4);expect(related[0].id).toBe('dera-lis');expect(new Set(related.map(p=>p.id)).size).toBe(4);expect(related.some(p=>p.id===door.id)).toBe(false);const altered={...data,products:{...data.products,products:data.products.products.map(p=>({...p,published:p.id!=='dera-lis'}))}};expect(relatedProducts(product,altered).some(p=>p.id==='dera-lis')).toBe(false);});
- it('creates exact variant inquiry with a clean URL that reopens the selection',()=>{const context={kind:'product' as const,productId:door.id,sizeId:'leaf-700',finishId:'kashmir'};const source='https://demo.example/en/products/other/?category=laminate&saved=1&bad=x';const url=buildInquiryUrl(context,inquiryData,'sq',source);expect(url).toBe('https://demo.example/sq/products/dera-bardhe/?size=leaf-700&finish=kashmir');expect(parseProductQuery(new URL(url).searchParams,door)).toEqual({sizeId:'leaf-700',finishId:'kashmir'});const message=buildInquiryMessage(context,inquiryData,'sq',source);expect(message).toContain('Derë e bardhë mat (PD-DEMO-01)');expect(message).toContain('70 × 200 cm');expect(message).toContain('Kashmir');expect(message.endsWith(url)).toBe(true);for(const channel of ['phone','whatsapp','viber'] as const)expect(resolveContactAction(channel,data.brand,message,url).kind).toBe('preview');});
- it('new product inquiry replaces previous identity and invalid variants cannot send',()=>{const floor=buildInquiryMessage({kind:'product',productId:'peshk-natyral-12'},inquiryData,'de','https://demo.example/sq/products/dera-bardhe/?finish=kashmir');expect(floor).toContain('Naturparkett Fischgrät (PD-DEMO-06)');expect(floor).not.toContain('PD-DEMO-01');expect(floor).not.toContain('AC');expect(floor.endsWith('/de/products/peshk-natyral-12/')).toBe(true);expect(()=>buildInquiryMessage({kind:'product',productId:door.id,sizeId:'bad'},inquiryData,'en','https://demo.example')).toThrow('Invalid inquiry variant');});
- it('live fixtures encode the selected product URL once and bound Viber while retaining full copy',()=>{const context={kind:'product' as const,productId:door.id,sizeId:'leaf-700',finishId:'kashmir'};const source='https://catalog.example.com';const url=buildInquiryUrl(context,inquiryData,'de',source);const message=buildInquiryMessage(context,inquiryData,'de',source);const live={...data.brand,demoMode:false,contact:{phone:'+38344123456',whatsapp:'+38344123456',viber:'+38344123456'}};const whatsapp=resolveContactAction('whatsapp',live,message,url);if(whatsapp.kind!=='external')throw Error('Expected fixture link');expect(new URL(whatsapp.href).searchParams.get('text')).toBe(message);const full=message+'\n'+'ë ç ß & + '.repeat(30);const viber=resolveContactAction('viber',live,full,url);if(viber.kind!=='external')throw Error('Expected fixture link');expect(viber.fullMessage).toBe(full);expect(viber.copyRequired).toBe(true);const link=new URL(viber.href);expect(link.protocol).toBe('viber:');expect(link.hostname).toBe('forward');expect(link.searchParams.get('text')).toBe(`${data.brand.companyName}\n${url}`);expect(link.searchParams.get('text')!.length).toBeLessThanOrEqual(200);expect(link.searchParams.has('number')).toBe(false);});
+const data = loadSiteData(5);
+const door = data.products.products.find(p => p.id === 'dera-bardhe')!;
+if (door.kind !== 'door') throw Error('Fixture door required');
+const inquiryData = {
+  brand: data.brand,
+  products: data.products.products,
+  materials: data.materials,
+  scenes: data.materials.scenes,
+};
+describe('product details', () => {
+  it('has two distinct, owned gallery views per published seed', () => {
+    expect(data.products.products).toHaveLength(12);
+    for (const p of data.products.products) {
+      expect(p.imageIds).toHaveLength(2);
+      expect(new Set(p.imageIds).size).toBe(2);
+      for (const id of p.imageIds)
+        expect(data.products.images.find(i => i.id === id)?.source).toContain(`/${p.id}/`);
+    }
+  });
+  it('valid variant query round trips and retains catalog state', () => {
+    const params = new URLSearchParams(
+      'category=interior-doors&saved=1&size=leaf-700&finish=kashmir',
+    );
+    expect(parseProductQuery(params, door)).toEqual({ sizeId: 'leaf-700', finishId: 'kashmir' });
+    const merged = mergeProductQuery(params, door, parseProductQuery(params, door));
+    expect(merged.toString()).toBe(params.toString());
+    expect(catalogReturnQuery(params)).toBe('?category=interior-doors&saved=1');
+    expect(localeHref('/sq/products/dera-bardhe/', params, 'de')).toContain(
+      '/de/products/dera-bardhe/?category=interior-doors&saved=1&size=leaf-700&finish=kashmir',
+    );
+  });
+  it.each(['size=nope&finish=nope', 'size=%00&finish=xham-erret', 'x=' + 'x'.repeat(2100)])(
+    'normalizes invalid variants %s',
+    raw => {
+      const params = new URLSearchParams(raw);
+      const selected = parseProductQuery(params, door);
+      expect(selected).toEqual({ sizeId: door.defaultSizeId, finishId: door.defaultFinishId });
+      expect(mergeProductQuery(params, door, selected).has('size')).toBe(false);
+      expect(mergeProductQuery(params, door, selected).has('finish')).toBe(false);
+    },
+  );
+  it('omits unknown door dimensions and localizes engineering fields', () => {
+    const rows = buildSpecRows(door, data.materials, 'en');
+    expect(rows).toContainEqual({
+      label: 'Door leaf sizes',
+      value: '70 × 200 cm / 80 × 200 cm / 90 × 200 cm',
+    });
+    expect(rows.some(r => /rough|thickness/i.test(r.label))).toBe(false);
+    expect(rows).toContainEqual({ label: 'Construction', value: 'MDF' });
+    expect(buildSpecRows(door, data.materials, 'de')).toContainEqual({
+      label: 'Oberfläche',
+      value: 'CPL',
+    });
+  });
+  it('keeps laminate ratings separate and omits AC/usage for parquet', () => {
+    const laminate = data.products.products.find(p => p.id === 'lis-natyral-10')!;
+    expect(buildSpecRows(laminate, data.materials, 'en')).toContainEqual({
+      label: 'AC class',
+      value: 'AC5',
+    });
+    expect(buildSpecRows(laminate, data.materials, 'en')).toContainEqual({
+      label: 'Usage class',
+      value: '33',
+    });
+    const parquet = data.products.products.find(p => p.id === 'peshk-natyral-12')!;
+    const rows = buildSpecRows(parquet, data.materials, 'en');
+    expect(rows).toContainEqual({ label: 'Board dimensions', value: '600 × 120 mm' });
+    expect(rows).toContainEqual({ label: 'Wear layer', value: '3 mm' });
+    expect(rows.some(r => /AC|Usage/.test(r.label))).toBe(false);
+  });
+  it('fills related products by category then stable order, excluding self/unpublished/duplicates', () => {
+    const product = { ...door, relatedProductIds: ['dera-lis', 'dera-lis', 'dera-bardhe'] };
+    const related = relatedProducts(product, data);
+    expect(related).toHaveLength(4);
+    expect(related[0].id).toBe('dera-lis');
+    expect(new Set(related.map(p => p.id)).size).toBe(4);
+    expect(related.some(p => p.id === door.id)).toBe(false);
+    const altered = {
+      ...data,
+      products: {
+        ...data.products,
+        products: data.products.products.map(p => ({ ...p, published: p.id !== 'dera-lis' })),
+      },
+    };
+    expect(relatedProducts(product, altered).some(p => p.id === 'dera-lis')).toBe(false);
+  });
+  it('creates exact variant inquiry with a clean URL that reopens the selection', () => {
+    const context = {
+      kind: 'product' as const,
+      productId: door.id,
+      sizeId: 'leaf-700',
+      finishId: 'kashmir',
+    };
+    const source = 'https://demo.example/en/products/other/?category=laminate&saved=1&bad=x';
+    const url = buildInquiryUrl(context, inquiryData, 'sq', source);
+    expect(url).toBe('https://demo.example/sq/products/dera-bardhe/?size=leaf-700&finish=kashmir');
+    expect(parseProductQuery(new URL(url).searchParams, door)).toEqual({
+      sizeId: 'leaf-700',
+      finishId: 'kashmir',
+    });
+    const message = buildInquiryMessage(context, inquiryData, 'sq', source);
+    expect(message).toContain('Derë e bardhë mat (PD-DEMO-01)');
+    expect(message).toContain('70 × 200 cm');
+    expect(message).toContain('Kashmir');
+    expect(message.endsWith(url)).toBe(true);
+    for (const channel of ['phone', 'whatsapp', 'viber'] as const)
+      expect(resolveContactAction(channel, data.brand, message, url).kind).toBe('preview');
+  });
+  it('new product inquiry replaces previous identity and invalid variants cannot send', () => {
+    const floor = buildInquiryMessage(
+      { kind: 'product', productId: 'peshk-natyral-12' },
+      inquiryData,
+      'de',
+      'https://demo.example/sq/products/dera-bardhe/?finish=kashmir',
+    );
+    expect(floor).toContain('Naturparkett Fischgrät (PD-DEMO-06)');
+    expect(floor).not.toContain('PD-DEMO-01');
+    expect(floor).not.toContain('AC');
+    expect(floor.endsWith('/de/products/peshk-natyral-12/')).toBe(true);
+    expect(() =>
+      buildInquiryMessage(
+        { kind: 'product', productId: door.id, sizeId: 'bad' },
+        inquiryData,
+        'en',
+        'https://demo.example',
+      ),
+    ).toThrow('Invalid inquiry variant');
+  });
+  it('live fixtures encode the selected product URL once and bound Viber while retaining full copy', () => {
+    const context = {
+      kind: 'product' as const,
+      productId: door.id,
+      sizeId: 'leaf-700',
+      finishId: 'kashmir',
+    };
+    const source = 'https://catalog.example.com';
+    const url = buildInquiryUrl(context, inquiryData, 'de', source);
+    const message = buildInquiryMessage(context, inquiryData, 'de', source);
+    const live = {
+      ...data.brand,
+      demoMode: false,
+      contact: { phone: '+38344123456', whatsapp: '+38344123456', viber: '+38344123456' },
+    };
+    const whatsapp = resolveContactAction('whatsapp', live, message, url);
+    if (whatsapp.kind !== 'external') throw Error('Expected fixture link');
+    expect(new URL(whatsapp.href).searchParams.get('text')).toBe(message);
+    const full = message + '\n' + 'ë ç ß & + '.repeat(30);
+    const viber = resolveContactAction('viber', live, full, url);
+    if (viber.kind !== 'external') throw Error('Expected fixture link');
+    expect(viber.fullMessage).toBe(full);
+    expect(viber.copyRequired).toBe(true);
+    const link = new URL(viber.href);
+    expect(link.protocol).toBe('viber:');
+    expect(link.hostname).toBe('forward');
+    expect(link.searchParams.get('text')).toBe(`${data.brand.companyName}\n${url}`);
+    expect(link.searchParams.get('text')!.length).toBeLessThanOrEqual(200);
+    expect(link.searchParams.has('number')).toBe(false);
+  });
 });

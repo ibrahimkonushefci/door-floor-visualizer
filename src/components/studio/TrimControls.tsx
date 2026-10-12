@@ -1,3 +1,47 @@
 import type { TrimMode } from '@/lib/data/types';
 import type { Messages } from '@/lib/i18n/messages';
-export function TrimControls({frameMode,skirtingMode,allowedFrameModes,allowedSkirtingModes,onFrameChange,onSkirtingChange,messages:m}:{frameMode:TrimMode;skirtingMode:TrimMode;allowedFrameModes:readonly TrimMode[];allowedSkirtingModes:readonly TrimMode[];onFrameChange:(m:TrimMode)=>void;onSkirtingChange:(m:TrimMode)=>void;messages:Messages}){return <div className="trim-controls">{(['frame','skirting'] as const).map(key=>{const allowed=key==='frame'?allowedFrameModes:allowedSkirtingModes;return <label key={key}>{m[`inquiry.${key}`]}<select aria-label={m[`inquiry.${key}`]} disabled={allowed.length<=1} value={key==='frame'?frameMode:skirtingMode} onChange={e=>(key==='frame'?onFrameChange:onSkirtingChange)(e.target.value as TrimMode)}>{allowed.map(v=><option key={v} value={v}>{m[`studio.mode.${v}`]}</option>)}</select>{key==='frame'&&allowed.length===1&&<small>{m['studio.fixedFrame']}</small>}</label>;})}</div>;}
+export function TrimControls({
+  frameMode,
+  skirtingMode,
+  allowedFrameModes,
+  allowedSkirtingModes,
+  onFrameChange,
+  onSkirtingChange,
+  messages: m,
+}: {
+  frameMode: TrimMode;
+  skirtingMode: TrimMode;
+  allowedFrameModes: readonly TrimMode[];
+  allowedSkirtingModes: readonly TrimMode[];
+  onFrameChange: (m: TrimMode) => void;
+  onSkirtingChange: (m: TrimMode) => void;
+  messages: Messages;
+}) {
+  return (
+    <div className="trim-controls">
+      {(['frame', 'skirting'] as const).map(key => {
+        const allowed = key === 'frame' ? allowedFrameModes : allowedSkirtingModes;
+        return (
+          <label key={key}>
+            {m[`inquiry.${key}`]}
+            <select
+              aria-label={m[`inquiry.${key}`]}
+              disabled={allowed.length <= 1}
+              value={key === 'frame' ? frameMode : skirtingMode}
+              onChange={e =>
+                (key === 'frame' ? onFrameChange : onSkirtingChange)(e.target.value as TrimMode)
+              }
+            >
+              {allowed.map(v => (
+                <option key={v} value={v}>
+                  {m[`studio.mode.${v}`]}
+                </option>
+              ))}
+            </select>
+            {key === 'frame' && allowed.length === 1 && <small>{m['studio.fixedFrame']}</small>}
+          </label>
+        );
+      })}
+    </div>
+  );
+}

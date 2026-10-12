@@ -1,12 +1,105 @@
 'use client';
 import Image from 'next/image';
-import { useEffect,useRef,useState } from 'react';
-import type { RoomScene,StudioSelection } from '@/lib/data/types';
+import { useEffect, useRef, useState } from 'react';
+import type { RoomScene, StudioSelection } from '@/lib/data/types';
 import type { RenderController } from '@/lib/studio/types';
-import { presentFrame,finalFrameWidth } from '@/lib/studio/presentation';
-export function StudioCanvas({controller,selection,scene,onComplete,onError,compare=false,label,retry=0,requestedAt=0}:{controller:RenderController;selection:StudioSelection;scene:RoomScene;onComplete:(s:StudioSelection)=>void;onError:(message:string)=>void;compare?:boolean;label:string;retry?:number;requestedAt?:number}){const canvas=useRef<HTMLCanvasElement>(null),stage=useRef<HTMLDivElement>(null),lastSize=useRef(0);const [size,setSize]=useState(0),[hasFrame,setHasFrame]=useState(false);
- useEffect(()=>{const el=stage.current!;let timer:ReturnType<typeof setTimeout>;const observer=new ResizeObserver(entries=>{clearTimeout(timer);timer=setTimeout(()=>setSize(Math.floor(entries[0].contentRect.width)),100);});observer.observe(el);return()=>{observer.disconnect();clearTimeout(timer);};},[]);
- useEffect(()=>{if(!size)return;canvas.current?.setAttribute('data-render-status','pending');let current=true;const start=lastSize.current===size&&requestedAt?requestedAt:performance.now();lastSize.current=size;const width=finalFrameWidth(size,devicePixelRatio);
- const run=async()=>{try{const result=await controller.render({selection,width,height:width*3/4,quality:'settled',rendererVersion:2});if(!current)return;const c=canvas.current!;presentFrame(c,result.pixels);c.setAttribute('data-render-quality','settled');c.setAttribute('data-render-status','ready');c.setAttribute('data-presented-selection',JSON.stringify(result.selection));setHasFrame(true);const entries=JSON.parse(stage.current?.getAttribute('data-presentations')||'[]');entries.push({ms:performance.now()-start,width,selection:result.selection});stage.current?.setAttribute('data-presentations',JSON.stringify(entries.slice(-100)));onComplete(result.selection);}catch(e){if(current&&!(e instanceof DOMException&&e.name==='AbortError')){canvas.current?.setAttribute('data-render-status','error');onError(e instanceof Error?e.message:String(e));}}};void run();return()=>{current=false;controller.cancel();};},[controller,selection,scene.id,size,onComplete,onError,retry,requestedAt]);
- return <div ref={stage} className="studio-stage" data-scene={scene.id}><Image src={compare?scene.base:scene.fallback} alt={label} width={1600} height={1200} priority className="studio-fallback"/><canvas ref={canvas} role="img" aria-label={label} className="studio-canvas" style={{visibility:hasFrame&&!compare?'visible':'hidden'}}/></div>;
+import { presentFrame, finalFrameWidth } from '@/lib/studio/presentation';
+export function StudioCanvas({
+  controller,
+  selection,
+  scene,
+  onComplete,
+  onError,
+  compare = false,
+  label,
+  retry = 0,
+  requestedAt = 0,
+}: {
+  controller: RenderController;
+  selection: StudioSelection;
+  scene: RoomScene;
+  onComplete: (s: StudioSelection) => void;
+  onError: (message: string) => void;
+  compare?: boolean;
+  label: string;
+  retry?: number;
+  requestedAt?: number;
+}) {
+  const canvas = useRef<HTMLCanvasElement>(null),
+    stage = useRef<HTMLDivElement>(null),
+    lastSize = useRef(0);
+  const [size, setSize] = useState(0),
+    [hasFrame, setHasFrame] = useState(false);
+  useEffect(() => {
+    const el = stage.current!;
+    let timer: ReturnType<typeof setTimeout>;
+    const observer = new ResizeObserver(entries => {
+      clearTimeout(timer);
+      timer = setTimeout(() => setSize(Math.floor(entries[0].contentRect.width)), 100);
+    });
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      clearTimeout(timer);
+    };
+  }, []);
+  useEffect(() => {
+    if (!size) return;
+    canvas.current?.setAttribute('data-render-status', 'pending');
+    let current = true;
+    const start = lastSize.current === size && requestedAt ? requestedAt : performance.now();
+    lastSize.current = size;
+    const width = finalFrameWidth(size, devicePixelRatio);
+    const run = async () => {
+      try {
+        const result = await controller.render({
+          selection,
+          width,
+          height: (width * 3) / 4,
+          quality: 'settled',
+          rendererVersion: 2,
+        });
+        if (!current) return;
+        const c = canvas.current!;
+        presentFrame(c, result.pixels);
+        c.setAttribute('data-render-quality', 'settled');
+        c.setAttribute('data-render-status', 'ready');
+        c.setAttribute('data-presented-selection', JSON.stringify(result.selection));
+        setHasFrame(true);
+        const entries = JSON.parse(stage.current?.getAttribute('data-presentations') || '[]');
+        entries.push({ ms: performance.now() - start, width, selection: result.selection });
+        stage.current?.setAttribute('data-presentations', JSON.stringify(entries.slice(-100)));
+        onComplete(result.selection);
+      } catch (e) {
+        if (current && !(e instanceof DOMException && e.name === 'AbortError')) {
+          canvas.current?.setAttribute('data-render-status', 'error');
+          onError(e instanceof Error ? e.message : String(e));
+        }
+      }
+    };
+    void run();
+    return () => {
+      current = false;
+      controller.cancel();
+    };
+  }, [controller, selection, scene.id, size, onComplete, onError, retry, requestedAt]);
+  return (
+    <div ref={stage} className="studio-stage" data-scene={scene.id}>
+      <Image
+        src={compare ? scene.base : scene.fallback}
+        alt={label}
+        width={1600}
+        height={1200}
+        priority
+        className="studio-fallback"
+      />
+      <canvas
+        ref={canvas}
+        role="img"
+        aria-label={label}
+        className="studio-canvas"
+        style={{ visibility: hasFrame && !compare ? 'visible' : 'hidden' }}
+      />
+    </div>
+  );
 }

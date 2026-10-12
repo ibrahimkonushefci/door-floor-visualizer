@@ -1,4 +1,44 @@
-import {it,expect} from 'vitest';import {compositePixel} from '../src/lib/studio/render/composite';import {decode,encodeByte} from '../src/lib/studio/render/color';import {renderRows} from '../src/lib/studio/render/kernel';import {createByteLru} from '../src/lib/studio/render/cache';import {syntheticScene} from '../scripts/render-fixtures';
-it('50% coverage mixed once in linear light and overlapping masks fail',()=>{expect(encodeByte(compositePixel([0,0,0],[{rgb:[1,1,1],coverage:.5}])[0])).toBe(188);expect(()=>compositePixel([0,0,0],[{rgb:[1,1,1],coverage:.6},{rgb:[1,1,1],coverage:.6}])).toThrow('overlapping');});
-it('production kernel preserves zero mask and fully protected hardware byte-for-byte',()=>{const f=syntheticScene();f.scene.surfaces[0].mask.fill(0);const out={width:8,height:8,data:new Uint8ClampedArray(256)};renderRows(f.job,f.scene,f.materials,out,0,8);expect(out.data).toEqual(f.scene.base.data);f.scene.surfaces[0].mask.fill(255);f.scene.protectedMask.fill(255);renderRows(f.job,f.scene,f.materials,out,0,8);expect(out.data).toEqual(f.scene.base.data);expect(decode[64]).toBeGreaterThan(0);});
-it('byte LRU evicts and releases within budget',()=>{const disposed:number[]=[];const c=createByteLru<number>(96,v=>disposed.push(v));c.set('a',1,60);c.set('b',2,60);expect(c.bytes()).toBe(60);expect(c.get('a')).toBeUndefined();expect(disposed).toContain(1);c.set('large',3,97);expect(c.bytes()).toBe(60);c.clear();expect(c.bytes()).toBe(0);expect(disposed).toContain(2);});
+import { it, expect } from 'vitest';
+import { compositePixel } from '../src/lib/studio/render/composite';
+import { decode, encodeByte } from '../src/lib/studio/render/color';
+import { renderRows } from '../src/lib/studio/render/kernel';
+import { createByteLru } from '../src/lib/studio/render/cache';
+import { syntheticScene } from '../scripts/render-fixtures';
+it('50% coverage mixed once in linear light and overlapping masks fail', () => {
+  expect(encodeByte(compositePixel([0, 0, 0], [{ rgb: [1, 1, 1], coverage: 0.5 }])[0])).toBe(188);
+  expect(() =>
+    compositePixel(
+      [0, 0, 0],
+      [
+        { rgb: [1, 1, 1], coverage: 0.6 },
+        { rgb: [1, 1, 1], coverage: 0.6 },
+      ],
+    ),
+  ).toThrow('overlapping');
+});
+it('production kernel preserves zero mask and fully protected hardware byte-for-byte', () => {
+  const f = syntheticScene();
+  f.scene.surfaces[0].mask.fill(0);
+  const out = { width: 8, height: 8, data: new Uint8ClampedArray(256) };
+  renderRows(f.job, f.scene, f.materials, out, 0, 8);
+  expect(out.data).toEqual(f.scene.base.data);
+  f.scene.surfaces[0].mask.fill(255);
+  f.scene.protectedMask.fill(255);
+  renderRows(f.job, f.scene, f.materials, out, 0, 8);
+  expect(out.data).toEqual(f.scene.base.data);
+  expect(decode[64]).toBeGreaterThan(0);
+});
+it('byte LRU evicts and releases within budget', () => {
+  const disposed: number[] = [];
+  const c = createByteLru<number>(96, v => disposed.push(v));
+  c.set('a', 1, 60);
+  c.set('b', 2, 60);
+  expect(c.bytes()).toBe(60);
+  expect(c.get('a')).toBeUndefined();
+  expect(disposed).toContain(1);
+  c.set('large', 3, 97);
+  expect(c.bytes()).toBe(60);
+  c.clear();
+  expect(c.bytes()).toBe(0);
+  expect(disposed).toContain(2);
+});

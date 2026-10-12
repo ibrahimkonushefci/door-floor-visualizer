@@ -1,4 +1,24 @@
-import {it,expect} from 'vitest';import {buildMipChain,sampleTrilinear} from '../src/lib/studio/render/sampling';
-const pixels={width:2,height:2,data:new Uint8ClampedArray([255,255,255,255,0,0,0,255,0,0,0,255,255,255,255,255])};
-it('linear mips average black-white to.5, not sRGB127',()=>{const m=buildMipChain(pixels);expect(m[1].data[0]).toBe(.5);expect(sampleTrilinear(m,.3,.2,1)[0]).toBe(.5);});
-it('negative UV wraps and both sides of seam/mip boundary are continuous',()=>{const m=buildMipChain(pixels);expect(sampleTrilinear(m,-.2,-.3,.5)).toEqual(sampleTrilinear(m,.8,.7,.5));expect(Math.abs(sampleTrilinear(m,-1e-9,.2,.5)[0]-sampleTrilinear(m,1e-9,.2,.5)[0])).toBeLessThan(1e-6);expect(Math.abs(sampleTrilinear(m,.2,.2,.999999)[0]-sampleTrilinear(m,.2,.2,1.000001)[0])).toBeLessThan(1e-6);expect(()=>buildMipChain({...pixels,data:new Uint8ClampedArray(0)})).toThrow('dimensions');expect(()=>sampleTrilinear(m,NaN,0,0)).toThrow();});
+import { it, expect } from 'vitest';
+import { buildMipChain, sampleTrilinear } from '../src/lib/studio/render/sampling';
+const pixels = {
+  width: 2,
+  height: 2,
+  data: new Uint8ClampedArray([255, 255, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 255, 255, 255]),
+};
+it('linear mips average black-white to.5, not sRGB127', () => {
+  const m = buildMipChain(pixels);
+  expect(m[1].data[0]).toBe(0.5);
+  expect(sampleTrilinear(m, 0.3, 0.2, 1)[0]).toBe(0.5);
+});
+it('negative UV wraps and both sides of seam/mip boundary are continuous', () => {
+  const m = buildMipChain(pixels);
+  expect(sampleTrilinear(m, -0.2, -0.3, 0.5)).toEqual(sampleTrilinear(m, 0.8, 0.7, 0.5));
+  expect(
+    Math.abs(sampleTrilinear(m, -1e-9, 0.2, 0.5)[0] - sampleTrilinear(m, 1e-9, 0.2, 0.5)[0]),
+  ).toBeLessThan(1e-6);
+  expect(
+    Math.abs(sampleTrilinear(m, 0.2, 0.2, 0.999999)[0] - sampleTrilinear(m, 0.2, 0.2, 1.000001)[0]),
+  ).toBeLessThan(1e-6);
+  expect(() => buildMipChain({ ...pixels, data: new Uint8ClampedArray(0) })).toThrow('dimensions');
+  expect(() => sampleTrilinear(m, NaN, 0, 0)).toThrow();
+});
