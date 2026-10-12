@@ -12,6 +12,9 @@ import { formatDoorSize } from '@/lib/i18n/format';
 import { getMessages, localize } from '@/lib/i18n/messages';
 import { useInquiry } from '../inquiry/InquiryProvider';
 import { InquiryButton } from '../inquiry/InquiryButton';
+import { Swatch } from '../ui/Swatch';
+import { SegmentedControl } from '../ui/SegmentedControl';
+import { Icon } from '../ui/Icon';
 const readSearch = () => window.location.search;
 const serverSearch = () => '';
 export function ProductVariants({
@@ -40,47 +43,52 @@ export function ProductVariants({
     onChange?.({ sizeId, finishId });
     return () => setContext({ kind: 'catalog', productIds: [] });
   }, [product.id, sizeId, finishId, setContext, onChange]);
+  const available = finishes.filter(f => product.finishIds.includes(f.id)),
+    finish = available.find(f => f.id === finishId)!,
+    defaultFinish = finishes.find(f => f.id === product.defaultFinishId)!;
   return (
     <div className="product-variants">
-      <label htmlFor="leaf-size">
-        {m['inquiry.size']}
-        <select
-          id="leaf-size"
-          value={sizeId}
-          onChange={e => updateProductQuery(product, { sizeId: e.target.value, finishId })}
-        >
-          {product.sizes.map(s => (
-            <option key={s.id} value={s.id}>
-              {formatDoorSize(s, locale)}
-            </option>
+      <div className="variant" data-variant="finish">
+        <p className="variant-label">
+          <span className="eyebrow">{m['inquiry.finish']}</span>
+          <span className="variant-value">{localize(finish.name, locale)}</span>
+        </p>
+        <div className="variant-swatches" role="group" aria-label={m['inquiry.finish']}>
+          {available.map(f => (
+            <Swatch
+              key={f.id}
+              label={localize(f.name, locale)}
+              color={f.swatchColorSrgb}
+              texture={f.kind === 'opaque' && f.appearance.kind === 'texture' ? f.appearance.texture : undefined}
+              selected={f.id === finishId}
+              onSelect={() => updateProductQuery(product, { sizeId, finishId: f.id })}
+            />
           ))}
-        </select>
-      </label>
-      <label htmlFor="door-finish">
-        {m['inquiry.finish']}
-        <select
-          id="door-finish"
-          value={finishId}
-          onChange={e => updateProductQuery(product, { sizeId, finishId: e.target.value })}
-        >
-          {finishes
-            .filter(f => product.finishIds.includes(f.id))
-            .map(f => (
-              <option key={f.id} value={f.id}>
-                {localize(f.name, locale)}
-              </option>
-            ))}
-        </select>
-      </label>
-      <p className="product-note">
-        {m['product.photoFinish']}{' '}
-        {localize(finishes.find(f => f.id === product.defaultFinishId)!.name, locale)}.
-      </p>
-      <InquiryButton
-        context={{ kind: 'product', productId: product.id, sizeId, finishId }}
-        label={m['contact.quote']}
-      />
-      <ProductStudioLink productId={product.id} finishId={finishId} />
+        </div>
+        {finishId !== defaultFinish.id && (
+          <p className="product-note">
+            {m['product.photoFinish']}: {localize(defaultFinish.name, locale)}.
+          </p>
+        )}
+      </div>
+      <div className="variant" data-variant="size">
+        <p className="variant-label">
+          <span className="eyebrow">{m['inquiry.size']}</span>
+        </p>
+        <SegmentedControl
+          label={m['inquiry.size']}
+          value={sizeId}
+          options={product.sizes.map(s => ({ value: s.id, label: formatDoorSize(s, locale) }))}
+          onChange={id => updateProductQuery(product, { sizeId: id, finishId })}
+        />
+      </div>
+      <div className="product-actions">
+        <InquiryButton
+          context={{ kind: 'product', productId: product.id, sizeId, finishId }}
+          label={m['contact.quote']}
+        />
+        <ProductStudioLink productId={product.id} finishId={finishId} />
+      </div>
     </div>
   );
 }
@@ -91,10 +99,10 @@ export function ProductInquiry({ productId }: { productId: Id }) {
     return () => setContext({ kind: 'catalog', productIds: [] });
   }, [productId, setContext]);
   return (
-    <>
+    <div className="product-actions">
       <InquiryButton context={{ kind: 'product', productId }} label={m['contact.quote']} />
       <ProductStudioLink productId={productId} />
-    </>
+    </div>
   );
 }
 export function CatalogBackLink({ locale, label }: { locale: Locale; label: string }) {
@@ -104,7 +112,8 @@ export function CatalogBackLink({ locale, label }: { locale: Locale; label: stri
       className="catalog-back"
       href={`/${locale}/${catalogReturnQuery(new URLSearchParams(search))}`}
     >
-      ← {label}
+      <Icon name="arrow-left" size={16} />
+      {label}
     </a>
   );
 }
@@ -121,11 +130,9 @@ function ProductStudioLink({ productId, finishId }: { productId: Id; finishId?: 
     query.set('finish', finishId || p.defaultFinishId);
   } else query.set('floor', p.id);
   return (
-    <>
-      <a className="plain-button" href={`/${locale}/studio/?${query}`}>
-        {m['studio.open']}
-      </a>
-      {p.kind === 'door' && <p className="product-note">{m['studio.sizeRepresentative']}</p>}
-    </>
+    <a className="btn btn-secondary" href={`/${locale}/studio/?${query}`}>
+      <Icon name="studio" size={18} />
+      {m['studio.open']}
+    </a>
   );
 }

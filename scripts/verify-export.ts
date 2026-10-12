@@ -112,18 +112,21 @@ export async function verifyExport() {
         !$('title').text().includes(localize(p.name, locale))
       )
         throw new Error('Missing localized static product content');
-      const photos = $('.product-gallery img');
+      const photos = $('.gallery-photo img');
       if (
         photos.length !== p.imageIds.length ||
         !$('table caption').text() ||
-        $('select').length !== (p.kind === 'door' ? 2 : 0)
+        (p.kind === 'door'
+          ? $('[data-variant="size"] button').length !== p.sizes.length ||
+            $('[data-variant="finish"] button').length !== p.finishIds.length
+          : $('[data-variant]').length !== 0)
       )
         throw new Error('Invalid detail contract');
       const stack = $('.product-gallery').children();
       if (
         !stack.eq(0).hasClass('gallery-photo') ||
         !stack.eq(1).hasClass('product-info') ||
-        !stack.eq(2).hasClass('gallery-photo')
+        (p.imageIds.length > 1 && !stack.eq(2).hasClass('gallery-rest'))
       )
         throw new Error('Wrong mobile reading order');
       photos.each((i, el) => {

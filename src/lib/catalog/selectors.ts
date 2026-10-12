@@ -137,6 +137,5 @@ export function buildSpecRows(
     add('spec.core', m[`value.${product.material}`]);
   }
   add('spec.origin', formatOrigin(product.originCountry, locale));
-  if (product.evidence.status === 'demo') add('spec.evidence', m['demo.badge']);
   return rows;
 }

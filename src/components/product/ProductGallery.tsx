@@ -1,10 +1,10 @@
 'use client';
-import { Fragment, useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type PhotoSwipe from 'photoswipe';
 import type { ResponsiveImageData } from '@/lib/media/types';
 import { ResponsiveImage } from '../ui/ResponsiveImage';
+import { Icon } from '../ui/Icon';
 import { useInquiry } from '../inquiry/InquiryProvider';
-// Optional facts slot preserves the public gallery call and puts mobile reading/focus order first.
 export function ProductGallery({
   images,
   productName,
@@ -68,27 +68,33 @@ export function ProductGallery({
       opening.current = false;
     }
   }
+  const photo = (image: ResponsiveImageData, index: number) => (
+    <button
+      key={image.id}
+      className="gallery-photo"
+      aria-label={`${m['product.zoom']}: ${productName} (${index + 1}/${images.length})`}
+      onClick={e => void open(index, e.currentTarget)}
+    >
+      <ResponsiveImage
+        image={image}
+        sizes="(min-width:1200px) 760px, (min-width:768px) 58vw, 100vw"
+        eager={index === 0}
+        priority={index === 0}
+        fit="contain"
+      />
+      <span className="gallery-zoom" aria-hidden="true">
+        <Icon name="expand" size={18} />
+      </span>
+    </button>
+  );
+  // Reading order on phones: first photo, then the details, then the rest.
   return (
-    <div className={`product-gallery${children ? ' has-facts' : ''}`} aria-label={productName}>
-      {images.map((image, index) => (
-        <Fragment key={image.id}>
-          <button
-            className="gallery-photo"
-            aria-label={`${m['product.zoom']}: ${productName} (${index + 1}/${images.length})`}
-            onClick={e => void open(index, e.currentTarget)}
-          >
-            <ResponsiveImage
-              image={image}
-              sizes="(min-width:1200px) 760px, (min-width:768px) 60vw, 100vw"
-              eager={index === 0}
-              priority={index === 0}
-              fit="contain"
-            />
-            <span className="gallery-zoom-label">{m['product.zoom']}</span>
-          </button>
-          {index === 0 && children}
-        </Fragment>
-      ))}
+    <div className="product-gallery" aria-label={productName}>
+      {images.length > 0 && photo(images[0], 0)}
+      {children}
+      {images.length > 1 && (
+        <div className="gallery-rest">{images.slice(1).map((image, i) => photo(image, i + 1))}</div>
+      )}
       {error && (
         <p className="gallery-error" role="status">
           {m['product.galleryError']}
