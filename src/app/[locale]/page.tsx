@@ -1,7 +1,8 @@
 import { readFileSync } from 'node:fs';
 import { notFound } from 'next/navigation';
 import { isLocale } from '@/lib/i18n/locales';
-import { getMessages } from '@/lib/i18n/messages';
+import { getMessages, localize } from '@/lib/i18n/messages';
+import { revisionStudioAssets } from '@/lib/studio/revisions';
 import { loadSiteData } from '@/lib/data/load';
 import { categoryForProduct, selectProducts, toProductCard } from '@/lib/catalog/selectors';
 import type { ImageManifest } from '@/lib/media/types';
@@ -22,5 +23,14 @@ export default async function CatalogPage({ params }: { params: Promise<{ locale
     ...toProductCard(product, data, locale, images),
     category: categoryForProduct(product, data.materials),
   }));
-  return <CatalogClient products={products} locale={locale} messages={getMessages(locale)} />;
+  const scene = revisionStudioAssets(data.materials).scenes[0];
+  return (
+    <CatalogClient
+      products={products}
+      locale={locale}
+      messages={getMessages(locale)}
+      tagline={localize(data.brand.tagline, locale)}
+      invite={scene ? { href: `/${locale}/studio/`, image: scene.fallback } : null}
+    />
+  );
 }

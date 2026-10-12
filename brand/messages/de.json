@@ -150,5 +150,11 @@
   "offline.quota": "Nicht genügend Speicher. Gespeichertes Studio entfernen oder Speicher freigeben und erneut versuchen.",
   "offline.failure": "Download fehlgeschlagen. Eine zuvor gespeicherte Kopie bleibt erhalten.",
   "offline.note": "Gespeichert werden beide Räume und alle Materialien, bis zu 20 MiB. Der Katalog speichert nur besuchte Seiten. Der erste Besuch braucht Internet.",
-  "offline.label": "Offline-Nutzung"
+  "offline.label": "Offline-Nutzung",
+  "footer.explore": "Entdecken",
+  "footer.contact": "Kontakt",
+  "footer.demo": "Demo-Konzept — Produkte und Bilder sind illustrativ.",
+  "studio.inviteTitle": "Jede Oberfläche in einem echten Raum sehen",
+  "studio.inviteBody": "Türen, Böden und Leisten kombinieren — und die Auswahl mit einem Tipp senden.",
+  "studio.inviteAction": "Studio öffnen"
 }

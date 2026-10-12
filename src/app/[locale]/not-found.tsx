@@ -10,7 +10,9 @@ export default function NotFound() {
   return (
     <section className="empty-state">
       <h1>{m['error.title']}</h1>
-      <a href={`/${locale}/`}>{m['error.back']}</a>
+      <a className="btn btn-secondary" href={`/${locale}/`}>
+        {m['error.back']}
+      </a>
     </section>
   );
 }

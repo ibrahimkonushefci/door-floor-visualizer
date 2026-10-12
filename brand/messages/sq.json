@@ -150,5 +150,11 @@
   "offline.quota": "Nuk ka hapësirë të mjaftueshme. Hiq Studio e ruajtur ose liro hapësirë dhe provo sërish.",
   "offline.failure": "Shkarkimi dështoi. Kopja e mëparshme e ruajtur mbahet nëse ekziston.",
   "offline.note": "Ruajtja përfshin të dyja dhomat dhe të gjitha materialet, deri në 20 MiB. Katalogu ruan vetëm faqet e vizituara. Vizita e parë kërkon internet.",
-  "offline.label": "Përdorimi offline"
+  "offline.label": "Përdorimi offline",
+  "footer.explore": "Eksploroni",
+  "footer.contact": "Kontakti",
+  "footer.demo": "Koncept demonstrues — produktet dhe fotot janë ilustruese.",
+  "studio.inviteTitle": "Shihni çdo ngjyrë në një dhomë të vërtetë",
+  "studio.inviteBody": "Kombinoni dyert, dyshemetë dhe pervazet — dhe dërgoni zgjedhjen tuaj me një prekje.",
+  "studio.inviteAction": "Hapni Studion"
 }

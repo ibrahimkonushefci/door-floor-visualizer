@@ -5,6 +5,7 @@ import { GlobalOfflineStatus } from '../offline/OfflineStatus';
 import { OfflineProvider } from '../offline/OfflineProvider';
 import { Header } from './Header';
 import { MobileContactBar } from './MobileContactBar';
+import { Footer } from './Footer';
 export interface AppShellProps {
   brand: BrandConfig;
   locale: Locale;
@@ -19,6 +20,7 @@ export function AppShell({ brand, locale, messages, children, studioEnabled }: A
       <main id="main-content" className="content">
         {children}
       </main>
+      <Footer brand={brand} locale={locale} messages={messages} studioEnabled={studioEnabled} />
       <GlobalOfflineStatus messages={messages} />
       <MobileContactBar locale={locale} messages={messages} />
     </OfflineProvider>

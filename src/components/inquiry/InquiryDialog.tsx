@@ -28,7 +28,7 @@ export function InquiryDialog({
       }}
     >
       <button
-        className="dialog-close icon-button"
+        className="dialog-close icon-btn icon-btn-plain"
         onClick={() => {
           setCopyState('idle');
           onClose();
@@ -38,18 +38,18 @@ export function InquiryDialog({
       >
         <Icon name="close" />
       </button>
-      <p>{data.brand.demoMode ? m['contact.demoBody'] : m['inquiry.viber']}</p>
+      <p className="dialog-lead">{data.brand.demoMode ? m['contact.demoBody'] : m['inquiry.viber']}</p>
       <p className="recipient">
         {m['contact.recipient']}: {data.brand.contact[channel] || '—'}
       </p>
       <textarea aria-label={m['contact.copy']} readOnly value={text} rows={5} />
       <div className="dialog-actions">
-        <button className="primary-button" onClick={copy}>
+        <button className="btn btn-primary" onClick={copy}>
           <Icon name="copy" />
           {m['contact.copy']}
         </button>
         {action?.kind === 'external' && (
-          <a className="plain-button" href={action.href}>
+          <a className="btn btn-secondary" href={action.href}>
             {m['contact.viber']}
           </a>
         )}

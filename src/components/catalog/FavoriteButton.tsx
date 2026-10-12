@@ -9,7 +9,7 @@ export function FavoriteButton({ productId, productName }: { productId: Id; prod
   const saved = ids.has(productId);
   return (
     <button
-      className="favorite-button icon-button"
+      className="favorite-button"
       disabled={!ready}
       aria-pressed={saved}
       aria-label={`${m[saved ? 'catalog.removeSaved' : 'catalog.addSaved']}: ${productName}`}

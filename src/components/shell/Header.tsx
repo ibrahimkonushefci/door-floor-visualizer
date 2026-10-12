@@ -6,15 +6,13 @@ import { parseCatalogQuery, subscribeCatalogQuery, updateCatalogQuery } from '@/
 import { useInquiry } from '../inquiry/InquiryProvider';
 import type { BrandConfig, Locale } from '@/lib/data/types';
 import type { Messages } from '@/lib/i18n/messages';
-import { localize } from '@/lib/i18n/messages';
 import { Icon } from '../ui/Icon';
 import { InquiryButton } from '../inquiry/InquiryButton';
 import { LanguageMenu } from './LanguageMenu';
-import { DemoBadge } from './DemoBadge';
 export function Header({
   brand,
   locale,
-  messages,
+  messages: m,
   studioEnabled,
 }: {
   brand: BrandConfig;
@@ -24,17 +22,30 @@ export function Header({
 }) {
   const { ids, ready } = useFavorites();
   const { context } = useInquiry();
-  const isStudio = useSyncExternalStore(
+  const path = useSyncExternalStore(
     subscribeCatalogQuery,
-    () => window.location.pathname.includes('/studio/'),
-    () => false,
+    () => window.location.pathname,
+    () => '',
   );
   const search = useSyncExternalStore(
     subscribeCatalogQuery,
     () => window.location.search,
     () => '',
   );
-  const query = parseCatalogQuery(new URLSearchParams(search));
+  const isStudio = path.includes('/studio/'),
+    isCatalog = path === `/${locale}/`,
+    query = parseCatalogQuery(new URLSearchParams(search)),
+    savedLabel = `${m['nav.saved']}: ${ids.size}`;
+  const savedContent = (
+    <>
+      <Icon name="heart" />
+      {ids.size > 0 && (
+        <span className="saved-count" aria-hidden="true">
+          {ids.size}
+        </span>
+      )}
+    </>
+  );
   return (
     <header className="site-header">
       <div className="header-inner">
@@ -46,50 +57,46 @@ export function Header({
             alt=""
             className="brand-logo"
           />
-          <span className="brand-name" title={localize(brand.logo.alt, locale)}>
-            {brand.shortName}
-          </span>
+          <span className="brand-name">{brand.shortName}</span>
         </a>
-        {brand.demoMode && <DemoBadge label={messages['demo.badge']} />}
-        <div className="header-controls">
-          {studioEnabled ? (
-            <a className="studio-control" href={`/${locale}/studio/`}>
-              {messages['nav.studio']}
-            </a>
-          ) : (
-            <button
-              className="studio-control"
-              disabled
-              aria-label={`${messages['nav.studio']} · ${messages['nav.unavailable']}`}
-              title={messages['nav.unavailable']}
-            >
-              {messages['nav.studio']}
-            </button>
-          )}
-          <LanguageMenu locale={locale} messages={messages} />
-          {isStudio ? (
+        <nav className="header-nav" aria-label={m['catalog.title']}>
+          <a
+            className="nav-link nav-catalog"
+            href={`/${locale}/`}
+            aria-current={isCatalog ? 'page' : undefined}
+          >
+            {m['catalog.title']}
+          </a>
+          {studioEnabled && (
             <a
-              className="icon-button saved-control"
-              href={`/${locale}/?saved=1`}
-              aria-label={`${messages['nav.saved']}: ${ids.size}`}
+              className="nav-link"
+              href={`/${locale}/studio/`}
+              aria-current={isStudio ? 'page' : undefined}
             >
-              <Icon name="heart" />
-              <span>{ids.size}</span>
+              <Icon name="studio" size={18} />
+              <span>{m['nav.studio']}</span>
             </a>
-          ) : (
+          )}
+        </nav>
+        <div className="header-tools">
+          <LanguageMenu locale={locale} messages={m} />
+          {isCatalog ? (
             <button
-              className="icon-button saved-control"
+              className="header-icon saved-control"
               disabled={!ready}
               aria-pressed={query.savedOnly}
-              aria-label={`${messages['nav.saved']}: ${ids.size}`}
+              aria-label={savedLabel}
               onClick={() => updateCatalogQuery({ ...query, savedOnly: !query.savedOnly })}
             >
-              <Icon name="heart" />
-              <span>{ids.size}</span>
+              {savedContent}
             </button>
+          ) : (
+            <a className="header-icon saved-control" href={`/${locale}/?saved=1`} aria-label={savedLabel}>
+              {savedContent}
+            </a>
           )}
           <div className="desktop-contact">
-            <InquiryButton context={context} label={messages['contact.quote']} />
+            <InquiryButton context={context} label={m['contact.quote']} />
           </div>
         </div>
       </div>

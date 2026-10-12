@@ -10,8 +10,12 @@ export function EmptyState({
 }) {
   return (
     <div className="empty-state">
-      <p>{title}</p>
-      {actionLabel && onAction && <button onClick={onAction}>{actionLabel}</button>}
+      <p className="empty-title">{title}</p>
+      {actionLabel && onAction && (
+        <button className="btn btn-secondary" onClick={onAction}>
+          {actionLabel}
+        </button>
+      )}
     </div>
   );
 }

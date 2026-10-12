@@ -5,14 +5,16 @@ export function InquiryButton({
   context,
   channel = 'whatsapp',
   label,
+  variant = 'primary',
 }: {
   context: InquiryContext;
   channel?: ContactChannel;
   label: string;
+  variant?: 'primary' | 'secondary';
 }) {
   const { open } = useInquiry();
   return (
-    <button className="primary-button" onClick={() => open(channel, context)}>
+    <button className={`btn btn-${variant}`} onClick={() => open(channel, context)}>
       {label}
     </button>
   );

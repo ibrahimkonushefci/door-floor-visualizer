@@ -150,5 +150,11 @@
   "offline.quota": "Not enough storage. Remove saved Studio or free space and try again.",
   "offline.failure": "Download failed. Any previous saved copy is retained.",
   "offline.note": "Saving includes both rooms and all materials, up to 20 MiB. The catalog caches visited pages only. The first visit needs internet.",
-  "offline.label": "Offline use"
+  "offline.label": "Offline use",
+  "footer.explore": "Explore",
+  "footer.contact": "Contact",
+  "footer.demo": "Demo concept — products and imagery are illustrative.",
+  "studio.inviteTitle": "See every finish in a real room",
+  "studio.inviteBody": "Pair doors, floors and trim — then send your combination in one tap.",
+  "studio.inviteAction": "Open the Studio"
 }

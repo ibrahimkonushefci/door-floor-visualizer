@@ -1,0 +1,266 @@
+/* Catalog: editorial intro, sticky category row, Lookbook-style cards. */
+.catalog-intro {
+  padding: var(--space-8) 0 var(--space-4);
+}
+.catalog-intro h1 {
+  font-size: var(--display-lg);
+}
+.catalog-lead {
+  max-width: 46ch;
+  margin-top: var(--space-2);
+  font-size: var(--text-body);
+  color: var(--color-muted);
+}
+.category-row {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin: 0 calc(-1 * var(--gutter)) var(--space-5);
+  padding: var(--space-2) var(--gutter);
+  background: var(--color-bg);
+}
+.category-scroll {
+  display: flex;
+  flex: 1;
+  gap: var(--space-2);
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.category-scroll::-webkit-scrollbar {
+  display: none;
+}
+.category-pill {
+  flex: none;
+  min-height: 38px;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-md);
+  white-space: nowrap;
+  color: var(--color-text);
+  transition:
+    background-color var(--duration-fast) var(--ease),
+    border-color var(--duration-fast) var(--ease),
+    color var(--duration-fast) var(--ease);
+}
+.category-pill:hover {
+  border-color: var(--color-text);
+}
+.category-pill[aria-pressed='true'] {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+.catalog-count {
+  display: none;
+  flex: none;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+.catalog-pending {
+  padding: var(--space-8) 0;
+  color: var(--color-muted);
+}
+
+/* Grid and cards */
+.product-grid {
+  display: grid;
+  /* dense: the full-width Studio tile never leaves a half-empty row */
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-8) var(--space-3);
+}
+.product-card {
+  position: relative;
+  min-width: 0;
+}
+.card-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius-photo);
+  background: var(--color-sunk);
+}
+.card-photo-link,
+.card-image picture,
+.card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.card-image img {
+  transition: transform 600ms var(--ease);
+}
+.product-card:hover .card-image img {
+  transform: scale(1.025);
+}
+.card-badge {
+  position: absolute;
+  left: var(--space-2);
+  bottom: var(--space-2);
+  max-width: calc(100% - var(--space-4));
+  overflow: hidden;
+  padding: 3px 7px;
+  border-radius: var(--radius-control);
+  background: var(--color-translucent);
+  font-size: var(--text-2xs);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+.favorite-button {
+  position: absolute;
+  z-index: 2;
+  top: var(--space-1);
+  right: var(--space-1);
+  display: grid;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  border-radius: 50%;
+  color: var(--color-text);
+}
+.favorite-button::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background: var(--color-translucent);
+  box-shadow: var(--shadow-ring);
+  z-index: -1;
+}
+.favorite-button svg {
+  width: 18px;
+  height: 18px;
+}
+.favorite-button[aria-pressed='true'] svg {
+  fill: var(--color-text);
+}
+.card-title {
+  margin-top: var(--space-3);
+  font-size: var(--text-lg);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+.card-title a::after {
+  /* the whole card is the title link's hit area, except the heart */
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+.card-meta {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+.product-card:focus-within {
+  outline: none;
+}
+.card-title a:focus-visible {
+  outline: none;
+}
+.card-title a:focus-visible::after {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
+  border-radius: var(--radius-photo);
+}
+
+/* Studio invitation, woven into the grid */
+.studio-invite {
+  grid-column: 1 / -1;
+  display: grid;
+  overflow: hidden;
+  border-radius: var(--radius-panel);
+  background: var(--color-sunk);
+}
+.studio-invite-text {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: var(--space-3);
+  padding: var(--space-6);
+}
+.studio-invite-title {
+  max-width: 18ch;
+  font-family: var(--font-serif);
+  font-size: var(--display-md);
+  font-weight: 500;
+  line-height: 1.08;
+}
+.studio-invite-body {
+  max-width: 40ch;
+  font-size: var(--text-md);
+  color: var(--color-muted);
+}
+.studio-invite-action {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  font-size: var(--text-md);
+  font-weight: 500;
+}
+.studio-invite-action svg {
+  transition: transform var(--duration) var(--ease);
+}
+.studio-invite:hover .studio-invite-action svg {
+  transform: translateX(4px);
+}
+.studio-invite-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Empty state */
+.empty-state {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-5);
+  padding: var(--space-16) var(--space-4);
+  text-align: center;
+}
+.empty-title {
+  max-width: 28ch;
+  font-family: var(--font-serif);
+  font-size: var(--display-sm);
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .catalog-intro {
+    padding: var(--space-12) 0 var(--space-6);
+  }
+  .catalog-count {
+    display: block;
+  }
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-10) var(--space-5);
+  }
+  .studio-invite {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+    min-height: 300px;
+  }
+  .studio-invite-text {
+    padding: var(--space-10);
+  }
+  .card-title {
+    font-size: var(--display-xs);
+  }
+}
+@media (min-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

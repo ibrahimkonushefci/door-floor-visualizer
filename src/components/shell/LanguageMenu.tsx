@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { Locale } from '@/lib/data/types';
 import type { Messages } from '@/lib/i18n/messages';
 import { locales, localeHref } from '@/lib/i18n/locales';
+import { Icon } from '../ui/Icon';
 export function LanguageMenu({ locale, messages }: { locale: Locale; messages: Messages }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -64,13 +65,14 @@ export function LanguageMenu({ locale, messages }: { locale: Locale; messages: M
     >
       <button
         ref={button}
-        className="icon-button language-toggle"
+        className="header-icon language-toggle"
         aria-label={`${messages['nav.language']}: ${locale.toUpperCase()}`}
         aria-expanded={open}
         aria-controls="language-options"
         onClick={() => setOpen(!open)}
       >
-        {locale.toUpperCase()}
+        <span>{locale.toUpperCase()}</span>
+        <Icon name="chevron-down" size={14} />
       </button>
       {open && (
         <nav

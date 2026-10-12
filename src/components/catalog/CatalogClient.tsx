@@ -12,7 +12,7 @@ import {
 import { useFavorites } from '@/lib/favorites/useFavorites';
 import { useInquiry } from '../inquiry/InquiryProvider';
 import { CategoryPills } from './CategoryPills';
-import { ProductGrid } from './ProductGrid';
+import { ProductGrid, type StudioInvite } from './ProductGrid';
 import { EmptyState } from '../ui/EmptyState';
 const readSearch = () => window.location.search;
 const serverSearch = () => '';
@@ -20,10 +20,14 @@ export function CatalogClient({
   products,
   locale,
   messages: m,
+  tagline,
+  invite,
 }: {
   products: readonly ProductCardDataWithCategory[];
   locale: Locale;
   messages: Messages;
+  tagline: string;
+  invite: StudioInvite | null;
 }) {
   const search = useSyncExternalStore(subscribeCatalogQuery, readSearch, serverSearch);
   const query = parseCatalogQuery(new URLSearchParams(search));
@@ -49,26 +53,32 @@ export function CatalogClient({
       (!query.savedOnly || ids.has(p.id)),
   );
   return (
-    <section aria-labelledby="catalog-title">
+    <section className="catalog" aria-labelledby="catalog-title">
+      <header className="catalog-intro">
+        <h1 id="catalog-title">{m['catalog.title']}</h1>
+        <p className="catalog-lead">{tagline}</p>
+      </header>
       <CategoryPills
         value={query.category}
         onChange={category => updateCatalogQuery({ ...query, category })}
         messages={m}
+        count={
+          <span className="catalog-count" aria-live="polite">
+            {waiting ? '…' : filtered.length}{' '}
+            {m[filtered.length === 1 ? 'catalog.countSingular' : 'catalog.count']}
+          </span>
+        }
       />
-      <div className="catalog-label">
-        <h1 id="catalog-title">{m['catalog.title']}</h1>
-        <span className="catalog-count" aria-live="polite">
-          {waiting ? '…' : filtered.length}{' '}
-          {m[filtered.length === 1 ? 'catalog.countSingular' : 'catalog.count']}
-        </span>
-        <span className="catalog-attribution">{m['catalog.illustrative']}</span>
-      </div>
       {waiting ? (
         <p role="status" className="catalog-pending">
           {m['common.loading']}
         </p>
       ) : filtered.length ? (
-        <ProductGrid products={filtered} locale={locale} />
+        <ProductGrid
+          products={filtered}
+          locale={locale}
+          invite={invite ? { ...invite, messages: m } : undefined}
+        />
       ) : (
         <EmptyState
           title={query.savedOnly && ids.size === 0 ? m['catalog.noSaved'] : m['catalog.noResults']}
