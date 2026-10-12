@@ -46,75 +46,155 @@ export function red(
     for (let i = 0; i < w; i++) a[j * w + i] = p.data[((j + y) * p.width + i + x) * 4];
   return a;
 }
-// The photographed door's own leaf/frame gap is left uncovered by both masks, so
-// it would keep the original paint colour. Mark pixels that are near both the
-// leaf and a frame, uncovered and unprotected; the kernel shades them as shadow.
-const REVEAL_RADIUS = 5;
-function dilate(src: Uint8Array, w: number, h: number, r: number) {
-  const row = new Uint8Array(w * h),
-    out = new Uint8Array(w * h);
-  for (let y = 0; y < h; y++)
-    for (let x = 0; x < w; x++) {
-      let m = 0;
-      for (let k = Math.max(0, x - r); k <= Math.min(w - 1, x + r) && m < 255; k++)
-        m = Math.max(m, src[y * w + k]);
-      row[y * w + x] = m;
-    }
-  for (let y = 0; y < h; y++)
-    for (let x = 0; x < w; x++) {
-      let m = 0;
-      for (let k = Math.max(0, y - r); k <= Math.min(h - 1, y + r) && m < 255; k++)
-        m = Math.max(m, row[k * w + x]);
-      out[y * w + x] = m;
-    }
-  return out;
+// The authored leaf and casing masks leave the photograph's own jambs, mitre
+// joints and leaf gap uncovered, so those pixels would keep the original paint.
+// Unify the door assembly: every uncovered pixel enclosed by the leaf/casing
+// (horizontally or vertically) joins the nearest casing piece, lit from the
+// base photograph; only a hairline band against the leaf stays a shadow reveal.
+const REVEAL_PX = 2;
+interface FullSurface {
+  definition: RoomScene['surfaces'][number];
+  mask: Uint8Array;
+  diffuse: Uint8Array;
 }
-export function revealMask(
-  surfaces: readonly PreparedScene['surfaces'][number][],
+export function unifyDoorAssembly(
+  surfaces: readonly FullSurface[],
+  others: readonly { mask: Uint8Array; bounds: readonly [number, number, number, number] }[],
   protectedMask: Uint8Array,
-  sceneWidth: number,
+  base: PixelBuffer,
 ): PreparedScene['reveal'] {
-  const leaf = surfaces.filter(s => s.definition.role === 'door-leaf'),
+  const W = base.width,
+    leaves = surfaces.filter(s => s.definition.role === 'door-leaf'),
     frames = surfaces.filter(s => s.definition.role === 'frame');
-  if (!leaf.length || !frames.length) return null;
-  const around = [...leaf, ...frames].map(s => s.bounds),
-    x0 = Math.max(0, Math.min(...around.map(b => b[0])) - REVEAL_RADIUS),
-    y0 = Math.max(0, Math.min(...around.map(b => b[1])) - REVEAL_RADIUS),
-    x1 = Math.min(sceneWidth, Math.max(...around.map(b => b[0] + b[2])) + REVEAL_RADIUS),
-    y1 = Math.max(...around.map(b => b[1] + b[3])) + REVEAL_RADIUS,
+  if (!leaves.length || !frames.length) return null;
+  const boxes = frames.map(f => f.definition.mask.boundsPx),
+    x0 = Math.min(...boxes.map(b => b[0])),
+    y0 = Math.min(...boxes.map(b => b[1])),
+    x1 = Math.max(...boxes.map(b => b[0] + b[2])),
+    y1 = Math.max(...boxes.map(b => b[1] + b[3])),
     w = x1 - x0,
-    h = y1 - y0;
-  const paint = (list: typeof surfaces) => {
-    const out = new Uint8Array(w * h);
-    for (const s of list) {
-      const [bx, by, bw, bh] = s.bounds;
-      for (let j = 0; j < bh; j++)
-        for (let i = 0; i < bw; i++) {
-          const x = bx + i - x0,
-            y = by + j - y0;
-          if (x >= 0 && y >= 0 && x < w && y < h)
-            out[y * w + x] = Math.min(255, out[y * w + x] + s.mask[j * bw + i]);
-        }
-    }
-    return out;
-  };
-  const covered = paint(surfaces),
-    nearLeaf = dilate(paint(leaf), w, h, REVEAL_RADIUS),
-    nearFrame = dilate(paint(frames), w, h, REVEAL_RADIUS),
-    mask = new Uint8Array(w * h);
-  let any = false;
+    h = y1 - y0,
+    at = (x: number, y: number) => (y + y0) * W + x + x0;
+  const covered = new Uint16Array(w * h),
+    solid = new Uint8Array(w * h),
+    leafDist = new Int32Array(w * h).fill(-1),
+    frameDist = new Int32Array(w * h).fill(-1),
+    frameOf = new Int8Array(w * h).fill(-1);
+  const leafQueue: number[] = [],
+    frameQueue: number[] = [];
   for (let y = 0; y < h; y++)
     for (let x = 0; x < w; x++) {
       const i = y * w + x,
-        open = 255 - covered[i],
-        guard = protectedMask[(y + y0) * sceneWidth + x + x0];
-      if (open > 0 && guard < 128 && nearLeaf[i] > 127 && nearFrame[i] > 127) {
-        mask[i] = open;
-        any = true;
+        p = at(x, y);
+      let sum = 0;
+      for (const s of surfaces) sum += s.mask[p];
+      for (const o of others) {
+        const [bx, by, bw, bh] = o.bounds,
+          ox = x + x0 - bx,
+          oy = y + y0 - by;
+        if (ox >= 0 && oy >= 0 && ox < bw && oy < bh) sum += o.mask[oy * bw + ox];
+      }
+      covered[i] = sum;
+      if (leaves.some(l => l.mask[p] > 127)) {
+        solid[i] = 1;
+        leafDist[i] = 0;
+        leafQueue.push(i);
+      }
+      const f = frames.findIndex(f => f.mask[p] > 127);
+      if (f >= 0) {
+        solid[i] = 1;
+        frameDist[i] = 0;
+        frameOf[i] = f;
+        frameQueue.push(i);
       }
     }
-  return any ? { mask, bounds: [x0, y0, w, h] } : null;
+  // Chebyshev breadth-first distances inside the assembly box.
+  const spread = (queue: number[], dist: Int32Array, label?: Int8Array) => {
+    for (let q = 0; q < queue.length; q++) {
+      const i = queue[q],
+        x = i % w,
+        y = (i / w) | 0;
+      for (let dy = -1; dy <= 1; dy++)
+        for (let dx = -1; dx <= 1; dx++) {
+          const nx = x + dx,
+            ny = y + dy;
+          if (nx < 0 || ny < 0 || nx >= w || ny >= h) continue;
+          const n = ny * w + nx;
+          if (dist[n] >= 0) continue;
+          dist[n] = dist[i] + 1;
+          if (label) label[n] = label[i];
+          queue.push(n);
+        }
+    }
+  };
+  spread(leafQueue, leafDist);
+  spread(frameQueue, frameDist, frameOf);
+  // Repeat until stable: filled jamb strips enclose the mitre corners above them.
+  const reveal = new Uint8Array(w * h);
+  let any = false,
+    changed = true;
+  for (let pass = 0; changed && pass < 4; pass++) {
+    changed = false;
+    const rowMin = new Int32Array(h).fill(w),
+      rowMax = new Int32Array(h).fill(-1),
+      colMin = new Int32Array(w).fill(h),
+      colMax = new Int32Array(w).fill(-1);
+    for (let y = 0; y < h; y++)
+      for (let x = 0; x < w; x++)
+        if (solid[y * w + x]) {
+          rowMin[y] = Math.min(rowMin[y], x);
+          rowMax[y] = Math.max(rowMax[y], x);
+          colMin[x] = Math.min(colMin[x], y);
+          colMax[x] = Math.max(colMax[x], y);
+        }
+    for (let y = 0; y < h; y++)
+      for (let x = 0; x < w; x++) {
+        const i = y * w + x,
+          p = at(x, y),
+          open = 255 - Math.min(255, covered[i]);
+        if (solid[i] || open <= 0 || protectedMask[p] >= 128) continue;
+        const enclosed = (rowMin[y] < x && x < rowMax[y]) || (colMin[x] < y && y < colMax[x]);
+        if (!enclosed) continue;
+        solid[i] = 1;
+        covered[i] = 255;
+        changed = true;
+        if (leafDist[i] >= 0 && leafDist[i] <= REVEAL_PX) {
+          reveal[i] = open;
+          any = true;
+        } else if (frameOf[i] >= 0) {
+          const frame = frames[frameOf[i]],
+            b = base.data;
+          frame.mask[p] += open;
+          if (!frame.diffuse[p])
+            frame.diffuse[p] = Math.round(
+              0.2126 * b[p * 4] + 0.7152 * b[p * 4 + 1] + 0.0722 * b[p * 4 + 2],
+            );
+        }
+      }
+  }
+  return any ? { mask: reveal, bounds: [x0, y0, w, h] } : null;
 }
+function boundsOf(mask: Uint8Array, width: number, fallback: readonly [number, number, number, number]) {
+  const [fx, fy, fw, fh] = fallback;
+  let x0 = Infinity,
+    y0 = Infinity,
+    x1 = -1,
+    y1 = -1;
+  for (let y = Math.max(0, fy - 64); y < Math.min(mask.length / width, fy + fh + 64); y++)
+    for (let x = Math.max(0, fx - 64); x < Math.min(width, fx + fw + 64); x++)
+      if (mask[y * width + x]) {
+        x0 = Math.min(x0, x);
+        y0 = Math.min(y0, y);
+        x1 = Math.max(x1, x);
+        y1 = Math.max(y1, y);
+      }
+  return x1 < 0 ? fallback : ([x0, y0, x1 - x0 + 1, y1 - y0 + 1] as const);
+}
+const crop = (full: Uint8Array, width: number, [x, y, w, h]: readonly number[]) => {
+  const out = new Uint8Array(w * h);
+  for (let j = 0; j < h; j++) out.set(full.subarray((y + j) * width + x, (y + j) * width + x + w), j * w);
+  return out;
+};
 export async function prepareSceneWith(
   scene: RoomScene,
   signal: AbortSignal,
@@ -128,14 +208,53 @@ export async function prepareSceneWith(
   };
   const base = await load(scene.base),
     protectedMask = red(await load(scene.protectedMask.alpha));
-  const surfaces = [];
+  // Leaf and casing layers are kept full-size until the assembly is unified.
+  const door = new Set(['door-leaf', 'frame']);
+  const full: FullSurface[] = [],
+    loaded: {
+      definition: RoomScene['surfaces'][number];
+      mask: Uint8Array;
+      diffuse: Uint8Array;
+      bounds: readonly [number, number, number, number];
+      specular: PixelBuffer | null;
+      full?: FullSurface;
+    }[] = [];
   for (const definition of scene.surfaces) {
-    const bounds = definition.mask.boundsPx,
-      mask = red(await load(definition.mask.alpha), bounds),
-      diffuse = red(await load(definition.lighting.diffuse), bounds);
+    const bounds = definition.mask.boundsPx;
+    const specularImage = definition.lighting.specular ? await load(definition.lighting.specular) : null;
+    if (door.has(definition.role)) {
+      const entry = {
+        definition,
+        mask: red(await load(definition.mask.alpha)),
+        diffuse: red(await load(definition.lighting.diffuse)),
+      };
+      full.push(entry);
+      loaded.push({ definition, mask: entry.mask, diffuse: entry.diffuse, bounds, specular: specularImage, full: entry });
+    } else
+      loaded.push({
+        definition,
+        mask: red(await load(definition.mask.alpha), bounds),
+        diffuse: red(await load(definition.lighting.diffuse), bounds),
+        bounds,
+        specular: specularImage,
+      });
+  }
+  const reveal = unifyDoorAssembly(
+    full,
+    loaded.filter(l => !l.full),
+    protectedMask,
+    base,
+  );
+  const surfaces = loaded.map(l => {
+    let { mask, diffuse, bounds } = l;
+    if (l.full) {
+      bounds = boundsOf(l.full.mask, scene.width, l.bounds);
+      mask = crop(l.full.mask, scene.width, bounds);
+      diffuse = crop(l.full.diffuse, scene.width, bounds);
+    }
     let specular: PixelBuffer | null = null;
-    if (definition.lighting.specular) {
-      const p = await load(definition.lighting.specular),
+    if (l.specular) {
+      const p = l.specular,
         [x, y, w, h] = bounds,
         data = new Uint8ClampedArray(w * h * 4);
       for (let j = 0; j < h; j++)
@@ -145,18 +264,17 @@ export async function prepareSceneWith(
         );
       specular = { width: w, height: h, data };
     }
-    surfaces.push({
-      definition,
+    return {
+      definition: l.definition,
       inverse: invertHomography(
-        solveHomography(definition.mapping.worldQuadMm, definition.mapping.imageQuad01),
+        solveHomography(l.definition.mapping.worldQuadMm, l.definition.mapping.imageQuad01),
       ),
       mask,
       diffuse,
       specular,
       bounds,
-    });
-  }
-  const reveal = revealMask(surfaces, protectedMask, scene.width);
+    };
+  });
   const inserts = new Map(),
     insertMasks = new Map();
   for (const insert of scene.doorInserts) {

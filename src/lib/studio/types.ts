@@ -80,6 +80,4 @@ export interface RenderController {
   ): Promise<{ jobId: number; pixels: PixelBuffer; selection: StudioSelection }>;
   cancel(): void;
   dispose(): void;
-  /** True when this exact frame is already cached (render will resolve instantly). */
-  has(job: Omit<RenderJob, 'id'>): boolean;
 }

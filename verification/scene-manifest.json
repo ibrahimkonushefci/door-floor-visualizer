@@ -562,18 +562,18 @@
     {
       "source": "brand/assets/scenes/living-standard/calibration.json",
       "output": "/media/scenes/living-standard/fallback.webp",
-      "sha256": "9fad93394fe677205334104bcbb0db0275ecb747125adee11c222537bd8e229e",
+      "sha256": "e8de31b729eeb0d42afcf1e3011d715637cc4e7193e8d092e268672af5d45bb8",
       "sourceSha256": "582c74fd4f74d320397c2cbb43d90ba524d4ba433a2137cb4148a9f24b1cd695",
-      "bytes": 33408,
+      "bytes": 33342,
       "width": 960,
       "height": 720
     },
     {
       "source": "brand/assets/scenes/corridor-standard/calibration.json",
       "output": "/media/scenes/corridor-standard/fallback.webp",
-      "sha256": "b8d29378725b429ea1f883d4d6431fe463d59ec32e1c471c1e664fcc97993237",
+      "sha256": "ed6a1f5e73f626775f171831030d13caa93f54044533800373486c9c375c91ac",
       "sourceSha256": "a474f322cacfd3e06fe352f18ec65a26d58d4362df91611523ae5053e45b07a8",
-      "bytes": 33412,
+      "bytes": 33446,
       "width": 960,
       "height": 720
     }

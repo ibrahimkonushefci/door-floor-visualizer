@@ -4,11 +4,12 @@ import type { RoomScene, StudioSelection } from '@/lib/data/types';
 import type { RenderController } from '@/lib/studio/types';
 import type { PixelBuffer } from '@/lib/studio/render/sampling';
 import type { Messages } from '@/lib/i18n/messages';
-import { finalFrameWidth, presentFrame, previewFrameWidth } from '@/lib/studio/presentation';
+import { finalFrameWidth, presentFrame } from '@/lib/studio/presentation';
 import { IconButton } from '../ui/IconButton';
 const FADE_MS = 260;
-// The stage keeps the last frame on screen and cross-fades each new one in,
-// so material changes feel like a showroom light switch rather than a reload.
+// The stage keeps the last sharp frame on screen (with a hairline progress bar)
+// until the full-resolution frame is ready, then cross-fades it in. No
+// low-resolution intermediate is ever shown.
 export function StudioStage({
   controller,
   scene,
@@ -80,22 +81,11 @@ export function StudioStage({
     };
     const width = finalFrameWidth(size, devicePixelRatio),
       job = { selection, width, height: (width * 3) / 4, quality: 'settled' as const, rendererVersion: 2 as const },
-      preview = previewFrameWidth(width),
       start = performance.now();
     const run = async () => {
       setPending(true);
       setFailed(false);
       try {
-        if (preview && !controller.has(job)) {
-          const quick = await controller.render({
-            ...job,
-            width: preview,
-            height: (preview * 3) / 4,
-            quality: 'preview',
-          });
-          if (!current) return;
-          present(quick.pixels);
-        }
         const result = await controller.render(job);
         if (!current) return;
         present(result.pixels);

@@ -1,5 +1,5 @@
 import { it, expect, vi, afterEach } from 'vitest';
-import { finalFrameWidth, presentFrame, previewFrameWidth } from '../src/lib/studio/presentation';
+import { finalFrameWidth, presentFrame } from '../src/lib/studio/presentation';
 import { createMaterialLoader } from '../src/lib/studio/asset-loader';
 import { createRenderController } from '../src/lib/studio/render-controller';
 import {
@@ -15,8 +15,6 @@ afterEach(() => vi.unstubAllGlobals());
 it('uses final resolution on every selection, including narrow high-DPR stages', () => {
   expect(finalFrameWidth(900, 2)).toBe(1600);
   expect(finalFrameWidth(760, 2)).toBe(1520);
-  expect(previewFrameWidth(1520)).toBe(720);
-  expect(previewFrameWidth(780)).toBeNull();
   expect(finalFrameWidth(390, 2)).toBe(780);
   expect(finalFrameWidth(390, 3)).toBe(780);
   expect(finalFrameWidth(768, 1)).toBe(768);

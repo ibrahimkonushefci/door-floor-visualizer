@@ -1,11 +1,12 @@
 // Dev tool: render one Studio combination at full scene resolution to a PNG.
-// Usage: tsx scripts/render-preview.ts <scene> <door> <finish> <floor> <out.png> [rotation 0|90]
+// Usage: tsx scripts/render-preview.ts <scene> <door> <finish> <floor> <out.png> [rotation 0|90] [frame] [skirting]
 import sharp from 'sharp';
+import type { TrimMode } from '../src/lib/data/types';
 import { loadSiteData } from '../src/lib/data/load';
 import { prepareSceneWith, createMaterialLoader } from '../src/lib/studio/asset-loader';
 import { renderRows } from '../src/lib/studio/render/kernel';
 import { decodeNode } from './prepare-scenes';
-const [sceneId, door, finish, floor, out, rotation = '0'] = process.argv.slice(2);
+const [sceneId, door, finish, floor, out, rotation = '0', frame, skirting] = process.argv.slice(2);
 if (!out) throw new Error('Usage: render-preview <scene> <door> <finish> <floor> <out.png> [0|90]');
 const data = loadSiteData();
 const catalog = { products: data.products.products, materials: data.materials };
@@ -24,6 +25,8 @@ const selection = {
   doorFinishId: finish,
   floorProductId: floor,
   floorRotationDeg: (rotation === '90' ? 90 : 0) as 0 | 90,
+  ...(frame ? { frameMode: frame as TrimMode } : {}),
+  ...(skirting ? { skirtingMode: skirting as TrimMode } : {}),
 };
 const materials = await createMaterialLoader(decodeNode).prepare(selection, catalog, signal);
 const { width, height } = definition;

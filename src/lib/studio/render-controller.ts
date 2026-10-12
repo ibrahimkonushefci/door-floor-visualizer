@@ -100,7 +100,6 @@ export function createRenderController(
   };
   const controller: RenderController = {
     cancel,
-    has: job => cache.get(cacheKey(job)) !== undefined,
     dispose() {
       cancel();
       disposed = true;
