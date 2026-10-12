@@ -21,8 +21,8 @@ export default async function StudioPage({ params }: { params: Promise<{ locale:
   const data = loadSiteData(),
     messages = getMessages(locale);
   return (
-    <>
-      <h1 className="studio-heading">{messages['nav.studio']}</h1>
+    <div className="studio-page">
+      <h1 className="visually-hidden">{messages['nav.studio']}</h1>
       <StudioLoader
         locale={locale}
         messages={messages}
@@ -31,6 +31,6 @@ export default async function StudioPage({ params }: { params: Promise<{ locale:
           materials: revisionStudioAssets(data.materials),
         }}
       />
-    </>
+    </div>
   );
 }

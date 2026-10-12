@@ -11,7 +11,12 @@ body {
   margin: 0;
   background: var(--color-bg);
   color: var(--color-text);
-  font: 400 var(--text-body) / 1.55 var(--font-sans);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: 400;
+  line-height: 1.55;
+  /* Cormorant defaults to old-style figures ("1omm"); sizes must read cleanly. */
+  font-variant-numeric: lining-nums;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -104,7 +109,10 @@ section {
   border: 0;
 }
 .eyebrow {
-  font: 500 var(--text-2xs) / 1.4 var(--font-sans);
+  font-family: var(--font-sans);
+  font-size: var(--text-2xs);
+  font-weight: 500;
+  line-height: 1.4;
   letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
   color: var(--color-muted);
@@ -126,7 +134,10 @@ section {
   padding: 0 var(--space-5);
   border: 1px solid transparent;
   border-radius: var(--radius-control);
-  font: 500 var(--text-md) / 1.2 var(--font-sans);
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  font-weight: 500;
+  line-height: 1.2;
   letter-spacing: 0.01em;
   white-space: nowrap;
   transition:

@@ -10,9 +10,9 @@ export function InquiryButton({
   channel?: ContactChannel;
   label: string;
 }) {
-  const { open, blocked } = useInquiry();
+  const { open } = useInquiry();
   return (
-    <button className="primary-button" disabled={blocked} onClick={() => open(channel, context)}>
+    <button className="primary-button" onClick={() => open(channel, context)}>
       {label}
     </button>
   );

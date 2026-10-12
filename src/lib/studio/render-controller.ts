@@ -86,8 +86,21 @@ export function createRenderController(
     workerScene = null;
     workerMaterials = null;
   };
+  const cacheKey = (job: Omit<RenderJob, 'id'>) => {
+    const definition = catalog.materials.scenes.find(s => s.id === job.selection.sceneId)!;
+    return JSON.stringify([
+      definition.id,
+      definition.assetRevision,
+      job.selection,
+      job.width,
+      job.height,
+      job.quality,
+      job.rendererVersion,
+    ]);
+  };
   const controller: RenderController = {
     cancel,
+    has: job => cache.get(cacheKey(job)) !== undefined,
     dispose() {
       cancel();
       disposed = true;
@@ -105,15 +118,7 @@ export function createRenderController(
         signal = abort.signal,
         start = performance.now(),
         definition = catalog.materials.scenes.find(s => s.id === job.selection.sceneId)!;
-      const key = JSON.stringify([
-        definition.id,
-        definition.assetRevision,
-        job.selection,
-        job.width,
-        job.height,
-        job.quality,
-        job.rendererVersion,
-      ]);
+      const key = cacheKey(job);
       const cached = cache.get(key);
       if (cached) {
         options.onTiming?.({

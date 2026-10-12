@@ -20,8 +20,6 @@ interface ContextValue {
   locale: Locale;
   messages: Messages;
   channel: ContactChannel;
-  blocked: boolean;
-  setBlocked: (value: boolean) => void;
 }
 const Inquiry = createContext<ContextValue | null>(null);
 export function useInquiry() {
@@ -40,12 +38,10 @@ export function InquiryProvider({
   messages: Messages;
   children: ReactNode;
 }) {
-  const [blocked, setBlocked] = useState(false);
   const [channel, setChannel] = useState<ContactChannel>('whatsapp');
   const [context, setContext] = useState<InquiryContext>({ kind: 'catalog', productIds: [] });
   const [action, setAction] = useState<ContactAction | null>(null);
   function open(channel: ContactChannel, override?: InquiryContext) {
-    if (blocked) return;
     setChannel(channel);
     const url = new URL(window.location.href);
     if (data.brand.siteUrl) {
@@ -66,7 +62,7 @@ export function InquiryProvider({
       validIds={data.products.filter(p => p.published).map(p => p.id)}
     >
       <Inquiry.Provider
-        value={{ context, setContext, open, data, locale, messages, channel, blocked, setBlocked }}
+        value={{ context, setContext, open, data, locale, messages, channel }}
       >
         {children}
         <InquiryDialog action={action} onClose={() => setAction(null)} />

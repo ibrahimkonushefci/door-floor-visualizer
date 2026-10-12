@@ -4,11 +4,10 @@ import type { Messages } from '@/lib/i18n/messages';
 import { useInquiry } from '../inquiry/InquiryProvider';
 import { Icon } from '../ui/Icon';
 export function MobileContactBar({ locale, messages }: { locale: Locale; messages: Messages }) {
-  const { open, blocked } = useInquiry();
+  const { open } = useInquiry();
   return (
     <nav className="mobile-contact-bar" aria-label={messages['contact.quote']} lang={locale}>
       <button
-        disabled={blocked}
         className="bar-side"
         aria-label={messages['contact.call']}
         onClick={() => open('phone')}
@@ -17,7 +16,6 @@ export function MobileContactBar({ locale, messages }: { locale: Locale; message
         <span>{messages['contact.call']}</span>
       </button>
       <button
-        disabled={blocked}
         className="primary-button"
         aria-label={`${messages['contact.quote']} · WhatsApp`}
         onClick={() => open('whatsapp')}
@@ -26,7 +24,6 @@ export function MobileContactBar({ locale, messages }: { locale: Locale; message
         <span>{messages['contact.quote']}</span>
       </button>
       <button
-        disabled={blocked}
         className="bar-side"
         aria-label={messages['contact.viber']}
         onClick={() => open('viber')}
