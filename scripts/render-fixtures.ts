@@ -5,11 +5,12 @@ import { renderRows } from '../src/lib/studio/render/kernel';
 import { decode } from '../src/lib/studio/render/color';
 import { loadSiteData } from '../src/lib/data/load';
 import { prepareSceneWith, prepareMaterialsWith } from '../src/lib/studio/asset-loader';
-import { decodeNode } from './prepare-scenes';
+import { decodeNode, bytesNode } from './prepare-scenes';
 import type { PreparedScene, PreparedMaterials, RenderJob } from '../src/lib/studio/types';
 export function syntheticScene() {
   const data = loadSiteData(),
-    s = structuredClone(data.materials.scenes[0]),
+    // A photo scene: the approved golden fixture predates rendered scenes.
+    s = structuredClone(data.materials.scenes.find(v => v.id === 'living-standard')!),
     selection = { ...s.defaultSelection };
   s.width = s.height = 8;
   const def = {
@@ -80,12 +81,12 @@ async function fixtures() {
     signal = new AbortController().signal;
   const timings = [];
   for (const s of data.materials.scenes) {
-    const scene = await prepareSceneWith(s, signal, decodeNode),
+    const scene = await prepareSceneWith(s, signal, decodeNode, { loadBytes: bytesNode }),
       mat = await prepareMaterialsWith(s.defaultSelection, catalog, signal, decodeNode);
     for (const [name, quality, width] of [
       ['default', 'settled', 960],
-      ['magenta', 'settled', 1600],
-      ['scale-grid', 'settled', 1600],
+      ['magenta', 'settled', s.width],
+      ['scale-grid', 'settled', s.width],
       ...(s.id === 'living-standard' ? [['glass', 'settled', 1600] as const] : []),
     ] as const) {
       let m = mat,
@@ -118,6 +119,7 @@ async function fixtures() {
             ),
             floorCollections: mat.data.floorCollections.map(c => ({
               ...c,
+              planks: undefined,
               atlas: { ...c.atlas, image: '/media/debug.png' },
               trim: { appearance: { kind: 'solid', colorSrgb: '#FF00FF' }, specularStrength: 0 },
             })),
@@ -140,6 +142,7 @@ async function fixtures() {
             ...mat.data,
             floorCollections: mat.data.floorCollections.map(c => ({
               ...c,
+              planks: undefined,
               atlas: { ...c.atlas, image: '/media/debug.png', repeatSizeMm: [2000, 2000] },
             })),
           },

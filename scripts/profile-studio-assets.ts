@@ -6,22 +6,39 @@ import {
   TEXTURE_CACHE_BYTES,
   TEXTURE_MAX_EDGE,
 } from '../src/lib/studio/asset-loader';
-import { MAX_FRAME_WIDTH } from '../src/lib/studio/presentation';
+import { MAX_FRAME_WIDTH, MAX_RENDERED_FRAME_WIDTH } from '../src/lib/studio/presentation';
 import { RESULT_CACHE_BYTES } from '../src/lib/studio/render-controller';
 import budgets from '../verification/budgets.json';
-const frameBytes = MAX_FRAME_WIDTH * ((MAX_FRAME_WIDTH * 3) / 4) * 4;
-import { decodeNode } from './prepare-scenes';
+const frameBytesFor = (width: number) => width * ((width * 3) / 4) * 4;
+import { decodeNode, bytesNode } from './prepare-scenes';
 const data = loadSiteData(),
   catalog = { products: data.products.products, materials: data.materials },
   signal = new AbortController().signal,
   results = [];
 const textureBytes = (m: Awaited<ReturnType<ReturnType<typeof createMaterialLoader>['prepare']>>) =>
-  [...m.textures.values()].reduce(
+  [...m.textures.values(), ...(m.sheets?.values() ?? [])].reduce(
     (n, chain) => n + chain.reduce((a, t) => a + t.data.byteLength, 0),
     0,
   );
-for (const definition of data.materials.scenes) {
-  const scene = await prepareSceneWith(definition, signal, decodeNode),
+// Rendered scenes are profiled twice: full resolution (frames up to 2400 px,
+// laptop/PC) against their own explicit bound, and the half-resolution variant
+// every frame of 1200 px or less uses (phones) against the general bound.
+const variants = (rendered: boolean) =>
+  rendered
+    ? [
+        { variant: 'full', scale: 1, maxFrame: MAX_RENDERED_FRAME_WIDTH, limit: budgets.ownedRenderBuffersRenderedFull },
+        { variant: 'light', scale: 0.5, maxFrame: MAX_RENDERED_FRAME_WIDTH / 2, limit: budgets.ownedRenderBuffers },
+      ]
+    : [{ variant: 'full', scale: 1, maxFrame: MAX_FRAME_WIDTH, limit: budgets.ownedRenderBuffers }];
+for (const definition of data.materials.scenes)
+for (const { variant, scale, maxFrame, limit } of variants(!!definition.render)) {
+  const frameBytes = frameBytesFor(maxFrame),
+    W = Math.round(definition.width * scale),
+    H = Math.round(definition.height * scale);
+  const scene = await prepareSceneWith(definition, signal, decodeNode, {
+      loadBytes: bytesNode,
+      scale,
+    }),
     loader = createMaterialLoader(decodeNode);
   let maxActiveMaterials = 0;
   for (const doorProductId of definition.allowedDoorProductIds) {
@@ -41,7 +58,12 @@ for (const definition of data.materials.scenes) {
     scene.base.data.byteLength +
     scene.protectedMask.byteLength +
     scene.surfaces.reduce(
-      (n, s) => n + s.mask.byteLength + s.diffuse.byteLength + (s.specular?.data.byteLength || 0),
+      (n, s) =>
+        n +
+        s.mask.byteLength +
+        s.diffuse.byteLength +
+        (s.specular?.data.byteLength || 0) +
+        (s.position?.data.byteLength || 0),
       0,
     ) +
     [...scene.inserts.values()].reduce((n, i) => n + i.data.byteLength, 0) +
@@ -56,7 +78,8 @@ for (const definition of data.materials.scenes) {
   for (let y = 0; y < h; y++)
     for (let x = 0; x < w; x++)
       coverage +=
-        (mask.mask[y * w + x] / 255) * (1 - scene.protectedMask[(y + by) * 1600 + x + bx] / 255);
+        (mask.mask[y * w + x] / 255) *
+        (definition.render ? 1 : 1 - scene.protectedMask[(y + by) * W + x + bx] / 255);
   const budget = {
     controllerAndWorkerScene: sceneBytes * 2,
     controllerTextureCache: TEXTURE_CACHE_BYTES,
@@ -65,30 +88,38 @@ for (const definition of data.materials.scenes) {
     incomingMipBuild: maxActiveMaterials,
     fourTransientFrames: 4 * frameBytes,
     threeMaterialDecodeBuffers: 3 * TEXTURE_MAX_EDGE * 512 * 4,
-    displayedAndPreviousFallbackImages: 1600 * 1200 * 4 + 960 * 720 * 4,
+    displayedAndPreviousFallbackImages: W * H * 4 + 960 * 720 * 4,
   };
-  const scenePreparationBytes =
-    sceneBytes + TEXTURE_CACHE_BYTES + 3 * 1600 * 1200 * 4 + 960 * 720 * 4;
+  const scenePreparationBytes = sceneBytes + TEXTURE_CACHE_BYTES + 3 * W * H * 4 + 960 * 720 * 4;
   const total = Math.max(
     scenePreparationBytes,
     Object.values(budget).reduce((n, b) => n + b, 0),
   );
-  if (total > budgets.ownedRenderBuffers)
-    throw Error(`Owned allocation bound ${definition.id}: ${total}`);
+  if (total > limit) {
+    console.error(definition.id, variant, budget, { sceneBytes, scenePreparationBytes, total });
+    throw Error(`Owned allocation bound ${definition.id} (${variant}): ${total} > ${limit}`);
+  }
   const defaultMat = await loader.prepare(definition.defaultSelection, catalog, signal);
   const sourcePaths = new Set([
     definition.base,
     definition.protectedMask.alpha,
-    ...definition.surfaces.flatMap(s => [s.mask.alpha, s.lighting.diffuse]),
+    ...definition.surfaces.flatMap(s => [
+      s.mask.alpha,
+      s.lighting.diffuse,
+      ...(s.lighting.specular ? [s.lighting.specular] : []),
+      ...(s.positionMap ? [s.positionMap.image] : []),
+    ]),
     ...defaultMat.textures.keys(),
+    ...(defaultMat.sheets?.keys() ?? []),
   ]);
   let firstUsefulBytes = 0;
   for (const path of sourcePaths) firstUsefulBytes += (await readFile('public' + path)).length;
   const leaf = definition.surfaces.find(s => s.role === 'door-leaf')!.mask.boundsPx;
   results.push({
     scene: definition.id,
-    editableFloorPercent: (coverage / (1600 * 1200)) * 100,
-    doorLeafHeightPercent: (leaf[3] / 1200) * 100,
+    variant,
+    editableFloorPercent: (coverage / (W * H)) * 100,
+    doorLeafHeightPercent: (leaf[3] / definition.height) * 100,
     doorWithCasingHeightPercent:
       ((Math.max(
         ...definition.surfaces
@@ -98,12 +129,12 @@ for (const definition of data.materials.scenes) {
         Math.min(
           ...definition.surfaces.filter(s => s.role === 'frame').map(s => s.mask.boundsPx[1]),
         )) /
-        1200) *
+        definition.height) *
       100,
     firstUsefulBytes,
     firstUsefulTargetBytes: 2.5 * 1024 * 1024,
     ownedBytes: total,
-    ownedLimitBytes: budgets.ownedRenderBuffers,
+    ownedLimitBytes: limit,
     scenePreparationBytes,
     budget,
   });

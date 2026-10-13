@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 1,
+  "source": "Poly Haven (polyhaven.com), all assets CC0-1.0",
+  "assets": [
+    {
+      "id": "sofa_03",
+      "type": "model",
+      "author": "Fran Calvente",
+      "page": "https://polyhaven.com/a/sofa_03",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "sofa_03_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/sofa_03/sofa_03_2k.blend",
+          "size": 354285,
+          "md5": "e4eeac30af6205cd3b78db9b3dc58de8"
+        },
+        {
+          "path": "textures/sofa_03_rough_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/sofa_03/sofa_03_rough_2k.jpg",
+          "size": 613551,
+          "md5": "258efb972b9f20676a4cad3405f44ae6"
+        },
+        {
+          "path": "textures/sofa_03_opacity_2k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/sofa_03/sofa_03_opacity_2k.png",
+          "size": 61632,
+          "md5": "93ea48feb6a5b95708c3fc63935eae41"
+        },
+        {
+          "path": "textures/sofa_03_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/sofa_03/sofa_03_diff_2k.jpg",
+          "size": 563414,
+          "md5": "38aeca485a17eb8345a2e6a623d0294c"
+        },
+        {
+          "path": "textures/sofa_03_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/sofa_03/sofa_03_nor_gl_2k.exr",
+          "size": 1763068,
+          "md5": "c27a0bea6175d5689b69494337000a22"
+        }
+      ]
+    },
+    {
+      "id": "mid_century_lounge_chair",
+      "type": "model",
+      "author": "Kuutti Siitonen",
+      "page": "https://polyhaven.com/a/mid_century_lounge_chair",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "mid_century_lounge_chair_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/mid_century_lounge_chair/mid_century_lounge_chair_2k.blend",
+          "size": 280626,
+          "md5": "5f4a677e293cdfafbaf57adf60547b21"
+        },
+        {
+          "path": "textures/mid_century_lounge_chair_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/mid_century_lounge_chair/mid_century_lounge_chair_diff_2k.jpg",
+          "size": 2444450,
+          "md5": "c6b759bcd7a6bbe10b440184943355bd"
+        },
+        {
+          "path": "textures/mid_century_lounge_chair_metal_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/mid_century_lounge_chair/mid_century_lounge_chair_metal_2k.exr",
+          "size": 389351,
+          "md5": "9857f32ca756334ff470658918acc963"
+        },
+        {
+          "path": "textures/mid_century_lounge_chair_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/mid_century_lounge_chair/mid_century_lounge_chair_nor_gl_2k.exr",
+          "size": 5907792,
+          "md5": "f4092a5c558e55ac17f89e41510e7f9d"
+        },
+        {
+          "path": "textures/mid_century_lounge_chair_rough_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/mid_century_lounge_chair/mid_century_lounge_chair_rough_2k.exr",
+          "size": 2396148,
+          "md5": "a70c20ab9733cec5d65d4a2a40a7feaa"
+        }
+      ]
+    },
+    {
+      "id": "modern_coffee_table_01",
+      "type": "model",
+      "author": "Amin",
+      "page": "https://polyhaven.com/a/modern_coffee_table_01",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "modern_coffee_table_01_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/modern_coffee_table_01/modern_coffee_table_01_2k.blend",
+          "size": 235661,
+          "md5": "261464bd26f317575317efbf72bd6e6a"
+        },
+        {
+          "path": "textures/modern_coffee_table_01_rough_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modern_coffee_table_01/modern_coffee_table_01_rough_2k.exr",
+          "size": 3030957,
+          "md5": "5afc0bf02600d70dc30d34ca30059bc7"
+        },
+        {
+          "path": "textures/modern_coffee_table_01_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modern_coffee_table_01/modern_coffee_table_01_diff_2k.jpg",
+          "size": 1571631,
+          "md5": "0e4e0c7fa75c2ba6e3f244fafd12190c"
+        },
+        {
+          "path": "textures/modern_coffee_table_01_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modern_coffee_table_01/modern_coffee_table_01_nor_gl_2k.exr",
+          "size": 3419670,
+          "md5": "b72d0e5b85422c393c86dfdaadff7496"
+        }
+      ]
+    },
+    {
+      "id": "side_table_01",
+      "type": "model",
+      "author": "James Ray Cock",
+      "page": "https://polyhaven.com/a/side_table_01",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "side_table_01_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/side_table_01/side_table_01_2k.blend",
+          "size": 216075,
+          "md5": "c652d3ed7e0f5c23d5d1e1c1dfa0ef7b"
+        },
+        {
+          "path": "textures/side_table_01_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/side_table_01/side_table_01_nor_gl_2k.exr",
+          "size": 1859604,
+          "md5": "f1fa4182634bf711aa3dfef77b380e7a"
+        },
+        {
+          "path": "textures/side_table_01_rough_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/side_table_01/side_table_01_rough_2k.jpg",
+          "size": 596101,
+          "md5": "75d7c54ac815c85728c82fc4dd78a37e"
+        },
+        {
+          "path": "textures/side_table_01_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/side_table_01/side_table_01_diff_2k.jpg",
+          "size": 703996,
+          "md5": "6b089b2549278cde518e1c22d9a5c54e"
+        },
+        {
+          "path": "textures/side_table_01_metal_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/side_table_01/side_table_01_metal_2k.exr",
+          "size": 46222,
+          "md5": "5ef47823cad0b86dad85d732630bf944"
+        }
+      ]
+    },
+    {
+      "id": "throw_pillows_01",
+      "type": "model",
+      "author": "Serhii Khromov",
+      "page": "https://polyhaven.com/a/throw_pillows_01",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "throw_pillows_01_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/throw_pillows_01/throw_pillows_01_2k.blend",
+          "size": 390419,
+          "md5": "2bba40da1a966c5d2e9fca020b816a79"
+        },
+        {
+          "path": "textures/throw_pillows_01_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/throw_pillows_01/throw_pillows_01_nor_gl_2k.exr",
+          "size": 10798338,
+          "md5": "e661ae9ac21920c694599de514bbaebd"
+        },
+        {
+          "path": "textures/throw_pillows_01_rough_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_rough_2k.jpg",
+          "size": 1275948,
+          "md5": "f3bed6f9674ce715aa27feae8b35daa0"
+        },
+        {
+          "path": "textures/throw_pillows_01_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_diff_2k.jpg",
+          "size": 898774,
+          "md5": "674fe201ddf5a98c3b806b842bc0e2ea"
+        }
+      ]
+    },
+    {
+      "id": "modern_ceiling_lamp_01",
+      "type": "model",
+      "author": "James Ray Cock",
+      "page": "https://polyhaven.com/a/modern_ceiling_lamp_01",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "modern_ceiling_lamp_01_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/modern_ceiling_lamp_01/modern_ceiling_lamp_01_2k.blend",
+          "size": 330321,
+          "md5": "e58b217c0ac366a98be036b3b80d7750"
+        },
+        {
+          "path": "textures/modern_ceiling_lamp_01_rough_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modern_ceiling_lamp_01/modern_ceiling_lamp_01_rough_2k.jpg",
+          "size": 443113,
+          "md5": "01165a8762062786b73129fc888a57c5"
+        },
+        {
+          "path": "textures/modern_ceiling_lamp_01_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modern_ceiling_lamp_01/modern_ceiling_lamp_01_nor_gl_2k.exr",
+          "size": 1671019,
+          "md5": "6c142bf5ff141d547d9a207c99f82ca5"
+        },
+        {
+          "path": "textures/modern_ceiling_lamp_01_metal_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modern_ceiling_lamp_01/modern_ceiling_lamp_01_metal_2k.exr",
+          "size": 77305,
+          "md5": "12456abf40ddca4664469ecc2c2cf088"
+        },
+        {
+          "path": "textures/modern_ceiling_lamp_01_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modern_ceiling_lamp_01/modern_ceiling_lamp_01_diff_2k.jpg",
+          "size": 240872,
+          "md5": "55956852d44470d86da29fad4fd38099"
+        }
+      ]
+    },
+    {
+      "id": "potted_plant_02",
+      "type": "model",
+      "author": "Rico Cilliers",
+      "page": "https://polyhaven.com/a/potted_plant_02",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "potted_plant_02_1k.gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/potted_plant_02/potted_plant_02_1k.gltf",
+          "size": 6653,
+          "md5": "9999d7e6c51018a85551840e1bdae656"
+        },
+        {
+          "path": "textures/potted_plant_02_leaves_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/potted_plant_02/potted_plant_02_leaves_diff_1k.jpg",
+          "size": 167700,
+          "md5": "e8a026bd7bfa6497729d855c59da03ce"
+        },
+        {
+          "path": "potted_plant_02.bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/potted_plant_02/potted_plant_02.bin",
+          "size": 1852244,
+          "md5": "cdbd4619b2596c9c469ad34676085fa8"
+        },
+        {
+          "path": "textures/potted_plant_02_pot_rough_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/potted_plant_02/potted_plant_02_pot_rough_1k.jpg",
+          "size": 114886,
+          "md5": "68ed80fa32791fb0e81df61a75de40b4"
+        },
+        {
+          "path": "textures/potted_plant_02_leaves_rough_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/potted_plant_02/potted_plant_02_leaves_rough_1k.jpg",
+          "size": 102396,
+          "md5": "ba934a78cc6496d934c014eb8a33af37"
+        },
+        {
+          "path": "textures/potted_plant_02_pot_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/potted_plant_02/potted_plant_02_pot_diff_1k.jpg",
+          "size": 155244,
+          "md5": "97e149c93eb0d962e491d4c82d3ce477"
+        },
+        {
+          "path": "textures/potted_plant_02_leaves_nor_gl_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/potted_plant_02/potted_plant_02_leaves_nor_gl_1k.jpg",
+          "size": 127232,
+          "md5": "2420d5c0ab87426f5318a5e91d1ea3bb"
+        },
+        {
+          "path": "textures/potted_plant_02_pot_nor_gl_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/potted_plant_02/potted_plant_02_pot_nor_gl_1k.jpg",
+          "size": 108343,
+          "md5": "fbb44ccc1c6564b2837b79a11ed45d58"
+        }
+      ]
+    },
+    {
+      "id": "wool_boucle",
+      "type": "texture",
+      "author": "colormass, Rico Cilliers",
+      "page": "https://polyhaven.com/a/wool_boucle",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "wool_boucle_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/wool_boucle/wool_boucle_diff_2k.jpg",
+          "size": 4608820,
+          "md5": "f9eeefa58c822396d246e97eb58a837b"
+        },
+        {
+          "path": "wool_boucle_nor_gl_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/wool_boucle/wool_boucle_nor_gl_2k.jpg",
+          "size": 4679310,
+          "md5": "9ac0c769e699e0336d43be2e47ef97a7"
+        },
+        {
+          "path": "wool_boucle_rough_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/wool_boucle/wool_boucle_rough_2k.jpg",
+          "size": 5122703,
+          "md5": "7f35c3bc31e073373a56b2a18982e9ae"
+        }
+      ]
+    },
+    {
+      "id": "kloofendal_48d_partly_cloudy",
+      "type": "hdri",
+      "author": "Greg Zaal",
+      "page": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "kloofendal_48d_partly_cloudy_2k.hdr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_48d_partly_cloudy_2k.hdr",
+          "size": 6480797,
+          "md5": "72b472b131798b3eb5fc67fce3ab672e"
+        }
+      ]
+    }
+  ]
+}

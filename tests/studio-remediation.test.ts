@@ -96,7 +96,7 @@ it('reuses unchanged textures and evicts the oldest of three floor chains', asyn
       return { width: 2, height: 2, data: new Uint8ClampedArray(16).fill(128) };
     }),
     signal = new AbortController().signal,
-    base = data.materials.scenes[0].defaultSelection;
+    base = data.materials.scenes.find(s => s.id === 'living-standard')!.defaultSelection;
   await loader.prepare(base, catalog, signal);
   await loader.prepare({ ...base, doorFinishId: 'kashmir' }, catalog, signal);
   expect(paths.filter(p => p.endsWith('/lis-natyral-10/atlas.webp'))).toHaveLength(1);

@@ -6,7 +6,7 @@ import type {
   SceneSurface,
   StudioSelection,
 } from '../data/types';
-import type { PixelBuffer, FloatTexture } from './render/sampling';
+import type { PixelBuffer, FloatTexture, ByteTexture } from './render/sampling';
 export interface StudioCatalog {
   products: readonly Product[];
   materials: MaterialsConfig;
@@ -34,6 +34,20 @@ export interface PreparedSurface {
   bounds: readonly [number, number, number, number];
   /** Linear lighting level rendered at the material's true colour (defaults to the authored baseline). */
   baseline?: number;
+  /** Floor world positions (16-bit, 2 channels: X, Y) for position-map scenes. */
+  position?: PreparedPositionMap | null;
+}
+export interface PreparedPositionMap {
+  data: Uint16Array;
+  /** Scene-pixel bounds of the floor; samples are every stepPx pixels from its corner. */
+  bounds: readonly [number, number, number, number];
+  stepPx: number;
+  samples: readonly [number, number];
+  originMm: readonly [number, number];
+  unitMm: number;
+  /** Resolution the map was rendered at (the scene's full resolution). */
+  sceneWidth: number;
+  sceneHeight: number;
 }
 export interface PreparedScene {
   scene: RoomScene;
@@ -45,9 +59,13 @@ export interface PreparedScene {
   insertMasks: ReadonlyMap<string, { replacement: Uint8Array; protected: Uint8Array }>;
   /** Uncovered gap between door leaf and frame, shaded as a shadow reveal. */
   reveal?: { mask: Uint8Array; bounds: readonly [number, number, number, number] } | null;
+  /** 1 for full resolution, 0.5 for the lighter phone variant decoded from the same files. */
+  scale?: number;
 }
 export interface PreparedMaterials {
   textures: ReadonlyMap<string, readonly FloatTexture[]>;
+  /** Plank sheets (sRGB byte mips) for position-map floors. */
+  sheets?: ReadonlyMap<string, readonly ByteTexture[]>;
   data: MaterialsConfig;
   products: readonly Product[];
 }
@@ -58,6 +76,8 @@ export interface RenderJob {
   height: number;
   quality: 'preview' | 'settled';
   rendererVersion: 1 | 2;
+  /** Scene variant: 1 = full resolution, 0.5 = lighter variant for small frames. */
+  sceneScale?: 1 | 0.5;
 }
 export type WorkerRequest =
   | { type: 'prepare-scene'; scene: PreparedScene }

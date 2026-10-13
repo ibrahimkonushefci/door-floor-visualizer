@@ -1,13 +1,14 @@
 // Dev tool: render one Studio combination at full scene resolution to a PNG.
-// Usage: tsx scripts/render-preview.ts <scene> <door> <finish> <floor> <out.png> [rotation 0|90] [frame] [skirting]
+// Usage: tsx scripts/render-preview.ts <scene> <door> <finish> <floor> <out.png> [rotation 0|90|45] [frame] [skirting]
+// The renderer lays position-map floors at any angle; the Studio UI offers 0/90.
 import sharp from 'sharp';
 import type { TrimMode } from '../src/lib/data/types';
 import { loadSiteData } from '../src/lib/data/load';
 import { prepareSceneWith, createMaterialLoader } from '../src/lib/studio/asset-loader';
 import { renderRows } from '../src/lib/studio/render/kernel';
-import { decodeNode } from './prepare-scenes';
+import { decodeNode, bytesNode } from './prepare-scenes';
 const [sceneId, door, finish, floor, out, rotation = '0', frame, skirting] = process.argv.slice(2);
-if (!out) throw new Error('Usage: render-preview <scene> <door> <finish> <floor> <out.png> [0|90]');
+if (!out) throw new Error('Usage: render-preview <scene> <door> <finish> <floor> <out.png> [0|90|45]');
 const data = loadSiteData();
 const catalog = { products: data.products.products, materials: data.materials };
 const definition = data.materials.scenes.find(s => s.id === sceneId);
@@ -15,16 +16,13 @@ if (!definition) throw new Error(`Unknown scene ${sceneId}`);
 const signal = new AbortController().signal;
 const glass = data.materials.doorFinishes.find(f => f.id === finish)?.kind === 'glass';
 const scene = await prepareSceneWith(
-  glass ? definition : { ...definition, doorInserts: [] },
-  signal,
-  decodeNode,
-);
+  glass ? definition : { ...definition, doorInserts: [] }, signal, decodeNode, { loadBytes: bytesNode });
 const selection = {
   ...definition.defaultSelection,
   doorProductId: door,
   doorFinishId: finish,
   floorProductId: floor,
-  floorRotationDeg: (rotation === '90' ? 90 : 0) as 0 | 90,
+  floorRotationDeg: Number(rotation) as 0 | 90,
   ...(frame ? { frameMode: frame as TrimMode } : {}),
   ...(skirting ? { skirtingMode: skirting as TrimMode } : {}),
 };

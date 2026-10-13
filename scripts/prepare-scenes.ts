@@ -6,6 +6,7 @@ import { calibrationSchema, materialsSchema } from '../src/lib/data/schemas';
 import { srgbToLinear } from '../src/lib/studio/render/color';
 import { solveHomography, projectPoint } from '../src/lib/studio/render/homography';
 import { prepareSceneWith, prepareMaterialsWith } from '../src/lib/studio/asset-loader';
+import { decodePng } from '../src/lib/studio/render/png';
 import { renderRows } from '../src/lib/studio/render/kernel';
 import type { PixelBuffer } from '../src/lib/studio/render/sampling';
 import type { StudioCatalog } from '../src/lib/studio/types';
@@ -21,6 +22,9 @@ export async function decodeNode(
     img = img.resize({ width: maxEdge, height: maxEdge, fit: 'inside' });
   const { data, info } = await img.ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   return { width: info.width, height: info.height, data: new Uint8ClampedArray(data) };
+}
+export async function bytesNode(path: string): Promise<Uint8Array> {
+  return new Uint8Array(await readFile('public' + path.split('?')[0]));
 }
 // Straight-plank atlases: give each board its own subtle tone and deepen the
 // bevel lines so the floor reads as individual boards rather than one smear.
@@ -97,7 +101,9 @@ export async function enhanceStraightAtlas(input: Buffer, atlas: StraightAtlas, 
     .toBuffer();
 }
 // Studio scenes, in tab order. Each has brand/assets/scenes/<id>/calibration.json.
-export const STUDIO_SCENES = ['living-standard', 'corridor-standard', 'bedroom-photo'];
+export const STUDIO_SCENES = ['living-render-01', 'living-standard', 'corridor-standard', 'bedroom-photo'];
+// Canonical sizes: photo plates 1600×1200; Blender-rendered scenes 2400×1800.
+export const sceneSize = (rendered: boolean) => (rendered ? [2400, 1800] : [1600, 1200]);
 export async function prepareScenes(check = false) {
   const raw = JSON.parse(await readFile('brand/materials.json', 'utf8'));
   const products = JSON.parse(await readFile('brand/products.json', 'utf8')).products;
@@ -155,18 +161,18 @@ export async function prepareScenes(check = false) {
     const entries = (await readdir(dir)).filter(f => f.endsWith('.png')).sort();
     const revision = createHash('sha256');
     revision.update(calBytes);
+    if (cal.kind === 'rendered') revision.update(await readFile(`${dir}/${cal.renderManifest}`));
     for (const file of entries) revision.update(await readFile(dir + '/' + file));
     s.assetRevision = revision.digest('hex');
-    if (s.width !== 1600 || s.height !== 1200) throw new Error('Canonical scene must be 1600×1200');
+    const [W, H] = sceneSize(cal.kind === 'rendered');
+    if (s.width !== W || s.height !== H || !!s.render !== (cal.kind === 'rendered'))
+      throw new Error(`Canonical scene must be ${W}×${H}`);
     for (const surface of s.surfaces) {
-      const patch = cal.neutralPatches.find(p => p.surfaceId === surface.id);
-      if (!patch || Math.abs(patch.medianLinear - surface.lighting.baselineLinear) > 1e-6)
-        throw new Error(`Missing/mismatched neutral patch ${surface.id}`);
       const plate = await sharp(dir + '/' + surface.lighting.diffuse.split('/').at(-1))
         .ensureAlpha()
         .raw()
         .toBuffer({ resolveWithObject: true });
-      if (plate.info.width !== 1600 || plate.info.height !== 1200)
+      if (plate.info.width !== W || plate.info.height !== H)
         throw new Error('Invalid diffuse dimensions');
       for (let i = 0; i < plate.data.length; i += 4)
         if (
@@ -175,27 +181,69 @@ export async function prepareScenes(check = false) {
           plate.data[i + 3] !== 255
         )
           throw new Error('Diffuse must be opaque grayscale');
+      const m = surface.mapping,
+        h = solveHomography(m.worldQuadMm, m.imageQuad01);
+      m.worldQuadMm.forEach((p, i) => {
+        const q = projectPoint(h, p);
+        if (Math.hypot(q[0] - m.imageQuad01[i][0], q[1] - m.imageQuad01[i][1]) > 1e-6)
+          throw new Error('Corner reprojection failed');
+      });
+      for (let i = 0; i < 2; i++) {
+        const p = projectPoint(h, m.calibration.referenceWorldSegmentMm[i]),
+          q = m.calibration.referenceImageSegment01[i];
+        if (Math.hypot((p[0] - q[0]) * W, (p[1] - q[1]) * H) > 1)
+          throw new Error('Calibration reference reprojection failed');
+      }
+      if (cal.kind === 'rendered') {
+        // Rendered plates are physical light, measured, not hand-marked.
+        if (surface.lighting.shadeMin !== 0 || !surface.lighting.tint)
+          throw new Error(`Rendered plate conventions ${surface.id}`);
+        if (surface.lighting.specular) {
+          const spec = await sharp(dir + '/' + surface.lighting.specular.split('/').at(-1)).metadata();
+          if (spec.width !== W || spec.height !== H) throw new Error('Invalid reflection dimensions');
+        }
+        if (surface.positionMap) {
+          const map = await decodePng(
+            new Uint8Array(await readFile(dir + '/' + surface.positionMap.image.split('/').at(-1))),
+          );
+          const [, , bw, bh] = surface.positionMap.boundsPx,
+            step = surface.positionMap.stepPx;
+          if (
+            map.depth !== 16 ||
+            map.channels !== 2 ||
+            map.width !== Math.floor((bw - 1) / step) + 2 ||
+            map.height !== Math.floor((bh - 1) / step) + 2
+          )
+            throw new Error(`Invalid position map ${surface.id}`);
+        }
+        continue;
+      }
+      if (surface.lighting.shadeMin !== 0.18 || surface.lighting.shadeMax !== 1.65)
+        throw new Error(`Photo plate clamp ${surface.id}`);
+      const patch = cal.neutralPatches.find(p => p.surfaceId === surface.id);
+      if (!patch || Math.abs(patch.medianLinear - surface.lighting.baselineLinear) > 1e-6)
+        throw new Error(`Missing/mismatched neutral patch ${surface.id}`);
       const poly = patch.polygon01,
         values: number[] = [];
-      const minX = Math.max(0, Math.floor(Math.min(...poly.map(p => p[0])) * 1600)),
-        maxX = Math.min(1599, Math.ceil(Math.max(...poly.map(p => p[0])) * 1600)),
-        minY = Math.max(0, Math.floor(Math.min(...poly.map(p => p[1])) * 1200)),
-        maxY = Math.min(1199, Math.ceil(Math.max(...poly.map(p => p[1])) * 1200));
+      const minX = Math.max(0, Math.floor(Math.min(...poly.map(p => p[0])) * W)),
+        maxX = Math.min(W - 1, Math.ceil(Math.max(...poly.map(p => p[0])) * W)),
+        minY = Math.max(0, Math.floor(Math.min(...poly.map(p => p[1])) * H)),
+        maxY = Math.min(H - 1, Math.ceil(Math.max(...poly.map(p => p[1])) * H));
       for (let y = minY; y <= maxY; y++)
         for (let x = minX; x <= maxX; x++) {
           let inside = false;
           for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
             const a = poly[i],
               b = poly[j],
-              px = (x + 0.5) / 1600,
-              py = (y + 0.5) / 1200;
+              px = (x + 0.5) / W,
+              py = (y + 0.5) / H;
             if (
               a[1] > py !== b[1] > py &&
               px < ((b[0] - a[0]) * (py - a[1])) / (b[1] - a[1]) + a[0]
             )
               inside = !inside;
           }
-          if (inside) values.push(srgbToLinear(plate.data[(y * 1600 + x) * 4] / 255));
+          if (inside) values.push(srgbToLinear(plate.data[(y * W + x) * 4] / 255));
         }
       values.sort((a, b) => a - b);
       if (!values.length) throw new Error('Empty neutral patch');
@@ -207,19 +255,6 @@ export async function prepareScenes(check = false) {
         throw new Error(`Neutral patch measurement drift ${surface.id}`);
       if (!cal.references.some(r => r.planeSurfaceId === surface.id))
         throw new Error(`Missing plane reference ${surface.id}`);
-      const m = surface.mapping,
-        h = solveHomography(m.worldQuadMm, m.imageQuad01);
-      m.worldQuadMm.forEach((p, i) => {
-        const q = projectPoint(h, p);
-        if (Math.hypot(q[0] - m.imageQuad01[i][0], q[1] - m.imageQuad01[i][1]) > 1e-6)
-          throw new Error('Corner reprojection failed');
-      });
-      for (let i = 0; i < 2; i++) {
-        const p = projectPoint(h, m.calibration.referenceWorldSegmentMm[i]),
-          q = m.calibration.referenceImageSegment01[i];
-        if (Math.hypot((p[0] - q[0]) * 1600, (p[1] - q[1]) * 1200) > 1)
-          throw new Error('Calibration reference reprojection failed');
-      }
     }
     const masks = [];
     const maskDefs = [
@@ -230,42 +265,50 @@ export async function prepareScenes(check = false) {
     for (const def of maskDefs) {
       const file = dir + '/' + def.alpha.split('/').at(-1),
         p = await sharp(file).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-      if (p.info.width !== 1600 || p.info.height !== 1200)
+      if (p.info.width !== W || p.info.height !== H)
         throw new Error(`Wrong mask dimensions ${file}`);
-      let minX = 1600,
-        minY = 1200,
+      let minX = W,
+        minY = H,
         maxX = -1,
         maxY = -1;
       for (let i = 0; i < p.data.length; i += 4) {
         if (p.data[i] !== p.data[i + 1] || p.data[i] !== p.data[i + 2] || p.data[i + 3] !== 255)
           throw new Error(`Mask alpha/channel convention ${file}`);
         if (p.data[i]) {
-          const x = (i / 4) % 1600,
-            y = Math.floor(i / 4 / 1600);
+          const x = (i / 4) % W,
+            y = Math.floor(i / 4 / W);
           minX = Math.min(minX, x);
           minY = Math.min(minY, y);
           maxX = Math.max(maxX, x);
           maxY = Math.max(maxY, y);
         }
       }
-      const bounds = maxX < 0 ? [0, 0, 1600, 1200] : [minX, minY, maxX - minX + 1, maxY - minY + 1];
+      const bounds = maxX < 0 ? [0, 0, W, H] : [minX, minY, maxX - minX + 1, maxY - minY + 1];
       if (JSON.stringify(bounds) !== JSON.stringify(def.boundsPx))
         throw new Error(`Mask bounds mismatch ${file}: ${bounds}`);
       masks.push(p.data);
     }
-    for (let i = 0; i < 1600 * 1200; i++) {
+    for (let i = 0; i < W * H; i++) {
       let sum = 0;
       for (let n = 1; n <= s.surfaces.length; n++) sum += masks[n][i * 4];
-      if (sum > 256)
+      if (sum > (s.render ? 255 : 256))
         throw new Error(`Surface overlap at ${i % 1600},${Math.floor(i / 1600)}: ${sum}`);
     }
     // Protection deliberately cuts fixed hardware from leaf coverage in kernel; geometric masks retain surface edges.
     for (const file of entries.filter(f => f !== 'glass-source.png')) {
       const meta = await sharp(dir + '/' + file).metadata();
-      if (file !== 'thumbnail.png' && (meta.width !== 1600 || meta.height !== 1200))
+      if (
+        file !== 'thumbnail.png' &&
+        file !== 'floor-position.png' &&
+        (meta.width !== W || meta.height !== H)
+      )
         throw new Error('Wrong canonical layer dimensions');
       if (file === 'base.png')
         await output(dir + '/' + file, s.base, b => sharp(b).webp({ quality: 90 }).toBuffer());
+      else if (file === 'original.png' && s.original)
+        await output(dir + '/' + file, s.original, b =>
+          sharp(b).webp({ quality: 88 }).toBuffer(),
+        );
       else if (file === 'thumbnail.png')
         await output(dir + '/' + file, s.thumbnail, b =>
           sharp(b).resize(320, 240).webp({ quality: 80 }).toBuffer(),
@@ -290,8 +333,12 @@ export async function prepareScenes(check = false) {
           group === 'floors' && file === 'atlas.png'
             ? raw.floorCollections.find((c: { id: string }) => c.id === entry.name).atlas
             : null;
+        // Plank sheets keep every native pixel: boards are seen up close.
+        const sheet = group === 'floors' && file === 'planks.png';
         await output(source, target, async b =>
-          atlas
+          sheet
+            ? sharp(b).webp({ quality: 92, smartSubsample: true }).toBuffer()
+            : atlas
             ? sharp(atlas.pattern === 'straight' ? await enhanceStraightAtlas(b, atlas, entry.name) : b)
                 .resize(atlas.repeatPixels[0], atlas.repeatPixels[1])
                 .webp({ quality: 92, smartSubsample: true })
@@ -312,7 +359,7 @@ export async function prepareScenes(check = false) {
   const catalog: StudioCatalog = { products, materials };
   const signal = new AbortController().signal;
   for (const s of scenes) {
-    const scene = await prepareSceneWith(s, signal, decodeNode),
+    const scene = await prepareSceneWith(s, signal, decodeNode, { loadBytes: bytesNode }),
       mat = await prepareMaterialsWith(s.defaultSelection, catalog, signal, decodeNode);
     const pixels = { width: 960, height: 720, data: new Uint8ClampedArray(960 * 720 * 4) };
     renderRows(

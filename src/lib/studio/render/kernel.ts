@@ -1,9 +1,10 @@
 import type { SurfaceAppearance } from '../../data/types';
 import type { PreparedMaterials, PreparedScene, PreparedSurface, RenderJob } from '../types';
 import type { PixelBuffer } from './sampling';
-import { sampleTrilinearInto } from './sampling';
+import { sampleTrilinearInto, sampleBandInto } from './sampling';
 import { decode, encodeByte, hexLinear, clamp } from './color';
-import { shadeAt } from './lighting';
+import { shadeAt, toneShoulder } from './lighting';
+import { hash32, jointShade, locateHerringbone, locateStraight, type BoardHit } from './floor';
 function channel(data: Uint8Array, w: number, h: number, x: number, y: number, linear = false) {
   const cx = Math.max(0, Math.min(w - 1, x)),
     cy = Math.max(0, Math.min(h - 1, y)),
@@ -27,9 +28,11 @@ function maskByte(data: Uint8Array, w: number, h: number, x: number, y: number) 
   return x < 0 || y < 0 || x >= w || y >= h ? 0 : data[y * w + x];
 }
 function cropped(s: PreparedSurface, data: Uint8Array, x: number, y: number, linear = false) {
-  const [bx, by, w, h] = s.bounds,
-    px = x - bx,
-    py = y - by;
+  const b = s.bounds,
+    w = b[2],
+    h = b[3],
+    px = x - b[0],
+    py = y - b[1];
   if (linear) return channel(data, w, h, px, py, true);
   // Masks outside their cropped bounds are zero, not the clamped edge byte.
   // This preserves partitioned coverage when sampling fractional shared edges.
@@ -56,6 +59,7 @@ export function prepareRender(job: RenderJob, scene: PreparedScene, materials: P
       : mode === 'floor'
         ? floor.trim
         : finish.trim;
+  const rendered = scene.scene.render;
   const prepared = scene.surfaces.map(s => {
     const role = s.definition.role,
       selected =
@@ -90,13 +94,18 @@ export function prepareRender(job: RenderJob, scene: PreparedScene, materials: P
           ? { u0: y0, uSpan: y1 - y0, v0: -x1, vSpan: x1 - x0 }
           : { u0: x0, uSpan: x1 - x0, v0: y0, vSpan: y1 - y0 };
     }
+    const light = s.definition.lighting;
     return {
       s,
       a,
       stretch,
-      strength: selected?.specularStrength || 0,
+      strength: (selected?.specularStrength || 0) * (light.specularScale ? light.specularScale / 0.04 : 1),
       solid: a?.kind === 'solid' ? hexLinear(a.colorSrgb) : null,
       mips: a?.kind === 'texture' ? materials.textures.get(a.texture) : null,
+      tint: light.tint ?? null,
+      shadeMin: light.shadeMin,
+      shadeMax: light.shadeMax,
+      boards: role === 'floor' && s.position ? compileBoards(floor, selection.floorRotationDeg, materials) : null,
     };
   });
   const glass = finish.kind === 'glass' ? scene.inserts.get(finish.variantKey) : null,
@@ -113,7 +122,41 @@ export function prepareRender(job: RenderJob, scene: PreparedScene, materials: P
           color: leafTone.map((v, i) => Math.min(v, frameTone[i]) * 0.22) as unknown as number[],
         }
       : null;
-  return { prepared, glass, gm, reveal, rgb: [0, 0, 0] };
+  return {
+    prepared,
+    glass,
+    gm,
+    reveal,
+    rgb: [0, 0, 0],
+    hit: { a: 0, b: 0, c: 0, lu: 0, lv: 0 } as BoardHit,
+    partitioned: !!rendered?.partitionedMasks,
+    shoulder: rendered?.toneShoulder ?? 0,
+  };
+}
+type Collection = PreparedMaterials['data']['floorCollections'][number];
+// Board layout for one floor collection on a position-map surface. Straight and
+// herringbone décors with a plank sheet are laid board by board; anything else
+// (chevron, or no sheet) samples the repeating atlas in world coordinates.
+function compileBoards(floor: Collection, rotationDeg: number, materials: PreparedMaterials) {
+  const sheet = floor.planks ? materials.sheets?.get(floor.planks.image) : undefined,
+    pattern = floor.atlas.pattern,
+    layout = sheet && floor.planks && pattern !== 'chevron' ? pattern : 'atlas',
+    angle = ((rotationDeg + (layout === 'herringbone' ? 45 : 0)) * Math.PI) / 180,
+    atlas = materials.textures.get(floor.atlas.image);
+  if (layout === 'atlas' && !atlas) throw new Error(`Render: texture missing ${floor.atlas.image}`);
+  return {
+    layout,
+    cos: Math.cos(angle),
+    sin: Math.sin(angle),
+    length: floor.atlas.boardSizeMm.length,
+    width: floor.atlas.boardSizeMm.width,
+    bevel: floor.atlas.bevelWidthMm,
+    sheet: sheet ?? null,
+    variants: floor.planks?.variants ?? 1,
+    variantPx: floor.planks?.variantPx ?? ([1, 1] as const),
+    atlas: atlas ?? null,
+    repeat: floor.atlas.repeatSizeMm,
+  };
 }
 export function renderRows(
   job: RenderJob,
@@ -124,8 +167,18 @@ export function renderRows(
   endRow: number,
   compiled = prepareRender(job, scene, materials),
 ) {
-  const { prepared, glass, gm, reveal, rgb } = compiled;
-  for (let py = startRow; py < endRow; py++)
+  const { prepared, glass, gm, reveal, rgb, hit, partitioned, shoulder } = compiled;
+  // Surfaces whose bounds a row/pixel cannot touch are skipped before any
+  // sampling (a mask is zero beyond one pixel outside its bounds).
+  const rowActive: typeof prepared = [];
+  const finish = shoulder ? (v: number) => clamp(toneShoulder(v, shoulder)) : clamp;
+  for (let py = startRow; py < endRow; py++) {
+    const rowY = ((py + 0.5) / job.height) * scene.base.height - 0.5;
+    rowActive.length = 0;
+    for (const entry of prepared) {
+      const b = entry.s.bounds;
+      if (entry.a && rowY > b[1] - 1 && rowY < b[1] + b[3]) rowActive.push(entry);
+    }
     for (let px = 0; px < job.width; px++) {
       const x = (px + 0.5) / job.width,
         y = (py + 0.5) / job.height,
@@ -139,29 +192,106 @@ export function renderRows(
       const replacement = gm
           ? channel(gm.replacement, scene.base.width, scene.base.height, sx, sy) / 255
           : 0,
+        // Partitioned (rendered) scenes never subtract protection; skip the lookup.
         protection =
-          channel(
-            gm && replacement > 0 ? gm.protected : scene.protectedMask,
-            scene.base.width,
-            scene.base.height,
-            sx,
-            sy,
-          ) / 255;
+          partitioned && !gm
+            ? 0
+            : channel(
+                gm && replacement > 0 ? gm.protected : scene.protectedMask,
+                scene.base.width,
+                scene.base.height,
+                sx,
+                sy,
+              ) / 255;
       let r = 0,
         g = 0,
         b = 0,
         total = 0;
-      if (protection < 1 && replacement < 1)
-        for (const entry of prepared) {
-          const { s, a, solid, mips, strength, stretch } = entry;
-          if (!a) continue;
-          const coverage =
-            (cropped(s, s.mask, sx, sy) / 255) * (1 - protection) * (1 - replacement);
+      // Rendered scenes have partitioned coverage: hardware and furniture are
+      // already absent from the surface masks, so protection is not subtracted.
+      const cut = partitioned ? 0 : protection;
+      if (cut < 1 && replacement < 1)
+        for (const entry of rowActive) {
+          const { s, a, solid, mips, strength, stretch, boards } = entry,
+            eb = s.bounds;
+          if (!a || sx <= eb[0] - 1 || sx >= eb[0] + eb[2]) continue;
+          const coverage = (cropped(s, s.mask, sx, sy) / 255) * (1 - cut) * (1 - replacement);
           if (coverage <= 0) continue;
           let ar = solid?.[0] || 0,
             ag = solid?.[1] || 0,
-            ab = solid?.[2] || 0;
-          if (a.kind === 'texture') {
+            ab = solid?.[2] || 0,
+            joints = 1;
+          if (boards && s.position) {
+            // World millimetres from the 16-bit position map (bilinear) and the
+            // pixel footprint from the same 2×2 texels.
+            const pm = s.position,
+              [bx, by] = pm.bounds,
+              [bw, bh] = pm.samples,
+              mx = clamp((x * pm.sceneWidth - 0.5 - bx) / pm.stepPx, 0, bw - 1),
+              my = clamp((y * pm.sceneHeight - 0.5 - by) / pm.stepPx, 0, bh - 1),
+              ix = Math.min(Math.floor(mx), bw - 2),
+              iy = Math.min(Math.floor(my), bh - 2),
+              fx = mx - ix,
+              fy = my - iy,
+              d = pm.data,
+              i00 = (iy * bw + ix) * 2,
+              i10 = i00 + 2,
+              i01 = i00 + bw * 2,
+              i11 = i01 + 2,
+              X = (d[i00] * (1 - fx) + d[i10] * fx) * (1 - fy) + (d[i01] * (1 - fx) + d[i11] * fx) * fy,
+              Y = (d[i00 + 1] * (1 - fx) + d[i10 + 1] * fx) * (1 - fy) + (d[i01 + 1] * (1 - fx) + d[i11 + 1] * fx) * fy,
+              stepX = (pm.unitMm * pm.sceneWidth) / (job.width * pm.stepPx),
+              stepY = (pm.unitMm * pm.sceneHeight) / (job.height * pm.stepPx),
+              dXx = ((d[i10] - d[i00]) * (1 - fy) + (d[i11] - d[i01]) * fy) * stepX,
+              dYx = ((d[i10 + 1] - d[i00 + 1]) * (1 - fy) + (d[i11 + 1] - d[i01 + 1]) * fy) * stepX,
+              dXy = ((d[i01] - d[i00]) * (1 - fx) + (d[i11] - d[i10]) * fx) * stepY,
+              dYy = ((d[i01 + 1] - d[i00 + 1]) * (1 - fx) + (d[i11 + 1] - d[i10 + 1]) * fx) * stepY,
+              footprint = Math.sqrt(Math.max(dXx * dXx + dYx * dYx, dXy * dXy + dYy * dYy)),
+              wx = pm.originMm[0] + X * pm.unitMm,
+              wy = pm.originMm[1] + Y * pm.unitMm,
+              u = wx * boards.cos + wy * boards.sin,
+              v = -wx * boards.sin + wy * boards.cos;
+            if (boards.layout === 'atlas') {
+              const t = boards.atlas!;
+              sampleTrilinearInto(
+                t,
+                u / boards.repeat[0],
+                v / boards.repeat[1],
+                Math.log2(Math.max(1, (footprint * t[0].width) / boards.repeat[0])),
+                rgb,
+              );
+              ar = rgb[0];
+              ag = rgb[1];
+              ab = rgb[2];
+            } else {
+              const L = boards.length,
+                Wd = boards.width;
+              if (boards.layout === 'herringbone') locateHerringbone(u, v, L, Wd, hit);
+              else locateStraight(u, v, L, Wd, hit);
+              const h = hash32(hit.a, hit.b, hit.c),
+                variant = h % boards.variants,
+                lu = h & 0x100 ? L - hit.lu : hit.lu,
+                lv = h & 0x200 ? Wd - hit.lv : hit.lv,
+                [pw, ph] = boards.variantPx,
+                ppm = pw / L;
+              sampleBandInto(
+                boards.sheet!,
+                lu * ppm,
+                variant * ph + (lv / Wd) * ph,
+                Math.log2(Math.max(1, footprint * ppm)),
+                variant * ph,
+                (variant + 1) * ph,
+                rgb,
+              );
+              // Each board gets its own subtle tone, like real production lots.
+              const gain = 0.93 + 0.14 * (((h >>> 12) & 1023) / 1023),
+                warm = (((h >>> 22) & 255) / 255 - 0.5) * 0.04;
+              joints = jointShade(hit.lu, hit.lv, L, Wd, boards.bevel, footprint);
+              ar = rgb[0] * gain * (1 + warm) * joints;
+              ag = rgb[1] * gain * joints;
+              ab = rgb[2] * gain * (1 - warm) * joints;
+            }
+          } else if (a.kind === 'texture') {
             if (!mips) throw new Error(`Render: texture missing ${a.texture}`);
             const h = s.inverse,
               den = h[6] * x + h[7] * y + h[8],
@@ -210,7 +340,10 @@ export function renderRows(
           const shade = shadeAt(
             cropped(s, s.diffuse, sx, sy, true),
             s.baseline ?? s.definition.lighting.baselineLinear,
+            entry.shadeMin,
+            entry.shadeMax,
           );
+          const tint = entry.tint;
           let sr = 0,
             sg = 0,
             sb = 0;
@@ -223,9 +356,10 @@ export function renderRows(
             sg = decode[s.specular.data[i + 1]];
             sb = decode[s.specular.data[i + 2]];
           }
-          r += clamp(ar * shade + sr * strength) * coverage;
-          g += clamp(ag * shade + sg * strength) * coverage;
-          b += clamp(ab * shade + sb * strength) * coverage;
+          const gloss = strength * joints;
+          r += finish(ar * shade * (tint ? tint[0] : 1) + sr * gloss) * coverage;
+          g += finish(ag * shade * (tint ? tint[1] : 1) + sg * gloss) * coverage;
+          b += finish(ab * shade * (tint ? tint[2] : 1) + sb * gloss) * coverage;
           total += coverage;
         }
       if (glass && replacement > 0) {
@@ -274,4 +408,5 @@ export function renderRows(
             );
       }
     }
+  }
 }

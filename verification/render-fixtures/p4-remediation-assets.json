@@ -2,7 +2,52 @@
   "note": "Conservative controlled pixel-storage bound, not a browser heap measurement. Rendering includes both scene copies, maximum cache limits, two worker material sets, incoming mip chains, four output/presentation buffers, bitmap/canvas/JS material decode buffers and displayed/previous fallback images. Scene preparation is separately bounded: the old worker/scene/result cache are released before three full-resolution decode buffers coexist with the new scene. Browser overhead, retained browser image caches and garbage-collection timing still require a physical heap profile. Runtime textures max512px; physical-scale calibration unresolved.",
   "results": [
     {
+      "scene": "living-render-01",
+      "variant": "full",
+      "editableFloorPercent": 27.84566485112564,
+      "doorLeafHeightPercent": 27,
+      "doorWithCasingHeightPercent": 28.27777777777778,
+      "firstUsefulBytes": 1902506,
+      "firstUsefulTargetBytes": 2621440,
+      "ownedBytes": 230380358,
+      "ownedLimitBytes": 251658240,
+      "scenePreparationBytes": 116624446,
+      "budget": {
+        "controllerAndWorkerScene": 65319036,
+        "controllerTextureCache": 29360128,
+        "twoWorkerMaterialSets": 11450844,
+        "resultCache": 16777216,
+        "incomingMipBuild": 5725422,
+        "fourTransientFrames": 69120000,
+        "threeMaterialDecodeBuffers": 12582912,
+        "displayedAndPreviousFallbackImages": 20044800
+      }
+    },
+    {
+      "scene": "living-render-01",
+      "variant": "light",
+      "editableFloorPercent": 27.84568300653592,
+      "doorLeafHeightPercent": 54,
+      "doorWithCasingHeightPercent": 56.55555555555556,
+      "firstUsefulBytes": 1902506,
+      "firstUsefulTargetBytes": 2621440,
+      "ownedBytes": 117513662,
+      "ownedLimitBytes": 209715200,
+      "scenePreparationBytes": 53711098,
+      "budget": {
+        "controllerAndWorkerScene": 17252340,
+        "controllerTextureCache": 29360128,
+        "twoWorkerMaterialSets": 11450844,
+        "resultCache": 16777216,
+        "incomingMipBuild": 5725422,
+        "fourTransientFrames": 17280000,
+        "threeMaterialDecodeBuffers": 12582912,
+        "displayedAndPreviousFallbackImages": 7084800
+      }
+    },
+    {
       "scene": "living-standard",
+      "variant": "full",
       "editableFloorPercent": 35.339914419934644,
       "doorLeafHeightPercent": 59,
       "doorWithCasingHeightPercent": 62.5,
@@ -24,6 +69,7 @@
     },
     {
       "scene": "corridor-standard",
+      "variant": "full",
       "editableFloorPercent": 37.22364726307193,
       "doorLeafHeightPercent": 51.5,
       "doorWithCasingHeightPercent": 54.41666666666667,
@@ -45,6 +91,7 @@
     },
     {
       "scene": "bedroom-photo",
+      "variant": "full",
       "editableFloorPercent": 17.311521854575172,
       "doorLeafHeightPercent": 51.916666666666664,
       "doorWithCasingHeightPercent": 56.49999999999999,

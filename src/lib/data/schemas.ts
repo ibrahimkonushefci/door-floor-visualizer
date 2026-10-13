@@ -217,12 +217,19 @@ const atlas = z
     )
       c.addIssue({ code: 'custom', message: 'Atlas pixel/physical aspect mismatch' });
   });
+const planks = z.strictObject({
+  image: assetPathSchema,
+  variants: positive.int(),
+  variantPx: z.tuple([positive.int(), positive.int()]),
+  pxPerMm: positive,
+});
 const collectionBase = {
   id: idSchema,
   name: localizedTextSchema,
   thicknessMm: positive,
   bevel: z.enum(['4v', 'flat']),
   atlas,
+  planks: planks.optional(),
   trim: trimAppearance,
   swatchColorSrgb: hexSchema,
   specularStrength: strength,
@@ -252,13 +259,30 @@ const mask = z.strictObject({
     positive.int(),
   ]),
 });
-const lighting = z.strictObject({
-  diffuse: assetPathSchema,
-  baselineLinear: z.number().finite().gt(0.02),
-  shadeMin: z.literal(0.18),
-  shadeMax: z.literal(1.65),
-  specular: assetPathSchema.nullable(),
-  specularIncludedInDiffuse: z.literal(false),
+const lighting = z
+  .strictObject({
+    diffuse: assetPathSchema,
+    baselineLinear: z.number().finite().gt(0.02),
+    shadeMin: z.number().finite().min(0),
+    shadeMax: z.number().finite().positive().max(64),
+    specular: assetPathSchema.nullable(),
+    specularIncludedInDiffuse: z.literal(false),
+    specularScale: positive.optional(),
+    tint: z.tuple([positive, positive, positive]).optional(),
+  })
+  .refine(v => v.shadeMin < v.shadeMax, 'shadeMin must be below shadeMax');
+const bounds = z.tuple([
+  z.number().int().nonnegative(),
+  z.number().int().nonnegative(),
+  positive.int(),
+  positive.int(),
+]);
+const positionMap = z.strictObject({
+  image: assetPathSchema,
+  boundsPx: bounds,
+  originMm: vec,
+  unitMm: positive,
+  stepPx: positive.int().max(16),
 });
 function convex(q: readonly (readonly number[])[]) {
   const signs = q.map((a, i) => {
@@ -296,6 +320,14 @@ const scene = z.strictObject({
   width: positive.int(),
   height: positive.int(),
   base: assetPathSchema,
+  original: assetPathSchema.optional(),
+  render: z
+    .strictObject({
+      source: z.literal('blender'),
+      partitionedMasks: z.literal(true),
+      toneShoulder: z.number().finite().gt(0).lt(1),
+    })
+    .optional(),
   thumbnail: assetPathSchema,
   fallback: assetPathSchema,
   frameType: z.enum(['standard-casing', 'concealed-aluminium']),
@@ -311,6 +343,7 @@ const scene = z.strictObject({
       lighting,
       mapping,
       uvRotationDeg: z.union([z.literal(0), z.literal(90)]),
+      positionMap: positionMap.optional(),
     }),
   ),
   protectedMask: mask,
@@ -338,8 +371,9 @@ export const materialsSchema: z.ZodType<MaterialsConfig> = z.strictObject({
   floorCollections: z.array(collection),
   scenes: z.array(scene),
 });
-export const calibrationSchema: z.ZodType<SceneCalibration> = z.strictObject({
+const photoCalibration = z.strictObject({
   schemaVersion: z.literal(1),
+  kind: z.literal('photo').optional(),
   scene,
   sourceCrop: z.strictObject({
     originalWidth: positive,
@@ -366,3 +400,13 @@ export const calibrationSchema: z.ZodType<SceneCalibration> = z.strictObject({
     }),
   ),
 });
+const renderedCalibration = z.strictObject({
+  schemaVersion: z.literal(1),
+  kind: z.literal('rendered'),
+  scene,
+  renderManifest: z.string().regex(/^[a-z0-9-]+\.json$/),
+});
+export const calibrationSchema: z.ZodType<SceneCalibration> = z.union([
+  renderedCalibration,
+  photoCalibration,
+]);

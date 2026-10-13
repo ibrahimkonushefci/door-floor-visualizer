@@ -3,7 +3,7 @@
 A mobile-first lookbook catalog and room Studio for interior-door and flooring showrooms in Kosovo, built to replace heavy PDF catalogs. It is a static Next.js export in Albanian (default), English and German, with no backend.
 
 - **Catalog**: editorial product grid with category filters, saved items, and product pages showing finish swatches, sizes and specifications.
-- **Studio**: shows any door finish, casing, skirting and floor in three rooms, rendered in a Web Worker with a Canvas 2D fallback. It includes a compare slider against the original photograph and sends the combination in one tap.
+- **Studio**: shows any door finish, casing, skirting and floor in four rooms (one furnished 3D render), composited in a Web Worker with a Canvas 2D fallback. It includes a compare slider against the original photograph and sends the combination in one tap.
 - **Offline**: a hidden presenter tool saves the Studio and visited catalog pages for meetings without internet.
 
 All products, dimensions and imagery are demo content (`brand.json` → `demoMode: true`).
@@ -39,7 +39,7 @@ pnpm build && pnpm verify:export && pnpm verify:budgets
 
 ## Presenter tools (offline)
 
-Press and hold the logo for about a second, or open any page with `?presenter=1`. The sheet saves all Studio rooms and finishes to the device (about 10 MB), shows progress, and offers cancel, update and remove. Customers never see it.
+Press and hold the logo for about a second, or open any page with `?presenter=1`. The sheet saves all Studio rooms and finishes to the device (about 12 MB), shows progress, and offers cancel, update and remove. Customers never see it.
 
 Offline needs HTTPS (or localhost). If setup is impossible, the sheet says so rather than reporting an error. A small notice appears only when the device is offline or a new version is waiting.
 
@@ -47,8 +47,17 @@ Offline needs HTTPS (or localhost). If setup is impossible, the sheet says so ra
 
 Each room lives in `brand/assets/scenes/<id>/` (frozen `base.png`, masks, light plates, `calibration.json`, `AUTHORING.md`). `pnpm assets:scenes` publishes them to `public/media/scenes/` and regenerates the scene entries in `brand/materials.json`. The scene list is `STUDIO_SCENES` in `scripts/prepare-scenes.ts`.
 
+- `living-render-01`: a furnished room rendered in Blender (see below). 2400×1800, true scale.
 - `living-standard`, `corridor-standard`: generated neutral plates, authored by `scripts/author-remediation-scenes.mjs`.
 - `bedroom-photo`: a real photograph (Alex Tyson, Unsplash License), authored by `scripts/author-photo-scene.mjs`.
+
+**Rendering a room in Blender** (Blender 5.2 LTS at `/Applications/Blender.app`; free CC0 inputs from Poly Haven):
+1. `python3 tools/blender/fetch_assets.py` downloads the pinned models, rug texture and HDRI (md5-verified) into the git-ignored `tools/blender/.cache/`.
+2. `Blender --background --factory-startup --python tools/blender/build_room.py -- [--preview out.png]` builds `tools/blender/out/<id>/room.blend` from `tools/blender/room_spec.py` (metres; door, casing and skirting at product sizes).
+3. `Blender --background --factory-startup --python tools/blender/render_layers.py -- --samples 512` renders the light, light-dim and gloss passes on the Metal GPU (about 20 minutes at 2400×1800 on an M4) and writes masks, light and reflection plates, the base plate and the 16-bit floor position map. `--post-only` reprocesses existing EXRs.
+4. `tsx scripts/import-rendered-scene.ts <id>` writes `brand/assets/scenes/<id>/`, records provenance and adds the room to the proof products. Then run `pnpm assets:scenes`.
+
+Rendered floors are laid board by board from the position map: each board picks one of the décor's plank images (`planks` in `materials.json`, built by `tsx scripts/author-plank-sheets.ts`) by a seeded hash, so there is no repeating tile. Straight and herringbone layouts are procedural; chevron falls back to the atlas.
 
 **Adding a room from a real photograph.** Copy the config block in `scripts/author-photo-scene.mjs`:
 1. Record the source, crop, measured edges and both walls' vanishing points.
@@ -58,10 +67,11 @@ Each room lives in `brand/assets/scenes/<id>/` (frozen `base.png`, masks, light 
 
 The camera model derives focal length and camera height, so floor planks have true scale.
 
-Door assemblies are unified at load time (`unifyDoorAssembly` in `src/lib/studio/asset-loader.ts`). Gaps the authored masks leave (mitre joints, jambs, the leaf gap) take the casing's own light, and only a 2 px shadow line remains. Casing and skirting pieces are normalised by their median light, so one material renders at one tone.
+Door assemblies of photo scenes are unified at load time (`unifyDoorAssembly` in `src/lib/studio/asset-loader.ts`); rendered scenes have complete, partitioned masks and skip this. Gaps the authored masks leave (mitre joints, jambs, the leaf gap) take the casing's own light, and only a 2 px shadow line remains. Casing and skirting pieces are normalised by their median light, so one material renders at one tone.
 
 **Review tools**
-- `tsx scripts/render-preview.ts <scene> <door> <finish> <floor> <out.png> [0|90] [frame] [skirting]` renders a full-resolution PNG.
+- `tsx scripts/render-preview.ts <scene> <door> <finish> <floor> <out.png> [0|90|45] [frame] [skirting]` renders a full-resolution PNG (45° works on rendered floors; the Studio offers 0/90).
+- `tsx scripts/bench-studio.ts [width] [runs]` times the compositing kernel for every room.
 - Append `?debug=1` to a Studio URL to write render timings into the DOM.
 
 ## Rebranding

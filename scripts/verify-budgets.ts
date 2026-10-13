@@ -108,6 +108,7 @@ for (const scene of data.materials.scenes) {
     urls.add(s.mask.alpha);
     urls.add(s.lighting.diffuse);
     if (s.lighting.specular) urls.add(s.lighting.specular);
+    if (s.positionMap) urls.add(s.positionMap.image);
   }
   for (const i of data.materials.doorFinishes.find(
     f => f.id === scene.defaultSelection.doorFinishId,
@@ -122,7 +123,9 @@ for (const scene of data.materials.scenes) {
   const floor = data.materials.floorCollections.find(
     c => c.id === scene.defaultSelection.floorProductId,
   )!;
-  urls.add(floor.atlas.image);
+  // Position-map floors load the plank sheet instead of the repeating atlas.
+  const boards = scene.surfaces.some(s => s.positionMap) && floor.planks && floor.atlas.pattern !== 'chevron';
+  urls.add(boards ? floor.planks!.image : floor.atlas.image);
   if (floor.trim.appearance.kind === 'texture') urls.add(floor.trim.appearance.texture);
   const bytes = [...urls].reduce((n, url) => n + sizes.get(url)!, 0);
   gate(`${scene.id}.firstUseful`, bytes, limits.studioFirstScene);

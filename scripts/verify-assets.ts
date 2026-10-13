@@ -15,7 +15,7 @@ export const sourceLedgerSchema = z.strictObject({
       localPath: z
         .string()
         .regex(
-          /^brand\/assets\/(?:products\/[a-z0-9-]+\/[0-9]+\.jpg|scenes\/[a-z0-9-]+\/[a-z0-9-]+\.png|textures\/(?:doors\/[a-z0-9-]+|floors\/[a-z0-9-]+\/(?:atlas|trim))\.png)$/,
+          /^brand\/assets\/(?:products\/[a-z0-9-]+\/[0-9]+\.jpg|scenes\/[a-z0-9-]+\/[a-z0-9-]+\.png|textures\/(?:doors\/[a-z0-9-]+|floors\/[a-z0-9-]+\/(?:atlas|trim|planks))\.png)$/,
         ),
       sourceUrl: z.url().nullable(),
       author: z.string().trim().min(1),
@@ -26,6 +26,29 @@ export const sourceLedgerSchema = z.strictObject({
       sha256: z.string().regex(/^[a-f0-9]{64}$/),
     }),
   ),
+  // Third-party inputs of Blender-rendered scenes (not shipped; hashes match tools/blender/assets.lock.json).
+  renderInputs: z
+    .array(
+      z.strictObject({
+        id: z.string().min(1),
+        type: z.enum(['model', 'texture', 'hdri']),
+        sourceUrl: z.url(),
+        author: z.string().trim().min(1),
+        license: z.literal('CC0-1.0'),
+        usedIn: z.array(z.string().min(1)).min(1),
+        files: z
+          .array(
+            z.strictObject({
+              path: z.string().min(1),
+              url: z.url(),
+              bytes: z.number().int().positive(),
+              sha256: z.string().regex(/^[a-f0-9]{64}$/),
+            }),
+          )
+          .min(1),
+      }),
+    )
+    .optional(),
 });
 const hash = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
 export async function verifyAssets() {
@@ -134,6 +157,15 @@ export async function verifyAssets() {
     for (const a of ledger.assets) {
       if (hash(await readFile(a.localPath)) !== a.sha256)
         throw new Error('Provenance hash drift ' + a.localPath);
+    }
+    if (ledger.renderInputs?.length) {
+      const lock = JSON.parse(await readFile('tools/blender/assets.lock.json', 'utf8')) as {
+        files: { asset: string; path: string; sha256: string }[];
+      };
+      for (const input of ledger.renderInputs)
+        for (const f of input.files)
+          if (!lock.files.some(l => l.asset === input.id && l.path === f.path && l.sha256 === f.sha256))
+            throw new Error(`Render input not in lock file: ${input.id}/${f.path}`);
     }
     for (const c of data.materials.floorCollections) {
       const meta = await sharp('public' + c.atlas.image).metadata();

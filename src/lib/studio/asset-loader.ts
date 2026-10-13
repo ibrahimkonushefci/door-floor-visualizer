@@ -1,6 +1,7 @@
 import type { RoomScene, StudioSelection } from '../data/types';
-import type { PreparedScene, PreparedMaterials, StudioCatalog } from './types';
-import { buildMipChain, type PixelBuffer } from './render/sampling';
+import type { PreparedScene, PreparedMaterials, PreparedPositionMap, StudioCatalog } from './types';
+import { buildMipChain, buildByteMipChain, type ByteTexture, type FloatTexture, type PixelBuffer } from './render/sampling';
+import { decodePng } from './render/png';
 import { decode } from './render/color';
 import { invertHomography, solveHomography } from './render/homography';
 // Floor atlases are authored up to 2048px; the float mip chain of the largest
@@ -37,6 +38,56 @@ export const decodeAsset: DecodeAsset = async (path, signal, maxEdge) => {
     bitmap.close();
   }
 };
+export type LoadBytes = (path: string, signal: AbortSignal) => Promise<Uint8Array>;
+export const fetchBytes: LoadBytes = async (path, signal) => {
+  const url = new URL(path, self.location.origin);
+  if (url.origin !== self.location.origin) throw new Error('Studio requires same-origin assets');
+  const response = await fetch(url, { signal });
+  if (!response.ok) throw new Error(`Asset ${response.status}: ${path}`);
+  return new Uint8Array(await response.arrayBuffer());
+};
+export interface SceneLoadOptions {
+  /** 1 = full resolution; 0.5 decodes every layer at half size (lighter phone variant). */
+  scale?: number;
+  loadBytes?: LoadBytes;
+}
+/** Bounds at a decoded scale, grown outwards (plus a pixel for resampling spill) so no coverage is lost. */
+export function scaleBounds(
+  b: readonly [number, number, number, number],
+  scale: number,
+  width: number,
+  height: number,
+): readonly [number, number, number, number] {
+  if (scale === 1) return b;
+  const x0 = Math.max(0, Math.floor(b[0] * scale) - 1),
+    y0 = Math.max(0, Math.floor(b[1] * scale) - 1),
+    x1 = Math.min(width, Math.ceil((b[0] + b[2]) * scale) + 1),
+    y1 = Math.min(height, Math.ceil((b[1] + b[3]) * scale) + 1);
+  return [x0, y0, Math.max(1, x1 - x0), Math.max(1, y1 - y0)];
+}
+async function loadPositionMap(
+  map: NonNullable<RoomScene['surfaces'][number]['positionMap']>,
+  scene: RoomScene,
+  signal: AbortSignal,
+  loadBytes: LoadBytes,
+): Promise<PreparedPositionMap> {
+  const png = await decodePng(await loadBytes(map.image, signal));
+  signal.throwIfAborted();
+  const gw = Math.floor((map.boundsPx[2] - 1) / map.stepPx) + 2,
+    gh = Math.floor((map.boundsPx[3] - 1) / map.stepPx) + 2;
+  if (png.depth !== 16 || png.channels !== 2 || png.width !== gw || png.height !== gh)
+    throw new Error(`Invalid position map ${map.image}`);
+  return {
+    data: png.data as Uint16Array,
+    bounds: map.boundsPx,
+    stepPx: map.stepPx,
+    samples: [gw, gh],
+    originMm: map.originMm,
+    unitMm: map.unitMm,
+    sceneWidth: scene.width,
+    sceneHeight: scene.height,
+  };
+}
 export function red(
   p: PixelBuffer,
   bounds: readonly [number, number, number, number] = [0, 0, p.width, p.height],
@@ -235,17 +286,32 @@ export async function prepareSceneWith(
   scene: RoomScene,
   signal: AbortSignal,
   decode: DecodeAsset,
+  options: SceneLoadOptions = {},
 ): Promise<PreparedScene> {
-  const load = async (path: string) => {
-    const p = await decode(path, signal);
-    if (p.width !== scene.width || p.height !== scene.height)
-      throw new Error(`Wrong scene asset shape ${path}`);
-    return p;
+  const scale = options.scale ?? 1,
+    W = Math.round(scene.width * scale),
+    H = Math.round(scene.height * scale),
+    rendered = !!scene.render,
+    decoded = new Map<string, Promise<PixelBuffer>>();
+  // Rendered scenes share light plates between layers; decode each file once.
+  const load = (path: string) => {
+    let pending = decoded.get(path);
+    if (!pending) {
+      pending = decode(path, signal, scale === 1 ? undefined : Math.max(W, H)).then(p => {
+        if (p.width !== W || p.height !== H) throw new Error(`Wrong scene asset shape ${path}`);
+        return p;
+      });
+      decoded.set(path, pending);
+    }
+    return pending;
   };
+  const sb = (b: readonly [number, number, number, number]) => scaleBounds(b, scale, W, H);
+  // Partitioned (rendered) scenes never read the protected mask at runtime.
   const base = await load(scene.base),
-    protectedMask = red(await load(scene.protectedMask.alpha));
+    protectedMask = rendered ? new Uint8Array(0) : red(await load(scene.protectedMask.alpha));
   // Leaf and casing layers are kept full-size until the assembly is unified.
-  const door = new Set(['door-leaf', 'frame']);
+  // Rendered scenes have complete, partitioned door masks and skip that step.
+  const door = new Set(rendered ? [] : ['door-leaf', 'frame']);
   const full: FullSurface[] = [],
     loaded: {
       definition: RoomScene['surfaces'][number];
@@ -256,7 +322,7 @@ export async function prepareSceneWith(
       full?: FullSurface;
     }[] = [];
   for (const definition of scene.surfaces) {
-    const bounds = definition.mask.boundsPx;
+    const bounds = sb(definition.mask.boundsPx);
     const specularImage = definition.lighting.specular ? await load(definition.lighting.specular) : null;
     if (door.has(definition.role)) {
       const entry = {
@@ -284,9 +350,9 @@ export async function prepareSceneWith(
   const surfaces = loaded.map(l => {
     let { mask, diffuse, bounds } = l;
     if (l.full) {
-      bounds = boundsOf(l.full.mask, scene.width, l.bounds);
-      mask = crop(l.full.mask, scene.width, bounds);
-      diffuse = crop(l.full.diffuse, scene.width, bounds);
+      bounds = boundsOf(l.full.mask, W, l.bounds);
+      mask = crop(l.full.mask, W, bounds);
+      diffuse = crop(l.full.diffuse, W, bounds);
     }
     let specular: PixelBuffer | null = null;
     if (l.specular) {
@@ -302,7 +368,8 @@ export async function prepareSceneWith(
     }
     return {
       definition: l.definition,
-      baseline: trimBaseline(l.definition, mask, diffuse),
+      baseline: rendered ? undefined : trimBaseline(l.definition, mask, diffuse),
+      position: null as PreparedPositionMap | null,
       inverse: invertHomography(
         solveHomography(l.definition.mapping.worldQuadMm, l.definition.mapping.imageQuad01),
       ),
@@ -312,6 +379,15 @@ export async function prepareSceneWith(
       bounds,
     };
   });
+  if (scale !== 1) renormaliseCoverage(surfaces, W, H);
+  for (const surface of surfaces)
+    if (surface.definition.positionMap)
+      surface.position = await loadPositionMap(
+        surface.definition.positionMap,
+        scene,
+        signal,
+        options.loadBytes ?? fetchBytes,
+      );
   const inserts = new Map(),
     insertMasks = new Map();
   for (const insert of scene.doorInserts) {
@@ -323,6 +399,7 @@ export async function prepareSceneWith(
   }
   return {
     reveal,
+    scale,
     scene,
     base,
     protectedMask,
@@ -332,8 +409,35 @@ export async function prepareSceneWith(
     foreground: scene.foreground ? await load(scene.foreground) : null,
   };
 }
-export const prepareScene = (scene: RoomScene, signal: AbortSignal) =>
-  prepareSceneWith(scene, signal, decodeAsset);
+// Resampling each mask on its own (and rounding it to bytes) can let adjacent
+// surfaces sum past full coverage along shared edges; scale such pixels back.
+function renormaliseCoverage(
+  surfaces: readonly { mask: Uint8Array; bounds: readonly [number, number, number, number] }[],
+  W: number,
+  H: number,
+) {
+  const sum = new Uint16Array(W * H);
+  const each = (fn: (mask: Uint8Array, i: number, p: number) => void) => {
+    for (const { mask, bounds: [bx, by, bw, bh] } of surfaces)
+      for (let y = 0; y < bh; y++)
+        for (let x = 0; x < bw; x++) fn(mask, y * bw + x, (y + by) * W + x + bx);
+  };
+  each((mask, i, p) => (sum[p] += mask[i]));
+  each((mask, i, p) => {
+    if (sum[p] > 255) mask[i] = Math.floor((mask[i] * 255) / sum[p]);
+  });
+}
+export const prepareScene = (scene: RoomScene, signal: AbortSignal, options?: SceneLoadOptions) =>
+  prepareSceneWith(scene, signal, decodeAsset, options);
+/** Plank sheet of the selected floor when the scene lays boards from a position map. */
+export function sheetFor(s: StudioSelection, c: StudioCatalog) {
+  const product = c.products.find(p => p.id === s.floorProductId),
+    scene = c.materials.scenes.find(v => v.id === s.sceneId);
+  if (product?.kind !== 'floor' || !scene) return null;
+  const floor = c.materials.floorCollections.find(f => f.id === product.collectionId)!;
+  const positional = scene.surfaces.some(v => v.role === 'floor' && v.positionMap);
+  return positional && floor.planks && floor.atlas.pattern !== 'chevron' ? floor.planks.image : null;
+}
 export async function prepareMaterialsWith(
   s: StudioSelection,
   c: StudioCatalog,
@@ -344,7 +448,8 @@ export async function prepareMaterialsWith(
     p = c.products.find(p => p.id === s.floorProductId);
   if (p?.kind !== 'floor') throw new Error('Unknown floor');
   const floor = c.materials.floorCollections.find(f => f.id === p.collectionId)!;
-  const paths = new Set([floor.atlas.image]);
+  const sheet = sheetFor(s, c);
+  const paths = new Set(sheet ? [] : [floor.atlas.image]);
   for (const a of [
     finish.kind === 'opaque' ? finish.appearance : null,
     finish.trim.appearance,
@@ -356,7 +461,9 @@ export async function prepareMaterialsWith(
     signal.throwIfAborted();
     textures.set(path, buildMipChain(await decode(path, signal, TEXTURE_MAX_EDGE)));
   }
-  return { textures, data: c.materials, products: c.products };
+  const sheets = new Map<string, readonly ByteTexture[]>();
+  if (sheet) sheets.set(sheet, buildByteMipChain(await decode(sheet, signal)));
+  return { textures, sheets, data: c.materials, products: c.products };
 }
 export const prepareMaterials = (s: StudioSelection, c: StudioCatalog, signal: AbortSignal) =>
   prepareMaterialsWith(s, c, signal, decodeAsset);
@@ -364,9 +471,9 @@ export const prepareMaterials = (s: StudioSelection, c: StudioCatalog, signal: A
 // One controller owns this cache. Whole chains are evicted by bytes; only two
 // floor atlases may be retained. Aborted decodes are never inserted.
 export function createMaterialLoader(decode: DecodeAsset = decodeAsset) {
-  const cached = new Map<string, readonly import('./render/sampling').FloatTexture[]>();
+  const cached = new Map<string, readonly (FloatTexture | ByteTexture)[]>();
   let bytes = 0;
-  const size = (chain: readonly import('./render/sampling').FloatTexture[]) =>
+  const size = (chain: readonly (FloatTexture | ByteTexture)[]) =>
     chain.reduce((n, t) => n + t.data.byteLength, 0);
   const remove = (path: string) => {
     const chain = cached.get(path);
@@ -380,14 +487,16 @@ export function createMaterialLoader(decode: DecodeAsset = decodeAsset) {
       product = c.products.find(p => p.id === s.floorProductId);
     if (product?.kind !== 'floor') throw new Error('Unknown floor');
     const floor = c.materials.floorCollections.find(f => f.id === product.collectionId)!;
-    const paths = new Set([floor.atlas.image]);
+    const sheet = sheetFor(s, c);
+    const paths = new Set(sheet ? [sheet] : [floor.atlas.image]);
     for (const a of [
       finish.kind === 'opaque' ? finish.appearance : null,
       finish.trim.appearance,
       floor.trim.appearance,
     ])
       if (a?.kind === 'texture') paths.add(a.texture);
-    const textures = new Map<string, readonly import('./render/sampling').FloatTexture[]>();
+    const textures = new Map<string, readonly FloatTexture[]>(),
+      sheets = new Map<string, readonly ByteTexture[]>();
     for (const path of paths) {
       signal.throwIfAborted();
       let chain = cached.get(path);
@@ -395,16 +504,22 @@ export function createMaterialLoader(decode: DecodeAsset = decodeAsset) {
         cached.delete(path);
         cached.set(path, chain);
       } else {
-        chain = buildMipChain(await decode(path, signal, TEXTURE_MAX_EDGE));
+        chain =
+          path === sheet
+            ? buildByteMipChain(await decode(path, signal))
+            : buildMipChain(await decode(path, signal, TEXTURE_MAX_EDGE));
         signal.throwIfAborted();
         cached.set(path, chain);
         bytes += size(chain);
       }
-      textures.set(path, chain);
+      if (path === sheet) sheets.set(path, chain as readonly ByteTexture[]);
+      else textures.set(path, chain as readonly FloatTexture[]);
     }
-    const atlases = new Set(c.materials.floorCollections.map(f => f.atlas.image));
+    const atlases = new Set(
+      c.materials.floorCollections.flatMap(f => [f.atlas.image, ...(f.planks ? [f.planks.image] : [])]),
+    );
     while ([...cached.keys()].filter(p => atlases.has(p)).length > 2) {
-      const path = [...cached.keys()].find(p => atlases.has(p) && p !== floor.atlas.image)!;
+      const path = [...cached.keys()].find(p => atlases.has(p) && !paths.has(p))!;
       remove(path);
     }
     while (bytes > TEXTURE_CACHE_BYTES) {
@@ -412,7 +527,7 @@ export function createMaterialLoader(decode: DecodeAsset = decodeAsset) {
       if (!path) throw new Error('Active texture set exceeds cache budget');
       remove(path);
     }
-    return { textures, data: c.materials, products: c.products };
+    return { textures, sheets, data: c.materials, products: c.products };
   };
   return {
     prepare,

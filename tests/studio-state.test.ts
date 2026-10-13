@@ -85,7 +85,8 @@ it('hallway preserves standard pairs and rejects hidden/glass geometry', () => {
   ).toBe(true);
 });
 it('glass uses explicit product pair and black profile; leaving glass has deterministic opaque mode', () => {
-  const base = data.materials.scenes[0].defaultSelection;
+  // Glass doors ship only with the photo living room's insert.
+  const base = data.materials.scenes.find(s => s.id === 'living-standard')!.defaultSelection;
   const glass = reduceSelection(
     base,
     { type: 'door', productId: 'dera-xham', finishId: 'xham-erret' },
@@ -109,7 +110,7 @@ it('glass uses explicit product pair and black profile; leaving glass has determ
 });
 it('completed Studio inquiry contains exact IDs, modes and reopenable canonical selection URL', () => {
   const selection = {
-    ...data.materials.scenes[1].defaultSelection,
+    ...data.materials.scenes.find(s => s.id === 'corridor-standard')!.defaultSelection,
     doorProductId: 'dera-bardhe',
     doorFinishId: 'antracit',
     skirtingMode: 'black' as const,
@@ -149,9 +150,9 @@ it('slow decode followed by a newer job rejects stale work and only latest succe
     },
     materialLoader: async () => f.materials,
   });
-  const first = c.render({ ...f.job, selection: data.materials.scenes[0].defaultSelection });
+  const first = c.render({ ...f.job, selection: f.scene.scene.defaultSelection });
   const rejected = expect(first).rejects.toMatchObject({ name: 'AbortError' });
-  const last = c.render({ ...f.job, selection: data.materials.scenes[0].defaultSelection });
+  const last = c.render({ ...f.job, selection: f.scene.scene.defaultSelection });
   unblock();
   await rejected;
   expect((await last).pixels.width).toBe(8);

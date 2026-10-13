@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "buildId": "W73g50ohkAHdA0v3gs55p",
+  "buildId": "OoZyf39h68Uc4IGo0yBSy",
   "method": "Production export. Unique initial script tags per route; gzip and Brotli per file. CSS gzip plus used WOFF2 bytes. Images: conservative 640px variants at 390px viewport. File sizes do not establish LCP, INP, CLS or device latency.",
   "limits": {
     "feedInitialJsGzip": 204800,
@@ -13,6 +13,7 @@
     "studioFirstScene": 2621440,
     "studioOfflinePack": 20971520,
     "ownedRenderBuffers": 209715200,
+    "ownedRenderBuffersRenderedFull": 251658240,
     "cls": 0.1,
     "lcpMs": 2500,
     "inpMs": 200,
@@ -145,7 +146,7 @@
         "brotli": 98972
       },
       "cssAndFonts": 105712,
-      "firstScreen": 449686
+      "firstScreen": 449803
     },
     {
       "route": "/en/",
@@ -273,7 +274,7 @@
         "brotli": 98972
       },
       "cssAndFonts": 105712,
-      "firstScreen": 449107
+      "firstScreen": 449219
     },
     {
       "route": "/de/",
@@ -401,7 +402,7 @@
         "brotli": 98972
       },
       "cssAndFonts": 105712,
-      "firstScreen": 449796
+      "firstScreen": 449929
     }
   ],
   "firstImages": {
@@ -409,6 +410,42 @@
     "webp": 115830
   },
   "scenes": [
+    {
+      "id": "living-render-01",
+      "bytes": 1986036,
+      "files": [
+        "/media/scenes/living-render-01/base.webp",
+        "/media/scenes/living-render-01/fallback.webp",
+        "/media/scenes/living-render-01/protected-mask.png",
+        "/media/scenes/living-render-01/floor-mask.png",
+        "/media/scenes/living-render-01/floor-light.png",
+        "/media/scenes/living-render-01/floor-reflection.png",
+        "/media/scenes/living-render-01/floor-position.png",
+        "/media/scenes/living-render-01/leaf-mask.png",
+        "/media/scenes/living-render-01/leaf-light.png",
+        "/media/scenes/living-render-01/leaf-reflection.png",
+        "/media/scenes/living-render-01/frame-left-mask.png",
+        "/media/scenes/living-render-01/frame-left-light.png",
+        "/media/scenes/living-render-01/frame-left-reflection.png",
+        "/media/scenes/living-render-01/frame-right-mask.png",
+        "/media/scenes/living-render-01/frame-right-light.png",
+        "/media/scenes/living-render-01/frame-right-reflection.png",
+        "/media/scenes/living-render-01/frame-top-mask.png",
+        "/media/scenes/living-render-01/frame-top-light.png",
+        "/media/scenes/living-render-01/frame-top-reflection.png",
+        "/media/scenes/living-render-01/skirting-back-left-mask.png",
+        "/media/scenes/living-render-01/skirting-back-left-light.png",
+        "/media/scenes/living-render-01/skirting-back-left-reflection.png",
+        "/media/scenes/living-render-01/skirting-back-right-mask.png",
+        "/media/scenes/living-render-01/skirting-back-right-light.png",
+        "/media/scenes/living-render-01/skirting-back-right-reflection.png",
+        "/media/scenes/living-render-01/skirting-right-mask.png",
+        "/media/scenes/living-render-01/skirting-right-light.png",
+        "/media/scenes/living-render-01/skirting-right-reflection.png",
+        "/media/textures/floors/lis-natyral-10/planks.webp",
+        "/media/textures/floors/lis-natyral-10/trim.webp"
+      ]
+    },
     {
       "id": "living-standard",
       "bytes": 1542567,
@@ -496,10 +533,10 @@
     }
   ],
   "offlinePack": {
-    "files": 114,
-    "bytes": 9515496
+    "files": 150,
+    "bytes": 12707921
   },
-  "emittedJsChunks": 22,
+  "emittedJsChunks": 23,
   "checks": [
     {
       "metric": "firstFourImages",
@@ -521,7 +558,7 @@
     },
     {
       "metric": "sq.firstScreen",
-      "value": 449686,
+      "value": 449803,
       "limit": 716800,
       "status": "pass"
     },
@@ -539,7 +576,7 @@
     },
     {
       "metric": "en.firstScreen",
-      "value": 449107,
+      "value": 449219,
       "limit": 716800,
       "status": "pass"
     },
@@ -557,7 +594,7 @@
     },
     {
       "metric": "de.firstScreen",
-      "value": 449796,
+      "value": 449929,
       "limit": 716800,
       "status": "pass"
     },
@@ -850,6 +887,18 @@
       "status": "pass"
     },
     {
+      "metric": "living-render-01.fallback",
+      "value": 83530,
+      "limit": 225280,
+      "status": "pass"
+    },
+    {
+      "metric": "living-render-01.firstUseful",
+      "value": 1986036,
+      "limit": 2621440,
+      "status": "pass"
+    },
+    {
       "metric": "living-standard.fallback",
       "value": 33160,
       "limit": 225280,
@@ -887,7 +936,7 @@
     },
     {
       "metric": "studioOfflinePack",
-      "value": 9515496,
+      "value": 12707921,
       "limit": 20971520,
       "status": "pass"
     }

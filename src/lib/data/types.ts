@@ -157,12 +157,20 @@ export interface FloorAtlas {
   bevelWidthMm: number; // 0 for flat; no additional runtime seam overlay
   chevronCutAngleDeg: 45 | 60 | null; // non-null only for chevron
 }
+/** Individual board images for position-map floors (one per variant, stacked vertically). */
+export interface PlankSheet {
+  image: LocalAssetPath; // sRGB albedo; variant k occupies rows k*variantPx[1]..(k+1)*variantPx[1]
+  variants: number;
+  variantPx: readonly [number, number]; // one board: length x width in pixels
+  pxPerMm: number; // native detail; boards are boardSizeMm at this density
+}
 export interface FloorCollectionBase {
   id: Id;
   name: LocalizedText;
   thicknessMm: number;
   bevel: '4v' | 'flat';
   atlas: FloorAtlas;
+  planks?: PlankSheet;
   trim: TrimAppearance;
   swatchColorSrgb: HexColor;
   specularStrength: number; // 0..0.2; default .04
@@ -191,11 +199,25 @@ export interface SurfaceMask {
 }
 export interface LightingPlate {
   diffuse: LocalAssetPath; // cleaned grayscale sRGB illumination, opaque PNG
-  baselineLinear: number; // median Y of author-marked neutral patch, > .02
-  shadeMin: 0.18;
-  shadeMax: 1.65;
+  baselineLinear: number; // median Y of author-marked neutral patch, > .02 (rendered: 1 / light scale)
+  shadeMin: number; // 0.18 for photo plates; 0 for rendered plates (true contact shadows)
+  shadeMax: number; // 1.65 for photo plates
   specular: LocalAssetPath | null; // opaque RGB image, black=no reflected contribution
   specularIncludedInDiffuse: false; // fail validation if reused twice
+  specularScale?: number; // linear reflection = plate * specularScale * (specularStrength / 0.04)
+  tint?: RGB; // linear light colour relative to the grayscale plate (rendered scenes)
+}
+/**
+ * Floor world position from a 3D render (16-bit grey+alpha PNG: grey = X, alpha = Y).
+ * Sample (i, j) is the centre of scene pixel (x + i*stepPx, y + j*stepPx); the
+ * map has floor((w-1)/stepPx)+2 by floor((h-1)/stepPx)+2 samples.
+ */
+export interface PositionMap {
+  image: LocalAssetPath;
+  boundsPx: readonly [number, number, number, number]; // x,y,width,height at scene resolution
+  originMm: Vec2; // world position of value 0
+  unitMm: number; // millimetres per 16-bit step
+  stepPx: number; // scene pixels between samples
 }
 export interface PlanarMapping {
   worldQuadMm: Quad; // ordered perimeter, non-self-intersecting, area > 0
@@ -215,6 +237,13 @@ export interface SceneSurface {
   lighting: LightingPlate;
   mapping: PlanarMapping;
   uvRotationDeg: 0 | 90; // grain on trim rail vs stile; floor rotation in state
+  positionMap?: PositionMap; // floor only; replaces the homography for board lookup
+}
+/** Scenes rendered in Blender (tools/blender) rather than authored from a photograph. */
+export interface SceneRender {
+  source: 'blender';
+  partitionedMasks: true; // masks + protected coverage sum to <= 1; protection is not subtracted
+  toneShoulder: number; // highlight shoulder shared by base plate and runtime surfaces
 }
 export interface DoorInsert {
   variantKey: 'smoke-glass-black';
@@ -238,9 +267,11 @@ export interface RoomScene {
   id: Id;
   name: LocalizedText;
   description: LocalizedText;
-  width: number; // canonical 1600
-  height: number; // canonical 1200
+  width: number; // canonical 1600 (photo) or 2400 (rendered)
+  height: number; // canonical 1200 (photo) or 1800 (rendered)
   base: LocalAssetPath; // immutable room photo
+  original?: LocalAssetPath; // shown by compare-with-original when the base is not presentable
+  render?: SceneRender;
   thumbnail: LocalAssetPath;
   fallback: LocalAssetPath; // pre-rendered DEFAULT selection, not an arbitrary room
   frameType: 'standard-casing' | 'concealed-aluminium';
@@ -267,8 +298,16 @@ export interface SiteData {
   products: ProductsConfig;
   materials: MaterialsConfig;
 }
-export interface SceneCalibration {
+export type SceneCalibration = PhotoSceneCalibration | RenderedSceneCalibration;
+export interface RenderedSceneCalibration {
   schemaVersion: 1;
+  kind: 'rendered';
+  scene: RoomScene;
+  renderManifest: string; // file name next to calibration.json
+}
+export interface PhotoSceneCalibration {
+  schemaVersion: 1;
+  kind?: 'photo';
   scene: RoomScene;
   sourceCrop: {
     originalWidth: number;

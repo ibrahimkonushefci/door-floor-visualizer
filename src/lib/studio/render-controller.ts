@@ -96,6 +96,7 @@ export function createRenderController(
       job.height,
       job.quality,
       job.rendererVersion,
+      job.sceneScale ?? 1,
     ]);
   };
   const controller: RenderController = {
@@ -134,9 +135,11 @@ export function createRenderController(
       const needsGlass =
         catalog.materials.doorFinishes.find(f => f.id === job.selection.doorFinishId)?.kind ===
         'glass';
+      const sceneScale = job.sceneScale ?? 1;
       if (
         scene?.scene.id !== definition.id ||
         scene.scene.assetRevision !== definition.assetRevision ||
+        (scene.scale ?? 1) !== sceneScale ||
         (needsGlass && !scene.inserts.size)
       ) {
         teardown();
@@ -147,6 +150,7 @@ export function createRenderController(
         const next = await (options.sceneLoader || prepareScene)(
           needsGlass ? definition : { ...definition, doorInserts: [] },
           signal,
+          { scale: sceneScale },
         );
         if (mine !== id) throw aborted();
         scene = next;

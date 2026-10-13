@@ -2,6 +2,267 @@
   "schemaVersion": 1,
   "assets": [
     {
+      "source": "brand/assets/scenes/living-render-01/base.png",
+      "output": "/media/scenes/living-render-01/base.webp",
+      "sha256": "f0a3521f8b255a1bc9d6a3f277742c66aab4ba870ef5a485f8351bf46a3dae93",
+      "sourceSha256": "40aec31622f0f9b8c4838d988892f5cb546e790c89a97509f53d89c21ee9e437",
+      "bytes": 371936,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/floor-light.png",
+      "output": "/media/scenes/living-render-01/floor-light.png",
+      "sha256": "270d32e9f408763353345dd22dcdfc0bc7181a4f50d90dc2e8930799e283382a",
+      "sourceSha256": "270d32e9f408763353345dd22dcdfc0bc7181a4f50d90dc2e8930799e283382a",
+      "bytes": 140301,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/floor-mask.png",
+      "output": "/media/scenes/living-render-01/floor-mask.png",
+      "sha256": "6375fc1b8a6ea0de4ee505b267f91c9e06f24ae4e6703e943d6c9c011f4cff84",
+      "sourceSha256": "6375fc1b8a6ea0de4ee505b267f91c9e06f24ae4e6703e943d6c9c011f4cff84",
+      "bytes": 38214,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/floor-position.png",
+      "output": "/media/scenes/living-render-01/floor-position.png",
+      "sha256": "00b2c5b88a71108312570aa25b8bf9ab9a39893f169338b27f834f711c6b9006",
+      "sourceSha256": "00b2c5b88a71108312570aa25b8bf9ab9a39893f169338b27f834f711c6b9006",
+      "bytes": 179837,
+      "width": 601,
+      "height": 237
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/floor-reflection.png",
+      "output": "/media/scenes/living-render-01/floor-reflection.png",
+      "sha256": "40488de450f8f25d3320c61cc1ba49f71076ff2849bc27f52621a9e084eeb7ed",
+      "sourceSha256": "40488de450f8f25d3320c61cc1ba49f71076ff2849bc27f52621a9e084eeb7ed",
+      "bytes": 581633,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/frame-left-light.png",
+      "output": "/media/scenes/living-render-01/frame-left-light.png",
+      "sha256": "0602ac23bbbe835c67d4a9ade5d0e85d176d967419f85bc7009cdc290d7769d1",
+      "sourceSha256": "0602ac23bbbe835c67d4a9ade5d0e85d176d967419f85bc7009cdc290d7769d1",
+      "bytes": 7915,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/frame-left-mask.png",
+      "output": "/media/scenes/living-render-01/frame-left-mask.png",
+      "sha256": "561a112ac8ed918df3b348faa895edb564bb58195e33bb44312214fd3bdfbb32",
+      "sourceSha256": "561a112ac8ed918df3b348faa895edb564bb58195e33bb44312214fd3bdfbb32",
+      "bytes": 6791,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/frame-left-reflection.png",
+      "output": "/media/scenes/living-render-01/frame-left-reflection.png",
+      "sha256": "4cdebb91a45be9b326c5b4c50e90694b5c42d9ce1bfacd1d676490871a0a98ea",
+      "sourceSha256": "4cdebb91a45be9b326c5b4c50e90694b5c42d9ce1bfacd1d676490871a0a98ea",
+      "bytes": 29594,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/frame-right-light.png",
+      "output": "/media/scenes/living-render-01/frame-right-light.png",
+      "sha256": "845f5bd9b9736689ba63e544e0a875b7d797558fc95a8925d342ca7d8f2bb3fd",
+      "sourceSha256": "845f5bd9b9736689ba63e544e0a875b7d797558fc95a8925d342ca7d8f2bb3fd",
+      "bytes": 8228,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/frame-right-mask.png",
+      "output": "/media/scenes/living-render-01/frame-right-mask.png",
+      "sha256": "6d26ffe240d9020bcea6127ed333a18463a841581706ceef5af7d3999eca32ac",
+      "sourceSha256": "6d26ffe240d9020bcea6127ed333a18463a841581706ceef5af7d3999eca32ac",
+      "bytes": 7116,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/frame-right-reflection.png",
+      "output": "/media/scenes/living-render-01/frame-right-reflection.png",
+      "sha256": "3510607e2933bb7c9d1cc7cffd36c43bc13d3a2a5081ef1621ad5fee9687e236",
+      "sourceSha256": "3510607e2933bb7c9d1cc7cffd36c43bc13d3a2a5081ef1621ad5fee9687e236",
+      "bytes": 30587,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/frame-top-light.png",
+      "output": "/media/scenes/living-render-01/frame-top-light.png",
+      "sha256": "5eed1636daa3ee1b6fe05d384e96cf6fd4b68b1449f17786f132886db3163936",
+      "sourceSha256": "5eed1636daa3ee1b6fe05d384e96cf6fd4b68b1449f17786f132886db3163936",
+      "bytes": 5763,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/frame-top-mask.png",
+      "output": "/media/scenes/living-render-01/frame-top-mask.png",
+      "sha256": "7ff0e46a80c9a370601b64ab094bd7dfb399d95eba790c324bb5ae3e5f7313ea",
+      "sourceSha256": "7ff0e46a80c9a370601b64ab094bd7dfb399d95eba790c324bb5ae3e5f7313ea",
+      "bytes": 5146,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/frame-top-reflection.png",
+      "output": "/media/scenes/living-render-01/frame-top-reflection.png",
+      "sha256": "52d5ad87afc9a90b4fd8b11753267b91dbc75a8d4306287bca2e29e48dd10702",
+      "sourceSha256": "52d5ad87afc9a90b4fd8b11753267b91dbc75a8d4306287bca2e29e48dd10702",
+      "bytes": 20076,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/leaf-light.png",
+      "output": "/media/scenes/living-render-01/leaf-light.png",
+      "sha256": "d5af1a34cd864820d7350d2388798ebeaec59dfe7490076feba5e70e1f09cbe4",
+      "sourceSha256": "d5af1a34cd864820d7350d2388798ebeaec59dfe7490076feba5e70e1f09cbe4",
+      "bytes": 16792,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/leaf-mask.png",
+      "output": "/media/scenes/living-render-01/leaf-mask.png",
+      "sha256": "0a579110b1952fee307a96917cf8a6867f60451bec972025b9995104a568d3dc",
+      "sourceSha256": "0a579110b1952fee307a96917cf8a6867f60451bec972025b9995104a568d3dc",
+      "bytes": 7864,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/leaf-reflection.png",
+      "output": "/media/scenes/living-render-01/leaf-reflection.png",
+      "sha256": "3878b0f292c8395e69927c00e6b66789b8f1302c529025deae60a25deb76b7cb",
+      "sourceSha256": "3878b0f292c8395e69927c00e6b66789b8f1302c529025deae60a25deb76b7cb",
+      "bytes": 88479,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/original.png",
+      "output": "/media/scenes/living-render-01/original.webp",
+      "sha256": "d503c021ab6c03b09132e892f00b8ebe90bab41cadfb70870c89a7d04d0ab3c6",
+      "sourceSha256": "49af227bcbc348c37373bdd301b44ff5e4f61e3aa75f9c8c5bd86849aa06abba",
+      "bytes": 323186,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/protected-mask.png",
+      "output": "/media/scenes/living-render-01/protected-mask.png",
+      "sha256": "e938294360dec20791cf2de8c53e5db876cd56232029110d1003461ddde4bfa8",
+      "sourceSha256": "e938294360dec20791cf2de8c53e5db876cd56232029110d1003461ddde4bfa8",
+      "bytes": 5316,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/skirting-back-left-light.png",
+      "output": "/media/scenes/living-render-01/skirting-back-left-light.png",
+      "sha256": "b753a0d7b65848f79e29214369649b02738ce9ba7346478ab3f913b8a800ca12",
+      "sourceSha256": "b753a0d7b65848f79e29214369649b02738ce9ba7346478ab3f913b8a800ca12",
+      "bytes": 6921,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/skirting-back-left-mask.png",
+      "output": "/media/scenes/living-render-01/skirting-back-left-mask.png",
+      "sha256": "95bd37c3c60a7a5ca506aec7c0b89f3c57a1b346a14de3b5edbcc9e6e588ad32",
+      "sourceSha256": "95bd37c3c60a7a5ca506aec7c0b89f3c57a1b346a14de3b5edbcc9e6e588ad32",
+      "bytes": 6632,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/skirting-back-left-reflection.png",
+      "output": "/media/scenes/living-render-01/skirting-back-left-reflection.png",
+      "sha256": "bdc3b484da6ab20cb2f24b73ded48cc7040d0778d3ea9cecd5e3a6e8d3999785",
+      "sourceSha256": "bdc3b484da6ab20cb2f24b73ded48cc7040d0778d3ea9cecd5e3a6e8d3999785",
+      "bytes": 25115,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/skirting-back-right-light.png",
+      "output": "/media/scenes/living-render-01/skirting-back-right-light.png",
+      "sha256": "a5cd5437f88fc6c6e328f56bc88b268e0c26d30a3365877853c7e6f48fddf7cc",
+      "sourceSha256": "a5cd5437f88fc6c6e328f56bc88b268e0c26d30a3365877853c7e6f48fddf7cc",
+      "bytes": 4992,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/skirting-back-right-mask.png",
+      "output": "/media/scenes/living-render-01/skirting-back-right-mask.png",
+      "sha256": "61bd9b97d5f4fc4d2c9a31bae3eeb3e48e7393950954a768d1a2d814c94e6380",
+      "sourceSha256": "61bd9b97d5f4fc4d2c9a31bae3eeb3e48e7393950954a768d1a2d814c94e6380",
+      "bytes": 4810,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/skirting-back-right-reflection.png",
+      "output": "/media/scenes/living-render-01/skirting-back-right-reflection.png",
+      "sha256": "8c53cea105ef709170a77d8d51244c4b11a9d994c5acce32a77481435022278b",
+      "sourceSha256": "8c53cea105ef709170a77d8d51244c4b11a9d994c5acce32a77481435022278b",
+      "bytes": 15877,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/skirting-right-light.png",
+      "output": "/media/scenes/living-render-01/skirting-right-light.png",
+      "sha256": "74151247488a09a09e76af3be31c150408ddeb2cb33adf229abcd1c0824a4c91",
+      "sourceSha256": "74151247488a09a09e76af3be31c150408ddeb2cb33adf229abcd1c0824a4c91",
+      "bytes": 8261,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/skirting-right-mask.png",
+      "output": "/media/scenes/living-render-01/skirting-right-mask.png",
+      "sha256": "df6563bfb72b426c615e454e8382394732388567cd1cf8cd3c814e847efabc96",
+      "sourceSha256": "df6563bfb72b426c615e454e8382394732388567cd1cf8cd3c814e847efabc96",
+      "bytes": 7007,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/skirting-right-reflection.png",
+      "output": "/media/scenes/living-render-01/skirting-right-reflection.png",
+      "sha256": "e55982763550df837b5774adb14bc42b0af8675a8ebd6c349bb23b17545a8d7f",
+      "sourceSha256": "e55982763550df837b5774adb14bc42b0af8675a8ebd6c349bb23b17545a8d7f",
+      "bytes": 28281,
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/thumbnail.png",
+      "output": "/media/scenes/living-render-01/thumbnail.webp",
+      "sha256": "be34c9c5272264abca013009c038cc4985cdba3fdd78eb4f4e86666c7a25f3a7",
+      "sourceSha256": "2216ece58ea7265220112a23ed323653d5ef6cef9110ad620a7e2cf4c04c7341",
+      "bytes": 6716,
+      "width": 320,
+      "height": 240
+    },
+    {
       "source": "brand/assets/scenes/living-standard/base.png",
       "output": "/media/scenes/living-standard/base.webp",
       "sha256": "815df7ff40c8c23dd2b9353514b0c26dec7b468ec652d02c1a176079f3612988",
@@ -632,6 +893,15 @@
       "height": 286
     },
     {
+      "source": "brand/assets/textures/floors/arre-klasike-12/planks.png",
+      "output": "/media/textures/floors/arre-klasike-12/planks.webp",
+      "sha256": "9b06033935097630c49e492a6876e61dc484397d5e670c29bd785aab9c703436",
+      "sourceSha256": "eb9406be11b839ddc3cb508019505234ee165f346b122f066a2a08de588bbcba",
+      "bytes": 158250,
+      "width": 1380,
+      "height": 579
+    },
+    {
       "source": "brand/assets/textures/floors/arre-klasike-12/trim.png",
       "output": "/media/textures/floors/arre-klasike-12/trim.webp",
       "sha256": "bd865897cc6ad6061ec32a59310b382074349425250f960e9aa0502171751375",
@@ -648,6 +918,15 @@
       "bytes": 371144,
       "width": 2048,
       "height": 362
+    },
+    {
+      "source": "brand/assets/textures/floors/dushk-fshatar-8/planks.png",
+      "output": "/media/textures/floors/dushk-fshatar-8/planks.webp",
+      "sha256": "7761bd1e3d1f9d414b4abe87ff9fd9202552b35387cd0bc1d017f91ebd95e06f",
+      "sourceSha256": "51e1406f678728b04e1b696d365b0880cc0ae856887bac952528971b8feb932e",
+      "bytes": 279900,
+      "width": 1380,
+      "height": 732
     },
     {
       "source": "brand/assets/textures/floors/dushk-fshatar-8/trim.png",
@@ -668,6 +947,15 @@
       "height": 286
     },
     {
+      "source": "brand/assets/textures/floors/hirte-skandinave-8/planks.png",
+      "output": "/media/textures/floors/hirte-skandinave-8/planks.webp",
+      "sha256": "89b0d13a2d8df4830af4ccd383e13214608fde75d154667f8cd5c73ea99f87f2",
+      "sourceSha256": "06fb80698a6281a1686906ac849ab9380d6fee2c02067786eecc350701d49f43",
+      "bytes": 210580,
+      "width": 1380,
+      "height": 579
+    },
+    {
       "source": "brand/assets/textures/floors/hirte-skandinave-8/trim.png",
       "output": "/media/textures/floors/hirte-skandinave-8/trim.webp",
       "sha256": "82e195ef5635a78130adb62ea034ab0db0e078a8ee4072f4c3b0f62d6631bbde",
@@ -684,6 +972,15 @@
       "bytes": 295054,
       "width": 2048,
       "height": 286
+    },
+    {
+      "source": "brand/assets/textures/floors/lis-natyral-10/planks.png",
+      "output": "/media/textures/floors/lis-natyral-10/planks.webp",
+      "sha256": "d76ce04cd9a795d75a16cde8f9b131cdf3054ae2badf59d8e81b055f742560b1",
+      "sourceSha256": "62befc2cbe713699cb6c21fd376a79f622f98b6da5c40249861c19a8bad2e986",
+      "bytes": 224350,
+      "width": 1380,
+      "height": 579
     },
     {
       "source": "brand/assets/textures/floors/lis-natyral-10/trim.png",
@@ -704,6 +1001,15 @@
       "height": 1024
     },
     {
+      "source": "brand/assets/textures/floors/peshk-natyral-12/planks.png",
+      "output": "/media/textures/floors/peshk-natyral-12/planks.webp",
+      "sha256": "5bf319c48cc5c7f380edb015aa91a5eb9ff48278e75cca7c9fbc6fe5a4ec26a0",
+      "sourceSha256": "fc10b25f60abc5f1564a8e43c4ec46122b9e86251bb2b305f11e69a2e1cd4c37",
+      "bytes": 187586,
+      "width": 600,
+      "height": 1080
+    },
+    {
       "source": "brand/assets/textures/floors/peshk-natyral-12/trim.png",
       "output": "/media/textures/floors/peshk-natyral-12/trim.webp",
       "sha256": "53fcab0175ea81f987b8f9c8a2091b1b751d783a449e2406ee62a296784e2f9f",
@@ -711,6 +1017,15 @@
       "bytes": 18672,
       "width": 512,
       "height": 34
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/calibration.json",
+      "output": "/media/scenes/living-render-01/fallback.webp",
+      "sha256": "20a34496e973b79d9240f62eaa741c0329793202de62466a67319bbb9b258ef1",
+      "sourceSha256": "3eb6e2a5fa19647c43a433c96e1481ead0b2b7fe5ea4b6ee35d8526c42002bd4",
+      "bytes": 83530,
+      "width": 960,
+      "height": 720
     },
     {
       "source": "brand/assets/scenes/living-standard/calibration.json",

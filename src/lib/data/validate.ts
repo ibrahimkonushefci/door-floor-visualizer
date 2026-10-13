@@ -87,8 +87,11 @@ export function validateSiteData(input: unknown): SiteData {
       scene.surfaces.map(s => s.id),
       `${scene.id}.surfaces`,
     );
-    if (scene.width !== 1600 || scene.height !== 1200)
-      throw new Error('Wrong canonical scene dimensions');
+    // Photo plates are 1600×1200; Blender-rendered scenes 2400×1800.
+    const [cw, ch] = scene.render ? [2400, 1800] : [1600, 1200];
+    if (scene.width !== cw || scene.height !== ch) throw new Error('Wrong canonical scene dimensions');
+    if (scene.render && scene.surfaces.some(s => s.positionMap && s.role !== 'floor'))
+      throw new Error('Position maps are floor-only');
     for (const id of scene.allowedDoorProductIds) {
       const p = products.products.find(p => p.id === id);
       if (p?.kind !== 'door' || !compatibleDoor(p, scene, catalog))

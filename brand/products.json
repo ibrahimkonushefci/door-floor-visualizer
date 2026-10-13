@@ -418,6 +418,7 @@
       ],
       "defaultFinishId": "bardhe-mat",
       "compatibleSceneIds": [
+        "living-render-01",
         "living-standard",
         "corridor-standard",
         "bedroom-photo"
@@ -459,6 +460,7 @@
       "published": true,
       "collectionId": "lis-natyral-10",
       "compatibleSceneIds": [
+        "living-render-01",
         "living-standard",
         "corridor-standard",
         "bedroom-photo"
@@ -543,6 +545,7 @@
       ],
       "defaultFinishId": "lis-natyral",
       "compatibleSceneIds": [
+        "living-render-01",
         "living-standard",
         "corridor-standard",
         "bedroom-photo"
@@ -584,6 +587,7 @@
       "published": true,
       "collectionId": "dushk-fshatar-8",
       "compatibleSceneIds": [
+        "living-render-01",
         "living-standard",
         "corridor-standard",
         "bedroom-photo"
@@ -695,6 +699,7 @@
       "published": true,
       "collectionId": "peshk-natyral-12",
       "compatibleSceneIds": [
+        "living-render-01",
         "living-standard",
         "corridor-standard",
         "bedroom-photo"
@@ -806,6 +811,7 @@
       "published": true,
       "collectionId": "arre-klasike-12",
       "compatibleSceneIds": [
+        "living-render-01",
         "living-standard",
         "corridor-standard",
         "bedroom-photo"
@@ -908,6 +914,7 @@
       "published": true,
       "collectionId": "hirte-skandinave-8",
       "compatibleSceneIds": [
+        "living-render-01",
         "living-standard",
         "corridor-standard",
         "bedroom-photo"

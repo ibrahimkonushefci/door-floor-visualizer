@@ -4,3 +4,6 @@ out/
 *.tsbuildinfo
 .DS_Store
 docs/review/
+tools/blender/.cache/
+tools/blender/out/
+__pycache__/

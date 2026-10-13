@@ -4,12 +4,18 @@ import type { RoomScene, StudioSelection } from '@/lib/data/types';
 import type { RenderController } from '@/lib/studio/types';
 import type { PixelBuffer } from '@/lib/studio/render/sampling';
 import type { Messages } from '@/lib/i18n/messages';
-import { finalFrameWidth, presentFrame } from '@/lib/studio/presentation';
+import {
+  finalFrameWidth,
+  presentFrame,
+  sceneScaleFor,
+  PREVIEW_AFTER_MS,
+} from '@/lib/studio/presentation';
 import { IconButton } from '../ui/IconButton';
 const FADE_MS = 260;
 // The stage keeps the last sharp frame on screen (with a hairline progress bar)
-// until the full-resolution frame is ready, then cross-fades it in. No
-// low-resolution intermediate is ever shown.
+// until the full-resolution frame is ready, then cross-fades it in. Only when a
+// scene's full frames are slow (large rendered rooms) is a half-width preview
+// cross-faded in first, then replaced by the settled frame.
 export function StudioStage({
   controller,
   scene,
@@ -35,7 +41,8 @@ export function StudioStage({
     canvasA = useRef<HTMLCanvasElement>(null),
     canvasB = useRef<HTMLCanvasElement>(null),
     front = useRef(-1),
-    hideTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
+    hideTimer = useRef<ReturnType<typeof setTimeout>>(undefined),
+    settledMs = useRef(new Map<string, number>());
   const [size, setSize] = useState(0),
     [pending, setPending] = useState(true),
     [failed, setFailed] = useState(false),
@@ -79,21 +86,38 @@ export function StudioStage({
       }, FADE_MS + 40);
       front.current = nextIndex;
     };
-    const width = finalFrameWidth(size, devicePixelRatio),
-      job = { selection, width, height: (width * 3) / 4, quality: 'settled' as const, rendererVersion: 2 as const },
+    const width = finalFrameWidth(size, devicePixelRatio, scene.width),
+      job = {
+        selection,
+        width,
+        height: (width * 3) / 4,
+        quality: 'settled' as const,
+        rendererVersion: 2 as const,
+        sceneScale: sceneScaleFor(width, scene.width),
+      },
       start = performance.now();
     const run = async () => {
       setPending(true);
       setFailed(false);
       try {
+        let previewMs: number | undefined;
+        if ((settledMs.current.get(scene.id) ?? 0) > PREVIEW_AFTER_MS) {
+          const half = Math.max(4, Math.floor(width / 8) * 4),
+            preview = await controller.render({ ...job, width: half, height: (half * 3) / 4, quality: 'preview' });
+          if (!current) return;
+          present(preview.pixels);
+          previewMs = performance.now() - start;
+        }
+        const settledStart = performance.now();
         const result = await controller.render(job);
         if (!current) return;
+        settledMs.current.set(scene.id, performance.now() - settledStart);
         present(result.pixels);
         setPending(false);
         onRendered(result.selection);
         if (debug && stage.current) {
           const entries = JSON.parse(stage.current.dataset.presentations || '[]');
-          entries.push({ ms: performance.now() - start, width, selection: result.selection });
+          entries.push({ ms: performance.now() - start, previewMs, width, selection: result.selection });
           stage.current.dataset.presentations = JSON.stringify(entries.slice(-100));
           stage.current.dataset.presentedSelection = JSON.stringify(result.selection);
         }
@@ -109,7 +133,7 @@ export function StudioStage({
       current = false;
       controller.cancel();
     };
-  }, [controller, selection, size, retry, debug, onRendered]);
+  }, [controller, scene, selection, size, retry, debug, onRendered]);
   return (
     <div className="studio-stage-area">
       <div
@@ -214,7 +238,13 @@ function CompareOverlay({
       onPointerCancel={() => (drag.current = null)}
     >
       <picture className="studio-compare-original" style={{ clipPath: `inset(0 ${100 - split}% 0 0)` }}>
-        <img src={scene.base} alt="" width={scene.width} height={scene.height} decoding="async" />
+        <img
+          src={scene.original ?? scene.base}
+          alt=""
+          width={scene.width}
+          height={scene.height}
+          decoding="async"
+        />
       </picture>
       <span className="studio-compare-label is-start">{m['studio.original']}</span>
       <span className="studio-compare-label is-end">{m['studio.yourChoice']}</span>
