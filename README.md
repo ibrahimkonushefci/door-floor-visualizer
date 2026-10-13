@@ -8,6 +8,10 @@ A mobile-first lookbook catalog and room Studio for interior-door and flooring s
 
 All products, dimensions and imagery are demo content (`brand.json` → `demoMode: true`).
 
+## Roadmap
+
+Studio realism work is phased in [docs/plan/STUDIO_REALISM_PLAN.md](docs/plan/STUDIO_REALISM_PLAN.md) (status table and handoff log inside). Competitor research is in [docs/research/VISUALIZER_COMPETITORS.md](docs/research/VISUALIZER_COMPETITORS.md).
+
 ## Run locally
 
 Node 24.19.0 and pnpm 11.25.0 are pinned.
