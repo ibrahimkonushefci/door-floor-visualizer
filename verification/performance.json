@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "buildId": "OoZyf39h68Uc4IGo0yBSy",
+  "buildId": "95T-Zxk-NjxL0fRzi2PvB",
   "method": "Production export. Unique initial script tags per route; gzip and Brotli per file. CSS gzip plus used WOFF2 bytes. Images: conservative 640px variants at 390px viewport. File sizes do not establish LCP, INP, CLS or device latency.",
   "limits": {
     "feedInitialJsGzip": 204800,
@@ -146,7 +146,7 @@
         "brotli": 98972
       },
       "cssAndFonts": 105712,
-      "firstScreen": 449803
+      "firstScreen": 449805
     },
     {
       "route": "/en/",
@@ -274,7 +274,7 @@
         "brotli": 98972
       },
       "cssAndFonts": 105712,
-      "firstScreen": 449219
+      "firstScreen": 449222
     },
     {
       "route": "/de/",
@@ -402,7 +402,7 @@
         "brotli": 98972
       },
       "cssAndFonts": 105712,
-      "firstScreen": 449929
+      "firstScreen": 449933
     }
   ],
   "firstImages": {
@@ -558,7 +558,7 @@
     },
     {
       "metric": "sq.firstScreen",
-      "value": 449803,
+      "value": 449805,
       "limit": 716800,
       "status": "pass"
     },
@@ -576,7 +576,7 @@
     },
     {
       "metric": "en.firstScreen",
-      "value": 449219,
+      "value": 449222,
       "limit": 716800,
       "status": "pass"
     },
@@ -594,7 +594,7 @@
     },
     {
       "metric": "de.firstScreen",
-      "value": 449929,
+      "value": 449933,
       "limit": 716800,
       "status": "pass"
     },

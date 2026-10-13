@@ -6,9 +6,9 @@ Research behind this plan: [../research/VISUALIZER_COMPETITORS.md](../research/V
 
 ## Status
 
-| Phase | Title | Status | Branch / commit | Gate approved |
+| Phase | Title | Status | Commit (on `main`) | Gate approved |
 |---|---|---|---|---|
-| 1 | One 3D proof room | awaiting review | `studio/phase-1-proof-room` / `8dd0121` | |
+| 1 | One 3D proof room | awaiting review | `8dd0121` | |
 | 2 | Real supplier décors and door models | not started | | |
 | 3 | More rooms | not started | | |
 | 4 | Studio rebuilt for presenting | not started | | |
@@ -56,7 +56,7 @@ Status values: `not started` → `in progress` → `awaiting review` → `done`.
 - Visually verify in the built-in browser at iPad (1024×768 and 768×1024), laptop (1440×900) and phone (390×844). Save screenshots to `docs/review/phase-N/`.
 - Record every new asset (URL, author, licence, hash, transformation) in `brand/asset-sources.json`.
 - Keep all three locales complete. Keep `demoMode: true`.
-- Commit on a branch named `studio/phase-N-<slug>` with clear messages. Do not push unless the owner asks.
+- Commit directly on `main` (never create branches or worktrees; see `AGENTS.md`) with clear messages. Do not push unless the owner asks.
 - At the end, update the **Status** table and append to the **Handoff log**.
 
 ---
@@ -185,7 +185,7 @@ Status values: `not started` → `in progress` → `awaiting review` → `done`.
 
 ## Handoff log
 
-Append one entry per session: date, phase, branch/commit, what changed, check results (real output), screenshots, open issues, and the exact next step.
+Append one entry per session: date, phase, commit, what changed, check results (real output), screenshots, open issues, and the exact next step.
 
 - 2026-10-13 — Planning session. Competitor research (REA) and plan written. No code changed. Next: Phase 1.
 - 2026-10-13 — **Phase 1 (one 3D proof room)**, branch `studio/phase-1-proof-room`, commit `8dd0121`. Status: awaiting review.
@@ -195,4 +195,4 @@ Append one entry per session: date, phase, branch/commit, what changed, check re
   - **Screenshots** (local, `docs/review/` is git-ignored): `docs/review/phase-1/side-by-side-{ipad-landscape,ipad-portrait,laptop,phone}.png` (new | living-standard | Quick-Step, device pixels at 2×), per-viewport full-page and stage captures, `checks/1-6*.png` gate crops and `checks/full-*.png` (0°, 90°, 45°, herringbone, wood door).
   - **Open issues / limits:** (1) Plank detail is 1.0 px/mm native — the grain scans have no more; the ≥ 1.5 px/mm target needs real supplier scans (Phase 2). It already exceeds what the nearest board needs at 100 % (~0.6 px/mm). (2) Only 3 strips per décor (× 4 flips) for straight floors; real scans will allow more. (3) Switching is ~0.7 s to the sharp frame on laptop (preview at ~0.2 s); multi-worker rendering would cut it but needs more memory or cross-origin isolation. (4) Furniture styling (chesterfield sofa, plaid rug) is less aspirational than Quick-Step; worth restyling in Phase 3. (5) The compare label still says "original photograph" for a render (Phase 4 copy). (6) `skirting-left` is hidden behind the sofa and not exported. (7) On phones the door is small in this wide composition.
   - **Next step:** owner reviews the side-by-sides and gate crops on iPad and laptop and approves (or lists changes). Then Phase 2: ask which brand and showroom, and obtain 6–8 real décors + 6 door finishes.
-
+- 2026-10-13 — **Repository consolidated onto `main`.** Phase 1 (`8dd0121`, `fce864d`) was fast-forwarded into `main`; all other branches and worktrees were removed. From now on every phase is committed directly on `main`.
