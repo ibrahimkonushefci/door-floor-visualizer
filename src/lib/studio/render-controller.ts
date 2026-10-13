@@ -135,22 +135,34 @@ export function createRenderController(
       const needsGlass =
         catalog.materials.doorFinishes.find(f => f.id === job.selection.doorFinishId)?.kind ===
         'glass';
-      const sceneScale = job.sceneScale ?? 1;
+      const sceneScale = job.sceneScale ?? 1,
+        modelId = job.selection.doorModelId;
       if (
         scene?.scene.id !== definition.id ||
         scene.scene.assetRevision !== definition.assetRevision ||
         (scene.scale ?? 1) !== sceneScale ||
+        (scene.modelId ?? modelId) !== modelId ||
         (needsGlass && !scene.inserts.size)
       ) {
-        teardown();
-        scene = null;
-        materials = null;
-        materialKey = '';
-        cache.clear();
+        const sameScene =
+          scene?.scene.id === definition.id &&
+          scene.scene.assetRevision === definition.assetRevision &&
+          (scene.scale ?? 1) === sceneScale;
+        // A door-model switch keeps the worker, materials and frame cache.
+        if (!sameScene) {
+          teardown();
+          materials = null;
+          materialKey = '';
+          cache.clear();
+        }
+        // An aborted model switch leaves the previous model prepared.
+        const previous = sameScene ? scene : null;
+        if (!sameScene) scene = null;
+        // A model switch on the same scene rebuilds only the door region from `previous`.
         const next = await (options.sceneLoader || prepareScene)(
           needsGlass ? definition : { ...definition, doorInserts: [] },
           signal,
-          { scale: sceneScale },
+          { scale: sceneScale, modelId, previous },
         );
         if (mine !== id) throw aborted();
         scene = next;

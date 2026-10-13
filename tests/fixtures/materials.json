@@ -1,5 +1,22 @@
 {
   "schemaVersion": 1,
+  "doorModels": [
+    {
+      "id": "flat",
+      "name": {
+        "sq": "E lëmuar",
+        "en": "Flat",
+        "de": "Glatt"
+      },
+      "description": {
+        "sq": "Fletë e lëmuar pa dekor, me pervaz.",
+        "en": "Plain flush leaf with casing.",
+        "de": "Glattes Türblatt mit Zarge und Bekleidung."
+      },
+      "frameType": "standard-casing",
+      "icon": "flat"
+    }
+  ],
   "doorFinishes": [],
   "floorCollections": [],
   "scenes": []

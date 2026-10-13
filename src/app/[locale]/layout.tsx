@@ -34,6 +34,7 @@ export default async function LocaleLayout({
     materials: {
       doorFinishes: data.materials.doorFinishes,
       floorCollections: data.materials.floorCollections,
+      doorModels: data.materials.doorModels,
     },
     scenes: data.materials.scenes.map(({ id, name }) => ({ id, name })),
   };

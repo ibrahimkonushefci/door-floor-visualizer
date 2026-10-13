@@ -4,18 +4,18 @@
     {
       "source": "brand/assets/scenes/living-render-01/base.png",
       "output": "/media/scenes/living-render-01/base.webp",
-      "sha256": "f0a3521f8b255a1bc9d6a3f277742c66aab4ba870ef5a485f8351bf46a3dae93",
-      "sourceSha256": "40aec31622f0f9b8c4838d988892f5cb546e790c89a97509f53d89c21ee9e437",
-      "bytes": 371936,
+      "sha256": "25cae230a18a40630c86a9ea5a6558f8670e2a322b5d20272898b3accf44af13",
+      "sourceSha256": "34fc67c5f0a63359c4846c0e37991dddf97c88e6d21d17091df1ccbe877b32bb",
+      "bytes": 372574,
       "width": 2400,
       "height": 1800
     },
     {
       "source": "brand/assets/scenes/living-render-01/floor-light.png",
       "output": "/media/scenes/living-render-01/floor-light.png",
-      "sha256": "270d32e9f408763353345dd22dcdfc0bc7181a4f50d90dc2e8930799e283382a",
-      "sourceSha256": "270d32e9f408763353345dd22dcdfc0bc7181a4f50d90dc2e8930799e283382a",
-      "bytes": 140301,
+      "sha256": "a470bf825d33f17eb7b5e9bb575031bf53e5a437cdfc6f64523cb5747c8a90c7",
+      "sourceSha256": "a470bf825d33f17eb7b5e9bb575031bf53e5a437cdfc6f64523cb5747c8a90c7",
+      "bytes": 140376,
       "width": 2400,
       "height": 1800
     },
@@ -40,45 +40,45 @@
     {
       "source": "brand/assets/scenes/living-render-01/floor-reflection.png",
       "output": "/media/scenes/living-render-01/floor-reflection.png",
-      "sha256": "40488de450f8f25d3320c61cc1ba49f71076ff2849bc27f52621a9e084eeb7ed",
-      "sourceSha256": "40488de450f8f25d3320c61cc1ba49f71076ff2849bc27f52621a9e084eeb7ed",
-      "bytes": 581633,
+      "sha256": "3df5676b29520f86ebb10b77dee1c7298e15c211fea12052de4c5d389d373a44",
+      "sourceSha256": "3df5676b29520f86ebb10b77dee1c7298e15c211fea12052de4c5d389d373a44",
+      "bytes": 648925,
       "width": 2400,
       "height": 1800
     },
     {
       "source": "brand/assets/scenes/living-render-01/frame-left-light.png",
       "output": "/media/scenes/living-render-01/frame-left-light.png",
-      "sha256": "0602ac23bbbe835c67d4a9ade5d0e85d176d967419f85bc7009cdc290d7769d1",
-      "sourceSha256": "0602ac23bbbe835c67d4a9ade5d0e85d176d967419f85bc7009cdc290d7769d1",
-      "bytes": 7915,
+      "sha256": "3103cbbfd11127014e5a6240efb25868be0ab231dd0424f0a55382b4fbecf889",
+      "sourceSha256": "3103cbbfd11127014e5a6240efb25868be0ab231dd0424f0a55382b4fbecf889",
+      "bytes": 7901,
       "width": 2400,
       "height": 1800
     },
     {
       "source": "brand/assets/scenes/living-render-01/frame-left-mask.png",
       "output": "/media/scenes/living-render-01/frame-left-mask.png",
-      "sha256": "561a112ac8ed918df3b348faa895edb564bb58195e33bb44312214fd3bdfbb32",
-      "sourceSha256": "561a112ac8ed918df3b348faa895edb564bb58195e33bb44312214fd3bdfbb32",
-      "bytes": 6791,
+      "sha256": "52623db671fb020fd3078b44522a6c7931e5683ed43796a87e67ae2b380cc253",
+      "sourceSha256": "52623db671fb020fd3078b44522a6c7931e5683ed43796a87e67ae2b380cc253",
+      "bytes": 6790,
       "width": 2400,
       "height": 1800
     },
     {
       "source": "brand/assets/scenes/living-render-01/frame-left-reflection.png",
       "output": "/media/scenes/living-render-01/frame-left-reflection.png",
-      "sha256": "4cdebb91a45be9b326c5b4c50e90694b5c42d9ce1bfacd1d676490871a0a98ea",
-      "sourceSha256": "4cdebb91a45be9b326c5b4c50e90694b5c42d9ce1bfacd1d676490871a0a98ea",
-      "bytes": 29594,
+      "sha256": "02c23fc00a78c7c14b9cdf9f6703af33a34158000ec4e848c53d379c5c0e13a6",
+      "sourceSha256": "02c23fc00a78c7c14b9cdf9f6703af33a34158000ec4e848c53d379c5c0e13a6",
+      "bytes": 29462,
       "width": 2400,
       "height": 1800
     },
     {
       "source": "brand/assets/scenes/living-render-01/frame-right-light.png",
       "output": "/media/scenes/living-render-01/frame-right-light.png",
-      "sha256": "845f5bd9b9736689ba63e544e0a875b7d797558fc95a8925d342ca7d8f2bb3fd",
-      "sourceSha256": "845f5bd9b9736689ba63e544e0a875b7d797558fc95a8925d342ca7d8f2bb3fd",
-      "bytes": 8228,
+      "sha256": "cc2eb683dfde4db7a0420663307648e134080249d4e6b4830eebe357cf5b0217",
+      "sourceSha256": "cc2eb683dfde4db7a0420663307648e134080249d4e6b4830eebe357cf5b0217",
+      "bytes": 8239,
       "width": 2400,
       "height": 1800
     },
@@ -94,45 +94,45 @@
     {
       "source": "brand/assets/scenes/living-render-01/frame-right-reflection.png",
       "output": "/media/scenes/living-render-01/frame-right-reflection.png",
-      "sha256": "3510607e2933bb7c9d1cc7cffd36c43bc13d3a2a5081ef1621ad5fee9687e236",
-      "sourceSha256": "3510607e2933bb7c9d1cc7cffd36c43bc13d3a2a5081ef1621ad5fee9687e236",
-      "bytes": 30587,
+      "sha256": "984704768b0f24cde623121806bd8ea6915d0c7cf16616c838dfe6955d232314",
+      "sourceSha256": "984704768b0f24cde623121806bd8ea6915d0c7cf16616c838dfe6955d232314",
+      "bytes": 30823,
       "width": 2400,
       "height": 1800
     },
     {
       "source": "brand/assets/scenes/living-render-01/frame-top-light.png",
       "output": "/media/scenes/living-render-01/frame-top-light.png",
-      "sha256": "5eed1636daa3ee1b6fe05d384e96cf6fd4b68b1449f17786f132886db3163936",
-      "sourceSha256": "5eed1636daa3ee1b6fe05d384e96cf6fd4b68b1449f17786f132886db3163936",
-      "bytes": 5763,
+      "sha256": "4c95efb986e4a1b435ba872f90a781090a68d6e05bb8db83e5cf83c95547c7e1",
+      "sourceSha256": "4c95efb986e4a1b435ba872f90a781090a68d6e05bb8db83e5cf83c95547c7e1",
+      "bytes": 5781,
       "width": 2400,
       "height": 1800
     },
     {
       "source": "brand/assets/scenes/living-render-01/frame-top-mask.png",
       "output": "/media/scenes/living-render-01/frame-top-mask.png",
-      "sha256": "7ff0e46a80c9a370601b64ab094bd7dfb399d95eba790c324bb5ae3e5f7313ea",
-      "sourceSha256": "7ff0e46a80c9a370601b64ab094bd7dfb399d95eba790c324bb5ae3e5f7313ea",
-      "bytes": 5146,
+      "sha256": "7305234abf8a032db621ced8f28845d365440974ae337fe72346c11960fec77d",
+      "sourceSha256": "7305234abf8a032db621ced8f28845d365440974ae337fe72346c11960fec77d",
+      "bytes": 5147,
       "width": 2400,
       "height": 1800
     },
     {
       "source": "brand/assets/scenes/living-render-01/frame-top-reflection.png",
       "output": "/media/scenes/living-render-01/frame-top-reflection.png",
-      "sha256": "52d5ad87afc9a90b4fd8b11753267b91dbc75a8d4306287bca2e29e48dd10702",
-      "sourceSha256": "52d5ad87afc9a90b4fd8b11753267b91dbc75a8d4306287bca2e29e48dd10702",
-      "bytes": 20076,
+      "sha256": "9036e548a319944bb80360271ec3ba7679e47b31b564e304a6c6bfefa8a7f6b5",
+      "sourceSha256": "9036e548a319944bb80360271ec3ba7679e47b31b564e304a6c6bfefa8a7f6b5",
+      "bytes": 20148,
       "width": 2400,
       "height": 1800
     },
     {
       "source": "brand/assets/scenes/living-render-01/leaf-light.png",
       "output": "/media/scenes/living-render-01/leaf-light.png",
-      "sha256": "d5af1a34cd864820d7350d2388798ebeaec59dfe7490076feba5e70e1f09cbe4",
-      "sourceSha256": "d5af1a34cd864820d7350d2388798ebeaec59dfe7490076feba5e70e1f09cbe4",
-      "bytes": 16792,
+      "sha256": "678f1d45deb2da889b4d3522744badaaae3d5c990d0c3aa8fd734228220acd90",
+      "sourceSha256": "678f1d45deb2da889b4d3522744badaaae3d5c990d0c3aa8fd734228220acd90",
+      "bytes": 16818,
       "width": 2400,
       "height": 1800
     },
@@ -148,18 +148,801 @@
     {
       "source": "brand/assets/scenes/living-render-01/leaf-reflection.png",
       "output": "/media/scenes/living-render-01/leaf-reflection.png",
-      "sha256": "3878b0f292c8395e69927c00e6b66789b8f1302c529025deae60a25deb76b7cb",
-      "sourceSha256": "3878b0f292c8395e69927c00e6b66789b8f1302c529025deae60a25deb76b7cb",
-      "bytes": 88479,
+      "sha256": "db17e94e1f709792a5e3a3431557092742a473b9d84a67dbf7eab15724fc11e5",
+      "sourceSha256": "db17e94e1f709792a5e3a3431557092742a473b9d84a67dbf7eab15724fc11e5",
+      "bytes": 88298,
       "width": 2400,
       "height": 1800
     },
     {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-base.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-base.webp",
+      "sha256": "ed4d345dd9cdf243d95486fc03c040032c0925d6e5f34317d40ac10a0d38020c",
+      "sourceSha256": "8c04f72ad019ede4af47154eb05a46862b9996256f447738b73a59553a4757f9",
+      "bytes": 26246,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-floor-light.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-floor-light.png",
+      "sha256": "f1503d7d93e8d5b714095e4cbc4a886cc5ab490fcbe144f6824e821b32679173",
+      "sourceSha256": "f1503d7d93e8d5b714095e4cbc4a886cc5ab490fcbe144f6824e821b32679173",
+      "bytes": 13467,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-floor-mask.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-floor-mask.png",
+      "sha256": "0bae47f8bea4ce63a867007e668ab443e07038c2a37f80c1a5158cba8bf673a6",
+      "sourceSha256": "0bae47f8bea4ce63a867007e668ab443e07038c2a37f80c1a5158cba8bf673a6",
+      "bytes": 8879,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-floor-reflection.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-floor-reflection.png",
+      "sha256": "0e7cbd85715264dceff243c22c12a3012a3b128749fd22f1609759d193d5b5aa",
+      "sourceSha256": "0e7cbd85715264dceff243c22c12a3012a3b128749fd22f1609759d193d5b5aa",
+      "bytes": 74454,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-leaf-light.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-leaf-light.png",
+      "sha256": "086b7191898d55caba80bb18660115e198a2f8dc91198c0d08e238ea177df407",
+      "sourceSha256": "086b7191898d55caba80bb18660115e198a2f8dc91198c0d08e238ea177df407",
+      "bytes": 13936,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-leaf-mask.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-leaf-mask.png",
+      "sha256": "b46b79b7f7c7a6132eea8576f52ecce120f034a9a3205cd5d8b9dbec620deb50",
+      "sourceSha256": "b46b79b7f7c7a6132eea8576f52ecce120f034a9a3205cd5d8b9dbec620deb50",
+      "bytes": 6122,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-leaf-reflection.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-leaf-reflection.png",
+      "sha256": "2837ff958e94b5719e1e10d3f65426f5c49211821925c6eec5be31692a7ada74",
+      "sourceSha256": "2837ff958e94b5719e1e10d3f65426f5c49211821925c6eec5be31692a7ada74",
+      "bytes": 82891,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-original.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-original.webp",
+      "sha256": "0edabec390baa378fb0495899675712e4864303d9014d84a1754e1b31ff5236b",
+      "sourceSha256": "8616450e9c7acbceb93d1d58580855843dd185db457604334c41bdb186968883",
+      "bytes": 23956,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-protected-mask.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-protected-mask.png",
+      "sha256": "e94f25f2d08e0d5b5720abdbab33825e038ffd47fab690bc8e80e8e4d1d1506c",
+      "sourceSha256": "e94f25f2d08e0d5b5720abdbab33825e038ffd47fab690bc8e80e8e4d1d1506c",
+      "bytes": 2433,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-skirting-back-left-light.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-skirting-back-left-light.png",
+      "sha256": "78254e1f5267a327aeb4dd3d281d2d82f22b9e8e43972e5aca2b1ff3ea2699fb",
+      "sourceSha256": "78254e1f5267a327aeb4dd3d281d2d82f22b9e8e43972e5aca2b1ff3ea2699fb",
+      "bytes": 2863,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-skirting-back-left-mask.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-skirting-back-left-mask.png",
+      "sha256": "4b39236a7de685864ae116af10592117ce111e34c743f333c2cec35c56387aa9",
+      "sourceSha256": "4b39236a7de685864ae116af10592117ce111e34c743f333c2cec35c56387aa9",
+      "bytes": 3610,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-skirting-back-left-reflection.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-skirting-back-left-reflection.png",
+      "sha256": "b9555b11140934d7126db70e6760227ab652ba161806201ad02a50a164fe2f10",
+      "sourceSha256": "b9555b11140934d7126db70e6760227ab652ba161806201ad02a50a164fe2f10",
+      "bytes": 7411,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-skirting-back-right-light.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-skirting-back-right-light.png",
+      "sha256": "644fa2141bb02568883b75268ffc8e5b1c60fb7153d983cdb3365cad156987b1",
+      "sourceSha256": "644fa2141bb02568883b75268ffc8e5b1c60fb7153d983cdb3365cad156987b1",
+      "bytes": 2757,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-skirting-back-right-mask.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-skirting-back-right-mask.png",
+      "sha256": "dac31dd9576a591df9668012da63a002efaa8846cde2a1c019d613c7ae25e8d9",
+      "sourceSha256": "dac31dd9576a591df9668012da63a002efaa8846cde2a1c019d613c7ae25e8d9",
+      "bytes": 3006,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-filomuro-skirting-back-right-reflection.png",
+      "output": "/media/scenes/living-render-01/model-filomuro-skirting-back-right-reflection.png",
+      "sha256": "538ba55fdc39398fec418d33be28ef7ba1b09e2b8146b3ad16350d1a8d7e1afa",
+      "sourceSha256": "538ba55fdc39398fec418d33be28ef7ba1b09e2b8146b3ad16350d1a8d7e1afa",
+      "bytes": 7797,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-base.png",
+      "output": "/media/scenes/living-render-01/model-flat-base.webp",
+      "sha256": "5480adc68dcd15765f20824bf53601d04873862fc38cfb679b51dd5e9963aebe",
+      "sourceSha256": "4ea6365c7b08d33ce9be0e1154fee0c667d8f7965145b3447a58b05312e66cac",
+      "bytes": 26918,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-floor-light.png",
+      "output": "/media/scenes/living-render-01/model-flat-floor-light.png",
+      "sha256": "218393eaae12980bd46546d73aee80bf4f8c2797970ad691f48d3b943e735561",
+      "sourceSha256": "218393eaae12980bd46546d73aee80bf4f8c2797970ad691f48d3b943e735561",
+      "bytes": 13375,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-floor-mask.png",
+      "output": "/media/scenes/living-render-01/model-flat-floor-mask.png",
+      "sha256": "60050e20af3233dc58102933368843ce1e6c7b2048d661894d79340fb694f76f",
+      "sourceSha256": "60050e20af3233dc58102933368843ce1e6c7b2048d661894d79340fb694f76f",
+      "bytes": 8905,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-floor-reflection.png",
+      "output": "/media/scenes/living-render-01/model-flat-floor-reflection.png",
+      "sha256": "734b53e540b817bded695d3b1ab2b64dfe494d9ebc8421e54bd567868f50ac62",
+      "sourceSha256": "734b53e540b817bded695d3b1ab2b64dfe494d9ebc8421e54bd567868f50ac62",
+      "bytes": 71720,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-frame-left-light.png",
+      "output": "/media/scenes/living-render-01/model-flat-frame-left-light.png",
+      "sha256": "ae23748ab439d673ae01aa20d9fe9cf934fdcc72d616082539f118b45eb6e4ee",
+      "sourceSha256": "ae23748ab439d673ae01aa20d9fe9cf934fdcc72d616082539f118b45eb6e4ee",
+      "bytes": 5466,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-frame-left-mask.png",
+      "output": "/media/scenes/living-render-01/model-flat-frame-left-mask.png",
+      "sha256": "931e38a89567366c90ef35d2614fa02c63df5b7beeb80b72c92ea256f1b827dc",
+      "sourceSha256": "931e38a89567366c90ef35d2614fa02c63df5b7beeb80b72c92ea256f1b827dc",
+      "bytes": 3647,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-frame-left-reflection.png",
+      "output": "/media/scenes/living-render-01/model-flat-frame-left-reflection.png",
+      "sha256": "0cb207f2bdc827c5a4e55cbf453e648d0b45c1578da46005354d0b347325980d",
+      "sourceSha256": "0cb207f2bdc827c5a4e55cbf453e648d0b45c1578da46005354d0b347325980d",
+      "bytes": 22601,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-frame-right-light.png",
+      "output": "/media/scenes/living-render-01/model-flat-frame-right-light.png",
+      "sha256": "ff9006fe7d416decc540bf4e420317c0af95a53c1e5c748e87e3334d2e4d1449",
+      "sourceSha256": "ff9006fe7d416decc540bf4e420317c0af95a53c1e5c748e87e3334d2e4d1449",
+      "bytes": 6360,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-frame-right-mask.png",
+      "output": "/media/scenes/living-render-01/model-flat-frame-right-mask.png",
+      "sha256": "ba4fe84411a4787af4953ea28e280979f7927df7cc5db8d86dc65b7be948ce63",
+      "sourceSha256": "ba4fe84411a4787af4953ea28e280979f7927df7cc5db8d86dc65b7be948ce63",
+      "bytes": 3544,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-frame-right-reflection.png",
+      "output": "/media/scenes/living-render-01/model-flat-frame-right-reflection.png",
+      "sha256": "2391e16cff9c65ddc5f1f240a3edeef2666b372e1d29f75dcaf8637b568ccf5c",
+      "sourceSha256": "2391e16cff9c65ddc5f1f240a3edeef2666b372e1d29f75dcaf8637b568ccf5c",
+      "bytes": 26652,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-frame-top-light.png",
+      "output": "/media/scenes/living-render-01/model-flat-frame-top-light.png",
+      "sha256": "8c4ff54d6c1aa26e253724b716b848a8329c91edb8fa83f27c9ed1f37e418b46",
+      "sourceSha256": "8c4ff54d6c1aa26e253724b716b848a8329c91edb8fa83f27c9ed1f37e418b46",
+      "bytes": 3430,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-frame-top-mask.png",
+      "output": "/media/scenes/living-render-01/model-flat-frame-top-mask.png",
+      "sha256": "ba208fa7fada0c29474b559c1cd8ce937449a0f6fe4a04de0e0365b10cc58525",
+      "sourceSha256": "ba208fa7fada0c29474b559c1cd8ce937449a0f6fe4a04de0e0365b10cc58525",
+      "bytes": 3894,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-frame-top-reflection.png",
+      "output": "/media/scenes/living-render-01/model-flat-frame-top-reflection.png",
+      "sha256": "296cd4b7b5016a20f1efc6bc3b7bd602e248fb3877a620a88b061ebe0d7472a5",
+      "sourceSha256": "296cd4b7b5016a20f1efc6bc3b7bd602e248fb3877a620a88b061ebe0d7472a5",
+      "bytes": 11837,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-leaf-light.png",
+      "output": "/media/scenes/living-render-01/model-flat-leaf-light.png",
+      "sha256": "9b0f0ee6622e5837bf118712f9f7ae807d15139ae588ecb304d9bc658a37b132",
+      "sourceSha256": "9b0f0ee6622e5837bf118712f9f7ae807d15139ae588ecb304d9bc658a37b132",
+      "bytes": 16029,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-leaf-mask.png",
+      "output": "/media/scenes/living-render-01/model-flat-leaf-mask.png",
+      "sha256": "102284d963aa6b203a1b800b2e6e78b147cb23dad24fb656969d15dc0cb24a53",
+      "sourceSha256": "102284d963aa6b203a1b800b2e6e78b147cb23dad24fb656969d15dc0cb24a53",
+      "bytes": 6357,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-leaf-reflection.png",
+      "output": "/media/scenes/living-render-01/model-flat-leaf-reflection.png",
+      "sha256": "e323d83f131f254ad8cf3a2303333e87a2cee8fbb8b6a0569acd9260de6b8168",
+      "sourceSha256": "e323d83f131f254ad8cf3a2303333e87a2cee8fbb8b6a0569acd9260de6b8168",
+      "bytes": 84741,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-original.png",
+      "output": "/media/scenes/living-render-01/model-flat-original.webp",
+      "sha256": "f160e3ff9a562c04f0ce3dd64242d113bdf050ff131d1686639aca6da2a7aa85",
+      "sourceSha256": "8a40d35e381ecae0e2c59c1a6e075d570df3922ff2715c0d3905df24776384dd",
+      "bytes": 24516,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-protected-mask.png",
+      "output": "/media/scenes/living-render-01/model-flat-protected-mask.png",
+      "sha256": "cb080523b8075aee755420b7ecf6159bb5cc764fb018e08afa39aef11d95554d",
+      "sourceSha256": "cb080523b8075aee755420b7ecf6159bb5cc764fb018e08afa39aef11d95554d",
+      "bytes": 2972,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-skirting-back-left-light.png",
+      "output": "/media/scenes/living-render-01/model-flat-skirting-back-left-light.png",
+      "sha256": "729a0a83852a00d1f392486c44fc9d32f0fa69cd8638004a6e8593ca8ac5e15d",
+      "sourceSha256": "729a0a83852a00d1f392486c44fc9d32f0fa69cd8638004a6e8593ca8ac5e15d",
+      "bytes": 2791,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-skirting-back-left-mask.png",
+      "output": "/media/scenes/living-render-01/model-flat-skirting-back-left-mask.png",
+      "sha256": "48172cff7e2a0efb6b9e11c76b2d39b97fe8ae194f9db2e788ce72429639886c",
+      "sourceSha256": "48172cff7e2a0efb6b9e11c76b2d39b97fe8ae194f9db2e788ce72429639886c",
+      "bytes": 3464,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-skirting-back-left-reflection.png",
+      "output": "/media/scenes/living-render-01/model-flat-skirting-back-left-reflection.png",
+      "sha256": "debcb79feaff5e667c1fa1bf076201c3f8942e96d0bfb76fa498e36e68ed3e23",
+      "sourceSha256": "debcb79feaff5e667c1fa1bf076201c3f8942e96d0bfb76fa498e36e68ed3e23",
+      "bytes": 6885,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-skirting-back-right-light.png",
+      "output": "/media/scenes/living-render-01/model-flat-skirting-back-right-light.png",
+      "sha256": "2379c9bb1eaf129a731e8994a51c0fb267983c1f5ad4b1df7d446788f0a21c9d",
+      "sourceSha256": "2379c9bb1eaf129a731e8994a51c0fb267983c1f5ad4b1df7d446788f0a21c9d",
+      "bytes": 2593,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-skirting-back-right-mask.png",
+      "output": "/media/scenes/living-render-01/model-flat-skirting-back-right-mask.png",
+      "sha256": "245ae9db496fd59d36283375ba6373e656df0faea9b6b92444c503a40e5b1650",
+      "sourceSha256": "245ae9db496fd59d36283375ba6373e656df0faea9b6b92444c503a40e5b1650",
+      "bytes": 2846,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-flat-skirting-back-right-reflection.png",
+      "output": "/media/scenes/living-render-01/model-flat-skirting-back-right-reflection.png",
+      "sha256": "b293a496a3902d0263f2eac3c0ee12e87a96704f0369ed419ee730d55dcf3288",
+      "sourceSha256": "b293a496a3902d0263f2eac3c0ee12e87a96704f0369ed419ee730d55dcf3288",
+      "bytes": 6609,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-base.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-base.webp",
+      "sha256": "c23cd1773733f484c589d35e89a10b1efa852425ae4646e19269552c6906b588",
+      "sourceSha256": "bb3486a03f84a5ac5a2e2cae997a52812daadfb5a553f2178e882694d90b4bd4",
+      "bytes": 28264,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-floor-light.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-floor-light.png",
+      "sha256": "0241a90dcb896723dbd517da751a7aa2cf5f16a1a09f71ee9f49d887271611d7",
+      "sourceSha256": "0241a90dcb896723dbd517da751a7aa2cf5f16a1a09f71ee9f49d887271611d7",
+      "bytes": 13402,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-floor-mask.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-floor-mask.png",
+      "sha256": "ab8eb2db0a344f3a962fa11edd0df3ad02e0d2d3dc77db006407827fd5ab424d",
+      "sourceSha256": "ab8eb2db0a344f3a962fa11edd0df3ad02e0d2d3dc77db006407827fd5ab424d",
+      "bytes": 8906,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-floor-reflection.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-floor-reflection.png",
+      "sha256": "ba208d9381f8b590da3150c99cbbf9de8c9f9a6cd45e625d332a70ca3cbc67b9",
+      "sourceSha256": "ba208d9381f8b590da3150c99cbbf9de8c9f9a6cd45e625d332a70ca3cbc67b9",
+      "bytes": 84006,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-frame-left-light.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-frame-left-light.png",
+      "sha256": "cab02dde0d32ae8906719b51b0c45ad8393a2aab85365d9090157fc81c3ae478",
+      "sourceSha256": "cab02dde0d32ae8906719b51b0c45ad8393a2aab85365d9090157fc81c3ae478",
+      "bytes": 5432,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-frame-left-mask.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-frame-left-mask.png",
+      "sha256": "931e38a89567366c90ef35d2614fa02c63df5b7beeb80b72c92ea256f1b827dc",
+      "sourceSha256": "931e38a89567366c90ef35d2614fa02c63df5b7beeb80b72c92ea256f1b827dc",
+      "bytes": 3647,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-frame-left-reflection.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-frame-left-reflection.png",
+      "sha256": "57c13c25a8e8a5a8ed068fad3bbf9489d1f8b26b9938e7dbc61535d833b19e64",
+      "sourceSha256": "57c13c25a8e8a5a8ed068fad3bbf9489d1f8b26b9938e7dbc61535d833b19e64",
+      "bytes": 22644,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-frame-right-light.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-frame-right-light.png",
+      "sha256": "67c2a31b7023251e36e5b86c8a2dc9285fdbdd150a97f55f9af235ac5ecb66c6",
+      "sourceSha256": "67c2a31b7023251e36e5b86c8a2dc9285fdbdd150a97f55f9af235ac5ecb66c6",
+      "bytes": 6416,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-frame-right-mask.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-frame-right-mask.png",
+      "sha256": "a13632792b71a97fb01dd94f207b1b01e13ae98eeded822e2d261db0b6fb98e8",
+      "sourceSha256": "a13632792b71a97fb01dd94f207b1b01e13ae98eeded822e2d261db0b6fb98e8",
+      "bytes": 3540,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-frame-right-reflection.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-frame-right-reflection.png",
+      "sha256": "13fa05cea5dea2f2e76cb16a439a47b46704b0e6877dbd816b184ba427270823",
+      "sourceSha256": "13fa05cea5dea2f2e76cb16a439a47b46704b0e6877dbd816b184ba427270823",
+      "bytes": 26503,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-frame-top-light.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-frame-top-light.png",
+      "sha256": "62ca680f17f88c4cd218d7864e0f51ed79a6dabe1386ddc3a69af8b176fb1c86",
+      "sourceSha256": "62ca680f17f88c4cd218d7864e0f51ed79a6dabe1386ddc3a69af8b176fb1c86",
+      "bytes": 3385,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-frame-top-mask.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-frame-top-mask.png",
+      "sha256": "58034116efd18dd647b8915446c40aa03657974d45f978e0c393dba318a1c116",
+      "sourceSha256": "58034116efd18dd647b8915446c40aa03657974d45f978e0c393dba318a1c116",
+      "bytes": 3894,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-frame-top-reflection.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-frame-top-reflection.png",
+      "sha256": "2d06892f467cc102dde5659303e6918d171d9631e2793f72ad2e3b7df0868c13",
+      "sourceSha256": "2d06892f467cc102dde5659303e6918d171d9631e2793f72ad2e3b7df0868c13",
+      "bytes": 11990,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-leaf-light.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-leaf-light.png",
+      "sha256": "622307b7a6122dd1c8f8cea66fff952c8a77abb2e9d0f895768e90931f61fb62",
+      "sourceSha256": "622307b7a6122dd1c8f8cea66fff952c8a77abb2e9d0f895768e90931f61fb62",
+      "bytes": 16340,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-leaf-mask.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-leaf-mask.png",
+      "sha256": "223238274cce6e69417d42504fef7cac4c6179a9a147ef9cc63e793ac6b1c82a",
+      "sourceSha256": "223238274cce6e69417d42504fef7cac4c6179a9a147ef9cc63e793ac6b1c82a",
+      "bytes": 8018,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-leaf-reflection.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-leaf-reflection.png",
+      "sha256": "dfbd402485e3451511df6a51e0f9399a6be88f7cace2b9841eefc33a7bf5f738",
+      "sourceSha256": "dfbd402485e3451511df6a51e0f9399a6be88f7cace2b9841eefc33a7bf5f738",
+      "bytes": 71816,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-original.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-original.webp",
+      "sha256": "921381ccd89dc0c8ddedb09b28948bd7bc6b77a6adb052ed75224fd64df9312a",
+      "sourceSha256": "9569e331c3e0981a06dfa8fe38ed5fbffea783312e493d4970cca36d0143da58",
+      "bytes": 24674,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-protected-mask.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-protected-mask.png",
+      "sha256": "cb080523b8075aee755420b7ecf6159bb5cc764fb018e08afa39aef11d95554d",
+      "sourceSha256": "cb080523b8075aee755420b7ecf6159bb5cc764fb018e08afa39aef11d95554d",
+      "bytes": 2972,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-skirting-back-left-light.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-skirting-back-left-light.png",
+      "sha256": "43e8109bf2276763aef46fdbe4992b27054cc3778bbf6b69b8f2462171f9bbad",
+      "sourceSha256": "43e8109bf2276763aef46fdbe4992b27054cc3778bbf6b69b8f2462171f9bbad",
+      "bytes": 2777,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-skirting-back-left-mask.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-skirting-back-left-mask.png",
+      "sha256": "48172cff7e2a0efb6b9e11c76b2d39b97fe8ae194f9db2e788ce72429639886c",
+      "sourceSha256": "48172cff7e2a0efb6b9e11c76b2d39b97fe8ae194f9db2e788ce72429639886c",
+      "bytes": 3464,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-skirting-back-left-reflection.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-skirting-back-left-reflection.png",
+      "sha256": "5de6fb76351d3109cc2f96aae62bb7440eab8006e0a17295b2745f39285b8c6e",
+      "sourceSha256": "5de6fb76351d3109cc2f96aae62bb7440eab8006e0a17295b2745f39285b8c6e",
+      "bytes": 6907,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-skirting-back-right-light.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-skirting-back-right-light.png",
+      "sha256": "a8ec4b2200193845dbfc006140dc06f13ec20268b1371bb389c6454fec2eb716",
+      "sourceSha256": "a8ec4b2200193845dbfc006140dc06f13ec20268b1371bb389c6454fec2eb716",
+      "bytes": 2617,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-skirting-back-right-mask.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-skirting-back-right-mask.png",
+      "sha256": "245ae9db496fd59d36283375ba6373e656df0faea9b6b92444c503a40e5b1650",
+      "sourceSha256": "245ae9db496fd59d36283375ba6373e656df0faea9b6b92444c503a40e5b1650",
+      "bytes": 2846,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-glass-insert-skirting-back-right-reflection.png",
+      "output": "/media/scenes/living-render-01/model-glass-insert-skirting-back-right-reflection.png",
+      "sha256": "bfd0a27419ba22182afad99372ccac9ad86274a08d742d0cb5853d66c61842c9",
+      "sourceSha256": "bfd0a27419ba22182afad99372ccac9ad86274a08d742d0cb5853d66c61842c9",
+      "bytes": 6523,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-base.png",
+      "output": "/media/scenes/living-render-01/model-grooved-base.webp",
+      "sha256": "0416647292bfbe8965f3eb21a40f40dc5e6712285ff6fcfed3586f78fe36c684",
+      "sourceSha256": "52b17c7480e98e48c57fd985a0e5af6758b67b9e0ad7c620e38d13e3c61cd138",
+      "bytes": 27342,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-floor-light.png",
+      "output": "/media/scenes/living-render-01/model-grooved-floor-light.png",
+      "sha256": "2b49daa11ffd9d424abb0e9161c61b5d114803ef4e5c37d20ff248d0b63cc403",
+      "sourceSha256": "2b49daa11ffd9d424abb0e9161c61b5d114803ef4e5c37d20ff248d0b63cc403",
+      "bytes": 13482,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-floor-mask.png",
+      "output": "/media/scenes/living-render-01/model-grooved-floor-mask.png",
+      "sha256": "0cf19d124b31d635e451e5fc5fc1d3405b8339a754566422b487d9512ed44866",
+      "sourceSha256": "0cf19d124b31d635e451e5fc5fc1d3405b8339a754566422b487d9512ed44866",
+      "bytes": 8900,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-floor-reflection.png",
+      "output": "/media/scenes/living-render-01/model-grooved-floor-reflection.png",
+      "sha256": "eadecbfae3337b254642eebee417122cc84de9e43c6658b1ebd61b276c91f928",
+      "sourceSha256": "eadecbfae3337b254642eebee417122cc84de9e43c6658b1ebd61b276c91f928",
+      "bytes": 71405,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-frame-left-light.png",
+      "output": "/media/scenes/living-render-01/model-grooved-frame-left-light.png",
+      "sha256": "c8104256da76568574ddaca28153515efa64765dd2e89b7cf4ec1aa9dcd4e57a",
+      "sourceSha256": "c8104256da76568574ddaca28153515efa64765dd2e89b7cf4ec1aa9dcd4e57a",
+      "bytes": 5467,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-frame-left-mask.png",
+      "output": "/media/scenes/living-render-01/model-grooved-frame-left-mask.png",
+      "sha256": "c2fa39b9a8a7db1c907ed0892301fb5b77255e84714619dc71f7e48cdcffcd85",
+      "sourceSha256": "c2fa39b9a8a7db1c907ed0892301fb5b77255e84714619dc71f7e48cdcffcd85",
+      "bytes": 3655,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-frame-left-reflection.png",
+      "output": "/media/scenes/living-render-01/model-grooved-frame-left-reflection.png",
+      "sha256": "8499b6f1ca0ab730a59b8e3b35d1dd34efad42487f830b0fa54e708b30a1bba1",
+      "sourceSha256": "8499b6f1ca0ab730a59b8e3b35d1dd34efad42487f830b0fa54e708b30a1bba1",
+      "bytes": 22446,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-frame-right-light.png",
+      "output": "/media/scenes/living-render-01/model-grooved-frame-right-light.png",
+      "sha256": "1876550d01004f32e3a07b90f8d99bd78a8987401080c1c7b457c81f6e4b6b7d",
+      "sourceSha256": "1876550d01004f32e3a07b90f8d99bd78a8987401080c1c7b457c81f6e4b6b7d",
+      "bytes": 6389,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-frame-right-mask.png",
+      "output": "/media/scenes/living-render-01/model-grooved-frame-right-mask.png",
+      "sha256": "4d2f28c181a7f8e3b856ad3816251905c20c0de55c6236aa7e0963a35fb586aa",
+      "sourceSha256": "4d2f28c181a7f8e3b856ad3816251905c20c0de55c6236aa7e0963a35fb586aa",
+      "bytes": 3506,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-frame-right-reflection.png",
+      "output": "/media/scenes/living-render-01/model-grooved-frame-right-reflection.png",
+      "sha256": "753ffff5e8231fa847e2a9ebffc6c58168b667060015ffc6d214646877ea3d57",
+      "sourceSha256": "753ffff5e8231fa847e2a9ebffc6c58168b667060015ffc6d214646877ea3d57",
+      "bytes": 26533,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-frame-top-light.png",
+      "output": "/media/scenes/living-render-01/model-grooved-frame-top-light.png",
+      "sha256": "1cb4c2de431717601ed20a27397cabd794217b321d041a6f6562f43c7d29aedf",
+      "sourceSha256": "1cb4c2de431717601ed20a27397cabd794217b321d041a6f6562f43c7d29aedf",
+      "bytes": 3368,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-frame-top-mask.png",
+      "output": "/media/scenes/living-render-01/model-grooved-frame-top-mask.png",
+      "sha256": "800f142bd962b25a542a905caba2a9cd8250e877934ba7bda9707966b80b39b1",
+      "sourceSha256": "800f142bd962b25a542a905caba2a9cd8250e877934ba7bda9707966b80b39b1",
+      "bytes": 3904,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-frame-top-reflection.png",
+      "output": "/media/scenes/living-render-01/model-grooved-frame-top-reflection.png",
+      "sha256": "ec445f819c00802064ea2e12e33886ec32c6093013d859b5a76f420142cddc58",
+      "sourceSha256": "ec445f819c00802064ea2e12e33886ec32c6093013d859b5a76f420142cddc58",
+      "bytes": 11800,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-leaf-light.png",
+      "output": "/media/scenes/living-render-01/model-grooved-leaf-light.png",
+      "sha256": "5e95a33e0e727fbf3bab3bfbf5aa0c28de3c5b67d5fda124e937b792d07f6f3b",
+      "sourceSha256": "5e95a33e0e727fbf3bab3bfbf5aa0c28de3c5b67d5fda124e937b792d07f6f3b",
+      "bytes": 18731,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-leaf-mask.png",
+      "output": "/media/scenes/living-render-01/model-grooved-leaf-mask.png",
+      "sha256": "a503c084356e1f5be49dae377612e89ac4b5645a9b5a7b04242f0815f29f6235",
+      "sourceSha256": "a503c084356e1f5be49dae377612e89ac4b5645a9b5a7b04242f0815f29f6235",
+      "bytes": 6460,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-leaf-reflection.png",
+      "output": "/media/scenes/living-render-01/model-grooved-leaf-reflection.png",
+      "sha256": "70700e9aebeac0cb31f5b11881b35322271ee51ae280f551c11415d0b9991084",
+      "sourceSha256": "70700e9aebeac0cb31f5b11881b35322271ee51ae280f551c11415d0b9991084",
+      "bytes": 90148,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-original.png",
+      "output": "/media/scenes/living-render-01/model-grooved-original.webp",
+      "sha256": "f2b9a013a8845fe21546ccd19630556db02a210211659ebb2ff154e7f020c577",
+      "sourceSha256": "40818dff9a28b5c0ada221f3984c08bc5eee341fcab0e98223b2538da328d9c6",
+      "bytes": 24918,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-protected-mask.png",
+      "output": "/media/scenes/living-render-01/model-grooved-protected-mask.png",
+      "sha256": "34326dfee2650f45fd2952f415e1e8c970db8e34a07827706dbcc62a6ca58ce7",
+      "sourceSha256": "34326dfee2650f45fd2952f415e1e8c970db8e34a07827706dbcc62a6ca58ce7",
+      "bytes": 2973,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-skirting-back-left-light.png",
+      "output": "/media/scenes/living-render-01/model-grooved-skirting-back-left-light.png",
+      "sha256": "794619cabfb399242554f63181a684c109e1bc63337d554c2a8f5afbabc20275",
+      "sourceSha256": "794619cabfb399242554f63181a684c109e1bc63337d554c2a8f5afbabc20275",
+      "bytes": 2777,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-skirting-back-left-mask.png",
+      "output": "/media/scenes/living-render-01/model-grooved-skirting-back-left-mask.png",
+      "sha256": "48172cff7e2a0efb6b9e11c76b2d39b97fe8ae194f9db2e788ce72429639886c",
+      "sourceSha256": "48172cff7e2a0efb6b9e11c76b2d39b97fe8ae194f9db2e788ce72429639886c",
+      "bytes": 3464,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-skirting-back-left-reflection.png",
+      "output": "/media/scenes/living-render-01/model-grooved-skirting-back-left-reflection.png",
+      "sha256": "607bf249d9ab6d0d83c7f88a486163d5c262057bed395f1571c03885f88a4654",
+      "sourceSha256": "607bf249d9ab6d0d83c7f88a486163d5c262057bed395f1571c03885f88a4654",
+      "bytes": 6865,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-skirting-back-right-light.png",
+      "output": "/media/scenes/living-render-01/model-grooved-skirting-back-right-light.png",
+      "sha256": "fd3f53803578f69c71cb9f7e9856085c412bae844346e5d0986cd00ac8eba983",
+      "sourceSha256": "fd3f53803578f69c71cb9f7e9856085c412bae844346e5d0986cd00ac8eba983",
+      "bytes": 2584,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-skirting-back-right-mask.png",
+      "output": "/media/scenes/living-render-01/model-grooved-skirting-back-right-mask.png",
+      "sha256": "245ae9db496fd59d36283375ba6373e656df0faea9b6b92444c503a40e5b1650",
+      "sourceSha256": "245ae9db496fd59d36283375ba6373e656df0faea9b6b92444c503a40e5b1650",
+      "bytes": 2846,
+      "width": 598,
+      "height": 862
+    },
+    {
+      "source": "brand/assets/scenes/living-render-01/model-grooved-skirting-back-right-reflection.png",
+      "output": "/media/scenes/living-render-01/model-grooved-skirting-back-right-reflection.png",
+      "sha256": "7a3ca815f48e5a515248f1e879007de226b65553918d17f163f50540e143a2f3",
+      "sourceSha256": "7a3ca815f48e5a515248f1e879007de226b65553918d17f163f50540e143a2f3",
+      "bytes": 6593,
+      "width": 598,
+      "height": 862
+    },
+    {
       "source": "brand/assets/scenes/living-render-01/original.png",
       "output": "/media/scenes/living-render-01/original.webp",
-      "sha256": "d503c021ab6c03b09132e892f00b8ebe90bab41cadfb70870c89a7d04d0ab3c6",
-      "sourceSha256": "49af227bcbc348c37373bdd301b44ff5e4f61e3aa75f9c8c5bd86849aa06abba",
-      "bytes": 323186,
+      "sha256": "0601bd94dd68022a0003b9406c62ceabd273c79c022301ae6cf92bdde1947c69",
+      "sourceSha256": "d8811a6af38b76b3b0eefeb2e88ea3b31c7a49319d2a4584bb9eb7b8e0f1facf",
+      "bytes": 322030,
       "width": 2400,
       "height": 1800
     },
@@ -175,9 +958,9 @@
     {
       "source": "brand/assets/scenes/living-render-01/skirting-back-left-light.png",
       "output": "/media/scenes/living-render-01/skirting-back-left-light.png",
-      "sha256": "b753a0d7b65848f79e29214369649b02738ce9ba7346478ab3f913b8a800ca12",
-      "sourceSha256": "b753a0d7b65848f79e29214369649b02738ce9ba7346478ab3f913b8a800ca12",
-      "bytes": 6921,
+      "sha256": "4d7ac948578b0f590cd92059d3c811ed5fb4bc97474ee536fa1384fe26b7edf4",
+      "sourceSha256": "4d7ac948578b0f590cd92059d3c811ed5fb4bc97474ee536fa1384fe26b7edf4",
+      "bytes": 6903,
       "width": 2400,
       "height": 1800
     },
@@ -193,18 +976,18 @@
     {
       "source": "brand/assets/scenes/living-render-01/skirting-back-left-reflection.png",
       "output": "/media/scenes/living-render-01/skirting-back-left-reflection.png",
-      "sha256": "bdc3b484da6ab20cb2f24b73ded48cc7040d0778d3ea9cecd5e3a6e8d3999785",
-      "sourceSha256": "bdc3b484da6ab20cb2f24b73ded48cc7040d0778d3ea9cecd5e3a6e8d3999785",
-      "bytes": 25115,
+      "sha256": "560efb530acf07432d294667c8be05c4134105be3388d82733930834a67cc000",
+      "sourceSha256": "560efb530acf07432d294667c8be05c4134105be3388d82733930834a67cc000",
+      "bytes": 25160,
       "width": 2400,
       "height": 1800
     },
     {
       "source": "brand/assets/scenes/living-render-01/skirting-back-right-light.png",
       "output": "/media/scenes/living-render-01/skirting-back-right-light.png",
-      "sha256": "a5cd5437f88fc6c6e328f56bc88b268e0c26d30a3365877853c7e6f48fddf7cc",
-      "sourceSha256": "a5cd5437f88fc6c6e328f56bc88b268e0c26d30a3365877853c7e6f48fddf7cc",
-      "bytes": 4992,
+      "sha256": "3692c510452703b1f716389236d0444d82699d7658bf5dd58194b03fa3758266",
+      "sourceSha256": "3692c510452703b1f716389236d0444d82699d7658bf5dd58194b03fa3758266",
+      "bytes": 4986,
       "width": 2400,
       "height": 1800
     },
@@ -220,18 +1003,18 @@
     {
       "source": "brand/assets/scenes/living-render-01/skirting-back-right-reflection.png",
       "output": "/media/scenes/living-render-01/skirting-back-right-reflection.png",
-      "sha256": "8c53cea105ef709170a77d8d51244c4b11a9d994c5acce32a77481435022278b",
-      "sourceSha256": "8c53cea105ef709170a77d8d51244c4b11a9d994c5acce32a77481435022278b",
-      "bytes": 15877,
+      "sha256": "a71a01632879226586f32daa45fb061bfef630dd03afcc8e5f8741801796179e",
+      "sourceSha256": "a71a01632879226586f32daa45fb061bfef630dd03afcc8e5f8741801796179e",
+      "bytes": 15914,
       "width": 2400,
       "height": 1800
     },
     {
       "source": "brand/assets/scenes/living-render-01/skirting-right-light.png",
       "output": "/media/scenes/living-render-01/skirting-right-light.png",
-      "sha256": "74151247488a09a09e76af3be31c150408ddeb2cb33adf229abcd1c0824a4c91",
-      "sourceSha256": "74151247488a09a09e76af3be31c150408ddeb2cb33adf229abcd1c0824a4c91",
-      "bytes": 8261,
+      "sha256": "3cbe07cae1efc75c79c1d2ccbcb8de17cc8ef279f211b3933795eba1cb6a55c1",
+      "sourceSha256": "3cbe07cae1efc75c79c1d2ccbcb8de17cc8ef279f211b3933795eba1cb6a55c1",
+      "bytes": 8188,
       "width": 2400,
       "height": 1800
     },
@@ -247,18 +1030,18 @@
     {
       "source": "brand/assets/scenes/living-render-01/skirting-right-reflection.png",
       "output": "/media/scenes/living-render-01/skirting-right-reflection.png",
-      "sha256": "e55982763550df837b5774adb14bc42b0af8675a8ebd6c349bb23b17545a8d7f",
-      "sourceSha256": "e55982763550df837b5774adb14bc42b0af8675a8ebd6c349bb23b17545a8d7f",
-      "bytes": 28281,
+      "sha256": "ab67d25651b28a9d14a4c0ffe27c5a128a3d8e3ceab83aa241f813c97a30fa51",
+      "sourceSha256": "ab67d25651b28a9d14a4c0ffe27c5a128a3d8e3ceab83aa241f813c97a30fa51",
+      "bytes": 28153,
       "width": 2400,
       "height": 1800
     },
     {
       "source": "brand/assets/scenes/living-render-01/thumbnail.png",
       "output": "/media/scenes/living-render-01/thumbnail.webp",
-      "sha256": "be34c9c5272264abca013009c038cc4985cdba3fdd78eb4f4e86666c7a25f3a7",
-      "sourceSha256": "2216ece58ea7265220112a23ed323653d5ef6cef9110ad620a7e2cf4c04c7341",
-      "bytes": 6716,
+      "sha256": "64e44430b13a3f8af7b5539e4eb979b21ae7fb33e7f951d5f2342e5063adb34d",
+      "sourceSha256": "44af0dfa55e1b899e8b9809093273e9dfeba2c7925284414d26d8c97ab32d4af",
+      "bytes": 6668,
       "width": 320,
       "height": 240
     },
@@ -857,15 +1640,6 @@
       "height": 240
     },
     {
-      "source": "brand/assets/textures/doors/arre-erret.png",
-      "output": "/media/textures/doors/arre-erret.webp",
-      "sha256": "f77b46cc923edf07c4431213cd1c89be89aa6e7148c430f339a0fdebecbb04af",
-      "sourceSha256": "527927a89592c44924adec20c38135390ce202b25c741f86c4275d4acd422262",
-      "bytes": 82274,
-      "width": 512,
-      "height": 171
-    },
-    {
       "source": "brand/assets/textures/doors/dushk-hirte.png",
       "output": "/media/textures/doors/dushk-hirte.webp",
       "sha256": "4cc6ab239c8b7682c306409fa9d60eb554b15d28a6543917047f448ad4a15ad2",
@@ -884,110 +1658,218 @@
       "height": 171
     },
     {
-      "source": "brand/assets/textures/floors/arre-klasike-12/atlas.png",
-      "output": "/media/textures/floors/arre-klasike-12/atlas.webp",
-      "sha256": "4143ce33c7295bc357cb68fa72860fda5a03a3936c055bcf0ae56c39a4ecd240",
-      "sourceSha256": "9a567f40660107620b518e9b3d5c60655aa2c95a7d7187c607e04a81ce6daf13",
-      "bytes": 248190,
+      "source": "brand/assets/textures/floors/kronotex-d3179/atlas.png",
+      "output": "/media/textures/floors/kronotex-d3179/atlas.webp",
+      "sha256": "8c8f3418c6b4bcdd073fc9a7be9d20b0717ffcbc293a0cad41e2539562ff8a45",
+      "sourceSha256": "445b636f0dc1226b6276c92c388c4e174a88e105bcc52c9ca03e4fca3e2f869a",
+      "bytes": 76962,
       "width": 2048,
-      "height": 286
+      "height": 209
     },
     {
-      "source": "brand/assets/textures/floors/arre-klasike-12/planks.png",
-      "output": "/media/textures/floors/arre-klasike-12/planks.webp",
-      "sha256": "9b06033935097630c49e492a6876e61dc484397d5e670c29bd785aab9c703436",
-      "sourceSha256": "eb9406be11b839ddc3cb508019505234ee165f346b122f066a2a08de588bbcba",
-      "bytes": 158250,
-      "width": 1380,
-      "height": 579
+      "source": "brand/assets/textures/floors/kronotex-d3179/planks.png",
+      "output": "/media/textures/floors/kronotex-d3179/planks.webp",
+      "sha256": "06f05407e16c70d9feb225c5aeba5fa8f0d01c015cca8bf67f192655e72521d1",
+      "sourceSha256": "07bef29e65833bce034735c196540f2e6158d98b992a6360e5c66173e251e944",
+      "bytes": 743298,
+      "width": 2768,
+      "height": 1692
     },
     {
-      "source": "brand/assets/textures/floors/arre-klasike-12/trim.png",
-      "output": "/media/textures/floors/arre-klasike-12/trim.webp",
-      "sha256": "bd865897cc6ad6061ec32a59310b382074349425250f960e9aa0502171751375",
-      "sourceSha256": "d0134ff04a16ce5a2cd662f897f660d1f1f6a6c922220be06a883f7036bf8000",
-      "bytes": 17080,
+      "source": "brand/assets/textures/floors/kronotex-d3179/trim.png",
+      "output": "/media/textures/floors/kronotex-d3179/trim.webp",
+      "sha256": "aa869e35cfe381c1c13d49e0d56d6f0e441f785102521ca04dbd67baf6a5fc2b",
+      "sourceSha256": "17804f1d6991e3b5b8befb2897403959025fe37c8011ac07d911626ad1ef6251",
+      "bytes": 18664,
       "width": 512,
       "height": 34
     },
     {
-      "source": "brand/assets/textures/floors/dushk-fshatar-8/atlas.png",
-      "output": "/media/textures/floors/dushk-fshatar-8/atlas.webp",
-      "sha256": "2ccfdaf746c4c75a347d192f0927ec736ab2162af0fcaee518fdcd37ac85a918",
-      "sourceSha256": "6d86b06308b1155c6c26fa107ab84fe9b6667a15f7458cd5fbbe1a6aaf84dfc7",
-      "bytes": 371144,
+      "source": "brand/assets/textures/floors/kronotex-d4763/atlas.png",
+      "output": "/media/textures/floors/kronotex-d4763/atlas.webp",
+      "sha256": "0d3fbcfb056d10a778b92bdd10422299c9e9476e2c701b647c19c43acc3052a7",
+      "sourceSha256": "b2f7cd7d18c732196674f325761d923b9352b680a7f4c475988b5525a5aa74e8",
+      "bytes": 147046,
       "width": 2048,
-      "height": 362
+      "height": 287
     },
     {
-      "source": "brand/assets/textures/floors/dushk-fshatar-8/planks.png",
-      "output": "/media/textures/floors/dushk-fshatar-8/planks.webp",
-      "sha256": "7761bd1e3d1f9d414b4abe87ff9fd9202552b35387cd0bc1d017f91ebd95e06f",
-      "sourceSha256": "51e1406f678728b04e1b696d365b0880cc0ae856887bac952528971b8feb932e",
-      "bytes": 279900,
-      "width": 1380,
-      "height": 732
+      "source": "brand/assets/textures/floors/kronotex-d4763/planks.png",
+      "output": "/media/textures/floors/kronotex-d4763/planks.webp",
+      "sha256": "16ac4d947ff49fade9ec0cb200663886785acfc8fe2da50c2964ba4468109916",
+      "sourceSha256": "97aaae209a1de3a88579d00a698b739a332e15f697d6d13651f67a27d701c966",
+      "bytes": 725352,
+      "width": 2070,
+      "height": 1740
     },
     {
-      "source": "brand/assets/textures/floors/dushk-fshatar-8/trim.png",
-      "output": "/media/textures/floors/dushk-fshatar-8/trim.webp",
-      "sha256": "53fcab0175ea81f987b8f9c8a2091b1b751d783a449e2406ee62a296784e2f9f",
-      "sourceSha256": "f05c451af0126d520df683cc95ba34e3f2b198c6af4ed8d9cc30a53c33013ef3",
-      "bytes": 18672,
+      "source": "brand/assets/textures/floors/kronotex-d4763/trim.png",
+      "output": "/media/textures/floors/kronotex-d4763/trim.webp",
+      "sha256": "d9c8120a7a47afb06fb50d73b3407f1cf429999f73cfdae314ee35362cb7967d",
+      "sourceSha256": "a2a2787ef10e30ffe90e9cc01ec71e965064b2dcceab409843fb59d6ca6eaf49",
+      "bytes": 19432,
       "width": 512,
       "height": 34
     },
     {
-      "source": "brand/assets/textures/floors/hirte-skandinave-8/atlas.png",
-      "output": "/media/textures/floors/hirte-skandinave-8/atlas.webp",
-      "sha256": "6f8a30d9ef2a88a1184a565381b3fd879842aa6cd4ba86b364def075345d7bca",
-      "sourceSha256": "bed7466021f87bbc3ae27557b220e4a3b4f1fe718d0935b342d72bdd7d65b63f",
-      "bytes": 279990,
+      "source": "brand/assets/textures/floors/kronotex-d4954/atlas.png",
+      "output": "/media/textures/floors/kronotex-d4954/atlas.webp",
+      "sha256": "2e2ec40b0173a28afdc0ead9c7bdbe1b32f808fdcdb1f39a80ffae7d9d00caad",
+      "sourceSha256": "9f27f6e92a4dd3b0f04b0ee9380b36d14b4c4c4b42b7ca516ffde8ce400c70af",
+      "bytes": 110430,
       "width": 2048,
-      "height": 286
+      "height": 280
     },
     {
-      "source": "brand/assets/textures/floors/hirte-skandinave-8/planks.png",
-      "output": "/media/textures/floors/hirte-skandinave-8/planks.webp",
-      "sha256": "89b0d13a2d8df4830af4ccd383e13214608fde75d154667f8cd5c73ea99f87f2",
-      "sourceSha256": "06fb80698a6281a1686906ac849ab9380d6fee2c02067786eecc350701d49f43",
-      "bytes": 210580,
-      "width": 1380,
-      "height": 579
+      "source": "brand/assets/textures/floors/kronotex-d4954/planks.png",
+      "output": "/media/textures/floors/kronotex-d4954/planks.webp",
+      "sha256": "56bca1d09b9c9d7d18c9dc37aea31b5cf6248104337b1e791c47acbbf67c13d9",
+      "sourceSha256": "0805fddf2575171b71d6a7fdbfadcecd1d4ef71e299e3380c3d7d36075449928",
+      "bytes": 684920,
+      "width": 2063,
+      "height": 1692
     },
     {
-      "source": "brand/assets/textures/floors/hirte-skandinave-8/trim.png",
-      "output": "/media/textures/floors/hirte-skandinave-8/trim.webp",
-      "sha256": "82e195ef5635a78130adb62ea034ab0db0e078a8ee4072f4c3b0f62d6631bbde",
-      "sourceSha256": "c3910eed6f25037bbe35f602ac314cb64c7f035a6b15750adbbf6c7fe3d604fd",
-      "bytes": 17144,
+      "source": "brand/assets/textures/floors/kronotex-d4954/trim.png",
+      "output": "/media/textures/floors/kronotex-d4954/trim.webp",
+      "sha256": "44cf69473f03288d83353991a639cd5d606bf7f804fa11a6aa1e47f11890a9ce",
+      "sourceSha256": "3aa14fe2b33934052d0285de303c1b8740c127c57214e72c2e3b74ff3289fc93",
+      "bytes": 20960,
       "width": 512,
       "height": 34
     },
     {
-      "source": "brand/assets/textures/floors/lis-natyral-10/atlas.png",
-      "output": "/media/textures/floors/lis-natyral-10/atlas.webp",
-      "sha256": "f0b41c0d3453bd2d82404e8d2941fe6de90dee69540dbccc84f89476448441ce",
-      "sourceSha256": "751d1b30f5a85b110eb537dec78110162f85f3492d79957eff75d196cc6b1b17",
-      "bytes": 295054,
+      "source": "brand/assets/textures/floors/kronotex-d4955/atlas.png",
+      "output": "/media/textures/floors/kronotex-d4955/atlas.webp",
+      "sha256": "8208073a91ea8e43105b8806bebd630ddeedac8f45e8908e4b955715feb02472",
+      "sourceSha256": "a199b637eb07877725f5495e236d7feb93527b0908dcf1ba0e09210db22032fb",
+      "bytes": 105108,
       "width": 2048,
-      "height": 286
+      "height": 280
     },
     {
-      "source": "brand/assets/textures/floors/lis-natyral-10/planks.png",
-      "output": "/media/textures/floors/lis-natyral-10/planks.webp",
-      "sha256": "d76ce04cd9a795d75a16cde8f9b131cdf3054ae2badf59d8e81b055f742560b1",
-      "sourceSha256": "62befc2cbe713699cb6c21fd376a79f622f98b6da5c40249861c19a8bad2e986",
-      "bytes": 224350,
-      "width": 1380,
-      "height": 579
+      "source": "brand/assets/textures/floors/kronotex-d4955/planks.png",
+      "output": "/media/textures/floors/kronotex-d4955/planks.webp",
+      "sha256": "072060b4d0ff825b62321b4f59d3bea2bcd8a1adc9beca7c7bf9af3f498cc7c8",
+      "sourceSha256": "6aecb7f64b674577891d1707f693986b60af65ce7b650131817ef0583c57c83a",
+      "bytes": 652776,
+      "width": 2063,
+      "height": 1692
     },
     {
-      "source": "brand/assets/textures/floors/lis-natyral-10/trim.png",
-      "output": "/media/textures/floors/lis-natyral-10/trim.webp",
-      "sha256": "53fcab0175ea81f987b8f9c8a2091b1b751d783a449e2406ee62a296784e2f9f",
-      "sourceSha256": "f05c451af0126d520df683cc95ba34e3f2b198c6af4ed8d9cc30a53c33013ef3",
-      "bytes": 18672,
+      "source": "brand/assets/textures/floors/kronotex-d4955/trim.png",
+      "output": "/media/textures/floors/kronotex-d4955/trim.webp",
+      "sha256": "b78b585174f00fec344a853ad03011d43faede2fc74772e1a829f38be2faeb78",
+      "sourceSha256": "1903320e672b90ab5cffafa3373d4522f26133133f02fa38d7579bf74d00a4a3",
+      "bytes": 20310,
+      "width": 512,
+      "height": 34
+    },
+    {
+      "source": "brand/assets/textures/floors/kronotex-d4956/atlas.png",
+      "output": "/media/textures/floors/kronotex-d4956/atlas.webp",
+      "sha256": "a15faabcd9da11c3d56ea143b615d54498702052f9356006221e1f86810c21dd",
+      "sourceSha256": "d015d88c545ed3764b9bb01883d1229410a0b38585db4bb98afaf1eee28adb20",
+      "bytes": 84914,
+      "width": 2048,
+      "height": 280
+    },
+    {
+      "source": "brand/assets/textures/floors/kronotex-d4956/planks.png",
+      "output": "/media/textures/floors/kronotex-d4956/planks.webp",
+      "sha256": "2234071316faace4d4569689e5059423b51d3ad5429db06095722c98069c6375",
+      "sourceSha256": "b1c2886640495773e04b01303821fb2607f716b20408249622eaecba889385d8",
+      "bytes": 589764,
+      "width": 2063,
+      "height": 1692
+    },
+    {
+      "source": "brand/assets/textures/floors/kronotex-d4956/trim.png",
+      "output": "/media/textures/floors/kronotex-d4956/trim.webp",
+      "sha256": "b3bf75ad159a7c910f0c15d5375b326245cf69e0440a52723381eb79526934b8",
+      "sourceSha256": "4660f7ee85bd144ba8ace95b15795552989c65c06db5b050fb09bdc2e6636529",
+      "bytes": 16996,
+      "width": 512,
+      "height": 34
+    },
+    {
+      "source": "brand/assets/textures/floors/kronotex-d80582/atlas.png",
+      "output": "/media/textures/floors/kronotex-d80582/atlas.webp",
+      "sha256": "4c4a295b01ad0aa297e1ced278efb75550b0bf763220c9c00c2d39614d38bc24",
+      "sourceSha256": "fb6caf5e1d0797a095b3f98639272ed2aa636aaed0cc99adccc4862e046dc310",
+      "bytes": 107270,
+      "width": 2048,
+      "height": 280
+    },
+    {
+      "source": "brand/assets/textures/floors/kronotex-d80582/planks.png",
+      "output": "/media/textures/floors/kronotex-d80582/planks.webp",
+      "sha256": "811de78adb6482b7557b35d9290b9a31d369ab8751763d331c9ef4e29dc3762e",
+      "sourceSha256": "a802aff1542d10731581857c43118f7574e0d579391223cb0bb37cbbb9a96913",
+      "bytes": 623644,
+      "width": 2063,
+      "height": 1692
+    },
+    {
+      "source": "brand/assets/textures/floors/kronotex-d80582/trim.png",
+      "output": "/media/textures/floors/kronotex-d80582/trim.webp",
+      "sha256": "1269aa0401539f662ddc0f610d62b240f10cd5c2d37aebd7865b38e978a97005",
+      "sourceSha256": "d17baca4aa6f32f7fafbf1cbd0d3d3ff68647b33e45dae085ec09f7744e27216",
+      "bytes": 20094,
+      "width": 512,
+      "height": 34
+    },
+    {
+      "source": "brand/assets/textures/floors/kronotex-d80612/atlas.png",
+      "output": "/media/textures/floors/kronotex-d80612/atlas.webp",
+      "sha256": "e7be8ad3b3da6a32ba421bc2ecc34a457c8ab1f0fa8a5018362efabcddbcb0f9",
+      "sourceSha256": "94c63d2c9aef970b445f80c40cacba12e124e6827f7a4718c1cd22059459f4a5",
+      "bytes": 116394,
+      "width": 2048,
+      "height": 280
+    },
+    {
+      "source": "brand/assets/textures/floors/kronotex-d80612/planks.png",
+      "output": "/media/textures/floors/kronotex-d80612/planks.webp",
+      "sha256": "571573fb82d6808c7c051a02bf9ffd2c90f83513b9b2914902a3255111c57870",
+      "sourceSha256": "61a5f6ce1495da7b8f1f092619126cf78323a5502960ffd9161d3d2c812ef3ba",
+      "bytes": 725802,
+      "width": 2063,
+      "height": 1692
+    },
+    {
+      "source": "brand/assets/textures/floors/kronotex-d80612/trim.png",
+      "output": "/media/textures/floors/kronotex-d80612/trim.webp",
+      "sha256": "fc2a5be45c75a4a278c7c1b66298b7e8555323f778bfff30c46832d2df382932",
+      "sourceSha256": "5a97efe3957b1f3d487583aa070e827b8fa9e61d940ba9f1e920a47fb0538c32",
+      "bytes": 19672,
+      "width": 512,
+      "height": 34
+    },
+    {
+      "source": "brand/assets/textures/floors/kronotex-d81162/atlas.png",
+      "output": "/media/textures/floors/kronotex-d81162/atlas.webp",
+      "sha256": "148867c795e9d50f0b624c07cbacb80b8aeb00ee1fa030037b750928dbd8f738",
+      "sourceSha256": "1f844a5a780800b2c726f140a13e87a9baf8facb7da7766aec27d2fd3a370265",
+      "bytes": 64770,
+      "width": 2048,
+      "height": 209
+    },
+    {
+      "source": "brand/assets/textures/floors/kronotex-d81162/planks.png",
+      "output": "/media/textures/floors/kronotex-d81162/planks.webp",
+      "sha256": "0af521364c74da20a02dc7132f9d3495d78e2404b2c3f728dedbe0925ce03861",
+      "sourceSha256": "e20e61c9f79690f1db2056641d37b54c8f38e748032424699fd16498fda3fb74",
+      "bytes": 757488,
+      "width": 2768,
+      "height": 1692
+    },
+    {
+      "source": "brand/assets/textures/floors/kronotex-d81162/trim.png",
+      "output": "/media/textures/floors/kronotex-d81162/trim.webp",
+      "sha256": "e174ea516a2802a6af98ae872e0a00797f163f8774d9180742ee43320db5341b",
+      "sourceSha256": "856b5bebf2c939162daefee7e395949ff0d1967f97ae59caef3cc28988e06f2e",
+      "bytes": 17612,
       "width": 512,
       "height": 34
     },
@@ -1021,18 +1903,18 @@
     {
       "source": "brand/assets/scenes/living-render-01/calibration.json",
       "output": "/media/scenes/living-render-01/fallback.webp",
-      "sha256": "20a34496e973b79d9240f62eaa741c0329793202de62466a67319bbb9b258ef1",
-      "sourceSha256": "3eb6e2a5fa19647c43a433c96e1481ead0b2b7fe5ea4b6ee35d8526c42002bd4",
-      "bytes": 83530,
+      "sha256": "758af47266bab9e5525071572afb67a406a07454f902af9ec8f4247c31ab3160",
+      "sourceSha256": "f763039793469d3795e92fc0f7d9aede9f925cb138078770a5b85c48d9a49729",
+      "bytes": 76044,
       "width": 960,
       "height": 720
     },
     {
       "source": "brand/assets/scenes/living-standard/calibration.json",
       "output": "/media/scenes/living-standard/fallback.webp",
-      "sha256": "5043b82c8408cc05911bdb82f67014aec89c44557e789af3e4f35686d896f1f8",
-      "sourceSha256": "582c74fd4f74d320397c2cbb43d90ba524d4ba433a2137cb4148a9f24b1cd695",
-      "bytes": 33160,
+      "sha256": "63760764fc38de26b8d5247db0db88e30ed523ac65b303f23b7986fe9f6bbf71",
+      "sourceSha256": "442ddd04c596da0feb415d1f4b43fb9528bcef97e80bfd8fb2763d6f90b45b3f",
+      "bytes": 23852,
       "width": 960,
       "height": 720
     },
@@ -1040,7 +1922,7 @@
       "source": "brand/assets/scenes/corridor-standard/calibration.json",
       "output": "/media/scenes/corridor-standard/fallback.webp",
       "sha256": "de71102cf1b370f6bbf24d0e636510c3faae0e56d8db57dc6a9eb35e05343bb5",
-      "sourceSha256": "a474f322cacfd3e06fe352f18ec65a26d58d4362df91611523ae5053e45b07a8",
+      "sourceSha256": "56c415206874456d8245e404240444562171588382e46d95ed85bb34a34bf19e",
       "bytes": 34388,
       "width": 960,
       "height": 720
@@ -1048,9 +1930,9 @@
     {
       "source": "brand/assets/scenes/bedroom-photo/calibration.json",
       "output": "/media/scenes/bedroom-photo/fallback.webp",
-      "sha256": "4ff74c6a783b32375fafc3d6ea732bceaedeb37e215febe8bad5eca4639e90a5",
-      "sourceSha256": "7e9301cfe41805b4a4db449cf8e83719613db937013ccdb8ce6d6631bc202e64",
-      "bytes": 33124,
+      "sha256": "090388a5bce5cc4da9843c64ad90b05d8a35353b41870ff556f918387d35f539",
+      "sourceSha256": "7a90261c7346365d03b08ee31f389b0aa2cccf0a6fd24a15a88e4b451bdf2f16",
+      "bytes": 18886,
       "width": 960,
       "height": 720
     }

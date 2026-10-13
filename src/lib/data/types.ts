@@ -92,6 +92,9 @@ export interface DoorProduct extends ProductBase {
   defaultSizeId: Id;
   finishIds: readonly Id[];
   defaultFinishId: Id;
+  /** Leaf designs this door line is made in (materials.doorModels). */
+  modelIds: readonly Id[];
+  defaultModelId: Id;
   compatibleSceneIds: readonly Id[];
 }
 export interface FloorProduct extends ProductBase {
@@ -146,6 +149,25 @@ export interface GlassDoorFinish {
   trim: TrimAppearance;
 }
 export type DoorFinish = OpaqueDoorFinish | GlassDoorFinish;
+/** A leaf design, chosen separately from the finish (flat, grooved, glass insert, filomuro …). */
+export interface DoorModel {
+  id: Id;
+  name: LocalizedText;
+  description: LocalizedText;
+  frameType: FrameType; // concealed-aluminium = flush (filomuro), no casing
+  icon: 'flat' | 'grooved' | 'glass-insert' | 'filomuro' | 'all-glass';
+}
+/** Where a floor décor's look and article data come from (brand-swappable). */
+export interface SupplierDecor {
+  supplier: Id; // tools/decors/<supplier>.json
+  brand: string;
+  code: string; // manufacturer décor number
+  collection: string;
+  structure: string;
+  sourceUrl: string; // official product page
+  checkedAt: string; // ISO date
+  usage: 'private-pitch-only' | 'licensed'; // private pitch only until written permission
+}
 
 export interface FloorAtlas {
   image: LocalAssetPath; // seamless, orthographic, color/albedo only
@@ -173,7 +195,8 @@ export interface FloorCollectionBase {
   planks?: PlankSheet;
   trim: TrimAppearance;
   swatchColorSrgb: HexColor;
-  specularStrength: number; // 0..0.2; default .04
+  specularStrength: number; // 0..0.2; default .04 (per-product gloss)
+  decor?: SupplierDecor;
 }
 export interface LaminateCollection extends FloorCollectionBase {
   kind: 'laminate';
@@ -257,11 +280,31 @@ export interface StudioSelection {
   version: 1;
   sceneId: Id;
   doorProductId: Id;
+  doorModelId: Id;
   doorFinishId: Id;
   floorProductId: Id;
   frameMode: TrimMode;
   skirtingMode: TrimMode;
   floorRotationDeg: 0 | 90;
+}
+/**
+ * A door model rendered into a scene. The scene's own layers are its default
+ * model (patch null); every other model replaces pixels only inside regionPx.
+ */
+export interface SceneDoorModel {
+  modelId: Id;
+  frameType: 'standard-casing' | 'concealed-aluminium';
+  patch: DoorModelPatch | null;
+}
+export interface DoorModelPatch {
+  regionPx: readonly [number, number, number, number];
+  base: LocalAssetPath; // region-sized crop
+  original: LocalAssetPath | null; // region-sized crop
+  /** Region-sized crops; each is pasted over `over` (a full-size scene layer) or over zeros. */
+  layers: readonly { image: LocalAssetPath; over: LocalAssetPath | null }[];
+  surfaces: readonly SceneSurface[]; // the model's complete surface list
+  protectedMask: SurfaceMask;
+  allowedFrameModes: readonly TrimMode[];
 }
 export interface RoomScene {
   id: Id;
@@ -280,6 +323,7 @@ export interface RoomScene {
   protectedMask: SurfaceMask; // hardware/furniture/walls that must remain unchanged
   foreground: LocalAssetPath | null; // transparent details if not already preserved by masks
   doorInserts: readonly DoorInsert[];
+  doorModels?: readonly SceneDoorModel[]; // rendered scenes; first entry is the default model
   allowedDoorProductIds: readonly Id[];
   allowedFloorProductIds: readonly Id[];
   allowedFrameModes: readonly TrimMode[];
@@ -289,6 +333,7 @@ export interface RoomScene {
 }
 export interface MaterialsConfig {
   schemaVersion: 1;
+  doorModels: readonly DoorModel[];
   doorFinishes: readonly DoorFinish[];
   floorCollections: readonly FloorCollection[];
   scenes: readonly RoomScene[];

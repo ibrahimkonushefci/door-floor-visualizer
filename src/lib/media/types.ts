@@ -36,7 +36,7 @@ export interface AssetSource {
   localPath: string;
   sourceUrl: string | null;
   author: string;
-  usageBasis: 'owned' | 'licensed' | 'generated';
+  usageBasis: 'owned' | 'licensed' | 'generated' | 'private-pitch-only';
   licenseNote: string;
   depictsProductId: Id | null;
   isIllustrative: boolean;

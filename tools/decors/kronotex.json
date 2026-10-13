@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "supplier": {
+    "id": "kronotex",
+    "brand": "KRONOTEX",
+    "manufacturer": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG)",
+    "originCountry": "DE",
+    "website": "https://www.swisskrono.com/de-de/produkte/fussboden/kronotex/",
+    "regionalEvidence": [
+      {
+        "url": "https://verona-laminat.com/laminat/",
+        "note": "Kosovo retailer (Gjilan) listing Kronotex Robusto décors (Premium Oak Nature, Norfolk Oak Beige/Coffee, Phalsbourg Oak, Pettersson Oak Beige) alongside Krono Original, Egger and Kaindl. Checked 2026-10-13."
+      },
+      {
+        "url": "https://www.vrohoriti.com.al/en/laminates",
+        "note": "Tirana retailer listing Kronotex. Checked 2026-10-13."
+      },
+      {
+        "url": "https://www.merkur.si/",
+        "note": "Slovenian DIY chain listing Kronotex Robusto/Mammut/Exquisit articles. Checked 2026-10-13."
+      }
+    ],
+    "usage": "private-pitch-only",
+    "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint.",
+    "checkedAt": "2026-10-13",
+    "replacedDecors": "D3073 Phalsbourg Eiche and D4765 Pettersson Eiche Grau were dropped: their official area images (3508 x 4962 px) show only 2 complete boards each. Replaced by D4954 and D4956 with the owner's approval (2026-10-13).",
+    "bevelNote": "All eight décor images are the V4 (4-sided micro V-groove) variant (file names *_V4_*); the Exquisit datasheet lists V-grooves on 2 or 4 sides depending on the décor."
+  },
+  "datasheets": [
+    {
+      "collection": "Robusto",
+      "url": "https://proxy-tessa.swikr-web51.eimed-server.de/789957-Technisches_Datenblatt_Robusto_DE_rev4.pdf"
+    },
+    {
+      "collection": "Exquisit",
+      "url": "https://proxy-tessa.swikr-web51.eimed-server.de/789981-Technisches_Datenblatt_Exquisit_DE_rev8.pdf"
+    },
+    {
+      "collection": "Mammut",
+      "url": "https://proxy-tessa.swikr-web51.eimed-server.de/789969-Technisches_Datenblatt_Mammut_DE_rev5.pdf"
+    }
+  ],
+  "decors": [
+    {
+      "code": "D4955",
+      "name": "Premium Eiche Natur",
+      "collection": "Robusto",
+      "page": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-natur/",
+      "image": "https://proxy-tessa.swikr-web51.eimed-server.de/732926-d4955_1375_188_v4---area_frontal_srgb.jpg",
+      "boardMm": [
+        1375,
+        188
+      ],
+      "thicknessMm": 12,
+      "acClass": "AC5",
+      "usageClass": 33,
+      "structure": "AF - Authentic Floor",
+      "dataNote": "Board size and AC/usage class confirmed by the Robusto technical datasheet (downloaded 2026-10-13)."
+    },
+    {
+      "code": "D80582",
+      "name": "Norfolk Oak Beige",
+      "collection": "Robusto",
+      "page": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-beige/",
+      "image": "https://proxy-tessa.swikr-web51.eimed-server.de/912587-D80582_1375_188_V4_-_Area_frontal_sRGB.jpg",
+      "boardMm": [
+        1375,
+        188
+      ],
+      "thicknessMm": 12,
+      "acClass": "AC5",
+      "usageClass": 33,
+      "structure": "ZE - ER",
+      "dataNote": "Board size and AC/usage class confirmed by the Robusto technical datasheet (downloaded 2026-10-13)."
+    },
+    {
+      "code": "D80612",
+      "name": "Norfolk Oak Kaffee",
+      "collection": "Robusto",
+      "page": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-kaffee/",
+      "image": "https://proxy-tessa.swikr-web51.eimed-server.de/912611-D80612_1375_188_V4_-_Area_frontal_sRGB.jpg",
+      "boardMm": [
+        1375,
+        188
+      ],
+      "thicknessMm": 12,
+      "acClass": "AC5",
+      "usageClass": 33,
+      "structure": "ZE - ER",
+      "dataNote": "Board size and AC/usage class confirmed by the Robusto technical datasheet (downloaded 2026-10-13)."
+    },
+    {
+      "code": "D4954",
+      "name": "Premium Eiche",
+      "collection": "Robusto",
+      "page": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche/",
+      "image": "https://proxy-tessa.swikr-web51.eimed-server.de/732894-D4954_1375_188_V4_-_Area_frontal_sRGB.jpg",
+      "boardMm": [
+        1375,
+        188
+      ],
+      "thicknessMm": 12,
+      "acClass": "AC5",
+      "usageClass": 33,
+      "structure": "AF - Authentic Floor",
+      "dataNote": "Board size and AC/usage class confirmed by the Robusto technical datasheet (downloaded 2026-10-13)."
+    },
+    {
+      "code": "D4763",
+      "name": "Pettersson Eiche Beige",
+      "collection": "Exquisit",
+      "page": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/exquisit/pettersson-eiche-beige/",
+      "image": "https://proxy-tessa.swikr-web51.eimed-server.de/727704-D4763_1380_193_V4_-_Area_frontal_sRGB.jpg",
+      "boardMm": [
+        1380,
+        193
+      ],
+      "thicknessMm": 8,
+      "acClass": "AC4",
+      "usageClass": 32,
+      "structure": "RL - ER",
+      "dataNote": "Product page (checked 2026-10-13) states AC5 / class 33; the Exquisit technical datasheet rev 8 states AC4 / classes 21-32 for 1380 x 193 x 8 mm (V-groove 2/4 sides). The more conservative datasheet value is used until the supplier confirms."
+    },
+    {
+      "code": "D4956",
+      "name": "Premium Eiche Grau",
+      "collection": "Robusto",
+      "page": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-grau/",
+      "image": "https://proxy-tessa.swikr-web51.eimed-server.de/732958-D4956_1380_193_V4_-_Area_frontal_sRGB.jpg",
+      "boardMm": [
+        1375,
+        188
+      ],
+      "thicknessMm": 12,
+      "acClass": "AC5",
+      "usageClass": 33,
+      "structure": "AF - Authentic Floor",
+      "dataNote": "Board size and AC/usage class confirmed by the Robusto technical datasheet (downloaded 2026-10-13)."
+    },
+    {
+      "code": "D3179",
+      "name": "Everest Oak Weiß",
+      "collection": "Mammut",
+      "page": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/everest-oak-weiss/",
+      "image": "https://proxy-tessa.swikr-web51.eimed-server.de/730956-D3179_1845_188_V4_-_Area_frontal_sRGB.jpg",
+      "boardMm": [
+        1845,
+        188
+      ],
+      "thicknessMm": 12,
+      "acClass": "AC5",
+      "usageClass": 33,
+      "structure": "RT - ER",
+      "dataNote": "Board size and AC/usage class confirmed by the Mammut technical datasheet (downloaded 2026-10-13)."
+    },
+    {
+      "code": "D81162",
+      "name": "Eiche Eleganz Creme",
+      "collection": "Mammut",
+      "page": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/eiche-eleganz-creme/",
+      "image": "https://proxy-tessa.swikr-web51.eimed-server.de/912677-D81162_1845_188_V4_-_Area_frontal_sRGB.jpg",
+      "boardMm": [
+        1845,
+        188
+      ],
+      "thicknessMm": 12,
+      "acClass": "AC5",
+      "usageClass": 33,
+      "structure": "NL - NL",
+      "dataNote": "Board size and AC/usage class confirmed by the Mammut technical datasheet (downloaded 2026-10-13)."
+    }
+  ]
+}

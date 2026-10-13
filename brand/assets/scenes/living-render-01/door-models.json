@@ -1,0 +1,71 @@
+{
+  "regionPx": [
+    1118,
+    184,
+    598,
+    862
+  ],
+  "method": "Union of every model's door assembly and hardware, plus pixels within 160 px whose 9×9 mean change in base/neutral/light plates exceeds 1 level(s) of 255 against flat, grown by 16 px and even-aligned.",
+  "models": {
+    "flat": {
+      "renderSeconds": {
+        "light": 366.5,
+        "light-dim": 313.7,
+        "gloss": 272.6
+      },
+      "samples": 512,
+      "checks": {
+        "maskBorderMax": 0,
+        "lightBorderMax": 0,
+        "baseBorderMax": 0,
+        "maskSumMax": 255,
+        "maskPixelsDifferingOutsideRegion": 0
+      }
+    },
+    "grooved": {
+      "renderSeconds": {
+        "light": 352,
+        "light-dim": 323.3,
+        "gloss": 288.6
+      },
+      "samples": 512,
+      "checks": {
+        "maskBorderMax": 0,
+        "lightBorderMax": 1,
+        "baseBorderMax": 3,
+        "maskSumMax": 255,
+        "maskPixelsDifferingOutsideRegion": 0
+      }
+    },
+    "glass-insert": {
+      "renderSeconds": {
+        "light": 376.3,
+        "light-dim": 335.7,
+        "gloss": 282.4
+      },
+      "samples": 512,
+      "checks": {
+        "maskBorderMax": 0,
+        "lightBorderMax": 1,
+        "baseBorderMax": 4,
+        "maskSumMax": 255,
+        "maskPixelsDifferingOutsideRegion": 0
+      }
+    },
+    "filomuro": {
+      "renderSeconds": {
+        "light": 365.9,
+        "light-dim": 321,
+        "gloss": 267.4
+      },
+      "samples": 512,
+      "checks": {
+        "maskBorderMax": 0,
+        "lightBorderMax": 1,
+        "baseBorderMax": 2,
+        "maskSumMax": 255,
+        "maskPixelsDifferingOutsideRegion": 2
+      }
+    }
+  }
+}

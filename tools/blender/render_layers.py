@@ -1,7 +1,7 @@
 """Render every compositing layer of a room built by build_room.py.
 
     /Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup \
-        --python tools/blender/render_layers.py -- [--samples 512] [--scale 100] [--post-only]
+        --python tools/blender/render_layers.py -- [--model flat] [--samples 512] [--scale 100] [--post-only]
 
 Three Cycles renders on the Metal GPU, same seed, adaptive sampling off so every
 pass sees identical camera samples:
@@ -24,8 +24,11 @@ Post-processing (numpy, Blender's bundled OpenImageIO for EXR input) writes
 8-bit masks with jointly quantised (partitioned) coverage, per-surface light and
 reflection plates dilated past their edges, the tone-mapped base plate, the
 16-bit floor world-position map and layers.json / render-manifest.json into
-tools/blender/out/<scene>/layers/. scripts/import-rendered-scene.ts turns that
-into a Studio scene.
+tools/blender/out/<scene>/<model>/layers/. scripts/import-rendered-scene.ts turns
+that into a Studio scene (the default model) plus a door-model patch per other
+model. Non-default models encode their plates with the default model's light
+scale (and floor/skirting reflection scales), so their pixels can be pasted
+over the default layers.
 """
 import json
 import math
@@ -45,8 +48,6 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import room_spec as spec  # noqa: E402
 
-OUT = HERE / "out" / spec.SCENE_ID
-LAYERS = OUT / "layers"
 SEED = 1729
 NEUTRAL_ALBEDO = 0.5
 DIM_ALBEDO = 0.25  # second light pass; the difference isolates editable light at edges
@@ -67,6 +68,13 @@ def argv():
 def opt(name, default=None):
     a = argv()
     return a[a.index(name) + 1] if name in a else default
+
+
+MODEL = opt("--model", spec.DEFAULT_MODEL)
+SURFACES = spec.surfaces_for(MODEL)
+OUT = HERE / "out" / spec.SCENE_ID / MODEL
+LAYERS = OUT / "layers"
+REFERENCE = HERE / "out" / spec.SCENE_ID / spec.DEFAULT_MODEL / "layers" / "layers.json"
 
 
 # --- PNG writer (deterministic, no colour chunks) ----------------------------
@@ -141,7 +149,7 @@ def editable_objects():
 
 
 def role_of(surface_id):
-    return next(s["role"] for s in spec.SURFACES if s["id"] == surface_id)
+    return next(s["role"] for s in SURFACES if s["id"] == surface_id)
 
 
 def material_with_aov(name, shader_builder, aov):
@@ -194,7 +202,7 @@ def configure(scene, samples, scale):
     vl = scene.view_layers[0]
     vl.use_pass_position = True
     existing = {a.name for a in vl.aovs}
-    for s in spec.SURFACES + [{"id": "protected"}]:
+    for s in SURFACES + [{"id": "protected"}]:
         name = spec.aov_name(s["id"])
         if name not in existing:
             a = vl.aovs.add()
@@ -278,7 +286,7 @@ def floor_positions(cam, bounds):
 
 def planar_mappings(scene):
     """Exact homography quads (plane mm <-> image01) for each editable surface."""
-    g = spec.door_geometry()
+    g = spec.door_geometry(MODEL)
     D, W = spec.ROOM["depth"], spec.ROOM["width"]
     lx0, lx1, lz0, lz1 = g["leaf"]
     ix0, ix1, iz = g["casing_inner"]
@@ -299,7 +307,10 @@ def planar_mappings(scene):
         "floor": ([(0, D, 0), (W, D, 0), (W, near, 0), (0, near, 0)], (W, D - near), 0),
     }
     out = {}
+    present = {s["id"] for s in SURFACES}
     for sid, (corners, (a, b), rot) in rects.items():
+        if sid not in present:
+            continue
         world = [[0, 0], [mm(a), 0], [mm(a), mm(b)], [0, mm(b)]]
         image = [project01(scene, p) for p in corners]
         out[sid] = {"worldQuadMm": world, "imageQuad01": image, "uvRotationDeg": rot, "corners3d": corners}
@@ -379,7 +390,10 @@ def post(scene, cam, manifest):
     gloss = read_exr(OUT / "gloss.exr")
     dim = read_exr(OUT / "light-dim.exr")
     H, W = light["Combined.R"].shape
-    ids = [s["id"] for s in spec.SURFACES]
+    ids = [s["id"] for s in SURFACES]
+    # Non-default models share the default model's encodings (see module doc).
+    ref = json.loads(REFERENCE.read_text()) if MODEL != spec.DEFAULT_MODEL else None
+    ref_refl = {s["id"]: s["reflectionScale"] for s in ref["surfaces"]} if ref else {}
     cov = np.stack([np.clip(light[f"{spec.aov_name(i)}.X"], 0, 1) for i in ids])
     total = cov.sum(axis=0)
     stats = {"coverageSumMax": float(total.max())}
@@ -405,6 +419,9 @@ def post(scene, cam, manifest):
             interior = masks[k] > 200
         surfaces[sid] = {"k": k, "mask": masks[k], "interior": interior}
     l_scale = float(np.quantile(np.concatenate([lum[s_["interior"]] for s_ in surfaces.values()]), 0.9995)) * 1.02
+    if ref:
+        stats["ownLightScale"] = l_scale
+        l_scale = ref["lightScale"]
     chroma, contribution = {}, np.zeros_like(neutral_rgb)
     for sid, sfc in surfaces.items():
         k, interior = sfc["k"], sfc["interior"]
@@ -423,6 +440,8 @@ def post(scene, cam, manifest):
         write_png(LAYERS / f"{sid}-light.png", plate)
         refl = dilate(gloss_rgb[y0:y1, x0:x1], crop_in, 8)
         r_scale = float(max(refl[support].max() if support.any() else 0.0, 1e-4))
+        if ref and role_of(sid) in ("floor", "skirting") and sid in ref_refl:
+            r_scale = ref_refl[sid]
         rplate = np.zeros((H, W, 3), np.uint8)
         rplate[y0:y1, x0:x1] = to_byte(np.clip(refl / r_scale, 0, 1)) * support[..., None]
         write_png(LAYERS / f"{sid}-reflection.png", rplate)
@@ -528,6 +547,7 @@ def post(scene, cam, manifest):
     mappings = planar_mappings(scene)
     layers = {
         "scene": spec.SCENE_ID,
+        "model": MODEL,
         "width": W,
         "height": H,
         "toneShoulder": TONE_SHOULDER,
@@ -573,6 +593,7 @@ def main():
             print(f"{name}: {times[name]} s")
         manifest = {
             "scene": spec.SCENE_ID,
+            "doorModel": MODEL,
             "blender": bpy.app.version_string,
             "blenderBuild": bpy.app.build_hash.decode() if isinstance(bpy.app.build_hash, bytes) else str(bpy.app.build_hash),
             "engine": "CYCLES",
@@ -591,6 +612,7 @@ def main():
             },
             "camera": {k: cam[k] for k in ("matrix_world", "lens_mm", "sensor_mm", "shift")},
             "hdri": spec.HDRI,
+            "corridor": spec.CORRIDOR,
             "fill": spec.FILL,
             "filmExposure": spec.EXPOSURE,
             "viewTransform": "Standard (linear EXR); tone shoulder applied in post and at runtime",

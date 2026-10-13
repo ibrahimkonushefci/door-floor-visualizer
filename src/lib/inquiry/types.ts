@@ -13,7 +13,7 @@ export type InquiryContext =
 export interface InquiryData {
   brand: BrandConfig;
   products: readonly Product[];
-  materials: Pick<MaterialsConfig, 'doorFinishes' | 'floorCollections'>;
+  materials: Pick<MaterialsConfig, 'doorFinishes' | 'floorCollections' | 'doorModels'>;
   scenes: readonly { id: Id; name: LocalizedText }[];
 }
 export type ContactChannel = 'phone' | 'whatsapp' | 'viber';

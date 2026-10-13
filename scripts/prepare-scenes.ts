@@ -10,6 +10,7 @@ import { decodePng } from '../src/lib/studio/render/png';
 import { renderRows } from '../src/lib/studio/render/kernel';
 import type { PixelBuffer } from '../src/lib/studio/render/sampling';
 import type { StudioCatalog } from '../src/lib/studio/types';
+import type { RoomScene } from '../src/lib/data/types';
 const hash = (b: Buffer) => createHash('sha256').update(b).digest('hex');
 export async function decodeNode(
   path: string,
@@ -99,6 +100,62 @@ export async function enhanceStraightAtlas(input: Buffer, atlas: StraightAtlas, 
     .sharpen({ sigma: 0.7 })
     .png()
     .toBuffer();
+}
+// Door-model patches (rendered scenes): every crop is region-sized, every
+// layer it covers belongs to the scene, and each model's surfaces, composited
+// as the loader does, keep their bounds and never overlap.
+async function validateDoorModels(dir: string, s: RoomScene, W: number, H: number, sceneMasks: Buffer[]) {
+  if (!s.doorModels) return;
+  if (!s.render) throw new Error('Door models need a rendered scene');
+  if (s.doorModels[0].frameType !== s.frameType) throw new Error('First door model must be the scene default');
+  const file = (p: string) => dir + '/' + p.split('/').at(-1)!.replace(/\.webp$/, '.png');
+  const defaultMask = new Map(s.surfaces.map((t, i) => [t.mask.alpha, sceneMasks[i + 1]]));
+  for (const model of s.doorModels) {
+    const patch = model.patch;
+    if (!patch) continue;
+    const [rx, ry, rw, rh] = patch.regionPx;
+    if (rx % 2 || ry % 2 || rw % 2 || rh % 2 || rx + rw > W || ry + rh > H)
+      throw new Error(`${model.modelId}: region must be even-aligned inside the scene`);
+    const crops = new Map(patch.layers.map(l => [l.image, l.over]));
+    for (const p of [patch.base, patch.original, patch.protectedMask.alpha, ...crops.keys()].filter(Boolean) as string[]) {
+      const meta = await sharp(file(p)).metadata();
+      if (meta.width !== rw || meta.height !== rh) throw new Error(`${p}: patch crop must be ${rw}×${rh}`);
+    }
+    for (const over of crops.values())
+      if (over && !s.surfaces.some(t => [t.mask.alpha, t.lighting.diffuse, t.lighting.specular].includes(over)))
+        throw new Error(`${model.modelId}: patch over unknown layer ${over}`);
+    const sum = new Uint16Array(W * H);
+    for (const t of patch.surfaces) {
+      let full: Buffer;
+      if (crops.has(t.mask.alpha)) {
+        const under = crops.get(t.mask.alpha);
+        full = under ? Buffer.from(defaultMask.get(under)!) : Buffer.alloc(W * H * 4, 0);
+        const c = await sharp(file(t.mask.alpha)).ensureAlpha().raw().toBuffer();
+        for (let y = 0; y < rh; y++) c.copy(full, ((ry + y) * W + rx) * 4, y * rw * 4, (y + 1) * rw * 4);
+      } else {
+        if (!defaultMask.has(t.mask.alpha)) throw new Error(`${model.modelId}/${t.id}: mask is neither a crop nor a scene layer`);
+        full = defaultMask.get(t.mask.alpha)!;
+      }
+      let x0 = W,
+        y0 = H,
+        x1 = -1,
+        y1 = -1;
+      for (let i = 0; i < W * H; i++)
+        if (full[i * 4]) {
+          sum[i] += full[i * 4];
+          const x = i % W,
+            y = (i / W) | 0;
+          if (x < x0) x0 = x;
+          if (x > x1) x1 = x;
+          if (y < y0) y0 = y;
+          if (y > y1) y1 = y;
+        }
+      if (JSON.stringify([x0, y0, x1 - x0 + 1, y1 - y0 + 1]) !== JSON.stringify(t.mask.boundsPx))
+        throw new Error(`${model.modelId}/${t.id}: mask bounds mismatch`);
+    }
+    for (let i = 0; i < W * H; i++)
+      if (sum[i] > 255) throw new Error(`${model.modelId}: surface overlap at ${i % W},${(i / W) | 0}`);
+  }
 }
 // Studio scenes, in tab order. Each has brand/assets/scenes/<id>/calibration.json.
 export const STUDIO_SCENES = ['living-render-01', 'living-standard', 'corridor-standard', 'bedroom-photo'];
@@ -294,12 +351,14 @@ export async function prepareScenes(check = false) {
       if (sum > (s.render ? 255 : 256))
         throw new Error(`Surface overlap at ${i % 1600},${Math.floor(i / 1600)}: ${sum}`);
     }
+    await validateDoorModels(dir, s, W, H, masks);
     // Protection deliberately cuts fixed hardware from leaf coverage in kernel; geometric masks retain surface edges.
     for (const file of entries.filter(f => f !== 'glass-source.png')) {
       const meta = await sharp(dir + '/' + file).metadata();
       if (
         file !== 'thumbnail.png' &&
         file !== 'floor-position.png' &&
+        !file.startsWith('model-') &&
         (meta.width !== W || meta.height !== H)
       )
         throw new Error('Wrong canonical layer dimensions');
@@ -308,6 +367,10 @@ export async function prepareScenes(check = false) {
       else if (file === 'original.png' && s.original)
         await output(dir + '/' + file, s.original, b =>
           sharp(b).webp({ quality: 88 }).toBuffer(),
+        );
+      else if (/^model-.+-(base|original)\.png$/.test(file))
+        await output(dir + '/' + file, `/media/scenes/${id}/${file.replace('.png', '.webp')}`, b =>
+          sharp(b).webp({ quality: 90 }).toBuffer(),
         );
       else if (file === 'thumbnail.png')
         await output(dir + '/' + file, s.thumbnail, b =>
@@ -329,17 +392,24 @@ export async function prepareScenes(check = false) {
           target = entry.isDirectory()
             ? `/media/textures/${group}/${entry.name}/${file.replace('.png', '.webp')}`
             : `/media/textures/${group}/${file.replace('.png', '.webp')}`;
-        const atlas =
+        const collection =
           group === 'floors' && file === 'atlas.png'
-            ? raw.floorCollections.find((c: { id: string }) => c.id === entry.name).atlas
+            ? raw.floorCollections.find((c: { id: string }) => c.id === entry.name)
             : null;
+        const atlas = collection?.atlas ?? null;
+        // Supplier décor atlases are composed from real boards with bevels baked
+        // (scripts/import-decors.ts); only generated atlases get the board pass.
+        const enhance = atlas?.pattern === 'straight' && !collection.decor;
         // Plank sheets keep every native pixel: boards are seen up close.
-        const sheet = group === 'floors' && file === 'planks.png';
+        // Supplier décor sheets (1.5 px/mm, real scans) ship at q90 to fit
+        // the first-useful and offline budgets.
+        const sheet = group === 'floors' && file === 'planks.png',
+          decorSheet = sheet && !!raw.floorCollections.find((c: { id: string; decor?: unknown }) => c.id === entry.name)?.decor;
         await output(source, target, async b =>
           sheet
-            ? sharp(b).webp({ quality: 92, smartSubsample: true }).toBuffer()
+            ? sharp(b).webp({ quality: decorSheet ? 90 : 92, smartSubsample: true }).toBuffer()
             : atlas
-            ? sharp(atlas.pattern === 'straight' ? await enhanceStraightAtlas(b, atlas, entry.name) : b)
+            ? sharp(enhance ? await enhanceStraightAtlas(b, atlas, entry.name) : b)
                 .resize(atlas.repeatPixels[0], atlas.repeatPixels[1])
                 .webp({ quality: 92, smartSubsample: true })
                 .toBuffer()

@@ -635,11 +635,15 @@
       "dera-lis"
     ],
     "allowedFloorProductIds": [
-      "lis-natyral-10",
-      "dushk-fshatar-8",
       "peshk-natyral-12",
-      "arre-klasike-12",
-      "hirte-skandinave-8"
+      "kronotex-d4955",
+      "kronotex-d80582",
+      "kronotex-d80612",
+      "kronotex-d4954",
+      "kronotex-d4763",
+      "kronotex-d4956",
+      "kronotex-d3179",
+      "kronotex-d81162"
     ],
     "allowedFrameModes": [
       "door",
@@ -655,8 +659,9 @@
       "version": 1,
       "sceneId": "bedroom-photo",
       "doorProductId": "dera-lis",
-      "doorFinishId": "arre-erret",
-      "floorProductId": "lis-natyral-10",
+      "doorModelId": "flat",
+      "doorFinishId": "lis-natyral",
+      "floorProductId": "kronotex-d80582",
       "frameMode": "door",
       "skirtingMode": "door",
       "floorRotationDeg": 0

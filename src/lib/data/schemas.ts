@@ -112,6 +112,8 @@ const door = z
     defaultSizeId: idSchema,
     finishIds: z.array(idSchema).min(1),
     defaultFinishId: idSchema,
+    modelIds: z.array(idSchema).min(1),
+    defaultModelId: idSchema,
     compatibleSceneIds: z.array(idSchema),
   })
   .superRefine((v, ctx) => {
@@ -125,7 +127,11 @@ const door = z
       (v.doorType === 'glass') !== (v.construction === 'aluminium-glass' && v.surface === 'glass')
     )
       ctx.addIssue({ code: 'custom', message: 'Contradictory door type/frame/construction' });
-    if (!v.sizes.some(s => s.id === v.defaultSizeId) || !v.finishIds.includes(v.defaultFinishId))
+    if (
+      !v.sizes.some(s => s.id === v.defaultSizeId) ||
+      !v.finishIds.includes(v.defaultFinishId) ||
+      !v.modelIds.includes(v.defaultModelId)
+    )
       ctx.addIssue({ code: 'custom', message: 'Invalid default variant' });
   });
 const floor = z.strictObject({
@@ -193,6 +199,23 @@ const finish = z.discriminatedUnion('kind', [
     trim: trimAppearance,
   }),
 ]);
+const doorModel = z.strictObject({
+  id: idSchema,
+  name: localizedTextSchema,
+  description: localizedTextSchema,
+  frameType: z.enum(['standard-casing', 'concealed-aluminium', 'slim-aluminium']),
+  icon: z.enum(['flat', 'grooved', 'glass-insert', 'filomuro', 'all-glass']),
+});
+const decor = z.strictObject({
+  supplier: idSchema,
+  brand: z.string().trim().min(1),
+  code: z.string().trim().min(1),
+  collection: z.string().trim().min(1),
+  structure: z.string().trim().min(1),
+  sourceUrl: z.url({ protocol: /^https$/ }),
+  checkedAt: z.iso.date(),
+  usage: z.enum(['private-pitch-only', 'licensed']),
+});
 const atlas = z
   .strictObject({
     image: assetPathSchema,
@@ -233,6 +256,7 @@ const collectionBase = {
   trim: trimAppearance,
   swatchColorSrgb: hexSchema,
   specularStrength: strength,
+  decor: decor.optional(),
 };
 const collection = z.discriminatedUnion('kind', [
   z.strictObject({
@@ -307,11 +331,36 @@ export const selectionSchema = z.strictObject({
   version: z.literal(1),
   sceneId: idSchema,
   doorProductId: idSchema,
+  doorModelId: idSchema,
   doorFinishId: idSchema,
   floorProductId: idSchema,
   frameMode: trimMode,
   skirtingMode: trimMode,
   floorRotationDeg: z.union([z.literal(0), z.literal(90)]),
+});
+const surface = z.strictObject({
+  id: idSchema,
+  role: z.enum(['floor', 'door-leaf', 'frame', 'skirting']),
+  mask,
+  lighting,
+  mapping,
+  uvRotationDeg: z.union([z.literal(0), z.literal(90)]),
+  positionMap: positionMap.optional(),
+});
+const sceneDoorModel = z.strictObject({
+  modelId: idSchema,
+  frameType: z.enum(['standard-casing', 'concealed-aluminium']),
+  patch: z
+    .strictObject({
+      regionPx: bounds,
+      base: assetPathSchema,
+      original: assetPathSchema.nullable(),
+      layers: z.array(z.strictObject({ image: assetPathSchema, over: assetPathSchema.nullable() })),
+      surfaces: z.array(surface),
+      protectedMask: mask,
+      allowedFrameModes: z.array(trimMode).min(1),
+    })
+    .nullable(),
 });
 const scene = z.strictObject({
   id: idSchema,
@@ -335,17 +384,7 @@ const scene = z.strictObject({
     width: z.union([z.literal(800), z.literal(900)]),
     height: z.literal(2000),
   }),
-  surfaces: z.array(
-    z.strictObject({
-      id: idSchema,
-      role: z.enum(['floor', 'door-leaf', 'frame', 'skirting']),
-      mask,
-      lighting,
-      mapping,
-      uvRotationDeg: z.union([z.literal(0), z.literal(90)]),
-      positionMap: positionMap.optional(),
-    }),
-  ),
+  surfaces: z.array(surface),
   protectedMask: mask,
   foreground: assetPathSchema.nullable(),
   doorInserts: z.array(
@@ -358,6 +397,7 @@ const scene = z.strictObject({
       sourceNote: z.string().trim().min(1),
     }),
   ),
+  doorModels: z.array(sceneDoorModel).min(1).optional(),
   allowedDoorProductIds: z.array(idSchema),
   allowedFloorProductIds: z.array(idSchema),
   allowedFrameModes: z.array(trimMode),
@@ -367,6 +407,7 @@ const scene = z.strictObject({
 });
 export const materialsSchema: z.ZodType<MaterialsConfig> = z.strictObject({
   schemaVersion: z.literal(1),
+  doorModels: z.array(doorModel).min(1),
   doorFinishes: z.array(finish),
   floorCollections: z.array(collection),
   scenes: z.array(scene),

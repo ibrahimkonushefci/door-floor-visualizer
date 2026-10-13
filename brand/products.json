@@ -16,20 +16,6 @@
       "role": "product"
     },
     {
-      "id": "lis-natyral-10-01",
-      "source": "brand/assets/products/lis-natyral-10/01.jpg",
-      "alt": {
-        "sq": "Lis natyral 10mm — pamje demonstrimi e gjeneruar",
-        "en": "Natural oak 10mm — generated demo view",
-        "de": "Natureiche 10mm — generierte Demoabbildung"
-      },
-      "focalPoint": [
-        0.5,
-        0.5
-      ],
-      "role": "room"
-    },
-    {
       "id": "dera-lis-01",
       "source": "brand/assets/products/dera-lis/01.jpg",
       "alt": {
@@ -42,20 +28,6 @@
         0.5
       ],
       "role": "product"
-    },
-    {
-      "id": "dushk-fshatar-8-01",
-      "source": "brand/assets/products/dushk-fshatar-8/01.jpg",
-      "alt": {
-        "sq": "Dushk fshatar 8mm — pamje demonstrimi e gjeneruar",
-        "en": "Rustic oak 8mm — generated demo view",
-        "de": "Rustikale Eiche 8mm — generierte Demoabbildung"
-      },
-      "focalPoint": [
-        0.5,
-        0.5
-      ],
-      "role": "room"
     },
     {
       "id": "dera-kashmir-01",
@@ -100,40 +72,12 @@
       "role": "detail"
     },
     {
-      "id": "lis-natyral-10-02",
-      "source": "brand/assets/products/lis-natyral-10/02.jpg",
-      "alt": {
-        "sq": "Lis natyral 10mm — detaj i gjeneruar për demonstrim",
-        "en": "Natural oak 10mm — generated demo detail view",
-        "de": "Natureiche 10mm — generierte Demo-Detailansicht"
-      },
-      "focalPoint": [
-        0.5,
-        0.5
-      ],
-      "role": "detail"
-    },
-    {
       "id": "dera-lis-02",
       "source": "brand/assets/products/dera-lis/02.jpg",
       "alt": {
         "sq": "Derë lis natyral — detaj i gjeneruar për demonstrim",
         "en": "Natural oak door — generated demo detail view",
         "de": "Natureiche-Tür — generierte Demo-Detailansicht"
-      },
-      "focalPoint": [
-        0.5,
-        0.5
-      ],
-      "role": "detail"
-    },
-    {
-      "id": "dushk-fshatar-8-02",
-      "source": "brand/assets/products/dushk-fshatar-8/02.jpg",
-      "alt": {
-        "sq": "Dushk fshatar 8mm — detaj i gjeneruar për demonstrim",
-        "en": "Rustic oak 8mm — generated demo detail view",
-        "de": "Rustikale Eiche 8mm — generierte Demo-Detailansicht"
       },
       "focalPoint": [
         0.5,
@@ -198,34 +142,6 @@
       "role": "detail"
     },
     {
-      "id": "arre-klasike-12-01",
-      "source": "brand/assets/products/arre-klasike-12/01.jpg",
-      "alt": {
-        "sq": "Arrë klasike 12mm — pamje ilustruese e gjeneruar",
-        "en": "Classic walnut 12mm — generated illustrative view",
-        "de": "Klassischer Nussbaum 12mm — generierte illustrative Ansicht"
-      },
-      "focalPoint": [
-        0.25,
-        0.5
-      ],
-      "role": "product"
-    },
-    {
-      "id": "arre-klasike-12-02",
-      "source": "brand/assets/products/arre-klasike-12/02.jpg",
-      "alt": {
-        "sq": "Arrë klasike 12mm — pamje ilustruese e gjeneruar",
-        "en": "Classic walnut 12mm — generated illustrative view",
-        "de": "Klassischer Nussbaum 12mm — generierte illustrative Ansicht"
-      },
-      "focalPoint": [
-        0.25,
-        0.5
-      ],
-      "role": "detail"
-    },
-    {
       "id": "dera-xham-01",
       "source": "brand/assets/products/dera-xham/01.jpg",
       "alt": {
@@ -246,34 +162,6 @@
         "sq": "Xham i errët, profil i zi — pamje ilustruese e gjeneruar",
         "en": "Smoke glass, black profile — generated illustrative view",
         "de": "Rauchglas, schwarzes Profil — generierte illustrative Ansicht"
-      },
-      "focalPoint": [
-        0.25,
-        0.5
-      ],
-      "role": "detail"
-    },
-    {
-      "id": "hirte-skandinave-8-01",
-      "source": "brand/assets/products/hirte-skandinave-8/01.jpg",
-      "alt": {
-        "sq": "Hirtë skandinave 8mm — pamje ilustruese e gjeneruar",
-        "en": "Scandinavian grey 8mm — generated illustrative view",
-        "de": "Skandinavisches Grau 8mm — generierte illustrative Ansicht"
-      },
-      "focalPoint": [
-        0.25,
-        0.5
-      ],
-      "role": "product"
-    },
-    {
-      "id": "hirte-skandinave-8-02",
-      "source": "brand/assets/products/hirte-skandinave-8/02.jpg",
-      "alt": {
-        "sq": "Hirtë skandinave 8mm — pamje ilustruese e gjeneruar",
-        "en": "Scandinavian grey 8mm — generated illustrative view",
-        "de": "Skandinavisches Grau 8mm — generierte illustrative Ansicht"
       },
       "focalPoint": [
         0.25,
@@ -330,6 +218,230 @@
         "sq": "Mostra të lajsnes MDF me prerje të dukshme — ilustrim",
         "en": "MDF skirting samples with visible cut ends — illustration",
         "de": "MDF-Sockelleistenmuster mit sichtbarem Querschnitt — Illustration"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "kronotex-d4955-01",
+      "source": "brand/assets/products/kronotex-d4955/01.jpg",
+      "alt": {
+        "sq": "Premium Eiche Natur në dhomën e ndenjes 3D — pamje ilustruese",
+        "en": "Premium Eiche Natur in the 3D living room — illustrative view",
+        "de": "Premium Eiche Natur im 3D-Wohnzimmer — illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "room"
+    },
+    {
+      "id": "kronotex-d4955-02",
+      "source": "brand/assets/products/kronotex-d4955/02.jpg",
+      "alt": {
+        "sq": "Premium Eiche Natur — dërrasat nga lart",
+        "en": "Premium Eiche Natur — boards seen from above",
+        "de": "Premium Eiche Natur — Dielen von oben"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "kronotex-d80582-01",
+      "source": "brand/assets/products/kronotex-d80582/01.jpg",
+      "alt": {
+        "sq": "Norfolk Oak Beige në dhomën e ndenjes 3D — pamje ilustruese",
+        "en": "Norfolk Oak Beige in the 3D living room — illustrative view",
+        "de": "Norfolk Oak Beige im 3D-Wohnzimmer — illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "room"
+    },
+    {
+      "id": "kronotex-d80582-02",
+      "source": "brand/assets/products/kronotex-d80582/02.jpg",
+      "alt": {
+        "sq": "Norfolk Oak Beige — dërrasat nga lart",
+        "en": "Norfolk Oak Beige — boards seen from above",
+        "de": "Norfolk Oak Beige — Dielen von oben"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "kronotex-d80612-01",
+      "source": "brand/assets/products/kronotex-d80612/01.jpg",
+      "alt": {
+        "sq": "Norfolk Oak Kaffee në dhomën e ndenjes 3D — pamje ilustruese",
+        "en": "Norfolk Oak Kaffee in the 3D living room — illustrative view",
+        "de": "Norfolk Oak Kaffee im 3D-Wohnzimmer — illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "room"
+    },
+    {
+      "id": "kronotex-d80612-02",
+      "source": "brand/assets/products/kronotex-d80612/02.jpg",
+      "alt": {
+        "sq": "Norfolk Oak Kaffee — dërrasat nga lart",
+        "en": "Norfolk Oak Kaffee — boards seen from above",
+        "de": "Norfolk Oak Kaffee — Dielen von oben"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "kronotex-d4954-01",
+      "source": "brand/assets/products/kronotex-d4954/01.jpg",
+      "alt": {
+        "sq": "Premium Eiche në dhomën e ndenjes 3D — pamje ilustruese",
+        "en": "Premium Eiche in the 3D living room — illustrative view",
+        "de": "Premium Eiche im 3D-Wohnzimmer — illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "room"
+    },
+    {
+      "id": "kronotex-d4954-02",
+      "source": "brand/assets/products/kronotex-d4954/02.jpg",
+      "alt": {
+        "sq": "Premium Eiche — dërrasat nga lart",
+        "en": "Premium Eiche — boards seen from above",
+        "de": "Premium Eiche — Dielen von oben"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "kronotex-d4763-01",
+      "source": "brand/assets/products/kronotex-d4763/01.jpg",
+      "alt": {
+        "sq": "Pettersson Eiche Beige në dhomën e ndenjes 3D — pamje ilustruese",
+        "en": "Pettersson Eiche Beige in the 3D living room — illustrative view",
+        "de": "Pettersson Eiche Beige im 3D-Wohnzimmer — illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "room"
+    },
+    {
+      "id": "kronotex-d4763-02",
+      "source": "brand/assets/products/kronotex-d4763/02.jpg",
+      "alt": {
+        "sq": "Pettersson Eiche Beige — dërrasat nga lart",
+        "en": "Pettersson Eiche Beige — boards seen from above",
+        "de": "Pettersson Eiche Beige — Dielen von oben"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "kronotex-d4956-01",
+      "source": "brand/assets/products/kronotex-d4956/01.jpg",
+      "alt": {
+        "sq": "Premium Eiche Grau në dhomën e ndenjes 3D — pamje ilustruese",
+        "en": "Premium Eiche Grau in the 3D living room — illustrative view",
+        "de": "Premium Eiche Grau im 3D-Wohnzimmer — illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "room"
+    },
+    {
+      "id": "kronotex-d4956-02",
+      "source": "brand/assets/products/kronotex-d4956/02.jpg",
+      "alt": {
+        "sq": "Premium Eiche Grau — dërrasat nga lart",
+        "en": "Premium Eiche Grau — boards seen from above",
+        "de": "Premium Eiche Grau — Dielen von oben"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "kronotex-d3179-01",
+      "source": "brand/assets/products/kronotex-d3179/01.jpg",
+      "alt": {
+        "sq": "Everest Oak Weiß në dhomën e ndenjes 3D — pamje ilustruese",
+        "en": "Everest Oak Weiß in the 3D living room — illustrative view",
+        "de": "Everest Oak Weiß im 3D-Wohnzimmer — illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "room"
+    },
+    {
+      "id": "kronotex-d3179-02",
+      "source": "brand/assets/products/kronotex-d3179/02.jpg",
+      "alt": {
+        "sq": "Everest Oak Weiß — dërrasat nga lart",
+        "en": "Everest Oak Weiß — boards seen from above",
+        "de": "Everest Oak Weiß — Dielen von oben"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "detail"
+    },
+    {
+      "id": "kronotex-d81162-01",
+      "source": "brand/assets/products/kronotex-d81162/01.jpg",
+      "alt": {
+        "sq": "Eiche Eleganz Creme në dhomën e ndenjes 3D — pamje ilustruese",
+        "en": "Eiche Eleganz Creme in the 3D living room — illustrative view",
+        "de": "Eiche Eleganz Creme im 3D-Wohnzimmer — illustrative Ansicht"
+      },
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "role": "room"
+    },
+    {
+      "id": "kronotex-d81162-02",
+      "source": "brand/assets/products/kronotex-d81162/02.jpg",
+      "alt": {
+        "sq": "Eiche Eleganz Creme — dërrasat nga lart",
+        "en": "Eiche Eleganz Creme — boards seen from above",
+        "de": "Eiche Eleganz Creme — Dielen von oben"
       },
       "focalPoint": [
         0.5,
@@ -410,55 +522,20 @@
       "defaultSizeId": "leaf-900",
       "finishIds": [
         "bardhe-mat",
+        "krem",
+        "gri-celet",
         "kashmir",
+        "antracit",
         "lis-natyral",
-        "arre-erret",
-        "dushk-hirte",
-        "antracit"
+        "dushk-hirte"
       ],
       "defaultFinishId": "bardhe-mat",
-      "compatibleSceneIds": [
-        "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
-      ]
-    },
-    {
-      "id": "lis-natyral-10",
-      "slug": "lis-natyral-10",
-      "sku": "PD-DEMO-02",
-      "kind": "floor",
-      "name": {
-        "sq": "Lis natyral 10mm",
-        "en": "Natural oak 10mm",
-        "de": "Natureiche 10mm"
-      },
-      "summary": {
-        "sq": "Dërrasa të gjera lisi natyral me buzë 4V; laminat AC5 shumë rezistent për shtëpi të gjalla.",
-        "en": "Wide natural-oak planks with a 4V bevel; a hard-wearing AC5 laminate for busy homes.",
-        "de": "Breite Natureichendielen mit 4V-Fase; strapazierfähiges AC5-Laminat für lebendige Wohnräume."
-      },
-      "originCountry": "DE",
-      "manufacturer": null,
-      "imageIds": [
-        "lis-natyral-10-01",
-        "lis-natyral-10-02"
+      "modelIds": [
+        "flat",
+        "grooved",
+        "glass-insert"
       ],
-      "relatedProductIds": [],
-      "evidence": {
-        "status": "demo",
-        "sourceUrl": null,
-        "checkedAt": null,
-        "note": {
-          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
-          "en": "Demo product with generated illustrative imagery.",
-          "de": "Demoprodukt mit generierter illustrativer Abbildung."
-        }
-      },
-      "displayOrder": 1,
-      "published": true,
-      "collectionId": "lis-natyral-10",
+      "defaultModelId": "flat",
       "compatibleSceneIds": [
         "living-render-01",
         "living-standard",
@@ -536,56 +613,16 @@
       ],
       "defaultSizeId": "leaf-800",
       "finishIds": [
-        "bardhe-mat",
-        "kashmir",
         "lis-natyral",
-        "arre-erret",
-        "dushk-hirte",
-        "antracit"
+        "dushk-hirte"
       ],
       "defaultFinishId": "lis-natyral",
-      "compatibleSceneIds": [
-        "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
-      ]
-    },
-    {
-      "id": "dushk-fshatar-8",
-      "slug": "dushk-fshatar-8",
-      "sku": "PD-DEMO-04",
-      "kind": "floor",
-      "name": {
-        "sq": "Dushk fshatar 8mm",
-        "en": "Rustic oak 8mm",
-        "de": "Rustikale Eiche 8mm"
-      },
-      "summary": {
-        "sq": "Dushk rustik me karakter, nyje dhe ndryshime ngjyre, në dërrasë të hollë 8 mm.",
-        "en": "Characterful rustic oak with knots and colour play, in a slim 8 mm board.",
-        "de": "Charaktervolle Rustikaleiche mit Ästen und Farbspiel, in schlanker 8-mm-Diele."
-      },
-      "originCountry": "AT",
-      "manufacturer": null,
-      "imageIds": [
-        "dushk-fshatar-8-01",
-        "dushk-fshatar-8-02"
+      "modelIds": [
+        "flat",
+        "grooved",
+        "glass-insert"
       ],
-      "relatedProductIds": [],
-      "evidence": {
-        "status": "demo",
-        "sourceUrl": null,
-        "checkedAt": null,
-        "note": {
-          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
-          "en": "Demo product with generated illustrative imagery.",
-          "de": "Demoprodukt mit generierter illustrativer Abbildung."
-        }
-      },
-      "displayOrder": 3,
-      "published": true,
-      "collectionId": "dushk-fshatar-8",
+      "defaultModelId": "flat",
       "compatibleSceneIds": [
         "living-render-01",
         "living-standard",
@@ -656,12 +693,20 @@
       "defaultSizeId": "leaf-800",
       "finishIds": [
         "bardhe-mat",
+        "krem",
+        "gri-celet",
         "kashmir",
-        "lis-natyral",
-        "antracit"
+        "antracit",
+        "lis-natyral"
       ],
       "defaultFinishId": "kashmir",
-      "compatibleSceneIds": []
+      "modelIds": [
+        "filomuro"
+      ],
+      "defaultModelId": "filomuro",
+      "compatibleSceneIds": [
+        "living-render-01"
+      ]
     },
     {
       "id": "peshk-natyral-12",
@@ -768,53 +813,19 @@
       "defaultSizeId": "leaf-800",
       "finishIds": [
         "bardhe-mat",
+        "krem",
+        "gri-celet",
         "kashmir",
-        "lis-natyral",
-        "antracit"
+        "antracit",
+        "lis-natyral"
       ],
       "defaultFinishId": "antracit",
-      "compatibleSceneIds": []
-    },
-    {
-      "id": "arre-klasike-12",
-      "slug": "arre-klasike-12",
-      "sku": "PD-DEMO-08",
-      "kind": "floor",
-      "name": {
-        "sq": "Arrë klasike 12mm",
-        "en": "Classic walnut 12mm",
-        "de": "Klassischer Nussbaum 12mm"
-      },
-      "summary": {
-        "sq": "Dërrasa arre të errët dhe të pasur, 12 mm, me klasë rezistence AC5.",
-        "en": "Rich, dark walnut planks in a 12 mm board with an AC5 wear rating.",
-        "de": "Satte, dunkle Nussbaumdielen in 12 mm mit Abriebklasse AC5."
-      },
-      "originCountry": "TR",
-      "manufacturer": null,
-      "imageIds": [
-        "arre-klasike-12-01",
-        "arre-klasike-12-02"
+      "modelIds": [
+        "filomuro"
       ],
-      "relatedProductIds": [],
-      "evidence": {
-        "status": "demo",
-        "sourceUrl": null,
-        "checkedAt": null,
-        "note": {
-          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
-          "en": "Demo product with generated illustrative imagery.",
-          "de": "Demoprodukt mit generierter illustrativer Abbildung."
-        }
-      },
-      "displayOrder": 7,
-      "published": true,
-      "collectionId": "arre-klasike-12",
+      "defaultModelId": "filomuro",
       "compatibleSceneIds": [
-        "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
+        "living-render-01"
       ]
     },
     {
@@ -874,50 +885,12 @@
         "xham-erret"
       ],
       "defaultFinishId": "xham-erret",
+      "modelIds": [
+        "all-glass"
+      ],
+      "defaultModelId": "all-glass",
       "compatibleSceneIds": [
         "living-standard"
-      ]
-    },
-    {
-      "id": "hirte-skandinave-8",
-      "slug": "hirte-skandinave-8",
-      "sku": "PD-DEMO-10",
-      "kind": "floor",
-      "name": {
-        "sq": "Hirtë skandinave 8mm",
-        "en": "Scandinavian grey 8mm",
-        "de": "Skandinavisches Grau 8mm"
-      },
-      "summary": {
-        "sq": "Lis gri skandinav i çelur për dhoma të ndritshme e të ajrosura, në dërrasë 8 mm.",
-        "en": "Pale Scandinavian grey oak for light, airy rooms, in an 8 mm board.",
-        "de": "Helle, skandinavisch-graue Eiche für lichte, luftige Räume, in 8-mm-Diele."
-      },
-      "originCountry": "DE",
-      "manufacturer": null,
-      "imageIds": [
-        "hirte-skandinave-8-01",
-        "hirte-skandinave-8-02"
-      ],
-      "relatedProductIds": [],
-      "evidence": {
-        "status": "demo",
-        "sourceUrl": null,
-        "checkedAt": null,
-        "note": {
-          "sq": "Produkt demonstrues me pamje ilustruese të gjeneruar.",
-          "en": "Demo product with generated illustrative imagery.",
-          "de": "Demoprodukt mit generierter illustrativer Abbildung."
-        }
-      },
-      "displayOrder": 9,
-      "published": true,
-      "collectionId": "hirte-skandinave-8",
-      "compatibleSceneIds": [
-        "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
       ]
     },
     {
@@ -993,7 +966,7 @@
       ],
       "relatedProductIds": [
         "pervaze-mdf",
-        "lis-natyral-10",
+        "kronotex-d4955",
         "peshk-natyral-12"
       ],
       "evidence": {
@@ -1020,6 +993,342 @@
         "door",
         "floor",
         "black"
+      ]
+    },
+    {
+      "id": "kronotex-d4955",
+      "slug": "kronotex-d4955",
+      "sku": "KRONOTEX D4955",
+      "name": {
+        "sq": "Premium Eiche Natur",
+        "en": "Premium Eiche Natur",
+        "de": "Premium Eiche Natur"
+      },
+      "summary": {
+        "sq": "Laminat KRONOTEX Robusto, 12 mm, AC5 / klasa 33, dërrasë 1375 × 188 mm me V-fugë në 4 anë.",
+        "en": "KRONOTEX Robusto laminate, 12 mm, AC5 / class 33, 1375 × 188 mm boards with a 4-sided V-groove.",
+        "de": "KRONOTEX Robusto Laminat, 12 mm, AC5 / Klasse 33, Dielen 1375 × 188 mm mit 4-seitiger V-Fuge."
+      },
+      "originCountry": "DE",
+      "manufacturer": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG)",
+      "imageIds": [
+        "kronotex-d4955-01",
+        "kronotex-d4955-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "supplier-verified",
+        "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-natur/",
+        "checkedAt": "2026-10-13",
+        "note": {
+          "sq": "Të dhënat e artikullit nga faqja zyrtare e prodhuesit. Dekori vetëm për prezantim privat — pa leje botimi.",
+          "en": "Article data from the manufacturer's official page. Décor for private pitch only — no publication permission yet.",
+          "de": "Artikeldaten von der offiziellen Herstellerseite. Dekor nur für private Präsentation — noch keine Veröffentlichungsfreigabe."
+        }
+      },
+      "displayOrder": 1,
+      "published": true,
+      "kind": "floor",
+      "collectionId": "kronotex-d4955",
+      "compatibleSceneIds": [
+        "living-render-01",
+        "living-standard",
+        "corridor-standard",
+        "bedroom-photo"
+      ]
+    },
+    {
+      "id": "kronotex-d80582",
+      "slug": "kronotex-d80582",
+      "sku": "KRONOTEX D80582",
+      "name": {
+        "sq": "Norfolk Oak Beige",
+        "en": "Norfolk Oak Beige",
+        "de": "Norfolk Oak Beige"
+      },
+      "summary": {
+        "sq": "Laminat KRONOTEX Robusto, 12 mm, AC5 / klasa 33, dërrasë 1375 × 188 mm me V-fugë në 4 anë.",
+        "en": "KRONOTEX Robusto laminate, 12 mm, AC5 / class 33, 1375 × 188 mm boards with a 4-sided V-groove.",
+        "de": "KRONOTEX Robusto Laminat, 12 mm, AC5 / Klasse 33, Dielen 1375 × 188 mm mit 4-seitiger V-Fuge."
+      },
+      "originCountry": "DE",
+      "manufacturer": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG)",
+      "imageIds": [
+        "kronotex-d80582-01",
+        "kronotex-d80582-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "supplier-verified",
+        "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-beige/",
+        "checkedAt": "2026-10-13",
+        "note": {
+          "sq": "Të dhënat e artikullit nga faqja zyrtare e prodhuesit. Dekori vetëm për prezantim privat — pa leje botimi.",
+          "en": "Article data from the manufacturer's official page. Décor for private pitch only — no publication permission yet.",
+          "de": "Artikeldaten von der offiziellen Herstellerseite. Dekor nur für private Präsentation — noch keine Veröffentlichungsfreigabe."
+        }
+      },
+      "displayOrder": 2,
+      "published": true,
+      "kind": "floor",
+      "collectionId": "kronotex-d80582",
+      "compatibleSceneIds": [
+        "living-render-01",
+        "living-standard",
+        "corridor-standard",
+        "bedroom-photo"
+      ]
+    },
+    {
+      "id": "kronotex-d80612",
+      "slug": "kronotex-d80612",
+      "sku": "KRONOTEX D80612",
+      "name": {
+        "sq": "Norfolk Oak Kaffee",
+        "en": "Norfolk Oak Kaffee",
+        "de": "Norfolk Oak Kaffee"
+      },
+      "summary": {
+        "sq": "Laminat KRONOTEX Robusto, 12 mm, AC5 / klasa 33, dërrasë 1375 × 188 mm me V-fugë në 4 anë.",
+        "en": "KRONOTEX Robusto laminate, 12 mm, AC5 / class 33, 1375 × 188 mm boards with a 4-sided V-groove.",
+        "de": "KRONOTEX Robusto Laminat, 12 mm, AC5 / Klasse 33, Dielen 1375 × 188 mm mit 4-seitiger V-Fuge."
+      },
+      "originCountry": "DE",
+      "manufacturer": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG)",
+      "imageIds": [
+        "kronotex-d80612-01",
+        "kronotex-d80612-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "supplier-verified",
+        "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-kaffee/",
+        "checkedAt": "2026-10-13",
+        "note": {
+          "sq": "Të dhënat e artikullit nga faqja zyrtare e prodhuesit. Dekori vetëm për prezantim privat — pa leje botimi.",
+          "en": "Article data from the manufacturer's official page. Décor for private pitch only — no publication permission yet.",
+          "de": "Artikeldaten von der offiziellen Herstellerseite. Dekor nur für private Präsentation — noch keine Veröffentlichungsfreigabe."
+        }
+      },
+      "displayOrder": 3,
+      "published": true,
+      "kind": "floor",
+      "collectionId": "kronotex-d80612",
+      "compatibleSceneIds": [
+        "living-render-01",
+        "living-standard",
+        "corridor-standard",
+        "bedroom-photo"
+      ]
+    },
+    {
+      "id": "kronotex-d4954",
+      "slug": "kronotex-d4954",
+      "sku": "KRONOTEX D4954",
+      "name": {
+        "sq": "Premium Eiche",
+        "en": "Premium Eiche",
+        "de": "Premium Eiche"
+      },
+      "summary": {
+        "sq": "Laminat KRONOTEX Robusto, 12 mm, AC5 / klasa 33, dërrasë 1375 × 188 mm me V-fugë në 4 anë.",
+        "en": "KRONOTEX Robusto laminate, 12 mm, AC5 / class 33, 1375 × 188 mm boards with a 4-sided V-groove.",
+        "de": "KRONOTEX Robusto Laminat, 12 mm, AC5 / Klasse 33, Dielen 1375 × 188 mm mit 4-seitiger V-Fuge."
+      },
+      "originCountry": "DE",
+      "manufacturer": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG)",
+      "imageIds": [
+        "kronotex-d4954-01",
+        "kronotex-d4954-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "supplier-verified",
+        "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche/",
+        "checkedAt": "2026-10-13",
+        "note": {
+          "sq": "Të dhënat e artikullit nga faqja zyrtare e prodhuesit. Dekori vetëm për prezantim privat — pa leje botimi.",
+          "en": "Article data from the manufacturer's official page. Décor for private pitch only — no publication permission yet.",
+          "de": "Artikeldaten von der offiziellen Herstellerseite. Dekor nur für private Präsentation — noch keine Veröffentlichungsfreigabe."
+        }
+      },
+      "displayOrder": 4,
+      "published": true,
+      "kind": "floor",
+      "collectionId": "kronotex-d4954",
+      "compatibleSceneIds": [
+        "living-render-01",
+        "living-standard",
+        "corridor-standard",
+        "bedroom-photo"
+      ]
+    },
+    {
+      "id": "kronotex-d4763",
+      "slug": "kronotex-d4763",
+      "sku": "KRONOTEX D4763",
+      "name": {
+        "sq": "Pettersson Eiche Beige",
+        "en": "Pettersson Eiche Beige",
+        "de": "Pettersson Eiche Beige"
+      },
+      "summary": {
+        "sq": "Laminat KRONOTEX Exquisit, 8 mm, AC4 / klasa 32, dërrasë 1380 × 193 mm me V-fugë në 4 anë.",
+        "en": "KRONOTEX Exquisit laminate, 8 mm, AC4 / class 32, 1380 × 193 mm boards with a 4-sided V-groove.",
+        "de": "KRONOTEX Exquisit Laminat, 8 mm, AC4 / Klasse 32, Dielen 1380 × 193 mm mit 4-seitiger V-Fuge."
+      },
+      "originCountry": "DE",
+      "manufacturer": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG)",
+      "imageIds": [
+        "kronotex-d4763-01",
+        "kronotex-d4763-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "supplier-verified",
+        "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/exquisit/pettersson-eiche-beige/",
+        "checkedAt": "2026-10-13",
+        "note": {
+          "sq": "Të dhënat e artikullit nga faqja zyrtare e prodhuesit. Dekori vetëm për prezantim privat — pa leje botimi.",
+          "en": "Article data from the manufacturer's official page. Décor for private pitch only — no publication permission yet.",
+          "de": "Artikeldaten von der offiziellen Herstellerseite. Dekor nur für private Präsentation — noch keine Veröffentlichungsfreigabe."
+        }
+      },
+      "displayOrder": 5,
+      "published": true,
+      "kind": "floor",
+      "collectionId": "kronotex-d4763",
+      "compatibleSceneIds": [
+        "living-render-01",
+        "living-standard",
+        "corridor-standard",
+        "bedroom-photo"
+      ]
+    },
+    {
+      "id": "kronotex-d4956",
+      "slug": "kronotex-d4956",
+      "sku": "KRONOTEX D4956",
+      "name": {
+        "sq": "Premium Eiche Grau",
+        "en": "Premium Eiche Grau",
+        "de": "Premium Eiche Grau"
+      },
+      "summary": {
+        "sq": "Laminat KRONOTEX Robusto, 12 mm, AC5 / klasa 33, dërrasë 1375 × 188 mm me V-fugë në 4 anë.",
+        "en": "KRONOTEX Robusto laminate, 12 mm, AC5 / class 33, 1375 × 188 mm boards with a 4-sided V-groove.",
+        "de": "KRONOTEX Robusto Laminat, 12 mm, AC5 / Klasse 33, Dielen 1375 × 188 mm mit 4-seitiger V-Fuge."
+      },
+      "originCountry": "DE",
+      "manufacturer": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG)",
+      "imageIds": [
+        "kronotex-d4956-01",
+        "kronotex-d4956-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "supplier-verified",
+        "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-grau/",
+        "checkedAt": "2026-10-13",
+        "note": {
+          "sq": "Të dhënat e artikullit nga faqja zyrtare e prodhuesit. Dekori vetëm për prezantim privat — pa leje botimi.",
+          "en": "Article data from the manufacturer's official page. Décor for private pitch only — no publication permission yet.",
+          "de": "Artikeldaten von der offiziellen Herstellerseite. Dekor nur für private Präsentation — noch keine Veröffentlichungsfreigabe."
+        }
+      },
+      "displayOrder": 6,
+      "published": true,
+      "kind": "floor",
+      "collectionId": "kronotex-d4956",
+      "compatibleSceneIds": [
+        "living-render-01",
+        "living-standard",
+        "corridor-standard",
+        "bedroom-photo"
+      ]
+    },
+    {
+      "id": "kronotex-d3179",
+      "slug": "kronotex-d3179",
+      "sku": "KRONOTEX D3179",
+      "name": {
+        "sq": "Everest Oak Weiß",
+        "en": "Everest Oak Weiß",
+        "de": "Everest Oak Weiß"
+      },
+      "summary": {
+        "sq": "Laminat KRONOTEX Mammut, 12 mm, AC5 / klasa 33, dërrasë 1845 × 188 mm me V-fugë në 4 anë.",
+        "en": "KRONOTEX Mammut laminate, 12 mm, AC5 / class 33, 1845 × 188 mm boards with a 4-sided V-groove.",
+        "de": "KRONOTEX Mammut Laminat, 12 mm, AC5 / Klasse 33, Dielen 1845 × 188 mm mit 4-seitiger V-Fuge."
+      },
+      "originCountry": "DE",
+      "manufacturer": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG)",
+      "imageIds": [
+        "kronotex-d3179-01",
+        "kronotex-d3179-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "supplier-verified",
+        "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/everest-oak-weiss/",
+        "checkedAt": "2026-10-13",
+        "note": {
+          "sq": "Të dhënat e artikullit nga faqja zyrtare e prodhuesit. Dekori vetëm për prezantim privat — pa leje botimi.",
+          "en": "Article data from the manufacturer's official page. Décor for private pitch only — no publication permission yet.",
+          "de": "Artikeldaten von der offiziellen Herstellerseite. Dekor nur für private Präsentation — noch keine Veröffentlichungsfreigabe."
+        }
+      },
+      "displayOrder": 7,
+      "published": true,
+      "kind": "floor",
+      "collectionId": "kronotex-d3179",
+      "compatibleSceneIds": [
+        "living-render-01",
+        "living-standard",
+        "corridor-standard",
+        "bedroom-photo"
+      ]
+    },
+    {
+      "id": "kronotex-d81162",
+      "slug": "kronotex-d81162",
+      "sku": "KRONOTEX D81162",
+      "name": {
+        "sq": "Eiche Eleganz Creme",
+        "en": "Eiche Eleganz Creme",
+        "de": "Eiche Eleganz Creme"
+      },
+      "summary": {
+        "sq": "Laminat KRONOTEX Mammut, 12 mm, AC5 / klasa 33, dërrasë 1845 × 188 mm me V-fugë në 4 anë.",
+        "en": "KRONOTEX Mammut laminate, 12 mm, AC5 / class 33, 1845 × 188 mm boards with a 4-sided V-groove.",
+        "de": "KRONOTEX Mammut Laminat, 12 mm, AC5 / Klasse 33, Dielen 1845 × 188 mm mit 4-seitiger V-Fuge."
+      },
+      "originCountry": "DE",
+      "manufacturer": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG)",
+      "imageIds": [
+        "kronotex-d81162-01",
+        "kronotex-d81162-02"
+      ],
+      "relatedProductIds": [],
+      "evidence": {
+        "status": "supplier-verified",
+        "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/eiche-eleganz-creme/",
+        "checkedAt": "2026-10-13",
+        "note": {
+          "sq": "Të dhënat e artikullit nga faqja zyrtare e prodhuesit. Dekori vetëm për prezantim privat — pa leje botimi.",
+          "en": "Article data from the manufacturer's official page. Décor for private pitch only — no publication permission yet.",
+          "de": "Artikeldaten von der offiziellen Herstellerseite. Dekor nur für private Präsentation — noch keine Veröffentlichungsfreigabe."
+        }
+      },
+      "displayOrder": 8,
+      "published": true,
+      "kind": "floor",
+      "collectionId": "kronotex-d81162",
+      "compatibleSceneIds": [
+        "living-render-01",
+        "living-standard",
+        "corridor-standard",
+        "bedroom-photo"
       ]
     }
   ]

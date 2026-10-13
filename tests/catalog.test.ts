@@ -14,10 +14,10 @@ const data = loadSiteData();
 const images: ImageManifest = JSON.parse(readFileSync('verification/image-manifest.json', 'utf8'));
 describe('catalog', () => {
   it.each([
-    ['all', 12],
+    ['all', 16],
     ['interior-doors', 3],
     ['hidden-doors', 2],
-    ['laminate', 4],
+    ['laminate', 8],
     ['parquet', 1],
     ['trim', 2],
   ] as const)('filters %s', (category, n) =>

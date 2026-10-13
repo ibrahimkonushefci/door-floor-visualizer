@@ -975,11 +975,15 @@
       "dera-lis"
     ],
     "allowedFloorProductIds": [
-      "lis-natyral-10",
-      "dushk-fshatar-8",
       "peshk-natyral-12",
-      "arre-klasike-12",
-      "hirte-skandinave-8"
+      "kronotex-d4955",
+      "kronotex-d80582",
+      "kronotex-d80612",
+      "kronotex-d4954",
+      "kronotex-d4763",
+      "kronotex-d4956",
+      "kronotex-d3179",
+      "kronotex-d81162"
     ],
     "allowedFrameModes": [
       "door",
@@ -995,6 +999,7 @@
       "version": 1,
       "sceneId": "corridor-standard",
       "doorProductId": "dera-bardhe",
+      "doorModelId": "flat",
       "doorFinishId": "kashmir",
       "floorProductId": "peshk-natyral-12",
       "frameMode": "door",

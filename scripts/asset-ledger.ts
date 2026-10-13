@@ -6,7 +6,7 @@ export interface LedgerEntry {
   localPath: string;
   sourceUrl: string | null;
   author: string;
-  usageBasis: 'owned' | 'licensed' | 'generated';
+  usageBasis: 'owned' | 'licensed' | 'generated' | 'private-pitch-only';
   licenseNote: string;
   depictsProductId: string | null;
   isIllustrative: boolean;

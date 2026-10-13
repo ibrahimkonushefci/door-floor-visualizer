@@ -1,5 +1,6 @@
 {
   "scene": "living-render-01",
+  "doorModel": "flat",
   "blender": "5.2.2 LTS",
   "blenderBuild": "d13f752e3b9c",
   "engine": "CYCLES",
@@ -15,9 +16,9 @@
     1800
   ],
   "renderSeconds": {
-    "light": 395.1,
-    "light-dim": 337.7,
-    "gloss": 275.6
+    "light": 366.5,
+    "light-dim": 313.7,
+    "gloss": 272.6
   },
   "passes": {
     "light": "editable = 0.5 grey Lambertian; plate = Combined / 0.5",
@@ -64,6 +65,11 @@
     "strength": 1.0,
     "rotation_deg": 180.0
   },
+  "corridor": {
+    "depth": 1.6,
+    "half_width": 1.2,
+    "light": 12.0
+  },
   "fill": {
     "energy": 90.0
   },
@@ -76,11 +82,11 @@
       "skirting-left"
     ],
     "maskSumMax": 255,
-    "backdropNegativeEdgePixels": 3906,
+    "backdropNegativeEdgePixels": 3914,
     "edgePixels": 20867,
-    "backdropClampMaxLinear": 0.08691081404685974,
-    "backdropClampP99Linear": 0.05426357686519623,
-    "lightScale": 2.983487548828125,
+    "backdropClampMaxLinear": 0.08661487698554993,
+    "backdropClampP99Linear": 0.05479130521416664,
+    "lightScale": 2.9832784080505372,
     "lightChroma": {
       "floor": {
         "tint": [
@@ -88,7 +94,7 @@
           0.9977999925613403,
           0.9154999852180481
         ],
-        "p95AbsDev": 0.026911497116088867
+        "p95AbsDev": 0.026901960372924805
       },
       "leaf": {
         "tint": [
@@ -96,7 +102,7 @@
           0.9926000237464905,
           0.9056000113487244
         ],
-        "p95AbsDev": 0.005117129534482956
+        "p95AbsDev": 0.005123471841216087
       },
       "frame-left": {
         "tint": [
@@ -104,7 +110,7 @@
           0.9932000041007996,
           0.90829998254776
         ],
-        "p95AbsDev": 0.0055747805163264275
+        "p95AbsDev": 0.0055882688611745834
       },
       "frame-right": {
         "tint": [
@@ -112,23 +118,23 @@
           0.9929999709129333,
           0.9024999737739563
         ],
-        "p95AbsDev": 0.009737448766827583
+        "p95AbsDev": 0.009833822026848793
       },
       "frame-top": {
         "tint": [
-          1.0597000122070312,
+          1.0595999956130981,
           0.9926000237464905,
           0.8978000283241272
         ],
-        "p95AbsDev": 0.006855696439743042
+        "p95AbsDev": 0.00672563910484314
       },
       "skirting-back-left": {
         "tint": [
-          1.0572999715805054,
+          1.0571999549865723,
           0.993399977684021,
           0.8968999981880188
         ],
-        "p95AbsDev": 0.011388977989554405
+        "p95AbsDev": 0.011308739893138409
       },
       "skirting-back-right": {
         "tint": [
@@ -136,15 +142,15 @@
           0.9876999855041504,
           0.8966000080108643
         ],
-        "p95AbsDev": 0.014626221731305122
+        "p95AbsDev": 0.014573143795132637
       },
       "skirting-right": {
         "tint": [
           1.055999994277954,
           0.9916999936103821,
-          0.916700005531311
+          0.9168000221252441
         ],
-        "p95AbsDev": 0.0082181915640831
+        "p95AbsDev": 0.008243154734373093
       }
     }
   },

@@ -16,7 +16,7 @@ const inquiryData = {
 };
 describe('product details', () => {
   it('has two distinct, owned gallery views per published seed', () => {
-    expect(data.products.products).toHaveLength(12);
+    expect(data.products.products).toHaveLength(16);
     for (const p of data.products.products) {
       expect(p.imageIds).toHaveLength(2);
       expect(new Set(p.imageIds).size).toBe(2);
@@ -60,7 +60,7 @@ describe('product details', () => {
     });
   });
   it('keeps laminate ratings separate and omits AC/usage for parquet', () => {
-    const laminate = data.products.products.find(p => p.id === 'lis-natyral-10')!;
+    const laminate = data.products.products.find(p => p.id === 'kronotex-d4955')!;
     expect(buildSpecRows(laminate, data.materials, 'en')).toContainEqual({
       label: 'AC class',
       value: 'AC5',

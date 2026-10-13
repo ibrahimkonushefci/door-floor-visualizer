@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "buildId": "95T-Zxk-NjxL0fRzi2PvB",
+  "buildId": "jgeAX0SD5wrLvN7B4F3-n",
   "method": "Production export. Unique initial script tags per route; gzip and Brotli per file. CSS gzip plus used WOFF2 bytes. Images: conservative 640px variants at 390px viewport. File sizes do not establish LCP, INP, CLS or device latency.",
   "limits": {
     "feedInitialJsGzip": 204800,
@@ -13,7 +13,7 @@
     "studioFirstScene": 2621440,
     "studioOfflinePack": 20971520,
     "ownedRenderBuffers": 209715200,
-    "ownedRenderBuffersRenderedFull": 251658240,
+    "ownedRenderBuffersRenderedFull": 335544320,
     "cls": 0.1,
     "lcpMs": 2500,
     "inpMs": 200,
@@ -67,10 +67,10 @@
             "brotli": 7506
           },
           {
-            "url": "/_next/static/chunks/37n66p61ups0-.js",
-            "raw": 32151,
-            "gzip": 11371,
-            "brotli": 9924
+            "url": "/_next/static/chunks/2bp91fr7vi65w.js",
+            "raw": 33680,
+            "gzip": 11809,
+            "brotli": 10299
           },
           {
             "url": "/_next/static/chunks/3eawq3h7yvchp.js",
@@ -91,22 +91,22 @@
             "brotli": 3512
           }
         ],
-        "raw": 634499,
-        "gzip": 198476,
-        "brotli": 171625
+        "raw": 636028,
+        "gzip": 198914,
+        "brotli": 172000
       },
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/2n7shb8mvu-rv.css",
-            "raw": 31043,
-            "gzip": 6576,
-            "brotli": 5849
+            "url": "/_next/static/chunks/231z-e7xp12g_.css",
+            "raw": 31806,
+            "gzip": 6674,
+            "brotli": 5935
           }
         ],
-        "raw": 31043,
-        "gzip": 6576,
-        "brotli": 5849
+        "raw": 31806,
+        "gzip": 6674,
+        "brotli": 5935
       },
       "fonts": {
         "files": [
@@ -145,8 +145,8 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 105712,
-      "firstScreen": 449805
+      "cssAndFonts": 105810,
+      "firstScreen": 437098
     },
     {
       "route": "/en/",
@@ -195,10 +195,10 @@
             "brotli": 7506
           },
           {
-            "url": "/_next/static/chunks/37n66p61ups0-.js",
-            "raw": 32151,
-            "gzip": 11371,
-            "brotli": 9924
+            "url": "/_next/static/chunks/2bp91fr7vi65w.js",
+            "raw": 33680,
+            "gzip": 11809,
+            "brotli": 10299
           },
           {
             "url": "/_next/static/chunks/3eawq3h7yvchp.js",
@@ -219,22 +219,22 @@
             "brotli": 3512
           }
         ],
-        "raw": 634499,
-        "gzip": 198476,
-        "brotli": 171625
+        "raw": 636028,
+        "gzip": 198914,
+        "brotli": 172000
       },
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/2n7shb8mvu-rv.css",
-            "raw": 31043,
-            "gzip": 6576,
-            "brotli": 5849
+            "url": "/_next/static/chunks/231z-e7xp12g_.css",
+            "raw": 31806,
+            "gzip": 6674,
+            "brotli": 5935
           }
         ],
-        "raw": 31043,
-        "gzip": 6576,
-        "brotli": 5849
+        "raw": 31806,
+        "gzip": 6674,
+        "brotli": 5935
       },
       "fonts": {
         "files": [
@@ -273,8 +273,8 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 105712,
-      "firstScreen": 449222
+      "cssAndFonts": 105810,
+      "firstScreen": 436458
     },
     {
       "route": "/de/",
@@ -323,10 +323,10 @@
             "brotli": 7506
           },
           {
-            "url": "/_next/static/chunks/37n66p61ups0-.js",
-            "raw": 32151,
-            "gzip": 11371,
-            "brotli": 9924
+            "url": "/_next/static/chunks/2bp91fr7vi65w.js",
+            "raw": 33680,
+            "gzip": 11809,
+            "brotli": 10299
           },
           {
             "url": "/_next/static/chunks/3eawq3h7yvchp.js",
@@ -347,22 +347,22 @@
             "brotli": 3512
           }
         ],
-        "raw": 634499,
-        "gzip": 198476,
-        "brotli": 171625
+        "raw": 636028,
+        "gzip": 198914,
+        "brotli": 172000
       },
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/2n7shb8mvu-rv.css",
-            "raw": 31043,
-            "gzip": 6576,
-            "brotli": 5849
+            "url": "/_next/static/chunks/231z-e7xp12g_.css",
+            "raw": 31806,
+            "gzip": 6674,
+            "brotli": 5935
           }
         ],
-        "raw": 31043,
-        "gzip": 6576,
-        "brotli": 5849
+        "raw": 31806,
+        "gzip": 6674,
+        "brotli": 5935
       },
       "fonts": {
         "files": [
@@ -401,18 +401,18 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 105712,
-      "firstScreen": 449933
+      "cssAndFonts": 105810,
+      "firstScreen": 437180
     }
   ],
   "firstImages": {
-    "avif": 56578,
-    "webp": 115830
+    "avif": 52533,
+    "webp": 96200
   },
   "scenes": [
     {
       "id": "living-render-01",
-      "bytes": 1986036,
+      "bytes": 2476512,
       "files": [
         "/media/scenes/living-render-01/base.webp",
         "/media/scenes/living-render-01/fallback.webp",
@@ -442,13 +442,13 @@
         "/media/scenes/living-render-01/skirting-right-mask.png",
         "/media/scenes/living-render-01/skirting-right-light.png",
         "/media/scenes/living-render-01/skirting-right-reflection.png",
-        "/media/textures/floors/lis-natyral-10/planks.webp",
-        "/media/textures/floors/lis-natyral-10/trim.webp"
+        "/media/textures/floors/kronotex-d4955/planks.webp",
+        "/media/textures/floors/kronotex-d4955/trim.webp"
       ]
     },
     {
       "id": "living-standard",
-      "bytes": 1542567,
+      "bytes": 1344951,
       "files": [
         "/media/scenes/living-standard/base.webp",
         "/media/scenes/living-standard/fallback.webp",
@@ -469,8 +469,8 @@
         "/media/scenes/living-standard/skirting-back-right-diffuse.png",
         "/media/scenes/living-standard/skirting-right-mask.png",
         "/media/scenes/living-standard/skirting-right-diffuse.png",
-        "/media/textures/floors/lis-natyral-10/atlas.webp",
-        "/media/textures/floors/lis-natyral-10/trim.webp"
+        "/media/textures/floors/kronotex-d4955/atlas.webp",
+        "/media/textures/floors/kronotex-d4955/trim.webp"
       ]
     },
     {
@@ -508,7 +508,7 @@
     },
     {
       "id": "bedroom-photo",
-      "bytes": 1327650,
+      "bytes": 1127050,
       "files": [
         "/media/scenes/bedroom-photo/base.webp",
         "/media/scenes/bedroom-photo/fallback.webp",
@@ -527,74 +527,74 @@
         "/media/scenes/bedroom-photo/skirting-left-diffuse.png",
         "/media/scenes/bedroom-photo/skirting-right-mask.png",
         "/media/scenes/bedroom-photo/skirting-right-diffuse.png",
-        "/media/textures/floors/lis-natyral-10/atlas.webp",
-        "/media/textures/floors/lis-natyral-10/trim.webp"
+        "/media/textures/floors/kronotex-d80582/atlas.webp",
+        "/media/textures/floors/kronotex-d80582/trim.webp"
       ]
     }
   ],
   "offlinePack": {
-    "files": 150,
-    "bytes": 12707921
+    "files": 248,
+    "bytes": 18692456
   },
   "emittedJsChunks": 23,
   "checks": [
     {
       "metric": "firstFourImages",
-      "value": 115830,
+      "value": 96200,
       "limit": 245760,
       "status": "pass"
     },
     {
       "metric": "sq.feedInitialJsGzip",
-      "value": 198476,
+      "value": 198914,
       "limit": 204800,
       "status": "pass"
     },
     {
       "metric": "sq.feedCssAndFonts",
-      "value": 105712,
+      "value": 105810,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "sq.firstScreen",
-      "value": 449805,
+      "value": 437098,
       "limit": 716800,
       "status": "pass"
     },
     {
       "metric": "en.feedInitialJsGzip",
-      "value": 198476,
+      "value": 198914,
       "limit": 204800,
       "status": "pass"
     },
     {
       "metric": "en.feedCssAndFonts",
-      "value": 105712,
+      "value": 105810,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "en.firstScreen",
-      "value": 449222,
+      "value": 436458,
       "limit": 716800,
       "status": "pass"
     },
     {
       "metric": "de.feedInitialJsGzip",
-      "value": 198476,
+      "value": 198914,
       "limit": 204800,
       "status": "pass"
     },
     {
       "metric": "de.feedCssAndFonts",
-      "value": 105712,
+      "value": 105810,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "de.firstScreen",
-      "value": 449933,
+      "value": 437180,
       "limit": 716800,
       "status": "pass"
     },
@@ -611,18 +611,6 @@
       "status": "pass"
     },
     {
-      "metric": "lis-natyral-10-01.640.webp",
-      "value": 33832,
-      "limit": 81920,
-      "status": "pass"
-    },
-    {
-      "metric": "lis-natyral-10-01.640.avif",
-      "value": 16067,
-      "limit": 61440,
-      "status": "pass"
-    },
-    {
       "metric": "dera-lis-01.640.webp",
       "value": 23266,
       "limit": 81920,
@@ -631,18 +619,6 @@
     {
       "metric": "dera-lis-01.640.avif",
       "value": 12148,
-      "limit": 61440,
-      "status": "pass"
-    },
-    {
-      "metric": "dushk-fshatar-8-01.640.webp",
-      "value": 37922,
-      "limit": 81920,
-      "status": "pass"
-    },
-    {
-      "metric": "dushk-fshatar-8-01.640.avif",
-      "value": 17310,
       "limit": 61440,
       "status": "pass"
     },
@@ -683,18 +659,6 @@
       "status": "pass"
     },
     {
-      "metric": "lis-natyral-10-02.640.webp",
-      "value": 38372,
-      "limit": 81920,
-      "status": "pass"
-    },
-    {
-      "metric": "lis-natyral-10-02.640.avif",
-      "value": 17562,
-      "limit": 61440,
-      "status": "pass"
-    },
-    {
       "metric": "dera-lis-02.640.webp",
       "value": 16990,
       "limit": 81920,
@@ -703,18 +667,6 @@
     {
       "metric": "dera-lis-02.640.avif",
       "value": 8925,
-      "limit": 61440,
-      "status": "pass"
-    },
-    {
-      "metric": "dushk-fshatar-8-02.640.webp",
-      "value": 41738,
-      "limit": 81920,
-      "status": "pass"
-    },
-    {
-      "metric": "dushk-fshatar-8-02.640.avif",
-      "value": 19153,
       "limit": 61440,
       "status": "pass"
     },
@@ -767,30 +719,6 @@
       "status": "pass"
     },
     {
-      "metric": "arre-klasike-12-01.640.webp",
-      "value": 34350,
-      "limit": 81920,
-      "status": "pass"
-    },
-    {
-      "metric": "arre-klasike-12-01.640.avif",
-      "value": 16255,
-      "limit": 61440,
-      "status": "pass"
-    },
-    {
-      "metric": "arre-klasike-12-02.640.webp",
-      "value": 34880,
-      "limit": 81920,
-      "status": "pass"
-    },
-    {
-      "metric": "arre-klasike-12-02.640.avif",
-      "value": 16233,
-      "limit": 61440,
-      "status": "pass"
-    },
-    {
       "metric": "dera-xham-01.640.webp",
       "value": 18056,
       "limit": 81920,
@@ -811,30 +739,6 @@
     {
       "metric": "dera-xham-02.640.avif",
       "value": 10509,
-      "limit": 61440,
-      "status": "pass"
-    },
-    {
-      "metric": "hirte-skandinave-8-01.640.webp",
-      "value": 25566,
-      "limit": 81920,
-      "status": "pass"
-    },
-    {
-      "metric": "hirte-skandinave-8-01.640.avif",
-      "value": 12649,
-      "limit": 61440,
-      "status": "pass"
-    },
-    {
-      "metric": "hirte-skandinave-8-02.640.webp",
-      "value": 29664,
-      "limit": 81920,
-      "status": "pass"
-    },
-    {
-      "metric": "hirte-skandinave-8-02.640.avif",
-      "value": 13895,
       "limit": 61440,
       "status": "pass"
     },
@@ -887,26 +791,218 @@
       "status": "pass"
     },
     {
+      "metric": "kronotex-d4955-01.640.webp",
+      "value": 26650,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4955-01.640.avif",
+      "value": 14950,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4955-02.640.webp",
+      "value": 19240,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4955-02.640.avif",
+      "value": 11465,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d80582-01.640.webp",
+      "value": 25474,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d80582-01.640.avif",
+      "value": 14382,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d80582-02.640.webp",
+      "value": 18692,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d80582-02.640.avif",
+      "value": 10762,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d80612-01.640.webp",
+      "value": 26822,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d80612-01.640.avif",
+      "value": 14931,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d80612-02.640.webp",
+      "value": 21668,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d80612-02.640.avif",
+      "value": 12049,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4954-01.640.webp",
+      "value": 26990,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4954-01.640.avif",
+      "value": 15009,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4954-02.640.webp",
+      "value": 19772,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4954-02.640.avif",
+      "value": 11734,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4763-01.640.webp",
+      "value": 28230,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4763-01.640.avif",
+      "value": 15512,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4763-02.640.webp",
+      "value": 32082,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4763-02.640.avif",
+      "value": 16282,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4956-01.640.webp",
+      "value": 25822,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4956-01.640.avif",
+      "value": 14441,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4956-02.640.webp",
+      "value": 18726,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d4956-02.640.avif",
+      "value": 10511,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d3179-01.640.webp",
+      "value": 26310,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d3179-01.640.avif",
+      "value": 14643,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d3179-02.640.webp",
+      "value": 24710,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d3179-02.640.avif",
+      "value": 13476,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d81162-01.640.webp",
+      "value": 25442,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d81162-01.640.avif",
+      "value": 14296,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d81162-02.640.webp",
+      "value": 18954,
+      "limit": 81920,
+      "status": "pass"
+    },
+    {
+      "metric": "kronotex-d81162-02.640.avif",
+      "value": 11087,
+      "limit": 61440,
+      "status": "pass"
+    },
+    {
       "metric": "living-render-01.fallback",
-      "value": 83530,
+      "value": 76044,
       "limit": 225280,
       "status": "pass"
     },
     {
       "metric": "living-render-01.firstUseful",
-      "value": 1986036,
+      "value": 2476512,
       "limit": 2621440,
       "status": "pass"
     },
     {
       "metric": "living-standard.fallback",
-      "value": 33160,
+      "value": 23852,
       "limit": 225280,
       "status": "pass"
     },
     {
       "metric": "living-standard.firstUseful",
-      "value": 1542567,
+      "value": 1344951,
       "limit": 2621440,
       "status": "pass"
     },
@@ -924,19 +1020,19 @@
     },
     {
       "metric": "bedroom-photo.fallback",
-      "value": 33124,
+      "value": 18886,
       "limit": 225280,
       "status": "pass"
     },
     {
       "metric": "bedroom-photo.firstUseful",
-      "value": 1327650,
+      "value": 1127050,
       "limit": 2621440,
       "status": "pass"
     },
     {
       "metric": "studioOfflinePack",
-      "value": 12707921,
+      "value": 18692456,
       "limit": 20971520,
       "status": "pass"
     }

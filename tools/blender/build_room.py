@@ -1,10 +1,10 @@
 """Build the living-render-01 proof room as a .blend.
 
     /Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup \
-        --python tools/blender/build_room.py -- [--preview out.png] [--samples 32] [--scale 25]
+        --python tools/blender/build_room.py -- [--model flat] [--preview out.png] [--samples 32] [--scale 25]
 
 Requires the CC0 inputs from tools/blender/fetch_assets.py. Writes
-tools/blender/out/<scene>/room.blend. Editable surfaces carry a custom property
+tools/blender/out/<scene>/<model>/room.blend (door models: room_spec.DOOR_MODELS). Editable surfaces carry a custom property
 `studio_surface` (surface id); door hardware carries `studio_protected`.
 render_layers.py swaps their materials per pass.
 """
@@ -21,7 +21,6 @@ sys.path.insert(0, str(HERE))
 import room_spec as spec  # noqa: E402
 
 CACHE = HERE / ".cache" / "polyhaven"
-OUT = HERE / "out" / spec.SCENE_ID
 
 
 def argv():
@@ -31,6 +30,12 @@ def argv():
 def opt(name, default=None):
     a = argv()
     return a[a.index(name) + 1] if name in a else default
+
+
+MODEL = opt("--model", spec.DEFAULT_MODEL)
+if MODEL not in spec.DOOR_MODELS:
+    raise SystemExit(f"Unknown door model {MODEL}")
+OUT = HERE / "out" / spec.SCENE_ID / MODEL
 
 
 # --- geometry helpers -------------------------------------------------------
@@ -141,6 +146,17 @@ def window_glass():
     return m
 
 
+def satin_glass():
+    """Acid-etched (satin) door glass: diffuse transmission, soft sheen."""
+    m = bpy.data.materials.new("door-satin-glass")
+    bsdf = m.node_tree.nodes["Principled BSDF"]
+    bsdf.inputs["Base Color"].default_value = (0.96, 0.97, 0.97, 1)
+    bsdf.inputs["Transmission Weight"].default_value = 1.0
+    bsdf.inputs["Roughness"].default_value = 0.32
+    bsdf.inputs["IOR"].default_value = 1.5
+    return m
+
+
 def rug_material():
     tex = CACHE / "wool_boucle"
     m = bpy.data.materials.new("rug-wool-boucle")
@@ -246,7 +262,8 @@ def build():
     floor["studio_surface"] = "floor"
     assign(floor, neutral)
 
-    g = spec.door_geometry()
+    g = spec.door_geometry(MODEL)
+    model = spec.DOOR_MODELS[MODEL]
     ox0, ox1, oh = g["opening"]
     wn = spec.WINDOW
     walls = [
@@ -289,26 +306,69 @@ def build():
     ix0, ix1, iz = g["casing_inner"]
     cx0, cx1, cz = g["casing_outer"]
     cd = spec.CASING["depth"]
-    leaf = box("leaf", lx0, lx1, D, D + d["leaf_thickness"], lz0, lz1, door_col)
+    lt = d["leaf_thickness"]
+    leaf_parts = []
+    if "grooves" in model:
+        # Milled grooves: a recessed back slab shows between front slabs.
+        gr = model["grooves"]
+        gd, gw, n = gr["depth"], gr["width"], gr["count"]
+        leaf_parts.append(box("leaf-back", lx0, lx1, D + gd, D + lt, lz0, lz1, door_col))
+        edges = [lz0] + [z for k in range(1, n + 1) for z in (lz0 + (lz1 - lz0) * k / (n + 1) - gw / 2,
+                                                             lz0 + (lz1 - lz0) * k / (n + 1) + gw / 2)] + [lz1]
+        for k in range(0, len(edges), 2):
+            leaf_parts.append(box(f"leaf-front-{k}", lx0, lx1, D, D + gd, edges[k], edges[k + 1], door_col))
+    elif "glass" in model:
+        # Centred satin-glass strip, glazed in the middle of the leaf thickness.
+        gl = model["glass"]
+        cxm = (lx0 + lx1) / 2
+        gx0, gx1, gz0, gz1 = cxm - gl["width"] / 2, cxm + gl["width"] / 2, gl["z0"], gl["z1"]
+        # One solid leaf with the opening cut out: joined part boxes would leave
+        # internal faces whose bevels read as seams above and below the glass.
+        solid = box("leaf", lx0, lx1, D, D + lt, lz0, lz1, door_col)
+        cutter = box("leaf-cutter", gx0, gx1, D - 0.01, D + lt + 0.01, gz0, gz1, door_col)
+        cut = solid.modifiers.new("opening", "BOOLEAN")
+        cut.operation = "DIFFERENCE"
+        cut.solver = "EXACT"
+        cut.object = cutter
+        with bpy.context.temp_override(object=solid, active_object=solid):
+            bpy.ops.object.modifier_apply(modifier=cut.name)
+        bpy.data.objects.remove(cutter, do_unlink=True)
+        leaf_parts.append(solid)
+        pane = box("door-glass", gx0, gx1, D + lt / 2 - 0.004, D + lt / 2 + 0.004, gz0, gz1, door_col)
+        assign(pane, satin_glass())
+    else:
+        leaf_parts.append(box("leaf", lx0, lx1, D, D + lt, lz0, lz1, door_col))
+    leaf = join("leaf", leaf_parts) if len(leaf_parts) > 1 else leaf_parts[0]
     leaf["studio_surface"] = "leaf"
     assign(leaf, neutral)
-    bevel(leaf, 0.0015)
+    bevel(leaf, 0.0015 if "grooves" not in model else 0.001)
     gap = d["leaf_gap"]
 
     def xz(a, b, t):
         return (a, t, b)
 
-    jamb_l = box("jamb-left", ox0, lx0 - gap, D, D + T, 0, oh, door_col)
-    jamb_r = box("jamb-right", lx1 + gap, ox1, D, D + T, 0, oh, door_col)
-    jamb_t = box("jamb-top", ox0, ox1, D, D + T, lz1 + gap, oh, door_col)
-    cas_l = prism("casing-left", [(cx0, 0), (ix0, 0), (ix0, iz), (cx0, cz)], xz, D - cd, D, door_col)
-    cas_r = prism("casing-right", [(ix1, 0), (cx1, 0), (cx1, cz), (ix1, iz)], xz, D - cd, D, door_col)
-    cas_t = prism("casing-top", [(ix0, iz), (ix1, iz), (cx1, cz), (cx0, cz)], xz, D - cd, D, door_col)
-    for name, pieces in (("frame-left", [cas_l, jamb_l]), ("frame-right", [cas_r, jamb_r]), ("frame-top", [cas_t, jamb_t])):
-        ob = join(name, pieces)
-        ob["studio_surface"] = name
-        assign(ob, neutral)
-        bevel(ob, 0.0015)
+    if model["casing"]:
+        jamb_l = box("jamb-left", ox0, lx0 - gap, D, D + T, 0, oh, door_col)
+        jamb_r = box("jamb-right", lx1 + gap, ox1, D, D + T, 0, oh, door_col)
+        jamb_t = box("jamb-top", ox0, ox1, D, D + T, lz1 + gap, oh, door_col)
+        cas_l = prism("casing-left", [(cx0, 0), (ix0, 0), (ix0, iz), (cx0, cz)], xz, D - cd, D, door_col)
+        cas_r = prism("casing-right", [(ix1, 0), (cx1, 0), (cx1, cz), (ix1, iz)], xz, D - cd, D, door_col)
+        cas_t = prism("casing-top", [(ix0, iz), (ix1, iz), (cx1, cz), (cx0, cz)], xz, D - cd, D, door_col)
+        for name, pieces in (("frame-left", [cas_l, jamb_l]), ("frame-right", [cas_r, jamb_r]), ("frame-top", [cas_t, jamb_t])):
+            ob = join(name, pieces)
+            ob["studio_surface"] = name
+            assign(ob, neutral)
+            bevel(ob, 0.0015)
+    else:
+        # Concealed aluminium frame: only its dark edge shows inside the shadow gap.
+        fg = model["gap"]
+        alu = principled("concealed-frame", (0.06, 0.06, 0.065), roughness=0.5, metallic=0.6)
+        liner = join("concealed-frame", [
+            box("cf-l", lx0 - fg, lx0, D + 0.010, D + T, 0, lz1 + fg, door_col),
+            box("cf-r", lx1, lx1 + fg, D + 0.010, D + T, 0, lz1 + fg, door_col),
+            box("cf-t", lx0, lx1, D + 0.010, D + T, lz1, lz1 + fg, door_col),
+        ])
+        assign(liner, alu)
 
     # Lever handle and key rosette on the side away from the hinges.
     hx = lx1 - 0.065 if d["hinge_side"] == "left" else lx0 + 0.065
@@ -323,12 +383,35 @@ def build():
     handle["studio_protected"] = True
     assign(handle, steel)
     bevel(handle, 0.0012)
-    hinge_x = lx0 - gap / 2 if d["hinge_side"] == "left" else lx1 + gap / 2
-    hinges = [cylinder(f"hinge-{i}", 0.0075, 0.11, (hinge_x, D - 0.004, z), (0, 0, 0), door_col, 24)
-              for i, z in enumerate((0.25, 1.05, 1.80))]
-    hinge = join("hinges", hinges)
-    hinge["studio_protected"] = True
-    assign(hinge, hinge_mat)
+    if model["casing"]:
+        hinge_x = lx0 - gap / 2 if d["hinge_side"] == "left" else lx1 + gap / 2
+        hinges = [cylinder(f"hinge-{i}", 0.0075, 0.11, (hinge_x, D - 0.004, z), (0, 0, 0), door_col, 24)
+                  for i, z in enumerate((0.25, 1.05, 1.80))]
+        hinge = join("hinges", hinges)
+        hinge["studio_protected"] = True
+        assign(hinge, hinge_mat)
+
+    # Short lit corridor behind the door (seen only through a glass insert).
+    co = spec.CORRIDOR
+    cxm = (lx0 + lx1) / 2
+    y0c, y1c = D + T, D + T + co["depth"]
+    xa, xb = cxm - co["half_width"], cxm + co["half_width"]
+    corridor = [
+        box("corr-floor", xa, xb, y0c, y1c, -0.02, 0, shell),
+        box("corr-ceiling", xa, xb, y0c, y1c, H, H + 0.02, shell),
+        box("corr-back", xa, xb, y1c, y1c + 0.02, 0, H, shell),
+        box("corr-left", xa - 0.02, xa, y0c, y1c, 0, H, shell),
+        box("corr-right", xb, xb + 0.02, y0c, y1c, 0, H, shell),
+    ]
+    for c_ in corridor:
+        assign(c_, wall_mat)
+    clight = bpy.data.lights.new("corridor-light", "AREA")
+    clight.size = 0.6
+    clight.energy = co["light"]
+    clight.color = (1.0, 0.95, 0.88)
+    cl_ob = bpy.data.objects.new("corridor-light", clight)
+    cl_ob.location = (cxm, (y0c + y1c) / 2, H - 0.03)
+    scene.collection.objects.link(cl_ob)
 
     # --- skirting (mitred at room corners, butting into the casing) ---------
     sd, sh = spec.SKIRTING["depth"], spec.SKIRTING["height"]

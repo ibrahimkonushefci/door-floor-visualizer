@@ -32,8 +32,8 @@ describe('media', () => {
   });
   it('verifies actual dimensions, hashes, provenance and byte budget', async () => {
     const audit = await verifyAssets();
-    expect(audit.sources).toBe(24);
-    expect(audit.derivatives).toBe(240);
+    expect(audit.sources).toBe(32);
+    expect(audit.derivatives).toBe(320);
     expect(audit.firstFour640WebpBytes).toBeLessThanOrEqual(240 * 1024);
   }, 15000);
 });

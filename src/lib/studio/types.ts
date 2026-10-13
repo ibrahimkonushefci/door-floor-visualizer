@@ -20,7 +20,7 @@ export interface StudioSnapshot {
 export type StudioAction =
   | { type: 'restore'; selection: StudioSelection }
   | { type: 'scene'; sceneId: string }
-  | { type: 'door'; productId: string; finishId: string }
+  | { type: 'door'; productId: string; finishId: string; modelId?: string }
   | { type: 'floor'; productId: string }
   | { type: 'frame' | 'skirting'; mode: 'door' | 'floor' | 'black' }
   | { type: 'rotate'; degrees: 0 | 90 }
@@ -50,7 +50,9 @@ export interface PreparedPositionMap {
   sceneHeight: number;
 }
 export interface PreparedScene {
+  /** The scene as drawn with `modelId` (see door-models.ts sceneForModel). */
   scene: RoomScene;
+  modelId?: string;
   base: PixelBuffer;
   surfaces: readonly PreparedSurface[];
   protectedMask: Uint8Array;

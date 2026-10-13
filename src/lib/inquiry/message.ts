@@ -68,9 +68,11 @@ export function buildInquiryMessage(
     if (!scene) throw new Error('Unknown inquiry scene');
     lines.push(`${m['inquiry.scene']}: ${localize(scene.name, locale)}`);
     addProduct(s.doorProductId, undefined, s.doorFinishId);
+    const model = data.materials.doorModels.find(d => d.id === s.doorModelId);
+    if (model) lines.push(`${m['studio.model']}: ${localize(model.name, locale)}`);
     addProduct(s.floorProductId);
     lines.push(
-      `${m['inquiry.frame']}: ${m[`studio.mode.${s.frameMode}`]}`,
+      `${m['inquiry.frame']}: ${model?.frameType === 'concealed-aluminium' ? m['studio.concealedFrame'] : m[`studio.mode.${s.frameMode}`]}`,
       `${m['inquiry.skirting']}: ${m[`studio.mode.${s.skirtingMode}`]}`,
       `${m['studio.direction']}: ${m[s.floorRotationDeg === 90 ? 'studio.lengthwise' : 'studio.crosswise']}`,
     );

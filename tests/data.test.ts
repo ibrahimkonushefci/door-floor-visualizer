@@ -96,7 +96,7 @@ describe('catalog completeness', () => {
     data.products.products.forEach(p => {
       p.relatedProductIds = p.relatedProductIds.filter(id => !trims.has(id));
     });
-    expect(validateSiteData(data).products.products.length).toBe(12 - trims.size);
+    expect(validateSiteData(data).products.products.length).toBe(16 - trims.size);
   });
   it('requires real translations rather than relying on fallback', () => {
     const data = structuredClone(loadSiteData());

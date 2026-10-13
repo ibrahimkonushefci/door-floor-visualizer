@@ -49,7 +49,7 @@ it('invalid IDs/version and oversized URLs normalize safely and ignore arbitrary
 it('unknown scene URLs fall back to the first scene and keep compatible choices', () => {
   const parsed = parseStudioQuery(
     new URLSearchParams(
-      'v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=arre-klasike-12&rot=90',
+      'v=1&scene=corridor-hidden&door=dera-kashmir&finish=antracit&floor=kronotex-d80612&rot=90',
     ),
     catalog,
   );
@@ -57,7 +57,7 @@ it('unknown scene URLs fall back to the first scene and keep compatible choices'
   expect(parsed.selection).toMatchObject({
     sceneId: first.id,
     doorFinishId: 'antracit',
-    floorProductId: 'arre-klasike-12',
+    floorProductId: 'kronotex-d80612',
     floorRotationDeg: 90,
   });
   expect(parsed.warnings).toContain('sceneId');
@@ -67,8 +67,8 @@ it('hallway preserves standard pairs and rejects hidden/glass geometry', () => {
   const initial = {
     ...data.materials.scenes[0].defaultSelection,
     doorProductId: 'dera-lis',
-    doorFinishId: 'arre-erret',
-    floorProductId: 'arre-klasike-12',
+    doorFinishId: 'dushk-hirte',
+    floorProductId: 'kronotex-d80612',
     floorRotationDeg: 90 as const,
   };
   const next = reduceSelection(initial, { type: 'scene', sceneId: 'corridor-standard' }, catalog);
@@ -78,10 +78,11 @@ it('hallway preserves standard pairs and rejects hidden/glass geometry', () => {
       reduceSelection(next, { type: 'door', productId, finishId: 'kashmir' }, catalog)
         .doorProductId,
     ).toBe('dera-bardhe');
+  // Hidden doors need the flush (filomuro) model, rendered only in the 3D room.
   expect(
     data.products.products
       .filter(p => p.kind === 'door' && p.doorType === 'hidden')
-      .every(p => p.kind === 'door' && !p.compatibleSceneIds.length),
+      .every(p => p.kind === 'door' && p.compatibleSceneIds.join() === 'living-render-01'),
   ).toBe(true);
 });
 it('glass uses explicit product pair and black profile; leaving glass has deterministic opaque mode', () => {

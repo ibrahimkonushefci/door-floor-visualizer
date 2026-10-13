@@ -16,11 +16,7 @@ import type { FloorCollection } from '../src/lib/data/types';
 import { upsertLedger } from './asset-ledger';
 
 const GRAIN: Record<string, string> = {
-  'lis-natyral-10': 'lis-natyral',
-  'dushk-fshatar-8': 'lis-natyral',
   'peshk-natyral-12': 'lis-natyral',
-  'arre-klasike-12': 'arre-erret',
-  'hirte-skandinave-8': 'dushk-hirte',
 };
 const SCAN_MM = [1380, 460] as const;
 const PX_PER_MM = 1;
@@ -58,6 +54,8 @@ export async function authorPlankSheets() {
   const materials = JSON.parse(await readFile('brand/materials.json', 'utf8'));
   const results = [];
   for (const c of materials.floorCollections as FloorCollection[]) {
+    // Supplier décors get their sheets from scripts/import-decors.ts.
+    if (c.decor) continue;
     const scanName = GRAIN[c.id];
     if (!scanName) throw new Error(`No grain scan for ${c.id}`);
     const scan = await rgb(`brand/assets/textures/doors/${scanName}.png`),

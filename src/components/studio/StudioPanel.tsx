@@ -6,6 +6,10 @@ import { localize, type Messages } from '@/lib/i18n/messages';
 import { Swatch } from '../ui/Swatch';
 import { SegmentedControl } from '../ui/SegmentedControl';
 import { Icon } from '../ui/Icon';
+import { DoorModelIcon } from './DoorModelIcon';
+import { compatibleDoor } from '@/lib/studio/compatibility';
+import { sceneModelIds, sceneForModel } from '@/lib/studio/door-models';
+import type { DoorProduct } from '@/lib/data/types';
 type Surface = 'door' | 'floor';
 export function StudioPanel({
   catalog,
@@ -28,21 +32,36 @@ export function StudioPanel({
 }) {
   const [surface, setSurface] = useState<Surface>('door');
   const tabsId = useId();
-  const { scenes, doorFinishes, floorCollections } = catalog.materials;
+  const { scenes, doorFinishes, floorCollections, doorModels } = catalog.materials;
   const scene = scenes.find(s => s.id === requested.sceneId)!,
     finish = doorFinishes.find(f => f.id === requested.doorFinishId)!,
+    model = doorModels.find(d => d.id === requested.doorModelId),
     floorProduct = catalog.products.find(p => p.id === requested.floorProductId)!;
-  // Each finish maps to the current door model if it offers it, else to any door allowed here.
-  const finishes = doorFinishes.map(f => {
-    const product =
-      catalog.products.find(
-        p => p.id === requested.doorProductId && p.kind === 'door' && p.finishIds.includes(f.id),
-      ) ||
-      catalog.products.find(
-        p => p.kind === 'door' && scene.allowedDoorProductIds.includes(p.id) && p.finishIds.includes(f.id),
-      );
-    return { finish: f, productId: product?.id };
-  });
+  const doors = catalog.products.filter(
+    (p): p is DoorProduct => p.kind === 'door' && compatibleDoor(p, scene, catalog),
+  );
+  // Prefer the current door line, then lines in the current model, then any door allowed here.
+  const pick = (ok: (p: DoorProduct) => boolean) =>
+    doors.find(p => p.id === requested.doorProductId && ok(p)) ||
+    doors.find(p => p.modelIds.includes(requested.doorModelId) && ok(p)) ||
+    doors.find(ok);
+  const finishes = doorFinishes
+    .filter(f => f.kind === 'opaque' || doors.some(p => p.finishIds.includes(f.id)))
+    .map(f => ({ finish: f, productId: pick(p => p.finishIds.includes(f.id))?.id }));
+  const shownModels = sceneModelIds(scene);
+  const models = doorModels
+    .filter(d => shownModels.includes(d.id))
+    .map(d => {
+      const product =
+        pick(p => p.modelIds.includes(d.id) && p.finishIds.includes(requested.doorFinishId)) ||
+        pick(p => p.modelIds.includes(d.id));
+      return {
+        model: d,
+        productId: product?.id,
+        finishId: product?.finishIds.includes(requested.doorFinishId) ? requested.doorFinishId : product?.defaultFinishId,
+      };
+    });
+  const concealed = sceneForModel(scene, requested.doorModelId).frameType === 'concealed-aluminium';
   const floors = catalog.products.flatMap(p => {
     if (p.kind !== 'floor') return [];
     const collection = floorCollections.find(c => c.id === p.collectionId)!;
@@ -50,7 +69,8 @@ export function StudioPanel({
   });
   const modes = (allowed: readonly TrimMode[]) =>
     allowed.map(mode => ({ value: mode, label: m[`studio.mode.${mode}`] }));
-  const frameModes = finish.kind === 'glass' ? (['black'] as const) : scene.allowedFrameModes;
+  const frameModes =
+    finish.kind === 'glass' ? (['black'] as const) : sceneForModel(scene, requested.doorModelId).allowedFrameModes;
   const tab = (value: Surface) => ({
     role: 'tab' as const,
     id: `${tabsId}-${value}`,
@@ -67,7 +87,10 @@ export function StudioPanel({
           <dl>
             <div>
               <dt>{m['studio.door']}</dt>
-              <dd>{localize(finish.name, locale)}</dd>
+              <dd>
+                {model && models.length > 1 ? `${localize(model.name, locale)} · ` : ''}
+                {localize(finish.name, locale)}
+              </dd>
             </div>
             <div>
               <dt>{m['studio.floor']}</dt>
@@ -118,6 +141,33 @@ export function StudioPanel({
         </div>
         {surface === 'door' ? (
           <div role="tabpanel" id={`${tabsId}-door-panel`} aria-labelledby={`${tabsId}-door`} className="studio-tabpanel">
+            {models.length > 1 && (
+              <section className="studio-section" aria-labelledby={`${tabsId}-model`}>
+                <h2 className="eyebrow" id={`${tabsId}-model`}>
+                  {m['studio.model']}
+                </h2>
+                <div className="door-models">
+                  {models.map(({ model: d, productId, finishId }) => (
+                    <button
+                      type="button"
+                      key={d.id}
+                      className="door-model"
+                      aria-pressed={d.id === requested.doorModelId}
+                      aria-disabled={!productId || undefined}
+                      title={localize(d.description, locale)}
+                      onClick={() =>
+                        productId && finishId
+                          ? onAction({ type: 'door', productId, finishId, modelId: d.id })
+                          : onUnavailable(m['studio.incompatible'])
+                      }
+                    >
+                      <DoorModelIcon icon={d.icon} />
+                      <span>{localize(d.name, locale)}</span>
+                    </button>
+                  ))}
+                </div>
+              </section>
+            )}
             <section className="studio-section" aria-label={m['studio.finish']}>
               <div className="swatch-grid">
                 {finishes.map(({ finish: f, productId }) => (
@@ -141,7 +191,13 @@ export function StudioPanel({
               label={m['inquiry.frame']}
               allowed={frameModes}
               value={requested.frameMode}
-              fixedLabel={finish.kind === 'glass' ? m['studio.blackProfile'] : undefined}
+              fixedLabel={
+                finish.kind === 'glass'
+                  ? m['studio.blackProfile']
+                  : concealed
+                    ? m['studio.concealedFrame']
+                    : undefined
+              }
               options={modes(frameModes)}
               onChange={mode => onAction({ type: 'frame', mode })}
             />

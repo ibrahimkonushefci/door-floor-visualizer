@@ -183,7 +183,7 @@ it('lighter variant bounds grow outwards and frames choose the half decode only 
 it('position-map floor lays individual boards with true zero shadows, tint and partitioned masks', () => {
   const data = loadSiteData(),
     f = syntheticScene(),
-    collection = data.materials.floorCollections.find(c => c.id === 'lis-natyral-10')!;
+    collection = data.materials.floorCollections.find(c => c.id === 'kronotex-d4955')!;
   // 8×8 output; the map spans 0..1400 mm in X so one board end joint is in view.
   const pm = new Uint16Array(8 * 8 * 2);
   for (let y = 0; y < 8; y++)
@@ -222,7 +222,7 @@ it('position-map floor lays individual boards with true zero shadows, tint and p
     },
     sheets: new Map([['/media/sheet.png', buildByteMipChain({ width: 4, height: 2, data: sheet })]]),
   };
-  const job = { ...f.job, selection: { ...f.job.selection, floorProductId: 'lis-natyral-10' } },
+  const job = { ...f.job, selection: { ...f.job.selection, floorProductId: 'kronotex-d4955' } },
     out = { width: 8, height: 8, data: new Uint8ClampedArray(256) };
   renderRows(job, f.scene, materials, out, 0, 8);
   // Zero light renders black (no 0.18 floor), protection is ignored (partitioned),

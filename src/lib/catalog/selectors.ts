@@ -101,6 +101,14 @@ export function buildSpecRows(
     add('spec.frame', m[`value.${product.frameType}`]);
     add('spec.core', m[`value.${product.construction}`]);
     add('spec.surface', m[`value.${product.surface}`]);
+    add(
+      'spec.models',
+      product.modelIds
+        .map(id => materials.doorModels.find(d => d.id === id))
+        .map(d => (d ? localize(d.name, locale) : null))
+        .filter(Boolean)
+        .join(' / '),
+    );
     add('spec.leafSizes', product.sizes.map(s => formatDoorSize(s, locale)).join(' / '));
     const defaultSize = product.sizes.find(s => s.id === product.defaultSizeId)!;
     add(
@@ -116,6 +124,7 @@ export function buildSpecRows(
   } else if (product.kind === 'floor') {
     const c = materials.floorCollections.find(c => c.id === product.collectionId);
     if (!c) throw new Error('Missing spec collection');
+    if (c.decor) add('spec.decor', `${c.decor.brand} ${c.decor.collection} · ${c.decor.code}`);
     add('spec.type', m[c.kind === 'laminate' ? 'catalog.badgeLaminate' : 'catalog.badgeParquet']);
     add('spec.thickness', `${c.thicknessMm} mm`);
     add('spec.boardSize', `${c.atlas.boardSizeMm.length} × ${c.atlas.boardSizeMm.width} mm`);

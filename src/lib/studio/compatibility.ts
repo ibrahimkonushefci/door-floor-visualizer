@@ -1,11 +1,17 @@
 import type { DoorProduct, RoomScene, StudioSelection } from '../data/types';
 import type { StudioCatalog } from './types';
+import { sceneModelIds } from './door-models';
+/** Door models of a product that this scene can show. */
+export function doorModelsIn(p: DoorProduct, scene: RoomScene) {
+  const shown = sceneModelIds(scene);
+  return p.modelIds.filter(id => shown.includes(id));
+}
 export function compatibleDoor(p: DoorProduct, scene: RoomScene, c: StudioCatalog) {
   return (
     p.published &&
     p.compatibleSceneIds.includes(scene.id) &&
     scene.allowedDoorProductIds.includes(p.id) &&
-    (p.frameType === scene.frameType ||
+    ((p.doorType !== 'glass' && doorModelsIn(p, scene).length > 0) ||
       (p.doorType === 'glass' &&
         scene.doorInserts.some(i =>
           c.materials.doorFinishes.some(

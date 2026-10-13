@@ -19,7 +19,7 @@ export const sourceLedgerSchema = z.strictObject({
         ),
       sourceUrl: z.url().nullable(),
       author: z.string().trim().min(1),
-      usageBasis: z.enum(['owned', 'licensed', 'generated']),
+      usageBasis: z.enum(['owned', 'licensed', 'generated', 'private-pitch-only']),
       licenseNote: z.string().trim().min(1),
       depictsProductId: z.string().nullable(),
       isIllustrative: z.boolean(),
@@ -76,7 +76,7 @@ export async function verifyAssets() {
       throw new Error(`Missing/mismatched provenance ${image.id}`);
     if (asset.usageBasis === 'generated' && !asset.isIllustrative)
       throw new Error('Generated images must be illustrative');
-    if (asset.usageBasis === 'licensed' && !asset.sourceUrl)
+    if ((asset.usageBasis === 'licensed' || asset.usageBasis === 'private-pitch-only') && !asset.sourceUrl)
       throw new Error('Licensed image needs source URL');
     const source = await readFile(image.source);
     const meta = await sharp(source).metadata();

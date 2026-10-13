@@ -4,6 +4,7 @@ import { buildMipChain, buildByteMipChain, type ByteTexture, type FloatTexture, 
 import { decodePng } from './render/png';
 import { decode } from './render/color';
 import { invertHomography, solveHomography } from './render/homography';
+import { modelPatch, sceneForModel, switchPatch } from './door-models';
 // Floor atlases are authored up to 2048px; the float mip chain of the largest
 // active set (atlas + finish + trims) stays well under the cache budget.
 export const TEXTURE_MAX_EDGE = 2048;
@@ -50,6 +51,23 @@ export interface SceneLoadOptions {
   /** 1 = full resolution; 0.5 decodes every layer at half size (lighter phone variant). */
   scale?: number;
   loadBytes?: LoadBytes;
+  /** Door model to draw (rendered scenes); its region crops are pasted over the default layers. */
+  modelId?: string;
+  /**
+   * The same scene and scale already prepared with another door model. All
+   * models agree outside the shared patch region, so only the region's crops
+   * are decoded and pasted (no full-size layer is decoded again).
+   */
+  previous?: PreparedScene | null;
+}
+/** Copy of `under` (or zeros) with `crop` written at (x, y). */
+export function pasteRegion(under: PixelBuffer | null, crop: PixelBuffer, x: number, y: number, W: number, H: number) {
+  const data = under ? new Uint8ClampedArray(under.data) : new Uint8ClampedArray(W * H * 4);
+  if (!under) for (let i = 3; i < data.length; i += 4) data[i] = 255;
+  if (x < 0 || y < 0 || x + crop.width > W || y + crop.height > H) throw new Error('Patch outside scene');
+  for (let j = 0; j < crop.height; j++)
+    data.set(crop.data.subarray(j * crop.width * 4, (j + 1) * crop.width * 4), ((y + j) * W + x) * 4);
+  return { width: W, height: H, data };
 }
 /** Bounds at a decoded scale, grown outwards (plus a pixel for resampling spill) so no coverage is lost. */
 export function scaleBounds(
@@ -283,18 +301,32 @@ const crop = (full: Uint8Array, width: number, [x, y, w, h]: readonly number[]) 
   return out;
 };
 export async function prepareSceneWith(
-  scene: RoomScene,
+  source: RoomScene,
   signal: AbortSignal,
   decode: DecodeAsset,
   options: SceneLoadOptions = {},
 ): Promise<PreparedScene> {
+  const prev = options.previous;
+  if (
+    prev &&
+    options.modelId &&
+    prev.modelId &&
+    prev.scene.id === source.id &&
+    prev.scene.assetRevision === source.assetRevision &&
+    (prev.scale ?? 1) === (options.scale ?? 1) &&
+    switchPatch(source, options.modelId) &&
+    switchPatch(source, prev.modelId)
+  )
+    return switchDoorModel(prev, source, options.modelId, signal, decode);
   const scale = options.scale ?? 1,
-    W = Math.round(scene.width * scale),
-    H = Math.round(scene.height * scale),
-    rendered = !!scene.render,
-    decoded = new Map<string, Promise<PixelBuffer>>();
+    W = Math.round(source.width * scale),
+    H = Math.round(source.height * scale),
+    rendered = !!source.render,
+    decoded = new Map<string, Promise<PixelBuffer>>(),
+    patch = options.modelId ? modelPatch(source, options.modelId) : null,
+    scene = options.modelId ? sceneForModel(source, options.modelId) : source;
   // Rendered scenes share light plates between layers; decode each file once.
-  const load = (path: string) => {
+  const fullLayer = (path: string) => {
     let pending = decoded.get(path);
     if (!pending) {
       pending = decode(path, signal, scale === 1 ? undefined : Math.max(W, H)).then(p => {
@@ -305,9 +337,40 @@ export async function prepareSceneWith(
     }
     return pending;
   };
+  // A door model's crops cover regionPx (even-aligned, so exact at half scale).
+  const patched = new Map<string, Promise<PixelBuffer>>();
+  // With a door model, the region always comes from that model's crops (the
+  // default model's too), so a full load equals a model switch pixel for pixel.
+  const switching = options.modelId ? switchPatch(source, options.modelId) : null;
+  const region = (crop: string, over: string | null) => {
+    let pending = patched.get(crop);
+    if (!pending) {
+      const [rx, ry, rw, rh] = switching!.regionPx;
+      pending = Promise.all([
+        decode(crop, signal, scale === 1 ? undefined : Math.max(rw, rh) * scale),
+        over ? fullLayer(over) : Promise.resolve(null),
+      ]).then(([c, under]) => {
+        if (c.width !== Math.round(rw * scale) || c.height !== Math.round(rh * scale))
+          throw new Error(`Wrong patch shape ${crop}`);
+        return pasteRegion(under, c, Math.round(rx * scale), Math.round(ry * scale), W, H);
+      });
+      patched.set(crop, pending);
+    }
+    return pending;
+  };
+  const overs = new Map(patch?.layers.map(l => [l.image, l.over]) ?? []),
+    ownCrops = new Map(
+      switching && !patch ? switching.layers.flatMap(l => (l.over ? [[l.over, l.image] as const] : [])) : [],
+    );
+  const load = (path: string) =>
+    overs.has(path)
+      ? region(path, overs.get(path)!)
+      : ownCrops.has(path)
+        ? region(ownCrops.get(path)!, path)
+        : fullLayer(path);
   const sb = (b: readonly [number, number, number, number]) => scaleBounds(b, scale, W, H);
   // Partitioned (rendered) scenes never read the protected mask at runtime.
-  const base = await load(scene.base),
+  const base = switching ? await region(switching.base, scene.base) : await load(scene.base),
     protectedMask = rendered ? new Uint8Array(0) : red(await load(scene.protectedMask.alpha));
   // Leaf and casing layers are kept full-size until the assembly is unified.
   // Rendered scenes have complete, partitioned door masks and skip that step.
@@ -401,6 +464,7 @@ export async function prepareSceneWith(
     reveal,
     scale,
     scene,
+    modelId: options.modelId,
     base,
     protectedMask,
     surfaces,
@@ -408,6 +472,87 @@ export async function prepareSceneWith(
     insertMasks,
     foreground: scene.foreground ? await load(scene.foreground) : null,
   };
+}
+/** Rebuild a prepared scene for another door model from the region crops alone. */
+async function switchDoorModel(
+  prev: PreparedScene,
+  source: RoomScene,
+  modelId: string,
+  signal: AbortSignal,
+  decode: DecodeAsset,
+): Promise<PreparedScene> {
+  const scale = prev.scale ?? 1,
+    W = prev.base.width,
+    H = prev.base.height,
+    patch = switchPatch(source, modelId)!,
+    scene = sceneForModel(source, modelId),
+    [rx, ry, rw, rh] = patch.regionPx.map(v => Math.round(v * scale)),
+    crops = new Map(patch.layers.map(l => [l.image, l.over]));
+  const crop = async (path: string) => {
+    const c = await decode(path, signal, scale === 1 ? undefined : Math.max(rw, rh));
+    if (c.width !== rw || c.height !== rh) throw new Error(`Wrong patch shape ${path}`);
+    return c;
+  };
+  const base = pasteRegion(prev.base, await crop(patch.base), rx, ry, W, H);
+  const inRegion = (x: number, y: number) => x >= rx && y >= ry && x < rx + rw && y < ry + rh;
+  // One layer at `bounds`: the previous model's pixels, then this model's crop over the region.
+  const rebase = async (
+    bounds: readonly [number, number, number, number],
+    old: { data: ArrayLike<number>; bounds: readonly [number, number, number, number] } | null,
+    channels: 1 | 4,
+    path: string,
+  ) => {
+    const [bx, by, bw, bh] = bounds,
+      out = channels === 1 ? new Uint8Array(bw * bh) : new Uint8ClampedArray(bw * bh * 4);
+    if (old) {
+      const [ox, oy, ow, oh] = old.bounds;
+      for (let y = Math.max(by, oy); y < Math.min(by + bh, oy + oh); y++)
+        for (let x = Math.max(bx, ox); x < Math.min(bx + bw, ox + ow); x++)
+          if (!inRegion(x, y))
+            for (let k = 0; k < channels; k++)
+              out[((y - by) * bw + x - bx) * channels + k] = old.data[((y - oy) * ow + x - ox) * channels + k];
+    }
+    if (crops.has(path)) {
+      const c = await crop(path);
+      for (let y = Math.max(by, ry); y < Math.min(by + bh, ry + rh); y++)
+        for (let x = Math.max(bx, rx); x < Math.min(bx + bw, rx + rw); x++)
+          for (let k = 0; k < channels; k++)
+            out[((y - by) * bw + x - bx) * channels + k] =
+              c.data[((y - ry) * rw + x - rx) * 4 + (channels === 1 ? 0 : k)];
+    } else if (old === null) throw new Error(`Door model layer without source ${path}`);
+    return out;
+  };
+  const surfaces: PreparedScene['surfaces'][number][] = [];
+  // The patch's surfaces name the crops; the drawn definitions are the scene's
+  // (identical for the default model apart from naming its full-size layers).
+  for (const layer of patch.surfaces) {
+    signal.throwIfAborted();
+    const definition = scene.surfaces.find(s => s.id === layer.id) ?? layer,
+      bounds = scaleBounds(layer.mask.boundsPx, scale, W, H),
+      old = prev.surfaces.find(s => s.definition.id === layer.id) ?? null;
+    const mask = (await rebase(bounds, old && { data: old.mask, bounds: old.bounds }, 1, layer.mask.alpha)) as Uint8Array,
+      diffuse = (await rebase(bounds, old && { data: old.diffuse, bounds: old.bounds }, 1, layer.lighting.diffuse)) as Uint8Array;
+    const spec = layer.lighting.specular;
+    const specular = spec
+      ? {
+          width: bounds[2],
+          height: bounds[3],
+          data: (await rebase(bounds, old?.specular ? { data: old.specular.data, bounds: old.bounds } : null, 4, spec)) as Uint8ClampedArray,
+        }
+      : null;
+    surfaces.push({
+      definition,
+      baseline: undefined,
+      position: old?.position ?? null,
+      inverse: invertHomography(solveHomography(definition.mapping.worldQuadMm, definition.mapping.imageQuad01)),
+      mask,
+      diffuse,
+      specular,
+      bounds,
+    });
+  }
+  if (scale !== 1) renormaliseCoverage(surfaces, W, H);
+  return { ...prev, scene, modelId, base, surfaces, reveal: null };
 }
 // Resampling each mask on its own (and rounding it to bytes) can let adjacent
 // surfaces sum past full coverage along shared edges; scale such pixels back.

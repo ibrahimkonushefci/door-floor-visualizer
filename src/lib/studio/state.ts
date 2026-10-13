@@ -1,6 +1,7 @@
 import type { StudioSelection, Locale } from '../data/types';
 import type { StudioCatalog, StudioAction } from './types';
-import { compatibleDoor } from './compatibility';
+import { compatibleDoor, doorModelsIn } from './compatibility';
+import { allowedFrameModes } from './door-models';
 import { localize } from '../i18n/messages';
 export const isGlass = (finishId: string, catalog: StudioCatalog) =>
   catalog.materials.doorFinishes.find(f => f.id === finishId)?.kind === 'glass';
@@ -29,14 +30,22 @@ export function normalizeSelection(candidate: Partial<StudioSelection>, catalog:
     catalog.materials.doorFinishes.find(
       f => f.id === candidate.doorFinishId && p.finishIds.includes(f.id),
     ) || catalog.materials.doorFinishes.find(f => f.id === p.defaultFinishId)!;
+  const models = doorModelsIn(p, scene),
+    model =
+      candidate.doorModelId && models.includes(candidate.doorModelId)
+        ? candidate.doorModelId
+        : models.includes(p.defaultModelId)
+          ? p.defaultModelId
+          : models[0];
   const frameModes =
     finish.kind === 'glass'
       ? scene.doorInserts.find(i => i.variantKey === finish.variantKey)!.allowedFrameModes
-      : scene.allowedFrameModes;
+      : allowedFrameModes(scene, model);
   const selection: StudioSelection = {
     version: 1,
     sceneId: scene.id,
     doorProductId: p.id,
+    doorModelId: model,
     doorFinishId: finish.id,
     floorProductId: floor?.id || d.floorProductId,
     frameMode:
@@ -67,6 +76,7 @@ export function reduceSelection(s: StudioSelection, a: StudioAction, c: StudioCa
         {
           ...s,
           doorProductId: a.productId,
+          doorModelId: a.modelId ?? s.doorModelId,
           doorFinishId: a.finishId,
           frameMode: isGlass(a.finishId, c) ? 'black' : isGlass(s.doorFinishId, c) ? 'door' : s.frameMode,
         },
@@ -84,7 +94,8 @@ export function reduceSelection(s: StudioSelection, a: StudioAction, c: StudioCa
 }
 export function buildCombinationTitle(s: StudioSelection, c: StudioCatalog, l: Locale) {
   const door = c.products.find(p => p.id === s.doorProductId)!,
+    model = c.materials.doorModels.find(m => m.id === s.doorModelId),
     finish = c.materials.doorFinishes.find(f => f.id === s.doorFinishId)!,
     floor = c.products.find(p => p.id === s.floorProductId)!;
-  return `${localize(door.name, l)} · ${localize(finish.name, l)} + ${localize(floor.name, l)}`;
+  return `${localize(door.name, l)}${model ? ` (${localize(model.name, l)})` : ''} · ${localize(finish.name, l)} + ${localize(floor.name, l)}`;
 }

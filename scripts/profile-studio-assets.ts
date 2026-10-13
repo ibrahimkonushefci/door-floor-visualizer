@@ -89,6 +89,8 @@ for (const { variant, scale, maxFrame, limit } of variants(!!definition.render))
     fourTransientFrames: 4 * frameBytes,
     threeMaterialDecodeBuffers: 3 * TEXTURE_MAX_EDGE * 512 * 4,
     displayedAndPreviousFallbackImages: W * H * 4 + 960 * 720 * 4,
+    // A door-model switch builds the next scene while the previous one is still held.
+    doorModelSwitch: definition.doorModels ? sceneBytes : 0,
   };
   const scenePreparationBytes = sceneBytes + TEXTURE_CACHE_BYTES + 3 * W * H * 4 + 960 * 720 * 4;
   const total = Math.max(
@@ -144,7 +146,7 @@ await writeFile(
   'verification/render-fixtures/p4-remediation-assets.json',
   JSON.stringify(
     {
-      note: 'Conservative controlled pixel-storage bound, not a browser heap measurement. Rendering includes both scene copies, maximum cache limits, two worker material sets, incoming mip chains, four output/presentation buffers, bitmap/canvas/JS material decode buffers and displayed/previous fallback images. Scene preparation is separately bounded: the old worker/scene/result cache are released before three full-resolution decode buffers coexist with the new scene. Browser overhead, retained browser image caches and garbage-collection timing still require a physical heap profile. Runtime textures max512px; physical-scale calibration unresolved.',
+      note: 'Conservative controlled pixel-storage bound, not a browser heap measurement. Rendering includes both scene copies (plus a third while a door-model switch builds the next scene), maximum cache limits, two worker material sets, incoming mip chains, four output/presentation buffers, bitmap/canvas/JS material decode buffers and displayed/previous fallback images. Scene preparation is separately bounded: the old worker/scene/result cache are released before three full-resolution decode buffers coexist with the new scene. Browser overhead, retained browser image caches and garbage-collection timing still require a physical heap profile. Runtime textures max512px; physical-scale calibration unresolved.',
       results,
     },
     null,

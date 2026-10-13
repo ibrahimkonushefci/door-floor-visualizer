@@ -99,10 +99,10 @@ it('reuses unchanged textures and evicts the oldest of three floor chains', asyn
     base = data.materials.scenes.find(s => s.id === 'living-standard')!.defaultSelection;
   await loader.prepare(base, catalog, signal);
   await loader.prepare({ ...base, doorFinishId: 'kashmir' }, catalog, signal);
-  expect(paths.filter(p => p.endsWith('/lis-natyral-10/atlas.webp'))).toHaveLength(1);
-  for (const floorProductId of ['dushk-fshatar-8', 'peshk-natyral-12', 'lis-natyral-10'])
+  expect(paths.filter(p => p.endsWith('/kronotex-d4955/atlas.webp'))).toHaveLength(1);
+  for (const floorProductId of ['kronotex-d80582', 'peshk-natyral-12', 'kronotex-d4955'])
     await loader.prepare({ ...base, floorProductId }, catalog, signal);
-  expect(paths.filter(p => p.endsWith('/lis-natyral-10/atlas.webp'))).toHaveLength(2);
+  expect(paths.filter(p => p.endsWith('/kronotex-d4955/atlas.webp'))).toHaveLength(2);
   expect(loader.bytes()).toBeLessThanOrEqual(6 * 1024 * 1024);
   loader.clear();
   expect(loader.bytes()).toBe(0);

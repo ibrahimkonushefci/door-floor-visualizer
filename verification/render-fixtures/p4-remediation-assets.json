@@ -1,5 +1,5 @@
 {
-  "note": "Conservative controlled pixel-storage bound, not a browser heap measurement. Rendering includes both scene copies, maximum cache limits, two worker material sets, incoming mip chains, four output/presentation buffers, bitmap/canvas/JS material decode buffers and displayed/previous fallback images. Scene preparation is separately bounded: the old worker/scene/result cache are released before three full-resolution decode buffers coexist with the new scene. Browser overhead, retained browser image caches and garbage-collection timing still require a physical heap profile. Runtime textures max512px; physical-scale calibration unresolved.",
+  "note": "Conservative controlled pixel-storage bound, not a browser heap measurement. Rendering includes both scene copies (plus a third while a door-model switch builds the next scene), maximum cache limits, two worker material sets, incoming mip chains, four output/presentation buffers, bitmap/canvas/JS material decode buffers and displayed/previous fallback images. Scene preparation is separately bounded: the old worker/scene/result cache are released before three full-resolution decode buffers coexist with the new scene. Browser overhead, retained browser image caches and garbage-collection timing still require a physical heap profile. Runtime textures max512px; physical-scale calibration unresolved.",
   "results": [
     {
       "scene": "living-render-01",
@@ -7,42 +7,44 @@
       "editableFloorPercent": 27.84566485112564,
       "doorLeafHeightPercent": 27,
       "doorWithCasingHeightPercent": 28.27777777777778,
-      "firstUsefulBytes": 1902506,
+      "firstUsefulBytes": 2400468,
       "firstUsefulTargetBytes": 2621440,
-      "ownedBytes": 230380358,
-      "ownedLimitBytes": 251658240,
+      "ownedBytes": 307120265,
+      "ownedLimitBytes": 335544320,
       "scenePreparationBytes": 116624446,
       "budget": {
         "controllerAndWorkerScene": 65319036,
         "controllerTextureCache": 29360128,
-        "twoWorkerMaterialSets": 11450844,
+        "twoWorkerMaterialSets": 40837770,
         "resultCache": 16777216,
-        "incomingMipBuild": 5725422,
+        "incomingMipBuild": 20418885,
         "fourTransientFrames": 69120000,
         "threeMaterialDecodeBuffers": 12582912,
-        "displayedAndPreviousFallbackImages": 20044800
+        "displayedAndPreviousFallbackImages": 20044800,
+        "doorModelSwitch": 32659518
       }
     },
     {
       "scene": "living-render-01",
       "variant": "light",
       "editableFloorPercent": 27.84568300653592,
-      "doorLeafHeightPercent": 54,
-      "doorWithCasingHeightPercent": 56.55555555555556,
-      "firstUsefulBytes": 1902506,
+      "doorLeafHeightPercent": 27,
+      "doorWithCasingHeightPercent": 28.27777777777778,
+      "firstUsefulBytes": 2400468,
       "firstUsefulTargetBytes": 2621440,
-      "ownedBytes": 117513662,
+      "ownedBytes": 170220221,
       "ownedLimitBytes": 209715200,
       "scenePreparationBytes": 53711098,
       "budget": {
         "controllerAndWorkerScene": 17252340,
         "controllerTextureCache": 29360128,
-        "twoWorkerMaterialSets": 11450844,
+        "twoWorkerMaterialSets": 40837770,
         "resultCache": 16777216,
-        "incomingMipBuild": 5725422,
+        "incomingMipBuild": 20418885,
         "fourTransientFrames": 17280000,
         "threeMaterialDecodeBuffers": 12582912,
-        "displayedAndPreviousFallbackImages": 7084800
+        "displayedAndPreviousFallbackImages": 7084800,
+        "doorModelSwitch": 8626170
       }
     },
     {
@@ -51,7 +53,7 @@
       "editableFloorPercent": 35.339914419934644,
       "doorLeafHeightPercent": 59,
       "doorWithCasingHeightPercent": 62.5,
-      "firstUsefulBytes": 1509407,
+      "firstUsefulBytes": 1321099,
       "firstUsefulTargetBytes": 2621440,
       "ownedBytes": 201979148,
       "ownedLimitBytes": 209715200,
@@ -64,7 +66,8 @@
         "incomingMipBuild": 18461268,
         "fourTransientFrames": 30720000,
         "threeMaterialDecodeBuffers": 12582912,
-        "displayedAndPreviousFallbackImages": 10444800
+        "displayedAndPreviousFallbackImages": 10444800,
+        "doorModelSwitch": 0
       }
     },
     {
@@ -86,7 +89,8 @@
         "incomingMipBuild": 18461268,
         "fourTransientFrames": 30720000,
         "threeMaterialDecodeBuffers": 12582912,
-        "displayedAndPreviousFallbackImages": 10444800
+        "displayedAndPreviousFallbackImages": 10444800,
+        "doorModelSwitch": 0
       }
     },
     {
@@ -95,7 +99,7 @@
       "editableFloorPercent": 17.311521854575172,
       "doorLeafHeightPercent": 51.916666666666664,
       "doorWithCasingHeightPercent": 56.49999999999999,
-      "firstUsefulBytes": 1376800,
+      "firstUsefulBytes": 1203386,
       "firstUsefulTargetBytes": 2621440,
       "ownedBytes": 178806672,
       "ownedLimitBytes": 209715200,
@@ -108,7 +112,8 @@
         "incomingMipBuild": 18461268,
         "fourTransientFrames": 30720000,
         "threeMaterialDecodeBuffers": 12582912,
-        "displayedAndPreviousFallbackImages": 10444800
+        "displayedAndPreviousFallbackImages": 10444800,
+        "doorModelSwitch": 0
       }
     }
   ]

@@ -90,97 +90,6 @@
       "sha256": "0b107dd913e47141b5dfc6ce74c854489ce57851d6ff24f715691aeff1cafe20"
     }
   },
-  "lis-natyral-10-01": {
-    "id": "lis-natyral-10-01",
-    "width": 1774,
-    "height": 887,
-    "focalPoint": [
-      0.5,
-      0.5
-    ],
-    "role": "room",
-    "avif": [
-      {
-        "src": "/media/products/lis-natyral-10-01/320.avif?rev=ca60eb71a56f208580f7f5cde5298f9812aea6783470d8adda65a6676a8167f4",
-        "width": 320,
-        "height": 160,
-        "bytes": 4312,
-        "sha256": "ca60eb71a56f208580f7f5cde5298f9812aea6783470d8adda65a6676a8167f4"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-01/640.avif?rev=40a5172ac8c663991b3eca9dc6400ad0cbbb259f207a388f910e6ea25f908793",
-        "width": 640,
-        "height": 320,
-        "bytes": 16067,
-        "sha256": "40a5172ac8c663991b3eca9dc6400ad0cbbb259f207a388f910e6ea25f908793"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-01/960.avif?rev=8b5514451dd00009772477724e00eef658245104c65f484211ae27ae71420636",
-        "width": 960,
-        "height": 480,
-        "bytes": 36131,
-        "sha256": "8b5514451dd00009772477724e00eef658245104c65f484211ae27ae71420636"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-01/1600.avif?rev=100b79881555ae1547a25cdf98caa3e8f415dd1ca8518d6ea8ae233313a89ec1",
-        "width": 1600,
-        "height": 800,
-        "bytes": 93394,
-        "sha256": "100b79881555ae1547a25cdf98caa3e8f415dd1ca8518d6ea8ae233313a89ec1"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-01/1774.avif?rev=db7ba720dbbb5a1b9673d3ffbcc6492d59f6f50efbd929cb1e0da639b2d84058",
-        "width": 1774,
-        "height": 887,
-        "bytes": 110904,
-        "sha256": "db7ba720dbbb5a1b9673d3ffbcc6492d59f6f50efbd929cb1e0da639b2d84058"
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/products/lis-natyral-10-01/320.webp?rev=2b54961315138ac4270174c93b8a045b8cfeb2724ab884a11b033325c748c3a1",
-        "width": 320,
-        "height": 160,
-        "bytes": 8576,
-        "sha256": "2b54961315138ac4270174c93b8a045b8cfeb2724ab884a11b033325c748c3a1"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-01/640.webp?rev=b8741a97259a7de0f0b427959bc3446b94753e5227f9d212acc8f02045b372c0",
-        "width": 640,
-        "height": 320,
-        "bytes": 33832,
-        "sha256": "b8741a97259a7de0f0b427959bc3446b94753e5227f9d212acc8f02045b372c0"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-01/960.webp?rev=9c48e748496364b010b16025efe43f7c0be4606da9e6ef76c4042182d39d217e",
-        "width": 960,
-        "height": 480,
-        "bytes": 77940,
-        "sha256": "9c48e748496364b010b16025efe43f7c0be4606da9e6ef76c4042182d39d217e"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-01/1600.webp?rev=fde9085b3b829fe8659edbef6630e9f7c96ee0cca109038e13c061962a9d7219",
-        "width": 1600,
-        "height": 800,
-        "bytes": 194798,
-        "sha256": "fde9085b3b829fe8659edbef6630e9f7c96ee0cca109038e13c061962a9d7219"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-01/1774.webp?rev=76f260d9208691a87306a1d0c85099f802e8ca066586c8db49ed53c1f0150157",
-        "width": 1774,
-        "height": 887,
-        "bytes": 234794,
-        "sha256": "76f260d9208691a87306a1d0c85099f802e8ca066586c8db49ed53c1f0150157"
-      }
-    ],
-    "fallback": {
-      "src": "/media/products/lis-natyral-10-01/960.webp?rev=9c48e748496364b010b16025efe43f7c0be4606da9e6ef76c4042182d39d217e",
-      "width": 960,
-      "height": 480,
-      "bytes": 77940,
-      "sha256": "9c48e748496364b010b16025efe43f7c0be4606da9e6ef76c4042182d39d217e"
-    }
-  },
   "dera-lis-01": {
     "id": "dera-lis-01",
     "width": 1773,
@@ -270,97 +179,6 @@
       "height": 480,
       "bytes": 49672,
       "sha256": "0e1f4013fe8131fd04828c07cf4d4ddcab83c8b8039fc231c32b27b841a00fd1"
-    }
-  },
-  "dushk-fshatar-8-01": {
-    "id": "dushk-fshatar-8-01",
-    "width": 1774,
-    "height": 887,
-    "focalPoint": [
-      0.5,
-      0.5
-    ],
-    "role": "room",
-    "avif": [
-      {
-        "src": "/media/products/dushk-fshatar-8-01/320.avif?rev=8a001059b1abaea413f92f1591c3867b40f5702aa072e463bc2545fff86033de",
-        "width": 320,
-        "height": 160,
-        "bytes": 5057,
-        "sha256": "8a001059b1abaea413f92f1591c3867b40f5702aa072e463bc2545fff86033de"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-01/640.avif?rev=8986d6b7f26ed16b6184dce640272ab461b921dc883e819634af607127e39923",
-        "width": 640,
-        "height": 320,
-        "bytes": 17310,
-        "sha256": "8986d6b7f26ed16b6184dce640272ab461b921dc883e819634af607127e39923"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-01/960.avif?rev=aa0e546ee91040c7f5939505add8d4cb7e15b8a458d9b9e98830f90b4753e382",
-        "width": 960,
-        "height": 480,
-        "bytes": 37353,
-        "sha256": "aa0e546ee91040c7f5939505add8d4cb7e15b8a458d9b9e98830f90b4753e382"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-01/1600.avif?rev=0ed46cba826f5ea466878b7804f3f4015a60f8ffdfeab12f842e1b6f3370c012",
-        "width": 1600,
-        "height": 800,
-        "bytes": 93813,
-        "sha256": "0ed46cba826f5ea466878b7804f3f4015a60f8ffdfeab12f842e1b6f3370c012"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-01/1774.avif?rev=da4be3a5f80b3b0b39a1b67d149e22b233b51ede6d7a603908af9d7831b56912",
-        "width": 1774,
-        "height": 887,
-        "bytes": 112033,
-        "sha256": "da4be3a5f80b3b0b39a1b67d149e22b233b51ede6d7a603908af9d7831b56912"
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/products/dushk-fshatar-8-01/320.webp?rev=c306e5a5f5136a8cea72be48082ec38210de62f749f660bd4a4cf31fa34c18d8",
-        "width": 320,
-        "height": 160,
-        "bytes": 10274,
-        "sha256": "c306e5a5f5136a8cea72be48082ec38210de62f749f660bd4a4cf31fa34c18d8"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-01/640.webp?rev=3cf687e78962097a9ad6a2f8c6cc19da8e1dc173074c2967b23318da6c98b903",
-        "width": 640,
-        "height": 320,
-        "bytes": 37922,
-        "sha256": "3cf687e78962097a9ad6a2f8c6cc19da8e1dc173074c2967b23318da6c98b903"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-01/960.webp?rev=51975a2f517cf8a1f9b44fbc6eca850c8635878245f5ed7e2f8455afdd9c5a93",
-        "width": 960,
-        "height": 480,
-        "bytes": 80096,
-        "sha256": "51975a2f517cf8a1f9b44fbc6eca850c8635878245f5ed7e2f8455afdd9c5a93"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-01/1600.webp?rev=c04e4d1de62595e7a585152533212b1e5d8036b8752a0923ffe02727ce947262",
-        "width": 1600,
-        "height": 800,
-        "bytes": 189540,
-        "sha256": "c04e4d1de62595e7a585152533212b1e5d8036b8752a0923ffe02727ce947262"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-01/1774.webp?rev=a8c55a465af9e5fe2a317fe1c40aea3107ae4fb7166e05d85ac6ad548d2db813",
-        "width": 1774,
-        "height": 887,
-        "bytes": 228762,
-        "sha256": "a8c55a465af9e5fe2a317fe1c40aea3107ae4fb7166e05d85ac6ad548d2db813"
-      }
-    ],
-    "fallback": {
-      "src": "/media/products/dushk-fshatar-8-01/960.webp?rev=51975a2f517cf8a1f9b44fbc6eca850c8635878245f5ed7e2f8455afdd9c5a93",
-      "width": 960,
-      "height": 480,
-      "bytes": 80096,
-      "sha256": "51975a2f517cf8a1f9b44fbc6eca850c8635878245f5ed7e2f8455afdd9c5a93"
     }
   },
   "dera-kashmir-01": {
@@ -636,97 +454,6 @@
       "sha256": "b24b937857ea3a0e55bcfe6e9d9cdd446ada984d6158d0e4503edef685a07bef"
     }
   },
-  "lis-natyral-10-02": {
-    "id": "lis-natyral-10-02",
-    "width": 1774,
-    "height": 887,
-    "focalPoint": [
-      0.5,
-      0.5
-    ],
-    "role": "detail",
-    "avif": [
-      {
-        "src": "/media/products/lis-natyral-10-02/320.avif?rev=66c851691f4b5ef34147e7c19acb003e39b23ee5f453afab6bf01ac5b06e2cca",
-        "width": 320,
-        "height": 160,
-        "bytes": 4765,
-        "sha256": "66c851691f4b5ef34147e7c19acb003e39b23ee5f453afab6bf01ac5b06e2cca"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-02/640.avif?rev=b20d73b0b51296cecaa7f172adb50a54462f5a337fc3abf17c7f47cbc8fd4b6c",
-        "width": 640,
-        "height": 320,
-        "bytes": 17562,
-        "sha256": "b20d73b0b51296cecaa7f172adb50a54462f5a337fc3abf17c7f47cbc8fd4b6c"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-02/960.avif?rev=fe874c4b97c52ce19ac2194539096e14772ac3e75cf2024ad28e050a748f6bb4",
-        "width": 960,
-        "height": 480,
-        "bytes": 36551,
-        "sha256": "fe874c4b97c52ce19ac2194539096e14772ac3e75cf2024ad28e050a748f6bb4"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-02/1600.avif?rev=196b7d06690d81489c3d85c4ff5db3909daeb4f91888f3ec5fbfd8efe6c236ad",
-        "width": 1600,
-        "height": 800,
-        "bytes": 82782,
-        "sha256": "196b7d06690d81489c3d85c4ff5db3909daeb4f91888f3ec5fbfd8efe6c236ad"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-02/1774.avif?rev=f01f4603c930ec8648bc84151ae496ab969756a8bdfaea4eb191b7c2986a6647",
-        "width": 1774,
-        "height": 887,
-        "bytes": 95672,
-        "sha256": "f01f4603c930ec8648bc84151ae496ab969756a8bdfaea4eb191b7c2986a6647"
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/products/lis-natyral-10-02/320.webp?rev=4a2ea86428dfcd56f50c933913281a13000f383047744128b9f16c11b5dd1a4a",
-        "width": 320,
-        "height": 160,
-        "bytes": 10024,
-        "sha256": "4a2ea86428dfcd56f50c933913281a13000f383047744128b9f16c11b5dd1a4a"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-02/640.webp?rev=49fb3621c4d2ee9d2e27a039a4f2f5f81e5ce57189ef51ec0b40c564a9611067",
-        "width": 640,
-        "height": 320,
-        "bytes": 38372,
-        "sha256": "49fb3621c4d2ee9d2e27a039a4f2f5f81e5ce57189ef51ec0b40c564a9611067"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-02/960.webp?rev=2b3e3311400871ed736f8f642245ccfa4b27fd124050d329fe4c01f8f8ce9551",
-        "width": 960,
-        "height": 480,
-        "bytes": 80010,
-        "sha256": "2b3e3311400871ed736f8f642245ccfa4b27fd124050d329fe4c01f8f8ce9551"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-02/1600.webp?rev=9789a4684fa1816c9996c52c0ac59dcc806d534d34201abf9bc1b0e146270a2d",
-        "width": 1600,
-        "height": 800,
-        "bytes": 172608,
-        "sha256": "9789a4684fa1816c9996c52c0ac59dcc806d534d34201abf9bc1b0e146270a2d"
-      },
-      {
-        "src": "/media/products/lis-natyral-10-02/1774.webp?rev=f27835eeecefb695b83f76e72c0b68b32ea2a672243930e724d8cbfd71521ab5",
-        "width": 1774,
-        "height": 887,
-        "bytes": 200940,
-        "sha256": "f27835eeecefb695b83f76e72c0b68b32ea2a672243930e724d8cbfd71521ab5"
-      }
-    ],
-    "fallback": {
-      "src": "/media/products/lis-natyral-10-02/960.webp?rev=2b3e3311400871ed736f8f642245ccfa4b27fd124050d329fe4c01f8f8ce9551",
-      "width": 960,
-      "height": 480,
-      "bytes": 80010,
-      "sha256": "2b3e3311400871ed736f8f642245ccfa4b27fd124050d329fe4c01f8f8ce9551"
-    }
-  },
   "dera-lis-02": {
     "id": "dera-lis-02",
     "width": 1774,
@@ -816,97 +543,6 @@
       "height": 480,
       "bytes": 31836,
       "sha256": "4399733ec93800d1bdf8e8997c759c556c896f3bb4053a14f5436be06a56ce54"
-    }
-  },
-  "dushk-fshatar-8-02": {
-    "id": "dushk-fshatar-8-02",
-    "width": 1774,
-    "height": 887,
-    "focalPoint": [
-      0.5,
-      0.5
-    ],
-    "role": "detail",
-    "avif": [
-      {
-        "src": "/media/products/dushk-fshatar-8-02/320.avif?rev=454338653061e4db0a605032004fa904d9c213edcbf2c04bd2aaff4638399ae0",
-        "width": 320,
-        "height": 160,
-        "bytes": 5382,
-        "sha256": "454338653061e4db0a605032004fa904d9c213edcbf2c04bd2aaff4638399ae0"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-02/640.avif?rev=5cd4ea62fbb0bf7f721b6170b3dbc3f2a320516da1bad06e83791e7582e8d042",
-        "width": 640,
-        "height": 320,
-        "bytes": 19153,
-        "sha256": "5cd4ea62fbb0bf7f721b6170b3dbc3f2a320516da1bad06e83791e7582e8d042"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-02/960.avif?rev=ca992cd78bc9d8b5731e768c6b0c33e74c665678bcc5d7d3497b9e4a3df4fbb5",
-        "width": 960,
-        "height": 480,
-        "bytes": 39023,
-        "sha256": "ca992cd78bc9d8b5731e768c6b0c33e74c665678bcc5d7d3497b9e4a3df4fbb5"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-02/1600.avif?rev=c40ae6e804229e852c5b777c84c62650a7d7da78c83062c7cfffb092e88037ba",
-        "width": 1600,
-        "height": 800,
-        "bytes": 86521,
-        "sha256": "c40ae6e804229e852c5b777c84c62650a7d7da78c83062c7cfffb092e88037ba"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-02/1774.avif?rev=c5f3e69ff225817bd6937fba31d0873710da28d61e1ae0fa8f6052bf9359dfeb",
-        "width": 1774,
-        "height": 887,
-        "bytes": 99885,
-        "sha256": "c5f3e69ff225817bd6937fba31d0873710da28d61e1ae0fa8f6052bf9359dfeb"
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/products/dushk-fshatar-8-02/320.webp?rev=f6239e5b37d3922679ab1e201bbbc783bb45a17dd68be87d0f0c21132650fd65",
-        "width": 320,
-        "height": 160,
-        "bytes": 11632,
-        "sha256": "f6239e5b37d3922679ab1e201bbbc783bb45a17dd68be87d0f0c21132650fd65"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-02/640.webp?rev=4d4efa680b582f40154fe4c64a429853e22b50b373f416beed95338c3dfb3df5",
-        "width": 640,
-        "height": 320,
-        "bytes": 41738,
-        "sha256": "4d4efa680b582f40154fe4c64a429853e22b50b373f416beed95338c3dfb3df5"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-02/960.webp?rev=cae579e1023bd1701af989f55752623a4e2e11e09c01fb6c72b3d7836cf2a9d6",
-        "width": 960,
-        "height": 480,
-        "bytes": 82748,
-        "sha256": "cae579e1023bd1701af989f55752623a4e2e11e09c01fb6c72b3d7836cf2a9d6"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-02/1600.webp?rev=47391ce617d944edb81c2bcf1b091b86445def85914577130e69d021f8734ec0",
-        "width": 1600,
-        "height": 800,
-        "bytes": 172570,
-        "sha256": "47391ce617d944edb81c2bcf1b091b86445def85914577130e69d021f8734ec0"
-      },
-      {
-        "src": "/media/products/dushk-fshatar-8-02/1774.webp?rev=e1798a3816177a602f7fc12a00828bb56f14801962c00e113e76141c122edfdb",
-        "width": 1774,
-        "height": 887,
-        "bytes": 200846,
-        "sha256": "e1798a3816177a602f7fc12a00828bb56f14801962c00e113e76141c122edfdb"
-      }
-    ],
-    "fallback": {
-      "src": "/media/products/dushk-fshatar-8-02/960.webp?rev=cae579e1023bd1701af989f55752623a4e2e11e09c01fb6c72b3d7836cf2a9d6",
-      "width": 960,
-      "height": 480,
-      "bytes": 82748,
-      "sha256": "cae579e1023bd1701af989f55752623a4e2e11e09c01fb6c72b3d7836cf2a9d6"
     }
   },
   "dera-kashmir-02": {
@@ -1273,188 +909,6 @@
       "sha256": "73f5bc9cc17048a9d4c6397219d879be7905945c56c275ac54e8745b410e48b5"
     }
   },
-  "arre-klasike-12-01": {
-    "id": "arre-klasike-12-01",
-    "width": 1774,
-    "height": 887,
-    "focalPoint": [
-      0.25,
-      0.5
-    ],
-    "role": "product",
-    "avif": [
-      {
-        "src": "/media/products/arre-klasike-12-01/320.avif?rev=f47ff220ba2de3cfa4c213d68370f5d40c6b93a80e5c57ccdd14eab83067b828",
-        "width": 320,
-        "height": 160,
-        "bytes": 4692,
-        "sha256": "f47ff220ba2de3cfa4c213d68370f5d40c6b93a80e5c57ccdd14eab83067b828"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-01/640.avif?rev=db58e9cd3b46271b19bdfa7955ba2fa44f3a909562f5412cc56b46130e959c26",
-        "width": 640,
-        "height": 320,
-        "bytes": 16255,
-        "sha256": "db58e9cd3b46271b19bdfa7955ba2fa44f3a909562f5412cc56b46130e959c26"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-01/960.avif?rev=94f424696493f9a24c42f23bbb9062e93d23f3833f3f1f81a5632d235ece035a",
-        "width": 960,
-        "height": 480,
-        "bytes": 35437,
-        "sha256": "94f424696493f9a24c42f23bbb9062e93d23f3833f3f1f81a5632d235ece035a"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-01/1600.avif?rev=bac9251186a4a685730ab842d0d46513281f756e39cbfcfee13b516941c23840",
-        "width": 1600,
-        "height": 800,
-        "bytes": 89019,
-        "sha256": "bac9251186a4a685730ab842d0d46513281f756e39cbfcfee13b516941c23840"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-01/1774.avif?rev=c9e02a893df7d0b82379a82d5b83aa3bdd77e9895e7067cdba412690124b8412",
-        "width": 1774,
-        "height": 887,
-        "bytes": 105638,
-        "sha256": "c9e02a893df7d0b82379a82d5b83aa3bdd77e9895e7067cdba412690124b8412"
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/products/arre-klasike-12-01/320.webp?rev=5057ccb88cd7daa16810ac239770dc735771046f5e9ef09e5bdb7803f5b715b7",
-        "width": 320,
-        "height": 160,
-        "bytes": 8990,
-        "sha256": "5057ccb88cd7daa16810ac239770dc735771046f5e9ef09e5bdb7803f5b715b7"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-01/640.webp?rev=86a3d566e3a77726466399ed2313a2b1cd23cd6d2ce7fea62c3a50f06df5e172",
-        "width": 640,
-        "height": 320,
-        "bytes": 34350,
-        "sha256": "86a3d566e3a77726466399ed2313a2b1cd23cd6d2ce7fea62c3a50f06df5e172"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-01/960.webp?rev=6c37600f90a015819a45d81a2927f598109e3773060abb046308f57aeb7509ff",
-        "width": 960,
-        "height": 480,
-        "bytes": 77578,
-        "sha256": "6c37600f90a015819a45d81a2927f598109e3773060abb046308f57aeb7509ff"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-01/1600.webp?rev=2813904d5f82a5f575ea6e2efe3fa84f089902add11128c23ac1a7c15314852f",
-        "width": 1600,
-        "height": 800,
-        "bytes": 191332,
-        "sha256": "2813904d5f82a5f575ea6e2efe3fa84f089902add11128c23ac1a7c15314852f"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-01/1774.webp?rev=cf199282bf4306159e444ec45069b82ec0de0519cfa76eea1be20c8e7cd3a870",
-        "width": 1774,
-        "height": 887,
-        "bytes": 230830,
-        "sha256": "cf199282bf4306159e444ec45069b82ec0de0519cfa76eea1be20c8e7cd3a870"
-      }
-    ],
-    "fallback": {
-      "src": "/media/products/arre-klasike-12-01/960.webp?rev=6c37600f90a015819a45d81a2927f598109e3773060abb046308f57aeb7509ff",
-      "width": 960,
-      "height": 480,
-      "bytes": 77578,
-      "sha256": "6c37600f90a015819a45d81a2927f598109e3773060abb046308f57aeb7509ff"
-    }
-  },
-  "arre-klasike-12-02": {
-    "id": "arre-klasike-12-02",
-    "width": 1774,
-    "height": 887,
-    "focalPoint": [
-      0.25,
-      0.5
-    ],
-    "role": "detail",
-    "avif": [
-      {
-        "src": "/media/products/arre-klasike-12-02/320.avif?rev=5c916f9a9e651fe28d25a026c4e268690ca330665f1b76eea5152e79b423e8cb",
-        "width": 320,
-        "height": 160,
-        "bytes": 4466,
-        "sha256": "5c916f9a9e651fe28d25a026c4e268690ca330665f1b76eea5152e79b423e8cb"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-02/640.avif?rev=5b43e5ebf7cf62055e697519bde2efca8c69da095758b41444851337825859dc",
-        "width": 640,
-        "height": 320,
-        "bytes": 16233,
-        "sha256": "5b43e5ebf7cf62055e697519bde2efca8c69da095758b41444851337825859dc"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-02/960.avif?rev=0a41942fae62c123c8a5e383785129bd26541e13291435e5dad78a9728a2a043",
-        "width": 960,
-        "height": 480,
-        "bytes": 35638,
-        "sha256": "0a41942fae62c123c8a5e383785129bd26541e13291435e5dad78a9728a2a043"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-02/1600.avif?rev=819666d8ce34b6b7579645544791842fd15fa9825236a699b755a97a7672fc19",
-        "width": 1600,
-        "height": 800,
-        "bytes": 90667,
-        "sha256": "819666d8ce34b6b7579645544791842fd15fa9825236a699b755a97a7672fc19"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-02/1774.avif?rev=07141286606ceec0bdfd921e59962e3700dc7d29b9f4388afd13364d05e9a106",
-        "width": 1774,
-        "height": 887,
-        "bytes": 108701,
-        "sha256": "07141286606ceec0bdfd921e59962e3700dc7d29b9f4388afd13364d05e9a106"
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/products/arre-klasike-12-02/320.webp?rev=2bbabfd5fb233206fc9632c3ef8c7b80997a01e0dd44241619cd71098c8b08d0",
-        "width": 320,
-        "height": 160,
-        "bytes": 9030,
-        "sha256": "2bbabfd5fb233206fc9632c3ef8c7b80997a01e0dd44241619cd71098c8b08d0"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-02/640.webp?rev=9310a725ac9454a577e1296eec054ce6ce19c07a2e819efacb74414739963901",
-        "width": 640,
-        "height": 320,
-        "bytes": 34880,
-        "sha256": "9310a725ac9454a577e1296eec054ce6ce19c07a2e819efacb74414739963901"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-02/960.webp?rev=5b4b82d4e5157d482a89c2a81fe5efc1a54577e9d8451f20ee9878d4e59e332e",
-        "width": 960,
-        "height": 480,
-        "bytes": 80758,
-        "sha256": "5b4b82d4e5157d482a89c2a81fe5efc1a54577e9d8451f20ee9878d4e59e332e"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-02/1600.webp?rev=605b87f01c313087a198804e41f2783ecce71fe70e84e057ab12f6544fc7f6dc",
-        "width": 1600,
-        "height": 800,
-        "bytes": 200680,
-        "sha256": "605b87f01c313087a198804e41f2783ecce71fe70e84e057ab12f6544fc7f6dc"
-      },
-      {
-        "src": "/media/products/arre-klasike-12-02/1774.webp?rev=6e5617380a7881ff83bd482058817ebd06fe832507e4b0465d835cef930248d9",
-        "width": 1774,
-        "height": 887,
-        "bytes": 241494,
-        "sha256": "6e5617380a7881ff83bd482058817ebd06fe832507e4b0465d835cef930248d9"
-      }
-    ],
-    "fallback": {
-      "src": "/media/products/arre-klasike-12-02/960.webp?rev=5b4b82d4e5157d482a89c2a81fe5efc1a54577e9d8451f20ee9878d4e59e332e",
-      "width": 960,
-      "height": 480,
-      "bytes": 80758,
-      "sha256": "5b4b82d4e5157d482a89c2a81fe5efc1a54577e9d8451f20ee9878d4e59e332e"
-    }
-  },
   "dera-xham-01": {
     "id": "dera-xham-01",
     "width": 1774,
@@ -1635,188 +1089,6 @@
       "height": 480,
       "bytes": 29184,
       "sha256": "f61b623c3118e551eff1c436b8c34d2d3edf35e8aa4c31f588335adb3f664c8a"
-    }
-  },
-  "hirte-skandinave-8-01": {
-    "id": "hirte-skandinave-8-01",
-    "width": 1774,
-    "height": 887,
-    "focalPoint": [
-      0.25,
-      0.5
-    ],
-    "role": "product",
-    "avif": [
-      {
-        "src": "/media/products/hirte-skandinave-8-01/320.avif?rev=d6ea3171d527d804e052db3f9852675125663db0432ef53e83601622b0856e05",
-        "width": 320,
-        "height": 160,
-        "bytes": 3795,
-        "sha256": "d6ea3171d527d804e052db3f9852675125663db0432ef53e83601622b0856e05"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-01/640.avif?rev=3725204b4f53e2d7961443735aa7f7d49f6c58ce990469719f9613179420249c",
-        "width": 640,
-        "height": 320,
-        "bytes": 12649,
-        "sha256": "3725204b4f53e2d7961443735aa7f7d49f6c58ce990469719f9613179420249c"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-01/960.avif?rev=64c84eacb0a09faead926a2c2db833576e0b91d21f80a0525a1005b6beec270a",
-        "width": 960,
-        "height": 480,
-        "bytes": 26998,
-        "sha256": "64c84eacb0a09faead926a2c2db833576e0b91d21f80a0525a1005b6beec270a"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-01/1600.avif?rev=76589e5b7d650e5ba510fbbe039326ea0f60e4db414e8e88ab3acf9f134dbeed",
-        "width": 1600,
-        "height": 800,
-        "bytes": 68483,
-        "sha256": "76589e5b7d650e5ba510fbbe039326ea0f60e4db414e8e88ab3acf9f134dbeed"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-01/1774.avif?rev=45f9b96bff6dec88e936a528fecd4c98657bd5bea6447b2cf60be25f053b0b41",
-        "width": 1774,
-        "height": 887,
-        "bytes": 82214,
-        "sha256": "45f9b96bff6dec88e936a528fecd4c98657bd5bea6447b2cf60be25f053b0b41"
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/products/hirte-skandinave-8-01/320.webp?rev=46f0ad810d4684ab241222bbb082869bf9d91be9aba475d54f4d3929ed87644a",
-        "width": 320,
-        "height": 160,
-        "bytes": 7014,
-        "sha256": "46f0ad810d4684ab241222bbb082869bf9d91be9aba475d54f4d3929ed87644a"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-01/640.webp?rev=9dba50acf8531325ceabe26561abaa7ebf72810c77461c30613e67514939b3e8",
-        "width": 640,
-        "height": 320,
-        "bytes": 25566,
-        "sha256": "9dba50acf8531325ceabe26561abaa7ebf72810c77461c30613e67514939b3e8"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-01/960.webp?rev=447806b5f9aa6c82170295c55921ce237dc951c2613160ca3587ca61bdd23791",
-        "width": 960,
-        "height": 480,
-        "bytes": 56614,
-        "sha256": "447806b5f9aa6c82170295c55921ce237dc951c2613160ca3587ca61bdd23791"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-01/1600.webp?rev=a89e9ed7e27cf691f78cad95f18fc6ac9dbe3ae33408c2aaad621329c0acbb09",
-        "width": 1600,
-        "height": 800,
-        "bytes": 137144,
-        "sha256": "a89e9ed7e27cf691f78cad95f18fc6ac9dbe3ae33408c2aaad621329c0acbb09"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-01/1774.webp?rev=c511ceedd99ca0ef6ee31a03f30a506a3bc162555a49bcefaba3aa7a4f3ef589",
-        "width": 1774,
-        "height": 887,
-        "bytes": 163096,
-        "sha256": "c511ceedd99ca0ef6ee31a03f30a506a3bc162555a49bcefaba3aa7a4f3ef589"
-      }
-    ],
-    "fallback": {
-      "src": "/media/products/hirte-skandinave-8-01/960.webp?rev=447806b5f9aa6c82170295c55921ce237dc951c2613160ca3587ca61bdd23791",
-      "width": 960,
-      "height": 480,
-      "bytes": 56614,
-      "sha256": "447806b5f9aa6c82170295c55921ce237dc951c2613160ca3587ca61bdd23791"
-    }
-  },
-  "hirte-skandinave-8-02": {
-    "id": "hirte-skandinave-8-02",
-    "width": 1774,
-    "height": 887,
-    "focalPoint": [
-      0.25,
-      0.5
-    ],
-    "role": "detail",
-    "avif": [
-      {
-        "src": "/media/products/hirte-skandinave-8-02/320.avif?rev=2aa33814acf11330c4d0f6cbc4e1862cdb5403f91cf4774cf2855b64f8917bbe",
-        "width": 320,
-        "height": 160,
-        "bytes": 3748,
-        "sha256": "2aa33814acf11330c4d0f6cbc4e1862cdb5403f91cf4774cf2855b64f8917bbe"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-02/640.avif?rev=fb389a780ef279311c875a91caf23173a08209d3e7ec74ff40e30393a63e7421",
-        "width": 640,
-        "height": 320,
-        "bytes": 13895,
-        "sha256": "fb389a780ef279311c875a91caf23173a08209d3e7ec74ff40e30393a63e7421"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-02/960.avif?rev=c4257fac3fdf01596e68498c29595c681549c48e36fc83d98d4f0f5a69831926",
-        "width": 960,
-        "height": 480,
-        "bytes": 30379,
-        "sha256": "c4257fac3fdf01596e68498c29595c681549c48e36fc83d98d4f0f5a69831926"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-02/1600.avif?rev=9b761130417a48c607b45675a777cefa7a31833d1f6cd5484e6eb352ff3c6c9a",
-        "width": 1600,
-        "height": 800,
-        "bytes": 78594,
-        "sha256": "9b761130417a48c607b45675a777cefa7a31833d1f6cd5484e6eb352ff3c6c9a"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-02/1774.avif?rev=9cd6e1191264769c40787208d64d322389f39f1d8feb5cae4749660ce2196617",
-        "width": 1774,
-        "height": 887,
-        "bytes": 92924,
-        "sha256": "9cd6e1191264769c40787208d64d322389f39f1d8feb5cae4749660ce2196617"
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/products/hirte-skandinave-8-02/320.webp?rev=9e4ae6aa3a2e537801536c3ebbc776d3c7079f987b1782d94d930204bf6324eb",
-        "width": 320,
-        "height": 160,
-        "bytes": 7446,
-        "sha256": "9e4ae6aa3a2e537801536c3ebbc776d3c7079f987b1782d94d930204bf6324eb"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-02/640.webp?rev=3eb1763867a65fa4570e0a5bb488f0f6ae7f9199defe04ed8d4b462860b9dac0",
-        "width": 640,
-        "height": 320,
-        "bytes": 29664,
-        "sha256": "3eb1763867a65fa4570e0a5bb488f0f6ae7f9199defe04ed8d4b462860b9dac0"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-02/960.webp?rev=eee9d5a8111f245b041ca27ac2f23f12c98937b6153f32d2c5c5d3bc85ed220b",
-        "width": 960,
-        "height": 480,
-        "bytes": 67840,
-        "sha256": "eee9d5a8111f245b041ca27ac2f23f12c98937b6153f32d2c5c5d3bc85ed220b"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-02/1600.webp?rev=12169f4fb9f1e4c19f4673dae95950c43cf376c7a93d48781ec31c7459249f63",
-        "width": 1600,
-        "height": 800,
-        "bytes": 166052,
-        "sha256": "12169f4fb9f1e4c19f4673dae95950c43cf376c7a93d48781ec31c7459249f63"
-      },
-      {
-        "src": "/media/products/hirte-skandinave-8-02/1774.webp?rev=728cdf8a19034b7d1599b72aa5e6b282bf356892162a24ae995f54a82595ce91",
-        "width": 1774,
-        "height": 887,
-        "bytes": 199670,
-        "sha256": "728cdf8a19034b7d1599b72aa5e6b282bf356892162a24ae995f54a82595ce91"
-      }
-    ],
-    "fallback": {
-      "src": "/media/products/hirte-skandinave-8-02/960.webp?rev=eee9d5a8111f245b041ca27ac2f23f12c98937b6153f32d2c5c5d3bc85ed220b",
-      "width": 960,
-      "height": 480,
-      "bytes": 67840,
-      "sha256": "eee9d5a8111f245b041ca27ac2f23f12c98937b6153f32d2c5c5d3bc85ed220b"
     }
   },
   "pervaze-mdf-01": {
@@ -2181,6 +1453,1462 @@
       "height": 480,
       "bytes": 22550,
       "sha256": "14334ff98811720162a79ec221921943ac5f1c065f36327f60ea4fdd4518cfdf"
+    }
+  },
+  "kronotex-d4955-01": {
+    "id": "kronotex-d4955-01",
+    "width": 2400,
+    "height": 1800,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "room",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d4955-01/320.avif?rev=2059f48cd5152d225a82702eca87e2786734916757f25431c8f3938dd0485b04",
+        "width": 320,
+        "height": 240,
+        "bytes": 4934,
+        "sha256": "2059f48cd5152d225a82702eca87e2786734916757f25431c8f3938dd0485b04"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-01/640.avif?rev=da5a3ce6175b9c6b45879cb3e23bc0650983749704f12d30cb94086959ed41e5",
+        "width": 640,
+        "height": 480,
+        "bytes": 14950,
+        "sha256": "da5a3ce6175b9c6b45879cb3e23bc0650983749704f12d30cb94086959ed41e5"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-01/960.avif?rev=f9f896b1ea0ea5792853454cc3afd8739f53073849114caa5484a55a75778683",
+        "width": 960,
+        "height": 720,
+        "bytes": 28754,
+        "sha256": "f9f896b1ea0ea5792853454cc3afd8739f53073849114caa5484a55a75778683"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-01/1600.avif?rev=46ed879d48632240e62333f2c3cf7139115446cc8c9f03ac8abbb1bb819b099a",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 68708,
+        "sha256": "46ed879d48632240e62333f2c3cf7139115446cc8c9f03ac8abbb1bb819b099a"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-01/2400.avif?rev=bc1872baa5490189816a82d13f4933588744226106c13388b9661bc5cf2e6af5",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 136904,
+        "sha256": "bc1872baa5490189816a82d13f4933588744226106c13388b9661bc5cf2e6af5"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d4955-01/320.webp?rev=e91705d0fa92a0cc1c700b8ad5d35292656dc88846bb06e3ecf3538b56902ab8",
+        "width": 320,
+        "height": 240,
+        "bytes": 7884,
+        "sha256": "e91705d0fa92a0cc1c700b8ad5d35292656dc88846bb06e3ecf3538b56902ab8"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-01/640.webp?rev=82043bda68fc93d59c1290d6d56ad31ff9036b8d21b2d80f6f383505c1bb9b5a",
+        "width": 640,
+        "height": 480,
+        "bytes": 26650,
+        "sha256": "82043bda68fc93d59c1290d6d56ad31ff9036b8d21b2d80f6f383505c1bb9b5a"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-01/960.webp?rev=67d92d06de25db1d75ea29ec15cd24c2fb6d28d8de4d29aae1b419da0437ac3c",
+        "width": 960,
+        "height": 720,
+        "bytes": 55140,
+        "sha256": "67d92d06de25db1d75ea29ec15cd24c2fb6d28d8de4d29aae1b419da0437ac3c"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-01/1600.webp?rev=f59babf83a72b92533708bb88799f714e670369bdec7ba8971f674f422ac0630",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 141786,
+        "sha256": "f59babf83a72b92533708bb88799f714e670369bdec7ba8971f674f422ac0630"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-01/2400.webp?rev=23a097fb60ee6f3d5f91d87eeb17cb39dbabeb729781237c732274a6963d2ae2",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 276498,
+        "sha256": "23a097fb60ee6f3d5f91d87eeb17cb39dbabeb729781237c732274a6963d2ae2"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d4955-01/960.webp?rev=67d92d06de25db1d75ea29ec15cd24c2fb6d28d8de4d29aae1b419da0437ac3c",
+      "width": 960,
+      "height": 720,
+      "bytes": 55140,
+      "sha256": "67d92d06de25db1d75ea29ec15cd24c2fb6d28d8de4d29aae1b419da0437ac3c"
+    }
+  },
+  "kronotex-d4955-02": {
+    "id": "kronotex-d4955-02",
+    "width": 1800,
+    "height": 1200,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d4955-02/320.avif?rev=c9771f89fed173a75e04974d3b18f07e386592c52e489fe884ee69a879caadfa",
+        "width": 320,
+        "height": 213,
+        "bytes": 2603,
+        "sha256": "c9771f89fed173a75e04974d3b18f07e386592c52e489fe884ee69a879caadfa"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-02/640.avif?rev=8bc8ccb900fd04f260b4c2f6ef4ee21fe5051365a073fb690fcc73c52cc8fed5",
+        "width": 640,
+        "height": 427,
+        "bytes": 11465,
+        "sha256": "8bc8ccb900fd04f260b4c2f6ef4ee21fe5051365a073fb690fcc73c52cc8fed5"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-02/960.avif?rev=493a7f9d2c3680d369c7d17ddd39c086c1f81d5e2bca87d31de66cd30f7c8fc4",
+        "width": 960,
+        "height": 640,
+        "bytes": 28584,
+        "sha256": "493a7f9d2c3680d369c7d17ddd39c086c1f81d5e2bca87d31de66cd30f7c8fc4"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-02/1600.avif?rev=97dcc2576df411cddb3ca8b596625bb9e8fbef567772ca95b4484f6700b35af1",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 72245,
+        "sha256": "97dcc2576df411cddb3ca8b596625bb9e8fbef567772ca95b4484f6700b35af1"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-02/1800.avif?rev=6ed57f1f4927f214ab564693b34b5640fa6718fc88a865d02c4c7399ba79f479",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 96368,
+        "sha256": "6ed57f1f4927f214ab564693b34b5640fa6718fc88a865d02c4c7399ba79f479"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d4955-02/320.webp?rev=9db1fa26705dbcd14f06fe61a8b6418190f76dce3444753d4ac73e2bfa08bc88",
+        "width": 320,
+        "height": 213,
+        "bytes": 3528,
+        "sha256": "9db1fa26705dbcd14f06fe61a8b6418190f76dce3444753d4ac73e2bfa08bc88"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-02/640.webp?rev=19cef1735bbc8608db19b66e1a24ffe3e31401a1090a9d040d077ec6854bb244",
+        "width": 640,
+        "height": 427,
+        "bytes": 19240,
+        "sha256": "19cef1735bbc8608db19b66e1a24ffe3e31401a1090a9d040d077ec6854bb244"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-02/960.webp?rev=6b23b1877f02cffb3ebbb51f51d723de37de128a1a071984a5bac86028bbf4c5",
+        "width": 960,
+        "height": 640,
+        "bytes": 53048,
+        "sha256": "6b23b1877f02cffb3ebbb51f51d723de37de128a1a071984a5bac86028bbf4c5"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-02/1600.webp?rev=92080a39e6b7ab59b702115af9f8c69ad6eb197453ce7cce2ef5e0e2c550610a",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 148318,
+        "sha256": "92080a39e6b7ab59b702115af9f8c69ad6eb197453ce7cce2ef5e0e2c550610a"
+      },
+      {
+        "src": "/media/products/kronotex-d4955-02/1800.webp?rev=c26d83385e2c4c3b8a903b4fa4172e768fe9d6a2c31bfc8390cd1dfa9f7b0051",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 194798,
+        "sha256": "c26d83385e2c4c3b8a903b4fa4172e768fe9d6a2c31bfc8390cd1dfa9f7b0051"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d4955-02/960.webp?rev=6b23b1877f02cffb3ebbb51f51d723de37de128a1a071984a5bac86028bbf4c5",
+      "width": 960,
+      "height": 640,
+      "bytes": 53048,
+      "sha256": "6b23b1877f02cffb3ebbb51f51d723de37de128a1a071984a5bac86028bbf4c5"
+    }
+  },
+  "kronotex-d80582-01": {
+    "id": "kronotex-d80582-01",
+    "width": 2400,
+    "height": 1800,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "room",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d80582-01/320.avif?rev=3389ecfebf98a1c09a760e34559744c45d82f10e5690251207e8ac8a85e942e2",
+        "width": 320,
+        "height": 240,
+        "bytes": 4810,
+        "sha256": "3389ecfebf98a1c09a760e34559744c45d82f10e5690251207e8ac8a85e942e2"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-01/640.avif?rev=5afbb63808bda83b3e41c2fcb21b27f6ca27fc4d976060f5a9f938755b25aa6e",
+        "width": 640,
+        "height": 480,
+        "bytes": 14382,
+        "sha256": "5afbb63808bda83b3e41c2fcb21b27f6ca27fc4d976060f5a9f938755b25aa6e"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-01/960.avif?rev=ac4b0bd9fcf8c9bfb46339656bf13ab7b03dcce543cbadebabc35ee60a26da29",
+        "width": 960,
+        "height": 720,
+        "bytes": 27686,
+        "sha256": "ac4b0bd9fcf8c9bfb46339656bf13ab7b03dcce543cbadebabc35ee60a26da29"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-01/1600.avif?rev=99759399ca85051d84901256fb30b4e6f19c335a8a0594af6fa8d4296216c372",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 65818,
+        "sha256": "99759399ca85051d84901256fb30b4e6f19c335a8a0594af6fa8d4296216c372"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-01/2400.avif?rev=42c2e44f3bd6e4a850cd2279d9b85e502d8c3f08e16efbe757eb10bd004504d4",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 131205,
+        "sha256": "42c2e44f3bd6e4a850cd2279d9b85e502d8c3f08e16efbe757eb10bd004504d4"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d80582-01/320.webp?rev=433642432b7dd05676516c0aa05858a1e61bf4e4a08e9e4e68f71431a1b09b29",
+        "width": 320,
+        "height": 240,
+        "bytes": 7662,
+        "sha256": "433642432b7dd05676516c0aa05858a1e61bf4e4a08e9e4e68f71431a1b09b29"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-01/640.webp?rev=8b829e5dda47ec799318768e5214e6853bcc9a738bb48256c1f954579f77365d",
+        "width": 640,
+        "height": 480,
+        "bytes": 25474,
+        "sha256": "8b829e5dda47ec799318768e5214e6853bcc9a738bb48256c1f954579f77365d"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-01/960.webp?rev=41688bb7520d068122a816e4be6a778f1348c3427517be6961952befd4f0b62f",
+        "width": 960,
+        "height": 720,
+        "bytes": 52740,
+        "sha256": "41688bb7520d068122a816e4be6a778f1348c3427517be6961952befd4f0b62f"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-01/1600.webp?rev=c0cee818b8fee885a95077e305c465942d4d03056453e734393945234ba6a9c5",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 136290,
+        "sha256": "c0cee818b8fee885a95077e305c465942d4d03056453e734393945234ba6a9c5"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-01/2400.webp?rev=08112eb9efbe6276793359a905a54a12477e98fb5de9a2ebe6fa6ddca59c8f9d",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 265160,
+        "sha256": "08112eb9efbe6276793359a905a54a12477e98fb5de9a2ebe6fa6ddca59c8f9d"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d80582-01/960.webp?rev=41688bb7520d068122a816e4be6a778f1348c3427517be6961952befd4f0b62f",
+      "width": 960,
+      "height": 720,
+      "bytes": 52740,
+      "sha256": "41688bb7520d068122a816e4be6a778f1348c3427517be6961952befd4f0b62f"
+    }
+  },
+  "kronotex-d80582-02": {
+    "id": "kronotex-d80582-02",
+    "width": 1800,
+    "height": 1200,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d80582-02/320.avif?rev=dec4ad9501e1fe745cb440f9807c761f07d0a3fb4f34237b11d50adbfdc79f15",
+        "width": 320,
+        "height": 213,
+        "bytes": 2279,
+        "sha256": "dec4ad9501e1fe745cb440f9807c761f07d0a3fb4f34237b11d50adbfdc79f15"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-02/640.avif?rev=bd0831eed5d82de89a40139eb335759bfe6638075d9586f115f64f03eb2cdd61",
+        "width": 640,
+        "height": 427,
+        "bytes": 10762,
+        "sha256": "bd0831eed5d82de89a40139eb335759bfe6638075d9586f115f64f03eb2cdd61"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-02/960.avif?rev=0dc98fd7942293a024495a683ed942ce1927ead4a7e30f664c076dc06c872729",
+        "width": 960,
+        "height": 640,
+        "bytes": 27009,
+        "sha256": "0dc98fd7942293a024495a683ed942ce1927ead4a7e30f664c076dc06c872729"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-02/1600.avif?rev=cea9c0d58588aeeda85a4846775b5af7a7b4d667c1d59fadd0a66ba201bf568a",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 68096,
+        "sha256": "cea9c0d58588aeeda85a4846775b5af7a7b4d667c1d59fadd0a66ba201bf568a"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-02/1800.avif?rev=842bec27e160dee4d60ce989556e4605cce1b302441b7fac6c33fb4199929961",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 90513,
+        "sha256": "842bec27e160dee4d60ce989556e4605cce1b302441b7fac6c33fb4199929961"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d80582-02/320.webp?rev=222a13955a48da75af324e0a7dc9be1f57fc7bc5fbc5a15f188eeea16a11d8c4",
+        "width": 320,
+        "height": 213,
+        "bytes": 3212,
+        "sha256": "222a13955a48da75af324e0a7dc9be1f57fc7bc5fbc5a15f188eeea16a11d8c4"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-02/640.webp?rev=1203253745bfec55c79f7a2a41756bb735e6c35a56c10bd975c4c0e9c5d485fb",
+        "width": 640,
+        "height": 427,
+        "bytes": 18692,
+        "sha256": "1203253745bfec55c79f7a2a41756bb735e6c35a56c10bd975c4c0e9c5d485fb"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-02/960.webp?rev=06e6a587f5af6095993a01f52255c3211381448532e98c233c8535b054d8fa32",
+        "width": 960,
+        "height": 640,
+        "bytes": 50786,
+        "sha256": "06e6a587f5af6095993a01f52255c3211381448532e98c233c8535b054d8fa32"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-02/1600.webp?rev=63e52dba3d3c5777b7939ae928f9faf21066c0296d581a1970ce969094e26b90",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 140132,
+        "sha256": "63e52dba3d3c5777b7939ae928f9faf21066c0296d581a1970ce969094e26b90"
+      },
+      {
+        "src": "/media/products/kronotex-d80582-02/1800.webp?rev=e36f0a0cea8c4ceb530e83b6ee2b642bbf6787d4702e23f40ffd3830486a39b9",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 179392,
+        "sha256": "e36f0a0cea8c4ceb530e83b6ee2b642bbf6787d4702e23f40ffd3830486a39b9"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d80582-02/960.webp?rev=06e6a587f5af6095993a01f52255c3211381448532e98c233c8535b054d8fa32",
+      "width": 960,
+      "height": 640,
+      "bytes": 50786,
+      "sha256": "06e6a587f5af6095993a01f52255c3211381448532e98c233c8535b054d8fa32"
+    }
+  },
+  "kronotex-d80612-01": {
+    "id": "kronotex-d80612-01",
+    "width": 2400,
+    "height": 1800,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "room",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d80612-01/320.avif?rev=8e855aadbcaf8a61eb1dd962840f565eab2d71ff2a029174ce703a0428866d02",
+        "width": 320,
+        "height": 240,
+        "bytes": 4977,
+        "sha256": "8e855aadbcaf8a61eb1dd962840f565eab2d71ff2a029174ce703a0428866d02"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-01/640.avif?rev=1fd28d5871f889e8094511af028efd3ae4b7f84bb2e8425a94e9851fb1214149",
+        "width": 640,
+        "height": 480,
+        "bytes": 14931,
+        "sha256": "1fd28d5871f889e8094511af028efd3ae4b7f84bb2e8425a94e9851fb1214149"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-01/960.avif?rev=693af9c85411da618cacb372a557d03aaf973b7ed7581d7ce9a0210146203900",
+        "width": 960,
+        "height": 720,
+        "bytes": 28803,
+        "sha256": "693af9c85411da618cacb372a557d03aaf973b7ed7581d7ce9a0210146203900"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-01/1600.avif?rev=01e03b32a64f3005f684ce2d88d7912826f2cfc4b552bb73713d047d769ba42e",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 68862,
+        "sha256": "01e03b32a64f3005f684ce2d88d7912826f2cfc4b552bb73713d047d769ba42e"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-01/2400.avif?rev=0cb3d77c3f3819d3c0417d1c08f179afab8c9365e9b3b4b84202b759ad809117",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 136789,
+        "sha256": "0cb3d77c3f3819d3c0417d1c08f179afab8c9365e9b3b4b84202b759ad809117"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d80612-01/320.webp?rev=9b9c5d3d4ccbb5d99995d636313461b2f69690e7f98027cc283938a17c36feeb",
+        "width": 320,
+        "height": 240,
+        "bytes": 8052,
+        "sha256": "9b9c5d3d4ccbb5d99995d636313461b2f69690e7f98027cc283938a17c36feeb"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-01/640.webp?rev=be3c3b1f6286acd9998ab22223b11bdbf61761ebd9748584ba492cc4632f2a5e",
+        "width": 640,
+        "height": 480,
+        "bytes": 26822,
+        "sha256": "be3c3b1f6286acd9998ab22223b11bdbf61761ebd9748584ba492cc4632f2a5e"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-01/960.webp?rev=bd18390da2cd2824a57cb70f2f656d504fab1564d3298c4460e6e154ed353d58",
+        "width": 960,
+        "height": 720,
+        "bytes": 56224,
+        "sha256": "bd18390da2cd2824a57cb70f2f656d504fab1564d3298c4460e6e154ed353d58"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-01/1600.webp?rev=b57aca1d0c47ec95d1da658a851b009c876fe20557df7a1f1b5e52a29546a248",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 144308,
+        "sha256": "b57aca1d0c47ec95d1da658a851b009c876fe20557df7a1f1b5e52a29546a248"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-01/2400.webp?rev=3ff5728e1ecf352ef7e58cd703f200b5aa766d1ad2b70202e20e372af13149c8",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 279362,
+        "sha256": "3ff5728e1ecf352ef7e58cd703f200b5aa766d1ad2b70202e20e372af13149c8"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d80612-01/960.webp?rev=bd18390da2cd2824a57cb70f2f656d504fab1564d3298c4460e6e154ed353d58",
+      "width": 960,
+      "height": 720,
+      "bytes": 56224,
+      "sha256": "bd18390da2cd2824a57cb70f2f656d504fab1564d3298c4460e6e154ed353d58"
+    }
+  },
+  "kronotex-d80612-02": {
+    "id": "kronotex-d80612-02",
+    "width": 1800,
+    "height": 1200,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d80612-02/320.avif?rev=a42441170781188d4e6d0912f6775893ac0f6a6be10d02c8a09eccb471dd6bc2",
+        "width": 320,
+        "height": 213,
+        "bytes": 2728,
+        "sha256": "a42441170781188d4e6d0912f6775893ac0f6a6be10d02c8a09eccb471dd6bc2"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-02/640.avif?rev=a73294f51a06662f2384f8f96fbdfc23a8fad591f63da4e8b24ebcca84d14503",
+        "width": 640,
+        "height": 427,
+        "bytes": 12049,
+        "sha256": "a73294f51a06662f2384f8f96fbdfc23a8fad591f63da4e8b24ebcca84d14503"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-02/960.avif?rev=ae1fc894704cdae54879fc8a8eace854710374a456136a1ed8bd289d198f7c6f",
+        "width": 960,
+        "height": 640,
+        "bytes": 28326,
+        "sha256": "ae1fc894704cdae54879fc8a8eace854710374a456136a1ed8bd289d198f7c6f"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-02/1600.avif?rev=149536f2dd3d6a3f589e442e3c8a5ff11b95288813030e0d38e0c516d5bc4b1c",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 72024,
+        "sha256": "149536f2dd3d6a3f589e442e3c8a5ff11b95288813030e0d38e0c516d5bc4b1c"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-02/1800.avif?rev=13d1bd5a06f672edc32144a4885cab84bec211b8590387fbba7107e06b6eb0c0",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 99252,
+        "sha256": "13d1bd5a06f672edc32144a4885cab84bec211b8590387fbba7107e06b6eb0c0"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d80612-02/320.webp?rev=02f7ef237308cd05e6dbc489fc1e8f81387436feabc92d2abe3d318b4d8ea952",
+        "width": 320,
+        "height": 213,
+        "bytes": 4220,
+        "sha256": "02f7ef237308cd05e6dbc489fc1e8f81387436feabc92d2abe3d318b4d8ea952"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-02/640.webp?rev=7b4c1b01cda11703f7f83947152be945e83db9d5816961eddafe3e2225030f47",
+        "width": 640,
+        "height": 427,
+        "bytes": 21668,
+        "sha256": "7b4c1b01cda11703f7f83947152be945e83db9d5816961eddafe3e2225030f47"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-02/960.webp?rev=125d9795664e450eea6adbd9d998e5a5682bbf45627507c596a85348df2a2310",
+        "width": 960,
+        "height": 640,
+        "bytes": 53338,
+        "sha256": "125d9795664e450eea6adbd9d998e5a5682bbf45627507c596a85348df2a2310"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-02/1600.webp?rev=ce43b065735e851b3cfba33e2943e9ca5c941cb127fa2f89f00e4d7cfd08d20e",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 146446,
+        "sha256": "ce43b065735e851b3cfba33e2943e9ca5c941cb127fa2f89f00e4d7cfd08d20e"
+      },
+      {
+        "src": "/media/products/kronotex-d80612-02/1800.webp?rev=94e8d956cefc70d11aa9b4eb3825ae885a912d768439f84829cee49f973ba143",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 193748,
+        "sha256": "94e8d956cefc70d11aa9b4eb3825ae885a912d768439f84829cee49f973ba143"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d80612-02/960.webp?rev=125d9795664e450eea6adbd9d998e5a5682bbf45627507c596a85348df2a2310",
+      "width": 960,
+      "height": 640,
+      "bytes": 53338,
+      "sha256": "125d9795664e450eea6adbd9d998e5a5682bbf45627507c596a85348df2a2310"
+    }
+  },
+  "kronotex-d4954-01": {
+    "id": "kronotex-d4954-01",
+    "width": 2400,
+    "height": 1800,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "room",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d4954-01/320.avif?rev=985497ffc7bfa5765532db45ba445ef2b4341ab7844e6875181d32287b9cb791",
+        "width": 320,
+        "height": 240,
+        "bytes": 4962,
+        "sha256": "985497ffc7bfa5765532db45ba445ef2b4341ab7844e6875181d32287b9cb791"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-01/640.avif?rev=c546291a36301324a9398b654640b8c8cf2c19eaab22832e99fd070ec042d8bc",
+        "width": 640,
+        "height": 480,
+        "bytes": 15009,
+        "sha256": "c546291a36301324a9398b654640b8c8cf2c19eaab22832e99fd070ec042d8bc"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-01/960.avif?rev=c6b779e709939714543768b635f104134d2b810adaccd341d8ab09ddbb7b07e1",
+        "width": 960,
+        "height": 720,
+        "bytes": 28935,
+        "sha256": "c6b779e709939714543768b635f104134d2b810adaccd341d8ab09ddbb7b07e1"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-01/1600.avif?rev=c36bca056febf773234aed13897dd3df41c2e82e55e583b0394e250da149bb4a",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 68975,
+        "sha256": "c36bca056febf773234aed13897dd3df41c2e82e55e583b0394e250da149bb4a"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-01/2400.avif?rev=93a186244a2128814747186e84c5e05c554bb107d709020b46143991dc75fea5",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 137339,
+        "sha256": "93a186244a2128814747186e84c5e05c554bb107d709020b46143991dc75fea5"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d4954-01/320.webp?rev=e97b49df1593d0265c60e943d4f3150d1931593ec435362abfb411f71e4c090a",
+        "width": 320,
+        "height": 240,
+        "bytes": 8078,
+        "sha256": "e97b49df1593d0265c60e943d4f3150d1931593ec435362abfb411f71e4c090a"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-01/640.webp?rev=d64416924cf817d5db05ae29efd133d23112126c91e1e9023435ea4a4a4c84ad",
+        "width": 640,
+        "height": 480,
+        "bytes": 26990,
+        "sha256": "d64416924cf817d5db05ae29efd133d23112126c91e1e9023435ea4a4a4c84ad"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-01/960.webp?rev=1e1112b473045dbb0dcf925017b5d2486f168e271b774accf7fff0b0f836f13c",
+        "width": 960,
+        "height": 720,
+        "bytes": 55868,
+        "sha256": "1e1112b473045dbb0dcf925017b5d2486f168e271b774accf7fff0b0f836f13c"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-01/1600.webp?rev=6f9a68b028a5c6aa9047d4cdc9b632d89b1cc32305a4cec9b808b88cabce8ae5",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 143526,
+        "sha256": "6f9a68b028a5c6aa9047d4cdc9b632d89b1cc32305a4cec9b808b88cabce8ae5"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-01/2400.webp?rev=8b7820ffc8d04344ede2657674fc4b1e755a1e9e6a508e5bf002e825b9bf7925",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 277544,
+        "sha256": "8b7820ffc8d04344ede2657674fc4b1e755a1e9e6a508e5bf002e825b9bf7925"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d4954-01/960.webp?rev=1e1112b473045dbb0dcf925017b5d2486f168e271b774accf7fff0b0f836f13c",
+      "width": 960,
+      "height": 720,
+      "bytes": 55868,
+      "sha256": "1e1112b473045dbb0dcf925017b5d2486f168e271b774accf7fff0b0f836f13c"
+    }
+  },
+  "kronotex-d4954-02": {
+    "id": "kronotex-d4954-02",
+    "width": 1800,
+    "height": 1200,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d4954-02/320.avif?rev=98c57d9019d2e30f2c69776e3d10e1ebeda64ed60f19fb811c7a715faa93e0c3",
+        "width": 320,
+        "height": 213,
+        "bytes": 2578,
+        "sha256": "98c57d9019d2e30f2c69776e3d10e1ebeda64ed60f19fb811c7a715faa93e0c3"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-02/640.avif?rev=693d312f8f0eed1b4339933b33daa80b41f6918b413fb6e3ea4e90b6d50a33e7",
+        "width": 640,
+        "height": 427,
+        "bytes": 11734,
+        "sha256": "693d312f8f0eed1b4339933b33daa80b41f6918b413fb6e3ea4e90b6d50a33e7"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-02/960.avif?rev=6928b9ba08211bfd64a0ce8c649cf87cd17458bf5baaeddeeaaf83714b4c9bb4",
+        "width": 960,
+        "height": 640,
+        "bytes": 29150,
+        "sha256": "6928b9ba08211bfd64a0ce8c649cf87cd17458bf5baaeddeeaaf83714b4c9bb4"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-02/1600.avif?rev=16ce920841885bc76e98096785400ca895b8b5b0e968a35d41ac28bd091ecad0",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 71397,
+        "sha256": "16ce920841885bc76e98096785400ca895b8b5b0e968a35d41ac28bd091ecad0"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-02/1800.avif?rev=25ba2d3b288e3e153c69bff5f89a1e43e9fdc31c10926b3d0ae58d3ebad758c7",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 95207,
+        "sha256": "25ba2d3b288e3e153c69bff5f89a1e43e9fdc31c10926b3d0ae58d3ebad758c7"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d4954-02/320.webp?rev=76dea8a1f792f8869c8f6e09933c4c34918edaea81adbdb930a30aab9ecd759a",
+        "width": 320,
+        "height": 213,
+        "bytes": 3580,
+        "sha256": "76dea8a1f792f8869c8f6e09933c4c34918edaea81adbdb930a30aab9ecd759a"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-02/640.webp?rev=d8821b1857e905c6371ff093cfa4690537ca522a0ce885a82540ae697a425c69",
+        "width": 640,
+        "height": 427,
+        "bytes": 19772,
+        "sha256": "d8821b1857e905c6371ff093cfa4690537ca522a0ce885a82540ae697a425c69"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-02/960.webp?rev=aca3e7152e288b29a2068c2bb42de3272c9addd94c257996008fed33a6df287f",
+        "width": 960,
+        "height": 640,
+        "bytes": 52066,
+        "sha256": "aca3e7152e288b29a2068c2bb42de3272c9addd94c257996008fed33a6df287f"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-02/1600.webp?rev=409220b91779e19ad43cd56e89c748617e7f71442ade072a29bb003682b58929",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 149744,
+        "sha256": "409220b91779e19ad43cd56e89c748617e7f71442ade072a29bb003682b58929"
+      },
+      {
+        "src": "/media/products/kronotex-d4954-02/1800.webp?rev=1be1bc9cbeb4c4ac35330cb9ea8bf28c85ce8fffce146fad1923b898cba3f200",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 197554,
+        "sha256": "1be1bc9cbeb4c4ac35330cb9ea8bf28c85ce8fffce146fad1923b898cba3f200"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d4954-02/960.webp?rev=aca3e7152e288b29a2068c2bb42de3272c9addd94c257996008fed33a6df287f",
+      "width": 960,
+      "height": 640,
+      "bytes": 52066,
+      "sha256": "aca3e7152e288b29a2068c2bb42de3272c9addd94c257996008fed33a6df287f"
+    }
+  },
+  "kronotex-d4763-01": {
+    "id": "kronotex-d4763-01",
+    "width": 2400,
+    "height": 1800,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "room",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d4763-01/320.avif?rev=d095c7141b762bbe85f1e6f29779419d99dc037ca8f4659b403f3d7a262406ab",
+        "width": 320,
+        "height": 240,
+        "bytes": 5074,
+        "sha256": "d095c7141b762bbe85f1e6f29779419d99dc037ca8f4659b403f3d7a262406ab"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-01/640.avif?rev=dd1d9987867946be4a3e5ff3f57506bfb485148992c879581a7d31883e3be7cf",
+        "width": 640,
+        "height": 480,
+        "bytes": 15512,
+        "sha256": "dd1d9987867946be4a3e5ff3f57506bfb485148992c879581a7d31883e3be7cf"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-01/960.avif?rev=9694d534c2afaba865cab18adc5d50693f4c1a1baafffe3cc23718db978c5ddf",
+        "width": 960,
+        "height": 720,
+        "bytes": 30325,
+        "sha256": "9694d534c2afaba865cab18adc5d50693f4c1a1baafffe3cc23718db978c5ddf"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-01/1600.avif?rev=5b561536bafaf598254aaeb7ab9ea1f3c87afb4c7b5280b7a7614f23df6a6fd7",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 72532,
+        "sha256": "5b561536bafaf598254aaeb7ab9ea1f3c87afb4c7b5280b7a7614f23df6a6fd7"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-01/2400.avif?rev=5bc0c4cb18d3aed787633a22e548a16d71ae5c0225e5d7c510758711e3568a1f",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 144497,
+        "sha256": "5bc0c4cb18d3aed787633a22e548a16d71ae5c0225e5d7c510758711e3568a1f"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d4763-01/320.webp?rev=1eac7c58adc0e0a142950508dfc207d09e285ef39a00c54eea0c3993973379f6",
+        "width": 320,
+        "height": 240,
+        "bytes": 8536,
+        "sha256": "1eac7c58adc0e0a142950508dfc207d09e285ef39a00c54eea0c3993973379f6"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-01/640.webp?rev=fc6694f2b0eda5438d4f665ad0f6db68268e696b5036ad0e0759b3e5cb7a34b7",
+        "width": 640,
+        "height": 480,
+        "bytes": 28230,
+        "sha256": "fc6694f2b0eda5438d4f665ad0f6db68268e696b5036ad0e0759b3e5cb7a34b7"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-01/960.webp?rev=d3d666b45947e4cffeb23281cdfc4e058f27e422152b1531ce51ed497dc11d94",
+        "width": 960,
+        "height": 720,
+        "bytes": 59228,
+        "sha256": "d3d666b45947e4cffeb23281cdfc4e058f27e422152b1531ce51ed497dc11d94"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-01/1600.webp?rev=71ac53d8b1b3f46384902a36934d6a90f672702566696cdba64c23f5c524c927",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 154018,
+        "sha256": "71ac53d8b1b3f46384902a36934d6a90f672702566696cdba64c23f5c524c927"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-01/2400.webp?rev=bd1054b168469dc110deb721f2be15cf2c4f0f76775f59ebd97e06e33fb92b10",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 302238,
+        "sha256": "bd1054b168469dc110deb721f2be15cf2c4f0f76775f59ebd97e06e33fb92b10"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d4763-01/960.webp?rev=d3d666b45947e4cffeb23281cdfc4e058f27e422152b1531ce51ed497dc11d94",
+      "width": 960,
+      "height": 720,
+      "bytes": 59228,
+      "sha256": "d3d666b45947e4cffeb23281cdfc4e058f27e422152b1531ce51ed497dc11d94"
+    }
+  },
+  "kronotex-d4763-02": {
+    "id": "kronotex-d4763-02",
+    "width": 1800,
+    "height": 1200,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d4763-02/320.avif?rev=f790f0e0ddad20be2a23c4a7bc7dd386aba17f0fcf2020fce0f598328d61cabc",
+        "width": 320,
+        "height": 213,
+        "bytes": 3787,
+        "sha256": "f790f0e0ddad20be2a23c4a7bc7dd386aba17f0fcf2020fce0f598328d61cabc"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-02/640.avif?rev=668d5d9707666d7077ba532b09ded0833101fd82381e475f9ac7d82a324630f7",
+        "width": 640,
+        "height": 427,
+        "bytes": 16282,
+        "sha256": "668d5d9707666d7077ba532b09ded0833101fd82381e475f9ac7d82a324630f7"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-02/960.avif?rev=1948f98b6c4c15b59bbd9eb4e5c228105156cf070a0501d01151f9a29c80ef5a",
+        "width": 960,
+        "height": 640,
+        "bytes": 37052,
+        "sha256": "1948f98b6c4c15b59bbd9eb4e5c228105156cf070a0501d01151f9a29c80ef5a"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-02/1600.avif?rev=4ba697a65feb6c17222ab39cfd2f17940976d21c8db9779f2d87bd5e9094d797",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 91459,
+        "sha256": "4ba697a65feb6c17222ab39cfd2f17940976d21c8db9779f2d87bd5e9094d797"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-02/1800.avif?rev=3d8c44fe06f2f836eaf035ab0bab50a4487b1f214f53853158f4333c30302b38",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 120759,
+        "sha256": "3d8c44fe06f2f836eaf035ab0bab50a4487b1f214f53853158f4333c30302b38"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d4763-02/320.webp?rev=8df9026f1818609165d2c286286f35417521142397a286c5c1ffa58defeb9716",
+        "width": 320,
+        "height": 213,
+        "bytes": 6754,
+        "sha256": "8df9026f1818609165d2c286286f35417521142397a286c5c1ffa58defeb9716"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-02/640.webp?rev=dec6ae829dd90389c98bfda7102e5c4b4fb82ca3b42491133060d0b356ae7f67",
+        "width": 640,
+        "height": 427,
+        "bytes": 32082,
+        "sha256": "dec6ae829dd90389c98bfda7102e5c4b4fb82ca3b42491133060d0b356ae7f67"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-02/960.webp?rev=8d8f3f6209077e368ed8d99af31cffb6656aa6bacd6baf843675cbe26da496f9",
+        "width": 960,
+        "height": 640,
+        "bytes": 72178,
+        "sha256": "8d8f3f6209077e368ed8d99af31cffb6656aa6bacd6baf843675cbe26da496f9"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-02/1600.webp?rev=80e8dad0f673293cf904318b6e8d7fb04486f95deb80be34a61d9a6407cf6620",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 190784,
+        "sha256": "80e8dad0f673293cf904318b6e8d7fb04486f95deb80be34a61d9a6407cf6620"
+      },
+      {
+        "src": "/media/products/kronotex-d4763-02/1800.webp?rev=71329a3419e250759f0f4f0cb59ddeb5b2105bbcd321560ee57b57b68fb417ec",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 234272,
+        "sha256": "71329a3419e250759f0f4f0cb59ddeb5b2105bbcd321560ee57b57b68fb417ec"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d4763-02/960.webp?rev=8d8f3f6209077e368ed8d99af31cffb6656aa6bacd6baf843675cbe26da496f9",
+      "width": 960,
+      "height": 640,
+      "bytes": 72178,
+      "sha256": "8d8f3f6209077e368ed8d99af31cffb6656aa6bacd6baf843675cbe26da496f9"
+    }
+  },
+  "kronotex-d4956-01": {
+    "id": "kronotex-d4956-01",
+    "width": 2400,
+    "height": 1800,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "room",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d4956-01/320.avif?rev=b5a1f27050853e7fb111627a70688a1ee50df262d5387d48b6229f5329ac148d",
+        "width": 320,
+        "height": 240,
+        "bytes": 4750,
+        "sha256": "b5a1f27050853e7fb111627a70688a1ee50df262d5387d48b6229f5329ac148d"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-01/640.avif?rev=ee8acce00f80abe7e7de3b102302679bee58fbdda7f0dd7311fdf0eeabad424f",
+        "width": 640,
+        "height": 480,
+        "bytes": 14441,
+        "sha256": "ee8acce00f80abe7e7de3b102302679bee58fbdda7f0dd7311fdf0eeabad424f"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-01/960.avif?rev=4e6cc393e1ab696c074f422797412146633ea4071f37dcb81bbee0d9dcbe6664",
+        "width": 960,
+        "height": 720,
+        "bytes": 27840,
+        "sha256": "4e6cc393e1ab696c074f422797412146633ea4071f37dcb81bbee0d9dcbe6664"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-01/1600.avif?rev=3568eec44696710859b8868882dac9c957d0c47d76116d69c43edb163e6a88e8",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 66732,
+        "sha256": "3568eec44696710859b8868882dac9c957d0c47d76116d69c43edb163e6a88e8"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-01/2400.avif?rev=594428783a31e3e970a0dcb6b33890dab1a437032225b8342f9d195f28216cf5",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 133169,
+        "sha256": "594428783a31e3e970a0dcb6b33890dab1a437032225b8342f9d195f28216cf5"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d4956-01/320.webp?rev=26278b9fe44e9a327a4255a77396799085f3e681e2b3bce55f2b6135b3420f8b",
+        "width": 320,
+        "height": 240,
+        "bytes": 7554,
+        "sha256": "26278b9fe44e9a327a4255a77396799085f3e681e2b3bce55f2b6135b3420f8b"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-01/640.webp?rev=21f1b46954185101d22350c0168303696733fc55a3c4650eba13265048abdfa7",
+        "width": 640,
+        "height": 480,
+        "bytes": 25822,
+        "sha256": "21f1b46954185101d22350c0168303696733fc55a3c4650eba13265048abdfa7"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-01/960.webp?rev=325f625df1151a1290261f93425460525420abb3a0033ab2998eeb21b305e9af",
+        "width": 960,
+        "height": 720,
+        "bytes": 54268,
+        "sha256": "325f625df1151a1290261f93425460525420abb3a0033ab2998eeb21b305e9af"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-01/1600.webp?rev=8c354b14520a62576cdcb7bd3aca1e29f67c50bfdb90bfc24549f66951898e1c",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 139834,
+        "sha256": "8c354b14520a62576cdcb7bd3aca1e29f67c50bfdb90bfc24549f66951898e1c"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-01/2400.webp?rev=c3eeb0df0c7076844ff335c2deb64f5b86b393d8c78a4a63158d39ee3477d78e",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 271936,
+        "sha256": "c3eeb0df0c7076844ff335c2deb64f5b86b393d8c78a4a63158d39ee3477d78e"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d4956-01/960.webp?rev=325f625df1151a1290261f93425460525420abb3a0033ab2998eeb21b305e9af",
+      "width": 960,
+      "height": 720,
+      "bytes": 54268,
+      "sha256": "325f625df1151a1290261f93425460525420abb3a0033ab2998eeb21b305e9af"
+    }
+  },
+  "kronotex-d4956-02": {
+    "id": "kronotex-d4956-02",
+    "width": 1800,
+    "height": 1200,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d4956-02/320.avif?rev=a3ddd40f047f851dd46c828c54b68c7224e538faf10e28a6107611944f3ef82f",
+        "width": 320,
+        "height": 213,
+        "bytes": 2195,
+        "sha256": "a3ddd40f047f851dd46c828c54b68c7224e538faf10e28a6107611944f3ef82f"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-02/640.avif?rev=127c3f8ac28a3bd8e3d7ac198306ca19ce410661cb07de6993b1dd094248e106",
+        "width": 640,
+        "height": 427,
+        "bytes": 10511,
+        "sha256": "127c3f8ac28a3bd8e3d7ac198306ca19ce410661cb07de6993b1dd094248e106"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-02/960.avif?rev=2329e563f176dc7ca9e1ae319e8e1d8a2da8fe88407749c5f26882f349b19a21",
+        "width": 960,
+        "height": 640,
+        "bytes": 26954,
+        "sha256": "2329e563f176dc7ca9e1ae319e8e1d8a2da8fe88407749c5f26882f349b19a21"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-02/1600.avif?rev=5beabacbc09bfa331b0af13f4cb4a5654ca4d2d1c3e18589b0a5568b71bd7f1e",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 69276,
+        "sha256": "5beabacbc09bfa331b0af13f4cb4a5654ca4d2d1c3e18589b0a5568b71bd7f1e"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-02/1800.avif?rev=d822036f7ad8de30dd8aaeec7329c7d6a2b17d730b75b53a89a089096f118de3",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 92055,
+        "sha256": "d822036f7ad8de30dd8aaeec7329c7d6a2b17d730b75b53a89a089096f118de3"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d4956-02/320.webp?rev=13718ec44cd84efb6f9d471717423767daf9a48b30f410178cd65bd368c2b099",
+        "width": 320,
+        "height": 213,
+        "bytes": 3218,
+        "sha256": "13718ec44cd84efb6f9d471717423767daf9a48b30f410178cd65bd368c2b099"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-02/640.webp?rev=bcc278f8aa436c709cfa35d067aa39bfda5526330ae36e24c57c79f8531b51ce",
+        "width": 640,
+        "height": 427,
+        "bytes": 18726,
+        "sha256": "bcc278f8aa436c709cfa35d067aa39bfda5526330ae36e24c57c79f8531b51ce"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-02/960.webp?rev=2065c68d65bcb53237640ebfee602395c662aa1895cf8eb377f6ec4d402c45fa",
+        "width": 960,
+        "height": 640,
+        "bytes": 49334,
+        "sha256": "2065c68d65bcb53237640ebfee602395c662aa1895cf8eb377f6ec4d402c45fa"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-02/1600.webp?rev=8e4ed861a74e9be765956e120c5a7177dbaa8df13e17eaff6b2154300a254ae0",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 150816,
+        "sha256": "8e4ed861a74e9be765956e120c5a7177dbaa8df13e17eaff6b2154300a254ae0"
+      },
+      {
+        "src": "/media/products/kronotex-d4956-02/1800.webp?rev=fba3f20c833d50765fa7b163f367f1d8097646b27bb68f0ead8354a6ad562daf",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 198408,
+        "sha256": "fba3f20c833d50765fa7b163f367f1d8097646b27bb68f0ead8354a6ad562daf"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d4956-02/960.webp?rev=2065c68d65bcb53237640ebfee602395c662aa1895cf8eb377f6ec4d402c45fa",
+      "width": 960,
+      "height": 640,
+      "bytes": 49334,
+      "sha256": "2065c68d65bcb53237640ebfee602395c662aa1895cf8eb377f6ec4d402c45fa"
+    }
+  },
+  "kronotex-d3179-01": {
+    "id": "kronotex-d3179-01",
+    "width": 2400,
+    "height": 1800,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "room",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d3179-01/320.avif?rev=4a56e143f53ce2ca93fba66b8b9815b703c2cfbefd9327e1f667168d49748395",
+        "width": 320,
+        "height": 240,
+        "bytes": 4774,
+        "sha256": "4a56e143f53ce2ca93fba66b8b9815b703c2cfbefd9327e1f667168d49748395"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-01/640.avif?rev=09a0d952e4d0f083ba636d24a00b9970fd60f606001bf9bb94c8d86ebe1eb4bf",
+        "width": 640,
+        "height": 480,
+        "bytes": 14643,
+        "sha256": "09a0d952e4d0f083ba636d24a00b9970fd60f606001bf9bb94c8d86ebe1eb4bf"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-01/960.avif?rev=fdd93ba92e932257c87d0d11af9ca3bd74e0673444038addf8837f0b3d20f7b5",
+        "width": 960,
+        "height": 720,
+        "bytes": 28502,
+        "sha256": "fdd93ba92e932257c87d0d11af9ca3bd74e0673444038addf8837f0b3d20f7b5"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-01/1600.avif?rev=1229e44ce58933ee61fad25da697d3084100bdb43b3c2058b2e51a7f8ce24ad0",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 68136,
+        "sha256": "1229e44ce58933ee61fad25da697d3084100bdb43b3c2058b2e51a7f8ce24ad0"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-01/2400.avif?rev=2f463b28a16c820c0f97163d643acd0d92c43e400190395e2b72ad7a10238dc8",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 134948,
+        "sha256": "2f463b28a16c820c0f97163d643acd0d92c43e400190395e2b72ad7a10238dc8"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d3179-01/320.webp?rev=18854c4d3efe8df127bcca958ea3f18c2c2ab962f6575c5ce4c743720603e225",
+        "width": 320,
+        "height": 240,
+        "bytes": 7498,
+        "sha256": "18854c4d3efe8df127bcca958ea3f18c2c2ab962f6575c5ce4c743720603e225"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-01/640.webp?rev=aa9c3fafecd1308e95149219929b2451a6bdb5f60b3ddf4638b26203fcbd8db9",
+        "width": 640,
+        "height": 480,
+        "bytes": 26310,
+        "sha256": "aa9c3fafecd1308e95149219929b2451a6bdb5f60b3ddf4638b26203fcbd8db9"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-01/960.webp?rev=959e3207cbe434db70fae314d5cff12e79cf2ddc65cfc3b6beb619710b0916b6",
+        "width": 960,
+        "height": 720,
+        "bytes": 54742,
+        "sha256": "959e3207cbe434db70fae314d5cff12e79cf2ddc65cfc3b6beb619710b0916b6"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-01/1600.webp?rev=632785c3562c93bf11ed66831189f44068ee3b5fb25217d98000214191317bf9",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 141908,
+        "sha256": "632785c3562c93bf11ed66831189f44068ee3b5fb25217d98000214191317bf9"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-01/2400.webp?rev=fb8fa5603da579952136393589fd7b3117cbb0233a90e66c2a63d907f455e75f",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 279614,
+        "sha256": "fb8fa5603da579952136393589fd7b3117cbb0233a90e66c2a63d907f455e75f"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d3179-01/960.webp?rev=959e3207cbe434db70fae314d5cff12e79cf2ddc65cfc3b6beb619710b0916b6",
+      "width": 960,
+      "height": 720,
+      "bytes": 54742,
+      "sha256": "959e3207cbe434db70fae314d5cff12e79cf2ddc65cfc3b6beb619710b0916b6"
+    }
+  },
+  "kronotex-d3179-02": {
+    "id": "kronotex-d3179-02",
+    "width": 1800,
+    "height": 1200,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d3179-02/320.avif?rev=ab5e12ef9ce2252139db51bb74d351faacd897d62e2bdb5c17460fff8785bd2a",
+        "width": 320,
+        "height": 213,
+        "bytes": 3246,
+        "sha256": "ab5e12ef9ce2252139db51bb74d351faacd897d62e2bdb5c17460fff8785bd2a"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-02/640.avif?rev=5b4fd3b0cb7928e9f4f94c3cba7cc3f83fa22739d1fe959804438939a73a4abd",
+        "width": 640,
+        "height": 427,
+        "bytes": 13476,
+        "sha256": "5b4fd3b0cb7928e9f4f94c3cba7cc3f83fa22739d1fe959804438939a73a4abd"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-02/960.avif?rev=934cf3e4c567c51020e8e8ee75b611cd43c4a3c99a0fce502944d8c522dcd601",
+        "width": 960,
+        "height": 640,
+        "bytes": 30436,
+        "sha256": "934cf3e4c567c51020e8e8ee75b611cd43c4a3c99a0fce502944d8c522dcd601"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-02/1600.avif?rev=7dabd2a799c558097e5e717a62829ca5dbd6300970d0a0e95a2ac1ad31f7d147",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 73010,
+        "sha256": "7dabd2a799c558097e5e717a62829ca5dbd6300970d0a0e95a2ac1ad31f7d147"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-02/1800.avif?rev=87ae8d80d5e8a8496406b413d2de888113cf69614b69656e920a6ef2c899e081",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 93704,
+        "sha256": "87ae8d80d5e8a8496406b413d2de888113cf69614b69656e920a6ef2c899e081"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d3179-02/320.webp?rev=995ecf820f01432b078fe76bcdc3d1cdddc97e6d7287544a7017a717ef9fe4e2",
+        "width": 320,
+        "height": 213,
+        "bytes": 4682,
+        "sha256": "995ecf820f01432b078fe76bcdc3d1cdddc97e6d7287544a7017a717ef9fe4e2"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-02/640.webp?rev=536caecc7479a79e2e2e77a9f34b6f8c8dafc86b4d4be39af702fa58aec5fae1",
+        "width": 640,
+        "height": 427,
+        "bytes": 24710,
+        "sha256": "536caecc7479a79e2e2e77a9f34b6f8c8dafc86b4d4be39af702fa58aec5fae1"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-02/960.webp?rev=a9d6d3c64de422f55ffc793342ba345f83ea86165b1d36ca15fcb9a68dc0b3b6",
+        "width": 960,
+        "height": 640,
+        "bytes": 58300,
+        "sha256": "a9d6d3c64de422f55ffc793342ba345f83ea86165b1d36ca15fcb9a68dc0b3b6"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-02/1600.webp?rev=6d3aab54cd4be798d1e86cb9862d3ef3a775912ff3dbaad51bbf2403c9860a31",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 142262,
+        "sha256": "6d3aab54cd4be798d1e86cb9862d3ef3a775912ff3dbaad51bbf2403c9860a31"
+      },
+      {
+        "src": "/media/products/kronotex-d3179-02/1800.webp?rev=c3aeccc2186ec7f9d04e0ba5448b63c158491a06a69e71303d81b0b20d714714",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 172880,
+        "sha256": "c3aeccc2186ec7f9d04e0ba5448b63c158491a06a69e71303d81b0b20d714714"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d3179-02/960.webp?rev=a9d6d3c64de422f55ffc793342ba345f83ea86165b1d36ca15fcb9a68dc0b3b6",
+      "width": 960,
+      "height": 640,
+      "bytes": 58300,
+      "sha256": "a9d6d3c64de422f55ffc793342ba345f83ea86165b1d36ca15fcb9a68dc0b3b6"
+    }
+  },
+  "kronotex-d81162-01": {
+    "id": "kronotex-d81162-01",
+    "width": 2400,
+    "height": 1800,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "room",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d81162-01/320.avif?rev=f2ba76eeed715bffd93ca6ca0632d86ec7d7532bd55fcd83a6bd10fffbdddfd5",
+        "width": 320,
+        "height": 240,
+        "bytes": 4781,
+        "sha256": "f2ba76eeed715bffd93ca6ca0632d86ec7d7532bd55fcd83a6bd10fffbdddfd5"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-01/640.avif?rev=0b3d759e75c4e6a022c60ced395e64d9e09b9866df5b5c8fa89a9288cbadb028",
+        "width": 640,
+        "height": 480,
+        "bytes": 14296,
+        "sha256": "0b3d759e75c4e6a022c60ced395e64d9e09b9866df5b5c8fa89a9288cbadb028"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-01/960.avif?rev=3c4ac92a26a40ad5b4ad97ca0e9b8e10d1fab4a5a3939f3b8c56db49c4df089b",
+        "width": 960,
+        "height": 720,
+        "bytes": 27791,
+        "sha256": "3c4ac92a26a40ad5b4ad97ca0e9b8e10d1fab4a5a3939f3b8c56db49c4df089b"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-01/1600.avif?rev=9c64904e67504d335c35a4cc812047e6507e7ee3916fbcae79d006605e8b5631",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 66509,
+        "sha256": "9c64904e67504d335c35a4cc812047e6507e7ee3916fbcae79d006605e8b5631"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-01/2400.avif?rev=e1972c10a20029623da482196e172d9e1099ef013e626102c167a4b66df9e89a",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 132447,
+        "sha256": "e1972c10a20029623da482196e172d9e1099ef013e626102c167a4b66df9e89a"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d81162-01/320.webp?rev=477b561c8f32c1b8fa68de897fb0b097f6bd53bc029ea41591c2f7445399ec29",
+        "width": 320,
+        "height": 240,
+        "bytes": 7494,
+        "sha256": "477b561c8f32c1b8fa68de897fb0b097f6bd53bc029ea41591c2f7445399ec29"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-01/640.webp?rev=d803a6e62857dc82fedd984df23cae61f7ffa6c0f652c2343782fc46a18ed1e2",
+        "width": 640,
+        "height": 480,
+        "bytes": 25442,
+        "sha256": "d803a6e62857dc82fedd984df23cae61f7ffa6c0f652c2343782fc46a18ed1e2"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-01/960.webp?rev=6f18f2dad2866a6f8f15b3fb51564e7404c651d972ac00299b89be377de53a7b",
+        "width": 960,
+        "height": 720,
+        "bytes": 53292,
+        "sha256": "6f18f2dad2866a6f8f15b3fb51564e7404c651d972ac00299b89be377de53a7b"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-01/1600.webp?rev=aa355e4b1d4e46241bc6b80a34d286a484a639b1e36b7d4fcb3a7749bbf37c2d",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 138108,
+        "sha256": "aa355e4b1d4e46241bc6b80a34d286a484a639b1e36b7d4fcb3a7749bbf37c2d"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-01/2400.webp?rev=b8d60f7b71bb2218bb56b34e0c0ff1ff7fce83280eb2c519699c092f6f439e94",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 267930,
+        "sha256": "b8d60f7b71bb2218bb56b34e0c0ff1ff7fce83280eb2c519699c092f6f439e94"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d81162-01/960.webp?rev=6f18f2dad2866a6f8f15b3fb51564e7404c651d972ac00299b89be377de53a7b",
+      "width": 960,
+      "height": 720,
+      "bytes": 53292,
+      "sha256": "6f18f2dad2866a6f8f15b3fb51564e7404c651d972ac00299b89be377de53a7b"
+    }
+  },
+  "kronotex-d81162-02": {
+    "id": "kronotex-d81162-02",
+    "width": 1800,
+    "height": 1200,
+    "focalPoint": [
+      0.5,
+      0.5
+    ],
+    "role": "detail",
+    "avif": [
+      {
+        "src": "/media/products/kronotex-d81162-02/320.avif?rev=64c82203a259e8dec51c4607041c231e051205f0fa2af80a5eba539dc681e977",
+        "width": 320,
+        "height": 213,
+        "bytes": 2222,
+        "sha256": "64c82203a259e8dec51c4607041c231e051205f0fa2af80a5eba539dc681e977"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-02/640.avif?rev=9994d1c8f52f9041a74e3c3a448c525a9e064aa35d72133abafcc3731dc9415c",
+        "width": 640,
+        "height": 427,
+        "bytes": 11087,
+        "sha256": "9994d1c8f52f9041a74e3c3a448c525a9e064aa35d72133abafcc3731dc9415c"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-02/960.avif?rev=1078e7cb594e9bbd8f61df8c6c3a7a24e3344ec1110c10e536428628ec2186a3",
+        "width": 960,
+        "height": 640,
+        "bytes": 27291,
+        "sha256": "1078e7cb594e9bbd8f61df8c6c3a7a24e3344ec1110c10e536428628ec2186a3"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-02/1600.avif?rev=ce5053d4c5f6ae350df0dbb0e9ab59a39614fb49322fff7a27be943e82173586",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 65321,
+        "sha256": "ce5053d4c5f6ae350df0dbb0e9ab59a39614fb49322fff7a27be943e82173586"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-02/1800.avif?rev=df9337c46458e191d1c6fefbac2d74cb322efcf00e367dd91e756c86429c5116",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 83365,
+        "sha256": "df9337c46458e191d1c6fefbac2d74cb322efcf00e367dd91e756c86429c5116"
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/products/kronotex-d81162-02/320.webp?rev=eb5c3456d1b4b7edfcfde31ef931ffcb602dccc01362e1706bd9f199b2ea80d6",
+        "width": 320,
+        "height": 213,
+        "bytes": 3172,
+        "sha256": "eb5c3456d1b4b7edfcfde31ef931ffcb602dccc01362e1706bd9f199b2ea80d6"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-02/640.webp?rev=13ef1e94b32286841ef819e873fac86ac997211ba0d853429cfcf94433fc7b34",
+        "width": 640,
+        "height": 427,
+        "bytes": 18954,
+        "sha256": "13ef1e94b32286841ef819e873fac86ac997211ba0d853429cfcf94433fc7b34"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-02/960.webp?rev=5b09f51f1f73804dcf064a6bbafff5d09505e0b0faecd33385f2816f120e2fe2",
+        "width": 960,
+        "height": 640,
+        "bytes": 49872,
+        "sha256": "5b09f51f1f73804dcf064a6bbafff5d09505e0b0faecd33385f2816f120e2fe2"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-02/1600.webp?rev=58a936c39cd0dfaf9cb1672eca81f1ec58ea39bc7dc781f4eccc3b4a6106b80d",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 138000,
+        "sha256": "58a936c39cd0dfaf9cb1672eca81f1ec58ea39bc7dc781f4eccc3b4a6106b80d"
+      },
+      {
+        "src": "/media/products/kronotex-d81162-02/1800.webp?rev=48b867acfff9267c1fd8d9bacf228f87c8d99aeae82a969a0fe52ba88cbf29ad",
+        "width": 1800,
+        "height": 1200,
+        "bytes": 174428,
+        "sha256": "48b867acfff9267c1fd8d9bacf228f87c8d99aeae82a969a0fe52ba88cbf29ad"
+      }
+    ],
+    "fallback": {
+      "src": "/media/products/kronotex-d81162-02/960.webp?rev=5b09f51f1f73804dcf064a6bbafff5d09505e0b0faecd33385f2816f120e2fe2",
+      "width": 960,
+      "height": 640,
+      "bytes": 49872,
+      "sha256": "5b09f51f1f73804dcf064a6bbafff5d09505e0b0faecd33385f2816f120e2fe2"
     }
   }
 }

@@ -13,17 +13,6 @@
       "sha256": "157b7d198e6850d32f32e714b0fc69557fa8ebca0d0a4f955cd84f855a7cd59b"
     },
     {
-      "id": "lis-natyral-10-01",
-      "localPath": "brand/assets/products/lis-natyral-10/01.jpg",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen, generated for Porta & Dysheme",
-      "usageBasis": "generated",
-      "licenseNote": "Demo illustration, not a supplier photograph. Prompt: A natural warm Swiss-oak-look laminate floor, long narrow straight planks, subtle 4V bevels, clean honey-oak grain with no excessive knots. The floor occupies at least 75 percent of frame, from foreground into a softly sunlit minimal living room, one linen sofa edge and white wall in uppermost background.. Final wide composition preserves the central product.",
-      "depictsProductId": "lis-natyral-10",
-      "isIllustrative": true,
-      "sha256": "d76ae20c0e6e50fdaf44773238a3a0e2142f6c000513e443c6461e90263766bf"
-    },
-    {
       "id": "dera-lis-01",
       "localPath": "brand/assets/products/dera-lis/01.jpg",
       "sourceUrl": null,
@@ -33,17 +22,6 @@
       "depictsProductId": "dera-lis",
       "isIllustrative": true,
       "sha256": "dc45cd67e331ffffcfccc95a158b860d266fb48264c01dd197456dc88cf3b0f4"
-    },
-    {
-      "id": "dushk-fshatar-8-01",
-      "localPath": "brand/assets/products/dushk-fshatar-8/01.jpg",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen, generated for Porta & Dysheme",
-      "usageBasis": "generated",
-      "licenseNote": "Demo illustration, not a supplier photograph. Prompt: A rustic oak-look laminate floor with wider straight planks and clearly subtle four-sided bevel grooves, natural varied brown grain and a few restrained knots. Low angled editorial interior photograph, floor at least 75 percent of frame, warm daylight, a small neutral armchair edge in upper background.. Final wide composition preserves the central product.",
-      "depictsProductId": "dushk-fshatar-8",
-      "isIllustrative": true,
-      "sha256": "f5e7d59991dc570cf9adee5a1806fb82c665a15f5ad4a33642385b14c317c1b3"
     },
     {
       "id": "dera-kashmir-01",
@@ -79,17 +57,6 @@
       "sha256": "a993261dd1a553c8c1d54507a66e0ee60705053f8502a2941e3b8f7570f8a686"
     },
     {
-      "id": "lis-natyral-10-02",
-      "localPath": "brand/assets/products/lis-natyral-10/02.jpg",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen, generated for Porta & Dysheme",
-      "usageBasis": "generated",
-      "licenseNote": "Demo illustration, not supplier evidence. Prompt: Create a second useful product gallery detail photograph from the provided approved demo reference. Close-up low oblique view of this exact light natural oak straight-plank laminate floor, crisp oak grain and subtle four-sided bevels, same warm neutral room, emphasis on board joints, no herringbone. Maintain product identity, finish tone, hardware shape, and pattern. Photorealistic editorial interior illustration, warm daylight, material detail sharp, restrained background. REQUIRED wide landscape 2:1 output, requested 2048x1024 and actual long edge at least 1600 pixels. Subject occupies the center; no text, logo, watermark, swatch grid or added branding. This is a generated demo illustration, not supplier evidence.",
-      "depictsProductId": "lis-natyral-10",
-      "isIllustrative": true,
-      "sha256": "d00ab32087d53203ea2575e7b669f139fd3c43b170c6261026f7598859138741"
-    },
-    {
       "id": "dera-lis-02",
       "localPath": "brand/assets/products/dera-lis/02.jpg",
       "sourceUrl": null,
@@ -99,17 +66,6 @@
       "depictsProductId": "dera-lis",
       "isIllustrative": true,
       "sha256": "4f6cc8ceb22c2025a3a646d38d223994928843603e5559449fd14c4e8d7268bc"
-    },
-    {
-      "id": "dushk-fshatar-8-02",
-      "localPath": "brand/assets/products/dushk-fshatar-8/02.jpg",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen, generated for Porta & Dysheme",
-      "usageBasis": "generated",
-      "licenseNote": "Demo illustration, not supplier evidence. Prompt: Create a second useful product gallery detail photograph from the provided approved demo reference. Close-up low oblique view of this exact rustic warm oak straight-plank laminate, darker knots and board joints with subtle bevels, same rustic room. No herringbone. Maintain product identity, finish tone, hardware shape, and pattern. Photorealistic editorial interior illustration, warm daylight, material detail sharp, restrained background. REQUIRED wide landscape 2:1 output, requested 2048x1024 and actual long edge at least 1600 pixels. Subject occupies the center; no text, logo, watermark, swatch grid or added branding. This is a generated demo illustration, not supplier evidence.",
-      "depictsProductId": "dushk-fshatar-8",
-      "isIllustrative": true,
-      "sha256": "f5976f3d027868533ede1a50d2e3dd9d2ef63dd4f29ffdd94869f09a12d9f587"
     },
     {
       "id": "dera-kashmir-02",
@@ -277,28 +233,6 @@
       "sha256": "1773b4778612647b0ca05d0930584460f2a11ff9bf336863599b94f82282f9f6"
     },
     {
-      "id": "arre-klasike-12-01",
-      "localPath": "brand/assets/products/arre-klasike-12/01.jpg",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen",
-      "usageBasis": "generated",
-      "licenseNote": "Generated diptych room + exact product detail. Prompt: Classic walnut 12mm, European daylight architecture, two equal photographs, no text or supplier claims. Full source retained at native 1774×887; no upscaling.",
-      "depictsProductId": "arre-klasike-12",
-      "isIllustrative": true,
-      "sha256": "cac1cb03fa0e796eefbc390e97c2f696b4ffa857f841d64fa76f274777ef455d"
-    },
-    {
-      "id": "arre-klasike-12-02",
-      "localPath": "brand/assets/products/arre-klasike-12/02.jpg",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen",
-      "usageBasis": "generated",
-      "licenseNote": "Generated independent single detail photograph. Prompt: close view of Classic walnut 12mm, material/hardware detail, daylight, no text, illustrative demo.",
-      "depictsProductId": "arre-klasike-12",
-      "isIllustrative": true,
-      "sha256": "c4e756d88f3232fdaa9dcccc933ff84991cbe890e91aa15b47eb54df5b41d707"
-    },
-    {
       "id": "dera-xham-01",
       "localPath": "brand/assets/products/dera-xham/01.jpg",
       "sourceUrl": null,
@@ -321,28 +255,6 @@
       "sha256": "1df37429d4cdb815b447d20e5e503ed96ba9cc17b2d5b253f2ed15bdd94bc3d5"
     },
     {
-      "id": "hirte-skandinave-8-01",
-      "localPath": "brand/assets/products/hirte-skandinave-8/01.jpg",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen",
-      "usageBasis": "generated",
-      "licenseNote": "Generated diptych room + exact product detail. Prompt: Scandinavian grey 8mm, European daylight architecture, two equal photographs, no text or supplier claims. Full source retained at native 1774×887; no upscaling.",
-      "depictsProductId": "hirte-skandinave-8",
-      "isIllustrative": true,
-      "sha256": "602825bb5d2773347973c8ae33442c36e326546de02e87b81101b78b1d49326f"
-    },
-    {
-      "id": "hirte-skandinave-8-02",
-      "localPath": "brand/assets/products/hirte-skandinave-8/02.jpg",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen",
-      "usageBasis": "generated",
-      "licenseNote": "Generated independent single detail photograph. Prompt: close view of Scandinavian grey 8mm, material/hardware detail, daylight, no text, illustrative demo.",
-      "depictsProductId": "hirte-skandinave-8",
-      "isIllustrative": true,
-      "sha256": "033e0f8c16adedfc47cf147b6fc5a303996547ca635043ebe019361749a3dc47"
-    },
-    {
       "id": "texture-door-lis-natyral",
       "localPath": "brand/assets/textures/doors/lis-natyral.png",
       "sourceUrl": null,
@@ -354,17 +266,6 @@
       "sha256": "43a3511f14766a9bc472829cad1e376c9c9fa7f6d8ccceab971e6746fb164814"
     },
     {
-      "id": "texture-door-arre-erret",
-      "localPath": "brand/assets/textures/doors/arre-erret.png",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen / metric atlas authoring",
-      "usageBasis": "generated",
-      "licenseNote": "Generated orthographic horizontal wood albedo scan; no supplier match. Prompt: seamless uniform diffuse light wood grain, no seams/reflections/perspective.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "527927a89592c44924adec20c38135390ce202b25c741f86c4275d4acd422262"
-    },
-    {
       "id": "texture-door-dushk-hirte",
       "localPath": "brand/assets/textures/doors/dushk-hirte.png",
       "sourceUrl": null,
@@ -374,50 +275,6 @@
       "depictsProductId": null,
       "isIllustrative": true,
       "sha256": "de4b96bd3d44f6ca951bac99f420bcc4e6b91805be52d7a58fd6fe2f786fe778"
-    },
-    {
-      "id": "texture-lis-natyral-10-atlas",
-      "localPath": "brand/assets/textures/floors/lis-natyral-10/atlas.png",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen / metric atlas authoring",
-      "usageBasis": "generated",
-      "licenseNote": "Metric code-authored four staggered rows × four 1380mm lengths, 16 board areas. Grain from generated lis-natyral albedo scan. Trim contains no plank seams. Individual scan repeats and seam continuity require visual review.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "751d1b30f5a85b110eb537dec78110162f85f3492d79957eff75d196cc6b1b17"
-    },
-    {
-      "id": "texture-lis-natyral-10-trim",
-      "localPath": "brand/assets/textures/floors/lis-natyral-10/trim.png",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen / metric atlas authoring",
-      "usageBasis": "generated",
-      "licenseNote": "Metric code-authored four staggered rows × four 1380mm lengths, 16 board areas. Grain from generated lis-natyral albedo scan. Trim contains no plank seams. Individual scan repeats and seam continuity require visual review.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "f05c451af0126d520df683cc95ba34e3f2b198c6af4ed8d9cc30a53c33013ef3"
-    },
-    {
-      "id": "texture-dushk-fshatar-8-atlas",
-      "localPath": "brand/assets/textures/floors/dushk-fshatar-8/atlas.png",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen / metric atlas authoring",
-      "usageBasis": "generated",
-      "licenseNote": "Metric code-authored four staggered rows × four 1380mm lengths, 16 board areas. Grain from generated lis-natyral albedo scan. Trim contains no plank seams. Individual scan repeats and seam continuity require visual review.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "6d86b06308b1155c6c26fa107ab84fe9b6667a15f7458cd5fbbe1a6aaf84dfc7"
-    },
-    {
-      "id": "texture-dushk-fshatar-8-trim",
-      "localPath": "brand/assets/textures/floors/dushk-fshatar-8/trim.png",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen / metric atlas authoring",
-      "usageBasis": "generated",
-      "licenseNote": "Metric code-authored four staggered rows × four 1380mm lengths, 16 board areas. Grain from generated lis-natyral albedo scan. Trim contains no plank seams. Individual scan repeats and seam continuity require visual review.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "f05c451af0126d520df683cc95ba34e3f2b198c6af4ed8d9cc30a53c33013ef3"
     },
     {
       "id": "texture-peshk-natyral-12-atlas",
@@ -440,50 +297,6 @@
       "depictsProductId": null,
       "isIllustrative": true,
       "sha256": "f05c451af0126d520df683cc95ba34e3f2b198c6af4ed8d9cc30a53c33013ef3"
-    },
-    {
-      "id": "texture-arre-klasike-12-atlas",
-      "localPath": "brand/assets/textures/floors/arre-klasike-12/atlas.png",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen / metric atlas authoring",
-      "usageBasis": "generated",
-      "licenseNote": "Metric code-authored four staggered rows × four 1380mm lengths, 16 board areas. Grain from generated arre-erret albedo scan. Trim contains no plank seams. Individual scan repeats and seam continuity require visual review.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "9a567f40660107620b518e9b3d5c60655aa2c95a7d7187c607e04a81ce6daf13"
-    },
-    {
-      "id": "texture-arre-klasike-12-trim",
-      "localPath": "brand/assets/textures/floors/arre-klasike-12/trim.png",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen / metric atlas authoring",
-      "usageBasis": "generated",
-      "licenseNote": "Metric code-authored four staggered rows × four 1380mm lengths, 16 board areas. Grain from generated arre-erret albedo scan. Trim contains no plank seams. Individual scan repeats and seam continuity require visual review.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "d0134ff04a16ce5a2cd662f897f660d1f1f6a6c922220be06a883f7036bf8000"
-    },
-    {
-      "id": "texture-hirte-skandinave-8-atlas",
-      "localPath": "brand/assets/textures/floors/hirte-skandinave-8/atlas.png",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen / metric atlas authoring",
-      "usageBasis": "generated",
-      "licenseNote": "Metric code-authored four staggered rows × four 1380mm lengths, 16 board areas. Grain from generated dushk-hirte albedo scan. Trim contains no plank seams. Individual scan repeats and seam continuity require visual review.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "bed7466021f87bbc3ae27557b220e4a3b4f1fe718d0935b342d72bdd7d65b63f"
-    },
-    {
-      "id": "texture-hirte-skandinave-8-trim",
-      "localPath": "brand/assets/textures/floors/hirte-skandinave-8/trim.png",
-      "sourceUrl": null,
-      "author": "OpenAI ImageGen / metric atlas authoring",
-      "usageBasis": "generated",
-      "licenseNote": "Metric code-authored four staggered rows × four 1380mm lengths, 16 board areas. Grain from generated dushk-hirte albedo scan. Trim contains no plank seams. Individual scan repeats and seam continuity require visual review.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "c3910eed6f25037bbe35f602ac314cb64c7f035a6b15750adbbf6c7fe3d604fd"
     },
     {
       "id": "brand-assets-scenes-living-standard-base",
@@ -1267,28 +1080,6 @@
       "sha256": "713403f5410421e9c7f329dfcfcdb239802e56c4a0c49d2b904b0a5d535bedd1"
     },
     {
-      "id": "texture-lis-natyral-10-planks",
-      "localPath": "brand/assets/textures/floors/lis-natyral-10/planks.png",
-      "sourceUrl": null,
-      "author": "Porta & Dysheme asset authoring (scripts/author-plank-sheets.ts)",
-      "usageBasis": "generated",
-      "licenseNote": "Plank sheet: 3 board images cut at native 1.0 px/mm from the generated lis-natyral albedo scan (brand/assets/textures/doors/lis-natyral.png, crops x,y mm 0,0 / 0,134 / 0,267), colour-matched in linear light (mean/std per channel) to this collection's atlas. No upscaling. Illustrative décor, no supplier match.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "62befc2cbe713699cb6c21fd376a79f622f98b6da5c40249861c19a8bad2e986"
-    },
-    {
-      "id": "texture-dushk-fshatar-8-planks",
-      "localPath": "brand/assets/textures/floors/dushk-fshatar-8/planks.png",
-      "sourceUrl": null,
-      "author": "Porta & Dysheme asset authoring (scripts/author-plank-sheets.ts)",
-      "usageBasis": "generated",
-      "licenseNote": "Plank sheet: 3 board images cut at native 1.0 px/mm from the generated lis-natyral albedo scan (brand/assets/textures/doors/lis-natyral.png, crops x,y mm 0,0 / 0,108 / 0,216), colour-matched in linear light (mean/std per channel) to this collection's atlas. No upscaling. Illustrative décor, no supplier match.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "51e1406f678728b04e1b696d365b0880cc0ae856887bac952528971b8feb932e"
-    },
-    {
       "id": "texture-peshk-natyral-12-planks",
       "localPath": "brand/assets/textures/floors/peshk-natyral-12/planks.png",
       "sourceUrl": null,
@@ -1300,28 +1091,6 @@
       "sha256": "fc10b25f60abc5f1564a8e43c4ec46122b9e86251bb2b305f11e69a2e1cd4c37"
     },
     {
-      "id": "texture-arre-klasike-12-planks",
-      "localPath": "brand/assets/textures/floors/arre-klasike-12/planks.png",
-      "sourceUrl": null,
-      "author": "Porta & Dysheme asset authoring (scripts/author-plank-sheets.ts)",
-      "usageBasis": "generated",
-      "licenseNote": "Plank sheet: 3 board images cut at native 1.0 px/mm from the generated arre-erret albedo scan (brand/assets/textures/doors/arre-erret.png, crops x,y mm 0,0 / 0,134 / 0,267), colour-matched in linear light (mean/std per channel) to this collection's atlas. No upscaling. Illustrative décor, no supplier match.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "eb9406be11b839ddc3cb508019505234ee165f346b122f066a2a08de588bbcba"
-    },
-    {
-      "id": "texture-hirte-skandinave-8-planks",
-      "localPath": "brand/assets/textures/floors/hirte-skandinave-8/planks.png",
-      "sourceUrl": null,
-      "author": "Porta & Dysheme asset authoring (scripts/author-plank-sheets.ts)",
-      "usageBasis": "generated",
-      "licenseNote": "Plank sheet: 3 board images cut at native 1.0 px/mm from the generated dushk-hirte albedo scan (brand/assets/textures/doors/dushk-hirte.png, crops x,y mm 0,0 / 0,134 / 0,267), colour-matched in linear light (mean/std per channel) to this collection's atlas. No upscaling. Illustrative décor, no supplier match.",
-      "depictsProductId": null,
-      "isIllustrative": true,
-      "sha256": "06fb80698a6281a1686906ac849ab9380d6fee2c02067786eecc350701d49f43"
-    },
-    {
       "id": "living-render-01-base",
       "localPath": "brand/assets/scenes/living-render-01/base.png",
       "sourceUrl": null,
@@ -1330,7 +1099,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "40aec31622f0f9b8c4838d988892f5cb546e790c89a97509f53d89c21ee9e437"
+      "sha256": "34fc67c5f0a63359c4846c0e37991dddf97c88e6d21d17091df1ccbe877b32bb"
     },
     {
       "id": "living-render-01-floor-light",
@@ -1341,7 +1110,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "270d32e9f408763353345dd22dcdfc0bc7181a4f50d90dc2e8930799e283382a"
+      "sha256": "a470bf825d33f17eb7b5e9bb575031bf53e5a437cdfc6f64523cb5747c8a90c7"
     },
     {
       "id": "living-render-01-floor-mask",
@@ -1374,7 +1143,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "40488de450f8f25d3320c61cc1ba49f71076ff2849bc27f52621a9e084eeb7ed"
+      "sha256": "3df5676b29520f86ebb10b77dee1c7298e15c211fea12052de4c5d389d373a44"
     },
     {
       "id": "living-render-01-frame-left-light",
@@ -1385,7 +1154,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "0602ac23bbbe835c67d4a9ade5d0e85d176d967419f85bc7009cdc290d7769d1"
+      "sha256": "3103cbbfd11127014e5a6240efb25868be0ab231dd0424f0a55382b4fbecf889"
     },
     {
       "id": "living-render-01-frame-left-mask",
@@ -1396,7 +1165,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "561a112ac8ed918df3b348faa895edb564bb58195e33bb44312214fd3bdfbb32"
+      "sha256": "52623db671fb020fd3078b44522a6c7931e5683ed43796a87e67ae2b380cc253"
     },
     {
       "id": "living-render-01-frame-left-reflection",
@@ -1407,7 +1176,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "4cdebb91a45be9b326c5b4c50e90694b5c42d9ce1bfacd1d676490871a0a98ea"
+      "sha256": "02c23fc00a78c7c14b9cdf9f6703af33a34158000ec4e848c53d379c5c0e13a6"
     },
     {
       "id": "living-render-01-frame-right-light",
@@ -1418,7 +1187,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "845f5bd9b9736689ba63e544e0a875b7d797558fc95a8925d342ca7d8f2bb3fd"
+      "sha256": "cc2eb683dfde4db7a0420663307648e134080249d4e6b4830eebe357cf5b0217"
     },
     {
       "id": "living-render-01-frame-right-mask",
@@ -1440,7 +1209,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "3510607e2933bb7c9d1cc7cffd36c43bc13d3a2a5081ef1621ad5fee9687e236"
+      "sha256": "984704768b0f24cde623121806bd8ea6915d0c7cf16616c838dfe6955d232314"
     },
     {
       "id": "living-render-01-frame-top-light",
@@ -1451,7 +1220,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "5eed1636daa3ee1b6fe05d384e96cf6fd4b68b1449f17786f132886db3163936"
+      "sha256": "4c95efb986e4a1b435ba872f90a781090a68d6e05bb8db83e5cf83c95547c7e1"
     },
     {
       "id": "living-render-01-frame-top-mask",
@@ -1462,7 +1231,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "7ff0e46a80c9a370601b64ab094bd7dfb399d95eba790c324bb5ae3e5f7313ea"
+      "sha256": "7305234abf8a032db621ced8f28845d365440974ae337fe72346c11960fec77d"
     },
     {
       "id": "living-render-01-frame-top-reflection",
@@ -1473,7 +1242,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "52d5ad87afc9a90b4fd8b11753267b91dbc75a8d4306287bca2e29e48dd10702"
+      "sha256": "9036e548a319944bb80360271ec3ba7679e47b31b564e304a6c6bfefa8a7f6b5"
     },
     {
       "id": "living-render-01-leaf-light",
@@ -1484,7 +1253,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "d5af1a34cd864820d7350d2388798ebeaec59dfe7490076feba5e70e1f09cbe4"
+      "sha256": "678f1d45deb2da889b4d3522744badaaae3d5c990d0c3aa8fd734228220acd90"
     },
     {
       "id": "living-render-01-leaf-mask",
@@ -1506,7 +1275,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "3878b0f292c8395e69927c00e6b66789b8f1302c529025deae60a25deb76b7cb"
+      "sha256": "db17e94e1f709792a5e3a3431557092742a473b9d84a67dbf7eab15724fc11e5"
     },
     {
       "id": "living-render-01-original",
@@ -1517,7 +1286,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "49af227bcbc348c37373bdd301b44ff5e4f61e3aa75f9c8c5bd86849aa06abba"
+      "sha256": "d8811a6af38b76b3b0eefeb2e88ea3b31c7a49319d2a4584bb9eb7b8e0f1facf"
     },
     {
       "id": "living-render-01-protected-mask",
@@ -1539,7 +1308,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "b753a0d7b65848f79e29214369649b02738ce9ba7346478ab3f913b8a800ca12"
+      "sha256": "4d7ac948578b0f590cd92059d3c811ed5fb4bc97474ee536fa1384fe26b7edf4"
     },
     {
       "id": "living-render-01-skirting-back-left-mask",
@@ -1561,7 +1330,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "bdc3b484da6ab20cb2f24b73ded48cc7040d0778d3ea9cecd5e3a6e8d3999785"
+      "sha256": "560efb530acf07432d294667c8be05c4134105be3388d82733930834a67cc000"
     },
     {
       "id": "living-render-01-skirting-back-right-light",
@@ -1572,7 +1341,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "a5cd5437f88fc6c6e328f56bc88b268e0c26d30a3365877853c7e6f48fddf7cc"
+      "sha256": "3692c510452703b1f716389236d0444d82699d7658bf5dd58194b03fa3758266"
     },
     {
       "id": "living-render-01-skirting-back-right-mask",
@@ -1594,7 +1363,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "8c53cea105ef709170a77d8d51244c4b11a9d994c5acce32a77481435022278b"
+      "sha256": "a71a01632879226586f32daa45fb061bfef630dd03afcc8e5f8741801796179e"
     },
     {
       "id": "living-render-01-skirting-right-light",
@@ -1605,7 +1374,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "74151247488a09a09e76af3be31c150408ddeb2cb33adf229abcd1c0824a4c91"
+      "sha256": "3cbe07cae1efc75c79c1d2ccbcb8de17cc8ef279f211b3933795eba1cb6a55c1"
     },
     {
       "id": "living-render-01-skirting-right-mask",
@@ -1627,7 +1396,7 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "e55982763550df837b5774adb14bc42b0af8675a8ebd6c349bb23b17545a8d7f"
+      "sha256": "ab67d25651b28a9d14a4c0ffe27c5a128a3d8e3ceab83aa241f813c97a30fa51"
     },
     {
       "id": "living-render-01-thumbnail",
@@ -1638,7 +1407,1404 @@
       "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
       "depictsProductId": null,
       "isIllustrative": true,
-      "sha256": "2216ece58ea7265220112a23ed323653d5ef6cef9110ad620a7e2cf4c04c7341"
+      "sha256": "44af0dfa55e1b899e8b9809093273e9dfeba2c7925284414d26d8c97ab32d4af"
+    },
+    {
+      "id": "texture-kronotex-d4955-planks",
+      "localPath": "brand/assets/textures/floors/kronotex-d4955/planks.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-natur/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/732926-d4955_1375_188_v4---area_frontal_srgb.jpg, sha256 5671a6b4c267869985d16382a5e51d1303a97c3080ec5a294ab601c1ad78ee80): long-side joints by comb fit (period 441.61 px = 188 mm), end joints by comb fit (3230.9 px = 1375 mm); native 2.349 × 2.350 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling).",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "6aecb7f64b674577891d1707f693986b60af65ce7b650131817ef0583c57c83a"
+    },
+    {
+      "id": "texture-kronotex-d4955-atlas",
+      "localPath": "brand/assets/textures/floors/kronotex-d4955/atlas.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-natur/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/732926-d4955_1375_188_v4---area_frontal_srgb.jpg, sha256 5671a6b4c267869985d16382a5e51d1303a97c3080ec5a294ab601c1ad78ee80): long-side joints by comb fit (period 441.61 px = 188 mm), end joints by comb fit (3230.9 px = 1375 mm); native 2.349 × 2.350 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Atlas: 4 rows × 4 boards, row offsets 0/0.5/0.25/0.75 of a board, 1.2 mm bevel shading baked.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "a199b637eb07877725f5495e236d7feb93527b0908dcf1ba0e09210db22032fb"
+    },
+    {
+      "id": "texture-kronotex-d4955-trim",
+      "localPath": "brand/assets/textures/floors/kronotex-d4955/trim.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-natur/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/732926-d4955_1375_188_v4---area_frontal_srgb.jpg, sha256 5671a6b4c267869985d16382a5e51d1303a97c3080ec5a294ab601c1ad78ee80): long-side joints by comb fit (period 441.61 px = 188 mm), end joints by comb fit (3230.9 px = 1375 mm); native 2.349 × 2.350 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Trim: 1200 × 80 mm strip of one board at 1 px/mm.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "1903320e672b90ab5cffafa3373d4522f26133133f02fa38d7579bf74d00a4a3"
+    },
+    {
+      "id": "texture-kronotex-d80582-planks",
+      "localPath": "brand/assets/textures/floors/kronotex-d80582/planks.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-beige/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/912587-D80582_1375_188_V4_-_Area_frontal_sRGB.jpg, sha256 0f363a088a06a5ef3988ec0047f299cd1c7e6385bc78d976e64184485996bf3a): long-side joints by comb fit (period 458.11 px = 188 mm), end joints by comb fit (3243.0 px = 1375 mm); native 2.437 × 2.359 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling).",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "a802aff1542d10731581857c43118f7574e0d579391223cb0bb37cbbb9a96913"
+    },
+    {
+      "id": "texture-kronotex-d80582-atlas",
+      "localPath": "brand/assets/textures/floors/kronotex-d80582/atlas.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-beige/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/912587-D80582_1375_188_V4_-_Area_frontal_sRGB.jpg, sha256 0f363a088a06a5ef3988ec0047f299cd1c7e6385bc78d976e64184485996bf3a): long-side joints by comb fit (period 458.11 px = 188 mm), end joints by comb fit (3243.0 px = 1375 mm); native 2.437 × 2.359 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Atlas: 4 rows × 4 boards, row offsets 0/0.5/0.25/0.75 of a board, 1.2 mm bevel shading baked.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "fb6caf5e1d0797a095b3f98639272ed2aa636aaed0cc99adccc4862e046dc310"
+    },
+    {
+      "id": "texture-kronotex-d80582-trim",
+      "localPath": "brand/assets/textures/floors/kronotex-d80582/trim.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-beige/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/912587-D80582_1375_188_V4_-_Area_frontal_sRGB.jpg, sha256 0f363a088a06a5ef3988ec0047f299cd1c7e6385bc78d976e64184485996bf3a): long-side joints by comb fit (period 458.11 px = 188 mm), end joints by comb fit (3243.0 px = 1375 mm); native 2.437 × 2.359 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Trim: 1200 × 80 mm strip of one board at 1 px/mm.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "d17baca4aa6f32f7fafbf1cbd0d3d3ff68647b33e45dae085ec09f7744e27216"
+    },
+    {
+      "id": "texture-kronotex-d80612-planks",
+      "localPath": "brand/assets/textures/floors/kronotex-d80612/planks.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-kaffee/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/912611-D80612_1375_188_V4_-_Area_frontal_sRGB.jpg, sha256 df859db5805a5eb1eddf7c9eafb35b0ef6e4e22665c8d1d16fbe0ff328cd9784): long-side joints by comb fit (period 458.06 px = 188 mm), end joints by comb fit (3243.2 px = 1375 mm); native 2.437 × 2.359 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling).",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "61a5f6ce1495da7b8f1f092619126cf78323a5502960ffd9161d3d2c812ef3ba"
+    },
+    {
+      "id": "texture-kronotex-d80612-atlas",
+      "localPath": "brand/assets/textures/floors/kronotex-d80612/atlas.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-kaffee/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/912611-D80612_1375_188_V4_-_Area_frontal_sRGB.jpg, sha256 df859db5805a5eb1eddf7c9eafb35b0ef6e4e22665c8d1d16fbe0ff328cd9784): long-side joints by comb fit (period 458.06 px = 188 mm), end joints by comb fit (3243.2 px = 1375 mm); native 2.437 × 2.359 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Atlas: 4 rows × 4 boards, row offsets 0/0.5/0.25/0.75 of a board, 1.2 mm bevel shading baked.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "94c63d2c9aef970b445f80c40cacba12e124e6827f7a4718c1cd22059459f4a5"
+    },
+    {
+      "id": "texture-kronotex-d80612-trim",
+      "localPath": "brand/assets/textures/floors/kronotex-d80612/trim.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-kaffee/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/912611-D80612_1375_188_V4_-_Area_frontal_sRGB.jpg, sha256 df859db5805a5eb1eddf7c9eafb35b0ef6e4e22665c8d1d16fbe0ff328cd9784): long-side joints by comb fit (period 458.06 px = 188 mm), end joints by comb fit (3243.2 px = 1375 mm); native 2.437 × 2.359 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Trim: 1200 × 80 mm strip of one board at 1 px/mm.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "5a97efe3957b1f3d487583aa070e827b8fa9e61d940ba9f1e920a47fb0538c32"
+    },
+    {
+      "id": "texture-kronotex-d4954-planks",
+      "localPath": "brand/assets/textures/floors/kronotex-d4954/planks.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/732894-D4954_1375_188_V4_-_Area_frontal_sRGB.jpg, sha256 eed120fa068e22dab8efeebb2c2b1e1df1d4230561cf51c37d97524b4068e916): long-side joints by comb fit (period 441.61 px = 188 mm), end joints by comb fit (3231.4 px = 1375 mm); native 2.349 × 2.350 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling).",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "0805fddf2575171b71d6a7fdbfadcecd1d4ef71e299e3380c3d7d36075449928"
+    },
+    {
+      "id": "texture-kronotex-d4954-atlas",
+      "localPath": "brand/assets/textures/floors/kronotex-d4954/atlas.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/732894-D4954_1375_188_V4_-_Area_frontal_sRGB.jpg, sha256 eed120fa068e22dab8efeebb2c2b1e1df1d4230561cf51c37d97524b4068e916): long-side joints by comb fit (period 441.61 px = 188 mm), end joints by comb fit (3231.4 px = 1375 mm); native 2.349 × 2.350 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Atlas: 4 rows × 4 boards, row offsets 0/0.5/0.25/0.75 of a board, 1.2 mm bevel shading baked.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "9f27f6e92a4dd3b0f04b0ee9380b36d14b4c4c4b42b7ca516ffde8ce400c70af"
+    },
+    {
+      "id": "texture-kronotex-d4954-trim",
+      "localPath": "brand/assets/textures/floors/kronotex-d4954/trim.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/732894-D4954_1375_188_V4_-_Area_frontal_sRGB.jpg, sha256 eed120fa068e22dab8efeebb2c2b1e1df1d4230561cf51c37d97524b4068e916): long-side joints by comb fit (period 441.61 px = 188 mm), end joints by comb fit (3231.4 px = 1375 mm); native 2.349 × 2.350 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Trim: 1200 × 80 mm strip of one board at 1 px/mm.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "3aa14fe2b33934052d0285de303c1b8740c127c57214e72c2e3b74ff3289fc93"
+    },
+    {
+      "id": "texture-kronotex-d4763-planks",
+      "localPath": "brand/assets/textures/floors/kronotex-d4763/planks.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/exquisit/pettersson-eiche-beige/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/727704-D4763_1380_193_V4_-_Area_frontal_sRGB.jpg, sha256 0fc1c99d2f0eba87a7da4831724234329fd2c34e89b2b11b7dc44dbb1ffcfc60): long-side joints by comb fit (period 441.71 px = 193 mm), end joints by comb fit (3231.0 px = 1380 mm); native 2.289 × 2.341 px/mm (x × y, resampled to square), 6 unique complete boards of 12, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling).",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "97aaae209a1de3a88579d00a698b739a332e15f697d6d13651f67a27d701c966"
+    },
+    {
+      "id": "texture-kronotex-d4763-atlas",
+      "localPath": "brand/assets/textures/floors/kronotex-d4763/atlas.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/exquisit/pettersson-eiche-beige/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/727704-D4763_1380_193_V4_-_Area_frontal_sRGB.jpg, sha256 0fc1c99d2f0eba87a7da4831724234329fd2c34e89b2b11b7dc44dbb1ffcfc60): long-side joints by comb fit (period 441.71 px = 193 mm), end joints by comb fit (3231.0 px = 1380 mm); native 2.289 × 2.341 px/mm (x × y, resampled to square), 6 unique complete boards of 12, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Atlas: 4 rows × 4 boards, row offsets 0/0.5/0.25/0.75 of a board, 1.2 mm bevel shading baked.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "b2f7cd7d18c732196674f325761d923b9352b680a7f4c475988b5525a5aa74e8"
+    },
+    {
+      "id": "texture-kronotex-d4763-trim",
+      "localPath": "brand/assets/textures/floors/kronotex-d4763/trim.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/exquisit/pettersson-eiche-beige/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/727704-D4763_1380_193_V4_-_Area_frontal_sRGB.jpg, sha256 0fc1c99d2f0eba87a7da4831724234329fd2c34e89b2b11b7dc44dbb1ffcfc60): long-side joints by comb fit (period 441.71 px = 193 mm), end joints by comb fit (3231.0 px = 1380 mm); native 2.289 × 2.341 px/mm (x × y, resampled to square), 6 unique complete boards of 12, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Trim: 1200 × 80 mm strip of one board at 1 px/mm.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "a2a2787ef10e30ffe90e9cc01ec71e965064b2dcceab409843fb59d6ca6eaf49"
+    },
+    {
+      "id": "texture-kronotex-d4956-planks",
+      "localPath": "brand/assets/textures/floors/kronotex-d4956/planks.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-grau/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/732958-D4956_1380_193_V4_-_Area_frontal_sRGB.jpg, sha256 9838b86417bb78251b0471769687761845583194f6fc8fb361a3b5f68f7541d6): long-side joints by comb fit (period 453.31 px = 188 mm), end joints by comb fit (3242.9 px = 1375 mm); native 2.411 × 2.358 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling).",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "b1c2886640495773e04b01303821fb2607f716b20408249622eaecba889385d8"
+    },
+    {
+      "id": "texture-kronotex-d4956-atlas",
+      "localPath": "brand/assets/textures/floors/kronotex-d4956/atlas.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-grau/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/732958-D4956_1380_193_V4_-_Area_frontal_sRGB.jpg, sha256 9838b86417bb78251b0471769687761845583194f6fc8fb361a3b5f68f7541d6): long-side joints by comb fit (period 453.31 px = 188 mm), end joints by comb fit (3242.9 px = 1375 mm); native 2.411 × 2.358 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Atlas: 4 rows × 4 boards, row offsets 0/0.5/0.25/0.75 of a board, 1.2 mm bevel shading baked.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "d015d88c545ed3764b9bb01883d1229410a0b38585db4bb98afaf1eee28adb20"
+    },
+    {
+      "id": "texture-kronotex-d4956-trim",
+      "localPath": "brand/assets/textures/floors/kronotex-d4956/trim.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-grau/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/732958-D4956_1380_193_V4_-_Area_frontal_sRGB.jpg, sha256 9838b86417bb78251b0471769687761845583194f6fc8fb361a3b5f68f7541d6): long-side joints by comb fit (period 453.31 px = 188 mm), end joints by comb fit (3242.9 px = 1375 mm); native 2.411 × 2.358 px/mm (x × y, resampled to square), 6 unique complete boards of 14, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Trim: 1200 × 80 mm strip of one board at 1 px/mm.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "4660f7ee85bd144ba8ace95b15795552989c65c06db5b050fb09bdc2e6636529"
+    },
+    {
+      "id": "texture-kronotex-d3179-planks",
+      "localPath": "brand/assets/textures/floors/kronotex-d3179/planks.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/everest-oak-weiss/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/730956-D3179_1845_188_V4_-_Area_frontal_sRGB.jpg, sha256 be8b0e765ef63082f041299766f629c9c0fe1eb4cf3a063b59ae4ce0ebc24cb1): long-side joints by comb fit (period 441.71 px = 188 mm), end joints by comb fit (4334.9 px = 1845 mm); native 2.350 × 2.350 px/mm (x × y, resampled to square), 6 unique complete boards of 8, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling).",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "07bef29e65833bce034735c196540f2e6158d98b992a6360e5c66173e251e944"
+    },
+    {
+      "id": "texture-kronotex-d3179-atlas",
+      "localPath": "brand/assets/textures/floors/kronotex-d3179/atlas.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/everest-oak-weiss/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/730956-D3179_1845_188_V4_-_Area_frontal_sRGB.jpg, sha256 be8b0e765ef63082f041299766f629c9c0fe1eb4cf3a063b59ae4ce0ebc24cb1): long-side joints by comb fit (period 441.71 px = 188 mm), end joints by comb fit (4334.9 px = 1845 mm); native 2.350 × 2.350 px/mm (x × y, resampled to square), 6 unique complete boards of 8, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Atlas: 4 rows × 4 boards, row offsets 0/0.5/0.25/0.75 of a board, 1.2 mm bevel shading baked.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "445b636f0dc1226b6276c92c388c4e174a88e105bcc52c9ca03e4fca3e2f869a"
+    },
+    {
+      "id": "texture-kronotex-d3179-trim",
+      "localPath": "brand/assets/textures/floors/kronotex-d3179/trim.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/everest-oak-weiss/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/730956-D3179_1845_188_V4_-_Area_frontal_sRGB.jpg, sha256 be8b0e765ef63082f041299766f629c9c0fe1eb4cf3a063b59ae4ce0ebc24cb1): long-side joints by comb fit (period 441.71 px = 188 mm), end joints by comb fit (4334.9 px = 1845 mm); native 2.350 × 2.350 px/mm (x × y, resampled to square), 6 unique complete boards of 8, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Trim: 1200 × 80 mm strip of one board at 1 px/mm.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "17804f1d6991e3b5b8befb2897403959025fe37c8011ac07d911626ad1ef6251"
+    },
+    {
+      "id": "texture-kronotex-d81162-planks",
+      "localPath": "brand/assets/textures/floors/kronotex-d81162/planks.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/eiche-eleganz-creme/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/912677-D81162_1845_188_V4_-_Area_frontal_sRGB.jpg, sha256 5e47626844397bc270d216dc98f33d1ce6d7451e3a109828ef18381d41898d35): long-side joints by comb fit (period 441.66 px = 188 mm), end joints by comb fit (4335.0 px = 1845 mm); native 2.349 × 2.350 px/mm (x × y, resampled to square), 6 unique complete boards of 8, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling).",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "e20e61c9f79690f1db2056641d37b54c8f38e748032424699fd16498fda3fb74"
+    },
+    {
+      "id": "texture-kronotex-d81162-atlas",
+      "localPath": "brand/assets/textures/floors/kronotex-d81162/atlas.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/eiche-eleganz-creme/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/912677-D81162_1845_188_V4_-_Area_frontal_sRGB.jpg, sha256 5e47626844397bc270d216dc98f33d1ce6d7451e3a109828ef18381d41898d35): long-side joints by comb fit (period 441.66 px = 188 mm), end joints by comb fit (4335.0 px = 1845 mm); native 2.349 × 2.350 px/mm (x × y, resampled to square), 6 unique complete boards of 8, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Atlas: 4 rows × 4 boards, row offsets 0/0.5/0.25/0.75 of a board, 1.2 mm bevel shading baked.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "1f844a5a780800b2c726f140a13e87a9baf8facb7da7766aec27d2fd3a370265"
+    },
+    {
+      "id": "texture-kronotex-d81162-trim",
+      "localPath": "brand/assets/textures/floors/kronotex-d81162/trim.png",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/eiche-eleganz-creme/",
+      "author": "KRONOTEX (SWISS KRONO TEX GmbH & Co. KG); derived by Porta & Dysheme asset authoring",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Décor images and article data from the manufacturer's official product pages (© SWISS KRONO Group). No reuse licence is granted on the site; used only for a private sales pitch until written permission from SWISS KRONO or the showroom exists. Never sourced from any visualizer endpoint. Cut by scripts/import-decors.ts from the official décor image (https://proxy-tessa.swikr-web51.eimed-server.de/912677-D81162_1845_188_V4_-_Area_frontal_sRGB.jpg, sha256 5e47626844397bc270d216dc98f33d1ce6d7451e3a109828ef18381d41898d35): long-side joints by comb fit (period 441.66 px = 188 mm), end joints by comb fit (4335.0 px = 1845 mm); native 2.349 × 2.350 px/mm (x × y, resampled to square), 6 unique complete boards of 8, inset 2 mm past the printed V-groove, resampled to 1.5 px/mm (no upscaling). Trim: 1200 × 80 mm strip of one board at 1 px/mm.",
+      "depictsProductId": null,
+      "isIllustrative": false,
+      "sha256": "856b5bebf2c939162daefee7e395949ff0d1967f97ae59caef3cc28988e06f2e"
+    },
+    {
+      "id": "living-render-01-model-filomuro-base",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-base.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "8c04f72ad019ede4af47154eb05a46862b9996256f447738b73a59553a4757f9"
+    },
+    {
+      "id": "living-render-01-model-filomuro-floor-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-floor-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "f1503d7d93e8d5b714095e4cbc4a886cc5ab490fcbe144f6824e821b32679173"
+    },
+    {
+      "id": "living-render-01-model-filomuro-floor-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-floor-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "0bae47f8bea4ce63a867007e668ab443e07038c2a37f80c1a5158cba8bf673a6"
+    },
+    {
+      "id": "living-render-01-model-filomuro-floor-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-floor-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "0e7cbd85715264dceff243c22c12a3012a3b128749fd22f1609759d193d5b5aa"
+    },
+    {
+      "id": "living-render-01-model-filomuro-leaf-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-leaf-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "086b7191898d55caba80bb18660115e198a2f8dc91198c0d08e238ea177df407"
+    },
+    {
+      "id": "living-render-01-model-filomuro-leaf-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-leaf-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "b46b79b7f7c7a6132eea8576f52ecce120f034a9a3205cd5d8b9dbec620deb50"
+    },
+    {
+      "id": "living-render-01-model-filomuro-leaf-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-leaf-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "2837ff958e94b5719e1e10d3f65426f5c49211821925c6eec5be31692a7ada74"
+    },
+    {
+      "id": "living-render-01-model-filomuro-original",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-original.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "8616450e9c7acbceb93d1d58580855843dd185db457604334c41bdb186968883"
+    },
+    {
+      "id": "living-render-01-model-filomuro-protected-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-protected-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "e94f25f2d08e0d5b5720abdbab33825e038ffd47fab690bc8e80e8e4d1d1506c"
+    },
+    {
+      "id": "living-render-01-model-filomuro-skirting-back-left-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-skirting-back-left-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "78254e1f5267a327aeb4dd3d281d2d82f22b9e8e43972e5aca2b1ff3ea2699fb"
+    },
+    {
+      "id": "living-render-01-model-filomuro-skirting-back-left-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-skirting-back-left-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "4b39236a7de685864ae116af10592117ce111e34c743f333c2cec35c56387aa9"
+    },
+    {
+      "id": "living-render-01-model-filomuro-skirting-back-left-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-skirting-back-left-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "b9555b11140934d7126db70e6760227ab652ba161806201ad02a50a164fe2f10"
+    },
+    {
+      "id": "living-render-01-model-filomuro-skirting-back-right-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-skirting-back-right-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "644fa2141bb02568883b75268ffc8e5b1c60fb7153d983cdb3365cad156987b1"
+    },
+    {
+      "id": "living-render-01-model-filomuro-skirting-back-right-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-skirting-back-right-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "dac31dd9576a591df9668012da63a002efaa8846cde2a1c019d613c7ae25e8d9"
+    },
+    {
+      "id": "living-render-01-model-filomuro-skirting-back-right-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-filomuro-skirting-back-right-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "538ba55fdc39398fec418d33be28ef7ba1b09e2b8146b3ad16350d1a8d7e1afa"
+    },
+    {
+      "id": "living-render-01-model-flat-base",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-base.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "4ea6365c7b08d33ce9be0e1154fee0c667d8f7965145b3447a58b05312e66cac"
+    },
+    {
+      "id": "living-render-01-model-flat-floor-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-floor-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "218393eaae12980bd46546d73aee80bf4f8c2797970ad691f48d3b943e735561"
+    },
+    {
+      "id": "living-render-01-model-flat-floor-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-floor-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "60050e20af3233dc58102933368843ce1e6c7b2048d661894d79340fb694f76f"
+    },
+    {
+      "id": "living-render-01-model-flat-floor-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-floor-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "734b53e540b817bded695d3b1ab2b64dfe494d9ebc8421e54bd567868f50ac62"
+    },
+    {
+      "id": "living-render-01-model-flat-frame-left-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-frame-left-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "ae23748ab439d673ae01aa20d9fe9cf934fdcc72d616082539f118b45eb6e4ee"
+    },
+    {
+      "id": "living-render-01-model-flat-frame-left-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-frame-left-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "931e38a89567366c90ef35d2614fa02c63df5b7beeb80b72c92ea256f1b827dc"
+    },
+    {
+      "id": "living-render-01-model-flat-frame-left-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-frame-left-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "0cb207f2bdc827c5a4e55cbf453e648d0b45c1578da46005354d0b347325980d"
+    },
+    {
+      "id": "living-render-01-model-flat-frame-right-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-frame-right-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "ff9006fe7d416decc540bf4e420317c0af95a53c1e5c748e87e3334d2e4d1449"
+    },
+    {
+      "id": "living-render-01-model-flat-frame-right-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-frame-right-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "ba4fe84411a4787af4953ea28e280979f7927df7cc5db8d86dc65b7be948ce63"
+    },
+    {
+      "id": "living-render-01-model-flat-frame-right-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-frame-right-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "2391e16cff9c65ddc5f1f240a3edeef2666b372e1d29f75dcaf8637b568ccf5c"
+    },
+    {
+      "id": "living-render-01-model-flat-frame-top-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-frame-top-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "8c4ff54d6c1aa26e253724b716b848a8329c91edb8fa83f27c9ed1f37e418b46"
+    },
+    {
+      "id": "living-render-01-model-flat-frame-top-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-frame-top-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "ba208fa7fada0c29474b559c1cd8ce937449a0f6fe4a04de0e0365b10cc58525"
+    },
+    {
+      "id": "living-render-01-model-flat-frame-top-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-frame-top-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "296cd4b7b5016a20f1efc6bc3b7bd602e248fb3877a620a88b061ebe0d7472a5"
+    },
+    {
+      "id": "living-render-01-model-flat-leaf-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-leaf-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "9b0f0ee6622e5837bf118712f9f7ae807d15139ae588ecb304d9bc658a37b132"
+    },
+    {
+      "id": "living-render-01-model-flat-leaf-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-leaf-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "102284d963aa6b203a1b800b2e6e78b147cb23dad24fb656969d15dc0cb24a53"
+    },
+    {
+      "id": "living-render-01-model-flat-leaf-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-leaf-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "e323d83f131f254ad8cf3a2303333e87a2cee8fbb8b6a0569acd9260de6b8168"
+    },
+    {
+      "id": "living-render-01-model-flat-original",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-original.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "8a40d35e381ecae0e2c59c1a6e075d570df3922ff2715c0d3905df24776384dd"
+    },
+    {
+      "id": "living-render-01-model-flat-protected-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-protected-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "cb080523b8075aee755420b7ecf6159bb5cc764fb018e08afa39aef11d95554d"
+    },
+    {
+      "id": "living-render-01-model-flat-skirting-back-left-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-skirting-back-left-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "729a0a83852a00d1f392486c44fc9d32f0fa69cd8638004a6e8593ca8ac5e15d"
+    },
+    {
+      "id": "living-render-01-model-flat-skirting-back-left-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-skirting-back-left-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "48172cff7e2a0efb6b9e11c76b2d39b97fe8ae194f9db2e788ce72429639886c"
+    },
+    {
+      "id": "living-render-01-model-flat-skirting-back-left-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-skirting-back-left-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "debcb79feaff5e667c1fa1bf076201c3f8942e96d0bfb76fa498e36e68ed3e23"
+    },
+    {
+      "id": "living-render-01-model-flat-skirting-back-right-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-skirting-back-right-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "2379c9bb1eaf129a731e8994a51c0fb267983c1f5ad4b1df7d446788f0a21c9d"
+    },
+    {
+      "id": "living-render-01-model-flat-skirting-back-right-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-skirting-back-right-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "245ae9db496fd59d36283375ba6373e656df0faea9b6b92444c503a40e5b1650"
+    },
+    {
+      "id": "living-render-01-model-flat-skirting-back-right-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-flat-skirting-back-right-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "b293a496a3902d0263f2eac3c0ee12e87a96704f0369ed419ee730d55dcf3288"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-base",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-base.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "bb3486a03f84a5ac5a2e2cae997a52812daadfb5a553f2178e882694d90b4bd4"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-floor-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-floor-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "0241a90dcb896723dbd517da751a7aa2cf5f16a1a09f71ee9f49d887271611d7"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-floor-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-floor-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "ab8eb2db0a344f3a962fa11edd0df3ad02e0d2d3dc77db006407827fd5ab424d"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-floor-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-floor-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "ba208d9381f8b590da3150c99cbbf9de8c9f9a6cd45e625d332a70ca3cbc67b9"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-frame-left-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-frame-left-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "cab02dde0d32ae8906719b51b0c45ad8393a2aab85365d9090157fc81c3ae478"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-frame-left-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-frame-left-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "931e38a89567366c90ef35d2614fa02c63df5b7beeb80b72c92ea256f1b827dc"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-frame-left-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-frame-left-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "57c13c25a8e8a5a8ed068fad3bbf9489d1f8b26b9938e7dbc61535d833b19e64"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-frame-right-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-frame-right-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "67c2a31b7023251e36e5b86c8a2dc9285fdbdd150a97f55f9af235ac5ecb66c6"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-frame-right-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-frame-right-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "a13632792b71a97fb01dd94f207b1b01e13ae98eeded822e2d261db0b6fb98e8"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-frame-right-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-frame-right-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "13fa05cea5dea2f2e76cb16a439a47b46704b0e6877dbd816b184ba427270823"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-frame-top-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-frame-top-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "62ca680f17f88c4cd218d7864e0f51ed79a6dabe1386ddc3a69af8b176fb1c86"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-frame-top-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-frame-top-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "58034116efd18dd647b8915446c40aa03657974d45f978e0c393dba318a1c116"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-frame-top-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-frame-top-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "2d06892f467cc102dde5659303e6918d171d9631e2793f72ad2e3b7df0868c13"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-leaf-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-leaf-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "622307b7a6122dd1c8f8cea66fff952c8a77abb2e9d0f895768e90931f61fb62"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-leaf-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-leaf-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "223238274cce6e69417d42504fef7cac4c6179a9a147ef9cc63e793ac6b1c82a"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-leaf-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-leaf-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "dfbd402485e3451511df6a51e0f9399a6be88f7cace2b9841eefc33a7bf5f738"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-original",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-original.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "9569e331c3e0981a06dfa8fe38ed5fbffea783312e493d4970cca36d0143da58"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-protected-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-protected-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "cb080523b8075aee755420b7ecf6159bb5cc764fb018e08afa39aef11d95554d"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-skirting-back-left-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-skirting-back-left-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "43e8109bf2276763aef46fdbe4992b27054cc3778bbf6b69b8f2462171f9bbad"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-skirting-back-left-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-skirting-back-left-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "48172cff7e2a0efb6b9e11c76b2d39b97fe8ae194f9db2e788ce72429639886c"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-skirting-back-left-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-skirting-back-left-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "5de6fb76351d3109cc2f96aae62bb7440eab8006e0a17295b2745f39285b8c6e"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-skirting-back-right-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-skirting-back-right-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "a8ec4b2200193845dbfc006140dc06f13ec20268b1371bb389c6454fec2eb716"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-skirting-back-right-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-skirting-back-right-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "245ae9db496fd59d36283375ba6373e656df0faea9b6b92444c503a40e5b1650"
+    },
+    {
+      "id": "living-render-01-model-glass-insert-skirting-back-right-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-glass-insert-skirting-back-right-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "bfd0a27419ba22182afad99372ccac9ad86274a08d742d0cb5853d66c61842c9"
+    },
+    {
+      "id": "living-render-01-model-grooved-base",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-base.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "52b17c7480e98e48c57fd985a0e5af6758b67b9e0ad7c620e38d13e3c61cd138"
+    },
+    {
+      "id": "living-render-01-model-grooved-floor-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-floor-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "2b49daa11ffd9d424abb0e9161c61b5d114803ef4e5c37d20ff248d0b63cc403"
+    },
+    {
+      "id": "living-render-01-model-grooved-floor-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-floor-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "0cf19d124b31d635e451e5fc5fc1d3405b8339a754566422b487d9512ed44866"
+    },
+    {
+      "id": "living-render-01-model-grooved-floor-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-floor-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "eadecbfae3337b254642eebee417122cc84de9e43c6658b1ebd61b276c91f928"
+    },
+    {
+      "id": "living-render-01-model-grooved-frame-left-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-frame-left-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "c8104256da76568574ddaca28153515efa64765dd2e89b7cf4ec1aa9dcd4e57a"
+    },
+    {
+      "id": "living-render-01-model-grooved-frame-left-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-frame-left-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "c2fa39b9a8a7db1c907ed0892301fb5b77255e84714619dc71f7e48cdcffcd85"
+    },
+    {
+      "id": "living-render-01-model-grooved-frame-left-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-frame-left-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "8499b6f1ca0ab730a59b8e3b35d1dd34efad42487f830b0fa54e708b30a1bba1"
+    },
+    {
+      "id": "living-render-01-model-grooved-frame-right-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-frame-right-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "1876550d01004f32e3a07b90f8d99bd78a8987401080c1c7b457c81f6e4b6b7d"
+    },
+    {
+      "id": "living-render-01-model-grooved-frame-right-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-frame-right-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "4d2f28c181a7f8e3b856ad3816251905c20c0de55c6236aa7e0963a35fb586aa"
+    },
+    {
+      "id": "living-render-01-model-grooved-frame-right-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-frame-right-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "753ffff5e8231fa847e2a9ebffc6c58168b667060015ffc6d214646877ea3d57"
+    },
+    {
+      "id": "living-render-01-model-grooved-frame-top-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-frame-top-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "1cb4c2de431717601ed20a27397cabd794217b321d041a6f6562f43c7d29aedf"
+    },
+    {
+      "id": "living-render-01-model-grooved-frame-top-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-frame-top-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "800f142bd962b25a542a905caba2a9cd8250e877934ba7bda9707966b80b39b1"
+    },
+    {
+      "id": "living-render-01-model-grooved-frame-top-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-frame-top-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "ec445f819c00802064ea2e12e33886ec32c6093013d859b5a76f420142cddc58"
+    },
+    {
+      "id": "living-render-01-model-grooved-leaf-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-leaf-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "5e95a33e0e727fbf3bab3bfbf5aa0c28de3c5b67d5fda124e937b792d07f6f3b"
+    },
+    {
+      "id": "living-render-01-model-grooved-leaf-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-leaf-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "a503c084356e1f5be49dae377612e89ac4b5645a9b5a7b04242f0815f29f6235"
+    },
+    {
+      "id": "living-render-01-model-grooved-leaf-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-leaf-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "70700e9aebeac0cb31f5b11881b35322271ee51ae280f551c11415d0b9991084"
+    },
+    {
+      "id": "living-render-01-model-grooved-original",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-original.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "40818dff9a28b5c0ada221f3984c08bc5eee341fcab0e98223b2538da328d9c6"
+    },
+    {
+      "id": "living-render-01-model-grooved-protected-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-protected-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "34326dfee2650f45fd2952f415e1e8c970db8e34a07827706dbcc62a6ca58ce7"
+    },
+    {
+      "id": "living-render-01-model-grooved-skirting-back-left-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-skirting-back-left-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "794619cabfb399242554f63181a684c109e1bc63337d554c2a8f5afbabc20275"
+    },
+    {
+      "id": "living-render-01-model-grooved-skirting-back-left-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-skirting-back-left-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "48172cff7e2a0efb6b9e11c76b2d39b97fe8ae194f9db2e788ce72429639886c"
+    },
+    {
+      "id": "living-render-01-model-grooved-skirting-back-left-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-skirting-back-left-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "607bf249d9ab6d0d83c7f88a486163d5c262057bed395f1571c03885f88a4654"
+    },
+    {
+      "id": "living-render-01-model-grooved-skirting-back-right-light",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-skirting-back-right-light.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "fd3f53803578f69c71cb9f7e9856085c412bae844346e5d0986cd00ac8eba983"
+    },
+    {
+      "id": "living-render-01-model-grooved-skirting-back-right-mask",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-skirting-back-right-mask.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "245ae9db496fd59d36283375ba6373e656df0faea9b6b92444c503a40e5b1650"
+    },
+    {
+      "id": "living-render-01-model-grooved-skirting-back-right-reflection",
+      "localPath": "brand/assets/scenes/living-render-01/model-grooved-skirting-back-right-reflection.png",
+      "sourceUrl": null,
+      "author": "Porta & Dysheme, rendered in Blender 5.2.2 LTS (tools/blender)",
+      "usageBasis": "owned",
+      "licenseNote": "Own 3D render of a modelled room. Third-party inputs are CC0-1.0 Poly Haven assets listed in renderInputs (no attribution required). Illustrative room; layer derivation in the scene AUTHORING.md.",
+      "depictsProductId": null,
+      "isIllustrative": true,
+      "sha256": "7a3ca815f48e5a515248f1e879007de226b65553918d17f163f50540e143a2f3"
+    },
+    {
+      "id": "kronotex-d4955-01",
+      "localPath": "brand/assets/products/kronotex-d4955/01.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-natur/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D4955 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Studio kernel render of living-render-01 (Blender proof room, own) with this décor's plank sheet. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d4955",
+      "isIllustrative": true,
+      "sha256": "6d46ebd6808df151438b3d22a609abd9b9a568abcb91c7d92aed02c95dd7e610"
+    },
+    {
+      "id": "kronotex-d4955-02",
+      "localPath": "brand/assets/products/kronotex-d4955/02.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-natur/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D4955 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Boards from this décor's plank sheet laid straight (1.2 × 0.8 m at 1.5 px/mm), bevels shaded. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d4955",
+      "isIllustrative": false,
+      "sha256": "2dabead294f3e361c5f969c39f6648b3ba07a28d41bd4c4c449d8ea6c6197036"
+    },
+    {
+      "id": "kronotex-d80582-01",
+      "localPath": "brand/assets/products/kronotex-d80582/01.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-beige/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D80582 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Studio kernel render of living-render-01 (Blender proof room, own) with this décor's plank sheet. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d80582",
+      "isIllustrative": true,
+      "sha256": "09097b6fea1afb4032d87cf006c3be87f3819aa3a6a4175f0569b7f15e37a5e7"
+    },
+    {
+      "id": "kronotex-d80582-02",
+      "localPath": "brand/assets/products/kronotex-d80582/02.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-beige/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D80582 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Boards from this décor's plank sheet laid straight (1.2 × 0.8 m at 1.5 px/mm), bevels shaded. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d80582",
+      "isIllustrative": false,
+      "sha256": "2f6672b7bf6ec6484fbdfdd456bf92ca628c8fb9881e64b3addc99337a2a80e3"
+    },
+    {
+      "id": "kronotex-d80612-01",
+      "localPath": "brand/assets/products/kronotex-d80612/01.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-kaffee/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D80612 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Studio kernel render of living-render-01 (Blender proof room, own) with this décor's plank sheet. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d80612",
+      "isIllustrative": true,
+      "sha256": "d7cc50262034e8130a4aa7fe2f1da609a3ca7ded4634768ac07d2286f25b0382"
+    },
+    {
+      "id": "kronotex-d80612-02",
+      "localPath": "brand/assets/products/kronotex-d80612/02.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/norfolk-oak-kaffee/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D80612 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Boards from this décor's plank sheet laid straight (1.2 × 0.8 m at 1.5 px/mm), bevels shaded. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d80612",
+      "isIllustrative": false,
+      "sha256": "ccd7fa4185e78176e391af024912792ccf1f351a4b6ee125e2c187296fc19b4c"
+    },
+    {
+      "id": "kronotex-d4954-01",
+      "localPath": "brand/assets/products/kronotex-d4954/01.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D4954 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Studio kernel render of living-render-01 (Blender proof room, own) with this décor's plank sheet. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d4954",
+      "isIllustrative": true,
+      "sha256": "06eabbd305edb1d854ef85949e55ee30fb84aefff0ea1242699f9425537e45d5"
+    },
+    {
+      "id": "kronotex-d4954-02",
+      "localPath": "brand/assets/products/kronotex-d4954/02.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D4954 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Boards from this décor's plank sheet laid straight (1.2 × 0.8 m at 1.5 px/mm), bevels shaded. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d4954",
+      "isIllustrative": false,
+      "sha256": "bbb321337dbd10ca74d05f2eb1841c8ce592f5ad450336b22cc003221b247023"
+    },
+    {
+      "id": "kronotex-d4763-01",
+      "localPath": "brand/assets/products/kronotex-d4763/01.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/exquisit/pettersson-eiche-beige/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D4763 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Studio kernel render of living-render-01 (Blender proof room, own) with this décor's plank sheet. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d4763",
+      "isIllustrative": true,
+      "sha256": "074d8f2c8857b972edc5e82085714aae56a0d27420226b26f96c66cda5e8b020"
+    },
+    {
+      "id": "kronotex-d4763-02",
+      "localPath": "brand/assets/products/kronotex-d4763/02.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/exquisit/pettersson-eiche-beige/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D4763 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Boards from this décor's plank sheet laid straight (1.2 × 0.8 m at 1.5 px/mm), bevels shaded. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d4763",
+      "isIllustrative": false,
+      "sha256": "ee886fd61b35643ffdd22a43dc4267854ddb56106772a382f51541f4b857d32b"
+    },
+    {
+      "id": "kronotex-d4956-01",
+      "localPath": "brand/assets/products/kronotex-d4956/01.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-grau/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D4956 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Studio kernel render of living-render-01 (Blender proof room, own) with this décor's plank sheet. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d4956",
+      "isIllustrative": true,
+      "sha256": "9a142b530515d30ce6ccfa46c98384fbb41727e3906526e2706fe66ca70ed41a"
+    },
+    {
+      "id": "kronotex-d4956-02",
+      "localPath": "brand/assets/products/kronotex-d4956/02.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/robusto/premium-eiche-grau/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D4956 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Boards from this décor's plank sheet laid straight (1.2 × 0.8 m at 1.5 px/mm), bevels shaded. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d4956",
+      "isIllustrative": false,
+      "sha256": "98578990379b43dcc6a9795b973bd5e672fc58ecbc9ca3669008c3bd470528f8"
+    },
+    {
+      "id": "kronotex-d3179-01",
+      "localPath": "brand/assets/products/kronotex-d3179/01.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/everest-oak-weiss/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D3179 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Studio kernel render of living-render-01 (Blender proof room, own) with this décor's plank sheet. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d3179",
+      "isIllustrative": true,
+      "sha256": "00cf7ff9e5ef6dff28e5558b0a388134121bfbe91df94d19ba0d0c983eb432e2"
+    },
+    {
+      "id": "kronotex-d3179-02",
+      "localPath": "brand/assets/products/kronotex-d3179/02.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/everest-oak-weiss/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D3179 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Boards from this décor's plank sheet laid straight (1.2 × 0.8 m at 1.5 px/mm), bevels shaded. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d3179",
+      "isIllustrative": false,
+      "sha256": "59bf4bb0cd7113d9c529afa51649a2dc1a095a956434569c9722a88689654036"
+    },
+    {
+      "id": "kronotex-d81162-01",
+      "localPath": "brand/assets/products/kronotex-d81162/01.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/eiche-eleganz-creme/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D81162 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Studio kernel render of living-render-01 (Blender proof room, own) with this décor's plank sheet. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d81162",
+      "isIllustrative": true,
+      "sha256": "ac909546fb2a0e95210f736a5aa5794a3987ed39d852704af9b89603a3eab6a7"
+    },
+    {
+      "id": "kronotex-d81162-02",
+      "localPath": "brand/assets/products/kronotex-d81162/02.jpg",
+      "sourceUrl": "https://www.swisskrono.com/de-de/produkte/fussboden/alle-flooring-kollektionen/mammut/eiche-eleganz-creme/",
+      "author": "Porta & Dysheme from the KRONOTEX décor D81162 (scripts/author-decor-images.ts)",
+      "usageBasis": "private-pitch-only",
+      "licenseNote": "Boards from this décor's plank sheet laid straight (1.2 × 0.8 m at 1.5 px/mm), bevels shaded. Décor © KRONOTEX; private pitch only until written permission exists.",
+      "depictsProductId": "kronotex-d81162",
+      "isIllustrative": false,
+      "sha256": "0d7de652c3416296902462fe6cce8e62dae05dcd03070b1ef3b9cdad3503d2be"
     }
   ],
   "renderInputs": [

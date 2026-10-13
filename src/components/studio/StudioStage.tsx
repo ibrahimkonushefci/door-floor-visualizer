@@ -3,6 +3,7 @@ import { useEffect, useId, useRef, useState } from 'react';
 import type { RoomScene, StudioSelection } from '@/lib/data/types';
 import type { RenderController } from '@/lib/studio/types';
 import type { PixelBuffer } from '@/lib/studio/render/sampling';
+import { modelPatch } from '@/lib/studio/door-models';
 import type { Messages } from '@/lib/i18n/messages';
 import {
   finalFrameWidth,
@@ -151,7 +152,7 @@ export function StudioStage({
           {label}
         </p>
         {compare && (
-          <CompareOverlay scene={scene} split={split} onSplit={setSplit} messages={m} />
+          <CompareOverlay scene={scene} modelId={selection.doorModelId} split={split} onSplit={setSplit} messages={m} />
         )}
         {pending && <span className="studio-progress" aria-hidden="true" />}
         {failed && (
@@ -192,16 +193,20 @@ export function StudioStage({
 // Drag anywhere on the stage (horizontal intent only, so vertical page scroll
 // still works on touch) or use the keyboard slider.
 function CompareOverlay({
+  modelId,
   scene,
   split,
   onSplit,
   messages: m,
 }: {
   scene: RoomScene;
+  modelId: string;
   split: number;
   onSplit: (value: number) => void;
   messages: Messages;
 }) {
+  // Other door models draw their own neutral render over the door region.
+  const patch = modelPatch(scene, modelId);
   const id = useId(),
     drag = useRef<{ x: number; y: number; direction: 'pending' | 'horizontal' | 'vertical' } | null>(
       null,
@@ -237,15 +242,32 @@ function CompareOverlay({
       onPointerUp={() => (drag.current = null)}
       onPointerCancel={() => (drag.current = null)}
     >
-      <picture className="studio-compare-original" style={{ clipPath: `inset(0 ${100 - split}% 0 0)` }}>
-        <img
-          src={scene.original ?? scene.base}
-          alt=""
-          width={scene.width}
-          height={scene.height}
-          decoding="async"
-        />
-      </picture>
+      <div className="studio-compare-original" style={{ clipPath: `inset(0 ${100 - split}% 0 0)` }}>
+        <picture>
+          <img
+            src={scene.original ?? scene.base}
+            alt=""
+            width={scene.width}
+            height={scene.height}
+            decoding="async"
+          />
+        </picture>
+        {patch?.original && (
+          <picture>
+            <img
+              className="studio-compare-patch"
+              src={patch.original}
+              alt=""
+              decoding="async"
+              style={{
+                left: `${(patch.regionPx[0] / scene.width) * 100}%`,
+                top: `${(patch.regionPx[1] / scene.height) * 100}%`,
+                width: `${(patch.regionPx[2] / scene.width) * 100}%`,
+              }}
+            />
+          </picture>
+        )}
+      </div>
       <span className="studio-compare-label is-start">{m['studio.original']}</span>
       <span className="studio-compare-label is-end">{m['studio.yourChoice']}</span>
       <span className="studio-compare-divider" style={{ left: `${split}%` }} aria-hidden="true">
