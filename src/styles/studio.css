@@ -543,3 +543,318 @@ body:has(.studio-page) .mobile-contact-bar {
   width: 100%;
   font: 11px/1.3 ui-monospace, monospace;
 }
+
+/* Zoom and pan: the frame layers are scaled together; tools stay put. The
+   stage clips (rather than hides) its overflow so a drag or focus can never
+   scroll the zoomed frame and the tools out of place. */
+.studio-stage {
+  overflow: clip;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.studio-stage.is-zoomed {
+  touch-action: none;
+  cursor: grab;
+}
+.studio-stage.is-zoomed:active {
+  cursor: grabbing;
+}
+.studio-view {
+  position: absolute;
+  inset: 0;
+  transform-origin: 0 0;
+}
+.studio-stage.is-zoomed .studio-view {
+  will-change: transform;
+}
+.studio-stage-tools.is-start {
+  right: auto;
+  left: var(--space-3);
+  flex-direction: column;
+}
+.studio-stage-tools.is-zoom {
+  top: auto;
+  bottom: var(--space-3);
+}
+.icon-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+/* Tap-to-select: a brief ring where the surface was tapped. */
+.studio-tap {
+  position: absolute;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  margin: -22px 0 0 -22px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgb(32 36 33 / 0.25);
+  pointer-events: none;
+  animation: studio-tap 560ms var(--ease) forwards;
+}
+@keyframes studio-tap {
+  from {
+    opacity: 1;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+/* A/B: snapshot of combination A revealed from the left. */
+.studio-snapshot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.studio-compare-label {
+  max-width: calc(50% - var(--space-4));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Presenter actions under the summary */
+.studio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+.studio-action {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 40px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  transition: border-color var(--duration-fast) var(--ease);
+}
+.studio-action:hover:not(:disabled) {
+  border-color: var(--color-text);
+}
+.studio-action:disabled {
+  opacity: 0.45;
+}
+
+/* Product details, image export and share dialogs */
+.studio-products {
+  display: grid;
+  gap: var(--space-8);
+}
+.studio-product {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: var(--space-3) var(--space-4);
+  align-items: center;
+}
+.studio-product > table,
+.studio-product > .btn {
+  grid-column: 1 / -1;
+}
+.studio-product > .btn {
+  justify-self: start;
+}
+.studio-product h3 {
+  font-family: var(--font-serif);
+  font-size: var(--display-xs);
+  font-weight: 500;
+  line-height: 1.15;
+}
+.studio-product-choice {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+.studio-product-swatch {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-photo);
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-ring);
+}
+.studio-export {
+  display: grid;
+  gap: var(--space-4);
+}
+.studio-export progress {
+  width: 100%;
+  height: 4px;
+  accent-color: var(--color-accent);
+}
+.studio-export-preview {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-photo);
+  box-shadow: var(--shadow-ring);
+}
+.studio-share {
+  display: grid;
+}
+.studio-qr {
+  width: min(240px, 70vw);
+  aspect-ratio: 1;
+  margin: 0 auto var(--space-4);
+}
+.studio-qr svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.studio-share-note {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+}
+
+/* Short landscape screens (phones on their side): side by side, so the room
+   never covers the controls. */
+@media (orientation: landscape) and (max-height: 540px) and (max-width: 1023px) {
+  .studio {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 42%);
+    height: calc(100dvh - var(--header-height));
+  }
+  .studio-stage-area {
+    position: relative;
+    top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    padding: var(--space-3) var(--space-3) var(--space-3) max(var(--space-3), env(safe-area-inset-left));
+    container-type: size;
+  }
+  .studio-stage {
+    width: min(100cqw, calc(100cqh * 4 / 3));
+    border-radius: var(--radius-photo);
+  }
+  .studio-panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    border-left: 1px solid var(--color-line);
+  }
+  .studio-panel-scroll {
+    flex: 1;
+    max-width: none;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: var(--space-4) max(var(--space-4), env(safe-area-inset-right)) var(--space-4) var(--space-4);
+  }
+  .studio-panel-footer {
+    position: static;
+    padding: var(--space-2) max(var(--space-4), env(safe-area-inset-right)) calc(var(--space-2) + env(safe-area-inset-bottom)) var(--space-4);
+    background: var(--color-bg);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .studio-cta {
+    min-height: 44px;
+  }
+}
+
+/* Presentation mode: the room fills the screen; choices slide in as a drawer
+   (from the side in landscape, from the bottom in portrait). */
+html.is-studio-presenting,
+html.is-studio-presenting body {
+  overflow: hidden;
+}
+.studio.is-presenting {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+  display: block;
+  height: 100dvh;
+  background: #141614;
+}
+.studio.is-presenting .studio-stage-area {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+  background: transparent;
+  container-type: size;
+}
+.studio.is-presenting .studio-stage {
+  width: min(100cqw, calc(100cqh * 4 / 3));
+  border-radius: 0;
+  box-shadow: none;
+}
+.studio.is-presenting .studio-caption {
+  display: none;
+}
+.studio.is-presenting .studio-panel {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: min(400px, 92vw);
+  min-height: 0;
+  border-left: 0;
+  background: var(--color-bg);
+  box-shadow: -12px 0 40px rgb(0 0 0 / 0.3);
+  transform: translateX(105%);
+  transition: transform 280ms var(--ease);
+}
+.studio.is-presenting.is-drawer-open .studio-panel {
+  transform: none;
+}
+.studio.is-presenting .studio-panel-scroll {
+  flex: 1;
+  max-width: none;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: max(var(--space-6), env(safe-area-inset-top)) var(--space-6) var(--space-6);
+}
+.studio.is-presenting .studio-panel-footer {
+  position: static;
+  padding: var(--space-3) var(--space-6) calc(var(--space-4) + env(safe-area-inset-bottom));
+  background: var(--color-bg);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.studio.is-presenting .studio-panel-scroll > .studio-rooms-section {
+  order: 0;
+}
+.studio.is-presenting .studio-panel-scroll > .studio-disclaimer {
+  display: none;
+}
+@media (orientation: portrait) {
+  .studio.is-presenting .studio-panel {
+    top: auto;
+    left: 0;
+    width: auto;
+    /* The space under the room (pinned to the top while the sheet is open). */
+    max-height: max(40dvh, calc(100dvh - 75vw - env(safe-area-inset-top)));
+    border-radius: var(--radius-panel) var(--radius-panel) 0 0;
+    box-shadow: 0 -12px 40px rgb(0 0 0 / 0.3);
+    transform: translateY(105%);
+  }
+  .studio.is-presenting .studio-panel-scroll {
+    padding-top: var(--space-5);
+  }
+  .studio.is-presenting.is-drawer-open .studio-stage-area {
+    align-items: flex-start;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .studio.is-presenting .studio-panel {
+    transition: none;
+  }
+  .studio-tap {
+    animation-duration: 1ms;
+  }
+}

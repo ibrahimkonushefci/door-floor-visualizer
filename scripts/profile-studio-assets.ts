@@ -9,8 +9,11 @@ import {
 } from '../src/lib/studio/asset-loader';
 import { MAX_FRAME_WIDTH, MAX_RENDERED_FRAME_WIDTH } from '../src/lib/studio/presentation';
 import { RESULT_CACHE_BYTES } from '../src/lib/studio/render-controller';
+import { exportStripHeight } from '../src/lib/studio/export-image';
 import budgets from '../verification/budgets.json';
 const frameBytesFor = (width: number) => width * ((width * 3) / 4) * 4;
+const exportBytesFor = (width: number, height: number) =>
+  width * (height + exportStripHeight(width)) * 4 + width * height * 0.5;
 import { decodeNode, bytesNode } from './prepare-scenes';
 import { firstLoadBytes, firstLoadUrls } from './first-load';
 const sceneManifest = JSON.parse(await readFile('verification/scene-manifest.json', 'utf8')) as {
@@ -105,6 +108,12 @@ for (const { variant, scale, maxFrame, limit } of variants(!!definition.render))
     displayedAndPreviousFallbackImages: W * H * 4 + 960 * 720 * 4,
     // A door-model switch builds the next scene while the previous one is still held.
     doorModelSwitch: definition.doorModels ? sceneBytes : 0,
+    // Phase 4: an A/B snapshot (one frame at stage resolution) or an image export
+    // (composition canvas with the label strip, plus the encoded JPEG at a
+    // conservative 0.5 byte per pixel). The Studio closes A/B before an export,
+    // so only one of them is held at a time. Zoom renders stay within the
+    // variant's maximum frame width (counted in the transient frames).
+    presentationExtras: Math.max(frameBytes, exportBytesFor(W, H)),
   };
   const scenePreparationBytes = sceneBytes + TEXTURE_CACHE_BYTES + 3 * W * H * 4 + 960 * 720 * 4;
   const total = Math.max(
@@ -143,7 +152,7 @@ await writeFile(
   'verification/render-fixtures/p4-remediation-assets.json',
   JSON.stringify(
     {
-      note: 'Conservative controlled pixel-storage bound, not a browser heap measurement. Rendering includes both scene copies (plus a third while a door-model switch builds the next scene), maximum cache limits, two worker material sets, incoming mip chains, four output/presentation buffers, bitmap/canvas/JS material decode buffers and displayed/previous fallback images. Scene preparation is separately bounded: the old worker/scene/result cache are released before three full-resolution decode buffers coexist with the new scene. Browser overhead, retained browser image caches and garbage-collection timing still require a physical heap profile. Runtime textures max512px; physical-scale calibration unresolved.',
+      note: 'Conservative controlled pixel-storage bound, not a browser heap measurement. Rendering includes both scene copies, one A/B snapshot or image export (Phase 4) (plus a third while a door-model switch builds the next scene), maximum cache limits, two worker material sets, incoming mip chains, four output/presentation buffers, bitmap/canvas/JS material decode buffers and displayed/previous fallback images. Scene preparation is separately bounded: the old worker/scene/result cache are released before three full-resolution decode buffers coexist with the new scene. Browser overhead, retained browser image caches and garbage-collection timing still require a physical heap profile. Runtime textures max512px; physical-scale calibration unresolved.',
       results,
     },
     null,

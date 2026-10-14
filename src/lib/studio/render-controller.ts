@@ -5,6 +5,7 @@ import type {
   PreparedMaterials,
   WorkerResponse,
   RenderJob,
+  SurfaceRole,
 } from './types';
 import {
   prepareScene,
@@ -17,6 +18,8 @@ import { createByteLru } from './render/cache';
 import type { PixelBuffer } from './render/sampling';
 import { selectionEqual } from './compatibility';
 export const RESULT_CACHE_BYTES = 16 * 1024 * 1024;
+/** A worker that sends nothing for this long is treated as crashed (main-thread fallback). */
+export const WORKER_TIMEOUT_MS = 15_000;
 const aborted = () => new DOMException('Superseded render', 'AbortError');
 export async function renderBatched(
   job: RenderJob,
@@ -49,6 +52,7 @@ export function createRenderController(
   catalog: StudioCatalog,
   options: {
     workerFactory?: () => Worker;
+    workerTimeoutMs?: number;
     sceneLoader?: typeof prepareScene;
     materialLoader?: typeof prepareMaterials;
     onTiming?: (entry: {
@@ -106,6 +110,26 @@ export function createRenderController(
   };
   const controller: RenderController = {
     cancel,
+    prepared: () =>
+      scene ? { sceneId: scene.scene.id, scale: scene.scale === 0.5 ? 0.5 : 1 } : null,
+    hitTest(sceneId, x, y) {
+      if (!scene || scene.scene.id !== sceneId || !(x >= 0 && x < 1 && y >= 0 && y < 1)) return null;
+      const W = scene.base.width,
+        px = Math.floor(x * W),
+        py = Math.floor(y * scene.base.height);
+      // Photo rooms protect furniture standing on the floor.
+      if (scene.protectedMask.length === W * scene.base.height && scene.protectedMask[py * W + px] > 127)
+        return null;
+      let best: { role: SurfaceRole; coverage: number } | null = null;
+      for (const s of scene.surfaces) {
+        const [bx, by, w, h] = s.bounds;
+        if (px < bx || py < by || px >= bx + w || py >= by + h) continue;
+        const coverage = s.mask[(py - by) * w + (px - bx)];
+        if (coverage > 127 && (!best || coverage > best.coverage))
+          best = { role: s.definition.role, coverage };
+      }
+      return best?.role ?? null;
+    },
     dispose() {
       cancel();
       disposed = true;
@@ -193,8 +217,16 @@ export function createRenderController(
                   type: 'module',
                 });
           const current = worker;
-          pixels = await new Promise<PixelBuffer>((resolve, reject) => {
+          let watchdog: ReturnType<typeof setTimeout> | undefined;
+          pixels = await new Promise<PixelBuffer>((done, fail) => {
+            const resolve = (p: PixelBuffer) => (clearTimeout(watchdog), done(p)),
+              reject = (e: unknown) => (clearTimeout(watchdog), fail(e));
             pending = { reject };
+            // A worker that dies silently (no error event) must not leave the stage busy.
+            watchdog = setTimeout(
+              () => reject(new Error('Worker stopped answering')),
+              options.workerTimeoutMs ?? WORKER_TIMEOUT_MS,
+            );
             current.onerror = () => reject(new Error('Worker unavailable'));
             current.onmessage = (e: MessageEvent<WorkerResponse>) => {
               const m = e.data;

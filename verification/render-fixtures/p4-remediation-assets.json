@@ -1,5 +1,5 @@
 {
-  "note": "Conservative controlled pixel-storage bound, not a browser heap measurement. Rendering includes both scene copies (plus a third while a door-model switch builds the next scene), maximum cache limits, two worker material sets, incoming mip chains, four output/presentation buffers, bitmap/canvas/JS material decode buffers and displayed/previous fallback images. Scene preparation is separately bounded: the old worker/scene/result cache are released before three full-resolution decode buffers coexist with the new scene. Browser overhead, retained browser image caches and garbage-collection timing still require a physical heap profile. Runtime textures max512px; physical-scale calibration unresolved.",
+  "note": "Conservative controlled pixel-storage bound, not a browser heap measurement. Rendering includes both scene copies, one A/B snapshot or image export (Phase 4) (plus a third while a door-model switch builds the next scene), maximum cache limits, two worker material sets, incoming mip chains, four output/presentation buffers, bitmap/canvas/JS material decode buffers and displayed/previous fallback images. Scene preparation is separately bounded: the old worker/scene/result cache are released before three full-resolution decode buffers coexist with the new scene. Browser overhead, retained browser image caches and garbage-collection timing still require a physical heap profile. Runtime textures max512px; physical-scale calibration unresolved.",
   "results": [
     {
       "scene": "living-render-01",
@@ -10,7 +10,7 @@
       "firstUsefulBytes": 2811860,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 32659518,
-      "ownedBytes": 307120265,
+      "ownedBytes": 329977865,
       "ownedLimitBytes": 335544320,
       "scenePreparationBytes": 116624446,
       "budget": {
@@ -22,7 +22,8 @@
         "fourTransientFrames": 69120000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 20044800,
-        "doorModelSwitch": 32659518
+        "doorModelSwitch": 32659518,
+        "presentationExtras": 22857600
       }
     },
     {
@@ -34,7 +35,7 @@
       "firstUsefulBytes": 2811860,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 8626170,
-      "ownedBytes": 170220221,
+      "ownedBytes": 175934621,
       "ownedLimitBytes": 209715200,
       "scenePreparationBytes": 53711098,
       "budget": {
@@ -46,7 +47,8 @@
         "fourTransientFrames": 17280000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 7084800,
-        "doorModelSwitch": 8626170
+        "doorModelSwitch": 8626170,
+        "presentationExtras": 5714400
       }
     },
     {
@@ -58,7 +60,7 @@
       "firstUsefulBytes": 2216492,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 33285584,
-      "ownedBytes": 308998463,
+      "ownedBytes": 331856063,
       "ownedLimitBytes": 335544320,
       "scenePreparationBytes": 117250512,
       "budget": {
@@ -70,7 +72,8 @@
         "fourTransientFrames": 69120000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 20044800,
-        "doorModelSwitch": 33285584
+        "doorModelSwitch": 33285584,
+        "presentationExtras": 22857600
       }
     },
     {
@@ -82,7 +85,7 @@
       "firstUsefulBytes": 2216492,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 8778080,
-      "ownedBytes": 170675951,
+      "ownedBytes": 176390351,
       "ownedLimitBytes": 209715200,
       "scenePreparationBytes": 53863008,
       "budget": {
@@ -94,7 +97,8 @@
         "fourTransientFrames": 17280000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 7084800,
-        "doorModelSwitch": 8778080
+        "doorModelSwitch": 8778080,
+        "presentationExtras": 5714400
       }
     },
     {
@@ -106,7 +110,7 @@
       "firstUsefulBytes": 2730044,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 32740444,
-      "ownedBytes": 307363043,
+      "ownedBytes": 330220643,
       "ownedLimitBytes": 335544320,
       "scenePreparationBytes": 116705372,
       "budget": {
@@ -118,7 +122,8 @@
         "fourTransientFrames": 69120000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 20044800,
-        "doorModelSwitch": 32740444
+        "doorModelSwitch": 32740444,
+        "presentationExtras": 22857600
       }
     },
     {
@@ -130,7 +135,7 @@
       "firstUsefulBytes": 2730044,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 8612698,
-      "ownedBytes": 170179805,
+      "ownedBytes": 175894205,
       "ownedLimitBytes": 209715200,
       "scenePreparationBytes": 53697626,
       "budget": {
@@ -142,7 +147,8 @@
         "fourTransientFrames": 17280000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 7084800,
-        "doorModelSwitch": 8612698
+        "doorModelSwitch": 8612698,
+        "presentationExtras": 5714400
       }
     },
     {
@@ -154,7 +160,7 @@
       "firstUsefulBytes": 2054912,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 25346676,
-      "ownedBytes": 285181739,
+      "ownedBytes": 308039339,
       "ownedLimitBytes": 335544320,
       "scenePreparationBytes": 109311604,
       "budget": {
@@ -166,7 +172,8 @@
         "fourTransientFrames": 69120000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 20044800,
-        "doorModelSwitch": 25346676
+        "doorModelSwitch": 25346676,
+        "presentationExtras": 22857600
       }
     },
     {
@@ -178,7 +185,7 @@
       "firstUsefulBytes": 2054912,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 6545694,
-      "ownedBytes": 163978793,
+      "ownedBytes": 169693193,
       "ownedLimitBytes": 209715200,
       "scenePreparationBytes": 51630622,
       "budget": {
@@ -190,7 +197,8 @@
         "fourTransientFrames": 17280000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 7084800,
-        "doorModelSwitch": 6545694
+        "doorModelSwitch": 6545694,
+        "presentationExtras": 5714400
       }
     },
     {
@@ -202,7 +210,7 @@
       "firstUsefulBytes": 1954684,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 27883266,
-      "ownedBytes": 292791509,
+      "ownedBytes": 315649109,
       "ownedLimitBytes": 335544320,
       "scenePreparationBytes": 111848194,
       "budget": {
@@ -214,7 +222,8 @@
         "fourTransientFrames": 69120000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 20044800,
-        "doorModelSwitch": 27883266
+        "doorModelSwitch": 27883266,
+        "presentationExtras": 22857600
       }
     },
     {
@@ -226,7 +235,7 @@
       "firstUsefulBytes": 1954684,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 7275006,
-      "ownedBytes": 166166729,
+      "ownedBytes": 171881129,
       "ownedLimitBytes": 209715200,
       "scenePreparationBytes": 52359934,
       "budget": {
@@ -238,7 +247,8 @@
         "fourTransientFrames": 17280000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 7084800,
-        "doorModelSwitch": 7275006
+        "doorModelSwitch": 7275006,
+        "presentationExtras": 5714400
       }
     },
     {
@@ -250,7 +260,7 @@
       "firstUsefulBytes": 2906202,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 32998174,
-      "ownedBytes": 308136233,
+      "ownedBytes": 330993833,
       "ownedLimitBytes": 335544320,
       "scenePreparationBytes": 116963102,
       "budget": {
@@ -262,7 +272,8 @@
         "fourTransientFrames": 69120000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 20044800,
-        "doorModelSwitch": 32998174
+        "doorModelSwitch": 32998174,
+        "presentationExtras": 22857600
       }
     },
     {
@@ -274,7 +285,7 @@
       "firstUsefulBytes": 2906202,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 8687788,
-      "ownedBytes": 170405075,
+      "ownedBytes": 176119475,
       "ownedLimitBytes": 209715200,
       "scenePreparationBytes": 53772716,
       "budget": {
@@ -286,7 +297,8 @@
         "fourTransientFrames": 17280000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 7084800,
-        "doorModelSwitch": 8687788
+        "doorModelSwitch": 8687788,
+        "presentationExtras": 5714400
       }
     },
     {
@@ -298,7 +310,7 @@
       "firstUsefulBytes": 975827,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 19045080,
-      "ownedBytes": 210072464,
+      "ownedBytes": 232930064,
       "ownedLimitBytes": 335544320,
       "scenePreparationBytes": 103010008,
       "budget": {
@@ -310,7 +322,8 @@
         "fourTransientFrames": 69120000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 20044800,
-        "doorModelSwitch": 19045080
+        "doorModelSwitch": 19045080,
+        "presentationExtras": 22857600
       }
     },
     {
@@ -322,7 +335,7 @@
       "firstUsefulBytes": 975827,
       "firstUsefulTargetBytes": 3145728,
       "sceneBytes": 4783050,
-      "ownedBytes": 102486374,
+      "ownedBytes": 108200774,
       "ownedLimitBytes": 209715200,
       "scenePreparationBytes": 49867978,
       "budget": {
@@ -334,7 +347,8 @@
         "fourTransientFrames": 17280000,
         "threeMaterialDecodeBuffers": 12582912,
         "displayedAndPreviousFallbackImages": 7084800,
-        "doorModelSwitch": 4783050
+        "doorModelSwitch": 4783050,
+        "presentationExtras": 5714400
       }
     }
   ]

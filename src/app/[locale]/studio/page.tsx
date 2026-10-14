@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { loadSiteData } from '@/lib/data/load';
 import { isLocale } from '@/lib/i18n/locales';
-import { getMessages } from '@/lib/i18n/messages';
+import { getMessages, localize } from '@/lib/i18n/messages';
 import { buildMetadata } from '@/lib/brand/metadata';
 import { revisionStudioAssets } from '@/lib/studio/revisions';
 import { StudioLoader } from '@/components/studio/StudioLoader';
@@ -26,6 +26,12 @@ export default async function StudioPage({ params }: { params: Promise<{ locale:
       <StudioLoader
         locale={locale}
         messages={messages}
+        brand={{
+          name: data.brand.companyName,
+          logo: data.brand.logo.src,
+          notice: data.brand.demoMode ? localize(data.brand.demoNotice, locale) : null,
+          siteUrl: data.brand.siteUrl,
+        }}
         catalog={{
           products: data.products.products,
           materials: revisionStudioAssets(data.materials),

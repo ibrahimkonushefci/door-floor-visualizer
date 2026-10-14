@@ -17,7 +17,15 @@ export type IconName =
   | 'arrow-right'
   | 'grid'
   | 'planks-lengthwise'
-  | 'planks-crosswise';
+  | 'planks-crosswise'
+  | 'zoom-in'
+  | 'zoom-out'
+  | 'qr'
+  | 'info'
+  | 'ab'
+  | 'collapse'
+  | 'sliders'
+  | 'share';
 const paths: Record<IconName, string> = {
   phone: 'M6 3H3v4c0 8 6 14 14 14h4v-5l-5-2-2 3c-3-1-6-4-7-7l3-2-2-5Z',
   whatsapp: 'M21 11.5a9 9 0 0 1-13 8L3 21l1.5-5A9 9 0 1 1 21 11.5ZM8 7c0 5 3 8 8 9',
@@ -39,6 +47,14 @@ const paths: Record<IconName, string> = {
   grid: 'M4 4h7v7H4ZM13 4h7v7h-7ZM4 13h7v7H4ZM13 13h7v7h-7Z',
   'planks-lengthwise': 'M4 3h16v18H4ZM9.3 3v18M14.7 3v18M4 10h5.3M9.3 15h5.4M14.7 7h5.3',
   'planks-crosswise': 'M3 4h18v16H3ZM3 9.3h18M3 14.7h18M10 4v5.3M15 9.3v5.4M7 14.7V20',
+  'zoom-in': 'M10.5 3.5a7 7 0 1 0 0 14 7 7 0 0 0 0-14ZM15.5 15.5 21 21M7.5 10.5h6M10.5 7.5v6',
+  'zoom-out': 'M10.5 3.5a7 7 0 1 0 0 14 7 7 0 0 0 0-14ZM15.5 15.5 21 21M7.5 10.5h6',
+  qr: 'M4 4h6v6H4ZM14 4h6v6h-6ZM4 14h6v6H4ZM14 14h2v2h-2ZM18 18h2v2h-2ZM14 18h2M18 14h2',
+  info: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM12 11v6M12 7.5v.5',
+  ab: 'M12 2v20M3 17l3-10 3 10M4 14h4M15 7h3a2.5 2.5 0 0 1 0 5h-3Zm0 5h3.5a2.5 2.5 0 0 1 0 5H15Z',
+  collapse: 'M20 4l-6 6M14 5v5h5M4 20l6-6M10 19v-5H5',
+  sliders: 'M4 7h10M18 7h2M4 17h4M12 17h8M14 5v4M8 15v4',
+  share: 'M12 15V3m-4 4 4-4 4 4M5 11v10h14V11',
 };
 export function Icon({
   name,

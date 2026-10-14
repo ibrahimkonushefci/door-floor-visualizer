@@ -98,10 +98,15 @@ export type WorkerResponse =
       selection: StudioSelection;
     }
   | { type: 'error'; jobId: number; message: string };
+export type SurfaceRole = SceneSurface['role'];
 export interface RenderController {
   render(
     job: Omit<RenderJob, 'id'>,
   ): Promise<{ jobId: number; pixels: PixelBuffer; selection: StudioSelection }>;
+  /** The editable surface under a point (0–1 of the frame) of the prepared room, or null. */
+  hitTest(sceneId: string, x: number, y: number): SurfaceRole | null;
+  /** The room and variant currently prepared (null before the first frame). */
+  prepared(): { sceneId: string; scale: 1 | 0.5 } | null;
   cancel(): void;
   dispose(): void;
 }

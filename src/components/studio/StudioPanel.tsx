@@ -1,5 +1,5 @@
 'use client';
-import { useId, useState } from 'react';
+import { useId, useState, type ReactNode } from 'react';
 import { ROOM_TYPES, type Locale, type RoomType, type StudioSelection, type TrimMode } from '@/lib/data/types';
 import type { StudioAction, StudioCatalog } from '@/lib/studio/types';
 import { localize, type Messages } from '@/lib/i18n/messages';
@@ -10,7 +10,7 @@ import { DoorModelIcon } from './DoorModelIcon';
 import { compatibleDoor, sceneShowsFloor, sceneShowsSkirting } from '@/lib/studio/compatibility';
 import { sceneModelIds, sceneForModel } from '@/lib/studio/door-models';
 import type { DoorProduct } from '@/lib/data/types';
-type Surface = 'door' | 'floor';
+export type Surface = 'door' | 'floor';
 export function StudioPanel({
   catalog,
   locale,
@@ -20,6 +20,10 @@ export function StudioPanel({
   onAction,
   onUnavailable,
   onRequest,
+  surface: chosenSurface,
+  onSurface: setSurface,
+  actions,
+  inert,
 }: {
   catalog: StudioCatalog;
   locale: Locale;
@@ -29,8 +33,11 @@ export function StudioPanel({
   onAction: (action: StudioAction) => void;
   onUnavailable: (text: string) => void;
   onRequest: () => void;
+  surface: Surface;
+  onSurface: (surface: Surface) => void;
+  actions?: ReactNode;
+  inert?: boolean;
 }) {
-  const [chosenSurface, setSurface] = useState<Surface>('door');
   const [roomType, setRoomType] = useState<RoomType | 'all'>('all');
   const tabsId = useId();
   const { scenes, doorFinishes, floorCollections, doorModels } = catalog.materials;
@@ -86,7 +93,7 @@ export function StudioPanel({
     onClick: () => setSurface(value),
   });
   return (
-    <aside className="studio-panel" aria-label={m['nav.studio']}>
+    <aside className="studio-panel" id="studio-panel" aria-label={m['nav.studio']} inert={inert}>
       <div className="studio-panel-scroll">
         <header className="studio-summary">
           <p className="eyebrow">{m['studio.yourCombination']}</p>
@@ -103,6 +110,7 @@ export function StudioPanel({
               <dd>{floorShown ? localize(floorProduct.name, locale) : m['studio.fixedFloor']}</dd>
             </div>
           </dl>
+          {actions && <div className="studio-actions">{actions}</div>}
         </header>
         {scenes.length > 1 && (
           <section className="studio-section studio-rooms-section" aria-labelledby={`${tabsId}-room`}>

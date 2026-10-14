@@ -4,6 +4,7 @@ export function IconButton({
   label,
   onClick,
   pressed,
+  disabled,
   variant = 'translucent',
   className = '',
 }: {
@@ -11,6 +12,7 @@ export function IconButton({
   label: string;
   onClick: () => void;
   pressed?: boolean;
+  disabled?: boolean;
   variant?: 'translucent' | 'plain';
   className?: string;
 }) {
@@ -21,6 +23,7 @@ export function IconButton({
       aria-label={label}
       title={label}
       aria-pressed={pressed}
+      disabled={disabled}
       onClick={onClick}
     >
       <Icon name={icon} />

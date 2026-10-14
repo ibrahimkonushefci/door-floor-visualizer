@@ -4,6 +4,7 @@ import { createContext, useContext } from 'react';
 import type { StudioCatalog } from '@/lib/studio/types';
 import type { Locale } from '@/lib/data/types';
 import type { Messages } from '@/lib/i18n/messages';
+import type { StudioBrand } from './StudioClient';
 const LoadingContext = createContext<{ catalog: StudioCatalog } | null>(null);
 // Same geometry as the live Studio so nothing shifts when the client takes over.
 function Loading() {
@@ -25,7 +26,12 @@ function Loading() {
   );
 }
 const Client = dynamic(() => import('./StudioClient'), { ssr: false, loading: Loading });
-export function StudioLoader(props: { catalog: StudioCatalog; locale: Locale; messages: Messages }) {
+export function StudioLoader(props: {
+  catalog: StudioCatalog;
+  locale: Locale;
+  messages: Messages;
+  brand: StudioBrand;
+}) {
   return (
     <LoadingContext.Provider value={props}>
       <Client {...props} />

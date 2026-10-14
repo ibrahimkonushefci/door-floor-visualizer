@@ -1,4 +1,4 @@
-import type { StudioSelection, Locale } from '../data/types';
+import type { StudioSelection, Locale, TrimMode } from '../data/types';
 import type { StudioCatalog, StudioAction } from './types';
 import { compatibleDoor, doorModelsIn, sceneShowsFloor } from './compatibility';
 import { allowedFrameModes } from './door-models';
@@ -63,7 +63,21 @@ export function normalizeSelection(candidate: Partial<StudioSelection>, catalog:
     if (candidate[k] !== undefined && candidate[k] !== selection[k]) warnings.push(k);
   return { selection, warnings };
 }
-export function reduceSelection(s: StudioSelection, a: StudioAction, c: StudioCatalog) {
+/**
+ * Trim modes the visitor chose explicitly. A room or door that cannot show a
+ * mode (the bathroom has no floor to match) normalizes it away; the preference
+ * brings it back in the next room or door that can.
+ */
+export interface TrimPreference {
+  frameMode?: TrimMode;
+  skirtingMode?: TrimMode;
+}
+export function reduceSelection(
+  s: StudioSelection,
+  a: StudioAction,
+  c: StudioCatalog,
+  preference: TrimPreference = {},
+) {
   const scene = c.materials.scenes.find(v => v.id === s.sceneId)!;
   switch (a.type) {
     case 'restore':
@@ -71,7 +85,15 @@ export function reduceSelection(s: StudioSelection, a: StudioAction, c: StudioCa
     case 'reset':
       return scene.defaultSelection;
     case 'scene':
-      return normalizeSelection({ ...s, sceneId: a.sceneId }, c).selection;
+      return normalizeSelection(
+        {
+          ...s,
+          sceneId: a.sceneId,
+          frameMode: isGlass(s.doorFinishId, c) ? s.frameMode : (preference.frameMode ?? s.frameMode),
+          skirtingMode: preference.skirtingMode ?? s.skirtingMode,
+        },
+        c,
+      ).selection;
     case 'door':
       return normalizeSelection(
         {
@@ -79,7 +101,9 @@ export function reduceSelection(s: StudioSelection, a: StudioAction, c: StudioCa
           doorProductId: a.productId,
           doorModelId: a.modelId ?? s.doorModelId,
           doorFinishId: a.finishId,
-          frameMode: isGlass(a.finishId, c) ? 'black' : isGlass(s.doorFinishId, c) ? 'door' : s.frameMode,
+          frameMode: isGlass(a.finishId, c)
+            ? 'black'
+            : (preference.frameMode ?? (isGlass(s.doorFinishId, c) ? 'door' : s.frameMode)),
         },
         c,
       ).selection;
