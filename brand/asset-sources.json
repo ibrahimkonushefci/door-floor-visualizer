@@ -10946,7 +10946,7 @@
       "author": "NVIDIA (SegFormer, Xie et al. 2021, nvidia/segformer-b0-finetuned-ade-512-512); ONNX int8 export by Xenova",
       "license": "NVIDIA Source Code License for SegFormer (non-commercial: research or evaluation only)",
       "usageBasis": "evaluation-only",
-      "note": "Floor class (ADE20K id 3) is the on-device first guess for own-room photos. The licence allows research or evaluation only, so it is used for the private pitch demo; before the Studio is sold or deployed for customers it must be replaced by a commercially licensed model (or the server path) behind the same FloorSegmenter interface. The licence text ships next to the model, as section 3.1 requires.",
+      "note": "Floor class (ADE20K id 3) is the on-device first guess for own-room photos. The licence grants non-commercial research or evaluation use only. Commercial-use permission is unresolved (owner deferred the decision, 2026-10-14): no sales use, including demonstrations to prospective customers, is assumed to be permitted. Review the licence, or replace the model with a commercially licensed one (or the server path) behind the same FloorSegmenter interface, before any customer-facing commercial use. The licence text ships next to the model, as section 3.1 requires.",
       "files": [
         {
           "path": "/models/segformer-b0-ade/model_quantized.onnx",

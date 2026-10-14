@@ -8,6 +8,15 @@ A mobile-first lookbook catalog and room Studio for interior-door and flooring s
 
 All products, dimensions and imagery are demo content (`brand.json` → `demoMode: true`).
 
+## Licensing reminder
+
+**Review before any customer-facing commercial use.** Two permissions are still open, and none of the demo's uses is assumed to be covered:
+
+- **Own-room photo AI (SegFormer-B0):** its licence grants non-commercial research or evaluation use only. **Commercial-use permission is unresolved** — including whether showing the tool in a sales demonstration is allowed. The owner has deferred the licence/replacement decision until a customer opportunity arises; the implementation is unchanged until then. Before the photo tool is shown to customers, sold or deployed, have the licence reviewed or replace the model behind `FloorSegmenter`. The showroom Studio (rooms, doors, floors) does not use this model.
+- **Supplier décors (KRONOTEX):** taken from official product pages with no reuse licence; marked `private-pitch-only` in the data and ledger. Get written permission from the supplier or the showroom (or use the showroom's own licensed décor images) before customer use.
+
+Status and decisions: [docs/plan/STUDIO_REALISM_PLAN.md](docs/plan/STUDIO_REALISM_PLAN.md) (Phase 5). The pitch kit repeats this in [docs/pitch/](docs/pitch/).
+
 ## Roadmap
 
 Studio realism work is phased in [docs/plan/STUDIO_REALISM_PLAN.md](docs/plan/STUDIO_REALISM_PLAN.md) (status table and handoff log inside). Competitor research is in [docs/research/VISUALIZER_COMPETITORS.md](docs/research/VISUALIZER_COMPETITORS.md).
@@ -72,7 +81,7 @@ The camera model derives focal length and camera height, so floor planks have tr
 Door assemblies of photo scenes are unified at load time (`unifyDoorAssembly` in `src/lib/studio/asset-loader.ts`); rendered scenes have complete, partitioned masks and skip this. Gaps the authored masks leave (mitre joints, jambs, the leaf gap) take the casing's own light, and only a 2 px shadow line remains. Casing and skirting pieces are normalised by their median light, so one material renders at one tone.
 
 **Own-room photo tool** (`/<locale>/studio/photo/`, linked from the Studio's room list). A visitor's photo goes through four steps, all on the device: photo (file, camera or drag-and-drop; EXIF orientation; resized to 2048 px) → floor area (AI first guess, then brush/eraser with edge snapping, undo/redo) → perspective (four corners on a floor rectangle, plank-scale preview, size slider) → result (any published floor, plank direction, brightness, compare with the photo, labelled JPEG download, WhatsApp request). The floor renders through the Studio's own kernel (homography path) with a lighting plate taken from the photo. Code: `src/lib/studio/photo/`, `src/components/studio/photo/`, `src/workers/segment.worker.ts`.
-- The AI is SegFormer-B0 (ADE20K floor class, int8 ONNX, 4.4 MB) on ONNX Runtime Web (WASM, 14 MB), served from `public/models/` and fetched only when the tool opens (not part of the offline pack). **Its licence allows research/evaluation only**: fine for the private pitch, but it must be replaced by a commercially licensed model before the tool is sold (swap the provider behind `FloorSegmenter`). The host must serve `.wasm` as `application/wasm`.
+- The AI is SegFormer-B0 (ADE20K floor class, int8 ONNX, 4.4 MB) on ONNX Runtime Web (WASM, 14 MB), served from `public/models/` and fetched only when the tool opens (not part of the offline pack). **Its licence (NVIDIA Source Code License for SegFormer) grants non-commercial research or evaluation use only, and commercial-use permission is unresolved** (see [Licensing reminder](#licensing-reminder)). Replacing it means swapping the provider behind `FloorSegmenter`. The host must serve `.wasm` as `application/wasm`.
 - `tsx scripts/prepare-photo-tool.ts` copies the runtime and model (from `tools/segmentation/.cache/`, see the script header) and the sample photo, and records them in `brand/asset-sources.json`; `--check` (also run by `pnpm verify:assets`) verifies their hashes.
 - `tsx scripts/bench-floor-segmentation.ts [--photos <dir>]` scores the AI against ground-truth masks (the real bedroom photo, the rendered rooms, and optionally your own photos: `<name>.jpg` + `<name>.mask.png`, white = floor).
 - `tsx scripts/render-photo-preview.ts <photo|dir> <out-dir> [floorId] [--rotation 90]` runs the whole pipeline without the browser (AI mask, corner guess, render) for a quick look at a batch of photos.
