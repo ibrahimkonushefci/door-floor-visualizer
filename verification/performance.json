@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "buildId": "YeUK6CgpUIgQCmrazX8Y3",
+  "buildId": "g_OBt1bp6H4DBf4iDpynF",
   "method": "Production export. Unique initial script tags per route; gzip and Brotli per file. CSS gzip plus used WOFF2 bytes. Images: conservative 640px variants at 390px viewport. File sizes do not establish LCP, INP, CLS or device latency.",
   "limits": {
     "feedInitialJsGzip": 204800,
@@ -10,7 +10,8 @@
     "cardWebp640": 81920,
     "cardAvif640": 61440,
     "sceneFallback960": 225280,
-    "studioFirstScene": 2621440,
+    "studioFirstScene": 3145728,
+    "studioFirstSceneDecision": "Owner, 2026-10-14: the first-load limit rises from 2.5 MiB to 3 MiB. Since the budget counts what the loader really fetches (including the default door model's region crops), the largest room is 2,906,202 bytes. Slightly larger downloads are acceptable as long as the Studio stays responsive; responsiveness and stability are proven on a physical iPad in Phase 4. No optimisation is to be done only to cut download size. Memory and performance limits are unchanged.",
     "studioOfflinePack": 50331648,
     "studioOfflinePackDecision": "Phase 3 (owner, 2026-10-14): one 'Save offline' keeps saving every Studio room. Seven Blender rooms are about 3.5 MB each plus about 7 MB of floor plank sheets, so the single pack limit rises from 20 MiB to 48 MiB (also brand.json offline.maxStudioDownloadBytes) instead of per-room saving. It is a one-time presenter download on showroom Wi-Fi; customer pages never download it.",
     "ownedRenderBuffers": 209715200,
@@ -147,7 +148,7 @@
         "brotli": 98972
       },
       "cssAndFonts": 105851,
-      "firstScreen": 437962
+      "firstScreen": 437957
     },
     {
       "route": "/en/",
@@ -275,7 +276,7 @@
         "brotli": 98972
       },
       "cssAndFonts": 105851,
-      "firstScreen": 437328
+      "firstScreen": 437322
     },
     {
       "route": "/de/",
@@ -403,7 +404,7 @@
         "brotli": 98972
       },
       "cssAndFonts": 105851,
-      "firstScreen": 438039
+      "firstScreen": 438034
     }
   ],
   "firstImages": {
@@ -809,7 +810,7 @@
     },
     {
       "metric": "sq.firstScreen",
-      "value": 437962,
+      "value": 437957,
       "limit": 716800,
       "status": "pass"
     },
@@ -827,7 +828,7 @@
     },
     {
       "metric": "en.firstScreen",
-      "value": 437328,
+      "value": 437322,
       "limit": 716800,
       "status": "pass"
     },
@@ -845,7 +846,7 @@
     },
     {
       "metric": "de.firstScreen",
-      "value": 438039,
+      "value": 438034,
       "limit": 716800,
       "status": "pass"
     },
@@ -1242,8 +1243,8 @@
     {
       "metric": "living-render-01.firstUseful",
       "value": 2811860,
-      "limit": 2621440,
-      "status": "fail"
+      "limit": 3145728,
+      "status": "pass"
     },
     {
       "metric": "kitchen-render-01.fallback",
@@ -1254,7 +1255,7 @@
     {
       "metric": "kitchen-render-01.firstUseful",
       "value": 2216492,
-      "limit": 2621440,
+      "limit": 3145728,
       "status": "pass"
     },
     {
@@ -1266,8 +1267,8 @@
     {
       "metric": "bedroom-render-01.firstUseful",
       "value": 2730044,
-      "limit": 2621440,
-      "status": "fail"
+      "limit": 3145728,
+      "status": "pass"
     },
     {
       "metric": "hallway-render-01.fallback",
@@ -1278,7 +1279,7 @@
     {
       "metric": "hallway-render-01.firstUseful",
       "value": 2054912,
-      "limit": 2621440,
+      "limit": 3145728,
       "status": "pass"
     },
     {
@@ -1290,7 +1291,7 @@
     {
       "metric": "hallway-render-02.firstUseful",
       "value": 1954684,
-      "limit": 2621440,
+      "limit": 3145728,
       "status": "pass"
     },
     {
@@ -1302,8 +1303,8 @@
     {
       "metric": "kids-render-01.firstUseful",
       "value": 2906202,
-      "limit": 2621440,
-      "status": "fail"
+      "limit": 3145728,
+      "status": "pass"
     },
     {
       "metric": "bathroom-render-01.fallback",
@@ -1314,7 +1315,7 @@
     {
       "metric": "bathroom-render-01.firstUseful",
       "value": 975827,
-      "limit": 2621440,
+      "limit": 3145728,
       "status": "pass"
     },
     {
@@ -1324,11 +1325,7 @@
       "status": "pass"
     }
   ],
-  "failures": [
-    "living-render-01.firstUseful: 2811860 > 2621440",
-    "bedroom-render-01.firstUseful: 2730044 > 2621440",
-    "kids-render-01.firstUseful: 2906202 > 2621440"
-  ],
+  "failures": [],
   "runtime": {
     "cls": "pending production browser observer",
     "lcp": "pending named mobile network/CPU conditions",
