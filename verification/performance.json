@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "buildId": "rO-Dy2ajJAQoYmRH3NR61",
+  "buildId": "SV4VybeYP4kJhCjsywLts",
   "method": "Production export. Unique initial script tags per route; gzip and Brotli per file. CSS gzip plus used WOFF2 bytes. Images: conservative 640px variants at 390px viewport. File sizes do not establish LCP, INP, CLS or device latency.",
   "limits": {
     "feedInitialJsGzip": 204800,
@@ -45,6 +45,12 @@
             "brotli": 3138
           },
           {
+            "url": "/_next/static/chunks/1mlz6cqhpnzqg.js",
+            "raw": 47964,
+            "gzip": 16528,
+            "brotli": 14435
+          },
+          {
             "url": "/_next/static/chunks/1tsoipgckh5mu.js",
             "raw": 555,
             "gzip": 383,
@@ -63,16 +69,16 @@
             "brotli": 7506
           },
           {
-            "url": "/_next/static/chunks/36beui70uv2--.js",
-            "raw": 66411,
-            "gzip": 22182,
-            "brotli": 19513
-          },
-          {
             "url": "/_next/static/chunks/3eawq3h7yvchp.js",
             "raw": 5346,
             "gzip": 2079,
             "brotli": 1859
+          },
+          {
+            "url": "/_next/static/chunks/3yvehz4-6njeh.js",
+            "raw": 28071,
+            "gzip": 9656,
+            "brotli": 8609
           },
           {
             "url": "/_next/static/chunks/43s17wzwltcop.js",
@@ -87,22 +93,22 @@
             "brotli": 3512
           }
         ],
-        "raw": 641521,
-        "gzip": 199960,
-        "brotli": 172917
+        "raw": 651145,
+        "gzip": 203962,
+        "brotli": 176448
       },
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/0eh_kklp-o-nc.css",
-            "raw": 39075,
-            "gzip": 7769,
-            "brotli": 6924
+            "url": "/_next/static/chunks/1hqzymvpb6wjh.css",
+            "raw": 46703,
+            "gzip": 8897,
+            "brotli": 7925
           }
         ],
-        "raw": 39075,
-        "gzip": 7769,
-        "brotli": 6924
+        "raw": 46703,
+        "gzip": 8897,
+        "brotli": 7925
       },
       "fonts": {
         "files": [
@@ -141,8 +147,8 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 106905,
-      "firstScreen": 440498
+      "cssAndFonts": 108033,
+      "firstScreen": 447956
     },
     {
       "route": "/en/",
@@ -167,6 +173,12 @@
             "brotli": 3138
           },
           {
+            "url": "/_next/static/chunks/1mlz6cqhpnzqg.js",
+            "raw": 47964,
+            "gzip": 16528,
+            "brotli": 14435
+          },
+          {
             "url": "/_next/static/chunks/1tsoipgckh5mu.js",
             "raw": 555,
             "gzip": 383,
@@ -185,16 +197,16 @@
             "brotli": 7506
           },
           {
-            "url": "/_next/static/chunks/36beui70uv2--.js",
-            "raw": 66411,
-            "gzip": 22182,
-            "brotli": 19513
-          },
-          {
             "url": "/_next/static/chunks/3eawq3h7yvchp.js",
             "raw": 5346,
             "gzip": 2079,
             "brotli": 1859
+          },
+          {
+            "url": "/_next/static/chunks/3yvehz4-6njeh.js",
+            "raw": 28071,
+            "gzip": 9656,
+            "brotli": 8609
           },
           {
             "url": "/_next/static/chunks/43s17wzwltcop.js",
@@ -209,22 +221,22 @@
             "brotli": 3512
           }
         ],
-        "raw": 641521,
-        "gzip": 199960,
-        "brotli": 172917
+        "raw": 651145,
+        "gzip": 203962,
+        "brotli": 176448
       },
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/0eh_kklp-o-nc.css",
-            "raw": 39075,
-            "gzip": 7769,
-            "brotli": 6924
+            "url": "/_next/static/chunks/1hqzymvpb6wjh.css",
+            "raw": 46703,
+            "gzip": 8897,
+            "brotli": 7925
           }
         ],
-        "raw": 39075,
-        "gzip": 7769,
-        "brotli": 6924
+        "raw": 46703,
+        "gzip": 8897,
+        "brotli": 7925
       },
       "fonts": {
         "files": [
@@ -263,8 +275,8 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 106905,
-      "firstScreen": 439761
+      "cssAndFonts": 108033,
+      "firstScreen": 447044
     },
     {
       "route": "/de/",
@@ -289,6 +301,12 @@
             "brotli": 3138
           },
           {
+            "url": "/_next/static/chunks/1mlz6cqhpnzqg.js",
+            "raw": 47964,
+            "gzip": 16528,
+            "brotli": 14435
+          },
+          {
             "url": "/_next/static/chunks/1tsoipgckh5mu.js",
             "raw": 555,
             "gzip": 383,
@@ -307,16 +325,16 @@
             "brotli": 7506
           },
           {
-            "url": "/_next/static/chunks/36beui70uv2--.js",
-            "raw": 66411,
-            "gzip": 22182,
-            "brotli": 19513
-          },
-          {
             "url": "/_next/static/chunks/3eawq3h7yvchp.js",
             "raw": 5346,
             "gzip": 2079,
             "brotli": 1859
+          },
+          {
+            "url": "/_next/static/chunks/3yvehz4-6njeh.js",
+            "raw": 28071,
+            "gzip": 9656,
+            "brotli": 8609
           },
           {
             "url": "/_next/static/chunks/43s17wzwltcop.js",
@@ -331,22 +349,22 @@
             "brotli": 3512
           }
         ],
-        "raw": 641521,
-        "gzip": 199960,
-        "brotli": 172917
+        "raw": 651145,
+        "gzip": 203962,
+        "brotli": 176448
       },
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/0eh_kklp-o-nc.css",
-            "raw": 39075,
-            "gzip": 7769,
-            "brotli": 6924
+            "url": "/_next/static/chunks/1hqzymvpb6wjh.css",
+            "raw": 46703,
+            "gzip": 8897,
+            "brotli": 7925
           }
         ],
-        "raw": 39075,
-        "gzip": 7769,
-        "brotli": 6924
+        "raw": 46703,
+        "gzip": 8897,
+        "brotli": 7925
       },
       "fonts": {
         "files": [
@@ -385,8 +403,8 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 106905,
-      "firstScreen": 440582
+      "cssAndFonts": 108033,
+      "firstScreen": 448146
     }
   ],
   "firstImages": {
@@ -767,10 +785,10 @@
     }
   ],
   "offlinePack": {
-    "files": 855,
-    "bytes": 30851268
+    "files": 861,
+    "bytes": 30943978
   },
-  "emittedJsChunks": 23,
+  "emittedJsChunks": 29,
   "checks": [
     {
       "metric": "firstFourImages",
@@ -780,55 +798,55 @@
     },
     {
       "metric": "sq.feedInitialJsGzip",
-      "value": 199960,
+      "value": 203962,
       "limit": 204800,
       "status": "pass"
     },
     {
       "metric": "sq.feedCssAndFonts",
-      "value": 106905,
+      "value": 108033,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "sq.firstScreen",
-      "value": 440498,
+      "value": 447956,
       "limit": 716800,
       "status": "pass"
     },
     {
       "metric": "en.feedInitialJsGzip",
-      "value": 199960,
+      "value": 203962,
       "limit": 204800,
       "status": "pass"
     },
     {
       "metric": "en.feedCssAndFonts",
-      "value": 106905,
+      "value": 108033,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "en.firstScreen",
-      "value": 439761,
+      "value": 447044,
       "limit": 716800,
       "status": "pass"
     },
     {
       "metric": "de.feedInitialJsGzip",
-      "value": 199960,
+      "value": 203962,
       "limit": 204800,
       "status": "pass"
     },
     {
       "metric": "de.feedCssAndFonts",
-      "value": 106905,
+      "value": 108033,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "de.firstScreen",
-      "value": 440582,
+      "value": 448146,
       "limit": 716800,
       "status": "pass"
     },
@@ -1302,7 +1320,7 @@
     },
     {
       "metric": "studioOfflinePack",
-      "value": 30851268,
+      "value": 30943978,
       "limit": 50331648,
       "status": "pass"
     }

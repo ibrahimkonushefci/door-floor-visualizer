@@ -33,6 +33,7 @@ const mime = {
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
   '.webp': 'image/webp',
+  '.wasm': 'application/wasm',
   '.avif': 'image/avif',
   '.txt': 'text/plain; charset=utf-8',
   '.ico': 'image/x-icon',

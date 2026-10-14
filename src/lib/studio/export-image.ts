@@ -3,6 +3,7 @@ import type { RenderController, StudioCatalog } from './types';
 import { localize, type Messages } from '../i18n/messages';
 import { sceneShowsFloor, sceneShowsSkirting } from './compatibility';
 import { sceneForModel } from './door-models';
+import type { PixelBuffer } from './render/sampling';
 export const EXPORT_JPEG_QUALITY = 0.92;
 export interface ExportBrand {
   name: string;
@@ -77,52 +78,20 @@ function fit(ctx: CanvasRenderingContext2D, text: string, max: number) {
   return `${s.trimEnd()}…`;
 }
 /**
- * Renders the selection at the prepared room's own resolution (2400×1800 full,
- * 1200×900 on the lighter phone variant) through the Studio's controller, adds a
- * branded label strip and encodes a JPEG. Call it while the stage is idle: the
- * controller runs one job at a time, so a stage render started meanwhile
- * supersedes the export (it rejects with an AbortError and can be retried).
+ * Puts a frame and its branded label strip (room, choices, illustrative notice)
+ * on one canvas and encodes a JPEG at EXPORT_JPEG_QUALITY.
  */
-export async function exportStudioImage(
-  catalog: StudioCatalog,
-  selection: StudioSelection,
+export async function labelledJpeg(
+  pixels: PixelBuffer,
+  label: { room: string; rows: [string, string][]; notice: string },
+  brand: ExportBrand,
   locale: Locale,
-  {
-    controller,
-    messages,
-    brand,
-    signal,
-    onProgress,
-  }: {
-    controller: RenderController;
-    messages: Messages;
-    brand: ExportBrand;
-    signal?: AbortSignal;
-    onProgress?: (stage: ExportStage) => void;
-  },
+  onEncode?: () => void,
 ): Promise<Blob> {
-  const definition = catalog.materials.scenes.find(s => s.id === selection.sceneId)!,
-    prepared = controller.prepared(),
-    scale = prepared?.sceneId === selection.sceneId ? prepared.scale : 1,
-    width = Math.floor((definition.width * scale) / 4) * 4,
-    height = (width * 3) / 4;
-  const stop = () => controller.cancel();
-  signal?.throwIfAborted();
-  signal?.addEventListener('abort', stop);
   const canvas = document.createElement('canvas');
   try {
-    onProgress?.('render');
-    const { pixels } = await controller.render({
-      selection,
-      width,
-      height,
-      quality: 'settled',
-      rendererVersion: 2,
-      sceneScale: scale,
-    });
-    signal?.throwIfAborted();
-    onProgress?.('compose');
-    const u = width / 1200,
+    const { width, height } = pixels,
+      u = width / 1200,
       strip = exportStripHeight(width);
     canvas.width = width;
     canvas.height = height + strip;
@@ -133,7 +102,6 @@ export async function exportStudioImage(
     const css = getComputedStyle(document.documentElement),
       sans = css.getPropertyValue('--font-sans').trim() || 'system-ui, sans-serif',
       serif = css.getPropertyValue('--font-serif').trim() || 'Georgia, serif';
-    const label = exportLabel(catalog, selection, locale, messages);
     ctx.fillStyle = '#F7F5F0';
     ctx.fillRect(0, height, width, strip);
     ctx.fillStyle = '#D9D4CA';
@@ -175,19 +143,70 @@ export async function exportStudioImage(
       ctx.fillText(fit(ctx, brand.notice, 380 * u), width - pad, top + 156 * u);
       ctx.textAlign = 'left';
     }
-    onProgress?.('encode');
-    const blob = await new Promise<Blob>((resolve, reject) =>
+    onEncode?.();
+    return await new Promise<Blob>((resolve, reject) =>
       canvas.toBlob(
         b => (b ? resolve(b) : reject(new Error('Image encoding failed'))),
         'image/jpeg',
         EXPORT_JPEG_QUALITY,
       ),
     );
+  } finally {
+    canvas.width = 0;
+    canvas.height = 0;
+  }
+}
+/**
+ * Renders the selection at the prepared room's own resolution (2400×1800 full,
+ * 1200×900 on the lighter phone variant) through the Studio's controller, adds a
+ * branded label strip and encodes a JPEG. Call it while the stage is idle: the
+ * controller runs one job at a time, so a stage render started meanwhile
+ * supersedes the export (it rejects with an AbortError and can be retried).
+ */
+export async function exportStudioImage(
+  catalog: StudioCatalog,
+  selection: StudioSelection,
+  locale: Locale,
+  {
+    controller,
+    messages,
+    brand,
+    signal,
+    onProgress,
+  }: {
+    controller: RenderController;
+    messages: Messages;
+    brand: ExportBrand;
+    signal?: AbortSignal;
+    onProgress?: (stage: ExportStage) => void;
+  },
+): Promise<Blob> {
+  const definition = catalog.materials.scenes.find(s => s.id === selection.sceneId)!,
+    prepared = controller.prepared(),
+    scale = prepared?.sceneId === selection.sceneId ? prepared.scale : 1,
+    width = Math.floor((definition.width * scale) / 4) * 4,
+    height = (width * 3) / 4;
+  const stop = () => controller.cancel();
+  signal?.throwIfAborted();
+  signal?.addEventListener('abort', stop);
+  try {
+    onProgress?.('render');
+    const { pixels } = await controller.render({
+      selection,
+      width,
+      height,
+      quality: 'settled',
+      rendererVersion: 2,
+      sceneScale: scale,
+    });
+    signal?.throwIfAborted();
+    onProgress?.('compose');
+    const blob = await labelledJpeg(pixels, exportLabel(catalog, selection, locale, messages), brand, locale, () =>
+      onProgress?.('encode'),
+    );
     signal?.throwIfAborted();
     return blob;
   } finally {
     signal?.removeEventListener('abort', stop);
-    canvas.width = 0;
-    canvas.height = 0;
   }
 }

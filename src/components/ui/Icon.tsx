@@ -25,7 +25,13 @@ export type IconName =
   | 'ab'
   | 'collapse'
   | 'sliders'
-  | 'share';
+  | 'share'
+  | 'camera'
+  | 'image'
+  | 'brush'
+  | 'eraser'
+  | 'undo'
+  | 'redo';
 const paths: Record<IconName, string> = {
   phone: 'M6 3H3v4c0 8 6 14 14 14h4v-5l-5-2-2 3c-3-1-6-4-7-7l3-2-2-5Z',
   whatsapp: 'M21 11.5a9 9 0 0 1-13 8L3 21l1.5-5A9 9 0 1 1 21 11.5ZM8 7c0 5 3 8 8 9',
@@ -55,6 +61,12 @@ const paths: Record<IconName, string> = {
   collapse: 'M20 4l-6 6M14 5v5h5M4 20l6-6M10 19v-5H5',
   sliders: 'M4 7h10M18 7h2M4 17h4M12 17h8M14 5v4M8 15v4',
   share: 'M12 15V3m-4 4 4-4 4 4M5 11v10h14V11',
+  camera: 'M4 7h3l2-3h6l2 3h3v13H4ZM12 10a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z',
+  image: 'M3 4h18v16H3ZM3 16l5-5 4 4 3-3 6 6M15.5 8.5h.01',
+  brush: 'M13.5 4.5l6 6-8 8h-6v-6ZM5.5 18.5 3 21M10.5 7.5l6 6',
+  eraser: 'M7 20h13M4.5 14.5l9-9 6 6-8.5 8.5H9ZM9 10l6 6',
+  undo: 'M9 14 4 9l5-5M4 9h10a6 6 0 0 1 0 12h-3',
+  redo: 'm15 14 5-5-5-5M20 9H10a6 6 0 0 0 0 12h3',
 };
 export function Icon({
   name,

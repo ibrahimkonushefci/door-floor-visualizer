@@ -82,7 +82,10 @@ scope.addEventListener(
     if (
       request.method !== 'GET' ||
       url.origin !== scope.location.origin ||
-      ['/sw.js', '/build-info.json', '/offline-manifest.json'].includes(url.pathname)
+      ['/sw.js', '/build-info.json', '/offline-manifest.json'].includes(url.pathname) ||
+      // The photo tool's AI runtime (≈ 19 MB) stays in the browser's HTTP cache, so
+      // it never evicts saved catalog pages from the small visited cache.
+      url.pathname.startsWith('/models/')
     )
       return;
     event.respondWith(

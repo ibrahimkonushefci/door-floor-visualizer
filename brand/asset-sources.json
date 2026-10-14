@@ -10937,5 +10937,68 @@
         }
       ]
     }
+  ],
+  "runtimeModels": [
+    {
+      "id": "segformer-b0-ade20k",
+      "kind": "segmentation-model",
+      "sourceUrl": "https://huggingface.co/Xenova/segformer-b0-finetuned-ade-512-512",
+      "author": "NVIDIA (SegFormer, Xie et al. 2021, nvidia/segformer-b0-finetuned-ade-512-512); ONNX int8 export by Xenova",
+      "license": "NVIDIA Source Code License for SegFormer (non-commercial: research or evaluation only)",
+      "usageBasis": "evaluation-only",
+      "note": "Floor class (ADE20K id 3) is the on-device first guess for own-room photos. The licence allows research or evaluation only, so it is used for the private pitch demo; before the Studio is sold or deployed for customers it must be replaced by a commercially licensed model (or the server path) behind the same FloorSegmenter interface. The licence text ships next to the model, as section 3.1 requires.",
+      "files": [
+        {
+          "path": "/models/segformer-b0-ade/model_quantized.onnx",
+          "url": "https://huggingface.co/Xenova/segformer-b0-finetuned-ade-512-512/resolve/main/onnx/model_quantized.onnx",
+          "bytes": 4418863,
+          "sha256": "9a98d6daf3d926869ab8cc4c2ed7374a2bc23b889bb7ca3b0915d15e3c4756bb"
+        },
+        {
+          "path": "/models/segformer-b0-ade/LICENSE.txt",
+          "url": "https://raw.githubusercontent.com/NVlabs/SegFormer/master/LICENSE",
+          "bytes": 4065,
+          "sha256": "f549820c06519e3105e5174a2fd7285224ffd2268a7f879a843b1a255fd04a61"
+        }
+      ]
+    },
+    {
+      "id": "onnxruntime-web",
+      "kind": "runtime",
+      "sourceUrl": "https://www.npmjs.com/package/onnxruntime-web/v/1.30.0",
+      "author": "Microsoft Corporation",
+      "license": "MIT",
+      "usageBasis": "licensed",
+      "note": "ONNX Runtime Web 1.30.0, WASM backend only (ort.wasm.bundle.min.mjs + ort-wasm-simd-threaded.wasm), copied unchanged from the pinned npm package. Loaded only when a visitor opens the own-room photo tool.",
+      "files": [
+        {
+          "path": "/models/ort/ort.wasm.bundle.min.mjs",
+          "url": "https://registry.npmjs.org/onnxruntime-web/-/onnxruntime-web-1.30.0.tgz",
+          "bytes": 73054,
+          "sha256": "11e64bd8ffe11bd1a2a2f0d6275fdfbbba7262f0b76b99b53d228a8a22ef3d90"
+        },
+        {
+          "path": "/models/ort/ort-wasm-simd-threaded.wasm",
+          "url": "https://registry.npmjs.org/onnxruntime-web/-/onnxruntime-web-1.30.0.tgz",
+          "bytes": 14239897,
+          "sha256": "3398c10d07d229bd91b364548e130e0e51a8e5704b88c7c083ebbeb78842dee2"
+        },
+        {
+          "path": "/models/ort/NOTICE.txt",
+          "url": "https://github.com/microsoft/onnxruntime/blob/main/LICENSE",
+          "bytes": 158,
+          "sha256": "bf107ca533c67046e2ad11287bd96dc5db7d6be2216b3fab646a3ec6c3b9b859"
+        }
+      ]
+    }
+  ],
+  "photoSamples": [
+    {
+      "path": "/media/studio-photo/sample-room.jpg",
+      "sourceAssetId": "brand-assets-scenes-bedroom-photo-base",
+      "transformation": "Unchanged 1600×1200 pixels of the frozen base.png, re-encoded as JPEG (q88, mozjpeg) so it loads like a phone photo.",
+      "bytes": 118231,
+      "sha256": "94e8e3c1d7762b9f3e0cbd8ca44c9ba886681f74e581a83e3d933ccfffecb409"
+    }
   ]
 }

@@ -51,7 +51,9 @@ export async function verifyExport() {
     '/sq/',
     '/en/',
     '/de/',
-    ...(data.materials.scenes.length ? ['/sq/studio/', '/en/studio/', '/de/studio/'] : []),
+    ...(data.materials.scenes.length
+      ? ['/sq/studio/', '/en/studio/', '/de/studio/', '/sq/studio/photo/', '/en/studio/photo/', '/de/studio/photo/']
+      : []),
     ...['sq', 'en', 'de'].flatMap(locale =>
       data.products.products.filter(p => p.published).map(p => `/${locale}/products/${p.slug}/`),
     ),

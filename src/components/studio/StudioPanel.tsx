@@ -148,6 +148,13 @@ export function StudioPanel({
                 </button>
               ))}
             </div>
+            <a className="studio-own-room" href={`/${locale}/studio/photo/?floor=${requested.floorProductId}`}>
+              <Icon name="camera" size={22} />
+              <span>
+                <strong>{m['photo.entry']}</strong>
+                <small>{m['photo.entryHint']}</small>
+              </span>
+            </a>
           </section>
         )}
         {floorShown && (

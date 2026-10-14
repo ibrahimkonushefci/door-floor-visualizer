@@ -10,3 +10,4 @@ __pycache__/
 .claude/worktrees/
 tools/decors/.cache/
 .lan-https/
+tools/segmentation/.cache/

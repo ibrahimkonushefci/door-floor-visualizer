@@ -1,5 +1,6 @@
 import sharp from 'sharp';
 import { prepareScenes } from './prepare-scenes';
+import { checkPhotoTool } from './prepare-photo-tool';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
@@ -46,6 +47,41 @@ export const sourceLedgerSchema = z.strictObject({
             }),
           )
           .min(1),
+      }),
+    )
+    .optional(),
+  // Own-room photo segmentation runtime shipped under public/models (scripts/prepare-photo-tool.ts).
+  runtimeModels: z
+    .array(
+      z.strictObject({
+        id: z.string().min(1),
+        kind: z.enum(['segmentation-model', 'runtime']),
+        sourceUrl: z.url(),
+        author: z.string().trim().min(1),
+        license: z.string().trim().min(1),
+        usageBasis: z.enum(['licensed', 'evaluation-only']),
+        note: z.string().trim().min(1),
+        files: z
+          .array(
+            z.strictObject({
+              path: z.string().regex(/^\/models\/[a-z0-9-]+\/[A-Za-z0-9._-]+$/),
+              url: z.url(),
+              bytes: z.number().int().positive(),
+              sha256: z.string().regex(/^[a-f0-9]{64}$/),
+            }),
+          )
+          .min(1),
+      }),
+    )
+    .optional(),
+  photoSamples: z
+    .array(
+      z.strictObject({
+        path: z.string().regex(/^\/media\/studio-photo\/[a-z0-9-]+\.jpg$/),
+        sourceAssetId: z.string().min(1),
+        transformation: z.string().trim().min(1),
+        bytes: z.number().int().positive(),
+        sha256: z.string().regex(/^[a-f0-9]{64}$/),
       }),
     )
     .optional(),
@@ -167,6 +203,7 @@ export async function verifyAssets() {
           if (!lock.files.some(l => l.asset === input.id && l.path === f.path && l.sha256 === f.sha256))
             throw new Error(`Render input not in lock file: ${input.id}/${f.path}`);
     }
+    await checkPhotoTool(ledger);
     for (const c of data.materials.floorCollections) {
       const meta = await sharp('public' + c.atlas.image).metadata();
       if (meta.width !== c.atlas.repeatPixels[0] || meta.height !== c.atlas.repeatPixels[1])

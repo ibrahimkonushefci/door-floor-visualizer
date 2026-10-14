@@ -1,0 +1,442 @@
+/*
+ * Own-room photo tool (/[locale]/studio/photo/). Same frame as the Studio: the
+ * photo above the choices on phones and portrait tablets, photo left and panel
+ * right on landscape tablets and desktops. The photo keeps its own aspect ratio.
+ */
+.photo-studio {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+.photo-stage-area {
+  padding: var(--space-3) var(--gutter) 0;
+  background: var(--color-bg);
+}
+.photo-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo-frame {
+  --photo-max-h: 62dvh;
+  position: relative;
+  width: min(100%, calc(var(--photo-max-h) * var(--photo-ratio)));
+  aspect-ratio: var(--photo-ar);
+  overflow: hidden;
+  border-radius: var(--radius-photo);
+  background: var(--color-sunk);
+  box-shadow: var(--shadow-float);
+  isolation: isolate;
+}
+.photo-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.photo-paint {
+  z-index: 1;
+  cursor: crosshair;
+  touch-action: none;
+}
+.photo-frame.is-busy .photo-paint {
+  cursor: progress;
+}
+.photo-brush-cursor {
+  position: absolute;
+  z-index: 2;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 0.45),
+    inset 0 0 0 1px rgb(0 0 0 / 0.25);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.photo-brush-cursor.is-erase {
+  border-style: dashed;
+}
+.photo-frame > .studio-progress {
+  z-index: 3;
+}
+
+/* Perspective: four corner handles over the dimmed photo and the plank preview. */
+.photo-perspective {
+  z-index: 1;
+}
+.photo-quad {
+  fill: rgb(255 204 0 / 0.08);
+  stroke: #ffcc00;
+  stroke-width: 2;
+}
+.photo-quad.is-invalid {
+  stroke: #e5484d;
+  fill: rgb(229 72 77 / 0.1);
+}
+.photo-handle {
+  position: absolute;
+  z-index: 2;
+  width: var(--tap);
+  height: var(--tap);
+  margin: calc(var(--tap) / -2) 0 0 calc(var(--tap) / -2);
+  border-radius: 50%;
+  cursor: grab;
+  touch-action: none;
+}
+.photo-handle::after {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #ffcc00;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.45);
+}
+.photo-handle.is-invalid::after {
+  background: #e5484d;
+}
+.photo-handle:active {
+  cursor: grabbing;
+}
+.photo-handle:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 0;
+}
+
+/* Result */
+.photo-rendered {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 260ms var(--ease);
+}
+.photo-rendered.is-shown {
+  opacity: 1;
+}
+.photo-stage-tools {
+  position: absolute;
+  z-index: 5;
+  top: var(--space-3);
+  right: var(--space-3);
+  display: flex;
+  gap: var(--space-2);
+}
+.photo-original-label {
+  z-index: 5;
+  left: var(--space-3);
+}
+
+/* Intake */
+.photo-intake {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  width: min(100%, calc(62dvh * 4 / 3));
+  aspect-ratio: 4 / 3;
+  padding: var(--space-6);
+  border: 1.5px dashed var(--color-line-strong);
+  border-radius: var(--radius-panel);
+  background: var(--color-surface);
+  color: var(--color-muted);
+  text-align: center;
+  transition:
+    border-color var(--duration-fast) var(--ease),
+    background-color var(--duration-fast) var(--ease);
+}
+.photo-intake.is-over {
+  border-color: var(--color-accent);
+  background: var(--color-sunk);
+}
+.photo-intake-title {
+  max-width: 28ch;
+  font-family: var(--font-serif);
+  font-size: var(--display-sm);
+  line-height: 1.2;
+  color: var(--color-text);
+}
+.photo-intake-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+.photo-intake-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.photo-intake-sample {
+  min-height: var(--tap);
+  padding: 0 var(--space-3);
+  font-size: var(--text-md);
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.photo-error {
+  max-width: 44ch;
+  font-size: var(--text-md);
+  color: var(--color-error);
+}
+.photo-privacy,
+.photo-note {
+  max-width: 44ch;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+/* Panel */
+.photo-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.photo-steps button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 36px;
+  padding: 0 var(--space-3) 0 var(--space-1);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-md);
+  color: var(--color-text);
+}
+.photo-steps button:disabled {
+  opacity: 0.45;
+}
+.photo-steps button[aria-current='step'] {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+.photo-step-number {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-sunk);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+.photo-steps button[aria-current='step'] .photo-step-number {
+  background: var(--color-primary-text);
+  color: var(--color-primary);
+}
+.photo-status {
+  margin-top: var(--space-6);
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  font-size: var(--text-md);
+  line-height: 1.5;
+}
+.photo-status:empty {
+  display: none;
+}
+.photo-status.is-warning {
+  border-left-color: var(--color-error);
+}
+.photo-tips {
+  display: grid;
+  gap: var(--space-2);
+  padding-left: 1.2em;
+  font-size: var(--text-md);
+  line-height: 1.5;
+}
+.photo-tips + .photo-note {
+  margin-top: var(--space-4);
+}
+.photo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap);
+  margin-top: var(--space-4);
+  font-size: var(--text-md);
+  color: var(--color-text);
+}
+.photo-range {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  font-size: var(--text-md);
+}
+.photo-range input {
+  width: 100%;
+  min-height: var(--tap);
+  accent-color: var(--color-primary);
+}
+.photo-range-ends {
+  display: flex;
+  justify-content: space-between;
+  margin-top: calc(var(--space-2) * -1);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+.photo-check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  font-size: var(--text-md);
+  cursor: pointer;
+}
+.photo-check input {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  accent-color: var(--color-primary);
+}
+.photo-check small {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  color: var(--color-muted);
+}
+.photo-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+.photo-buttons .btn,
+.studio-section > .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.studio-section > .btn {
+  margin-top: var(--space-4);
+}
+.photo-result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+}
+.photo-disclaimer {
+  max-width: 44ch;
+  margin-top: var(--space-6);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+.photo-panel-footer {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+}
+.photo-panel-footer:empty {
+  display: none;
+}
+.photo-panel-footer > .btn:not(.btn-block) {
+  display: inline-flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-width: 0;
+  max-width: 340px;
+  min-height: 48px;
+  white-space: normal;
+  line-height: 1.2;
+  text-align: center;
+}
+.photo-panel-footer > .btn-secondary:not(.btn-block) {
+  flex: 0 1 auto;
+}
+.photo-panel .btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+/* Studio entry: "Try it in your own room" under the room thumbnails. */
+.studio-own-room {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border: 1px dashed var(--color-line-strong);
+  border-radius: var(--radius-panel);
+  color: var(--color-text);
+  transition: border-color var(--duration-fast) var(--ease);
+}
+.studio-own-room:hover {
+  border-color: var(--color-text);
+}
+.studio-own-room strong {
+  display: block;
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+.studio-own-room small {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+@media (min-width: 1024px) and (orientation: landscape), (min-width: 1280px) {
+  .photo-studio {
+    grid-template-columns: minmax(0, 1fr) clamp(340px, 30vw, 400px);
+    height: calc(100dvh - var(--header-height));
+  }
+  .photo-stage-area {
+    display: flex;
+    min-height: 0;
+    padding: var(--space-6);
+    container-type: size;
+  }
+  .photo-stage {
+    width: 100%;
+    height: 100%;
+  }
+  .photo-frame {
+    width: min(100cqw, calc(100cqh * var(--photo-ratio)));
+  }
+  .photo-intake {
+    width: min(100cqw, calc(100cqh * 4 / 3));
+  }
+  .photo-panel-footer {
+    justify-content: stretch;
+  }
+}
+/* Phone landscape: photo left, choices right (as the Studio). */
+@media (orientation: landscape) and (max-height: 540px) and (max-width: 1023px) {
+  .photo-studio {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    height: calc(100dvh - var(--header-height));
+  }
+  .photo-stage-area {
+    display: flex;
+    min-height: 0;
+    padding: var(--space-2);
+    container-type: size;
+  }
+  .photo-stage {
+    width: 100%;
+    height: 100%;
+  }
+  .photo-frame {
+    width: min(100cqw, calc(100cqh * var(--photo-ratio)));
+  }
+  .photo-intake {
+    width: min(100cqw, calc(100cqh * 4 / 3));
+    gap: var(--space-2);
+    padding: var(--space-3);
+  }
+  .photo-panel {
+    min-height: 0;
+    overflow-y: auto;
+  }
+}
