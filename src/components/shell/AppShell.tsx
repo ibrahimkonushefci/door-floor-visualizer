@@ -23,7 +23,7 @@ export function AppShell({ brand, locale, messages, children, studioEnabled }: A
       </main>
       <Footer brand={brand} locale={locale} messages={messages} studioEnabled={studioEnabled} />
       <OfflineNotice messages={messages} />
-      <PresenterTools messages={messages} />
+      <PresenterTools messages={messages} locale={locale} studioEnabled={studioEnabled} />
       <MobileContactBar locale={locale} messages={messages} />
     </OfflineProvider>
   );

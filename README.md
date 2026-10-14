@@ -21,6 +21,8 @@ Status and decisions: [docs/plan/STUDIO_REALISM_PLAN.md](docs/plan/STUDIO_REALIS
 
 Studio realism work is phased in [docs/plan/STUDIO_REALISM_PLAN.md](docs/plan/STUDIO_REALISM_PLAN.md) (status table and handoff log inside). Competitor research is in [docs/research/VISUALIZER_COMPETITORS.md](docs/research/VISUALIZER_COMPETITORS.md).
 
+**Pitch kit** (sales demo): [docs/pitch/](docs/pitch/) — the 3-minute demo script, a one-page offer draft (prices left for the owner) and the rebrand checklist.
+
 ## Run locally
 
 Node 24.19.0 and pnpm 11.25.0 are pinned.
@@ -48,7 +50,7 @@ pnpm build && pnpm verify:export && pnpm verify:budgets
 
 ## Presenter tools (offline)
 
-Press and hold the logo for about a second, or open any page with `?presenter=1`. The sheet saves all Studio rooms and finishes to the device (about 31 MB; limit 48 MiB), shows progress, and offers cancel, update and remove. Customers never see it.
+Press and hold the logo for about a second, or open any page with `?presenter=1`. The sheet saves all Studio rooms and finishes to the device (about 31 MB; limit 48 MiB), shows progress, and offers cancel, update and remove. It also lists the **3-minute demo** stops (`brand/demo-route.json`): each opens one scripted room and combination, in place when the Studio is already open. `pnpm validate:data` fails if a stop is not a valid Studio combination. Customers never see it.
 
 Offline needs HTTPS (or localhost). If setup is impossible, the sheet says so rather than reporting an error. A small notice appears only when the device is offline or a new version is waiting.
 
@@ -97,6 +99,7 @@ Everything company-specific is under `brand/`:
 - `brand.json`: name, tagline, colours, contacts, locales.
 - Logo and favicon.
 - `messages/{sq,en,de}.json`.
+- `demo-route.json`: the presenter's demo stops (see [docs/pitch/REBRAND_CHECKLIST.md](docs/pitch/REBRAND_CHECKLIST.md)).
 - `products.json`, `materials.json` and their images and textures.
 
 Validation is structural and has no fixed inventory: any number of products, finishes and rooms works, and every localized field needs all three languages. Rebuild images with `pnpm assets:images` and scenes with `pnpm assets:scenes`, then run the verification above.

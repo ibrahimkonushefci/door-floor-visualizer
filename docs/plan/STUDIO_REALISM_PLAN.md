@@ -199,6 +199,8 @@ Findings 1 and 2 of that review are fixed and the first-load budget is decided (
 2. A 3-minute demo script and a one-page pricing/offer draft (owner decides the pricing).
 3. Deploy only when the owner explicitly asks.
 
+**Implementation (2026-10-14, Phase 6 session):** no target showroom has been chosen, so the demo keeps the **Porta & Dysheme** demo brand (`demoMode: true`); task 1 is prepared as [docs/pitch/REBRAND_CHECKLIST.md](../pitch/REBRAND_CHECKLIST.md) and done when a showroom is chosen. Kit in [docs/pitch/](../pitch/): `DEMO_SCRIPT.md` (3 minutes, SQ lines + EN, taps and expected screens, recovery, honest answers, what not to claim), `OFFER.md` (one-page offer in SQ + EN; every price and term is a blank for the owner; the own-room photo tool is left out on purpose because of its licence), `REBRAND_CHECKLIST.md`, `README.md` (pre-demo checklist, what is true today). In the app: a **3-minute demo** list in the presenter sheet (4 stops from `brand/demo-route.json`: living room start, kitchen light oak, entrance anthracite flush door, bedroom cream glass-insert door), loaded lazily so customers never download it; on the Studio page a stop switches in place (history push + popstate). `pnpm validate:data` and a unit test fail if a stop is not a valid Studio combination.
+
 ---
 
 ## Handoff log

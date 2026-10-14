@@ -1,13 +1,24 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
+import type { Locale } from '@/lib/data/types';
 import type { Messages } from '@/lib/i18n/messages';
 import { Dialog } from '../ui/Dialog';
 import { Icon } from '../ui/Icon';
 import { useOffline } from './OfflineProvider';
+const DemoRoute = lazy(() => import('./DemoRoute'));
 export const PRESENTER_EVENT = 'pd:presenter-open';
 // Offline saving is a tool for the person presenting, not for customers: it
 // lives in a sheet opened by pressing and holding the logo, or ?presenter=1.
-export function PresenterTools({ messages: m }: { messages: Messages }) {
+// The sheet also holds the scripted demo's stops (brand/demo-route.json).
+export function PresenterTools({
+  messages: m,
+  locale,
+  studioEnabled,
+}: {
+  messages: Messages;
+  locale: Locale;
+  studioEnabled: boolean;
+}) {
   const [open, setOpen] = useState(false);
   const o = useOffline();
   useEffect(() => {
@@ -65,6 +76,11 @@ export function PresenterTools({ messages: m }: { messages: Messages }) {
           )}
         </div>
         <p className="presenter-note">{m['offline.note']}</p>
+        {studioEnabled && open && (
+          <Suspense fallback={null}>
+            <DemoRoute messages={m} locale={locale} onOpen={() => setOpen(false)} />
+          </Suspense>
+        )}
         <p className="presenter-note">{m['presenter.hint']}</p>
       </div>
     </Dialog>

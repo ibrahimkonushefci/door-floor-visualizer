@@ -178,6 +178,8 @@
   "studio.inviteBody": "Pair doors, floors and trim — then send your combination in one tap.",
   "studio.inviteAction": "Open the Studio",
   "presenter.hint": "Only visible to you. Press and hold the logo to open them.",
+  "presenter.demo": "3-minute demo",
+  "presenter.demoHint": "Each tap opens the next stop of the demo script.",
   "photo.title": "Your own room",
   "photo.entry": "Try it in your own room",
   "photo.entryHint": "Upload a photo and see our floors in it.",

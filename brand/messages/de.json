@@ -178,6 +178,8 @@
   "studio.inviteBody": "Türen, Böden und Leisten kombinieren — und die Auswahl mit einem Tipp senden.",
   "studio.inviteAction": "Studio öffnen",
   "presenter.hint": "Nur für Sie sichtbar. Logo gedrückt halten zum Öffnen.",
+  "presenter.demo": "3-Minuten-Demo",
+  "presenter.demoHint": "Jeder Tipp öffnet die nächste Station des Demo-Skripts.",
   "photo.title": "Ihr eigener Raum",
   "photo.entry": "In Ihrem eigenen Raum ansehen",
   "photo.entryHint": "Laden Sie ein Foto hoch und sehen Sie unsere Böden darin.",

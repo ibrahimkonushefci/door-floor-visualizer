@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "stops": [
+    {
+      "id": "start",
+      "label": {
+        "sq": "Dhoma e ndenjes — fillimi",
+        "en": "Living room — start",
+        "de": "Wohnzimmer — Start"
+      },
+      "selection": {
+        "version": 1,
+        "sceneId": "living-render-01",
+        "doorProductId": "dera-bardhe",
+        "doorModelId": "flat",
+        "doorFinishId": "bardhe-mat",
+        "floorProductId": "kronotex-d4955",
+        "frameMode": "door",
+        "skirtingMode": "door",
+        "floorRotationDeg": 0
+      }
+    },
+    {
+      "id": "kitchen",
+      "label": {
+        "sq": "Kuzhina — dysheme lisi e çelët",
+        "en": "Kitchen — light oak floor",
+        "de": "Küche — helle Eiche"
+      },
+      "selection": {
+        "version": 1,
+        "sceneId": "kitchen-render-01",
+        "doorProductId": "dera-bardhe",
+        "doorModelId": "grooved",
+        "doorFinishId": "bardhe-mat",
+        "floorProductId": "kronotex-d80582",
+        "frameMode": "door",
+        "skirtingMode": "door",
+        "floorRotationDeg": 0
+      }
+    },
+    {
+      "id": "entrance",
+      "label": {
+        "sq": "Hyrja — derë filomuro antracit",
+        "en": "Entrance — anthracite flush door",
+        "de": "Eingang — flächenbündige Tür in Anthrazit"
+      },
+      "selection": {
+        "version": 1,
+        "sceneId": "hallway-render-02",
+        "doorProductId": "dera-antracit",
+        "doorModelId": "filomuro",
+        "doorFinishId": "antracit",
+        "floorProductId": "kronotex-d4956",
+        "frameMode": "door",
+        "skirtingMode": "door",
+        "floorRotationDeg": 0
+      }
+    },
+    {
+      "id": "bedroom",
+      "label": {
+        "sq": "Dhoma e gjumit — derë me xham",
+        "en": "Bedroom — glass-insert door",
+        "de": "Schlafzimmer — Tür mit Glaseinsatz"
+      },
+      "selection": {
+        "version": 1,
+        "sceneId": "bedroom-render-01",
+        "doorProductId": "dera-bardhe",
+        "doorModelId": "glass-insert",
+        "doorFinishId": "krem",
+        "floorProductId": "kronotex-d81162",
+        "frameMode": "door",
+        "skirtingMode": "door",
+        "floorRotationDeg": 0
+      }
+    }
+  ]
+}
