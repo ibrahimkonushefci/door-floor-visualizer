@@ -1,6 +1,6 @@
 # Phase 4 design — render controller, frame cache and memory
 
-Status: **design, written before any Phase 4 UI work** (plan, Phase 4 "Before the UI work", item 2). Implementation starts only after the physical-iPad baseline (item 3) is recorded in the plan's handoff log. Numbers below are from `scripts/profile-studio-assets.ts` with corrected accounting (2026-10-14): the analytical owned-buffer bound, not a heap measurement.
+Status: **design, written before any Phase 4 UI work** (plan, Phase 4 "Before the UI work", item 2). The physical-iPad baseline was deferred by the owner (2026-10-14). For the sales demo, Phase 4 was built with the simpler approach in **§7 Demo implementation** below; §3 remains the reference if device testing later shows the demo approach is not enough. Numbers below are from `scripts/profile-studio-assets.ts` with corrected accounting (2026-10-14): the analytical owned-buffer bound, not a heap measurement.
 
 ## 1. What exists today
 
@@ -122,3 +122,18 @@ Kitchen (worst), MiB:
 2. **`mode: main` after the offline save** → Safari does not keep the worker URL fragment through the service-worker fix; fix that before anything else (e.g. stop serving worker scripts from the pack while online).
 3. **Sharp-frame times** are the reference for presentation mode, whose stage is wider (1024-px landscape iPad: ≈ 2048-px frames instead of ≈ 1272 today, about 2.6× the pixels). If the baseline's floor/door switches are already slow, the owner decides whether presentation mode caps iPad frames (e.g. 2048 px).
 4. **Safari memory peak** is the reference for the gate run: the Phase 4 gate run should not exceed it by more than the analytical change above (≈ 0).
+
+## 7. Demo implementation (2026-10-14)
+
+The owner asked for a working sales demo using simple, reliable solutions, with physical-device testing deferred. Phase 4 therefore keeps today's controller (one job at a time, scene held on the main thread and copied to the worker, 16 MiB result cache) and adds only what the presentation features need:
+
+| Need | §3 design | Demo implementation |
+|---|---|---|
+| A/B compare | `compare` lane rendering B next to A | A is a **snapshot** of the frame on screen (one canvas at stage resolution); the stage renders B as usual. Closed on a room change and before an export. |
+| Image export | `export` lane, no stage cancel | `exportStudioImage` renders through the shared controller **while the stage is idle** (Download is enabled only on a settled frame), at the prepared variant's own size (2400×1800 / 1200×900), then composes the label strip and encodes JPEG 0.92. A stage render started meanwhile supersedes it; the dialog offers "Try again". |
+| Zoom | `RenderJob.viewport`, bilinear when zoomed | CSS transform on the frame layers (3× full, 2× light); ~0.2 s after zooming, one re-render at the **variant's full width** (e.g. 1928 → 2400 px). The variant follows the unzoomed stage, so phones stay on the light variant. No kernel change. |
+| Tap-to-select | ¼-scale role map | `controller.hitTest` reads the prepared surface masks the main thread already holds (largest coverage ≥ 50 %; protected furniture and other rooms → null). No extra memory. |
+| Watchdog | heartbeat, restart once, then main thread | A worker job with no answer for 15 s is treated like a worker error: the worker is terminated and the frame finishes on the main thread. |
+| Frame cache, ownership, lanes | §3.1–3.3 | Not done. Switching back to a room re-renders (≈ 1 s on the laptop). |
+
+Memory (analytical, `scripts/profile-studio-assets.ts`): one new term, `presentationExtras = max(A/B snapshot frame, export canvas + strip + JPEG)`, since the two never coexist. Worst rooms: kitchen **316.5 / 320 MiB** full, **168.2 / 200 MiB** light. All limits unchanged. Not a Safari heap measurement.

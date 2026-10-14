@@ -1,4 +1,6 @@
-# Physical-iPad baseline (Phase 4 prerequisite)
+# Physical-iPad baseline (production acceptance)
+
+> **Status (owner, 2026-10-14): deferred.** The owner has no iPad, so this no longer blocks Phase 4 or its demo review gate. Run it — plus zoom, A/B, an image export and the same steps on an iPhone — as part of production acceptance before selling or deploying. The procedure below is unchanged.
 
 Measures today's Studio on a real iPad in Safari before zoom, A/B and image export are built (plan: Phase 4, "Before the UI work", item 3). The same procedure, plus zoom, A/B and an export, is repeated at the Phase 4 gate. About 30–40 minutes.
 
