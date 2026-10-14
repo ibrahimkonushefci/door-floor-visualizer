@@ -4,6 +4,7 @@ import {
   navigationKey,
   rememberNetworkResponse,
   assetResponse,
+  workerScriptResponse,
 } from '../lib/offline/cache';
 import type { OfflineManifest, WorkerCommand, WorkerReply } from '../lib/offline/messages';
 declare const __OFFLINE_MANIFEST__: OfflineManifest;
@@ -84,7 +85,11 @@ scope.addEventListener(
       ['/sw.js', '/build-info.json', '/offline-manifest.json'].includes(url.pathname)
     )
       return;
-    event.respondWith(request.mode === 'navigate' ? navigate(request) : resource(request));
+    event.respondWith(
+      request.mode === 'navigate'
+        ? navigate(request)
+        : resource(request).then(r => workerScriptResponse(request.destination, r)),
+    );
   },
 );
 scope.addEventListener(

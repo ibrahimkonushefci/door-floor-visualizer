@@ -15,6 +15,8 @@
     "build": "next build && tsx scripts/finalize-export.ts",
     "verify:export": "tsx scripts/verify-export.ts",
     "preview": "node scripts/serve-export.mjs --host 127.0.0.1 --port 4173",
+    "lan-https:cert": "sh scripts/lan-https-cert.sh",
+    "preview:lan": "node scripts/serve-export.mjs --host 0.0.0.0 --port 4443 --tls-key .lan-https/server.key --tls-cert .lan-https/server.crt --ca-cert .lan-https/porta-dev-ca.crt --ca-port 4080 --name \"$(scutil --get LocalHostName).local\"",
     "assets:images": "tsx scripts/prepare-images.ts",
     "verify:assets": "tsx scripts/verify-assets.ts",
     "assets:scenes": "tsx scripts/prepare-scenes.ts",

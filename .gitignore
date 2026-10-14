@@ -9,3 +9,4 @@ tools/blender/out/
 __pycache__/
 .claude/worktrees/
 tools/decors/.cache/
+.lan-https/

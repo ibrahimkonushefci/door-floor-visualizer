@@ -5,12 +5,13 @@ import type { StudioCatalog } from '@/lib/studio/types';
 import { localize, type Messages } from '@/lib/i18n/messages';
 import { buildCombinationTitle } from '@/lib/studio/state';
 import { createRenderController } from '@/lib/studio/render-controller';
-import { readStudioDebug } from '@/lib/studio/debug';
+import { readStudioBaseline, readStudioDebug, STUDIO_TIMING_EVENT } from '@/lib/studio/debug';
 import { useInquiry } from '../inquiry/InquiryProvider';
 import { Toast, useToast } from '../ui/Toast';
 import { StudioStage } from './StudioStage';
 import { StudioPanel } from './StudioPanel';
 import { useStudioSelection } from './useStudioSelection';
+import { StudioBaseline } from './StudioBaseline';
 export default function StudioClient({
   catalog,
   locale,
@@ -22,12 +23,14 @@ export default function StudioClient({
 }) {
   const { toast, show, dismiss } = useToast();
   const [debug] = useState(() => readStudioDebug(window.location.search));
+  const [baseline] = useState(() => readStudioBaseline(window.location.search));
   const { requested, update } = useStudioSelection(catalog, m, show);
   const [rendered, setRendered] = useState<StudioSelection | null>(null);
   const [controller] = useState(() =>
     createRenderController(catalog, {
       onTiming: debug
         ? e => {
+            window.dispatchEvent(new CustomEvent(STUDIO_TIMING_EVENT, { detail: e }));
             const el = document.querySelector<HTMLElement>('.studio');
             if (!el) return;
             if (e.batchMs !== undefined)
@@ -87,6 +90,7 @@ export default function StudioClient({
         onUnavailable={show}
         onRequest={() => rendered && open('whatsapp', { kind: 'studio', selection: rendered })}
       />
+      {baseline && <StudioBaseline catalog={catalog} requested={requested} onAction={update} />}
       <Toast message={toast} onDismiss={dismiss} />
     </section>
   );

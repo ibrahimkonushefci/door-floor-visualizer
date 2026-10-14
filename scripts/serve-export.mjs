@@ -1,5 +1,7 @@
 import { createServer } from 'node:http';
+import { createServer as createSecureServer } from 'node:https';
 import { readFile, stat } from 'node:fs/promises';
+import { readFileSync } from 'node:fs';
 import { resolve, relative, extname, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
 export function resolveExportPath(root, reference, base = '/') {
@@ -35,8 +37,8 @@ const mime = {
   '.txt': 'text/plain; charset=utf-8',
   '.ico': 'image/x-icon',
 };
-export function createExportServer(root) {
-  return createServer(async (req, res) => {
+export function createExportServer(root, tls) {
+  const handler = async (req, res) => {
     res.setHeader('Cache-Control', 'no-cache');
     if (!['GET', 'HEAD'].includes(req.method)) {
       res.writeHead(405, { Allow: 'GET, HEAD' });
@@ -73,7 +75,8 @@ export function createExportServer(root) {
       res.writeHead(404);
       res.end('Not found');
     }
-  });
+  };
+  return tls ? createSecureServer(tls, handler) : createServer(handler);
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = process.argv.slice(2);
@@ -83,7 +86,26 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   };
   const host = flag('--host', '127.0.0.1');
   const port = Number(flag('--port', '4173'));
-  createExportServer(resolve('out')).listen(port, host, () =>
-    console.log(`Static preview: http://${host}:${port}/sq/`),
+  // HTTPS for testing on a tablet over Wi-Fi (service workers need a secure
+  // origin); certificates from scripts/lan-https-cert.sh. The optional plain
+  // HTTP port serves only the local CA certificate, for installing it.
+  const key = flag('--tls-key'),
+    cert = flag('--tls-cert'),
+    caCert = flag('--ca-cert'),
+    caPort = flag('--ca-port'),
+    tls = key && cert ? { key: readFileSync(key), cert: readFileSync(cert) } : undefined,
+    shown = flag('--name', host);
+  createExportServer(resolve('out'), tls).listen(port, host, () =>
+    console.log(`Static preview: ${tls ? 'https' : 'http'}://${shown}:${port}/sq/`),
   );
+  if (caCert && caPort)
+    createServer((req, res) => {
+      res.writeHead(200, {
+        'Content-Type': 'application/x-x509-ca-cert',
+        'Content-Disposition': 'attachment; filename="porta-dev-ca.crt"',
+      });
+      res.end(readFileSync(caCert));
+    }).listen(Number(caPort), host, () =>
+      console.log(`Local CA certificate: http://${shown}:${caPort}/porta-dev-ca.crt`),
+    );
 }

@@ -11,6 +11,7 @@ import {
   sceneScaleFor,
   PREVIEW_AFTER_MS,
 } from '@/lib/studio/presentation';
+import { STUDIO_PRESENTED_EVENT, STUDIO_RENDER_ERROR_EVENT } from '@/lib/studio/debug';
 import { IconButton } from '../ui/IconButton';
 const FADE_MS = 260;
 // The stage keeps the last sharp frame on screen (with a hairline progress bar)
@@ -118,15 +119,21 @@ export function StudioStage({
         onRendered(result.selection);
         if (debug && stage.current) {
           const entries = JSON.parse(stage.current.dataset.presentations || '[]');
-          entries.push({ ms: performance.now() - start, previewMs, width, selection: result.selection });
+          const entry = { ms: performance.now() - start, previewMs, width, selection: result.selection };
+          entries.push(entry);
           stage.current.dataset.presentations = JSON.stringify(entries.slice(-100));
           stage.current.dataset.presentedSelection = JSON.stringify(result.selection);
+          window.dispatchEvent(new CustomEvent(STUDIO_PRESENTED_EVENT, { detail: entry }));
         }
       } catch (e) {
         if (!current || (e instanceof DOMException && e.name === 'AbortError')) return;
         setPending(false);
         setFailed(true);
-        if (debug && stage.current) stage.current.dataset.error = e instanceof Error ? e.message : String(e);
+        if (debug && stage.current) {
+          const message = e instanceof Error ? e.message : String(e);
+          stage.current.dataset.error = message;
+          window.dispatchEvent(new CustomEvent(STUDIO_RENDER_ERROR_EVENT, { detail: { message, selection } }));
+        }
       }
     };
     void run();

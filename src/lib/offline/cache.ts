@@ -197,6 +197,19 @@ export async function rememberNetworkResponse(
   return response;
 }
 
+// Turbopack starts module workers from a bootstrap script that reads its chunk
+// list from the URL fragment (#params=…). A response taken from the cache keeps
+// the cached URL, which has no fragment, so the worker would start without its
+// config (and the Studio would silently render on the main thread). A copy has
+// no URL of its own and so takes the page's request URL, fragment included.
+export function workerScriptResponse(destination: string, response: Response): Response {
+  if (destination !== 'worker' && destination !== 'sharedworker') return response;
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers: response.headers,
+  });
+}
 export function assetResponse(response: Response): Response {
   return response.headers.get('content-type')?.includes('text/html')
     ? new Response('Invalid asset response', {

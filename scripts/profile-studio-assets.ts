@@ -3,6 +3,7 @@ import { loadSiteData } from '../src/lib/data/load';
 import {
   prepareSceneWith,
   createMaterialLoader,
+  sceneLoadFor,
   TEXTURE_CACHE_BYTES,
   TEXTURE_MAX_EDGE,
 } from '../src/lib/studio/asset-loader';
@@ -11,6 +12,11 @@ import { RESULT_CACHE_BYTES } from '../src/lib/studio/render-controller';
 import budgets from '../verification/budgets.json';
 const frameBytesFor = (width: number) => width * ((width * 3) / 4) * 4;
 import { decodeNode, bytesNode } from './prepare-scenes';
+import { firstLoadBytes, firstLoadUrls } from './first-load';
+const sceneManifest = JSON.parse(await readFile('verification/scene-manifest.json', 'utf8')) as {
+    assets: { output: string; bytes: number }[];
+  },
+  sizes = new Map(sceneManifest.assets.map(a => [a.output, a.bytes]));
 const data = loadSiteData(),
   catalog = { products: data.products.products, materials: data.materials },
   signal = new AbortController().signal,
@@ -35,10 +41,14 @@ for (const { variant, scale, maxFrame, limit } of variants(!!definition.render))
   const frameBytes = frameBytesFor(maxFrame),
     W = Math.round(definition.width * scale),
     H = Math.round(definition.height * scale);
-  const scene = await prepareSceneWith(definition, signal, decodeNode, {
-      loadBytes: bytesNode,
-      scale,
-    }),
+  // The scene as the Studio prepares it for the room's default selection: the
+  // default door model's region crops pasted in, glass inserts only for glass.
+  const scene = await prepareSceneWith(
+      sceneLoadFor(definition, definition.defaultSelection, catalog).scene,
+      signal,
+      decodeNode,
+      { loadBytes: bytesNode, scale, modelId: definition.defaultSelection.doorModelId },
+    ),
     loader = createMaterialLoader(decodeNode);
   let maxActiveMaterials = 0;
   for (const doorProductId of definition.allowedDoorProductIds) {
@@ -105,21 +115,8 @@ for (const { variant, scale, maxFrame, limit } of variants(!!definition.render))
     console.error(definition.id, variant, budget, { sceneBytes, scenePreparationBytes, total });
     throw Error(`Owned allocation bound ${definition.id} (${variant}): ${total} > ${limit}`);
   }
-  const defaultMat = await loader.prepare(definition.defaultSelection, catalog, signal);
-  const sourcePaths = new Set([
-    definition.base,
-    definition.protectedMask.alpha,
-    ...definition.surfaces.flatMap(s => [
-      s.mask.alpha,
-      s.lighting.diffuse,
-      ...(s.lighting.specular ? [s.lighting.specular] : []),
-      ...(s.positionMap ? [s.positionMap.image] : []),
-    ]),
-    ...defaultMat.textures.keys(),
-    ...(defaultMat.sheets?.keys() ?? []),
-  ]);
-  let firstUsefulBytes = 0;
-  for (const path of sourcePaths) firstUsefulBytes += (await readFile('public' + path)).length;
+  // Same accounting as the verify:budgets first-load gate (scripts/first-load.ts).
+  const firstUsefulBytes = firstLoadBytes(await firstLoadUrls(definition, catalog), sizes);
   const leaf = definition.surfaces.find(s => s.role === 'door-leaf')!.mask.boundsPx;
   results.push({
     scene: definition.id,
@@ -133,7 +130,8 @@ for (const { variant, scale, maxFrame, limit } of variants(!!definition.render))
       return ((Math.max(...frames.map(b => b[1] + b[3])) - Math.min(...frames.map(b => b[1]))) / definition.height) * 100;
     })(),
     firstUsefulBytes,
-    firstUsefulTargetBytes: 2.5 * 1024 * 1024,
+    firstUsefulTargetBytes: budgets.studioFirstScene,
+    sceneBytes,
     ownedBytes: total,
     ownedLimitBytes: limit,
     scenePreparationBytes,

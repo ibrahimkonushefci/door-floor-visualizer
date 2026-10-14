@@ -7,6 +7,7 @@ import {
   rememberNetworkResponse,
   cachePrefix,
   assetResponse,
+  workerScriptResponse,
 } from '../src/lib/offline/cache';
 import { workerRequest } from '../src/lib/offline/register';
 import type {
@@ -196,6 +197,22 @@ describe('offline pack integrity and lifecycle', () => {
       expect(await result.text()).not.toContain('<h1>');
     },
   );
+  it('serves worker scripts without the cached URL, so the bootstrap keeps its #params', async () => {
+    const cached = new Response('bootstrap()', {
+      status: 200,
+      headers: { 'Content-Type': 'text/javascript' },
+    });
+    // A cached response remembers the URL it was stored under (no fragment).
+    Object.defineProperty(cached, 'url', { value: origin + '/_next/static/chunks/turbopack-worker.js' });
+    const served = workerScriptResponse('worker', cached);
+    expect(served).not.toBe(cached);
+    expect(served.url).toBe('');
+    expect(served.status).toBe(200);
+    expect(served.headers.get('content-type')).toBe('text/javascript');
+    expect(await served.text()).toBe('bootstrap()');
+    const script = new Response('x');
+    expect(workerScriptResponse('script', script)).toBe(script);
+  });
   it('cache prefixes cannot overlap different rebrands', () => {
     expect(cachePrefix('demo-client').startsWith(cachePrefix('demo'))).toBe(false);
   });

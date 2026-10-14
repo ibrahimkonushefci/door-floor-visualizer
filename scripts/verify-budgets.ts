@@ -6,14 +6,7 @@ import { walkFiles } from './offline-export';
 import limits from '../verification/budgets.json';
 import type { ImageManifest } from '../src/lib/media/types';
 import type { OfflineManifest } from '../src/lib/offline/messages';
-import type { RoomScene } from '../src/lib/data/types';
-import {
-  createMaterialLoader,
-  prepareSceneWith,
-  sceneLoadFor,
-  type DecodeAsset,
-} from '../src/lib/studio/asset-loader';
-import { bytesNode, decodeNode } from './prepare-scenes';
+import { firstLoadBytes, firstLoadUrls } from './first-load';
 const data = loadSiteData(),
   images: ImageManifest = JSON.parse(await readFile('verification/image-manifest.json', 'utf8')),
   sceneManifest = JSON.parse(await readFile('verification/scene-manifest.json', 'utf8')) as {
@@ -108,38 +101,13 @@ for (const [id, image] of Object.entries(images))
     );
   }
 const sizes = new Map(sceneManifest.assets.map(a => [a.output, a.bytes]));
-const catalog = { products: data.products.products, materials: data.materials },
-  signal = new AbortController().signal;
-// First useful bytes are the files the Studio's own loader requests for a room's
-// default selection (scene layers, the default door model's region crops, the
-// position map and the selected materials), recorded rather than re-derived,
-// plus the fallback image the stage shows while they load.
-async function firstLoadUrls(scene: RoomScene) {
-  const urls = new Set<string>([scene.fallback]),
-    selection = scene.defaultSelection;
-  const decode: DecodeAsset = (path, s, maxEdge) => {
-    urls.add(path);
-    return decodeNode(path, s, maxEdge);
-  };
-  await prepareSceneWith(sceneLoadFor(scene, selection, catalog).scene, signal, decode, {
-    modelId: selection.doorModelId,
-    loadBytes: path => {
-      urls.add(path);
-      return bytesNode(path);
-    },
-  });
-  await createMaterialLoader(decode).prepare(selection, catalog, signal);
-  return urls;
-}
+const catalog = { products: data.products.products, materials: data.materials };
 const scenes = [];
 for (const scene of data.materials.scenes) {
   gate(`${scene.id}.fallback`, sizes.get(scene.fallback)!, limits.sceneFallback960);
-  const urls = await firstLoadUrls(scene);
-  const bytes = [...urls].reduce((n, url) => {
-    const size = sizes.get(url);
-    if (size === undefined) throw new Error(`First load requests an unpublished asset: ${url}`);
-    return n + size;
-  }, 0);
+  // What the Studio's loader requests for the room's default selection (scripts/first-load.ts).
+  const urls = await firstLoadUrls(scene, catalog);
+  const bytes = firstLoadBytes(urls, sizes);
   gate(`${scene.id}.firstUseful`, bytes, limits.studioFirstScene);
   scenes.push({ id: scene.id, bytes, files: [...urls] });
 }
