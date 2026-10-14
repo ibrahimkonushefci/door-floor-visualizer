@@ -9,7 +9,7 @@ Research behind this plan: [../research/VISUALIZER_COMPETITORS.md](../research/V
 | Phase | Title | Status | Commit (on `main`) | Gate approved |
 |---|---|---|---|---|
 | 1 | One 3D proof room | done | `8dd0121` | 2026-10-13 (owner) |
-| 2 | Real supplier décors and door models | awaiting review | `6dcac3d` | |
+| 2 | Real supplier décors and door models | done | `6dcac3d` | 2026-10-14 (owner) |
 | 3 | More rooms | not started | | |
 | 4 | Studio rebuilt for presenting | not started | | |
 | 5 | Own-room photo upload (AI + touch-up) | not started | | |
@@ -209,3 +209,4 @@ Append one entry per session: date, phase, commit, what changed, check results (
   - **Screenshots** (local, `docs/review/` is git-ignored; this phase in `docs/review/phase-2/studio-realism/` because `phase-2/` holds an older plan's captures): `viewport-{laptop,ipad-landscape,ipad-portrait,phone}.png` (2×), `model-{flat,grooved,glass-insert,filomuro}-{laptop,ipad-landscape}.png`, `model-filomuro-phone-sq.png`, `door-models-x-trim.png` (each model × frame door/floor/black, 1:1 crops) plus `door-*-2400.png`, `decors-in-room.png`, `decors-near-floor-1to1.png`, and `decors/kronotex-*-{laptop,ipad-landscape}.png` + `kronotex-*-room-2400.png`.
   - **Open issues / limits:** (1) Décor use is private pitch only until written permission from SWISS KRONO or the showroom. (2) D4763 AC class conflict (page vs datasheet) — confirm with the supplier. (3) Light décors read slightly warmer in the room than the swatches (room daylight tint). (4) The lit glass strip's faint reflection in the window frame is not carried into the patch. (5) Door models exist only in the 3D room; photo rooms show their authored door (flat, or the all-glass insert). (6) Choosing a finish the current line lacks can switch line and model (e.g. grey oak from filomuro → flat). (7) Phone frames still show a small door (Phase 1 limit).
   - **Next step:** the owner reviews each décor and each door model on iPad and laptop (screenshots above, or `pnpm preview` → Studio) and approves or lists changes; then Phase 3 (more rooms), which should render every room with `DOOR_MODELS`.
+- 2026-10-14 — **Phase 2 gate approved by the owner** ("visually it was acceptable"). Phase 2 is done. Owner decisions for Phase 3: retire `living-standard`, `corridor-standard` and `bedroom-photo` from the Studio; raise the offline pack limit to 48 MiB (single save); add a bathroom with fixed floor tiles (laminate never goes into a bathroom) and the normal doors; CC0 Poly Haven downloads approved ($0).
