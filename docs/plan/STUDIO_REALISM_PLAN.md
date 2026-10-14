@@ -11,8 +11,8 @@ Research behind this plan: [../research/VISUALIZER_COMPETITORS.md](../research/V
 | 1 | One 3D proof room | done | `8dd0121` | 2026-10-13 (owner) |
 | 2 | Real supplier décors and door models | done | `6dcac3d` | 2026-10-14 (owner) |
 | 3 | More rooms | done | `97aacc9` | 2026-10-14 (owner) |
-| 4 | Studio rebuilt for presenting | awaiting review (demo scope; physical iPad/iPhone testing deferred) | `bef995b` | |
-| 5 | Own-room photo upload (AI + touch-up) | not started | | |
+| 4 | Studio rebuilt for presenting | done (demo scope; physical iPad/iPhone testing deferred to production acceptance) | `bef995b` | 2026-10-14 (owner, visual) |
+| 5 | Own-room photo upload (AI + touch-up) | in progress | | |
 | 6 | Pitch kit | not started | | |
 
 Status values: `not started` → `in progress` → `awaiting review` → `done`.
@@ -267,3 +267,4 @@ Append one entry per session: date, phase, commit, what changed, check results (
   - **Screenshots** (local, git-ignored): `docs/review/phase-4/studio-realism/demo-2026-10-14/01…14-*.jpg|png`.
   - **Open issues / limits:** (1) Not tested on a real iPad/iPhone: Safari memory, real touch pinch, iOS full screen (iPhone Safari has none; the in-page layout is used), Web Share of images, offline retention — production acceptance. (2) The built-in browser did not grant true full screen; the in-page presentation layout was what was verified. (3) The QR/share link uses the page's own address: from `pnpm preview` on the laptop it points to 127.0.0.1, which a phone cannot open (the dialog says so); use the deployed site or `pnpm preview:lan` for a scannable link. (4) A/B and Download wait for the current frame (buttons disabled while rendering); the first visit to a room can take a few seconds. (5) Switching back to a room re-renders (no 3-frame cache; §3 not implemented). (6) Previous Phase 3 limits (CG-looking furniture, mirrors not reflecting choices, small doors on phones, décor permission) still apply.
   - **Next step:** the owner reviews the demo (`pnpm build` then `pnpm preview`, open `/sq/studio/` or `/en/studio/`), runs a 3-minute mock pitch on the laptop, and approves Phase 4 or lists changes. Physical iPad/iPhone checks happen at production acceptance.
+- 2026-10-14 — **Phase 4 gate approved by the owner** ("I approve Phase 4 visually"). Phase 4 is done in its demo scope; the physical iPad/iPhone Safari checks stay deferred to production acceptance ([IPAD_BASELINE.md](IPAD_BASELINE.md)). Next: Phase 5.
