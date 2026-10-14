@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { ROOM_TYPES } from './types';
 import type { BrandConfig, ProductsConfig, MaterialsConfig, SceneCalibration } from './types';
 export const idSchema = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
 const positive = z.number().finite().positive();
@@ -370,6 +371,7 @@ const scene = z.strictObject({
   height: positive.int(),
   base: assetPathSchema,
   original: assetPathSchema.optional(),
+  roomType: z.enum(ROOM_TYPES).optional(),
   render: z
     .strictObject({
       source: z.literal('blender'),

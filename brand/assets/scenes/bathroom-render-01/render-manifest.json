@@ -1,0 +1,125 @@
+{
+  "scene": "bathroom-render-01",
+  "doorModel": "flat",
+  "blender": "5.2.2 LTS",
+  "blenderBuild": "d13f752e3b9c",
+  "engine": "CYCLES",
+  "devices": [
+    "Apple M4 (GPU - 10 cores)"
+  ],
+  "samples": 512,
+  "seed": 1729,
+  "adaptiveSampling": false,
+  "denoiser": "OPENIMAGEDENOISE (albedo+normal, accurate prefilter)",
+  "resolution": [
+    2400,
+    1800
+  ],
+  "borderPx": null,
+  "renderSeconds": {
+    "light": 575.9,
+    "light-dim": 532.0,
+    "gloss": 518.9
+  },
+  "passes": {
+    "light": "editable = 0.5 grey Lambertian; plate = Combined / 0.5",
+    "light-dim": "editable = 0.25 grey; (light - light-dim) isolates editable light at edges",
+    "gloss": "editable = black dielectric IOR 1.5, GGX roughness {'floor': 0.3, 'door-leaf': 0.38, 'frame': 0.38, 'skirting': 0.38}",
+    "base": "light Combined minus coverage x 0.5 x dilated surface light, unpremultiplied at edges"
+  },
+  "camera": {
+    "matrix_world": [
+      [
+        0.9979776740074158,
+        -5.406055603174309e-09,
+        -0.0635654479265213,
+        1.2000000476837158
+      ],
+      [
+        -0.0635654479265213,
+        -4.345563198171476e-08,
+        -0.9979776740074158,
+        0.1599999964237213
+      ],
+      [
+        2.632845941263895e-09,
+        1.0,
+        -4.371138828673793e-08,
+        1.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "lens_mm": 17.0,
+    "sensor_mm": 36.0,
+    "shift": [
+      0.0,
+      -0.11999999731779099
+    ]
+  },
+  "hdri": null,
+  "corridor": {
+    "depth": 1.6,
+    "half_width": 1.2,
+    "light": 12.0
+  },
+  "fill": {
+    "energy": 12.0,
+    "size": [
+      1.6,
+      2.4
+    ]
+  },
+  "filmExposure": 1.55,
+  "viewTransform": "Standard (linear EXR); tone shoulder applied in post and at runtime",
+  "toneShoulder": 0.6,
+  "checks": {
+    "coverageSumMax": 1.0,
+    "hiddenSurfaces": [],
+    "maskSumMax": 255,
+    "backdropNegativeEdgePixels": 233,
+    "edgePixels": 6954,
+    "backdropClampMaxLinear": 0.018045201897621155,
+    "backdropClampP99Linear": 0.0072106244042515755,
+    "lightScale": 0.6345773792266846,
+    "lightChroma": {
+      "leaf": {
+        "tint": [
+          1.0973999500274658,
+          0.9868000149726868,
+          0.8331999778747559
+        ],
+        "p95AbsDev": 0.01998136192560196
+      },
+      "frame-left": {
+        "tint": [
+          1.0960999727249146,
+          0.988099992275238,
+          0.8353000283241272
+        ],
+        "p95AbsDev": 0.022068951278924942
+      },
+      "frame-right": {
+        "tint": [
+          1.0986000299453735,
+          0.9876999855041504,
+          0.8321999907493591
+        ],
+        "p95AbsDev": 0.019398394972085953
+      },
+      "frame-top": {
+        "tint": [
+          1.0831999778747559,
+          0.9900000095367432,
+          0.8536999821662903
+        ],
+        "p95AbsDev": 0.026903420686721802
+      }
+    }
+  },
+  "floorPosition": null
+}

@@ -1,14 +1,16 @@
 // Import a Blender-rendered room (tools/blender/render_layers.py output) as a
 // Studio scene:
-//   tsx scripts/import-rendered-scene.ts [scene-id]        (default living-render-01)
+//   tsx scripts/import-rendered-scene.ts [scene-id ...]    (default: every room in ROOMS)
 // Reads tools/blender/out/<id>/<model>/layers/ (one render per door model,
-// render_layers.py --model), writes brand/assets/scenes/<id>/ in the existing
-// scene format (masks, light plates, calibration.json) extended with the floor
-// position map, reflection plates, light tint and render metadata. The first
-// model's layers are the scene's own; every model (the first too, for fast
-// switching back) also gets crops of all its layers inside one shared region
-// around the door (`doorModels`). Records every layer plus the CC0 render
-// inputs in brand/asset-sources.json.
+// render_layers.py --model; non-default models may be cropped to a border
+// around the door), writes brand/assets/scenes/<id>/ in the existing scene
+// format (masks, light plates, calibration.json) extended with the floor
+// position map, reflection plates, light tint and render metadata. The room's
+// default model's layers are the scene's own; every model (the default too, for
+// fast switching back) also gets crops of all its layers inside one shared
+// region around the door (`doorModels`). Records every layer plus the CC0
+// render inputs in brand/asset-sources.json and sets each product's
+// compatibleSceneIds from the room rules below.
 // Then run `pnpm assets:scenes` to publish it.
 import { copyFile, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
@@ -16,7 +18,7 @@ import { pathToFileURL } from 'node:url';
 import sharp from 'sharp';
 import { calibrationSchema } from '../src/lib/data/schemas';
 import { projectPoint, solveHomography } from '../src/lib/studio/render/homography';
-import type { Quad, RenderedSceneCalibration, RoomScene, Vec2 } from '../src/lib/data/types';
+import type { LocalizedText, Quad, RenderedSceneCalibration, RoomScene, RoomType, Vec2 } from '../src/lib/data/types';
 import { upsertLedger, type LedgerEntry } from './asset-ledger';
 
 interface LayerSurface {
@@ -29,6 +31,9 @@ interface LayerSurface {
 }
 interface Layers {
   scene: string;
+  defaultModel?: string; // absent in the Phase 1/2 living room (flat)
+  models?: string[];
+  border?: [number, number, number, number] | null; // x0, y0, x1, y1 of a cropped render
   width: number;
   height: number;
   toneShoulder: number;
@@ -41,11 +46,109 @@ interface Layers {
     stepPx: number;
   };
 }
-// Door models rendered for this room, default first (tools/blender/room_spec.py DOOR_MODELS).
+// Door models rendered for every room (tools/blender/room_spec.py DOOR_MODELS);
+// each room lists them with its default first in layers.json.
 export const MODELS = ['flat', 'grooved', 'glass-insert', 'filomuro'] as const;
 const CONCEALED = new Set(['filomuro']);
+// Every opaque door line has a rendered model in every room.
 const DOORS = ['dera-bardhe', 'dera-lis', 'dera-kashmir', 'dera-antracit'];
 const DEFAULT_FLOOR = 'kronotex-d4955';
+interface RoomMeta {
+  name: LocalizedText;
+  description: LocalizedText;
+  roomType: RoomType;
+  /** Laminate rooms show every published floor; a bathroom keeps its fixed tiles. */
+  floors: 'all' | 'none';
+  door: { productId: string; finishId: string };
+  geometry: string; // AUTHORING.md summary (true scale)
+}
+// Rooms in Studio order; ids match tools/blender/room_spec.py ROOMS.
+export const ROOMS: Record<string, RoomMeta> = {
+  'living-render-01': {
+    name: { sq: 'Dhoma e ndenjes', en: 'Living room', de: 'Wohnzimmer' },
+    description: {
+      sq: 'Dhomë ndenjeje e mobiluar me dritë dite',
+      en: 'Furnished living room in daylight',
+      de: 'Möbliertes Wohnzimmer bei Tageslicht',
+    },
+    roomType: 'living',
+    floors: 'all',
+    door: { productId: 'dera-bardhe', finishId: 'bardhe-mat' },
+    geometry: 'Room 5.2 × 6.0 × 2.7 m, window in the left wall; sofa, lounge chair, coffee table, rug, sideboard.',
+  },
+  'kitchen-render-01': {
+    name: { sq: 'Kuzhina dhe ngrënia', en: 'Kitchen & dining', de: 'Küche & Essbereich' },
+    description: {
+      sq: 'Kuzhinë e hapur me tavolinë ngrënieje dhe dritë dite',
+      en: 'Open kitchen with a dining table in daylight',
+      de: 'Offene Küche mit Esstisch bei Tageslicht',
+    },
+    roomType: 'kitchen',
+    floors: 'all',
+    door: { productId: 'dera-bardhe', finishId: 'bardhe-mat' },
+    geometry: 'Room 4.6 × 6.2 × 2.7 m, window in the left wall; L-shaped kitchen (back and right walls), dining table for four.',
+  },
+  'bedroom-render-01': {
+    name: { sq: 'Dhoma e gjumit', en: 'Bedroom', de: 'Schlafzimmer' },
+    description: {
+      sq: 'Dhomë gjumi me shtrat dopio dhe perde liri',
+      en: 'Bedroom with a double bed and linen curtains',
+      de: 'Schlafzimmer mit Doppelbett und Leinenvorhängen',
+    },
+    roomType: 'bedroom',
+    floors: 'all',
+    door: { productId: 'dera-lis', finishId: 'lis-natyral' },
+    geometry: 'Room 4.2 × 4.8 × 2.65 m, window in the right wall; upholstered double bed, nightstands, dresser with round mirror.',
+  },
+  'hallway-render-01': {
+    name: { sq: 'Korridori', en: 'Hallway', de: 'Flur' },
+    description: {
+      sq: 'Korridor banese me ndriçim spotesh',
+      en: 'Apartment hallway with ceiling spots',
+      de: 'Wohnungsflur mit Deckenspots',
+    },
+    roomType: 'hallway',
+    floors: 'all',
+    door: { productId: 'dera-bardhe', finishId: 'gri-celet' },
+    geometry: 'Hallway 1.7 × 5.6 × 2.65 m, no window (three ceiling spots); console with round mirror, bench, shoe cabinet.',
+  },
+  'hallway-render-02': {
+    name: { sq: 'Hyrja me derë filomuro', en: 'Entrance with flush door', de: 'Eingang mit flächenbündiger Tür' },
+    description: {
+      sq: 'Hyrje minimaliste me derë filomuro në nivel me murin',
+      en: 'Minimal entrance hall with a wall-flush filomuro door',
+      de: 'Minimalistischer Eingang mit wandbündiger Filomuro-Tür',
+    },
+    roomType: 'hallway',
+    floors: 'all',
+    door: { productId: 'dera-kashmir', finishId: 'kashmir' },
+    geometry: 'Entrance hall 2.4 × 5.0 × 2.7 m, no window (linear ceiling light); floating oak console, oak slat panel, shoe cabinet.',
+  },
+  'kids-render-01': {
+    name: { sq: 'Dhoma e fëmijëve', en: "Kids' room", de: 'Kinderzimmer' },
+    description: {
+      sq: 'Dhomë fëmijësh me tavolinë pune dhe lodra',
+      en: "Children's room with a desk and toys",
+      de: 'Kinderzimmer mit Schreibtisch und Spielzeug',
+    },
+    roomType: 'kids',
+    floors: 'all',
+    door: { productId: 'dera-bardhe', finishId: 'bardhe-mat' },
+    geometry: 'Room 3.6 × 4.3 × 2.6 m, window in the right wall; single bed, bookcase, desk, round rug with toys.',
+  },
+  'bathroom-render-01': {
+    name: { sq: 'Banjo', en: 'Bathroom', de: 'Badezimmer' },
+    description: {
+      sq: 'Banjo me pllaka; ndryshohet vetëm dera (laminati nuk vendoset në banjo)',
+      en: 'Tiled bathroom; only the door changes (laminate does not go into bathrooms)',
+      de: 'Gefliestes Bad; nur die Tür wechselt (Laminat gehört nicht ins Bad)',
+    },
+    roomType: 'bathroom',
+    floors: 'none',
+    door: { productId: 'dera-bardhe', finishId: 'bardhe-mat' },
+    geometry: 'Bathroom 2.6 × 3.3 × 2.6 m, no window; fixed 60 × 60 porcelain floor and 60 × 120 wall tiles (not editable, no skirting), bathtub, floating vanity.',
+  },
+};
 // Region search: door assembly grown by SEARCH_PX; pixels whose 9×9 mean
 // change exceeds DIFF_LEVELS (8-bit) join; the result grows by MARGIN_PX.
 const SEARCH_PX = 160,
@@ -229,34 +332,55 @@ function defineSurface(
   };
 }
 
-export async function importRenderedScene(id = 'living-render-01') {
+export async function importRenderedScene(id: string) {
+  const meta = ROOMS[id];
+  if (!meta) throw new Error(`Unknown room ${id}; add it to ROOMS`);
+  // Every model's layers.json names the room's default model (the Phase 1/2
+  // living room predates that field: its default is flat).
+  let defaultModel: string = MODELS[0];
+  for (const m of MODELS) {
+    const l: Layers | null = await readFile(`tools/blender/out/${id}/${m}/layers/layers.json`, 'utf8')
+      .then(t => JSON.parse(t))
+      .catch(() => null);
+    if (l?.defaultModel) {
+      defaultModel = l.defaultModel;
+      break;
+    }
+  }
   const out = (model: string) => `tools/blender/out/${id}/${model}/layers`,
-    src = out(MODELS[0]),
+    src = out(defaultModel),
     dir = `brand/assets/scenes/${id}`,
     media = `/media/scenes/${id}`;
   const layers: Layers = JSON.parse(await readFile(`${src}/layers.json`, 'utf8'));
+  const models = layers.models ?? [...MODELS];
+  if (models[0] !== defaultModel || [...models].sort().join() !== [...MODELS].sort().join())
+    throw new Error(`${id}: unexpected model list ${models.join()}`);
   const manifest = JSON.parse(await readFile(`${src}/render-manifest.json`, 'utf8'));
   if (layers.width !== 2400 || layers.height !== 1800) throw new Error('Rendered scenes are 2400×1800');
+  if (layers.border) throw new Error(`${id}: the default model must be rendered in full`);
   await rm(dir, { recursive: true, force: true });
   await mkdir(dir, { recursive: true });
   const copies: Record<string, string> = {
     'base.png': 'base.png',
     'neutral.png': 'original.png',
     'protected-mask.png': 'protected-mask.png',
-    'floor-position.png': 'floor-position.png',
   };
+  const hasFloor = layers.surfaces.some(s => s.role === 'floor');
+  if (hasFloor) copies['floor-position.png'] = 'floor-position.png';
   for (const s of layers.surfaces)
     for (const kind of ['mask', 'light', 'reflection']) copies[`${s.id}-${kind}.png`] = `${s.id}-${kind}.png`;
   for (const [from, to] of Object.entries(copies)) await copyFile(`${src}/${from}`, `${dir}/${to}`);
   await sharp(`${src}/neutral.png`).resize(640, 480).png().toFile(`${dir}/thumbnail.png`);
   await copyFile(`${src}/render-manifest.json`, `${dir}/render-manifest.json`);
 
-  // Every published floor is shown here (supplier décors carry plank sheets).
+  // Laminate rooms show every published floor (supplier décors carry plank sheets).
   const products = JSON.parse(await readFile('brand/products.json', 'utf8'));
-  const floors: string[] = products.products
+  const published: string[] = products.products
     .filter((p: { kind: string; published: boolean }) => p.kind === 'floor' && p.published)
     .map((p: { id: string }) => p.id);
-  if (!floors.includes(DEFAULT_FLOOR)) throw new Error(`Default floor ${DEFAULT_FLOOR} is not published`);
+  if (!published.includes(DEFAULT_FLOOR)) throw new Error(`Default floor ${DEFAULT_FLOOR} is not published`);
+  if (hasFloor !== (meta.floors === 'all')) throw new Error(`${id}: floor rule does not match the render`);
+  const floors = meta.floors === 'all' ? published : [];
   const surfaces: RoomScene['surfaces'][number][] = [];
   for (const s of layers.surfaces)
     surfaces.push(
@@ -273,8 +397,11 @@ export async function importRenderedScene(id = 'living-render-01') {
   const W = layers.width,
     H = layers.height,
     modelLayers = new Map<string, Layers>(),
-    modelManifests = new Map<string, { samples: number; renderSeconds: Record<string, number>; checks: Record<string, unknown> }>();
-  for (const m of MODELS) {
+    modelManifests = new Map<
+      string,
+      { samples: number; renderSeconds: Record<string, number>; checks: { hiddenSurfaces: string[] } & Record<string, unknown> }
+    >();
+  for (const m of models) {
     const l: Layers = JSON.parse(await readFile(`${out(m)}/layers.json`, 'utf8'));
     const man = JSON.parse(await readFile(`${out(m)}/render-manifest.json`, 'utf8'));
     if (l.width !== W || l.height !== H || man.samples !== manifest.samples || man.seed !== manifest.seed)
@@ -283,10 +410,21 @@ export async function importRenderedScene(id = 'living-render-01') {
     modelLayers.set(m, l);
     modelManifests.set(m, man);
   }
+  // Pixels a model's render covers: everything, or its crop border.
+  const covered = (m: string): Box => {
+    const b = modelLayers.get(m)!.border;
+    return b ? [b[0], b[1], b[2] - b[0], b[3] - b[1]] : [0, 0, W, H];
+  };
+  const within = (x: number, y: number, [bx, by, bw, bh]: Box) => x >= bx && y >= by && x < bx + bw && y < by + bh;
+  const clip = (a: Box, b: Box): Box => {
+    const x0 = Math.max(a[0], b[0]),
+      y0 = Math.max(a[1], b[1]);
+    return [x0, y0, Math.min(a[0] + a[2], b[0] + b[2]) - x0, Math.min(a[1] + a[3], b[1] + b[3]) - y0];
+  };
   // One region for every model: each model's door assembly and hardware, plus
   // every nearby pixel whose light or base changes against the default model.
   let door: Box | null = null;
-  for (const m of MODELS) {
+  for (const m of models) {
     door = union(door, boundsOf(await raw(`${out(m)}/protected-mask.png`)));
     for (const s of modelLayers.get(m)!.surfaces)
       if (s.role === 'door-leaf' || s.role === 'frame') door = union(door, boundsOf(await raw(`${out(m)}/${s.id}-mask.png`)));
@@ -295,13 +433,15 @@ export async function importRenderedScene(id = 'living-render-01') {
   let region: Box = door!;
   const maskPixelsOutside: Record<string, number> = {};
   const compared = ['base.png', 'neutral.png', ...layers.surfaces.map(s => `${s.id}-light.png`)];
-  for (const m of MODELS.slice(1)) {
+  for (const m of models.slice(1)) {
+    const window = clip(search, covered(m));
     const has = new Set(['base.png', 'neutral.png', ...modelLayers.get(m)!.surfaces.map(s => `${s.id}-light.png`)]);
     for (const file of compared.filter(f => has.has(f)))
-      region = union(region, changed(await raw(`${src}/${file}`), await raw(`${out(m)}/${file}`), search))!;
+      region = union(region, changed(await raw(`${src}/${file}`), await raw(`${out(m)}/${file}`), window))!;
     // Mask changes near the door join the region; stray differing pixels
     // elsewhere (BVH/sampling noise, e.g. under the sideboard) are counted in
-    // door-models.json and keep the default model's coverage.
+    // door-models.json and keep the default model's coverage. Pixels outside a
+    // cropped render's border were never rendered and are not compared.
     for (const s of modelLayers.get(m)!.surfaces) {
       const own = await raw(`${out(m)}/${s.id}-mask.png`);
       if (!layers.surfaces.some(d => d.id === s.id)) continue;
@@ -311,8 +451,8 @@ export async function importRenderedScene(id = 'living-render-01') {
           const p = i / own.channels,
             x = p % W,
             y = Math.floor(p / W);
-          if (x >= search[0] && y >= search[1] && x < search[0] + search[2] && y < search[1] + search[3])
-            region = union(region, [x, y, 1, 1])!;
+          if (!within(x, y, covered(m))) continue;
+          if (within(x, y, search)) region = union(region, [x, y, 1, 1])!;
           else maskPixelsOutside[m] = (maskPixelsOutside[m] ?? 0) + 1;
         }
     }
@@ -326,6 +466,8 @@ export async function importRenderedScene(id = 'living-render-01') {
       y1 = Math.min(H, (region[1] + region[3] + 1) & ~1);
     region = [x0, y0, x1 - x0, y1 - y0];
   }
+  for (const m of models)
+    if (!inside(region, covered(m))) throw new Error(`${id}/${m}: crop border ${covered(m).join()} misses region ${region.join()}`);
   const crop = (from: string, to: string) =>
     sharp(from)
       .extract({ left: region[0], top: region[1], width: region[2], height: region[3] })
@@ -333,8 +475,9 @@ export async function importRenderedScene(id = 'living-render-01') {
       .toFile(`${dir}/${to}`);
   const defaults = new Map(surfaces.map(s => [s.id, s]));
   const doorModels: NonNullable<RoomScene['doorModels']>[number][] = [];
+  const layered = new Map<string, Set<string>>(); // model -> surfaces with crops
   const modelChecks: Record<string, unknown> = {};
-  for (const m of MODELS) {
+  for (const m of models) {
     const l = modelLayers.get(m)!,
       prefix = `model-${m}-`;
     await crop(`${out(m)}/base.png`, `${prefix}base.png`);
@@ -373,12 +516,22 @@ export async function importRenderedScene(id = 'living-render-01') {
         await crop(`${out(m)}/${s.id}-${kind}.png`, files[kind]);
         patchLayers.push({ image: `${media}/${files[kind]}`, over: def ? `${media}/${s.id}-${kind}.png` : null });
       }
+      if (!layered.has(m)) layered.set(m, new Set());
+      layered.get(m)!.add(s.id);
       // Surfaces reaching outside the region keep the default plate encodings
       // (light scale and tint), so the floor does not shift tone per model.
       const whole = inside(bounds, region) || !def;
       modelSurfaces.push(
-        defineSurface(s, l, media, files, bounds, whole ? s : { reflectionScale: def!.lighting.specularScale!, tint: def!.lighting.tint as [number, number, number] }),
+        defineSurface(s, layers, media, files, bounds, whole ? s : { reflectionScale: def!.lighting.specularScale!, tint: def!.lighting.tint as [number, number, number] }),
       );
+    }
+    // A cropped render hides surfaces that lie wholly outside its border (e.g.
+    // a far skirting); those keep the default model's layers unchanged.
+    for (const hid of modelManifests.get(m)!.checks.hiddenSurfaces ?? []) {
+      const def = defaults.get(hid);
+      if (!def || modelSurfaces.some(v => v.id === hid)) continue;
+      if (intersects(def.mask.boundsPx as Box, region)) throw new Error(`${id}/${m}: ${hid} hidden inside the door region`);
+      modelSurfaces.push(def);
     }
     let overlap = 0;
     for (const v of sum) overlap = Math.max(overlap, v);
@@ -399,6 +552,7 @@ export async function importRenderedScene(id = 'living-render-01') {
       baseBorderMax: baseBorder,
       maskSumMax: overlap,
       maskPixelsDifferingOutsideRegion: maskPixelsOutside[m] ?? 0,
+      ...(l.border ? { renderBorderPx: l.border } : {}),
     };
     doorModels.push({
       modelId: m,
@@ -411,32 +565,48 @@ export async function importRenderedScene(id = 'living-render-01') {
         layers: patchLayers,
         surfaces: modelSurfaces,
         protectedMask: { alpha: `${media}/${prefix}protected-mask.png`, boundsPx: protectedBounds ?? [0, 0, W, H] },
-        allowedFrameModes: CONCEALED.has(m) ? ['door'] : ['door', 'floor', 'black'],
+        allowedFrameModes: CONCEALED.has(m) ? ['door'] : frameModes(meta),
       },
     });
+  }
+  // Switching model pastes only the new model's crops over the prepared scene,
+  // so a surface one model patches must be patched by every model that shows
+  // it. Where a model keeps the default layers (the surface misses the region
+  // there, or the cropped render hid it), its patch carries the default crop.
+  const patchedIds = new Set([...layered.values()].flatMap(v => [...v]));
+  for (const dm of doorModels) {
+    const own = layered.get(dm.modelId) ?? new Set();
+    for (const v of dm.patch!.surfaces)
+      if (patchedIds.has(v.id) && !own.has(v.id) && defaults.get(v.id) === v)
+        for (const kind of ['mask', 'light', 'reflection'] as const) {
+          const file = `model-${dm.modelId}-${v.id}-${kind}.png`;
+          await crop(`${src}/${v.id}-${kind}.png`, file);
+          (dm.patch!.layers as { image: string; over: string | null }[]).push({
+            image: `${media}/${file}`,
+            over: `${media}/${v.id}-${kind}.png`,
+          });
+        }
   }
   await writeFile(
     `${dir}/door-models.json`,
     JSON.stringify(
       {
         regionPx: region,
-        method: `Union of every model's door assembly and hardware, plus pixels within ${SEARCH_PX} px whose 9×9 mean change in base/neutral/light plates exceeds ${DIFF_LEVELS} level(s) of 255 against ${MODELS[0]}, grown by ${MARGIN_PX} px and even-aligned.`,
+        method: `Union of every model's door assembly and hardware, plus pixels within ${SEARCH_PX} px whose 9×9 mean change in base/neutral/light plates exceeds ${DIFF_LEVELS} level(s) of 255 against ${defaultModel}, grown by ${MARGIN_PX} px and even-aligned. Non-default models may be rendered only inside a border around the door (renderBorderPx); the region must lie inside it.`,
         models: Object.fromEntries(
-          MODELS.map(m => [m, { renderSeconds: modelManifests.get(m)!.renderSeconds, samples: modelManifests.get(m)!.samples, checks: modelChecks[m] }]),
+          models.map(m => [m, { renderSeconds: modelManifests.get(m)!.renderSeconds, samples: modelManifests.get(m)!.samples, checks: modelChecks[m] }]),
         ),
       },
       null,
       2,
     ) + '\n',
   );
+  const concealed = CONCEALED.has(defaultModel);
   const scene: RoomScene = {
     id,
-    name: { sq: 'Dhoma e ndenjes 3D', en: 'Living room 3D', de: 'Wohnzimmer 3D' },
-    description: {
-      sq: 'Dhomë e mobiluar, e renderuar në Blender me dritë dite',
-      en: 'Furnished room rendered in Blender with daylight',
-      de: 'Möbliertes Zimmer, in Blender mit Tageslicht gerendert',
-    },
+    name: meta.name,
+    description: meta.description,
+    roomType: meta.roomType,
     width: layers.width,
     height: layers.height,
     base: `${media}/base.webp`,
@@ -444,7 +614,7 @@ export async function importRenderedScene(id = 'living-render-01') {
     render: { source: 'blender', partitionedMasks: true, toneShoulder: layers.toneShoulder },
     thumbnail: `${media}/thumbnail.webp`,
     fallback: `${media}/fallback.webp`,
-    frameType: 'standard-casing',
+    frameType: concealed ? 'concealed-aluminium' : 'standard-casing',
     depictedDoorSizeMm: { width: 900, height: 2000 },
     surfaces,
     protectedMask: { alpha: `${media}/protected-mask.png`, boundsPx: await maskBounds(`${dir}/protected-mask.png`) },
@@ -453,14 +623,15 @@ export async function importRenderedScene(id = 'living-render-01') {
     doorModels,
     allowedDoorProductIds: DOORS,
     allowedFloorProductIds: floors,
-    allowedFrameModes: ['door', 'floor', 'black'],
+    allowedFrameModes: concealed ? ['door'] : frameModes(meta),
+    // Without skirting the mode is inert but kept, so it survives a visit.
     allowedSkirtingModes: ['door', 'floor', 'black'],
     defaultSelection: {
       version: 1,
       sceneId: id,
-      doorProductId: 'dera-bardhe',
-      doorModelId: MODELS[0],
-      doorFinishId: 'bardhe-mat',
+      doorProductId: meta.door.productId,
+      doorModelId: defaultModel,
+      doorFinishId: meta.door.finishId,
       floorProductId: DEFAULT_FLOOR,
       frameMode: 'door',
       skirtingMode: 'door',
@@ -481,18 +652,16 @@ export async function importRenderedScene(id = 'living-render-01') {
     position = manifest.floorPosition;
   await writeFile(
     `${dir}/AUTHORING.md`,
-    `# ${id} — Blender-rendered proof room\n\n` +
-      `Built by \`tools/blender/build_room.py\` and rendered by \`tools/blender/render_layers.py\` in Blender ${manifest.blender} (Cycles, ${manifest.devices.join(', ')}), ${manifest.samples} samples per pass, seed ${manifest.seed}, adaptive sampling off, OpenImageDenoise. Imported by \`scripts/import-rendered-scene.ts\`. Exact settings, camera matrix and render times: \`render-manifest.json\`.\n\n` +
-      `**Geometry (true scale).** Room 5.2 × 6.0 × 2.7 m. Door leaf 900 × 2000 × 40 mm in a 1000 × 2050 mm rough opening; casing 70 × 16 mm, skirting 80 × 16 mm (products \`pervaze-mdf\`, \`lajsne-mdf\`). Camera ${manifest.camera.lens_mm} mm on a ${manifest.camera.sensor_mm} mm sensor at 1.55 m, level, lens shift ${manifest.camera.shift[1]}. Floor, door and trim mappings are exact projections of the modelled planes, so plank size is physically correct.\n\n` +
-      `**Layers.** Masks are shader-AOV coverage (antialiased), jointly quantised so editable coverage never exceeds 255 per pixel. Light plates are Cycles diffuse light (Combined of a 50 % grey Lambertian pass ÷ 0.5), so contact shadows and bounce light are real; their constant light colour is stored as \`tint\`. Reflection plates are a black-dielectric (F0 0.04) pass, scaled at runtime by each material's gloss. The base plate is the light pass with each editable surface's share removed (exact at edges from a second pass at 25 % grey). \`original.png\` is the neutral render used by compare-with-original. \`floor-position.png\` is 16-bit world X/Y in ${position.unitMm} mm units (origin ${position.originMm.join(', ')} mm).\n\n` +
-      `**Checks at render time.** Position map vs Cycles Position pass: median ${position.cyclesPositionPassMedianDiffMm.toFixed(3)} mm, p99 ${position.cyclesPositionPassP99DiffMm.toFixed(3)} mm; one sample every ${position.stepPx} px, bilinear reconstruction vs the exact plane max ${position.reconstructionMaxErrorMm.toFixed(3)} mm (p99 ${position.reconstructionP99ErrorMm.toFixed(3)} mm, includes quantisation). Base edge clamp: p99 ${checks.backdropClampP99Linear.toFixed(4)}, max ${checks.backdropClampMaxLinear.toFixed(4)} (linear). Hidden surfaces (not exported): ${checks.hiddenSurfaces.join(', ') || 'none'}.\n\n` +
-      `**Door models.** ${MODELS.join(', ')} (\`tools/blender/room_spec.py\` DOOR_MODELS), each a full render with the same camera, seed and samples (\`render_layers.py --model\`), encoded with the ${MODELS[0]} light scale. The scene's own layers are ${MODELS[0]}; \`model-<id>-*.png\` are every model's layers cropped to one shared region (${region.join(', ')} px), pasted over the default layers at load time. Region method, border differences and render times: \`door-models.json\`. Filomuro is flush with the wall in a concealed aluminium frame with hidden hinges and no casing; its skirting runs to the opening. The glass insert is satin glass lit from a short corridor behind the door.\n\n` +
-      `**Inputs.** CC0 models, texture and HDRI from Poly Haven (\`tools/blender/assets.json\`, hashes in \`tools/blender/assets.lock.json\`, ledger \`renderInputs\`). Sideboard, print, vase, books, curtains, window and the door assembly are modelled in the build script.\n`,
+    `# ${id} — Blender-rendered room (${meta.roomType})\n\n` +
+      `Built by \`tools/blender/build_room.py --room ${id}\` (room module \`tools/blender/rooms/${id.replaceAll('-', '_')}.py\`) and rendered by \`tools/blender/render_layers.py\` in Blender ${manifest.blender} (Cycles, ${manifest.devices.join(', ')}), ${manifest.samples} samples per pass, seed ${manifest.seed}, adaptive sampling off, OpenImageDenoise. Imported by \`scripts/import-rendered-scene.ts\`. Exact settings, camera matrix and render times: \`render-manifest.json\`.\n\n` +
+      `**Geometry (true scale).** ${meta.geometry} Door leaf 900 × 2000 × 40 mm in a 1000 × 2050 mm rough opening; casing 70 × 16 mm${meta.floors === 'all' ? ', skirting 80 × 16 mm (products `pervaze-mdf`, `lajsne-mdf`)' : ' (product `pervaze-mdf`)'}. Camera ${manifest.camera.lens_mm} mm on a ${manifest.camera.sensor_mm} mm sensor, level, lens shift ${manifest.camera.shift[1]}. ${meta.floors === 'all' ? 'Floor, door and trim mappings are exact projections of the modelled planes, so plank size is physically correct.' : 'Door and casing mappings are exact projections of the modelled planes. The tiled floor is part of the base plate and is never replaced: laminate does not go into bathrooms.'}\n\n` +
+      `**Layers.** Masks are shader-AOV coverage (antialiased), jointly quantised so editable coverage never exceeds 255 per pixel. Light plates are Cycles diffuse light (Combined of a 50 % grey Lambertian pass ÷ 0.5), so contact shadows and bounce light are real; their constant light colour is stored as \`tint\`. Reflection plates are a black-dielectric (F0 0.04) pass, scaled at runtime by each material's gloss. The base plate is the light pass with each editable surface's share removed (exact at edges from a second pass at 25 % grey). \`original.png\` is the neutral render used by compare-with-original.${position ? ` \`floor-position.png\` is 16-bit world X/Y in ${position.unitMm} mm units (origin ${position.originMm.join(', ')} mm).` : ''}\n\n` +
+      `**Checks at render time.** ${position ? `Position map vs Cycles Position pass: median ${position.cyclesPositionPassMedianDiffMm.toFixed(3)} mm, p99 ${position.cyclesPositionPassP99DiffMm.toFixed(3)} mm; one sample every ${position.stepPx} px, bilinear reconstruction vs the exact plane max ${position.reconstructionMaxErrorMm.toFixed(3)} mm (p99 ${position.reconstructionP99ErrorMm.toFixed(3)} mm, includes quantisation). ` : ''}Base edge clamp: p99 ${checks.backdropClampP99Linear.toFixed(4)}, max ${checks.backdropClampMaxLinear.toFixed(4)} (linear). Hidden surfaces (not exported): ${checks.hiddenSurfaces.join(', ') || 'none'}.\n\n` +
+      `**Door models.** ${models.join(', ')} (\`tools/blender/room_spec.py\` DOOR_MODELS), same camera, seed and samples (\`render_layers.py --model\`), encoded with the ${defaultModel} light scale. The scene's own layers are ${defaultModel}; \`model-<id>-*.png\` are every model's layers cropped to one shared region (${region.join(', ')} px), pasted over the default layers at load time. ${models.slice(1).some(m => modelLayers.get(m)!.border) ? 'The other models were rendered only inside a border around the door (`render_layers.py --crop`; Cycles samples each pixel from its own coordinates, so those pixels equal a full render). ' : ''}Region method, border differences and render times: \`door-models.json\`. Filomuro is flush with the wall in a concealed aluminium frame with hidden hinges and no casing${meta.floors === 'all' ? '; its skirting runs to the opening' : ''}. The glass insert is satin glass lit from a short corridor behind the door.\n\n` +
+      `**Inputs.** CC0 models, textures and HDRI from Poly Haven used by this room are listed with \`usedIn\` in \`tools/blender/assets.json\` (hashes in \`tools/blender/assets.lock.json\`, ledger \`renderInputs\`). Everything else (shell, door assembly, ${meta.roomType === 'kitchen' ? 'kitchen units, table, ' : ''}procedural furniture, materials) is modelled in \`tools/blender/{build_room,props}.py\` and the room module.\n`,
   );
 
-  // Provenance: every scene layer, plus the third-party render inputs.
-  const lock = JSON.parse(await readFile('tools/blender/assets.lock.json', 'utf8'));
-  const inputs = JSON.parse(await readFile('tools/blender/assets.json', 'utf8'));
+  // Provenance: every scene layer.
   const entries: LedgerEntry[] = [];
   for (const file of (await readdir(dir)).filter(f => f.endsWith('.png')).sort())
     entries.push({
@@ -515,32 +684,45 @@ export async function importRenderedScene(id = 'living-render-01') {
     ledger.assets = ledger.assets.filter((a: LedgerEntry) => !stale.includes(a));
     await writeFile('brand/asset-sources.json', JSON.stringify(ledger, null, 2) + '\n');
   }
-  await upsertLedger(entries, {
-    renderInputs: inputs.assets.map((a: { id: string; page: string; author: string; license: string; type: string }) => ({
-      id: a.id,
-      type: a.type,
-      sourceUrl: a.page,
-      author: a.author,
-      license: a.license,
-      usedIn: [id],
-      files: lock.files
-        .filter((f: { asset: string }) => f.asset === a.id)
-        .map((f: { path: string; url: string; sha256: string; bytes: number }) => ({
-          path: f.path,
-          url: f.url,
-          bytes: f.bytes,
-          sha256: f.sha256,
-        })),
-    })),
-  });
+  await upsertLedger(entries, { renderInputs: await renderInputs() });
 
-  // Make the room available to the proof products.
-  for (const p of products.products)
-    if ((DOORS.includes(p.id) || floors.includes(p.id)) && !p.compatibleSceneIds.includes(id))
-      p.compatibleSceneIds = [id, ...p.compatibleSceneIds];
+  // Room rules: every opaque door line everywhere; floors only in laminate rooms.
+  for (const p of products.products) {
+    const allowed = DOORS.includes(p.id) || floors.includes(p.id),
+      has = p.compatibleSceneIds?.includes(id);
+    if (allowed && !has) p.compatibleSceneIds.push(id);
+    if (!allowed && has) p.compatibleSceneIds = p.compatibleSceneIds.filter((v: string) => v !== id);
+  }
   await writeFile('brand/products.json', JSON.stringify(products, null, 2) + '\n');
-  return { id, surfaces: surfaces.map(s => s.id), files: entries.length };
+  return { id, surfaces: surfaces.map(s => s.id), files: entries.length, region };
+}
+
+const frameModes = (meta: RoomMeta): ('door' | 'floor' | 'black')[] =>
+  // "Like the floor" makes no sense where no laminate is shown.
+  meta.floors === 'all' ? ['door', 'floor', 'black'] : ['door', 'black'];
+
+/** Poly Haven render inputs (tools/blender/assets.json) with their pinned files. */
+async function renderInputs() {
+  const lock = JSON.parse(await readFile('tools/blender/assets.lock.json', 'utf8'));
+  const inputs = JSON.parse(await readFile('tools/blender/assets.json', 'utf8'));
+  return inputs.assets.map((a: { id: string; page: string; author: string; license: string; type: string; usedIn: string[] }) => ({
+    id: a.id,
+    type: a.type,
+    sourceUrl: a.page,
+    author: a.author,
+    license: a.license,
+    usedIn: a.usedIn,
+    files: lock.files
+      .filter((f: { asset: string }) => f.asset === a.id)
+      .map((f: { path: string; url: string; sha256: string; bytes: number }) => ({
+        path: f.path,
+        url: f.url,
+        bytes: f.bytes,
+        sha256: f.sha256,
+      })),
+  }));
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href)
-  console.log(await importRenderedScene(process.argv[2]));
+  for (const id of process.argv.length > 2 ? process.argv.slice(2) : Object.keys(ROOMS))
+    console.log(await importRenderedScene(id));

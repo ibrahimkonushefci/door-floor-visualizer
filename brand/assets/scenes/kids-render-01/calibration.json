@@ -1,0 +1,4412 @@
+{
+  "schemaVersion": 1,
+  "kind": "rendered",
+  "scene": {
+    "id": "kids-render-01",
+    "name": {
+      "sq": "Dhoma e fëmijëve",
+      "en": "Kids' room",
+      "de": "Kinderzimmer"
+    },
+    "description": {
+      "sq": "Dhomë fëmijësh me tavolinë pune dhe lodra",
+      "en": "Children's room with a desk and toys",
+      "de": "Kinderzimmer mit Schreibtisch und Spielzeug"
+    },
+    "roomType": "kids",
+    "width": 2400,
+    "height": 1800,
+    "base": "/media/scenes/kids-render-01/base.webp",
+    "original": "/media/scenes/kids-render-01/original.webp",
+    "render": {
+      "source": "blender",
+      "partitionedMasks": true,
+      "toneShoulder": 0.6
+    },
+    "thumbnail": "/media/scenes/kids-render-01/thumbnail.webp",
+    "fallback": "/media/scenes/kids-render-01/fallback.webp",
+    "frameType": "standard-casing",
+    "depictedDoorSizeMm": {
+      "width": 900,
+      "height": 2000
+    },
+    "surfaces": [
+      {
+        "id": "floor",
+        "role": "floor",
+        "mask": {
+          "alpha": "/media/scenes/kids-render-01/floor-mask.png",
+          "boundsPx": [
+            0,
+            927,
+            2400,
+            873
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kids-render-01/floor-light.png",
+          "baselineLinear": 0.33553599548616636,
+          "shadeMin": 0,
+          "shadeMax": 2.981,
+          "specular": "/media/scenes/kids-render-01/floor-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.07460138201713562,
+          "tint": [
+            1.0567899942398071,
+            0.9994300007820129,
+            0.8676599860191345
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              3600,
+              0
+            ],
+            [
+              3600,
+              3180
+            ],
+            [
+              0,
+              3180
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.3352816104888916,
+              0.5042421221733093
+            ],
+            [
+              0.7681388258934021,
+              0.5513857901096344
+            ],
+            [
+              1.4885586500167847,
+              1.7953140139579773
+            ],
+            [
+              -0.263741672039032,
+              0.9301370829343796
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 3600,
+            "referenceImageSegment01": [
+              [
+                0.3352816104888916,
+                0.5042421221733092
+              ],
+              [
+                0.7681388258934021,
+                0.5513857901096343
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                3600,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0,
+        "positionMap": {
+          "image": "/media/scenes/kids-render-01/floor-position.png",
+          "boundsPx": [
+            0,
+            927,
+            2400,
+            873
+          ],
+          "originMm": [
+            -300,
+            -300
+          ],
+          "unitMm": 0.1,
+          "stepPx": 4
+        }
+      },
+      {
+        "id": "leaf",
+        "role": "door-leaf",
+        "mask": {
+          "alpha": "/media/scenes/kids-render-01/leaf-mask.png",
+          "boundsPx": [
+            1425,
+            347,
+            291,
+            634
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kids-render-01/leaf-light.png",
+          "baselineLinear": 0.33553599548616636,
+          "shadeMin": 0,
+          "shadeMax": 2.981,
+          "specular": "/media/scenes/kids-render-01/leaf-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.05638236552476883,
+          "tint": [
+            1.0560599565505981,
+            0.9971299767494202,
+            0.8743799924850464
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              900,
+              0
+            ],
+            [
+              900,
+              2000
+            ],
+            [
+              0,
+              2000
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.5943413972854614,
+              0.19904738664627075
+            ],
+            [
+              0.7146507501602173,
+              0.19335687160491943
+            ],
+            [
+              0.7146507501602173,
+              0.5441570580005646
+            ],
+            [
+              0.5943413972854614,
+              0.5311287045478821
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 900,
+            "referenceImageSegment01": [
+              [
+                0.5943413972854612,
+                0.1990473866462707
+              ],
+              [
+                0.7146507501602172,
+                0.19335687160491938
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                900,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-left",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/kids-render-01/frame-left-mask.png",
+          "boundsPx": [
+            1401,
+            334,
+            27,
+            627
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kids-render-01/frame-left-light.png",
+          "baselineLinear": 0.33553599548616636,
+          "shadeMin": 0,
+          "shadeMax": 2.981,
+          "specular": "/media/scenes/kids-render-01/frame-left-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.05852925404906273,
+          "tint": [
+            1.0569000244140625,
+            0.9954299926757812,
+            0.8777899742126465
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              70,
+              0
+            ],
+            [
+              70,
+              2088
+            ],
+            [
+              0,
+              2088
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.5841176509857178,
+              0.18586373329162598
+            ],
+            [
+              0.5929622650146484,
+              0.185388445854187
+            ],
+            [
+              0.5929622650146484,
+              0.5332214534282684
+            ],
+            [
+              0.5841176509857178,
+              0.5322543382644653
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 70,
+            "referenceImageSegment01": [
+              [
+                0.5841176509857177,
+                0.185863733291626
+              ],
+              [
+                0.5929622650146483,
+                0.185388445854187
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-right",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/kids-render-01/frame-right-mask.png",
+          "boundsPx": [
+            1714,
+            320,
+            30,
+            667
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kids-render-01/frame-right-light.png",
+          "baselineLinear": 0.33553599548616636,
+          "shadeMin": 0,
+          "shadeMax": 2.981,
+          "specular": "/media/scenes/kids-render-01/frame-right-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.05266403406858444,
+          "tint": [
+            1.056249976158142,
+            0.9961699843406677,
+            0.8722900152206421
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              70,
+              0
+            ],
+            [
+              70,
+              2088
+            ],
+            [
+              0,
+              2088
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.7164478898048401,
+              0.17875313758850098
+            ],
+            [
+              0.7264314889907837,
+              0.17821669578552246
+            ],
+            [
+              0.7264314889907837,
+              0.5478151738643646
+            ],
+            [
+              0.7164479494094849,
+              0.5467235445976257
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 70,
+            "referenceImageSegment01": [
+              [
+                0.71644788980484,
+                0.17875313758850095
+              ],
+              [
+                0.7264314889907836,
+                0.17821669578552243
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-top",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/kids-render-01/frame-top-mask.png",
+          "boundsPx": [
+            1401,
+            320,
+            343,
+            41
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kids-render-01/frame-top-light.png",
+          "baselineLinear": 0.33553599548616636,
+          "shadeMin": 0,
+          "shadeMax": 2.981,
+          "specular": "/media/scenes/kids-render-01/frame-top-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.05269242823123932,
+          "tint": [
+            1.0571199655532837,
+            0.9955599904060364,
+            0.875760018825531
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              1060,
+              0
+            ],
+            [
+              1060,
+              70
+            ],
+            [
+              0,
+              70
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.5841176509857178,
+              0.18586373329162598
+            ],
+            [
+              0.7264314889907837,
+              0.17821669578552246
+            ],
+            [
+              0.7264314889907837,
+              0.190607488155365
+            ],
+            [
+              0.5841176509857178,
+              0.19747644662857056
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 1060,
+            "referenceImageSegment01": [
+              [
+                0.5841176509857177,
+                0.18586373329162595
+              ],
+              [
+                0.7264314889907837,
+                0.17821669578552246
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1060,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-left",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/kids-render-01/skirting-left-mask.png",
+          "boundsPx": [
+            0,
+            1150,
+            303,
+            192
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kids-render-01/skirting-left-light.png",
+          "baselineLinear": 0.33553599548616636,
+          "shadeMin": 0,
+          "shadeMax": 2.981,
+          "specular": "/media/scenes/kids-render-01/skirting-left-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.0476389043033123,
+          "tint": [
+            1.0466300249099731,
+            0.997189998626709,
+            0.8905799984931946
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              3180,
+              0
+            ],
+            [
+              3180,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.3368459641933441,
+              0.49273180961608887
+            ],
+            [
+              -0.2604512870311737,
+              0.8956610262393951
+            ],
+            [
+              -0.2604512870311737,
+              0.9317617043852806
+            ],
+            [
+              0.3368459641933441,
+              0.5044125020503998
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 80,
+            "referenceImageSegment01": [
+              [
+                0.2786972150749992,
+                0.531958224741634
+              ],
+              [
+                0.27869721507499917,
+                0.5460162788994498
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                795,
+                0
+              ],
+              [
+                795,
+                80
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-back-left",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/kids-render-01/skirting-back-left-mask.png",
+          "boundsPx": [
+            1033,
+            915,
+            370,
+            44
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kids-render-01/skirting-back-left-light.png",
+          "baselineLinear": 0.33553599548616636,
+          "shadeMin": 0,
+          "shadeMax": 2.981,
+          "specular": "/media/scenes/kids-render-01/skirting-back-left-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.054607272148132324,
+          "tint": [
+            1.0628900527954102,
+            0.9940299987792969,
+            0.8738999962806702
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              2250,
+              0
+            ],
+            [
+              2250,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.3343013823032379,
+              0.4932282567024231
+            ],
+            [
+              0.5841176509857178,
+              0.5189826786518097
+            ],
+            [
+              0.5841176509857178,
+              0.5322543382644653
+            ],
+            [
+              0.3343013823032379,
+              0.504939079284668
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 2250,
+            "referenceImageSegment01": [
+              [
+                0.33430138230323797,
+                0.4932282567024232
+              ],
+              [
+                0.5841176509857179,
+                0.5189826786518098
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                2250,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-back-right",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/kids-render-01/skirting-back-right-mask.png",
+          "boundsPx": [
+            1742,
+            958,
+            68,
+            34
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kids-render-01/skirting-back-right-light.png",
+          "baselineLinear": 0.33553599548616636,
+          "shadeMin": 0,
+          "shadeMax": 2.981,
+          "specular": "/media/scenes/kids-render-01/skirting-back-right-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.04954265058040619,
+          "tint": [
+            1.0543999671936035,
+            0.9965199828147888,
+            0.8743500113487244
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              290,
+              0
+            ],
+            [
+              290,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.7264314889907837,
+              0.5336543023586273
+            ],
+            [
+              0.7687507271766663,
+              0.5380171537399292
+            ],
+            [
+              0.7687507271766663,
+              0.5524424314498901
+            ],
+            [
+              0.7264314889907837,
+              0.5478151738643646
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 290,
+            "referenceImageSegment01": [
+              [
+                0.7264314889907837,
+                0.5336543023586272
+              ],
+              [
+                0.7687507271766663,
+                0.5380171537399291
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                290,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-right",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/kids-render-01/skirting-right-mask.png",
+          "boundsPx": [
+            2101,
+            1317,
+            299,
+            415
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kids-render-01/skirting-right-light.png",
+          "baselineLinear": 0.33553599548616636,
+          "shadeMin": 0,
+          "shadeMax": 2.981,
+          "specular": "/media/scenes/kids-render-01/skirting-right-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.02927250787615776,
+          "tint": [
+            1.076930046081543,
+            0.9939200282096863,
+            0.8334500193595886
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              3180,
+              0
+            ],
+            [
+              3180,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              1.4701900482177734,
+              1.7013164162635803
+            ],
+            [
+              0.765773355960846,
+              0.5367779731750488
+            ],
+            [
+              0.765773355960846,
+              0.5511281788349152
+            ],
+            [
+              1.4701900482177734,
+              1.7862446904182434
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 80,
+            "referenceImageSegment01": [
+              [
+                0.9649638057589152,
+                0.8660787107012138
+              ],
+              [
+                0.9649638057589153,
+                0.9003865314543774
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                954,
+                0
+              ],
+              [
+                954,
+                80
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      }
+    ],
+    "protectedMask": {
+      "alpha": "/media/scenes/kids-render-01/protected-mask.png",
+      "boundsPx": [
+        1437,
+        395,
+        283,
+        528
+      ]
+    },
+    "foreground": null,
+    "doorInserts": [],
+    "doorModels": [
+      {
+        "modelId": "flat",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            1224,
+            144,
+            696,
+            1020
+          ],
+          "base": "/media/scenes/kids-render-01/model-flat-base.webp",
+          "original": "/media/scenes/kids-render-01/model-flat-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-floor-mask.png",
+              "over": "/media/scenes/kids-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-floor-light.png",
+              "over": "/media/scenes/kids-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-floor-reflection.png",
+              "over": "/media/scenes/kids-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-leaf-mask.png",
+              "over": "/media/scenes/kids-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-leaf-light.png",
+              "over": "/media/scenes/kids-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-leaf-reflection.png",
+              "over": "/media/scenes/kids-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-frame-left-mask.png",
+              "over": "/media/scenes/kids-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-frame-left-light.png",
+              "over": "/media/scenes/kids-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-frame-left-reflection.png",
+              "over": "/media/scenes/kids-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-frame-right-mask.png",
+              "over": "/media/scenes/kids-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-frame-right-light.png",
+              "over": "/media/scenes/kids-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-frame-right-reflection.png",
+              "over": "/media/scenes/kids-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-frame-top-mask.png",
+              "over": "/media/scenes/kids-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-frame-top-light.png",
+              "over": "/media/scenes/kids-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-frame-top-reflection.png",
+              "over": "/media/scenes/kids-render-01/frame-top-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-skirting-back-left-mask.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-skirting-back-left-light.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-left-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-skirting-back-left-reflection.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-skirting-back-right-mask.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-skirting-back-right-light.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-flat-skirting-back-right-reflection.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-flat-floor-mask.png",
+                "boundsPx": [
+                  0,
+                  927,
+                  2400,
+                  873
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-flat-floor-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-flat-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.07460138201713562,
+                "tint": [
+                  1.0567899942398071,
+                  0.9994300007820129,
+                  0.8676599860191345
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3600,
+                    0
+                  ],
+                  [
+                    3600,
+                    3180
+                  ],
+                  [
+                    0,
+                    3180
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3352816104888916,
+                    0.5042421221733093
+                  ],
+                  [
+                    0.7681388258934021,
+                    0.5513857901096344
+                  ],
+                  [
+                    1.4885586500167847,
+                    1.7953140139579773
+                  ],
+                  [
+                    -0.263741672039032,
+                    0.9301370829343796
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 3600,
+                  "referenceImageSegment01": [
+                    [
+                      0.3352816104888916,
+                      0.5042421221733092
+                    ],
+                    [
+                      0.7681388258934021,
+                      0.5513857901096343
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      3600,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/kids-render-01/floor-position.png",
+                "boundsPx": [
+                  0,
+                  927,
+                  2400,
+                  873
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-flat-leaf-mask.png",
+                "boundsPx": [
+                  1425,
+                  347,
+                  291,
+                  634
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-flat-leaf-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-flat-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.05638236552476883,
+                "tint": [
+                  1.0560599565505981,
+                  0.9971299767494202,
+                  0.8743799924850464
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.5943413972854614,
+                    0.19904738664627075
+                  ],
+                  [
+                    0.7146507501602173,
+                    0.19335687160491943
+                  ],
+                  [
+                    0.7146507501602173,
+                    0.5441570580005646
+                  ],
+                  [
+                    0.5943413972854614,
+                    0.5311287045478821
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.5943413972854612,
+                      0.1990473866462707
+                    ],
+                    [
+                      0.7146507501602172,
+                      0.19335687160491938
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-flat-frame-left-mask.png",
+                "boundsPx": [
+                  1401,
+                  334,
+                  27,
+                  627
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-flat-frame-left-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-flat-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.05852925404906273,
+                "tint": [
+                  1.0569000244140625,
+                  0.9954299926757812,
+                  0.8777899742126465
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.5841176509857178,
+                    0.18586373329162598
+                  ],
+                  [
+                    0.5929622650146484,
+                    0.185388445854187
+                  ],
+                  [
+                    0.5929622650146484,
+                    0.5332214534282684
+                  ],
+                  [
+                    0.5841176509857178,
+                    0.5322543382644653
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.5841176509857177,
+                      0.185863733291626
+                    ],
+                    [
+                      0.5929622650146483,
+                      0.185388445854187
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-flat-frame-right-mask.png",
+                "boundsPx": [
+                  1714,
+                  320,
+                  30,
+                  667
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-flat-frame-right-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-flat-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.05266403406858444,
+                "tint": [
+                  1.056249976158142,
+                  0.9961699843406677,
+                  0.8722900152206421
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.7164478898048401,
+                    0.17875313758850098
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.17821669578552246
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.5478151738643646
+                  ],
+                  [
+                    0.7164479494094849,
+                    0.5467235445976257
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.71644788980484,
+                      0.17875313758850095
+                    ],
+                    [
+                      0.7264314889907836,
+                      0.17821669578552243
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-flat-frame-top-mask.png",
+                "boundsPx": [
+                  1401,
+                  320,
+                  343,
+                  41
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-flat-frame-top-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-flat-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.05269242823123932,
+                "tint": [
+                  1.0571199655532837,
+                  0.9955599904060364,
+                  0.875760018825531
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.5841176509857178,
+                    0.18586373329162598
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.17821669578552246
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.190607488155365
+                  ],
+                  [
+                    0.5841176509857178,
+                    0.19747644662857056
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.5841176509857177,
+                      0.18586373329162595
+                    ],
+                    [
+                      0.7264314889907837,
+                      0.17821669578552246
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/skirting-left-mask.png",
+                "boundsPx": [
+                  0,
+                  1150,
+                  303,
+                  192
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/skirting-left-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/skirting-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.0476389043033123,
+                "tint": [
+                  1.0466300249099731,
+                  0.997189998626709,
+                  0.8905799984931946
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3180,
+                    0
+                  ],
+                  [
+                    3180,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3368459641933441,
+                    0.49273180961608887
+                  ],
+                  [
+                    -0.2604512870311737,
+                    0.8956610262393951
+                  ],
+                  [
+                    -0.2604512870311737,
+                    0.9317617043852806
+                  ],
+                  [
+                    0.3368459641933441,
+                    0.5044125020503998
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.2786972150749992,
+                      0.531958224741634
+                    ],
+                    [
+                      0.27869721507499917,
+                      0.5460162788994498
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      795,
+                      0
+                    ],
+                    [
+                      795,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-flat-skirting-back-left-mask.png",
+                "boundsPx": [
+                  1033,
+                  915,
+                  370,
+                  44
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-flat-skirting-back-left-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-flat-skirting-back-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.054607272148132324,
+                "tint": [
+                  1.0628900527954102,
+                  0.9940299987792969,
+                  0.8738999962806702
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2250,
+                    0
+                  ],
+                  [
+                    2250,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3343013823032379,
+                    0.4932282567024231
+                  ],
+                  [
+                    0.5841176509857178,
+                    0.5189826786518097
+                  ],
+                  [
+                    0.5841176509857178,
+                    0.5322543382644653
+                  ],
+                  [
+                    0.3343013823032379,
+                    0.504939079284668
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 2250,
+                  "referenceImageSegment01": [
+                    [
+                      0.33430138230323797,
+                      0.4932282567024232
+                    ],
+                    [
+                      0.5841176509857179,
+                      0.5189826786518098
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      2250,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-flat-skirting-back-right-mask.png",
+                "boundsPx": [
+                  1742,
+                  958,
+                  68,
+                  34
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-flat-skirting-back-right-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-flat-skirting-back-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.04954265058040619,
+                "tint": [
+                  1.0543999671936035,
+                  0.9965199828147888,
+                  0.8743500113487244
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    290,
+                    0
+                  ],
+                  [
+                    290,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.7264314889907837,
+                    0.5336543023586273
+                  ],
+                  [
+                    0.7687507271766663,
+                    0.5380171537399292
+                  ],
+                  [
+                    0.7687507271766663,
+                    0.5524424314498901
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.5478151738643646
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 290,
+                  "referenceImageSegment01": [
+                    [
+                      0.7264314889907837,
+                      0.5336543023586272
+                    ],
+                    [
+                      0.7687507271766663,
+                      0.5380171537399291
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      290,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/skirting-right-mask.png",
+                "boundsPx": [
+                  2101,
+                  1317,
+                  299,
+                  415
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/skirting-right-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02927250787615776,
+                "tint": [
+                  1.076930046081543,
+                  0.9939200282096863,
+                  0.8334500193595886
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3180,
+                    0
+                  ],
+                  [
+                    3180,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    1.4701900482177734,
+                    1.7013164162635803
+                  ],
+                  [
+                    0.765773355960846,
+                    0.5367779731750488
+                  ],
+                  [
+                    0.765773355960846,
+                    0.5511281788349152
+                  ],
+                  [
+                    1.4701900482177734,
+                    1.7862446904182434
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.9649638057589152,
+                      0.8660787107012138
+                    ],
+                    [
+                      0.9649638057589153,
+                      0.9003865314543774
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      954,
+                      0
+                    ],
+                    [
+                      954,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/kids-render-01/model-flat-protected-mask.png",
+            "boundsPx": [
+              1437,
+              395,
+              283,
+              528
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "floor",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "grooved",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            1224,
+            144,
+            696,
+            1020
+          ],
+          "base": "/media/scenes/kids-render-01/model-grooved-base.webp",
+          "original": "/media/scenes/kids-render-01/model-grooved-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-floor-mask.png",
+              "over": "/media/scenes/kids-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-floor-light.png",
+              "over": "/media/scenes/kids-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-floor-reflection.png",
+              "over": "/media/scenes/kids-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-leaf-mask.png",
+              "over": "/media/scenes/kids-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-leaf-light.png",
+              "over": "/media/scenes/kids-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-leaf-reflection.png",
+              "over": "/media/scenes/kids-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-frame-left-mask.png",
+              "over": "/media/scenes/kids-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-frame-left-light.png",
+              "over": "/media/scenes/kids-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-frame-left-reflection.png",
+              "over": "/media/scenes/kids-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-frame-right-mask.png",
+              "over": "/media/scenes/kids-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-frame-right-light.png",
+              "over": "/media/scenes/kids-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-frame-right-reflection.png",
+              "over": "/media/scenes/kids-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-frame-top-mask.png",
+              "over": "/media/scenes/kids-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-frame-top-light.png",
+              "over": "/media/scenes/kids-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-frame-top-reflection.png",
+              "over": "/media/scenes/kids-render-01/frame-top-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-skirting-back-left-mask.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-skirting-back-left-light.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-left-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-skirting-back-left-reflection.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-skirting-back-right-mask.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-skirting-back-right-light.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-grooved-skirting-back-right-reflection.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-grooved-floor-mask.png",
+                "boundsPx": [
+                  0,
+                  927,
+                  2400,
+                  873
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-grooved-floor-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-grooved-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.07460138201713562,
+                "tint": [
+                  1.0567899942398071,
+                  0.9994300007820129,
+                  0.8676599860191345
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3600,
+                    0
+                  ],
+                  [
+                    3600,
+                    3180
+                  ],
+                  [
+                    0,
+                    3180
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3352816104888916,
+                    0.5042421221733093
+                  ],
+                  [
+                    0.7681388258934021,
+                    0.5513857901096344
+                  ],
+                  [
+                    1.4885586500167847,
+                    1.7953140139579773
+                  ],
+                  [
+                    -0.263741672039032,
+                    0.9301370829343796
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 3600,
+                  "referenceImageSegment01": [
+                    [
+                      0.3352816104888916,
+                      0.5042421221733092
+                    ],
+                    [
+                      0.7681388258934021,
+                      0.5513857901096343
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      3600,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/kids-render-01/floor-position.png",
+                "boundsPx": [
+                  0,
+                  927,
+                  2400,
+                  873
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-grooved-leaf-mask.png",
+                "boundsPx": [
+                  1425,
+                  347,
+                  291,
+                  634
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-grooved-leaf-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-grooved-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.054491035640239716,
+                "tint": [
+                  1.0565199851989746,
+                  0.9967600107192993,
+                  0.8746100068092346
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.5943413972854614,
+                    0.19904738664627075
+                  ],
+                  [
+                    0.7146507501602173,
+                    0.19335687160491943
+                  ],
+                  [
+                    0.7146507501602173,
+                    0.5441570580005646
+                  ],
+                  [
+                    0.5943413972854614,
+                    0.5311287045478821
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.5943413972854612,
+                      0.1990473866462707
+                    ],
+                    [
+                      0.7146507501602172,
+                      0.19335687160491938
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-grooved-frame-left-mask.png",
+                "boundsPx": [
+                  1401,
+                  334,
+                  27,
+                  627
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-grooved-frame-left-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-grooved-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.05751791596412659,
+                "tint": [
+                  1.056839942932129,
+                  0.9954500198364258,
+                  0.8776599764823914
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.5841176509857178,
+                    0.18586373329162598
+                  ],
+                  [
+                    0.5929622650146484,
+                    0.185388445854187
+                  ],
+                  [
+                    0.5929622650146484,
+                    0.5332214534282684
+                  ],
+                  [
+                    0.5841176509857178,
+                    0.5322543382644653
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.5841176509857177,
+                      0.185863733291626
+                    ],
+                    [
+                      0.5929622650146483,
+                      0.185388445854187
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-grooved-frame-right-mask.png",
+                "boundsPx": [
+                  1714,
+                  320,
+                  30,
+                  667
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-grooved-frame-right-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-grooved-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.04891826957464218,
+                "tint": [
+                  1.05771005153656,
+                  0.9957000017166138,
+                  0.8726900219917297
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.7164478898048401,
+                    0.17875313758850098
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.17821669578552246
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.5478151738643646
+                  ],
+                  [
+                    0.7164479494094849,
+                    0.5467235445976257
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.71644788980484,
+                      0.17875313758850095
+                    ],
+                    [
+                      0.7264314889907836,
+                      0.17821669578552243
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-grooved-frame-top-mask.png",
+                "boundsPx": [
+                  1401,
+                  320,
+                  343,
+                  41
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-grooved-frame-top-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-grooved-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.05036510154604912,
+                "tint": [
+                  1.057170033454895,
+                  0.9955499768257141,
+                  0.8757500052452087
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.5841176509857178,
+                    0.18586373329162598
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.17821669578552246
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.190607488155365
+                  ],
+                  [
+                    0.5841176509857178,
+                    0.19747644662857056
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.5841176509857177,
+                      0.18586373329162595
+                    ],
+                    [
+                      0.7264314889907837,
+                      0.17821669578552246
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-grooved-skirting-back-left-mask.png",
+                "boundsPx": [
+                  1033,
+                  915,
+                  370,
+                  44
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-grooved-skirting-back-left-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-grooved-skirting-back-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.054607272148132324,
+                "tint": [
+                  1.0628900527954102,
+                  0.9940299987792969,
+                  0.8738999962806702
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2250,
+                    0
+                  ],
+                  [
+                    2250,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3343013823032379,
+                    0.4932282567024231
+                  ],
+                  [
+                    0.5841176509857178,
+                    0.5189826786518097
+                  ],
+                  [
+                    0.5841176509857178,
+                    0.5322543382644653
+                  ],
+                  [
+                    0.3343013823032379,
+                    0.504939079284668
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 2250,
+                  "referenceImageSegment01": [
+                    [
+                      0.33430138230323797,
+                      0.4932282567024232
+                    ],
+                    [
+                      0.5841176509857179,
+                      0.5189826786518098
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      2250,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-grooved-skirting-back-right-mask.png",
+                "boundsPx": [
+                  1742,
+                  958,
+                  68,
+                  34
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-grooved-skirting-back-right-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-grooved-skirting-back-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.04954265058040619,
+                "tint": [
+                  1.0542099475860596,
+                  0.9965800046920776,
+                  0.874239981174469
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    290,
+                    0
+                  ],
+                  [
+                    290,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.7264314889907837,
+                    0.5336543023586273
+                  ],
+                  [
+                    0.7687507271766663,
+                    0.5380171537399292
+                  ],
+                  [
+                    0.7687507271766663,
+                    0.5524424314498901
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.5478151738643646
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 290,
+                  "referenceImageSegment01": [
+                    [
+                      0.7264314889907837,
+                      0.5336543023586272
+                    ],
+                    [
+                      0.7687507271766663,
+                      0.5380171537399291
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      290,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/skirting-left-mask.png",
+                "boundsPx": [
+                  0,
+                  1150,
+                  303,
+                  192
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/skirting-left-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/skirting-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.0476389043033123,
+                "tint": [
+                  1.0466300249099731,
+                  0.997189998626709,
+                  0.8905799984931946
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3180,
+                    0
+                  ],
+                  [
+                    3180,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3368459641933441,
+                    0.49273180961608887
+                  ],
+                  [
+                    -0.2604512870311737,
+                    0.8956610262393951
+                  ],
+                  [
+                    -0.2604512870311737,
+                    0.9317617043852806
+                  ],
+                  [
+                    0.3368459641933441,
+                    0.5044125020503998
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.2786972150749992,
+                      0.531958224741634
+                    ],
+                    [
+                      0.27869721507499917,
+                      0.5460162788994498
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      795,
+                      0
+                    ],
+                    [
+                      795,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/skirting-right-mask.png",
+                "boundsPx": [
+                  2101,
+                  1317,
+                  299,
+                  415
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/skirting-right-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02927250787615776,
+                "tint": [
+                  1.076930046081543,
+                  0.9939200282096863,
+                  0.8334500193595886
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3180,
+                    0
+                  ],
+                  [
+                    3180,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    1.4701900482177734,
+                    1.7013164162635803
+                  ],
+                  [
+                    0.765773355960846,
+                    0.5367779731750488
+                  ],
+                  [
+                    0.765773355960846,
+                    0.5511281788349152
+                  ],
+                  [
+                    1.4701900482177734,
+                    1.7862446904182434
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.9649638057589152,
+                      0.8660787107012138
+                    ],
+                    [
+                      0.9649638057589153,
+                      0.9003865314543774
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      954,
+                      0
+                    ],
+                    [
+                      954,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/kids-render-01/model-grooved-protected-mask.png",
+            "boundsPx": [
+              1437,
+              395,
+              283,
+              528
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "floor",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "glass-insert",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            1224,
+            144,
+            696,
+            1020
+          ],
+          "base": "/media/scenes/kids-render-01/model-glass-insert-base.webp",
+          "original": "/media/scenes/kids-render-01/model-glass-insert-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-floor-mask.png",
+              "over": "/media/scenes/kids-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-floor-light.png",
+              "over": "/media/scenes/kids-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-floor-reflection.png",
+              "over": "/media/scenes/kids-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-leaf-mask.png",
+              "over": "/media/scenes/kids-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-leaf-light.png",
+              "over": "/media/scenes/kids-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-leaf-reflection.png",
+              "over": "/media/scenes/kids-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-frame-left-mask.png",
+              "over": "/media/scenes/kids-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-frame-left-light.png",
+              "over": "/media/scenes/kids-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-frame-left-reflection.png",
+              "over": "/media/scenes/kids-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-frame-right-mask.png",
+              "over": "/media/scenes/kids-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-frame-right-light.png",
+              "over": "/media/scenes/kids-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-frame-right-reflection.png",
+              "over": "/media/scenes/kids-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-frame-top-mask.png",
+              "over": "/media/scenes/kids-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-frame-top-light.png",
+              "over": "/media/scenes/kids-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-frame-top-reflection.png",
+              "over": "/media/scenes/kids-render-01/frame-top-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-skirting-back-left-mask.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-skirting-back-left-light.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-left-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-skirting-back-left-reflection.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-skirting-back-right-mask.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-skirting-back-right-light.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-glass-insert-skirting-back-right-reflection.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-glass-insert-floor-mask.png",
+                "boundsPx": [
+                  0,
+                  927,
+                  2400,
+                  873
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-glass-insert-floor-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-glass-insert-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.07460138201713562,
+                "tint": [
+                  1.0567899942398071,
+                  0.9994300007820129,
+                  0.8676599860191345
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3600,
+                    0
+                  ],
+                  [
+                    3600,
+                    3180
+                  ],
+                  [
+                    0,
+                    3180
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3352816104888916,
+                    0.5042421221733093
+                  ],
+                  [
+                    0.7681388258934021,
+                    0.5513857901096344
+                  ],
+                  [
+                    1.4885586500167847,
+                    1.7953140139579773
+                  ],
+                  [
+                    -0.263741672039032,
+                    0.9301370829343796
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 3600,
+                  "referenceImageSegment01": [
+                    [
+                      0.3352816104888916,
+                      0.5042421221733092
+                    ],
+                    [
+                      0.7681388258934021,
+                      0.5513857901096343
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      3600,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/kids-render-01/floor-position.png",
+                "boundsPx": [
+                  0,
+                  927,
+                  2400,
+                  873
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-glass-insert-leaf-mask.png",
+                "boundsPx": [
+                  1425,
+                  347,
+                  291,
+                  634
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-glass-insert-leaf-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-glass-insert-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.09735870361328125,
+                "tint": [
+                  1.0562800168991089,
+                  0.9963700175285339,
+                  0.8747900128364563
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.5943413972854614,
+                    0.19904738664627075
+                  ],
+                  [
+                    0.7146507501602173,
+                    0.19335687160491943
+                  ],
+                  [
+                    0.7146507501602173,
+                    0.5441570580005646
+                  ],
+                  [
+                    0.5943413972854614,
+                    0.5311287045478821
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.5943413972854612,
+                      0.1990473866462707
+                    ],
+                    [
+                      0.7146507501602172,
+                      0.19335687160491938
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-glass-insert-frame-left-mask.png",
+                "boundsPx": [
+                  1401,
+                  334,
+                  27,
+                  627
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-glass-insert-frame-left-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-glass-insert-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.05753461271524429,
+                "tint": [
+                  1.0568100214004517,
+                  0.9954599738121033,
+                  0.8776900172233582
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.5841176509857178,
+                    0.18586373329162598
+                  ],
+                  [
+                    0.5929622650146484,
+                    0.185388445854187
+                  ],
+                  [
+                    0.5929622650146484,
+                    0.5332214534282684
+                  ],
+                  [
+                    0.5841176509857178,
+                    0.5322543382644653
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.5841176509857177,
+                      0.185863733291626
+                    ],
+                    [
+                      0.5929622650146483,
+                      0.185388445854187
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-glass-insert-frame-right-mask.png",
+                "boundsPx": [
+                  1714,
+                  320,
+                  30,
+                  667
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-glass-insert-frame-right-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-glass-insert-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.052135493606328964,
+                "tint": [
+                  1.0577399730682373,
+                  0.9956899881362915,
+                  0.8726999759674072
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.7164478898048401,
+                    0.17875313758850098
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.17821669578552246
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.5478151738643646
+                  ],
+                  [
+                    0.7164479494094849,
+                    0.5467235445976257
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.71644788980484,
+                      0.17875313758850095
+                    ],
+                    [
+                      0.7264314889907836,
+                      0.17821669578552243
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-glass-insert-frame-top-mask.png",
+                "boundsPx": [
+                  1401,
+                  320,
+                  343,
+                  41
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-glass-insert-frame-top-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-glass-insert-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.0503811277449131,
+                "tint": [
+                  1.05718994140625,
+                  0.9955400228500366,
+                  0.8757399916648865
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.5841176509857178,
+                    0.18586373329162598
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.17821669578552246
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.190607488155365
+                  ],
+                  [
+                    0.5841176509857178,
+                    0.19747644662857056
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.5841176509857177,
+                      0.18586373329162595
+                    ],
+                    [
+                      0.7264314889907837,
+                      0.17821669578552246
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-glass-insert-skirting-back-left-mask.png",
+                "boundsPx": [
+                  1033,
+                  915,
+                  370,
+                  44
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-glass-insert-skirting-back-left-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-glass-insert-skirting-back-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.054607272148132324,
+                "tint": [
+                  1.0628900527954102,
+                  0.9940299987792969,
+                  0.8738999962806702
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2250,
+                    0
+                  ],
+                  [
+                    2250,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3343013823032379,
+                    0.4932282567024231
+                  ],
+                  [
+                    0.5841176509857178,
+                    0.5189826786518097
+                  ],
+                  [
+                    0.5841176509857178,
+                    0.5322543382644653
+                  ],
+                  [
+                    0.3343013823032379,
+                    0.504939079284668
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 2250,
+                  "referenceImageSegment01": [
+                    [
+                      0.33430138230323797,
+                      0.4932282567024232
+                    ],
+                    [
+                      0.5841176509857179,
+                      0.5189826786518098
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      2250,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-glass-insert-skirting-back-right-mask.png",
+                "boundsPx": [
+                  1742,
+                  958,
+                  68,
+                  34
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-glass-insert-skirting-back-right-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-glass-insert-skirting-back-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.04954265058040619,
+                "tint": [
+                  1.0542999505996704,
+                  0.9965699911117554,
+                  0.8740699887275696
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    290,
+                    0
+                  ],
+                  [
+                    290,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.7264314889907837,
+                    0.5336543023586273
+                  ],
+                  [
+                    0.7687507271766663,
+                    0.5380171537399292
+                  ],
+                  [
+                    0.7687507271766663,
+                    0.5524424314498901
+                  ],
+                  [
+                    0.7264314889907837,
+                    0.5478151738643646
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 290,
+                  "referenceImageSegment01": [
+                    [
+                      0.7264314889907837,
+                      0.5336543023586272
+                    ],
+                    [
+                      0.7687507271766663,
+                      0.5380171537399291
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      290,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/skirting-left-mask.png",
+                "boundsPx": [
+                  0,
+                  1150,
+                  303,
+                  192
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/skirting-left-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/skirting-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.0476389043033123,
+                "tint": [
+                  1.0466300249099731,
+                  0.997189998626709,
+                  0.8905799984931946
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3180,
+                    0
+                  ],
+                  [
+                    3180,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3368459641933441,
+                    0.49273180961608887
+                  ],
+                  [
+                    -0.2604512870311737,
+                    0.8956610262393951
+                  ],
+                  [
+                    -0.2604512870311737,
+                    0.9317617043852806
+                  ],
+                  [
+                    0.3368459641933441,
+                    0.5044125020503998
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.2786972150749992,
+                      0.531958224741634
+                    ],
+                    [
+                      0.27869721507499917,
+                      0.5460162788994498
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      795,
+                      0
+                    ],
+                    [
+                      795,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/skirting-right-mask.png",
+                "boundsPx": [
+                  2101,
+                  1317,
+                  299,
+                  415
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/skirting-right-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02927250787615776,
+                "tint": [
+                  1.076930046081543,
+                  0.9939200282096863,
+                  0.8334500193595886
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3180,
+                    0
+                  ],
+                  [
+                    3180,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    1.4701900482177734,
+                    1.7013164162635803
+                  ],
+                  [
+                    0.765773355960846,
+                    0.5367779731750488
+                  ],
+                  [
+                    0.765773355960846,
+                    0.5511281788349152
+                  ],
+                  [
+                    1.4701900482177734,
+                    1.7862446904182434
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.9649638057589152,
+                      0.8660787107012138
+                    ],
+                    [
+                      0.9649638057589153,
+                      0.9003865314543774
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      954,
+                      0
+                    ],
+                    [
+                      954,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/kids-render-01/model-glass-insert-protected-mask.png",
+            "boundsPx": [
+              1437,
+              395,
+              283,
+              528
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "floor",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "filomuro",
+        "frameType": "concealed-aluminium",
+        "patch": {
+          "regionPx": [
+            1224,
+            144,
+            696,
+            1020
+          ],
+          "base": "/media/scenes/kids-render-01/model-filomuro-base.webp",
+          "original": "/media/scenes/kids-render-01/model-filomuro-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/kids-render-01/model-filomuro-floor-mask.png",
+              "over": "/media/scenes/kids-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-filomuro-floor-light.png",
+              "over": "/media/scenes/kids-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-filomuro-floor-reflection.png",
+              "over": "/media/scenes/kids-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-filomuro-leaf-mask.png",
+              "over": "/media/scenes/kids-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-filomuro-leaf-light.png",
+              "over": "/media/scenes/kids-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-filomuro-leaf-reflection.png",
+              "over": "/media/scenes/kids-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-filomuro-skirting-back-left-mask.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-filomuro-skirting-back-left-light.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-left-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-filomuro-skirting-back-left-reflection.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-filomuro-skirting-back-right-mask.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-filomuro-skirting-back-right-light.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kids-render-01/model-filomuro-skirting-back-right-reflection.png",
+              "over": "/media/scenes/kids-render-01/skirting-back-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-filomuro-floor-mask.png",
+                "boundsPx": [
+                  0,
+                  927,
+                  2400,
+                  873
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-filomuro-floor-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-filomuro-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.07460138201713562,
+                "tint": [
+                  1.0567899942398071,
+                  0.9994300007820129,
+                  0.8676599860191345
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3600,
+                    0
+                  ],
+                  [
+                    3600,
+                    3180
+                  ],
+                  [
+                    0,
+                    3180
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3352816104888916,
+                    0.5042421221733093
+                  ],
+                  [
+                    0.7681388258934021,
+                    0.5513857901096344
+                  ],
+                  [
+                    1.4885586500167847,
+                    1.7953140139579773
+                  ],
+                  [
+                    -0.263741672039032,
+                    0.9301370829343796
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 3600,
+                  "referenceImageSegment01": [
+                    [
+                      0.3352816104888916,
+                      0.5042421221733092
+                    ],
+                    [
+                      0.7681388258934021,
+                      0.5513857901096343
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      3600,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/kids-render-01/floor-position.png",
+                "boundsPx": [
+                  0,
+                  927,
+                  2400,
+                  873
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-filomuro-leaf-mask.png",
+                "boundsPx": [
+                  1425,
+                  347,
+                  292,
+                  634
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-filomuro-leaf-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-filomuro-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.05144102871417999,
+                "tint": [
+                  1.0567599534988403,
+                  0.9969300031661987,
+                  0.8739500045776367
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.5943413972854614,
+                    0.19904738664627075
+                  ],
+                  [
+                    0.7146507501602173,
+                    0.19335687160491943
+                  ],
+                  [
+                    0.7146507501602173,
+                    0.5441570580005646
+                  ],
+                  [
+                    0.5943413972854614,
+                    0.5311287045478821
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.5943413972854612,
+                      0.1990473866462707
+                    ],
+                    [
+                      0.7146507501602172,
+                      0.19335687160491938
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "skirting-back-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-filomuro-skirting-back-left-mask.png",
+                "boundsPx": [
+                  1033,
+                  915,
+                  394,
+                  46
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-filomuro-skirting-back-left-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-filomuro-skirting-back-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.054607272148132324,
+                "tint": [
+                  1.0628900527954102,
+                  0.9940299987792969,
+                  0.8738999962806702
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2327,
+                    0
+                  ],
+                  [
+                    2327,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3343013823032379,
+                    0.4932282567024231
+                  ],
+                  [
+                    0.5938507914543152,
+                    0.519986093044281
+                  ],
+                  [
+                    0.5938507914543152,
+                    0.5333185791969299
+                  ],
+                  [
+                    0.3343013823032379,
+                    0.504939079284668
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 2327,
+                  "referenceImageSegment01": [
+                    [
+                      0.33430138230323786,
+                      0.4932282567024232
+                    ],
+                    [
+                      0.5938507914543152,
+                      0.5199860930442811
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      2327,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/model-filomuro-skirting-back-right-mask.png",
+                "boundsPx": [
+                  1715,
+                  956,
+                  95,
+                  36
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/model-filomuro-skirting-back-right-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/model-filomuro-skirting-back-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.04954265058040619,
+                "tint": [
+                  1.0542700290679932,
+                  0.9965900182723999,
+                  0.8739200234413147
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    367,
+                    0
+                  ],
+                  [
+                    367,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.7154543995857239,
+                    0.5325226187705994
+                  ],
+                  [
+                    0.7687507271766663,
+                    0.5380171537399292
+                  ],
+                  [
+                    0.7687507271766663,
+                    0.5524424314498901
+                  ],
+                  [
+                    0.7154543995857239,
+                    0.5466149151325226
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 367,
+                  "referenceImageSegment01": [
+                    [
+                      0.7154543995857241,
+                      0.5325226187705996
+                    ],
+                    [
+                      0.7687507271766666,
+                      0.5380171537399294
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      367,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/skirting-left-mask.png",
+                "boundsPx": [
+                  0,
+                  1150,
+                  303,
+                  192
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/skirting-left-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/skirting-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.0476389043033123,
+                "tint": [
+                  1.0466300249099731,
+                  0.997189998626709,
+                  0.8905799984931946
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3180,
+                    0
+                  ],
+                  [
+                    3180,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3368459641933441,
+                    0.49273180961608887
+                  ],
+                  [
+                    -0.2604512870311737,
+                    0.8956610262393951
+                  ],
+                  [
+                    -0.2604512870311737,
+                    0.9317617043852806
+                  ],
+                  [
+                    0.3368459641933441,
+                    0.5044125020503998
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.2786972150749992,
+                      0.531958224741634
+                    ],
+                    [
+                      0.27869721507499917,
+                      0.5460162788994498
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      795,
+                      0
+                    ],
+                    [
+                      795,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kids-render-01/skirting-right-mask.png",
+                "boundsPx": [
+                  2101,
+                  1317,
+                  299,
+                  415
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kids-render-01/skirting-right-light.png",
+                "baselineLinear": 0.33553599548616636,
+                "shadeMin": 0,
+                "shadeMax": 2.981,
+                "specular": "/media/scenes/kids-render-01/skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02927250787615776,
+                "tint": [
+                  1.076930046081543,
+                  0.9939200282096863,
+                  0.8334500193595886
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3180,
+                    0
+                  ],
+                  [
+                    3180,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    1.4701900482177734,
+                    1.7013164162635803
+                  ],
+                  [
+                    0.765773355960846,
+                    0.5367779731750488
+                  ],
+                  [
+                    0.765773355960846,
+                    0.5511281788349152
+                  ],
+                  [
+                    1.4701900482177734,
+                    1.7862446904182434
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.9649638057589152,
+                      0.8660787107012138
+                    ],
+                    [
+                      0.9649638057589153,
+                      0.9003865314543774
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      954,
+                      0
+                    ],
+                    [
+                      954,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/kids-render-01/model-filomuro-protected-mask.png",
+            "boundsPx": [
+              1437,
+              636,
+              50,
+              40
+            ]
+          },
+          "allowedFrameModes": [
+            "door"
+          ]
+        }
+      }
+    ],
+    "allowedDoorProductIds": [
+      "dera-bardhe",
+      "dera-lis",
+      "dera-kashmir",
+      "dera-antracit"
+    ],
+    "allowedFloorProductIds": [
+      "peshk-natyral-12",
+      "kronotex-d4955",
+      "kronotex-d80582",
+      "kronotex-d80612",
+      "kronotex-d4954",
+      "kronotex-d4763",
+      "kronotex-d4956",
+      "kronotex-d3179",
+      "kronotex-d81162"
+    ],
+    "allowedFrameModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "allowedSkirtingModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "defaultSelection": {
+      "version": 1,
+      "sceneId": "kids-render-01",
+      "doorProductId": "dera-bardhe",
+      "doorModelId": "flat",
+      "doorFinishId": "bardhe-mat",
+      "floorProductId": "kronotex-d4955",
+      "frameMode": "door",
+      "skirtingMode": "door",
+      "floorRotationDeg": 0
+    },
+    "assetRevision": "pending"
+  },
+  "renderManifest": "render-manifest.json"
+}

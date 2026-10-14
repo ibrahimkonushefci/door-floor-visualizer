@@ -1,7 +1,8 @@
 """Render every compositing layer of a room built by build_room.py.
 
     /Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup \
-        --python tools/blender/render_layers.py -- [--model flat] [--samples 512] [--scale 100] [--post-only]
+        --python tools/blender/render_layers.py -- --room living-render-01 [--model flat] \
+        [--samples 512] [--scale 100] [--crop] [--post-only]
 
 Three Cycles renders on the Metal GPU, same seed, adaptive sampling off so every
 pass sees identical camera samples:
@@ -29,6 +30,12 @@ that into a Studio scene (the default model) plus a door-model patch per other
 model. Non-default models encode their plates with the default model's light
 scale (and floor/skirting reflection scales), so their pixels can be pasted
 over the default layers.
+
+--crop (non-default models only) renders just a border around the default
+model's door assembly (CROP_MARGIN_PX past it, so the denoiser sees the same
+neighbourhood where the importer cuts its patch). Cycles samples each pixel
+from its own coordinates and the seed, so the pixels inside are the same as a
+full render's; everything outside stays black and is never used.
 """
 import json
 import math
@@ -59,6 +66,10 @@ POSITION_UNIT_MM = 0.1
 # bilinear reconstruction stays far inside the 0.5 mm budget (measured in post)
 # while the file is ~16x smaller than a per-pixel map.
 POSITION_STEP_PX = 4
+# Border for --crop: the importer's patch reaches 176 px past the door assembly
+# (scripts/import-rendered-scene.ts SEARCH_PX + MARGIN_PX); the rest is
+# denoiser context.
+CROP_MARGIN_PX = 320
 
 
 def argv():
@@ -70,11 +81,12 @@ def opt(name, default=None):
     return a[a.index(name) + 1] if name in a else default
 
 
-MODEL = opt("--model", spec.DEFAULT_MODEL)
-SURFACES = spec.surfaces_for(MODEL)
-OUT = HERE / "out" / spec.SCENE_ID / MODEL
+ROOM = spec.load(opt("--room", spec.ROOMS[0]))
+MODEL = opt("--model", ROOM.DEFAULT_MODEL)
+SURFACES = spec.surfaces_for(ROOM, MODEL)
+OUT = HERE / "out" / ROOM.SCENE_ID / MODEL
 LAYERS = OUT / "layers"
-REFERENCE = HERE / "out" / spec.SCENE_ID / spec.DEFAULT_MODEL / "layers" / "layers.json"
+REFERENCE = HERE / "out" / ROOM.SCENE_ID / ROOM.DEFAULT_MODEL / "layers" / "layers.json"
 
 
 # --- PNG writer (deterministic, no colour chunks) ----------------------------
@@ -185,6 +197,25 @@ def gloss_shader(roughness):
     return build
 
 
+def crop_border(scene):
+    """Border (pixels x0, y0, x1, y1 from the top left) around the default
+    model's door assembly and hardware, grown by CROP_MARGIN_PX."""
+    ref = json.loads(REFERENCE.read_text())
+    boxes = [s["boundsPx"] for s in ref["surfaces"] if s["role"] in ("door-leaf", "frame")] + [ref["protectedBoundsPx"]]
+    W, H = ref["width"], ref["height"]
+    x0 = max(0, min(b[0] for b in boxes) - CROP_MARGIN_PX)
+    y0 = max(0, min(b[1] for b in boxes) - CROP_MARGIN_PX)
+    x1 = min(W, max(b[0] + b[2] for b in boxes) + CROP_MARGIN_PX)
+    y1 = min(H, max(b[1] + b[3] for b in boxes) + CROP_MARGIN_PX)
+    r = scene.render
+    r.use_border = True
+    r.use_crop_to_border = False
+    r.border_min_x, r.border_max_x = x0 / W, x1 / W
+    # Blender's border y runs from the bottom.
+    r.border_min_y, r.border_max_y = 1 - y1 / H, 1 - y0 / H
+    return [x0, y0, x1, y1]
+
+
 def configure(scene, samples, scale):
     devices = use_metal(scene)
     c = scene.cycles
@@ -286,13 +317,13 @@ def floor_positions(cam, bounds):
 
 def planar_mappings(scene):
     """Exact homography quads (plane mm <-> image01) for each editable surface."""
-    g = spec.door_geometry(MODEL)
-    D, W = spec.ROOM["depth"], spec.ROOM["width"]
+    g = spec.door_geometry(ROOM, MODEL)
+    D, W = ROOM.ROOM["depth"], ROOM.ROOM["width"]
     lx0, lx1, lz0, lz1 = g["leaf"]
     ix0, ix1, iz = g["casing_inner"]
     cx0, cx1, cz = g["casing_outer"]
     cd, sd, sh = spec.CASING["depth"], spec.SKIRTING["depth"], spec.SKIRTING["height"]
-    near = spec.CAMERA["location"][1] + 0.9
+    near = ROOM.CAMERA["location"][1] + 0.9
     mm = lambda a: round(a * 1000, 3)  # noqa: E731
     rects = {
         # surface: (top-left, top-right, bottom-right, bottom-left) in 3D, plane size (mm), uv rotation
@@ -392,7 +423,7 @@ def post(scene, cam, manifest):
     H, W = light["Combined.R"].shape
     ids = [s["id"] for s in SURFACES]
     # Non-default models share the default model's encodings (see module doc).
-    ref = json.loads(REFERENCE.read_text()) if MODEL != spec.DEFAULT_MODEL else None
+    ref = json.loads(REFERENCE.read_text()) if MODEL != ROOM.DEFAULT_MODEL else None
     ref_refl = {s["id"]: s["reflectionScale"] for s in ref["surfaces"]} if ref else {}
     cov = np.stack([np.clip(light[f"{spec.aov_name(i)}.X"], 0, 1) for i in ids])
     total = cov.sum(axis=0)
@@ -486,68 +517,74 @@ def post(scene, cam, manifest):
     write_png(LAYERS / "neutral.png", to_byte(tone(neutral_rgb)))
 
     # Floor world positions: exact plane intersection, checked against Cycles.
-    fb = surfaces["floor"]["bounds"]
-    x0, y0, w, h = fb
-    step = POSITION_STEP_PX
-    D = spec.ROOM["depth"]
-    origin = [-300.0, -300.0]
-    # Samples sit on every step-th pixel centre; one extra row/column covers the edge.
-    gw, gh = (w - 1) // step + 2, (h - 1) // step + 2
-    sx = x0 + np.arange(gw) * step
-    sy = y0 + np.arange(gh) * step
-    u = (sx + 0.5) / cam["W"]
-    v = (sy + 0.5) / cam["H"]
-    uu, vv = np.meshgrid(u, v)
-    d = cam["tl"][None, None, :] + uu[..., None] * cam["right"] + vv[..., None] * cam["down"]
-    with np.errstate(divide="ignore", invalid="ignore"):
-        t = -cam["origin"][2] / d[..., 2]
-    t = np.where(t > 0, t, np.nan)
-    gX = (cam["origin"][0] + t * d[..., 0]) * 1000.0
-    gY = (D - (cam["origin"][1] + t * d[..., 1])) * 1000.0
-    qx = np.clip(np.round((np.nan_to_num(gX, nan=origin[0]) - origin[0]) / POSITION_UNIT_MM), 0, 65535).astype(np.uint16)
-    qy = np.clip(np.round((np.nan_to_num(gY, nan=origin[1]) - origin[1]) / POSITION_UNIT_MM), 0, 65535).astype(np.uint16)
-    write_png(LAYERS / "floor-position.png", np.stack([qx, qy], axis=-1))
-    # Reconstruct exactly as the runtime kernel does and compare with the exact plane.
-    X, Y = floor_positions(cam, fb)
-    Xmm, Ymm = X * 1000.0, (D - Y) * 1000.0
-    py_, px_ = np.mgrid[0:h, 0:w]
-    mx, my = px_ / step, py_ / step
-    ix = np.minimum(np.floor(mx).astype(int), gw - 2)
-    iy = np.minimum(np.floor(my).astype(int), gh - 2)
-    fx, fy = mx - ix, my - iy
+    # Rooms with a fixed floor (bathroom tiles) have none.
+    position = None
+    if "floor" in surfaces:
+        fb = surfaces["floor"]["bounds"]
+        x0, y0, w, h = fb
+        step = POSITION_STEP_PX
+        D = ROOM.ROOM["depth"]
+        origin = [-300.0, -300.0]
+        # Samples sit on every step-th pixel centre; one extra row/column covers the edge.
+        gw, gh = (w - 1) // step + 2, (h - 1) // step + 2
+        sx = x0 + np.arange(gw) * step
+        sy = y0 + np.arange(gh) * step
+        u = (sx + 0.5) / cam["W"]
+        v = (sy + 0.5) / cam["H"]
+        uu, vv = np.meshgrid(u, v)
+        d = cam["tl"][None, None, :] + uu[..., None] * cam["right"] + vv[..., None] * cam["down"]
+        with np.errstate(divide="ignore", invalid="ignore"):
+            t = -cam["origin"][2] / d[..., 2]
+        t = np.where(t > 0, t, np.nan)
+        gX = (cam["origin"][0] + t * d[..., 0]) * 1000.0
+        gY = (D - (cam["origin"][1] + t * d[..., 1])) * 1000.0
+        qx = np.clip(np.round((np.nan_to_num(gX, nan=origin[0]) - origin[0]) / POSITION_UNIT_MM), 0, 65535).astype(np.uint16)
+        qy = np.clip(np.round((np.nan_to_num(gY, nan=origin[1]) - origin[1]) / POSITION_UNIT_MM), 0, 65535).astype(np.uint16)
+        write_png(LAYERS / "floor-position.png", np.stack([qx, qy], axis=-1))
+        # Reconstruct exactly as the runtime kernel does and compare with the exact plane.
+        X, Y = floor_positions(cam, fb)
+        Xmm, Ymm = X * 1000.0, (D - Y) * 1000.0
+        py_, px_ = np.mgrid[0:h, 0:w]
+        mx, my = px_ / step, py_ / step
+        ix = np.minimum(np.floor(mx).astype(int), gw - 2)
+        iy = np.minimum(np.floor(my).astype(int), gh - 2)
+        fx, fy = mx - ix, my - iy
 
-    def bilinear(q):
-        q = q.astype(np.float64) * POSITION_UNIT_MM
-        return (q[iy, ix] * (1 - fx) + q[iy, ix + 1] * fx) * (1 - fy) + (q[iy + 1, ix] * (1 - fx) + q[iy + 1, ix + 1] * fx) * fy
+        def bilinear(q):
+            q = q.astype(np.float64) * POSITION_UNIT_MM
+            return (q[iy, ix] * (1 - fx) + q[iy, ix + 1] * fx) * (1 - fy) + (q[iy + 1, ix] * (1 - fx) + q[iy + 1, ix + 1] * fx) * fy
 
-    rx, ry = bilinear(qx) + origin[0], bilinear(qy) + origin[1]
-    floor_in = surfaces["floor"]["interior"][y0 : y0 + h, x0 : x0 + w]
-    recon = np.hypot(rx - Xmm, ry - Ymm)[floor_in]
-    px, py = light["Position.X"][y0 : y0 + h, x0 : x0 + w], light["Position.Y"][y0 : y0 + h, x0 : x0 + w]
-    err = np.hypot(px - X, py - Y)[floor_in] * 1000
-    in_range = (Xmm[floor_in].min() > origin[0]) and (Ymm[floor_in].max() < origin[1] + 65535 * POSITION_UNIT_MM)
-    position = {
-        "boundsPx": fb,
-        "originMm": origin,
-        "unitMm": POSITION_UNIT_MM,
-        "stepPx": step,
-        "samples": [int(gw), int(gh)],
-        "reconstructionMaxErrorMm": float(recon.max()),
-        "reconstructionP99ErrorMm": float(np.quantile(recon, 0.99)),
-        "cyclesPositionPassMedianDiffMm": float(np.median(err)),
-        "cyclesPositionPassP99DiffMm": float(np.quantile(err, 0.99)),
-        "floorWithinEncodedRange": bool(in_range),
-        "visibleFloorXmm": [float(Xmm[floor_in].min()), float(Xmm[floor_in].max())],
-        "visibleFloorYmm": [float(Ymm[floor_in].min()), float(Ymm[floor_in].max())],
-    }
+        rx, ry = bilinear(qx) + origin[0], bilinear(qy) + origin[1]
+        floor_in = surfaces["floor"]["interior"][y0 : y0 + h, x0 : x0 + w]
+        recon = np.hypot(rx - Xmm, ry - Ymm)[floor_in]
+        px, py = light["Position.X"][y0 : y0 + h, x0 : x0 + w], light["Position.Y"][y0 : y0 + h, x0 : x0 + w]
+        err = np.hypot(px - X, py - Y)[floor_in] * 1000
+        in_range = (Xmm[floor_in].min() > origin[0]) and (Ymm[floor_in].max() < origin[1] + 65535 * POSITION_UNIT_MM)
+        position = {
+            "boundsPx": fb,
+            "originMm": origin,
+            "unitMm": POSITION_UNIT_MM,
+            "stepPx": step,
+            "samples": [int(gw), int(gh)],
+            "reconstructionMaxErrorMm": float(recon.max()),
+            "reconstructionP99ErrorMm": float(np.quantile(recon, 0.99)),
+            "cyclesPositionPassMedianDiffMm": float(np.median(err)),
+            "cyclesPositionPassP99DiffMm": float(np.quantile(err, 0.99)),
+            "floorWithinEncodedRange": bool(in_range),
+            "visibleFloorXmm": [float(Xmm[floor_in].min()), float(Xmm[floor_in].max())],
+            "visibleFloorYmm": [float(Ymm[floor_in].min()), float(Ymm[floor_in].max())],
+        }
 
     stats["lightScale"] = l_scale
     stats["lightChroma"] = chroma
 
     mappings = planar_mappings(scene)
     layers = {
-        "scene": spec.SCENE_ID,
+        "scene": ROOM.SCENE_ID,
         "model": MODEL,
+        "defaultModel": ROOM.DEFAULT_MODEL,
+        "models": spec.models_for(ROOM),
+        "border": manifest.get("borderPx"),
         "width": W,
         "height": H,
         "toneShoulder": TONE_SHOULDER,
@@ -567,7 +604,7 @@ def post(scene, cam, manifest):
         ],
         "protectedBoundsPx": bounds_of(protected > 0.5 / 255) if (protected > 0.5 / 255).any() else [0, 0, W, H],
         "floorPosition": position,
-        "door": {"depictedSizeMm": [round(spec.DOOR["leaf_width"] * 1000), round(spec.DOOR["leaf_height"] * 1000)]},
+        "door": {"depictedSizeMm": [round(ROOM.DOOR["leaf_width"] * 1000), round(ROOM.DOOR["leaf_height"] * 1000)]},
     }
     (LAYERS / "layers.json").write_text(json.dumps(layers, indent=2) + "\n")
     manifest["checks"] = stats
@@ -582,6 +619,11 @@ def main():
     samples = int(opt("--samples", 512))
     scale = int(opt("--scale", 100))
     devices = configure(scene, samples, scale)
+    border = None
+    if "--crop" in argv():
+        if MODEL == ROOM.DEFAULT_MODEL:
+            raise SystemExit("--crop needs the default model's layers; render the default model in full")
+        border = crop_border(scene)
     cam = camera_info(scene)
     manifest_path = OUT / "render-manifest.partial.json"
     if "--post-only" in argv():
@@ -592,7 +634,7 @@ def main():
             times[name] = round(render_pass(scene, name), 1)
             print(f"{name}: {times[name]} s")
         manifest = {
-            "scene": spec.SCENE_ID,
+            "scene": ROOM.SCENE_ID,
             "doorModel": MODEL,
             "blender": bpy.app.version_string,
             "blenderBuild": bpy.app.build_hash.decode() if isinstance(bpy.app.build_hash, bytes) else str(bpy.app.build_hash),
@@ -603,6 +645,7 @@ def main():
             "adaptiveSampling": False,
             "denoiser": "OPENIMAGEDENOISE (albedo+normal, accurate prefilter)",
             "resolution": [cam["W"], cam["H"]],
+            "borderPx": border,
             "renderSeconds": times,
             "passes": {
                 "light": f"editable = {NEUTRAL_ALBEDO} grey Lambertian; plate = Combined / {NEUTRAL_ALBEDO}",
@@ -611,10 +654,10 @@ def main():
                 "base": "light Combined minus coverage x 0.5 x dilated surface light, unpremultiplied at edges",
             },
             "camera": {k: cam[k] for k in ("matrix_world", "lens_mm", "sensor_mm", "shift")},
-            "hdri": spec.HDRI,
-            "corridor": spec.CORRIDOR,
-            "fill": spec.FILL,
-            "filmExposure": spec.EXPOSURE,
+            "hdri": ROOM.HDRI,
+            "corridor": ROOM.CORRIDOR,
+            "fill": ROOM.FILL,
+            "filmExposure": ROOM.EXPOSURE,
             "viewTransform": "Standard (linear EXR); tone shoulder applied in post and at runtime",
             "toneShoulder": TONE_SHOULDER,
         }

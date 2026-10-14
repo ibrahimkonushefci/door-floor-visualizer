@@ -5,7 +5,7 @@
     598,
     862
   ],
-  "method": "Union of every model's door assembly and hardware, plus pixels within 160 px whose 9×9 mean change in base/neutral/light plates exceeds 1 level(s) of 255 against flat, grown by 16 px and even-aligned.",
+  "method": "Union of every model's door assembly and hardware, plus pixels within 160 px whose 9×9 mean change in base/neutral/light plates exceeds 1 level(s) of 255 against flat, grown by 16 px and even-aligned. Non-default models may be rendered only inside a border around the door (renderBorderPx); the region must lie inside it.",
   "models": {
     "flat": {
       "renderSeconds": {

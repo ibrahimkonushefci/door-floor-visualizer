@@ -123,9 +123,12 @@ for (const scene of data.materials.scenes) {
   const floor = data.materials.floorCollections.find(
     c => c.id === scene.defaultSelection.floorProductId,
   )!;
-  // Position-map floors load the plank sheet instead of the repeating atlas.
-  const boards = scene.surfaces.some(s => s.positionMap) && floor.planks && floor.atlas.pattern !== 'chevron';
-  urls.add(boards ? floor.planks!.image : floor.atlas.image);
+  // Position-map floors load the plank sheet instead of the repeating atlas;
+  // a tiled bathroom loads no floor texture at all.
+  if (scene.surfaces.some(s => s.role === 'floor')) {
+    const boards = scene.surfaces.some(s => s.positionMap) && floor.planks && floor.atlas.pattern !== 'chevron';
+    urls.add(boards ? floor.planks!.image : floor.atlas.image);
+  }
   if (floor.trim.appearance.kind === 'texture') urls.add(floor.trim.appearance.texture);
   const bytes = [...urls].reduce((n, url) => n + sizes.get(url)!, 0);
   gate(`${scene.id}.firstUseful`, bytes, limits.studioFirstScene);

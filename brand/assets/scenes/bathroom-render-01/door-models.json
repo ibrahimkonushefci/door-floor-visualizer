@@ -1,0 +1,89 @@
+{
+  "regionPx": [
+    976,
+    222,
+    732,
+    1112
+  ],
+  "method": "Union of every model's door assembly and hardware, plus pixels within 160 px whose 9×9 mean change in base/neutral/light plates exceeds 1 level(s) of 255 against flat, grown by 16 px and even-aligned. Non-default models may be rendered only inside a border around the door (renderBorderPx); the region must lie inside it.",
+  "models": {
+    "flat": {
+      "renderSeconds": {
+        "light": 575.9,
+        "light-dim": 532,
+        "gloss": 518.9
+      },
+      "samples": 512,
+      "checks": {
+        "maskBorderMax": 0,
+        "lightBorderMax": 0,
+        "baseBorderMax": 0,
+        "maskSumMax": 255,
+        "maskPixelsDifferingOutsideRegion": 0
+      }
+    },
+    "grooved": {
+      "renderSeconds": {
+        "light": 176,
+        "light-dim": 163.8,
+        "gloss": 155.9
+      },
+      "samples": 512,
+      "checks": {
+        "maskBorderMax": 0,
+        "lightBorderMax": 0,
+        "baseBorderMax": 3,
+        "maskSumMax": 255,
+        "maskPixelsDifferingOutsideRegion": 0,
+        "renderBorderPx": [
+          832,
+          78,
+          1851,
+          1477
+        ]
+      }
+    },
+    "glass-insert": {
+      "renderSeconds": {
+        "light": 190.5,
+        "light-dim": 169.1,
+        "gloss": 161.7
+      },
+      "samples": 512,
+      "checks": {
+        "maskBorderMax": 0,
+        "lightBorderMax": 0,
+        "baseBorderMax": 11,
+        "maskSumMax": 255,
+        "maskPixelsDifferingOutsideRegion": 0,
+        "renderBorderPx": [
+          832,
+          78,
+          1851,
+          1477
+        ]
+      }
+    },
+    "filomuro": {
+      "renderSeconds": {
+        "light": 184.9,
+        "light-dim": 172.1,
+        "gloss": 180.9
+      },
+      "samples": 512,
+      "checks": {
+        "maskBorderMax": 0,
+        "lightBorderMax": 0,
+        "baseBorderMax": 4,
+        "maskSumMax": 255,
+        "maskPixelsDifferingOutsideRegion": 0,
+        "renderBorderPx": [
+          832,
+          78,
+          1851,
+          1477
+        ]
+      }
+    }
+  }
+}

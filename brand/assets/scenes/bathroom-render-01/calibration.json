@@ -1,0 +1,1904 @@
+{
+  "schemaVersion": 1,
+  "kind": "rendered",
+  "scene": {
+    "id": "bathroom-render-01",
+    "name": {
+      "sq": "Banjo",
+      "en": "Bathroom",
+      "de": "Badezimmer"
+    },
+    "description": {
+      "sq": "Banjo me pllaka; ndryshohet vetëm dera (laminati nuk vendoset në banjo)",
+      "en": "Tiled bathroom; only the door changes (laminate does not go into bathrooms)",
+      "de": "Gefliestes Bad; nur die Tür wechselt (Laminat gehört nicht ins Bad)"
+    },
+    "roomType": "bathroom",
+    "width": 2400,
+    "height": 1800,
+    "base": "/media/scenes/bathroom-render-01/base.webp",
+    "original": "/media/scenes/bathroom-render-01/original.webp",
+    "render": {
+      "source": "blender",
+      "partitionedMasks": true,
+      "toneShoulder": 0.6
+    },
+    "thumbnail": "/media/scenes/bathroom-render-01/thumbnail.webp",
+    "fallback": "/media/scenes/bathroom-render-01/fallback.webp",
+    "frameType": "standard-casing",
+    "depictedDoorSizeMm": {
+      "width": 900,
+      "height": 2000
+    },
+    "surfaces": [
+      {
+        "id": "leaf",
+        "role": "door-leaf",
+        "mask": {
+          "alpha": "/media/scenes/bathroom-render-01/leaf-mask.png",
+          "boundsPx": [
+            1180,
+            428,
+            321,
+            723
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bathroom-render-01/leaf-light.png",
+          "baselineLinear": 1.5758519492431808,
+          "shadeMin": 0,
+          "shadeMax": 0.635,
+          "specular": "/media/scenes/bathroom-render-01/leaf-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.020530449226498604,
+          "tint": [
+            1.0974199771881104,
+            0.9868000149726868,
+            0.8332399725914001
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              900,
+              0
+            ],
+            [
+              900,
+              2000
+            ],
+            [
+              0,
+              2000
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.4925033450126648,
+              0.23823964595794678
+            ],
+            [
+              0.6251649260520935,
+              0.24005866050720215
+            ],
+            [
+              0.6251649260520935,
+              0.6335286796092987
+            ],
+            [
+              0.4925033450126648,
+              0.6388712227344513
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 900,
+            "referenceImageSegment01": [
+              [
+                0.49250334501266485,
+                0.2382396459579467
+              ],
+              [
+                0.6251649260520936,
+                0.24005866050720207
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                900,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-left",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/bathroom-render-01/frame-left-mask.png",
+          "boundsPx": [
+            1152,
+            398,
+            30,
+            759
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bathroom-render-01/frame-left-light.png",
+          "baselineLinear": 1.5758519492431808,
+          "shadeMin": 0,
+          "shadeMax": 0.635,
+          "specular": "/media/scenes/bathroom-render-01/frame-left-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.018161660060286522,
+          "tint": [
+            1.096060037612915,
+            0.988070011138916,
+            0.835319995880127
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              70,
+              0
+            ],
+            [
+              70,
+              2088
+            ],
+            [
+              0,
+              2088
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.48053109645843506,
+              0.2214200496673584
+            ],
+            [
+              0.49110984802246094,
+              0.2215888500213623
+            ],
+            [
+              0.49110984802246094,
+              0.6420693695545197
+            ],
+            [
+              0.48053109645843506,
+              0.6424999237060547
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 70,
+            "referenceImageSegment01": [
+              [
+                0.48053109645843506,
+                0.22142004966735837
+              ],
+              [
+                0.4911098480224609,
+                0.22158885002136228
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-right",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/bathroom-render-01/frame-right-mask.png",
+          "boundsPx": [
+            1498,
+            402,
+            33,
+            745
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bathroom-render-01/frame-right-light.png",
+          "baselineLinear": 1.5758519492431808,
+          "shadeMin": 0,
+          "shadeMax": 0.635,
+          "specular": "/media/scenes/bathroom-render-01/frame-right-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.01636878401041031,
+          "tint": [
+            1.0985699892044067,
+            0.9876700043678284,
+            0.8321700096130371
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              70,
+              0
+            ],
+            [
+              70,
+              2088
+            ],
+            [
+              0,
+              2088
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.6273978352546692,
+              0.22376292943954468
+            ],
+            [
+              0.6375629901885986,
+              0.22392511367797852
+            ],
+            [
+              0.6375629901885986,
+              0.636109471321106
+            ],
+            [
+              0.6273978352546692,
+              0.6365231573581696
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 70,
+            "referenceImageSegment01": [
+              [
+                0.6273978352546692,
+                0.2237629294395447
+              ],
+              [
+                0.6375629901885986,
+                0.22392511367797852
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-top",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/bathroom-render-01/frame-top-mask.png",
+          "boundsPx": [
+            1153,
+            398,
+            378,
+            39
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bathroom-render-01/frame-top-light.png",
+          "baselineLinear": 1.5758519492431808,
+          "shadeMin": 0,
+          "shadeMax": 0.635,
+          "specular": "/media/scenes/bathroom-render-01/frame-top-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.018175505101680756,
+          "tint": [
+            1.0831799507141113,
+            0.9900500178337097,
+            0.853659987449646
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              1060,
+              0
+            ],
+            [
+              1060,
+              70
+            ],
+            [
+              0,
+              70
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.48053109645843506,
+              0.2214200496673584
+            ],
+            [
+              0.6375629901885986,
+              0.22392511367797852
+            ],
+            [
+              0.6375629901885986,
+              0.23774361610412598
+            ],
+            [
+              0.48053109645843506,
+              0.23553675413131714
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 1060,
+            "referenceImageSegment01": [
+              [
+                0.480531096458435,
+                0.22142004966735837
+              ],
+              [
+                0.6375629901885986,
+                0.22392511367797852
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1060,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      }
+    ],
+    "protectedMask": {
+      "alpha": "/media/scenes/bathroom-render-01/protected-mask.png",
+      "boundsPx": [
+        1195,
+        485,
+        310,
+        592
+      ]
+    },
+    "foreground": null,
+    "doorInserts": [],
+    "doorModels": [
+      {
+        "modelId": "flat",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            976,
+            222,
+            732,
+            1112
+          ],
+          "base": "/media/scenes/bathroom-render-01/model-flat-base.webp",
+          "original": "/media/scenes/bathroom-render-01/model-flat-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/bathroom-render-01/model-flat-leaf-mask.png",
+              "over": "/media/scenes/bathroom-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-flat-leaf-light.png",
+              "over": "/media/scenes/bathroom-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-flat-leaf-reflection.png",
+              "over": "/media/scenes/bathroom-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-flat-frame-left-mask.png",
+              "over": "/media/scenes/bathroom-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-flat-frame-left-light.png",
+              "over": "/media/scenes/bathroom-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-flat-frame-left-reflection.png",
+              "over": "/media/scenes/bathroom-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-flat-frame-right-mask.png",
+              "over": "/media/scenes/bathroom-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-flat-frame-right-light.png",
+              "over": "/media/scenes/bathroom-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-flat-frame-right-reflection.png",
+              "over": "/media/scenes/bathroom-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-flat-frame-top-mask.png",
+              "over": "/media/scenes/bathroom-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-flat-frame-top-light.png",
+              "over": "/media/scenes/bathroom-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-flat-frame-top-reflection.png",
+              "over": "/media/scenes/bathroom-render-01/frame-top-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/bathroom-render-01/model-flat-leaf-mask.png",
+                "boundsPx": [
+                  1180,
+                  428,
+                  321,
+                  723
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bathroom-render-01/model-flat-leaf-light.png",
+                "baselineLinear": 1.5758519492431808,
+                "shadeMin": 0,
+                "shadeMax": 0.635,
+                "specular": "/media/scenes/bathroom-render-01/model-flat-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.020530449226498604,
+                "tint": [
+                  1.0974199771881104,
+                  0.9868000149726868,
+                  0.8332399725914001
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.4925033450126648,
+                    0.23823964595794678
+                  ],
+                  [
+                    0.6251649260520935,
+                    0.24005866050720215
+                  ],
+                  [
+                    0.6251649260520935,
+                    0.6335286796092987
+                  ],
+                  [
+                    0.4925033450126648,
+                    0.6388712227344513
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.49250334501266485,
+                      0.2382396459579467
+                    ],
+                    [
+                      0.6251649260520936,
+                      0.24005866050720207
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bathroom-render-01/model-flat-frame-left-mask.png",
+                "boundsPx": [
+                  1152,
+                  398,
+                  30,
+                  759
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bathroom-render-01/model-flat-frame-left-light.png",
+                "baselineLinear": 1.5758519492431808,
+                "shadeMin": 0,
+                "shadeMax": 0.635,
+                "specular": "/media/scenes/bathroom-render-01/model-flat-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.018161660060286522,
+                "tint": [
+                  1.096060037612915,
+                  0.988070011138916,
+                  0.835319995880127
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.48053109645843506,
+                    0.2214200496673584
+                  ],
+                  [
+                    0.49110984802246094,
+                    0.2215888500213623
+                  ],
+                  [
+                    0.49110984802246094,
+                    0.6420693695545197
+                  ],
+                  [
+                    0.48053109645843506,
+                    0.6424999237060547
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.48053109645843506,
+                      0.22142004966735837
+                    ],
+                    [
+                      0.4911098480224609,
+                      0.22158885002136228
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bathroom-render-01/model-flat-frame-right-mask.png",
+                "boundsPx": [
+                  1498,
+                  402,
+                  33,
+                  745
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bathroom-render-01/model-flat-frame-right-light.png",
+                "baselineLinear": 1.5758519492431808,
+                "shadeMin": 0,
+                "shadeMax": 0.635,
+                "specular": "/media/scenes/bathroom-render-01/model-flat-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.01636878401041031,
+                "tint": [
+                  1.0985699892044067,
+                  0.9876700043678284,
+                  0.8321700096130371
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.6273978352546692,
+                    0.22376292943954468
+                  ],
+                  [
+                    0.6375629901885986,
+                    0.22392511367797852
+                  ],
+                  [
+                    0.6375629901885986,
+                    0.636109471321106
+                  ],
+                  [
+                    0.6273978352546692,
+                    0.6365231573581696
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.6273978352546692,
+                      0.2237629294395447
+                    ],
+                    [
+                      0.6375629901885986,
+                      0.22392511367797852
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bathroom-render-01/model-flat-frame-top-mask.png",
+                "boundsPx": [
+                  1153,
+                  398,
+                  378,
+                  39
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bathroom-render-01/model-flat-frame-top-light.png",
+                "baselineLinear": 1.5758519492431808,
+                "shadeMin": 0,
+                "shadeMax": 0.635,
+                "specular": "/media/scenes/bathroom-render-01/model-flat-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.018175505101680756,
+                "tint": [
+                  1.0831799507141113,
+                  0.9900500178337097,
+                  0.853659987449646
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.48053109645843506,
+                    0.2214200496673584
+                  ],
+                  [
+                    0.6375629901885986,
+                    0.22392511367797852
+                  ],
+                  [
+                    0.6375629901885986,
+                    0.23774361610412598
+                  ],
+                  [
+                    0.48053109645843506,
+                    0.23553675413131714
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.480531096458435,
+                      0.22142004966735837
+                    ],
+                    [
+                      0.6375629901885986,
+                      0.22392511367797852
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/bathroom-render-01/model-flat-protected-mask.png",
+            "boundsPx": [
+              1195,
+              485,
+              310,
+              592
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "grooved",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            976,
+            222,
+            732,
+            1112
+          ],
+          "base": "/media/scenes/bathroom-render-01/model-grooved-base.webp",
+          "original": "/media/scenes/bathroom-render-01/model-grooved-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/bathroom-render-01/model-grooved-leaf-mask.png",
+              "over": "/media/scenes/bathroom-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-grooved-leaf-light.png",
+              "over": "/media/scenes/bathroom-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-grooved-leaf-reflection.png",
+              "over": "/media/scenes/bathroom-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-grooved-frame-left-mask.png",
+              "over": "/media/scenes/bathroom-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-grooved-frame-left-light.png",
+              "over": "/media/scenes/bathroom-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-grooved-frame-left-reflection.png",
+              "over": "/media/scenes/bathroom-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-grooved-frame-right-mask.png",
+              "over": "/media/scenes/bathroom-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-grooved-frame-right-light.png",
+              "over": "/media/scenes/bathroom-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-grooved-frame-right-reflection.png",
+              "over": "/media/scenes/bathroom-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-grooved-frame-top-mask.png",
+              "over": "/media/scenes/bathroom-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-grooved-frame-top-light.png",
+              "over": "/media/scenes/bathroom-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-grooved-frame-top-reflection.png",
+              "over": "/media/scenes/bathroom-render-01/frame-top-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/bathroom-render-01/model-grooved-leaf-mask.png",
+                "boundsPx": [
+                  1180,
+                  428,
+                  321,
+                  723
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bathroom-render-01/model-grooved-leaf-light.png",
+                "baselineLinear": 1.5758519492431808,
+                "shadeMin": 0,
+                "shadeMax": 0.635,
+                "specular": "/media/scenes/bathroom-render-01/model-grooved-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.0251862071454525,
+                "tint": [
+                  1.0974500179290771,
+                  0.986810028553009,
+                  0.8332499861717224
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.4925033450126648,
+                    0.23823964595794678
+                  ],
+                  [
+                    0.6251649260520935,
+                    0.24005866050720215
+                  ],
+                  [
+                    0.6251649260520935,
+                    0.6335286796092987
+                  ],
+                  [
+                    0.4925033450126648,
+                    0.6388712227344513
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.49250334501266485,
+                      0.2382396459579467
+                    ],
+                    [
+                      0.6251649260520936,
+                      0.24005866050720207
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bathroom-render-01/model-grooved-frame-left-mask.png",
+                "boundsPx": [
+                  1152,
+                  398,
+                  30,
+                  759
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bathroom-render-01/model-grooved-frame-left-light.png",
+                "baselineLinear": 1.5758519492431808,
+                "shadeMin": 0,
+                "shadeMax": 0.635,
+                "specular": "/media/scenes/bathroom-render-01/model-grooved-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.017965754494071007,
+                "tint": [
+                  1.096060037612915,
+                  0.9880800247192383,
+                  0.835319995880127
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.48053109645843506,
+                    0.2214200496673584
+                  ],
+                  [
+                    0.49110984802246094,
+                    0.2215888500213623
+                  ],
+                  [
+                    0.49110984802246094,
+                    0.6420693695545197
+                  ],
+                  [
+                    0.48053109645843506,
+                    0.6424999237060547
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.48053109645843506,
+                      0.22142004966735837
+                    ],
+                    [
+                      0.4911098480224609,
+                      0.22158885002136228
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bathroom-render-01/model-grooved-frame-right-mask.png",
+                "boundsPx": [
+                  1498,
+                  402,
+                  33,
+                  745
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bathroom-render-01/model-grooved-frame-right-light.png",
+                "baselineLinear": 1.5758519492431808,
+                "shadeMin": 0,
+                "shadeMax": 0.635,
+                "specular": "/media/scenes/bathroom-render-01/model-grooved-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.01612919382750988,
+                "tint": [
+                  1.0985100269317627,
+                  0.9876899719238281,
+                  0.8321499824523926
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.6273978352546692,
+                    0.22376292943954468
+                  ],
+                  [
+                    0.6375629901885986,
+                    0.22392511367797852
+                  ],
+                  [
+                    0.6375629901885986,
+                    0.636109471321106
+                  ],
+                  [
+                    0.6273978352546692,
+                    0.6365231573581696
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.6273978352546692,
+                      0.2237629294395447
+                    ],
+                    [
+                      0.6375629901885986,
+                      0.22392511367797852
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bathroom-render-01/model-grooved-frame-top-mask.png",
+                "boundsPx": [
+                  1153,
+                  398,
+                  378,
+                  39
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bathroom-render-01/model-grooved-frame-top-light.png",
+                "baselineLinear": 1.5758519492431808,
+                "shadeMin": 0,
+                "shadeMax": 0.635,
+                "specular": "/media/scenes/bathroom-render-01/model-grooved-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.017594678327441216,
+                "tint": [
+                  1.0831999778747559,
+                  0.9900599718093872,
+                  0.8535500168800354
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.48053109645843506,
+                    0.2214200496673584
+                  ],
+                  [
+                    0.6375629901885986,
+                    0.22392511367797852
+                  ],
+                  [
+                    0.6375629901885986,
+                    0.23774361610412598
+                  ],
+                  [
+                    0.48053109645843506,
+                    0.23553675413131714
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.480531096458435,
+                      0.22142004966735837
+                    ],
+                    [
+                      0.6375629901885986,
+                      0.22392511367797852
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/bathroom-render-01/model-grooved-protected-mask.png",
+            "boundsPx": [
+              1195,
+              485,
+              310,
+              592
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "glass-insert",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            976,
+            222,
+            732,
+            1112
+          ],
+          "base": "/media/scenes/bathroom-render-01/model-glass-insert-base.webp",
+          "original": "/media/scenes/bathroom-render-01/model-glass-insert-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/bathroom-render-01/model-glass-insert-leaf-mask.png",
+              "over": "/media/scenes/bathroom-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-glass-insert-leaf-light.png",
+              "over": "/media/scenes/bathroom-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-glass-insert-leaf-reflection.png",
+              "over": "/media/scenes/bathroom-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-glass-insert-frame-left-mask.png",
+              "over": "/media/scenes/bathroom-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-glass-insert-frame-left-light.png",
+              "over": "/media/scenes/bathroom-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-glass-insert-frame-left-reflection.png",
+              "over": "/media/scenes/bathroom-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-glass-insert-frame-right-mask.png",
+              "over": "/media/scenes/bathroom-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-glass-insert-frame-right-light.png",
+              "over": "/media/scenes/bathroom-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-glass-insert-frame-right-reflection.png",
+              "over": "/media/scenes/bathroom-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-glass-insert-frame-top-mask.png",
+              "over": "/media/scenes/bathroom-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-glass-insert-frame-top-light.png",
+              "over": "/media/scenes/bathroom-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-glass-insert-frame-top-reflection.png",
+              "over": "/media/scenes/bathroom-render-01/frame-top-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/bathroom-render-01/model-glass-insert-leaf-mask.png",
+                "boundsPx": [
+                  1180,
+                  428,
+                  321,
+                  723
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bathroom-render-01/model-glass-insert-leaf-light.png",
+                "baselineLinear": 1.5758519492431808,
+                "shadeMin": 0,
+                "shadeMax": 0.635,
+                "specular": "/media/scenes/bathroom-render-01/model-glass-insert-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.08417145162820816,
+                "tint": [
+                  1.0973700284957886,
+                  0.9866499900817871,
+                  0.8327999711036682
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.4925033450126648,
+                    0.23823964595794678
+                  ],
+                  [
+                    0.6251649260520935,
+                    0.24005866050720215
+                  ],
+                  [
+                    0.6251649260520935,
+                    0.6335286796092987
+                  ],
+                  [
+                    0.4925033450126648,
+                    0.6388712227344513
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.49250334501266485,
+                      0.2382396459579467
+                    ],
+                    [
+                      0.6251649260520936,
+                      0.24005866050720207
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bathroom-render-01/model-glass-insert-frame-left-mask.png",
+                "boundsPx": [
+                  1152,
+                  398,
+                  30,
+                  759
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bathroom-render-01/model-glass-insert-frame-left-light.png",
+                "baselineLinear": 1.5758519492431808,
+                "shadeMin": 0,
+                "shadeMax": 0.635,
+                "specular": "/media/scenes/bathroom-render-01/model-glass-insert-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.018283972516655922,
+                "tint": [
+                  1.0960400104522705,
+                  0.988099992275238,
+                  0.8350200057029724
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.48053109645843506,
+                    0.2214200496673584
+                  ],
+                  [
+                    0.49110984802246094,
+                    0.2215888500213623
+                  ],
+                  [
+                    0.49110984802246094,
+                    0.6420693695545197
+                  ],
+                  [
+                    0.48053109645843506,
+                    0.6424999237060547
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.48053109645843506,
+                      0.22142004966735837
+                    ],
+                    [
+                      0.4911098480224609,
+                      0.22158885002136228
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bathroom-render-01/model-glass-insert-frame-right-mask.png",
+                "boundsPx": [
+                  1498,
+                  402,
+                  33,
+                  745
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bathroom-render-01/model-glass-insert-frame-right-light.png",
+                "baselineLinear": 1.5758519492431808,
+                "shadeMin": 0,
+                "shadeMax": 0.635,
+                "specular": "/media/scenes/bathroom-render-01/model-glass-insert-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.016550304368138313,
+                "tint": [
+                  1.098620057106018,
+                  0.9877099990844727,
+                  0.8316699862480164
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.6273978352546692,
+                    0.22376292943954468
+                  ],
+                  [
+                    0.6375629901885986,
+                    0.22392511367797852
+                  ],
+                  [
+                    0.6375629901885986,
+                    0.636109471321106
+                  ],
+                  [
+                    0.6273978352546692,
+                    0.6365231573581696
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.6273978352546692,
+                      0.2237629294395447
+                    ],
+                    [
+                      0.6375629901885986,
+                      0.22392511367797852
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bathroom-render-01/model-glass-insert-frame-top-mask.png",
+                "boundsPx": [
+                  1153,
+                  398,
+                  378,
+                  39
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bathroom-render-01/model-glass-insert-frame-top-light.png",
+                "baselineLinear": 1.5758519492431808,
+                "shadeMin": 0,
+                "shadeMax": 0.635,
+                "specular": "/media/scenes/bathroom-render-01/model-glass-insert-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.018351038917899132,
+                "tint": [
+                  1.083299994468689,
+                  0.9900699853897095,
+                  0.8531299829483032
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.48053109645843506,
+                    0.2214200496673584
+                  ],
+                  [
+                    0.6375629901885986,
+                    0.22392511367797852
+                  ],
+                  [
+                    0.6375629901885986,
+                    0.23774361610412598
+                  ],
+                  [
+                    0.48053109645843506,
+                    0.23553675413131714
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.480531096458435,
+                      0.22142004966735837
+                    ],
+                    [
+                      0.6375629901885986,
+                      0.22392511367797852
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/bathroom-render-01/model-glass-insert-protected-mask.png",
+            "boundsPx": [
+              1195,
+              485,
+              310,
+              592
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "filomuro",
+        "frameType": "concealed-aluminium",
+        "patch": {
+          "regionPx": [
+            976,
+            222,
+            732,
+            1112
+          ],
+          "base": "/media/scenes/bathroom-render-01/model-filomuro-base.webp",
+          "original": "/media/scenes/bathroom-render-01/model-filomuro-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/bathroom-render-01/model-filomuro-leaf-mask.png",
+              "over": "/media/scenes/bathroom-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-filomuro-leaf-light.png",
+              "over": "/media/scenes/bathroom-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/bathroom-render-01/model-filomuro-leaf-reflection.png",
+              "over": "/media/scenes/bathroom-render-01/leaf-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/bathroom-render-01/model-filomuro-leaf-mask.png",
+                "boundsPx": [
+                  1181,
+                  428,
+                  320,
+                  723
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bathroom-render-01/model-filomuro-leaf-light.png",
+                "baselineLinear": 1.5758519492431808,
+                "shadeMin": 0,
+                "shadeMax": 0.635,
+                "specular": "/media/scenes/bathroom-render-01/model-filomuro-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.016314152628183365,
+                "tint": [
+                  1.0981899499893188,
+                  0.9866399765014648,
+                  0.8317300081253052
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.4925033450126648,
+                    0.23823964595794678
+                  ],
+                  [
+                    0.6251649260520935,
+                    0.24005866050720215
+                  ],
+                  [
+                    0.6251649260520935,
+                    0.6335286796092987
+                  ],
+                  [
+                    0.4925033450126648,
+                    0.6388712227344513
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.49250334501266485,
+                      0.2382396459579467
+                    ],
+                    [
+                      0.6251649260520936,
+                      0.24005866050720207
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/bathroom-render-01/model-filomuro-protected-mask.png",
+            "boundsPx": [
+              1195,
+              764,
+              61,
+              47
+            ]
+          },
+          "allowedFrameModes": [
+            "door"
+          ]
+        }
+      }
+    ],
+    "allowedDoorProductIds": [
+      "dera-bardhe",
+      "dera-lis",
+      "dera-kashmir",
+      "dera-antracit"
+    ],
+    "allowedFloorProductIds": [],
+    "allowedFrameModes": [
+      "door",
+      "black"
+    ],
+    "allowedSkirtingModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "defaultSelection": {
+      "version": 1,
+      "sceneId": "bathroom-render-01",
+      "doorProductId": "dera-bardhe",
+      "doorModelId": "flat",
+      "doorFinishId": "bardhe-mat",
+      "floorProductId": "kronotex-d4955",
+      "frameMode": "door",
+      "skirtingMode": "door",
+      "floorRotationDeg": 0
+    },
+    "assetRevision": "pending"
+  },
+  "renderManifest": "render-manifest.json"
+}

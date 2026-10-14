@@ -6,6 +6,9 @@ export function doorModelsIn(p: DoorProduct, scene: RoomScene) {
   const shown = sceneModelIds(scene);
   return p.modelIds.filter(id => shown.includes(id));
 }
+/** Rooms without laminate (a tiled bathroom) have no floor or skirting to change. */
+export const sceneShowsFloor = (scene: RoomScene) => scene.surfaces.some(s => s.role === 'floor');
+export const sceneShowsSkirting = (scene: RoomScene) => scene.surfaces.some(s => s.role === 'skirting');
 export function compatibleDoor(p: DoorProduct, scene: RoomScene, c: StudioCatalog) {
   return (
     p.published &&

@@ -1,6 +1,16 @@
 import { serializeStudioQuery } from '../studio/query';
 import type { InquiryContext, InquiryData } from './types';
-import type { Locale } from '../data/types';
+import type { Locale, RoomScene } from '../data/types';
+import { sceneShowsFloor, sceneShowsSkirting } from '../studio/compatibility';
+/** The slim scene list inquiries need (names, and what each room lets you change). */
+export const inquiryScenes = (scenes: readonly RoomScene[]): InquiryData['scenes'] =>
+  scenes.map(s => ({
+    id: s.id,
+    name: s.name,
+    showsFloor: sceneShowsFloor(s),
+    showsSkirting: sceneShowsSkirting(s),
+    defaultModelId: s.doorModels?.[0]?.modelId ?? null,
+  }));
 import { getMessages, localize } from '../i18n/messages';
 import { formatDoorSize, formatFloorSpec } from '../i18n/format';
 export function buildInquiryUrl(
@@ -70,12 +80,15 @@ export function buildInquiryMessage(
     addProduct(s.doorProductId, undefined, s.doorFinishId);
     const model = data.materials.doorModels.find(d => d.id === s.doorModelId);
     if (model) lines.push(`${m['studio.model']}: ${localize(model.name, locale)}`);
-    addProduct(s.floorProductId);
+    // A tiled bathroom shows only the door: no floor, skirting or laying direction.
+    const floor = scene.showsFloor;
+    if (floor) addProduct(s.floorProductId);
     lines.push(
       `${m['inquiry.frame']}: ${model?.frameType === 'concealed-aluminium' ? m['studio.concealedFrame'] : m[`studio.mode.${s.frameMode}`]}`,
-      `${m['inquiry.skirting']}: ${m[`studio.mode.${s.skirtingMode}`]}`,
-      `${m['studio.direction']}: ${m[s.floorRotationDeg === 90 ? 'studio.lengthwise' : 'studio.crosswise']}`,
     );
+    if (scene.showsSkirting) lines.push(`${m['inquiry.skirting']}: ${m[`studio.mode.${s.skirtingMode}`]}`);
+    if (floor)
+      lines.push(`${m['studio.direction']}: ${m[s.floorRotationDeg === 90 ? 'studio.lengthwise' : 'studio.crosswise']}`);
   }
   lines.push(buildInquiryUrl(context, data, locale, canonicalUrl));
   return lines.join('\n');

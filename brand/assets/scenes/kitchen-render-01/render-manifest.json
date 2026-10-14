@@ -1,0 +1,189 @@
+{
+  "scene": "kitchen-render-01",
+  "doorModel": "flat",
+  "blender": "5.2.2 LTS",
+  "blenderBuild": "d13f752e3b9c",
+  "engine": "CYCLES",
+  "devices": [
+    "Apple M4 (GPU - 10 cores)"
+  ],
+  "samples": 512,
+  "seed": 1729,
+  "adaptiveSampling": false,
+  "denoiser": "OPENIMAGEDENOISE (albedo+normal, accurate prefilter)",
+  "resolution": [
+    2400,
+    1800
+  ],
+  "borderPx": null,
+  "renderSeconds": {
+    "light": 310.3,
+    "light-dim": 269.9,
+    "gloss": 230.1
+  },
+  "passes": {
+    "light": "editable = 0.5 grey Lambertian; plate = Combined / 0.5",
+    "light-dim": "editable = 0.25 grey; (light - light-dim) isolates editable light at edges",
+    "gloss": "editable = black dielectric IOR 1.5, GGX roughness {'floor': 0.3, 'door-leaf': 0.38, 'frame': 0.38, 'skirting': 0.38}",
+    "base": "light Combined minus coverage x 0.5 x dilated surface light, unpremultiplied at edges"
+  },
+  "camera": {
+    "matrix_world": [
+      [
+        0.9830603003501892,
+        3.254848124356613e-08,
+        0.18328247964382172,
+        3.1500000953674316
+      ],
+      [
+        0.18328247964382172,
+        -1.5965970590059442e-07,
+        -0.9830603003501892,
+        0.30000001192092896
+      ],
+      [
+        -2.7342936803620432e-09,
+        1.0,
+        -1.6292068494294654e-07,
+        1.5199999809265137
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "lens_mm": 20.0,
+    "sensor_mm": 36.0,
+    "shift": [
+      0.0,
+      -0.1599999964237213
+    ]
+  },
+  "hdri": {
+    "id": "kloofendal_48d_partly_cloudy",
+    "strength": 1.0,
+    "rotation_deg": 180.0
+  },
+  "corridor": {
+    "depth": 1.6,
+    "half_width": 1.2,
+    "light": 12.0
+  },
+  "fill": {
+    "energy": 80.0
+  },
+  "filmExposure": 1.45,
+  "viewTransform": "Standard (linear EXR); tone shoulder applied in post and at runtime",
+  "toneShoulder": 0.6,
+  "checks": {
+    "coverageSumMax": 1.0,
+    "hiddenSurfaces": [
+      "skirting-back-left"
+    ],
+    "maskSumMax": 255,
+    "backdropNegativeEdgePixels": 6033,
+    "edgePixels": 19631,
+    "backdropClampMaxLinear": 0.09912598133087158,
+    "backdropClampP99Linear": 0.06325791031122208,
+    "lightScale": 3.020850305557251,
+    "lightChroma": {
+      "floor": {
+        "tint": [
+          1.0321999788284302,
+          0.9991999864578247,
+          0.8952999711036682
+        ],
+        "p95AbsDev": 0.031878381967544556
+      },
+      "leaf": {
+        "tint": [
+          1.0592999458312988,
+          0.9926999807357788,
+          0.892300009727478
+        ],
+        "p95AbsDev": 0.005369974300265312
+      },
+      "frame-left": {
+        "tint": [
+          1.0621999502182007,
+          0.9930999875068665,
+          0.8855999708175659
+        ],
+        "p95AbsDev": 0.0068048834800720215
+      },
+      "frame-right": {
+        "tint": [
+          1.0569000244140625,
+          0.9937000274658203,
+          0.8953999876976013
+        ],
+        "p95AbsDev": 0.005862101912498474
+      },
+      "frame-top": {
+        "tint": [
+          1.0612000226974487,
+          0.9929999709129333,
+          0.8895999789237976
+        ],
+        "p95AbsDev": 0.006427109241485596
+      },
+      "skirting-left": {
+        "tint": [
+          1.056399941444397,
+          0.9937000274658203,
+          0.8960999846458435
+        ],
+        "p95AbsDev": 0.004993568640202284
+      },
+      "skirting-back-right": {
+        "tint": [
+          1.054800033569336,
+          0.9940999746322632,
+          0.8966000080108643
+        ],
+        "p95AbsDev": 0.005951142404228449
+      },
+      "skirting-right": {
+        "tint": [
+          1.0525000095367432,
+          0.9945999979972839,
+          0.8992999792098999
+        ],
+        "p95AbsDev": 0.007318021263927221
+      }
+    }
+  },
+  "floorPosition": {
+    "boundsPx": [
+      0,
+      848,
+      2400,
+      952
+    ],
+    "originMm": [
+      -300.0,
+      -300.0
+    ],
+    "unitMm": 0.1,
+    "stepPx": 4,
+    "samples": [
+      601,
+      239
+    ],
+    "reconstructionMaxErrorMm": 0.23898207396634086,
+    "reconstructionP99ErrorMm": 0.09784684576537299,
+    "cyclesPositionPassMedianDiffMm": 0.0013593079874922955,
+    "cyclesPositionPassP99DiffMm": 0.005684513577426531,
+    "floorWithinEncodedRange": true,
+    "visibleFloorXmm": [
+      20.057121230036667,
+      4582.648985951565
+    ],
+    "visibleFloorYmm": [
+      32.5851391921308,
+      4608.0885307842245
+    ]
+  }
+}

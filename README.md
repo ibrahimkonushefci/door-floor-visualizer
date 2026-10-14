@@ -3,7 +3,7 @@
 A mobile-first lookbook catalog and room Studio for interior-door and flooring showrooms in Kosovo, built to replace heavy PDF catalogs. It is a static Next.js export in Albanian (default), English and German, with no backend.
 
 - **Catalog**: editorial product grid with category filters, saved items, and product pages showing finish swatches, sizes and specifications.
-- **Studio**: shows any door finish, casing, skirting and floor in four rooms (one furnished 3D render), composited in a Web Worker with a Canvas 2D fallback. It includes a compare slider against the original photograph and sends the combination in one tap.
+- **Studio**: shows any door model and finish, casing, skirting and floor in seven furnished rooms rendered in Blender (living room, kitchen and dining, bedroom, hallway, entrance with a flush door, kids' room, bathroom), with a room-type filter. Rendering happens in a Web Worker with a Canvas 2D fallback. It includes a compare slider against the neutral render and sends the combination in one tap. The bathroom keeps its tiled floor (laminate does not go into bathrooms); only the door changes there.
 - **Offline**: a hidden presenter tool saves the Studio and visited catalog pages for meetings without internet.
 
 All products, dimensions and imagery are demo content (`brand.json` → `demoMode: true`).
@@ -39,7 +39,7 @@ pnpm build && pnpm verify:export && pnpm verify:budgets
 
 ## Presenter tools (offline)
 
-Press and hold the logo for about a second, or open any page with `?presenter=1`. The sheet saves all Studio rooms and finishes to the device (about 12 MB), shows progress, and offers cancel, update and remove. Customers never see it.
+Press and hold the logo for about a second, or open any page with `?presenter=1`. The sheet saves all Studio rooms and finishes to the device (about 31 MB; limit 48 MiB), shows progress, and offers cancel, update and remove. Customers never see it.
 
 Offline needs HTTPS (or localhost). If setup is impossible, the sheet says so rather than reporting an error. A small notice appears only when the device is offline or a new version is waiting.
 
@@ -47,15 +47,15 @@ Offline needs HTTPS (or localhost). If setup is impossible, the sheet says so ra
 
 Each room lives in `brand/assets/scenes/<id>/` (frozen `base.png`, masks, light plates, `calibration.json`, `AUTHORING.md`). `pnpm assets:scenes` publishes them to `public/media/scenes/` and regenerates the scene entries in `brand/materials.json`. The scene list is `STUDIO_SCENES` in `scripts/prepare-scenes.ts`.
 
-- `living-render-01`: a furnished room rendered in Blender (see below). 2400×1800, true scale.
-- `living-standard`, `corridor-standard`: generated neutral plates, authored by `scripts/author-remediation-scenes.mjs`.
-- `bedroom-photo`: a real photograph (Alex Tyson, Unsplash License), authored by `scripts/author-photo-scene.mjs`.
+All Studio rooms are rendered in Blender at 2400×1800 and true scale (see below), each with a `roomType` for the room picker's filter: `living-render-01`, `kitchen-render-01`, `bedroom-render-01`, `hallway-render-01`, `hallway-render-02` (flush filomuro door by default), `kids-render-01` and `bathroom-render-01` (fixed tiles, no editable floor or skirting). Which products a room offers is set by `compatibleSceneIds`, written by the importer: every opaque door line in every room, floors in every room except the bathroom.
+
+The retired photo rooms (`living-standard`, `corridor-standard`, `bedroom-photo`, `corridor-hidden`) are no longer published. Their folders stay as fixtures for the homography floor path and the all-glass door insert (`scripts/legacy-scenes.ts`). The all-glass door (`dera-xham`) therefore has no Studio room for now.
 
 **Rendering a room in Blender** (Blender 5.2 LTS at `/Applications/Blender.app`; free CC0 inputs from Poly Haven):
 1. `python3 tools/blender/fetch_assets.py` downloads the pinned models, rug texture and HDRI (md5-verified) into the git-ignored `tools/blender/.cache/`.
-2. `Blender --background --factory-startup --python tools/blender/build_room.py -- --model <model> [--preview out.png]` builds `tools/blender/out/<id>/<model>/room.blend` from `tools/blender/room_spec.py` (metres; door, casing and skirting at product sizes). Door models (`DOOR_MODELS`): `flat` (default), `grooved`, `glass-insert`, `filomuro`.
-3. `Blender --background --factory-startup --python tools/blender/render_layers.py -- --model <model> --samples 512` renders (render `flat` first: the other models reuse its light scale) the light, light-dim and gloss passes on the Metal GPU (about 20 minutes at 2400×1800 on an M4) and writes masks, light and reflection plates, the base plate and the 16-bit floor position map. `--post-only` reprocesses existing EXRs.
-4. `tsx scripts/import-rendered-scene.ts <id>` writes `brand/assets/scenes/<id>/`, records provenance and adds the room to the proof products. Every door model is stored as crops of one shared region around the door (`doorModels` in the scene), so switching model in the Studio only pastes that region. Then run `pnpm assets:scenes` and `tsx scripts/author-decor-images.ts` (catalog images of supplier floors in this room).
+2. `Blender --background --factory-startup --python tools/blender/build_room.py -- --room <id> --model <model> [--preview out.png]` builds `tools/blender/out/<id>/<model>/room.blend`. The shell, window, door assembly, skirting, lights and camera are shared (`build_room.py`, `room_spec.py`: metres; door, casing and skirting at product sizes); each room is one module in `tools/blender/rooms/` (dimensions, door position, window, camera, lighting, `furnish()`), with procedural furniture in `tools/blender/props.py` and helpers in `tools/blender/kit.py`. Door models (`DOOR_MODELS`): `flat`, `grooved`, `glass-insert`, `filomuro`; a room's `DEFAULT_MODEL` is `flat` unless it says otherwise. New CC0 inputs: `python3 tools/blender/add_assets.py <polyhaven-id>[:1k] --used-in <room>` pins them in `assets.json`.
+3. `Blender --background --factory-startup --python tools/blender/render_layers.py -- --room <id> --model <model> --samples 512 [--crop]` renders the light, light-dim and gloss passes on the Metal GPU (about 20 minutes at 2400×1800 on an M4) and writes masks, light and reflection plates, the base plate and the 16-bit floor position map. Render the room's default model first and in full: the other models reuse its light scale, and `--crop` renders them only in a border around the door (same pixels, about a third of the time). `--post-only` reprocesses existing EXRs. `python3 tools/blender/render_rooms.py <id> [...]` does steps 2–3 for every model of the given rooms.
+4. `tsx scripts/import-rendered-scene.ts [<id> ...]` writes `brand/assets/scenes/<id>/` (room names, types and product rules: `ROOMS` in that script), records provenance and sets the products' `compatibleSceneIds`. Every door model is stored as crops of one shared region around the door (`doorModels` in the scene), so switching model in the Studio only pastes that region. Then run `pnpm assets:scenes` and `tsx scripts/author-decor-images.ts` (catalog images of supplier floors in this room).
 
 Supplier floor décors come from a manifest per brand (`tools/decors/<supplier>.json`: official product page, décor image URL, code, board size, thickness, AC/usage class, structure, licence note). After the owner approves the download, put the images in the git-ignored `tools/decors/.cache/<supplier>/` and run `tsx scripts/import-decors.ts tools/decors/<supplier>.json`: it finds the board joints, cuts the complete boards (up to 6 unique per décor, ≤ 1.5 px/mm, never upscaled), builds the plank sheet, a seamless atlas and a skirting texture, and upserts the floor collections (`decor` provenance) and products. Switching brand is a new manifest plus this command. Décors without written permission are marked `private-pitch-only` in the data and the asset ledger.
 

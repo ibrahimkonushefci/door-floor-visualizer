@@ -2,8 +2,9 @@ import { it, expect } from 'vitest';
 import { loadSiteData } from '../src/lib/data/load';
 import { parseStudioQuery, serializeStudioQuery } from '../src/lib/studio/query';
 import { normalizeSelection, reduceSelection } from '../src/lib/studio/state';
-import { buildInquiryMessage, buildInquiryUrl } from '../src/lib/inquiry/message';
+import { buildInquiryMessage, buildInquiryUrl, inquiryScenes } from '../src/lib/inquiry/message';
 import { syntheticScene } from '../scripts/render-fixtures';
+import { legacyCatalog, legacyScene } from '../scripts/legacy-scenes';
 import { createRenderController, renderBatched } from '../src/lib/studio/render-controller';
 const data = loadSiteData(),
   catalog = { products: data.products.products, materials: data.materials };
@@ -63,55 +64,87 @@ it('unknown scene URLs fall back to the first scene and keep compatible choices'
   expect(parsed.warnings).toContain('sceneId');
   expect(serializeStudioQuery(parsed.selection).get('scene')).toBe(first.id);
 });
-it('hallway preserves standard pairs and rejects hidden/glass geometry', () => {
+it('rendered rooms keep door, model and floor choices across rooms; glass needs a glass room', () => {
   const initial = {
     ...data.materials.scenes[0].defaultSelection,
     doorProductId: 'dera-lis',
     doorFinishId: 'dushk-hirte',
+    doorModelId: 'grooved',
     floorProductId: 'kronotex-d80612',
     floorRotationDeg: 90 as const,
   };
-  const next = reduceSelection(initial, { type: 'scene', sceneId: 'corridor-standard' }, catalog);
-  expect(next).toMatchObject({ ...initial, sceneId: 'corridor-standard' });
-  for (const productId of ['dera-kashmir', 'dera-antracit', 'dera-xham'])
+  const next = reduceSelection(initial, { type: 'scene', sceneId: 'hallway-render-01' }, catalog);
+  expect(next).toMatchObject({ ...initial, sceneId: 'hallway-render-01' });
+  // Every rendered room carries the flush (filomuro) model, so hidden doors work everywhere.
+  for (const scene of data.materials.scenes) {
+    expect(scene.roomType).toBeDefined();
+    for (const productId of ['dera-kashmir', 'dera-antracit'])
+      expect(
+        reduceSelection({ ...next, sceneId: scene.id }, { type: 'door', productId, finishId: 'kashmir' }, catalog),
+      ).toMatchObject({ doorProductId: productId, doorModelId: 'filomuro' });
+  }
+  // No Studio room has the all-glass insert since the photo rooms were retired:
+  // asking for the glass door falls back to the room's default door.
+  for (const scene of data.materials.scenes)
     expect(
-      reduceSelection(next, { type: 'door', productId, finishId: 'kashmir' }, catalog)
+      reduceSelection({ ...next, sceneId: scene.id }, { type: 'door', productId: 'dera-xham', finishId: 'xham-erret' }, catalog)
         .doorProductId,
-    ).toBe('dera-bardhe');
-  // Hidden doors need the flush (filomuro) model, rendered only in the 3D room.
-  expect(
-    data.products.products
-      .filter(p => p.kind === 'door' && p.doorType === 'hidden')
-      .every(p => p.kind === 'door' && p.compatibleSceneIds.join() === 'living-render-01'),
-  ).toBe(true);
+    ).toBe(scene.defaultSelection.doorProductId);
+});
+it('the tiled bathroom changes only the door and keeps the floor choice for the next room', () => {
+  const bathroom = data.materials.scenes.find(s => s.roomType === 'bathroom')!;
+  expect(bathroom.surfaces.map(s => s.role).sort()).toEqual(['door-leaf', 'frame', 'frame', 'frame']);
+  expect(bathroom.allowedFloorProductIds).toEqual([]);
+  expect(bathroom.allowedFrameModes).not.toContain('floor');
+  for (const p of data.products.products)
+    if (p.kind === 'floor') expect(p.compatibleSceneIds).not.toContain(bathroom.id);
+  const start = { ...data.materials.scenes[0].defaultSelection, floorProductId: 'kronotex-d3179', skirtingMode: 'black' as const };
+  const inBath = reduceSelection(start, { type: 'scene', sceneId: bathroom.id }, catalog);
+  expect(inBath).toMatchObject({ sceneId: bathroom.id, floorProductId: 'kronotex-d3179', skirtingMode: 'black' });
+  expect(parseStudioQuery(serializeStudioQuery(inBath), catalog).selection).toEqual(inBath);
+  const back = reduceSelection(inBath, { type: 'scene', sceneId: data.materials.scenes[0].id }, catalog);
+  expect(back).toMatchObject({ floorProductId: 'kronotex-d3179', skirtingMode: 'black' });
+  const input = {
+    brand: data.brand,
+    products: data.products.products,
+    materials: data.materials,
+    scenes: inquiryScenes(data.materials.scenes),
+  };
+  const text = buildInquiryMessage({ kind: 'studio', selection: inBath }, input, 'en', 'https://demo.example/en/studio/');
+  expect(text).toContain('Bathroom');
+  expect(text).not.toContain('Kronotex');
+  expect(text).not.toContain('Skirting');
 });
 it('glass uses explicit product pair and black profile; leaving glass has deterministic opaque mode', () => {
-  // Glass doors ship only with the photo living room's insert.
-  const base = data.materials.scenes.find(s => s.id === 'living-standard')!.defaultSelection;
+  // Only the retired photo living room carries the all-glass insert (fixture).
+  const legacy = legacyCatalog(data),
+    base = legacyScene('living-standard').defaultSelection;
   const glass = reduceSelection(
     base,
     { type: 'door', productId: 'dera-xham', finishId: 'xham-erret' },
-    catalog,
+    legacy,
   );
   expect(glass.frameMode).toBe('black');
   expect(
     reduceSelection(
       glass,
       { type: 'door', productId: 'dera-bardhe', finishId: 'bardhe-mat' },
-      catalog,
+      legacy,
     ).frameMode,
   ).toBe('door');
   expect(
     reduceSelection(
       base,
       { type: 'door', productId: 'dera-bardhe', finishId: 'xham-erret' },
-      catalog,
+      legacy,
     ).doorFinishId,
   ).toBe('bardhe-mat');
 });
 it('completed Studio inquiry contains exact IDs, modes and reopenable canonical selection URL', () => {
   const selection = {
-    ...data.materials.scenes.find(s => s.id === 'corridor-standard')!.defaultSelection,
+    ...data.materials.scenes.find(s => s.id === 'hallway-render-01')!.defaultSelection,
+    // Solid wood floor: its spec has no AC class.
+    floorProductId: 'peshk-natyral-12',
     doorProductId: 'dera-bardhe',
     doorFinishId: 'antracit',
     skirtingMode: 'black' as const,
@@ -121,7 +154,7 @@ it('completed Studio inquiry contains exact IDs, modes and reopenable canonical 
     brand: data.brand,
     products: data.products.products,
     materials: data.materials,
-    scenes: data.materials.scenes,
+    scenes: inquiryScenes(data.materials.scenes),
   };
   const url = buildInquiryUrl(
     { kind: 'studio', selection },
@@ -143,7 +176,7 @@ it('slow decode followed by a newer job rejects stale work and only latest succe
   const f = syntheticScene();
   let unblock: () => void = () => {};
   let calls = 0;
-  const c = createRenderController(catalog, {
+  const c = createRenderController(legacyCatalog(data), {
     sceneLoader: async () => {
       calls++;
       if (calls === 1) await new Promise<void>(r => (unblock = r));
@@ -180,7 +213,7 @@ it('wrong-shaped scene asset rejects before render', async () => {
 });
 it('worker construction failure uses the canonical batched fallback', async () => {
   const f = syntheticScene(),
-    c = createRenderController(catalog, {
+    c = createRenderController(legacyCatalog(data), {
       workerFactory: () => {
         throw new Error('Worker intentionally unavailable in test');
       },
@@ -221,7 +254,7 @@ it('stale worker result cannot resolve latest job and dispose terminates worker'
       terminated++;
     },
   };
-  const c = createRenderController(catalog, {
+  const c = createRenderController(legacyCatalog(data), {
     workerFactory: () => mock as unknown as Worker,
     sceneLoader: async () => f.scene,
     materialLoader: async () => f.materials,

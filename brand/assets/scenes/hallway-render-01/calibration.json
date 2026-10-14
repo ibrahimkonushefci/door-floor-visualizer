@@ -1,0 +1,4005 @@
+{
+  "schemaVersion": 1,
+  "kind": "rendered",
+  "scene": {
+    "id": "hallway-render-01",
+    "name": {
+      "sq": "Korridori",
+      "en": "Hallway",
+      "de": "Flur"
+    },
+    "description": {
+      "sq": "Korridor banese me ndriçim spotesh",
+      "en": "Apartment hallway with ceiling spots",
+      "de": "Wohnungsflur mit Deckenspots"
+    },
+    "roomType": "hallway",
+    "width": 2400,
+    "height": 1800,
+    "base": "/media/scenes/hallway-render-01/base.webp",
+    "original": "/media/scenes/hallway-render-01/original.webp",
+    "render": {
+      "source": "blender",
+      "partitionedMasks": true,
+      "toneShoulder": 0.6
+    },
+    "thumbnail": "/media/scenes/hallway-render-01/thumbnail.webp",
+    "fallback": "/media/scenes/hallway-render-01/fallback.webp",
+    "frameType": "standard-casing",
+    "depictedDoorSizeMm": {
+      "width": 900,
+      "height": 2000
+    },
+    "surfaces": [
+      {
+        "id": "floor",
+        "role": "floor",
+        "mask": {
+          "alpha": "/media/scenes/hallway-render-01/floor-mask.png",
+          "boundsPx": [
+            651,
+            912,
+            1026,
+            888
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/hallway-render-01/floor-light.png",
+          "baselineLinear": 1.0741195841240754,
+          "shadeMin": 0,
+          "shadeMax": 0.931,
+          "specular": "/media/scenes/hallway-render-01/floor-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.06962614506483078,
+          "tint": [
+            1.0861799716949463,
+            0.9948599934577942,
+            0.843500018119812
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              1700,
+              0
+            ],
+            [
+              1700,
+              4520
+            ],
+            [
+              0,
+              4520
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.42663976550102234,
+              0.5077217817306519
+            ],
+            [
+              0.5833937525749207,
+              0.5096161067485809
+            ],
+            [
+              0.9279758930206299,
+              1.453506052494049
+            ],
+            [
+              -0.009417624212801456,
+              1.3852854371070862
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 1700,
+            "referenceImageSegment01": [
+              [
+                0.42663976550102234,
+                0.5077217817306516
+              ],
+              [
+                0.5833937525749207,
+                0.5096161067485808
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1700,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0,
+        "positionMap": {
+          "image": "/media/scenes/hallway-render-01/floor-position.png",
+          "boundsPx": [
+            651,
+            912,
+            1026,
+            888
+          ],
+          "originMm": [
+            -300,
+            -300
+          ],
+          "unitMm": 0.1,
+          "stepPx": 4
+        }
+      },
+      {
+        "id": "leaf",
+        "role": "door-leaf",
+        "mask": {
+          "alpha": "/media/scenes/hallway-render-01/leaf-mask.png",
+          "boundsPx": [
+            1110,
+            470,
+            202,
+            446
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/hallway-render-01/leaf-light.png",
+          "baselineLinear": 1.0741195841240754,
+          "shadeMin": 0,
+          "shadeMax": 0.931,
+          "specular": "/media/scenes/hallway-render-01/leaf-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.020347876474261284,
+          "tint": [
+            1.0802099704742432,
+            0.991919994354248,
+            0.8496400117874146
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              900,
+              0
+            ],
+            [
+              900,
+              2000
+            ],
+            [
+              0,
+              2000
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.46323031187057495,
+              0.26191645860671997
+            ],
+            [
+              0.5462160706520081,
+              0.2615587115287781
+            ],
+            [
+              0.5462160706520081,
+              0.5081803500652313
+            ],
+            [
+              0.46323031187057495,
+              0.5071828961372375
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 900,
+            "referenceImageSegment01": [
+              [
+                0.46323031187057495,
+                0.26191645860671997
+              ],
+              [
+                0.5462160706520081,
+                0.2615587115287781
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                900,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-left",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/hallway-render-01/frame-left-mask.png",
+          "boundsPx": [
+            1092,
+            453,
+            21,
+            464
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/hallway-render-01/frame-left-light.png",
+          "baselineLinear": 1.0741195841240754,
+          "shadeMin": 0,
+          "shadeMax": 0.931,
+          "specular": "/media/scenes/hallway-render-01/frame-left-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.01965990476310253,
+          "tint": [
+            1.0795899629592896,
+            0.9913700222969055,
+            0.8510900139808655
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              70,
+              0
+            ],
+            [
+              70,
+              2088
+            ],
+            [
+              0,
+              2088
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.45571890473365784,
+              0.2519224286079407
+            ],
+            [
+              0.46215319633483887,
+              0.2518904209136963
+            ],
+            [
+              0.46215319633483887,
+              0.5086883008480072
+            ],
+            [
+              0.45571890473365784,
+              0.5086102783679962
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 70,
+            "referenceImageSegment01": [
+              [
+                0.4557189047336578,
+                0.2519224286079407
+              ],
+              [
+                0.46215319633483876,
+                0.25189042091369623
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-right",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/hallway-render-01/frame-right-mask.png",
+          "boundsPx": [
+            1309,
+            452,
+            21,
+            402
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/hallway-render-01/frame-right-light.png",
+          "baselineLinear": 1.0741195841240754,
+          "shadeMin": 0,
+          "shadeMax": 0.931,
+          "specular": "/media/scenes/hallway-render-01/frame-right-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.019643552601337433,
+          "tint": [
+            1.0779900550842285,
+            0.9920700192451477,
+            0.8488900065422058
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              70,
+              0
+            ],
+            [
+              70,
+              2088
+            ],
+            [
+              0,
+              2088
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.5472338795661926,
+              0.2514667510986328
+            ],
+            [
+              0.5537469387054443,
+              0.251434326171875
+            ],
+            [
+              0.5537468791007996,
+              0.5097984373569489
+            ],
+            [
+              0.5472338795661926,
+              0.5097194910049438
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 70,
+            "referenceImageSegment01": [
+              [
+                0.5472338795661927,
+                0.2514667510986328
+              ],
+              [
+                0.5537469387054444,
+                0.25143432617187506
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-top",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/hallway-render-01/frame-top-mask.png",
+          "boundsPx": [
+            1093,
+            452,
+            237,
+            21
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/hallway-render-01/frame-top-light.png",
+          "baselineLinear": 1.0741195841240754,
+          "shadeMin": 0,
+          "shadeMax": 0.931,
+          "specular": "/media/scenes/hallway-render-01/frame-top-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.019759245216846466,
+          "tint": [
+            1.0756100416183472,
+            0.9919999837875366,
+            0.8566700220108032
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              1060,
+              0
+            ],
+            [
+              1060,
+              70
+            ],
+            [
+              0,
+              70
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.45571890473365784,
+              0.2519224286079407
+            ],
+            [
+              0.5537469387054443,
+              0.251434326171875
+            ],
+            [
+              0.5537469387054443,
+              0.26009601354599
+            ],
+            [
+              0.45571890473365784,
+              0.26052790880203247
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 1060,
+            "referenceImageSegment01": [
+              [
+                0.4557189047336578,
+                0.2519224286079407
+              ],
+              [
+                0.5537469387054442,
+                0.251434326171875
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1060,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-left",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/hallway-render-01/skirting-left-mask.png",
+          "boundsPx": [
+            651,
+            895,
+            377,
+            594
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/hallway-render-01/skirting-left-light.png",
+          "baselineLinear": 1.0741195841240754,
+          "shadeMin": 0,
+          "shadeMax": 0.931,
+          "specular": "/media/scenes/hallway-render-01/skirting-left-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.03366730362176895,
+          "tint": [
+            1.0924700498580933,
+            0.9889500141143799,
+            0.8370800018310547
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              4520,
+              0
+            ],
+            [
+              4520,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.42809996008872986,
+              0.4979516863822937
+            ],
+            [
+              -0.0011245845817029476,
+              1.3286339342594147
+            ],
+            [
+              -0.0011245845817029476,
+              1.3858891427516937
+            ],
+            [
+              0.42809996008872986,
+              0.5077394247055054
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 80,
+            "referenceImageSegment01": [
+              [
+                0.40496000036999547,
+                0.5427346653466104
+              ],
+              [
+                0.40496000036999547,
+                0.5550814263569003
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                1130,
+                0
+              ],
+              [
+                1130,
+                80
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-back-left",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/hallway-render-01/skirting-back-left-mask.png",
+          "boundsPx": [
+            1023,
+            895,
+            72,
+            22
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/hallway-render-01/skirting-back-left-light.png",
+          "baselineLinear": 1.0741195841240754,
+          "shadeMin": 0,
+          "shadeMax": 0.931,
+          "specular": "/media/scenes/hallway-render-01/skirting-back-left-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.014060387387871742,
+          "tint": [
+            1.083150029182434,
+            0.9904299974441528,
+            0.8499299883842468
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              320,
+              0
+            ],
+            [
+              320,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.42637500166893005,
+              0.49843907356262207
+            ],
+            [
+              0.45571890473365784,
+              0.4987754821777344
+            ],
+            [
+              0.45571890473365784,
+              0.5086102783679962
+            ],
+            [
+              0.42637500166893005,
+              0.5082546174526215
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 320,
+            "referenceImageSegment01": [
+              [
+                0.42637500166893005,
+                0.498439073562622
+              ],
+              [
+                0.4557189047336578,
+                0.4987754821777343
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                320,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-right",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/hallway-render-01/skirting-right-mask.png",
+          "boundsPx": [
+            1396,
+            903,
+            173,
+            325
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/hallway-render-01/skirting-right-light.png",
+          "baselineLinear": 1.0741195841240754,
+          "shadeMin": 0,
+          "shadeMax": 0.931,
+          "specular": "/media/scenes/hallway-render-01/skirting-right-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.02797386422753334,
+          "tint": [
+            1.0970300436019897,
+            0.9878900051116943,
+            0.8342700004577637
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              4520,
+              0
+            ],
+            [
+              4520,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.9185904860496521,
+              1.3919495940208435
+            ],
+            [
+              0.5819031000137329,
+              0.4997099041938782
+            ],
+            [
+              0.5819031000137329,
+              0.5095980763435364
+            ],
+            [
+              0.9185904860496521,
+              1.4528230130672455
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 80,
+            "referenceImageSegment01": [
+              [
+                0.6922178365556853,
+                0.7920498919623369
+              ],
+              [
+                0.6922178365556851,
+                0.8186432461657731
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                1130,
+                0
+              ],
+              [
+                1130,
+                80
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      }
+    ],
+    "protectedMask": {
+      "alpha": "/media/scenes/hallway-render-01/protected-mask.png",
+      "boundsPx": [
+        1108,
+        504,
+        195,
+        369
+      ]
+    },
+    "foreground": null,
+    "doorInserts": [],
+    "doorModels": [
+      {
+        "modelId": "flat",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            916,
+            276,
+            590,
+            818
+          ],
+          "base": "/media/scenes/hallway-render-01/model-flat-base.webp",
+          "original": "/media/scenes/hallway-render-01/model-flat-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-floor-mask.png",
+              "over": "/media/scenes/hallway-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-floor-light.png",
+              "over": "/media/scenes/hallway-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-floor-reflection.png",
+              "over": "/media/scenes/hallway-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-leaf-mask.png",
+              "over": "/media/scenes/hallway-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-leaf-light.png",
+              "over": "/media/scenes/hallway-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-leaf-reflection.png",
+              "over": "/media/scenes/hallway-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-frame-left-mask.png",
+              "over": "/media/scenes/hallway-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-frame-left-light.png",
+              "over": "/media/scenes/hallway-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-frame-left-reflection.png",
+              "over": "/media/scenes/hallway-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-frame-right-mask.png",
+              "over": "/media/scenes/hallway-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-frame-right-light.png",
+              "over": "/media/scenes/hallway-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-frame-right-reflection.png",
+              "over": "/media/scenes/hallway-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-frame-top-mask.png",
+              "over": "/media/scenes/hallway-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-frame-top-light.png",
+              "over": "/media/scenes/hallway-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-frame-top-reflection.png",
+              "over": "/media/scenes/hallway-render-01/frame-top-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-skirting-left-mask.png",
+              "over": "/media/scenes/hallway-render-01/skirting-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-skirting-left-light.png",
+              "over": "/media/scenes/hallway-render-01/skirting-left-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-skirting-left-reflection.png",
+              "over": "/media/scenes/hallway-render-01/skirting-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-skirting-back-left-mask.png",
+              "over": "/media/scenes/hallway-render-01/skirting-back-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-skirting-back-left-light.png",
+              "over": "/media/scenes/hallway-render-01/skirting-back-left-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-skirting-back-left-reflection.png",
+              "over": "/media/scenes/hallway-render-01/skirting-back-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-skirting-right-mask.png",
+              "over": "/media/scenes/hallway-render-01/skirting-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-skirting-right-light.png",
+              "over": "/media/scenes/hallway-render-01/skirting-right-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-flat-skirting-right-reflection.png",
+              "over": "/media/scenes/hallway-render-01/skirting-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-flat-floor-mask.png",
+                "boundsPx": [
+                  651,
+                  912,
+                  1026,
+                  888
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-flat-floor-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-flat-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.06962614506483078,
+                "tint": [
+                  1.0861799716949463,
+                  0.9948599934577942,
+                  0.843500018119812
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1700,
+                    0
+                  ],
+                  [
+                    1700,
+                    4520
+                  ],
+                  [
+                    0,
+                    4520
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.42663976550102234,
+                    0.5077217817306519
+                  ],
+                  [
+                    0.5833937525749207,
+                    0.5096161067485809
+                  ],
+                  [
+                    0.9279758930206299,
+                    1.453506052494049
+                  ],
+                  [
+                    -0.009417624212801456,
+                    1.3852854371070862
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1700,
+                  "referenceImageSegment01": [
+                    [
+                      0.42663976550102234,
+                      0.5077217817306516
+                    ],
+                    [
+                      0.5833937525749207,
+                      0.5096161067485808
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1700,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/hallway-render-01/floor-position.png",
+                "boundsPx": [
+                  651,
+                  912,
+                  1026,
+                  888
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-flat-leaf-mask.png",
+                "boundsPx": [
+                  1110,
+                  470,
+                  202,
+                  446
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-flat-leaf-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-flat-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.020347876474261284,
+                "tint": [
+                  1.0802099704742432,
+                  0.991919994354248,
+                  0.8496400117874146
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.46323031187057495,
+                    0.26191645860671997
+                  ],
+                  [
+                    0.5462160706520081,
+                    0.2615587115287781
+                  ],
+                  [
+                    0.5462160706520081,
+                    0.5081803500652313
+                  ],
+                  [
+                    0.46323031187057495,
+                    0.5071828961372375
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.46323031187057495,
+                      0.26191645860671997
+                    ],
+                    [
+                      0.5462160706520081,
+                      0.2615587115287781
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-flat-frame-left-mask.png",
+                "boundsPx": [
+                  1092,
+                  453,
+                  21,
+                  464
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-flat-frame-left-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-flat-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.01965990476310253,
+                "tint": [
+                  1.0795899629592896,
+                  0.9913700222969055,
+                  0.8510900139808655
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.45571890473365784,
+                    0.2519224286079407
+                  ],
+                  [
+                    0.46215319633483887,
+                    0.2518904209136963
+                  ],
+                  [
+                    0.46215319633483887,
+                    0.5086883008480072
+                  ],
+                  [
+                    0.45571890473365784,
+                    0.5086102783679962
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.4557189047336578,
+                      0.2519224286079407
+                    ],
+                    [
+                      0.46215319633483876,
+                      0.25189042091369623
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-flat-frame-right-mask.png",
+                "boundsPx": [
+                  1309,
+                  452,
+                  21,
+                  402
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-flat-frame-right-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-flat-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.019643552601337433,
+                "tint": [
+                  1.0779900550842285,
+                  0.9920700192451477,
+                  0.8488900065422058
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.5472338795661926,
+                    0.2514667510986328
+                  ],
+                  [
+                    0.5537469387054443,
+                    0.251434326171875
+                  ],
+                  [
+                    0.5537468791007996,
+                    0.5097984373569489
+                  ],
+                  [
+                    0.5472338795661926,
+                    0.5097194910049438
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.5472338795661927,
+                      0.2514667510986328
+                    ],
+                    [
+                      0.5537469387054444,
+                      0.25143432617187506
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-flat-frame-top-mask.png",
+                "boundsPx": [
+                  1093,
+                  452,
+                  237,
+                  21
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-flat-frame-top-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-flat-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.019759245216846466,
+                "tint": [
+                  1.0756100416183472,
+                  0.9919999837875366,
+                  0.8566700220108032
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.45571890473365784,
+                    0.2519224286079407
+                  ],
+                  [
+                    0.5537469387054443,
+                    0.251434326171875
+                  ],
+                  [
+                    0.5537469387054443,
+                    0.26009601354599
+                  ],
+                  [
+                    0.45571890473365784,
+                    0.26052790880203247
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.4557189047336578,
+                      0.2519224286079407
+                    ],
+                    [
+                      0.5537469387054442,
+                      0.251434326171875
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-flat-skirting-left-mask.png",
+                "boundsPx": [
+                  651,
+                  895,
+                  377,
+                  594
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-flat-skirting-left-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-flat-skirting-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.03366730362176895,
+                "tint": [
+                  1.0924700498580933,
+                  0.9889500141143799,
+                  0.8370800018310547
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4520,
+                    0
+                  ],
+                  [
+                    4520,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.42809996008872986,
+                    0.4979516863822937
+                  ],
+                  [
+                    -0.0011245845817029476,
+                    1.3286339342594147
+                  ],
+                  [
+                    -0.0011245845817029476,
+                    1.3858891427516937
+                  ],
+                  [
+                    0.42809996008872986,
+                    0.5077394247055054
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.40496000036999547,
+                      0.5427346653466104
+                    ],
+                    [
+                      0.40496000036999547,
+                      0.5550814263569003
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1130,
+                      0
+                    ],
+                    [
+                      1130,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-flat-skirting-back-left-mask.png",
+                "boundsPx": [
+                  1023,
+                  895,
+                  72,
+                  22
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-flat-skirting-back-left-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-flat-skirting-back-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.014060387387871742,
+                "tint": [
+                  1.083150029182434,
+                  0.9904299974441528,
+                  0.8499299883842468
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    320,
+                    0
+                  ],
+                  [
+                    320,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.42637500166893005,
+                    0.49843907356262207
+                  ],
+                  [
+                    0.45571890473365784,
+                    0.4987754821777344
+                  ],
+                  [
+                    0.45571890473365784,
+                    0.5086102783679962
+                  ],
+                  [
+                    0.42637500166893005,
+                    0.5082546174526215
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 320,
+                  "referenceImageSegment01": [
+                    [
+                      0.42637500166893005,
+                      0.498439073562622
+                    ],
+                    [
+                      0.4557189047336578,
+                      0.4987754821777343
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      320,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-flat-skirting-right-mask.png",
+                "boundsPx": [
+                  1396,
+                  903,
+                  173,
+                  325
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-flat-skirting-right-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-flat-skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02797386422753334,
+                "tint": [
+                  1.0970300436019897,
+                  0.9878900051116943,
+                  0.8342700004577637
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4520,
+                    0
+                  ],
+                  [
+                    4520,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.9185904860496521,
+                    1.3919495940208435
+                  ],
+                  [
+                    0.5819031000137329,
+                    0.4997099041938782
+                  ],
+                  [
+                    0.5819031000137329,
+                    0.5095980763435364
+                  ],
+                  [
+                    0.9185904860496521,
+                    1.4528230130672455
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.6922178365556853,
+                      0.7920498919623369
+                    ],
+                    [
+                      0.6922178365556851,
+                      0.8186432461657731
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1130,
+                      0
+                    ],
+                    [
+                      1130,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/hallway-render-01/model-flat-protected-mask.png",
+            "boundsPx": [
+              1108,
+              504,
+              195,
+              369
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "floor",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "grooved",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            916,
+            276,
+            590,
+            818
+          ],
+          "base": "/media/scenes/hallway-render-01/model-grooved-base.webp",
+          "original": "/media/scenes/hallway-render-01/model-grooved-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-floor-mask.png",
+              "over": "/media/scenes/hallway-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-floor-light.png",
+              "over": "/media/scenes/hallway-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-floor-reflection.png",
+              "over": "/media/scenes/hallway-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-leaf-mask.png",
+              "over": "/media/scenes/hallway-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-leaf-light.png",
+              "over": "/media/scenes/hallway-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-leaf-reflection.png",
+              "over": "/media/scenes/hallway-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-frame-left-mask.png",
+              "over": "/media/scenes/hallway-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-frame-left-light.png",
+              "over": "/media/scenes/hallway-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-frame-left-reflection.png",
+              "over": "/media/scenes/hallway-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-frame-right-mask.png",
+              "over": "/media/scenes/hallway-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-frame-right-light.png",
+              "over": "/media/scenes/hallway-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-frame-right-reflection.png",
+              "over": "/media/scenes/hallway-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-frame-top-mask.png",
+              "over": "/media/scenes/hallway-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-frame-top-light.png",
+              "over": "/media/scenes/hallway-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-frame-top-reflection.png",
+              "over": "/media/scenes/hallway-render-01/frame-top-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-skirting-left-mask.png",
+              "over": "/media/scenes/hallway-render-01/skirting-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-skirting-left-light.png",
+              "over": "/media/scenes/hallway-render-01/skirting-left-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-skirting-left-reflection.png",
+              "over": "/media/scenes/hallway-render-01/skirting-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-skirting-back-left-mask.png",
+              "over": "/media/scenes/hallway-render-01/skirting-back-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-skirting-back-left-light.png",
+              "over": "/media/scenes/hallway-render-01/skirting-back-left-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-skirting-back-left-reflection.png",
+              "over": "/media/scenes/hallway-render-01/skirting-back-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-skirting-right-mask.png",
+              "over": "/media/scenes/hallway-render-01/skirting-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-skirting-right-light.png",
+              "over": "/media/scenes/hallway-render-01/skirting-right-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-grooved-skirting-right-reflection.png",
+              "over": "/media/scenes/hallway-render-01/skirting-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-grooved-floor-mask.png",
+                "boundsPx": [
+                  651,
+                  912,
+                  1026,
+                  888
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-grooved-floor-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-grooved-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.06962614506483078,
+                "tint": [
+                  1.0861799716949463,
+                  0.9948599934577942,
+                  0.843500018119812
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1700,
+                    0
+                  ],
+                  [
+                    1700,
+                    4520
+                  ],
+                  [
+                    0,
+                    4520
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.42663976550102234,
+                    0.5077217817306519
+                  ],
+                  [
+                    0.5833937525749207,
+                    0.5096161067485809
+                  ],
+                  [
+                    0.9279758930206299,
+                    1.453506052494049
+                  ],
+                  [
+                    -0.009417624212801456,
+                    1.3852854371070862
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1700,
+                  "referenceImageSegment01": [
+                    [
+                      0.42663976550102234,
+                      0.5077217817306516
+                    ],
+                    [
+                      0.5833937525749207,
+                      0.5096161067485808
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1700,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/hallway-render-01/floor-position.png",
+                "boundsPx": [
+                  651,
+                  912,
+                  1026,
+                  888
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-grooved-leaf-mask.png",
+                "boundsPx": [
+                  1110,
+                  470,
+                  202,
+                  446
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-grooved-leaf-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-grooved-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.020334068685770035,
+                "tint": [
+                  1.079609990119934,
+                  0.9920700192451477,
+                  0.8494600057601929
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.46323031187057495,
+                    0.26191645860671997
+                  ],
+                  [
+                    0.5462160706520081,
+                    0.2615587115287781
+                  ],
+                  [
+                    0.5462160706520081,
+                    0.5081803500652313
+                  ],
+                  [
+                    0.46323031187057495,
+                    0.5071828961372375
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.46323031187057495,
+                      0.26191645860671997
+                    ],
+                    [
+                      0.5462160706520081,
+                      0.2615587115287781
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-grooved-frame-left-mask.png",
+                "boundsPx": [
+                  1092,
+                  453,
+                  21,
+                  464
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-grooved-frame-left-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-grooved-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.01950221322476864,
+                "tint": [
+                  1.0790799856185913,
+                  0.9915800094604492,
+                  0.8506100177764893
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.45571890473365784,
+                    0.2519224286079407
+                  ],
+                  [
+                    0.46215319633483887,
+                    0.2518904209136963
+                  ],
+                  [
+                    0.46215319633483887,
+                    0.5086883008480072
+                  ],
+                  [
+                    0.45571890473365784,
+                    0.5086102783679962
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.4557189047336578,
+                      0.2519224286079407
+                    ],
+                    [
+                      0.46215319633483876,
+                      0.25189042091369623
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-grooved-frame-right-mask.png",
+                "boundsPx": [
+                  1310,
+                  452,
+                  20,
+                  402
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-grooved-frame-right-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-grooved-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.018647274002432823,
+                "tint": [
+                  1.0773600339889526,
+                  0.9922900199890137,
+                  0.848550021648407
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.5472338795661926,
+                    0.2514667510986328
+                  ],
+                  [
+                    0.5537469387054443,
+                    0.251434326171875
+                  ],
+                  [
+                    0.5537468791007996,
+                    0.5097984373569489
+                  ],
+                  [
+                    0.5472338795661926,
+                    0.5097194910049438
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.5472338795661927,
+                      0.2514667510986328
+                    ],
+                    [
+                      0.5537469387054444,
+                      0.25143432617187506
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-grooved-frame-top-mask.png",
+                "boundsPx": [
+                  1093,
+                  452,
+                  237,
+                  21
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-grooved-frame-top-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-grooved-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.020448973402380943,
+                "tint": [
+                  1.0754499435424805,
+                  0.9920499920845032,
+                  0.8565499782562256
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.45571890473365784,
+                    0.2519224286079407
+                  ],
+                  [
+                    0.5537469387054443,
+                    0.251434326171875
+                  ],
+                  [
+                    0.5537469387054443,
+                    0.26009601354599
+                  ],
+                  [
+                    0.45571890473365784,
+                    0.26052790880203247
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.4557189047336578,
+                      0.2519224286079407
+                    ],
+                    [
+                      0.5537469387054442,
+                      0.251434326171875
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-grooved-skirting-left-mask.png",
+                "boundsPx": [
+                  651,
+                  895,
+                  377,
+                  594
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-grooved-skirting-left-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-grooved-skirting-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.03366730362176895,
+                "tint": [
+                  1.0924700498580933,
+                  0.9889500141143799,
+                  0.8370800018310547
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4520,
+                    0
+                  ],
+                  [
+                    4520,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.42809996008872986,
+                    0.4979516863822937
+                  ],
+                  [
+                    -0.0011245845817029476,
+                    1.3286339342594147
+                  ],
+                  [
+                    -0.0011245845817029476,
+                    1.3858891427516937
+                  ],
+                  [
+                    0.42809996008872986,
+                    0.5077394247055054
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.40496000036999547,
+                      0.5427346653466104
+                    ],
+                    [
+                      0.40496000036999547,
+                      0.5550814263569003
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1130,
+                      0
+                    ],
+                    [
+                      1130,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-grooved-skirting-back-left-mask.png",
+                "boundsPx": [
+                  1023,
+                  895,
+                  72,
+                  22
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-grooved-skirting-back-left-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-grooved-skirting-back-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.014060387387871742,
+                "tint": [
+                  1.081339955329895,
+                  0.9910100102424622,
+                  0.8495200276374817
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    320,
+                    0
+                  ],
+                  [
+                    320,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.42637500166893005,
+                    0.49843907356262207
+                  ],
+                  [
+                    0.45571890473365784,
+                    0.4987754821777344
+                  ],
+                  [
+                    0.45571890473365784,
+                    0.5086102783679962
+                  ],
+                  [
+                    0.42637500166893005,
+                    0.5082546174526215
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 320,
+                  "referenceImageSegment01": [
+                    [
+                      0.42637500166893005,
+                      0.498439073562622
+                    ],
+                    [
+                      0.4557189047336578,
+                      0.4987754821777343
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      320,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-grooved-skirting-right-mask.png",
+                "boundsPx": [
+                  1396,
+                  903,
+                  173,
+                  325
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-grooved-skirting-right-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-grooved-skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02797386422753334,
+                "tint": [
+                  1.0970300436019897,
+                  0.9878900051116943,
+                  0.8342700004577637
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4520,
+                    0
+                  ],
+                  [
+                    4520,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.9185904860496521,
+                    1.3919495940208435
+                  ],
+                  [
+                    0.5819031000137329,
+                    0.4997099041938782
+                  ],
+                  [
+                    0.5819031000137329,
+                    0.5095980763435364
+                  ],
+                  [
+                    0.9185904860496521,
+                    1.4528230130672455
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.6922178365556853,
+                      0.7920498919623369
+                    ],
+                    [
+                      0.6922178365556851,
+                      0.8186432461657731
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1130,
+                      0
+                    ],
+                    [
+                      1130,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/hallway-render-01/model-grooved-protected-mask.png",
+            "boundsPx": [
+              1108,
+              504,
+              195,
+              369
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "floor",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "glass-insert",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            916,
+            276,
+            590,
+            818
+          ],
+          "base": "/media/scenes/hallway-render-01/model-glass-insert-base.webp",
+          "original": "/media/scenes/hallway-render-01/model-glass-insert-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-floor-mask.png",
+              "over": "/media/scenes/hallway-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-floor-light.png",
+              "over": "/media/scenes/hallway-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-floor-reflection.png",
+              "over": "/media/scenes/hallway-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-leaf-mask.png",
+              "over": "/media/scenes/hallway-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-leaf-light.png",
+              "over": "/media/scenes/hallway-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-leaf-reflection.png",
+              "over": "/media/scenes/hallway-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-frame-left-mask.png",
+              "over": "/media/scenes/hallway-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-frame-left-light.png",
+              "over": "/media/scenes/hallway-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-frame-left-reflection.png",
+              "over": "/media/scenes/hallway-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-frame-right-mask.png",
+              "over": "/media/scenes/hallway-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-frame-right-light.png",
+              "over": "/media/scenes/hallway-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-frame-right-reflection.png",
+              "over": "/media/scenes/hallway-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-frame-top-mask.png",
+              "over": "/media/scenes/hallway-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-frame-top-light.png",
+              "over": "/media/scenes/hallway-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-frame-top-reflection.png",
+              "over": "/media/scenes/hallway-render-01/frame-top-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-skirting-left-mask.png",
+              "over": "/media/scenes/hallway-render-01/skirting-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-skirting-left-light.png",
+              "over": "/media/scenes/hallway-render-01/skirting-left-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-skirting-left-reflection.png",
+              "over": "/media/scenes/hallway-render-01/skirting-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-skirting-back-left-mask.png",
+              "over": "/media/scenes/hallway-render-01/skirting-back-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-skirting-back-left-light.png",
+              "over": "/media/scenes/hallway-render-01/skirting-back-left-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-skirting-back-left-reflection.png",
+              "over": "/media/scenes/hallway-render-01/skirting-back-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-skirting-right-mask.png",
+              "over": "/media/scenes/hallway-render-01/skirting-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-skirting-right-light.png",
+              "over": "/media/scenes/hallway-render-01/skirting-right-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-glass-insert-skirting-right-reflection.png",
+              "over": "/media/scenes/hallway-render-01/skirting-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-glass-insert-floor-mask.png",
+                "boundsPx": [
+                  651,
+                  912,
+                  1026,
+                  888
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-glass-insert-floor-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-glass-insert-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.06962614506483078,
+                "tint": [
+                  1.0861799716949463,
+                  0.9948599934577942,
+                  0.843500018119812
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1700,
+                    0
+                  ],
+                  [
+                    1700,
+                    4520
+                  ],
+                  [
+                    0,
+                    4520
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.42663976550102234,
+                    0.5077217817306519
+                  ],
+                  [
+                    0.5833937525749207,
+                    0.5096161067485809
+                  ],
+                  [
+                    0.9279758930206299,
+                    1.453506052494049
+                  ],
+                  [
+                    -0.009417624212801456,
+                    1.3852854371070862
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1700,
+                  "referenceImageSegment01": [
+                    [
+                      0.42663976550102234,
+                      0.5077217817306516
+                    ],
+                    [
+                      0.5833937525749207,
+                      0.5096161067485808
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1700,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/hallway-render-01/floor-position.png",
+                "boundsPx": [
+                  651,
+                  912,
+                  1026,
+                  888
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-glass-insert-leaf-mask.png",
+                "boundsPx": [
+                  1110,
+                  470,
+                  202,
+                  446
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-glass-insert-leaf-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-glass-insert-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.037476010620594025,
+                "tint": [
+                  1.0793399810791016,
+                  0.9917799830436707,
+                  0.8492900133132935
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.46323031187057495,
+                    0.26191645860671997
+                  ],
+                  [
+                    0.5462160706520081,
+                    0.2615587115287781
+                  ],
+                  [
+                    0.5462160706520081,
+                    0.5081803500652313
+                  ],
+                  [
+                    0.46323031187057495,
+                    0.5071828961372375
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.46323031187057495,
+                      0.26191645860671997
+                    ],
+                    [
+                      0.5462160706520081,
+                      0.2615587115287781
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-glass-insert-frame-left-mask.png",
+                "boundsPx": [
+                  1092,
+                  453,
+                  21,
+                  464
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-glass-insert-frame-left-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-glass-insert-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02008638344705105,
+                "tint": [
+                  1.078909993171692,
+                  0.9916499853134155,
+                  0.8503599762916565
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.45571890473365784,
+                    0.2519224286079407
+                  ],
+                  [
+                    0.46215319633483887,
+                    0.2518904209136963
+                  ],
+                  [
+                    0.46215319633483887,
+                    0.5086883008480072
+                  ],
+                  [
+                    0.45571890473365784,
+                    0.5086102783679962
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.4557189047336578,
+                      0.2519224286079407
+                    ],
+                    [
+                      0.46215319633483876,
+                      0.25189042091369623
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-glass-insert-frame-right-mask.png",
+                "boundsPx": [
+                  1309,
+                  452,
+                  21,
+                  402
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-glass-insert-frame-right-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-glass-insert-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.018910910934209824,
+                "tint": [
+                  1.0772500038146973,
+                  0.9923499822616577,
+                  0.8482400178909302
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.5472338795661926,
+                    0.2514667510986328
+                  ],
+                  [
+                    0.5537469387054443,
+                    0.251434326171875
+                  ],
+                  [
+                    0.5537468791007996,
+                    0.5097984373569489
+                  ],
+                  [
+                    0.5472338795661926,
+                    0.5097194910049438
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.5472338795661927,
+                      0.2514667510986328
+                    ],
+                    [
+                      0.5537469387054444,
+                      0.25143432617187506
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-glass-insert-frame-top-mask.png",
+                "boundsPx": [
+                  1093,
+                  452,
+                  237,
+                  21
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-glass-insert-frame-top-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-glass-insert-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02065708301961422,
+                "tint": [
+                  1.0753300189971924,
+                  0.9921200275421143,
+                  0.8562700152397156
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.45571890473365784,
+                    0.2519224286079407
+                  ],
+                  [
+                    0.5537469387054443,
+                    0.251434326171875
+                  ],
+                  [
+                    0.5537469387054443,
+                    0.26009601354599
+                  ],
+                  [
+                    0.45571890473365784,
+                    0.26052790880203247
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.4557189047336578,
+                      0.2519224286079407
+                    ],
+                    [
+                      0.5537469387054442,
+                      0.251434326171875
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-glass-insert-skirting-left-mask.png",
+                "boundsPx": [
+                  651,
+                  895,
+                  377,
+                  594
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-glass-insert-skirting-left-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-glass-insert-skirting-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.03366730362176895,
+                "tint": [
+                  1.0924700498580933,
+                  0.9889500141143799,
+                  0.8370800018310547
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4520,
+                    0
+                  ],
+                  [
+                    4520,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.42809996008872986,
+                    0.4979516863822937
+                  ],
+                  [
+                    -0.0011245845817029476,
+                    1.3286339342594147
+                  ],
+                  [
+                    -0.0011245845817029476,
+                    1.3858891427516937
+                  ],
+                  [
+                    0.42809996008872986,
+                    0.5077394247055054
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.40496000036999547,
+                      0.5427346653466104
+                    ],
+                    [
+                      0.40496000036999547,
+                      0.5550814263569003
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1130,
+                      0
+                    ],
+                    [
+                      1130,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-glass-insert-skirting-back-left-mask.png",
+                "boundsPx": [
+                  1023,
+                  895,
+                  72,
+                  22
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-glass-insert-skirting-back-left-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-glass-insert-skirting-back-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.014060387387871742,
+                "tint": [
+                  1.081220030784607,
+                  0.9910600185394287,
+                  0.8494300246238708
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    320,
+                    0
+                  ],
+                  [
+                    320,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.42637500166893005,
+                    0.49843907356262207
+                  ],
+                  [
+                    0.45571890473365784,
+                    0.4987754821777344
+                  ],
+                  [
+                    0.45571890473365784,
+                    0.5086102783679962
+                  ],
+                  [
+                    0.42637500166893005,
+                    0.5082546174526215
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 320,
+                  "referenceImageSegment01": [
+                    [
+                      0.42637500166893005,
+                      0.498439073562622
+                    ],
+                    [
+                      0.4557189047336578,
+                      0.4987754821777343
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      320,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-glass-insert-skirting-right-mask.png",
+                "boundsPx": [
+                  1396,
+                  903,
+                  173,
+                  325
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-glass-insert-skirting-right-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-glass-insert-skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02797386422753334,
+                "tint": [
+                  1.0970300436019897,
+                  0.9878900051116943,
+                  0.8342700004577637
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4520,
+                    0
+                  ],
+                  [
+                    4520,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.9185904860496521,
+                    1.3919495940208435
+                  ],
+                  [
+                    0.5819031000137329,
+                    0.4997099041938782
+                  ],
+                  [
+                    0.5819031000137329,
+                    0.5095980763435364
+                  ],
+                  [
+                    0.9185904860496521,
+                    1.4528230130672455
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.6922178365556853,
+                      0.7920498919623369
+                    ],
+                    [
+                      0.6922178365556851,
+                      0.8186432461657731
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1130,
+                      0
+                    ],
+                    [
+                      1130,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/hallway-render-01/model-glass-insert-protected-mask.png",
+            "boundsPx": [
+              1108,
+              504,
+              195,
+              369
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "floor",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "filomuro",
+        "frameType": "concealed-aluminium",
+        "patch": {
+          "regionPx": [
+            916,
+            276,
+            590,
+            818
+          ],
+          "base": "/media/scenes/hallway-render-01/model-filomuro-base.webp",
+          "original": "/media/scenes/hallway-render-01/model-filomuro-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-floor-mask.png",
+              "over": "/media/scenes/hallway-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-floor-light.png",
+              "over": "/media/scenes/hallway-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-floor-reflection.png",
+              "over": "/media/scenes/hallway-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-leaf-mask.png",
+              "over": "/media/scenes/hallway-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-leaf-light.png",
+              "over": "/media/scenes/hallway-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-leaf-reflection.png",
+              "over": "/media/scenes/hallway-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-skirting-left-mask.png",
+              "over": "/media/scenes/hallway-render-01/skirting-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-skirting-left-light.png",
+              "over": "/media/scenes/hallway-render-01/skirting-left-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-skirting-left-reflection.png",
+              "over": "/media/scenes/hallway-render-01/skirting-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-skirting-back-left-mask.png",
+              "over": "/media/scenes/hallway-render-01/skirting-back-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-skirting-back-left-light.png",
+              "over": "/media/scenes/hallway-render-01/skirting-back-left-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-skirting-back-left-reflection.png",
+              "over": "/media/scenes/hallway-render-01/skirting-back-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-skirting-right-mask.png",
+              "over": "/media/scenes/hallway-render-01/skirting-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-skirting-right-light.png",
+              "over": "/media/scenes/hallway-render-01/skirting-right-light.png"
+            },
+            {
+              "image": "/media/scenes/hallway-render-01/model-filomuro-skirting-right-reflection.png",
+              "over": "/media/scenes/hallway-render-01/skirting-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-filomuro-floor-mask.png",
+                "boundsPx": [
+                  651,
+                  912,
+                  1026,
+                  888
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-filomuro-floor-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-filomuro-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.06962614506483078,
+                "tint": [
+                  1.0861799716949463,
+                  0.9948599934577942,
+                  0.843500018119812
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1700,
+                    0
+                  ],
+                  [
+                    1700,
+                    4520
+                  ],
+                  [
+                    0,
+                    4520
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.42663976550102234,
+                    0.5077217817306519
+                  ],
+                  [
+                    0.5833937525749207,
+                    0.5096161067485809
+                  ],
+                  [
+                    0.9279758930206299,
+                    1.453506052494049
+                  ],
+                  [
+                    -0.009417624212801456,
+                    1.3852854371070862
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1700,
+                  "referenceImageSegment01": [
+                    [
+                      0.42663976550102234,
+                      0.5077217817306516
+                    ],
+                    [
+                      0.5833937525749207,
+                      0.5096161067485808
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1700,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/hallway-render-01/floor-position.png",
+                "boundsPx": [
+                  651,
+                  912,
+                  1026,
+                  888
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-filomuro-leaf-mask.png",
+                "boundsPx": [
+                  1110,
+                  470,
+                  202,
+                  446
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-filomuro-leaf-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-filomuro-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02042624168097973,
+                "tint": [
+                  1.079990029335022,
+                  0.9920399785041809,
+                  0.8485400080680847
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.46323031187057495,
+                    0.26191645860671997
+                  ],
+                  [
+                    0.5462160706520081,
+                    0.2615587115287781
+                  ],
+                  [
+                    0.5462160706520081,
+                    0.5081803500652313
+                  ],
+                  [
+                    0.46323031187057495,
+                    0.5071828961372375
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.46323031187057495,
+                      0.26191645860671997
+                    ],
+                    [
+                      0.5462160706520081,
+                      0.2615587115287781
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "skirting-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-filomuro-skirting-left-mask.png",
+                "boundsPx": [
+                  651,
+                  895,
+                  377,
+                  594
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-filomuro-skirting-left-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-filomuro-skirting-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.03366730362176895,
+                "tint": [
+                  1.0924700498580933,
+                  0.9889500141143799,
+                  0.8370800018310547
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4520,
+                    0
+                  ],
+                  [
+                    4520,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.42809996008872986,
+                    0.4979516863822937
+                  ],
+                  [
+                    -0.0011245845817029476,
+                    1.3286339342594147
+                  ],
+                  [
+                    -0.0011245845817029476,
+                    1.3858891427516937
+                  ],
+                  [
+                    0.42809996008872986,
+                    0.5077394247055054
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.40496000036999547,
+                      0.5427346653466104
+                    ],
+                    [
+                      0.40496000036999547,
+                      0.5550814263569003
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1130,
+                      0
+                    ],
+                    [
+                      1130,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-filomuro-skirting-back-left-mask.png",
+                "boundsPx": [
+                  1023,
+                  895,
+                  90,
+                  22
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-filomuro-skirting-back-left-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-filomuro-skirting-back-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.014060387387871742,
+                "tint": [
+                  1.0814399719238281,
+                  0.9910600185394287,
+                  0.8487799763679504
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    397,
+                    0
+                  ],
+                  [
+                    397,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.42637500166893005,
+                    0.49843907356262207
+                  ],
+                  [
+                    0.4627969264984131,
+                    0.49885666370391846
+                  ],
+                  [
+                    0.4627969264984131,
+                    0.5086960792541504
+                  ],
+                  [
+                    0.42637500166893005,
+                    0.5082546174526215
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 397,
+                  "referenceImageSegment01": [
+                    [
+                      0.42637500166893005,
+                      0.4984390735626222
+                    ],
+                    [
+                      0.46279692649841314,
+                      0.4988566637039186
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      397,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/hallway-render-01/model-filomuro-skirting-right-mask.png",
+                "boundsPx": [
+                  1396,
+                  903,
+                  173,
+                  325
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/hallway-render-01/model-filomuro-skirting-right-light.png",
+                "baselineLinear": 1.0741195841240754,
+                "shadeMin": 0,
+                "shadeMax": 0.931,
+                "specular": "/media/scenes/hallway-render-01/model-filomuro-skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02797386422753334,
+                "tint": [
+                  1.0970300436019897,
+                  0.9878900051116943,
+                  0.8342700004577637
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4520,
+                    0
+                  ],
+                  [
+                    4520,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.9185904860496521,
+                    1.3919495940208435
+                  ],
+                  [
+                    0.5819031000137329,
+                    0.4997099041938782
+                  ],
+                  [
+                    0.5819031000137329,
+                    0.5095980763435364
+                  ],
+                  [
+                    0.9185904860496521,
+                    1.4528230130672455
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.6922178365556853,
+                      0.7920498919623369
+                    ],
+                    [
+                      0.6922178365556851,
+                      0.8186432461657731
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1130,
+                      0
+                    ],
+                    [
+                      1130,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/hallway-render-01/model-filomuro-protected-mask.png",
+            "boundsPx": [
+              1267,
+              677,
+              36,
+              30
+            ]
+          },
+          "allowedFrameModes": [
+            "door"
+          ]
+        }
+      }
+    ],
+    "allowedDoorProductIds": [
+      "dera-bardhe",
+      "dera-lis",
+      "dera-kashmir",
+      "dera-antracit"
+    ],
+    "allowedFloorProductIds": [
+      "peshk-natyral-12",
+      "kronotex-d4955",
+      "kronotex-d80582",
+      "kronotex-d80612",
+      "kronotex-d4954",
+      "kronotex-d4763",
+      "kronotex-d4956",
+      "kronotex-d3179",
+      "kronotex-d81162"
+    ],
+    "allowedFrameModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "allowedSkirtingModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "defaultSelection": {
+      "version": 1,
+      "sceneId": "hallway-render-01",
+      "doorProductId": "dera-bardhe",
+      "doorModelId": "flat",
+      "doorFinishId": "gri-celet",
+      "floorProductId": "kronotex-d4955",
+      "frameMode": "door",
+      "skirtingMode": "door",
+      "floorRotationDeg": 0
+    },
+    "assetRevision": "pending"
+  },
+  "renderManifest": "render-manifest.json"
+}

@@ -50,6 +50,6 @@
   "catalogVersion": "phase-5",
   "offline": {
     "enabled": true,
-    "maxStudioDownloadBytes": 20971520
+    "maxStudioDownloadBytes": 50331648
   }
 }

@@ -1,6 +1,6 @@
 import type { StudioSelection, Locale } from '../data/types';
 import type { StudioCatalog, StudioAction } from './types';
-import { compatibleDoor, doorModelsIn } from './compatibility';
+import { compatibleDoor, doorModelsIn, sceneShowsFloor } from './compatibility';
 import { allowedFrameModes } from './door-models';
 import { localize } from '../i18n/messages';
 export const isGlass = (finishId: string, catalog: StudioCatalog) =>
@@ -18,13 +18,14 @@ export function normalizeSelection(candidate: Partial<StudioSelection>, catalog:
   );
   const p = door?.kind === 'door' ? door : catalog.products.find(p => p.id === d.doorProductId)!;
   if (p.kind !== 'door') throw new Error('Studio: invalid default door');
+  // A room without laminate (bathroom) keeps the visitor's floor for the next room.
   const floor = catalog.products.find(
     p =>
       p.id === candidate.floorProductId &&
       p.kind === 'floor' &&
       p.published &&
-      p.compatibleSceneIds.includes(scene.id) &&
-      scene.allowedFloorProductIds.includes(p.id),
+      (!sceneShowsFloor(scene) ||
+        (p.compatibleSceneIds.includes(scene.id) && scene.allowedFloorProductIds.includes(p.id))),
   );
   const finish =
     catalog.materials.doorFinishes.find(
@@ -96,6 +97,8 @@ export function buildCombinationTitle(s: StudioSelection, c: StudioCatalog, l: L
   const door = c.products.find(p => p.id === s.doorProductId)!,
     model = c.materials.doorModels.find(m => m.id === s.doorModelId),
     finish = c.materials.doorFinishes.find(f => f.id === s.doorFinishId)!,
-    floor = c.products.find(p => p.id === s.floorProductId)!;
-  return `${localize(door.name, l)}${model ? ` (${localize(model.name, l)})` : ''} · ${localize(finish.name, l)} + ${localize(floor.name, l)}`;
+    floor = c.products.find(p => p.id === s.floorProductId)!,
+    scene = c.materials.scenes.find(v => v.id === s.sceneId);
+  const doorTitle = `${localize(door.name, l)}${model ? ` (${localize(model.name, l)})` : ''} · ${localize(finish.name, l)}`;
+  return scene && !sceneShowsFloor(scene) ? doorTitle : `${doorTitle} + ${localize(floor.name, l)}`;
 }

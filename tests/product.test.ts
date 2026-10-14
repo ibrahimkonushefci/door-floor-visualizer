@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { loadSiteData } from '../src/lib/data/load';
 import { buildSpecRows, relatedProducts } from '../src/lib/catalog/selectors';
 import { catalogReturnQuery, mergeProductQuery, parseProductQuery } from '../src/lib/catalog/query';
-import { buildInquiryMessage, buildInquiryUrl } from '../src/lib/inquiry/message';
+import { buildInquiryMessage, buildInquiryUrl, inquiryScenes } from '../src/lib/inquiry/message';
 import { resolveContactAction } from '../src/lib/inquiry/links';
 import { localeHref } from '../src/lib/i18n/locales';
 const data = loadSiteData();
@@ -12,7 +12,7 @@ const inquiryData = {
   brand: data.brand,
   products: data.products.products,
   materials: data.materials,
-  scenes: data.materials.scenes,
+  scenes: inquiryScenes(data.materials.scenes),
 };
 describe('product details', () => {
   it('has two distinct, owned gallery views per published seed', () => {

@@ -306,10 +306,14 @@ export interface DoorModelPatch {
   protectedMask: SurfaceMask;
   allowedFrameModes: readonly TrimMode[];
 }
+// Room-type filter in the Studio room picker.
+export const ROOM_TYPES = ['living', 'kitchen', 'bedroom', 'hallway', 'kids', 'bathroom'] as const;
+export type RoomType = (typeof ROOM_TYPES)[number];
 export interface RoomScene {
   id: Id;
   name: LocalizedText;
   description: LocalizedText;
+  roomType?: RoomType; // rendered rooms; retired photo fixtures have none
   width: number; // canonical 1600 (photo) or 2400 (rendered)
   height: number; // canonical 1200 (photo) or 1800 (rendered)
   base: LocalAssetPath; // immutable room photo

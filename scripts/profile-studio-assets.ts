@@ -45,7 +45,10 @@ for (const { variant, scale, maxFrame, limit } of variants(!!definition.render))
     const p = data.products.products.find(p => p.id === doorProductId)!;
     if (p.kind !== 'door') throw Error('door');
     for (const doorFinishId of p.finishIds)
-      for (const floorProductId of definition.allowedFloorProductIds) {
+      // A tiled bathroom offers no floors; its default floor only feeds trim modes.
+      for (const floorProductId of definition.allowedFloorProductIds.length
+        ? definition.allowedFloorProductIds
+        : [definition.defaultSelection.floorProductId]) {
         const materials = await loader.prepare(
           { ...definition.defaultSelection, doorProductId, doorFinishId, floorProductId },
           catalog,
@@ -72,9 +75,10 @@ for (const { variant, scale, maxFrame, limit } of variants(!!definition.render))
       0,
     ) +
     (scene.foreground?.data.byteLength || 0);
-  const mask = scene.surfaces.find(s => s.definition.role === 'floor')!,
-    [bx, by, w, h] = mask.bounds;
+  const mask = scene.surfaces.find(s => s.definition.role === 'floor'),
+    [bx, by, w, h] = mask?.bounds ?? [0, 0, 0, 0];
   let coverage = 0;
+  if (mask)
   for (let y = 0; y < h; y++)
     for (let x = 0; x < w; x++)
       coverage +=
@@ -122,17 +126,12 @@ for (const { variant, scale, maxFrame, limit } of variants(!!definition.render))
     variant,
     editableFloorPercent: (coverage / (W * H)) * 100,
     doorLeafHeightPercent: (leaf[3] / definition.height) * 100,
-    doorWithCasingHeightPercent:
-      ((Math.max(
-        ...definition.surfaces
-          .filter(s => s.role === 'frame')
-          .map(s => s.mask.boundsPx[1] + s.mask.boundsPx[3]),
-      ) -
-        Math.min(
-          ...definition.surfaces.filter(s => s.role === 'frame').map(s => s.mask.boundsPx[1]),
-        )) /
-        definition.height) *
-      100,
+    // Concealed-frame rooms have no casing: the leaf is the whole door.
+    doorWithCasingHeightPercent: (() => {
+      const frames = definition.surfaces.filter(s => s.role === 'frame').map(s => s.mask.boundsPx);
+      if (!frames.length) return (leaf[3] / definition.height) * 100;
+      return ((Math.max(...frames.map(b => b[1] + b[3])) - Math.min(...frames.map(b => b[1]))) / definition.height) * 100;
+    })(),
     firstUsefulBytes,
     firstUsefulTargetBytes: 2.5 * 1024 * 1024,
     ownedBytes: total,

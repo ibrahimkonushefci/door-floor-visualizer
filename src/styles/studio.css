@@ -233,6 +233,34 @@ body:has(.studio-page) .mobile-contact-bar {
 }
 
 /* Rooms: photo cards with the room name beneath */
+/* Room-type filter above the room thumbnails. */
+.studio-room-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+.studio-room-type {
+  min-height: 36px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-md);
+  white-space: nowrap;
+  color: var(--color-text);
+  transition:
+    background-color var(--duration-fast) var(--ease),
+    border-color var(--duration-fast) var(--ease),
+    color var(--duration-fast) var(--ease);
+}
+.studio-room-type:hover {
+  border-color: var(--color-text);
+}
+.studio-room-type[aria-pressed='true'] {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
 .studio-rooms {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));

@@ -1,0 +1,4005 @@
+{
+  "schemaVersion": 1,
+  "kind": "rendered",
+  "scene": {
+    "id": "bedroom-render-01",
+    "name": {
+      "sq": "Dhoma e gjumit",
+      "en": "Bedroom",
+      "de": "Schlafzimmer"
+    },
+    "description": {
+      "sq": "Dhomë gjumi me shtrat dopio dhe perde liri",
+      "en": "Bedroom with a double bed and linen curtains",
+      "de": "Schlafzimmer mit Doppelbett und Leinenvorhängen"
+    },
+    "roomType": "bedroom",
+    "width": 2400,
+    "height": 1800,
+    "base": "/media/scenes/bedroom-render-01/base.webp",
+    "original": "/media/scenes/bedroom-render-01/original.webp",
+    "render": {
+      "source": "blender",
+      "partitionedMasks": true,
+      "toneShoulder": 0.6
+    },
+    "thumbnail": "/media/scenes/bedroom-render-01/thumbnail.webp",
+    "fallback": "/media/scenes/bedroom-render-01/fallback.webp",
+    "frameType": "standard-casing",
+    "depictedDoorSizeMm": {
+      "width": 900,
+      "height": 2000
+    },
+    "surfaces": [
+      {
+        "id": "floor",
+        "role": "floor",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-render-01/floor-mask.png",
+          "boundsPx": [
+            0,
+            951,
+            2400,
+            849
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-render-01/floor-light.png",
+          "baselineLinear": 0.3172447792426667,
+          "shadeMin": 0,
+          "shadeMax": 3.153,
+          "specular": "/media/scenes/bedroom-render-01/floor-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.08762720972299576,
+          "tint": [
+            1.0546499490737915,
+            0.998420000076294,
+            0.9052299857139587
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              4200,
+              0
+            ],
+            [
+              4200,
+              3650
+            ],
+            [
+              0,
+              3650
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.35274839401245117,
+              0.5000609457492828
+            ],
+            [
+              0.835327684879303,
+              0.5664755702018738
+            ],
+            [
+              1.9658639430999756,
+              2.433772087097168
+            ],
+            [
+              -0.2625994384288788,
+              0.8832801803946495
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 4200,
+            "referenceImageSegment01": [
+              [
+                0.35274839401245117,
+                0.5000609457492828
+              ],
+              [
+                0.835327684879303,
+                0.5664755702018739
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                4200,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0,
+        "positionMap": {
+          "image": "/media/scenes/bedroom-render-01/floor-position.png",
+          "boundsPx": [
+            0,
+            951,
+            2400,
+            849
+          ],
+          "originMm": [
+            -300,
+            -300
+          ],
+          "unitMm": 0.1,
+          "stepPx": 4
+        }
+      },
+      {
+        "id": "leaf",
+        "role": "door-leaf",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-render-01/leaf-mask.png",
+          "boundsPx": [
+            1541,
+            383,
+            288,
+            617
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-render-01/leaf-light.png",
+          "baselineLinear": 0.3172447792426667,
+          "shadeMin": 0,
+          "shadeMax": 3.153,
+          "specular": "/media/scenes/bedroom-render-01/leaf-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.031530484557151794,
+          "tint": [
+            1.0589900016784668,
+            0.9937400221824646,
+            0.8968999981880188
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              900,
+              0
+            ],
+            [
+              900,
+              2000
+            ],
+            [
+              0,
+              2000
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.6424142122268677,
+              0.21874523162841797
+            ],
+            [
+              0.7617152333259583,
+              0.21318477392196655
+            ],
+            [
+              0.7617152333259583,
+              0.554977536201477
+            ],
+            [
+              0.6424142718315125,
+              0.538646399974823
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 900,
+            "referenceImageSegment01": [
+              [
+                0.6424142122268677,
+                0.21874523162841797
+              ],
+              [
+                0.7617152333259583,
+                0.21318477392196658
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                900,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-left",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-render-01/frame-left-mask.png",
+          "boundsPx": [
+            1516,
+            370,
+            27,
+            604
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-render-01/frame-left-light.png",
+          "baselineLinear": 0.3172447792426667,
+          "shadeMin": 0,
+          "shadeMax": 3.153,
+          "specular": "/media/scenes/bedroom-render-01/frame-left-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.04391167312860489,
+          "tint": [
+            1.0577000379562378,
+            0.9929599761962891,
+            0.8998100161552429
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              70,
+              0
+            ],
+            [
+              70,
+              2088
+            ],
+            [
+              0,
+              2088
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.6324023008346558,
+              0.2061592936515808
+            ],
+            [
+              0.6410607695579529,
+              0.20569056272506714
+            ],
+            [
+              0.6410607695579529,
+              0.5405857563018799
+            ],
+            [
+              0.6324023008346558,
+              0.5393899381160736
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 70,
+            "referenceImageSegment01": [
+              [
+                0.6324023008346557,
+                0.20615929365158087
+              ],
+              [
+                0.6410607695579528,
+                0.20569056272506717
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-right",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-render-01/frame-right-mask.png",
+          "boundsPx": [
+            1827,
+            357,
+            30,
+            650
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-render-01/frame-right-light.png",
+          "baselineLinear": 0.3172447792426667,
+          "shadeMin": 0,
+          "shadeMax": 3.153,
+          "specular": "/media/scenes/bedroom-render-01/frame-right-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.029836323112249374,
+          "tint": [
+            1.0620299577713013,
+            0.9924899935722351,
+            0.891789972782135
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              70,
+              0
+            ],
+            [
+              70,
+              2088
+            ],
+            [
+              0,
+              2088
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.763463020324707,
+              0.19906377792358398
+            ],
+            [
+              0.7734841704368591,
+              0.19852125644683838
+            ],
+            [
+              0.7734841704368591,
+              0.5588747560977936
+            ],
+            [
+              0.7634629607200623,
+              0.5574907064437866
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 70,
+            "referenceImageSegment01": [
+              [
+                0.7634630203247071,
+                0.199063777923584
+              ],
+              [
+                0.7734841704368592,
+                0.19852125644683838
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-top",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-render-01/frame-top-mask.png",
+          "boundsPx": [
+            1517,
+            356,
+            340,
+            39
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-render-01/frame-top-light.png",
+          "baselineLinear": 0.3172447792426667,
+          "shadeMin": 0,
+          "shadeMax": 3.153,
+          "specular": "/media/scenes/bedroom-render-01/frame-top-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.03402247279882431,
+          "tint": [
+            1.0597100257873535,
+            0.9928900003433228,
+            0.894569993019104
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              1060,
+              0
+            ],
+            [
+              1060,
+              70
+            ],
+            [
+              0,
+              70
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.6324023008346558,
+              0.2061592936515808
+            ],
+            [
+              0.7734841704368591,
+              0.19852125644683838
+            ],
+            [
+              0.7734841704368591,
+              0.21060210466384888
+            ],
+            [
+              0.6324023008346558,
+              0.21733081340789795
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 1060,
+            "referenceImageSegment01": [
+              [
+                0.6324023008346558,
+                0.20615929365158084
+              ],
+              [
+                0.7734841704368591,
+                0.19852125644683843
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1060,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-back-left",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-render-01/skirting-back-left-mask.png",
+          "boundsPx": [
+            1341,
+            929,
+            178,
+            43
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-render-01/skirting-back-left-light.png",
+          "baselineLinear": 0.3172447792426667,
+          "shadeMin": 0,
+          "shadeMax": 3.153,
+          "specular": "/media/scenes/bedroom-render-01/skirting-back-left-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.0680396556854248,
+          "tint": [
+            1.0614900588989258,
+            0.9916700124740601,
+            0.9014700055122375
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              2720,
+              0
+            ],
+            [
+              2720,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.3518204987049103,
+              0.48993808031082153
+            ],
+            [
+              0.6324023008346558,
+              0.5266225039958954
+            ],
+            [
+              0.6324023008346558,
+              0.5393899381160736
+            ],
+            [
+              0.3518204987049103,
+              0.5006388127803802
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 2720,
+            "referenceImageSegment01": [
+              [
+                0.3518204987049102,
+                0.48993808031082153
+              ],
+              [
+                0.6324023008346557,
+                0.5266225039958954
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                2720,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-back-right",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-render-01/skirting-back-right-mask.png",
+          "boundsPx": [
+            1855,
+            979,
+            150,
+            43
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-render-01/skirting-back-right-light.png",
+          "baselineLinear": 0.3172447792426667,
+          "shadeMin": 0,
+          "shadeMax": 3.153,
+          "specular": "/media/scenes/bedroom-render-01/skirting-back-right-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.06000406667590141,
+          "tint": [
+            1.0595500469207764,
+            0.993340015411377,
+            0.8905699849128723
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              420,
+              0
+            ],
+            [
+              420,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.7734841704368591,
+              0.545068085193634
+            ],
+            [
+              0.8359489440917969,
+              0.5532349944114685
+            ],
+            [
+              0.8359489440917969,
+              0.5675017535686493
+            ],
+            [
+              0.7734841704368591,
+              0.5588747560977936
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 420,
+            "referenceImageSegment01": [
+              [
+                0.7734841704368592,
+                0.545068085193634
+              ],
+              [
+                0.835948944091797,
+                0.5532349944114684
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                420,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-right",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/bedroom-render-01/skirting-right-mask.png",
+          "boundsPx": [
+            1999,
+            993,
+            401,
+            530
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/bedroom-render-01/skirting-right-light.png",
+          "baselineLinear": 0.3172447792426667,
+          "shadeMin": 0,
+          "shadeMax": 3.153,
+          "specular": "/media/scenes/bedroom-render-01/skirting-right-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.08728291094303131,
+          "tint": [
+            1.0577600002288818,
+            0.9930999875068665,
+            0.8982700109481812
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              3650,
+              0
+            ],
+            [
+              3650,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              1.93511962890625,
+              2.2997204065322876
+            ],
+            [
+              0.8328821063041687,
+              0.5519449412822723
+            ],
+            [
+              0.8328821063041687,
+              0.5661390125751495
+            ],
+            [
+              1.9351195096969604,
+              2.412380814552307
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 80,
+            "referenceImageSegment01": [
+              [
+                0.9799639985429284,
+                0.785167016711703
+              ],
+              [
+                0.9799639946835667,
+                0.8125003951629028
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                1642.5,
+                0
+              ],
+              [
+                1642.5,
+                80
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      }
+    ],
+    "protectedMask": {
+      "alpha": "/media/scenes/bedroom-render-01/protected-mask.png",
+      "boundsPx": [
+        1552,
+        429,
+        281,
+        515
+      ]
+    },
+    "foreground": null,
+    "doorInserts": [],
+    "doorModels": [
+      {
+        "modelId": "flat",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            1340,
+            180,
+            694,
+            1004
+          ],
+          "base": "/media/scenes/bedroom-render-01/model-flat-base.webp",
+          "original": "/media/scenes/bedroom-render-01/model-flat-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-floor-mask.png",
+              "over": "/media/scenes/bedroom-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-floor-light.png",
+              "over": "/media/scenes/bedroom-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-floor-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-leaf-mask.png",
+              "over": "/media/scenes/bedroom-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-leaf-light.png",
+              "over": "/media/scenes/bedroom-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-leaf-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-frame-left-mask.png",
+              "over": "/media/scenes/bedroom-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-frame-left-light.png",
+              "over": "/media/scenes/bedroom-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-frame-left-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-frame-right-mask.png",
+              "over": "/media/scenes/bedroom-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-frame-right-light.png",
+              "over": "/media/scenes/bedroom-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-frame-right-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-frame-top-mask.png",
+              "over": "/media/scenes/bedroom-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-frame-top-light.png",
+              "over": "/media/scenes/bedroom-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-frame-top-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/frame-top-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-skirting-back-left-mask.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-skirting-back-left-light.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-left-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-skirting-back-left-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-skirting-back-right-mask.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-skirting-back-right-light.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-skirting-back-right-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-skirting-right-mask.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-skirting-right-light.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-flat-skirting-right-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-flat-floor-mask.png",
+                "boundsPx": [
+                  0,
+                  951,
+                  2400,
+                  849
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-flat-floor-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-flat-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.08762720972299576,
+                "tint": [
+                  1.0546499490737915,
+                  0.998420000076294,
+                  0.9052299857139587
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4200,
+                    0
+                  ],
+                  [
+                    4200,
+                    3650
+                  ],
+                  [
+                    0,
+                    3650
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.35274839401245117,
+                    0.5000609457492828
+                  ],
+                  [
+                    0.835327684879303,
+                    0.5664755702018738
+                  ],
+                  [
+                    1.9658639430999756,
+                    2.433772087097168
+                  ],
+                  [
+                    -0.2625994384288788,
+                    0.8832801803946495
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 4200,
+                  "referenceImageSegment01": [
+                    [
+                      0.35274839401245117,
+                      0.5000609457492828
+                    ],
+                    [
+                      0.835327684879303,
+                      0.5664755702018739
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      4200,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/bedroom-render-01/floor-position.png",
+                "boundsPx": [
+                  0,
+                  951,
+                  2400,
+                  849
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-flat-leaf-mask.png",
+                "boundsPx": [
+                  1541,
+                  383,
+                  288,
+                  617
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-flat-leaf-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-flat-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.031530484557151794,
+                "tint": [
+                  1.0589900016784668,
+                  0.9937400221824646,
+                  0.8968999981880188
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.6424142122268677,
+                    0.21874523162841797
+                  ],
+                  [
+                    0.7617152333259583,
+                    0.21318477392196655
+                  ],
+                  [
+                    0.7617152333259583,
+                    0.554977536201477
+                  ],
+                  [
+                    0.6424142718315125,
+                    0.538646399974823
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.6424142122268677,
+                      0.21874523162841797
+                    ],
+                    [
+                      0.7617152333259583,
+                      0.21318477392196658
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-flat-frame-left-mask.png",
+                "boundsPx": [
+                  1516,
+                  370,
+                  27,
+                  604
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-flat-frame-left-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-flat-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.04391167312860489,
+                "tint": [
+                  1.0577000379562378,
+                  0.9929599761962891,
+                  0.8998100161552429
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.6324023008346558,
+                    0.2061592936515808
+                  ],
+                  [
+                    0.6410607695579529,
+                    0.20569056272506714
+                  ],
+                  [
+                    0.6410607695579529,
+                    0.5405857563018799
+                  ],
+                  [
+                    0.6324023008346558,
+                    0.5393899381160736
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.6324023008346557,
+                      0.20615929365158087
+                    ],
+                    [
+                      0.6410607695579528,
+                      0.20569056272506717
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-flat-frame-right-mask.png",
+                "boundsPx": [
+                  1827,
+                  357,
+                  30,
+                  650
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-flat-frame-right-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-flat-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.029836323112249374,
+                "tint": [
+                  1.0620299577713013,
+                  0.9924899935722351,
+                  0.891789972782135
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.763463020324707,
+                    0.19906377792358398
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.19852125644683838
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.5588747560977936
+                  ],
+                  [
+                    0.7634629607200623,
+                    0.5574907064437866
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.7634630203247071,
+                      0.199063777923584
+                    ],
+                    [
+                      0.7734841704368592,
+                      0.19852125644683838
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-flat-frame-top-mask.png",
+                "boundsPx": [
+                  1517,
+                  356,
+                  340,
+                  39
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-flat-frame-top-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-flat-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.03402247279882431,
+                "tint": [
+                  1.0597100257873535,
+                  0.9928900003433228,
+                  0.894569993019104
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.6324023008346558,
+                    0.2061592936515808
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.19852125644683838
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.21060210466384888
+                  ],
+                  [
+                    0.6324023008346558,
+                    0.21733081340789795
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.6324023008346558,
+                      0.20615929365158084
+                    ],
+                    [
+                      0.7734841704368591,
+                      0.19852125644683843
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-flat-skirting-back-left-mask.png",
+                "boundsPx": [
+                  1341,
+                  929,
+                  178,
+                  43
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-flat-skirting-back-left-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-flat-skirting-back-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.0680396556854248,
+                "tint": [
+                  1.0614900588989258,
+                  0.9916700124740601,
+                  0.9014700055122375
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2720,
+                    0
+                  ],
+                  [
+                    2720,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3518204987049103,
+                    0.48993808031082153
+                  ],
+                  [
+                    0.6324023008346558,
+                    0.5266225039958954
+                  ],
+                  [
+                    0.6324023008346558,
+                    0.5393899381160736
+                  ],
+                  [
+                    0.3518204987049103,
+                    0.5006388127803802
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 2720,
+                  "referenceImageSegment01": [
+                    [
+                      0.3518204987049102,
+                      0.48993808031082153
+                    ],
+                    [
+                      0.6324023008346557,
+                      0.5266225039958954
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      2720,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-flat-skirting-back-right-mask.png",
+                "boundsPx": [
+                  1855,
+                  979,
+                  150,
+                  43
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-flat-skirting-back-right-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-flat-skirting-back-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.06000406667590141,
+                "tint": [
+                  1.0595500469207764,
+                  0.993340015411377,
+                  0.8905699849128723
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    420,
+                    0
+                  ],
+                  [
+                    420,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.7734841704368591,
+                    0.545068085193634
+                  ],
+                  [
+                    0.8359489440917969,
+                    0.5532349944114685
+                  ],
+                  [
+                    0.8359489440917969,
+                    0.5675017535686493
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.5588747560977936
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 420,
+                  "referenceImageSegment01": [
+                    [
+                      0.7734841704368592,
+                      0.545068085193634
+                    ],
+                    [
+                      0.835948944091797,
+                      0.5532349944114684
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      420,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-flat-skirting-right-mask.png",
+                "boundsPx": [
+                  1999,
+                  993,
+                  401,
+                  530
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-flat-skirting-right-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-flat-skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.08728291094303131,
+                "tint": [
+                  1.0577600002288818,
+                  0.9930999875068665,
+                  0.8982700109481812
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3650,
+                    0
+                  ],
+                  [
+                    3650,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    1.93511962890625,
+                    2.2997204065322876
+                  ],
+                  [
+                    0.8328821063041687,
+                    0.5519449412822723
+                  ],
+                  [
+                    0.8328821063041687,
+                    0.5661390125751495
+                  ],
+                  [
+                    1.9351195096969604,
+                    2.412380814552307
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.9799639985429284,
+                      0.785167016711703
+                    ],
+                    [
+                      0.9799639946835667,
+                      0.8125003951629028
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1642.5,
+                      0
+                    ],
+                    [
+                      1642.5,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/bedroom-render-01/model-flat-protected-mask.png",
+            "boundsPx": [
+              1552,
+              429,
+              281,
+              515
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "floor",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "grooved",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            1340,
+            180,
+            694,
+            1004
+          ],
+          "base": "/media/scenes/bedroom-render-01/model-grooved-base.webp",
+          "original": "/media/scenes/bedroom-render-01/model-grooved-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-floor-mask.png",
+              "over": "/media/scenes/bedroom-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-floor-light.png",
+              "over": "/media/scenes/bedroom-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-floor-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-leaf-mask.png",
+              "over": "/media/scenes/bedroom-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-leaf-light.png",
+              "over": "/media/scenes/bedroom-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-leaf-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-frame-left-mask.png",
+              "over": "/media/scenes/bedroom-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-frame-left-light.png",
+              "over": "/media/scenes/bedroom-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-frame-left-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-frame-right-mask.png",
+              "over": "/media/scenes/bedroom-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-frame-right-light.png",
+              "over": "/media/scenes/bedroom-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-frame-right-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-frame-top-mask.png",
+              "over": "/media/scenes/bedroom-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-frame-top-light.png",
+              "over": "/media/scenes/bedroom-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-frame-top-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/frame-top-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-skirting-back-left-mask.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-skirting-back-left-light.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-left-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-skirting-back-left-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-skirting-back-right-mask.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-skirting-back-right-light.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-skirting-back-right-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-skirting-right-mask.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-skirting-right-light.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-grooved-skirting-right-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-grooved-floor-mask.png",
+                "boundsPx": [
+                  0,
+                  951,
+                  2400,
+                  849
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-grooved-floor-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-grooved-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.08762720972299576,
+                "tint": [
+                  1.0546499490737915,
+                  0.998420000076294,
+                  0.9052299857139587
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4200,
+                    0
+                  ],
+                  [
+                    4200,
+                    3650
+                  ],
+                  [
+                    0,
+                    3650
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.35274839401245117,
+                    0.5000609457492828
+                  ],
+                  [
+                    0.835327684879303,
+                    0.5664755702018738
+                  ],
+                  [
+                    1.9658639430999756,
+                    2.433772087097168
+                  ],
+                  [
+                    -0.2625994384288788,
+                    0.8832801803946495
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 4200,
+                  "referenceImageSegment01": [
+                    [
+                      0.35274839401245117,
+                      0.5000609457492828
+                    ],
+                    [
+                      0.835327684879303,
+                      0.5664755702018739
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      4200,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/bedroom-render-01/floor-position.png",
+                "boundsPx": [
+                  0,
+                  951,
+                  2400,
+                  849
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-grooved-leaf-mask.png",
+                "boundsPx": [
+                  1541,
+                  383,
+                  288,
+                  617
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-grooved-leaf-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-grooved-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.030683208256959915,
+                "tint": [
+                  1.059000015258789,
+                  0.9936599731445312,
+                  0.8969200253486633
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.6424142122268677,
+                    0.21874523162841797
+                  ],
+                  [
+                    0.7617152333259583,
+                    0.21318477392196655
+                  ],
+                  [
+                    0.7617152333259583,
+                    0.554977536201477
+                  ],
+                  [
+                    0.6424142718315125,
+                    0.538646399974823
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.6424142122268677,
+                      0.21874523162841797
+                    ],
+                    [
+                      0.7617152333259583,
+                      0.21318477392196658
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-grooved-frame-left-mask.png",
+                "boundsPx": [
+                  1516,
+                  370,
+                  27,
+                  604
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-grooved-frame-left-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-grooved-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.04132744297385216,
+                "tint": [
+                  1.0576000213623047,
+                  0.9929800033569336,
+                  0.8998900055885315
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.6324023008346558,
+                    0.2061592936515808
+                  ],
+                  [
+                    0.6410607695579529,
+                    0.20569056272506714
+                  ],
+                  [
+                    0.6410607695579529,
+                    0.5405857563018799
+                  ],
+                  [
+                    0.6324023008346558,
+                    0.5393899381160736
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.6324023008346557,
+                      0.20615929365158087
+                    ],
+                    [
+                      0.6410607695579528,
+                      0.20569056272506717
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-grooved-frame-right-mask.png",
+                "boundsPx": [
+                  1827,
+                  357,
+                  30,
+                  650
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-grooved-frame-right-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-grooved-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.028526905924081802,
+                "tint": [
+                  1.0621600151062012,
+                  0.9924499988555908,
+                  0.8917800188064575
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.763463020324707,
+                    0.19906377792358398
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.19852125644683838
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.5588747560977936
+                  ],
+                  [
+                    0.7634629607200623,
+                    0.5574907064437866
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.7634630203247071,
+                      0.199063777923584
+                    ],
+                    [
+                      0.7734841704368592,
+                      0.19852125644683838
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-grooved-frame-top-mask.png",
+                "boundsPx": [
+                  1517,
+                  356,
+                  340,
+                  39
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-grooved-frame-top-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-grooved-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.03342663124203682,
+                "tint": [
+                  1.059689998626709,
+                  0.992900013923645,
+                  0.8945900201797485
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.6324023008346558,
+                    0.2061592936515808
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.19852125644683838
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.21060210466384888
+                  ],
+                  [
+                    0.6324023008346558,
+                    0.21733081340789795
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.6324023008346558,
+                      0.20615929365158084
+                    ],
+                    [
+                      0.7734841704368591,
+                      0.19852125644683843
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-grooved-skirting-back-left-mask.png",
+                "boundsPx": [
+                  1341,
+                  929,
+                  178,
+                  43
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-grooved-skirting-back-left-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-grooved-skirting-back-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.0680396556854248,
+                "tint": [
+                  1.0615899562835693,
+                  0.9916399717330933,
+                  0.9014899730682373
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2720,
+                    0
+                  ],
+                  [
+                    2720,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3518204987049103,
+                    0.48993808031082153
+                  ],
+                  [
+                    0.6324023008346558,
+                    0.5266225039958954
+                  ],
+                  [
+                    0.6324023008346558,
+                    0.5393899381160736
+                  ],
+                  [
+                    0.3518204987049103,
+                    0.5006388127803802
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 2720,
+                  "referenceImageSegment01": [
+                    [
+                      0.3518204987049102,
+                      0.48993808031082153
+                    ],
+                    [
+                      0.6324023008346557,
+                      0.5266225039958954
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      2720,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-grooved-skirting-back-right-mask.png",
+                "boundsPx": [
+                  1855,
+                  979,
+                  150,
+                  43
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-grooved-skirting-back-right-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-grooved-skirting-back-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.06000406667590141,
+                "tint": [
+                  1.0597699880599976,
+                  0.9932799935340881,
+                  0.8905199766159058
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    420,
+                    0
+                  ],
+                  [
+                    420,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.7734841704368591,
+                    0.545068085193634
+                  ],
+                  [
+                    0.8359489440917969,
+                    0.5532349944114685
+                  ],
+                  [
+                    0.8359489440917969,
+                    0.5675017535686493
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.5588747560977936
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 420,
+                  "referenceImageSegment01": [
+                    [
+                      0.7734841704368592,
+                      0.545068085193634
+                    ],
+                    [
+                      0.835948944091797,
+                      0.5532349944114684
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      420,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-grooved-skirting-right-mask.png",
+                "boundsPx": [
+                  1999,
+                  993,
+                  401,
+                  530
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-grooved-skirting-right-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-grooved-skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.08728291094303131,
+                "tint": [
+                  1.0577600002288818,
+                  0.9930999875068665,
+                  0.8982700109481812
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3650,
+                    0
+                  ],
+                  [
+                    3650,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    1.93511962890625,
+                    2.2997204065322876
+                  ],
+                  [
+                    0.8328821063041687,
+                    0.5519449412822723
+                  ],
+                  [
+                    0.8328821063041687,
+                    0.5661390125751495
+                  ],
+                  [
+                    1.9351195096969604,
+                    2.412380814552307
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.9799639985429284,
+                      0.785167016711703
+                    ],
+                    [
+                      0.9799639946835667,
+                      0.8125003951629028
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1642.5,
+                      0
+                    ],
+                    [
+                      1642.5,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/bedroom-render-01/model-grooved-protected-mask.png",
+            "boundsPx": [
+              1552,
+              429,
+              281,
+              515
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "floor",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "glass-insert",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            1340,
+            180,
+            694,
+            1004
+          ],
+          "base": "/media/scenes/bedroom-render-01/model-glass-insert-base.webp",
+          "original": "/media/scenes/bedroom-render-01/model-glass-insert-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-floor-mask.png",
+              "over": "/media/scenes/bedroom-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-floor-light.png",
+              "over": "/media/scenes/bedroom-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-floor-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-leaf-mask.png",
+              "over": "/media/scenes/bedroom-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-leaf-light.png",
+              "over": "/media/scenes/bedroom-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-leaf-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-frame-left-mask.png",
+              "over": "/media/scenes/bedroom-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-frame-left-light.png",
+              "over": "/media/scenes/bedroom-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-frame-left-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-frame-right-mask.png",
+              "over": "/media/scenes/bedroom-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-frame-right-light.png",
+              "over": "/media/scenes/bedroom-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-frame-right-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-frame-top-mask.png",
+              "over": "/media/scenes/bedroom-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-frame-top-light.png",
+              "over": "/media/scenes/bedroom-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-frame-top-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/frame-top-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-back-left-mask.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-back-left-light.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-left-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-back-left-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-back-right-mask.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-back-right-light.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-back-right-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-right-mask.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-right-light.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-right-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-glass-insert-floor-mask.png",
+                "boundsPx": [
+                  0,
+                  951,
+                  2400,
+                  849
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-glass-insert-floor-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-glass-insert-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.08762720972299576,
+                "tint": [
+                  1.0546499490737915,
+                  0.998420000076294,
+                  0.9052299857139587
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4200,
+                    0
+                  ],
+                  [
+                    4200,
+                    3650
+                  ],
+                  [
+                    0,
+                    3650
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.35274839401245117,
+                    0.5000609457492828
+                  ],
+                  [
+                    0.835327684879303,
+                    0.5664755702018738
+                  ],
+                  [
+                    1.9658639430999756,
+                    2.433772087097168
+                  ],
+                  [
+                    -0.2625994384288788,
+                    0.8832801803946495
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 4200,
+                  "referenceImageSegment01": [
+                    [
+                      0.35274839401245117,
+                      0.5000609457492828
+                    ],
+                    [
+                      0.835327684879303,
+                      0.5664755702018739
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      4200,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/bedroom-render-01/floor-position.png",
+                "boundsPx": [
+                  0,
+                  951,
+                  2400,
+                  849
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-glass-insert-leaf-mask.png",
+                "boundsPx": [
+                  1541,
+                  383,
+                  288,
+                  617
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-glass-insert-leaf-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-glass-insert-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.08788417279720306,
+                "tint": [
+                  1.0583499670028687,
+                  0.9925500154495239,
+                  0.8967599868774414
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.6424142122268677,
+                    0.21874523162841797
+                  ],
+                  [
+                    0.7617152333259583,
+                    0.21318477392196655
+                  ],
+                  [
+                    0.7617152333259583,
+                    0.554977536201477
+                  ],
+                  [
+                    0.6424142718315125,
+                    0.538646399974823
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.6424142122268677,
+                      0.21874523162841797
+                    ],
+                    [
+                      0.7617152333259583,
+                      0.21318477392196658
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-glass-insert-frame-left-mask.png",
+                "boundsPx": [
+                  1516,
+                  370,
+                  27,
+                  604
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-glass-insert-frame-left-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-glass-insert-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.04269858077168465,
+                "tint": [
+                  1.0575900077819824,
+                  0.9929999709129333,
+                  0.8997300267219543
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.6324023008346558,
+                    0.2061592936515808
+                  ],
+                  [
+                    0.6410607695579529,
+                    0.20569056272506714
+                  ],
+                  [
+                    0.6410607695579529,
+                    0.5405857563018799
+                  ],
+                  [
+                    0.6324023008346558,
+                    0.5393899381160736
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.6324023008346557,
+                      0.20615929365158087
+                    ],
+                    [
+                      0.6410607695579528,
+                      0.20569056272506717
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-glass-insert-frame-right-mask.png",
+                "boundsPx": [
+                  1827,
+                  357,
+                  30,
+                  650
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-glass-insert-frame-right-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-glass-insert-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.029165418818593025,
+                "tint": [
+                  1.062209963798523,
+                  0.9924399852752686,
+                  0.8916699886322021
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.763463020324707,
+                    0.19906377792358398
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.19852125644683838
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.5588747560977936
+                  ],
+                  [
+                    0.7634629607200623,
+                    0.5574907064437866
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.7634630203247071,
+                      0.199063777923584
+                    ],
+                    [
+                      0.7734841704368592,
+                      0.19852125644683838
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-glass-insert-frame-top-mask.png",
+                "boundsPx": [
+                  1517,
+                  356,
+                  340,
+                  39
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-glass-insert-frame-top-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-glass-insert-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.034864529967308044,
+                "tint": [
+                  1.0597100257873535,
+                  0.992900013923645,
+                  0.8945000171661377
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.6324023008346558,
+                    0.2061592936515808
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.19852125644683838
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.21060210466384888
+                  ],
+                  [
+                    0.6324023008346558,
+                    0.21733081340789795
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.6324023008346558,
+                      0.20615929365158084
+                    ],
+                    [
+                      0.7734841704368591,
+                      0.19852125644683843
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-back-left-mask.png",
+                "boundsPx": [
+                  1341,
+                  929,
+                  178,
+                  43
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-back-left-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-back-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.0680396556854248,
+                "tint": [
+                  1.0615700483322144,
+                  0.9916499853134155,
+                  0.9014300107955933
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2720,
+                    0
+                  ],
+                  [
+                    2720,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3518204987049103,
+                    0.48993808031082153
+                  ],
+                  [
+                    0.6324023008346558,
+                    0.5266225039958954
+                  ],
+                  [
+                    0.6324023008346558,
+                    0.5393899381160736
+                  ],
+                  [
+                    0.3518204987049103,
+                    0.5006388127803802
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 2720,
+                  "referenceImageSegment01": [
+                    [
+                      0.3518204987049102,
+                      0.48993808031082153
+                    ],
+                    [
+                      0.6324023008346557,
+                      0.5266225039958954
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      2720,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-back-right-mask.png",
+                "boundsPx": [
+                  1855,
+                  979,
+                  150,
+                  43
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-back-right-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-back-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.06000406667590141,
+                "tint": [
+                  1.0596799850463867,
+                  0.9933199882507324,
+                  0.890470027923584
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    420,
+                    0
+                  ],
+                  [
+                    420,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.7734841704368591,
+                    0.545068085193634
+                  ],
+                  [
+                    0.8359489440917969,
+                    0.5532349944114685
+                  ],
+                  [
+                    0.8359489440917969,
+                    0.5675017535686493
+                  ],
+                  [
+                    0.7734841704368591,
+                    0.5588747560977936
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 420,
+                  "referenceImageSegment01": [
+                    [
+                      0.7734841704368592,
+                      0.545068085193634
+                    ],
+                    [
+                      0.835948944091797,
+                      0.5532349944114684
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      420,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-right-mask.png",
+                "boundsPx": [
+                  1999,
+                  993,
+                  401,
+                  530
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-right-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-glass-insert-skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.08728291094303131,
+                "tint": [
+                  1.0577600002288818,
+                  0.9930999875068665,
+                  0.8982700109481812
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3650,
+                    0
+                  ],
+                  [
+                    3650,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    1.93511962890625,
+                    2.2997204065322876
+                  ],
+                  [
+                    0.8328821063041687,
+                    0.5519449412822723
+                  ],
+                  [
+                    0.8328821063041687,
+                    0.5661390125751495
+                  ],
+                  [
+                    1.9351195096969604,
+                    2.412380814552307
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.9799639985429284,
+                      0.785167016711703
+                    ],
+                    [
+                      0.9799639946835667,
+                      0.8125003951629028
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1642.5,
+                      0
+                    ],
+                    [
+                      1642.5,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/bedroom-render-01/model-glass-insert-protected-mask.png",
+            "boundsPx": [
+              1552,
+              429,
+              281,
+              515
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "floor",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "filomuro",
+        "frameType": "concealed-aluminium",
+        "patch": {
+          "regionPx": [
+            1340,
+            180,
+            694,
+            1004
+          ],
+          "base": "/media/scenes/bedroom-render-01/model-filomuro-base.webp",
+          "original": "/media/scenes/bedroom-render-01/model-filomuro-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-floor-mask.png",
+              "over": "/media/scenes/bedroom-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-floor-light.png",
+              "over": "/media/scenes/bedroom-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-floor-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-leaf-mask.png",
+              "over": "/media/scenes/bedroom-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-leaf-light.png",
+              "over": "/media/scenes/bedroom-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-leaf-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-skirting-back-left-mask.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-skirting-back-left-light.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-left-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-skirting-back-left-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-skirting-back-right-mask.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-skirting-back-right-light.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-skirting-back-right-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-back-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-skirting-right-mask.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-skirting-right-light.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-right-light.png"
+            },
+            {
+              "image": "/media/scenes/bedroom-render-01/model-filomuro-skirting-right-reflection.png",
+              "over": "/media/scenes/bedroom-render-01/skirting-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-filomuro-floor-mask.png",
+                "boundsPx": [
+                  0,
+                  951,
+                  2400,
+                  849
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-filomuro-floor-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-filomuro-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.08762720972299576,
+                "tint": [
+                  1.0546499490737915,
+                  0.998420000076294,
+                  0.9052299857139587
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4200,
+                    0
+                  ],
+                  [
+                    4200,
+                    3650
+                  ],
+                  [
+                    0,
+                    3650
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.35274839401245117,
+                    0.5000609457492828
+                  ],
+                  [
+                    0.835327684879303,
+                    0.5664755702018738
+                  ],
+                  [
+                    1.9658639430999756,
+                    2.433772087097168
+                  ],
+                  [
+                    -0.2625994384288788,
+                    0.8832801803946495
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 4200,
+                  "referenceImageSegment01": [
+                    [
+                      0.35274839401245117,
+                      0.5000609457492828
+                    ],
+                    [
+                      0.835327684879303,
+                      0.5664755702018739
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      4200,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/bedroom-render-01/floor-position.png",
+                "boundsPx": [
+                  0,
+                  951,
+                  2400,
+                  849
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-filomuro-leaf-mask.png",
+                "boundsPx": [
+                  1540,
+                  383,
+                  290,
+                  617
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-filomuro-leaf-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-filomuro-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.031088020652532578,
+                "tint": [
+                  1.059499979019165,
+                  0.9936699867248535,
+                  0.8961300253868103
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.6424142122268677,
+                    0.21874523162841797
+                  ],
+                  [
+                    0.7617152333259583,
+                    0.21318477392196655
+                  ],
+                  [
+                    0.7617152333259583,
+                    0.554977536201477
+                  ],
+                  [
+                    0.6424142718315125,
+                    0.538646399974823
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.6424142122268677,
+                      0.21874523162841797
+                    ],
+                    [
+                      0.7617152333259583,
+                      0.21318477392196658
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "skirting-back-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-filomuro-skirting-back-left-mask.png",
+                "boundsPx": [
+                  1341,
+                  929,
+                  201,
+                  45
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-filomuro-skirting-back-left-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-filomuro-skirting-back-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.0680396556854248,
+                "tint": [
+                  1.0612399578094482,
+                  0.9917600154876709,
+                  0.901229977607727
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2797,
+                    0
+                  ],
+                  [
+                    2797,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3518204987049103,
+                    0.48993808031082153
+                  ],
+                  [
+                    0.641931414604187,
+                    0.5278683602809906
+                  ],
+                  [
+                    0.641931414604187,
+                    0.5407060086727142
+                  ],
+                  [
+                    0.3518204987049103,
+                    0.5006388127803802
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 2797,
+                  "referenceImageSegment01": [
+                    [
+                      0.35182049870491033,
+                      0.4899380803108217
+                    ],
+                    [
+                      0.6419314146041871,
+                      0.5278683602809907
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      2797,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-filomuro-skirting-back-right-mask.png",
+                "boundsPx": [
+                  1828,
+                  976,
+                  177,
+                  46
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-filomuro-skirting-back-right-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-filomuro-skirting-back-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.06000406667590141,
+                "tint": [
+                  1.0598700046539307,
+                  0.9932600259780884,
+                  0.8904299736022949
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    497,
+                    0
+                  ],
+                  [
+                    497,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.7624667882919312,
+                    0.5436276197433472
+                  ],
+                  [
+                    0.8359489440917969,
+                    0.5532349944114685
+                  ],
+                  [
+                    0.8359489440917969,
+                    0.5675017535686493
+                  ],
+                  [
+                    0.7624667286872864,
+                    0.5573531091213226
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 497,
+                  "referenceImageSegment01": [
+                    [
+                      0.762466788291931,
+                      0.5436276197433472
+                    ],
+                    [
+                      0.8359489440917968,
+                      0.5532349944114685
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      497,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/bedroom-render-01/model-filomuro-skirting-right-mask.png",
+                "boundsPx": [
+                  1999,
+                  993,
+                  401,
+                  530
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/bedroom-render-01/model-filomuro-skirting-right-light.png",
+                "baselineLinear": 0.3172447792426667,
+                "shadeMin": 0,
+                "shadeMax": 3.153,
+                "specular": "/media/scenes/bedroom-render-01/model-filomuro-skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.08728291094303131,
+                "tint": [
+                  1.0577600002288818,
+                  0.9930999875068665,
+                  0.8982700109481812
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3650,
+                    0
+                  ],
+                  [
+                    3650,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    1.93511962890625,
+                    2.2997204065322876
+                  ],
+                  [
+                    0.8328821063041687,
+                    0.5519449412822723
+                  ],
+                  [
+                    0.8328821063041687,
+                    0.5661390125751495
+                  ],
+                  [
+                    1.9351195096969604,
+                    2.412380814552307
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.9799639985429284,
+                      0.785167016711703
+                    ],
+                    [
+                      0.9799639946835667,
+                      0.8125003951629028
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1642.5,
+                      0
+                    ],
+                    [
+                      1642.5,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/bedroom-render-01/model-filomuro-protected-mask.png",
+            "boundsPx": [
+              1552,
+              662,
+              49,
+              38
+            ]
+          },
+          "allowedFrameModes": [
+            "door"
+          ]
+        }
+      }
+    ],
+    "allowedDoorProductIds": [
+      "dera-bardhe",
+      "dera-lis",
+      "dera-kashmir",
+      "dera-antracit"
+    ],
+    "allowedFloorProductIds": [
+      "peshk-natyral-12",
+      "kronotex-d4955",
+      "kronotex-d80582",
+      "kronotex-d80612",
+      "kronotex-d4954",
+      "kronotex-d4763",
+      "kronotex-d4956",
+      "kronotex-d3179",
+      "kronotex-d81162"
+    ],
+    "allowedFrameModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "allowedSkirtingModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "defaultSelection": {
+      "version": 1,
+      "sceneId": "bedroom-render-01",
+      "doorProductId": "dera-lis",
+      "doorModelId": "flat",
+      "doorFinishId": "lis-natyral",
+      "floorProductId": "kronotex-d4955",
+      "frameMode": "door",
+      "skirtingMode": "door",
+      "floorRotationDeg": 0
+    },
+    "assetRevision": "pending"
+  },
+  "renderManifest": "render-manifest.json"
+}

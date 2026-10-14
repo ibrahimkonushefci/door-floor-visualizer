@@ -1,0 +1,171 @@
+{
+  "scene": "hallway-render-02",
+  "doorModel": "filomuro",
+  "blender": "5.2.2 LTS",
+  "blenderBuild": "d13f752e3b9c",
+  "engine": "CYCLES",
+  "devices": [
+    "Apple M4 (GPU - 10 cores)"
+  ],
+  "samples": 512,
+  "seed": 1729,
+  "adaptiveSampling": false,
+  "denoiser": "OPENIMAGEDENOISE (albedo+normal, accurate prefilter)",
+  "resolution": [
+    2400,
+    1800
+  ],
+  "borderPx": null,
+  "renderSeconds": {
+    "light": 430.6,
+    "light-dim": 361.1,
+    "gloss": 319.5
+  },
+  "passes": {
+    "light": "editable = 0.5 grey Lambertian; plate = Combined / 0.5",
+    "light-dim": "editable = 0.25 grey; (light - light-dim) isolates editable light at edges",
+    "gloss": "editable = black dielectric IOR 1.5, GGX roughness {'floor': 0.3, 'door-leaf': 0.38, 'frame': 0.38, 'skirting': 0.38}",
+    "base": "light Combined minus coverage x 0.5 x dilated surface light, unpremultiplied at edges"
+  },
+  "camera": {
+    "matrix_world": [
+      [
+        0.9986351132392883,
+        5.175399664381075e-09,
+        -0.0522298626601696,
+        1.0499999523162842
+      ],
+      [
+        -0.0522298626601696,
+        -4.404181197514845e-08,
+        -0.9986351132392883,
+        0.2199999988079071
+      ],
+      [
+        -7.468633711482653e-09,
+        1.0,
+        -4.371138828673793e-08,
+        1.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "lens_mm": 19.0,
+    "sensor_mm": 36.0,
+    "shift": [
+      0.0,
+      -0.14000000059604645
+    ]
+  },
+  "hdri": null,
+  "corridor": {
+    "depth": 1.6,
+    "half_width": 1.2,
+    "light": 12.0
+  },
+  "fill": {
+    "energy": 3.0,
+    "size": [
+      1.8,
+      4.0
+    ]
+  },
+  "filmExposure": 1.55,
+  "viewTransform": "Standard (linear EXR); tone shoulder applied in post and at runtime",
+  "toneShoulder": 0.6,
+  "checks": {
+    "coverageSumMax": 1.0,
+    "hiddenSurfaces": [],
+    "maskSumMax": 255,
+    "backdropNegativeEdgePixels": 2323,
+    "edgePixels": 9706,
+    "backdropClampMaxLinear": 0.05787438154220581,
+    "backdropClampP99Linear": 0.040271908044815063,
+    "lightScale": 0.6584956669807435,
+    "lightChroma": {
+      "floor": {
+        "tint": [
+          1.1327999830245972,
+          0.987500011920929,
+          0.8059999942779541
+        ],
+        "p95AbsDev": 0.08645707368850708
+      },
+      "leaf": {
+        "tint": [
+          1.0997999906539917,
+          0.986299991607666,
+          0.836899995803833
+        ],
+        "p95AbsDev": 0.004271745681762695
+      },
+      "skirting-left": {
+        "tint": [
+          1.2201999425888062,
+          0.9631999731063843,
+          0.7164999842643738
+        ],
+        "p95AbsDev": 0.07318104058504105
+      },
+      "skirting-back-left": {
+        "tint": [
+          1.1175999641418457,
+          0.9828000068664551,
+          0.8238000273704529
+        ],
+        "p95AbsDev": 0.02572030760347843
+      },
+      "skirting-back-right": {
+        "tint": [
+          1.1007000207901,
+          0.9865999817848206,
+          0.8359000086784363
+        ],
+        "p95AbsDev": 0.006870876532047987
+      },
+      "skirting-right": {
+        "tint": [
+          1.1131999492645264,
+          0.9843000173568726,
+          0.8220000267028809
+        ],
+        "p95AbsDev": 0.009507894515991211
+      }
+    }
+  },
+  "floorPosition": {
+    "boundsPx": [
+      279,
+      955,
+      1707,
+      845
+    ],
+    "originMm": [
+      -300.0,
+      -300.0
+    ],
+    "unitMm": 0.1,
+    "stepPx": 4,
+    "samples": [
+      428,
+      213
+    ],
+    "reconstructionMaxErrorMm": 0.16036619320210932,
+    "reconstructionP99ErrorMm": 0.09442433128166923,
+    "cyclesPositionPassMedianDiffMm": 0.0018799876725296056,
+    "cyclesPositionPassP99DiffMm": 0.007096915467419892,
+    "floorWithinEncodedRange": true,
+    "visibleFloorXmm": [
+      16.742989411544286,
+      2381.9359221315376
+    ],
+    "visibleFloorYmm": [
+      -14.617099748469364,
+      3293.8793158769386
+    ]
+  }
+}

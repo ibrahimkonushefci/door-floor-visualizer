@@ -6,11 +6,12 @@ import { decode } from '../src/lib/studio/render/color';
 import { loadSiteData } from '../src/lib/data/load';
 import { prepareSceneWith, prepareMaterialsWith } from '../src/lib/studio/asset-loader';
 import { decodeNode, bytesNode } from './prepare-scenes';
+import { legacyScene } from './legacy-scenes';
 import type { PreparedScene, PreparedMaterials, RenderJob } from '../src/lib/studio/types';
 export function syntheticScene() {
   const data = loadSiteData(),
     // A photo scene: the approved golden fixture predates rendered scenes.
-    s = structuredClone(data.materials.scenes.find(v => v.id === 'living-standard')!),
+    s = structuredClone(legacyScene('living-standard')),
     selection = { ...s.defaultSelection };
   s.width = s.height = 8;
   const def = {
@@ -87,19 +88,9 @@ async function fixtures() {
       ['default', 'settled', 960],
       ['magenta', 'settled', s.width],
       ['scale-grid', 'settled', s.width],
-      ...(s.id === 'living-standard' ? [['glass', 'settled', 1600] as const] : []),
     ] as const) {
-      let m = mat,
-        selection = s.defaultSelection;
-      if (name === 'glass') {
-        selection = {
-          ...selection,
-          doorProductId: 'dera-xham',
-          doorFinishId: 'xham-erret',
-          frameMode: 'black',
-        };
-        m = await prepareMaterialsWith(selection, catalog, signal, decodeNode);
-      }
+      let m = mat;
+      const selection = s.defaultSelection;
       if (name === 'magenta')
         m = {
           ...mat,

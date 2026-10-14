@@ -1,13 +1,13 @@
 'use client';
 import { useId, useState } from 'react';
-import type { Locale, StudioSelection, TrimMode } from '@/lib/data/types';
+import { ROOM_TYPES, type Locale, type RoomType, type StudioSelection, type TrimMode } from '@/lib/data/types';
 import type { StudioAction, StudioCatalog } from '@/lib/studio/types';
 import { localize, type Messages } from '@/lib/i18n/messages';
 import { Swatch } from '../ui/Swatch';
 import { SegmentedControl } from '../ui/SegmentedControl';
 import { Icon } from '../ui/Icon';
 import { DoorModelIcon } from './DoorModelIcon';
-import { compatibleDoor } from '@/lib/studio/compatibility';
+import { compatibleDoor, sceneShowsFloor, sceneShowsSkirting } from '@/lib/studio/compatibility';
 import { sceneModelIds, sceneForModel } from '@/lib/studio/door-models';
 import type { DoorProduct } from '@/lib/data/types';
 type Surface = 'door' | 'floor';
@@ -30,13 +30,19 @@ export function StudioPanel({
   onUnavailable: (text: string) => void;
   onRequest: () => void;
 }) {
-  const [surface, setSurface] = useState<Surface>('door');
+  const [chosenSurface, setSurface] = useState<Surface>('door');
+  const [roomType, setRoomType] = useState<RoomType | 'all'>('all');
   const tabsId = useId();
   const { scenes, doorFinishes, floorCollections, doorModels } = catalog.materials;
   const scene = scenes.find(s => s.id === requested.sceneId)!,
     finish = doorFinishes.find(f => f.id === requested.doorFinishId)!,
     model = doorModels.find(d => d.id === requested.doorModelId),
     floorProduct = catalog.products.find(p => p.id === requested.floorProductId)!;
+  // A tiled bathroom has no laminate floor or skirting: only the door changes there.
+  const floorShown = sceneShowsFloor(scene),
+    surface: Surface = floorShown ? chosenSurface : 'door';
+  const types = ROOM_TYPES.filter(t => scenes.some(s => s.roomType === t)),
+    shownRooms = roomType === 'all' ? scenes : scenes.filter(s => s.roomType === roomType);
   const doors = catalog.products.filter(
     (p): p is DoorProduct => p.kind === 'door' && compatibleDoor(p, scene, catalog),
   );
@@ -94,7 +100,7 @@ export function StudioPanel({
             </div>
             <div>
               <dt>{m['studio.floor']}</dt>
-              <dd>{localize(floorProduct.name, locale)}</dd>
+              <dd>{floorShown ? localize(floorProduct.name, locale) : m['studio.fixedFloor']}</dd>
             </div>
           </dl>
         </header>
@@ -103,8 +109,23 @@ export function StudioPanel({
             <h2 className="eyebrow" id={`${tabsId}-room`}>
               {m['studio.room']}
             </h2>
+            {types.length > 1 && (
+              <div className="studio-room-types" role="group" aria-label={m['studio.roomTypes']}>
+                {(['all', ...types] as const).map(t => (
+                  <button
+                    type="button"
+                    key={t}
+                    className="studio-room-type"
+                    aria-pressed={roomType === t}
+                    onClick={() => setRoomType(t)}
+                  >
+                    {m[`studio.roomType.${t}`]}
+                  </button>
+                ))}
+              </div>
+            )}
             <div className="studio-rooms">
-              {scenes.map(s => (
+              {shownRooms.map(s => (
                 <button
                   type="button"
                   key={s.id}
@@ -121,26 +142,33 @@ export function StudioPanel({
             </div>
           </section>
         )}
-        <div
-          className="studio-tabs"
-          role="tablist"
-          aria-label={m['studio.surface']}
-          onKeyDown={e => {
-            if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
-            const next = surface === 'door' ? 'floor' : 'door';
-            setSurface(next);
-            document.getElementById(`${tabsId}-${next}`)?.focus();
-          }}
-        >
-          <button type="button" {...tab('door')}>
-            {m['studio.door']}
-          </button>
-          <button type="button" {...tab('floor')}>
-            {m['studio.floor']}
-          </button>
-        </div>
+        {floorShown && (
+          <div
+            className="studio-tabs"
+            role="tablist"
+            aria-label={m['studio.surface']}
+            onKeyDown={e => {
+              if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+              const next = surface === 'door' ? 'floor' : 'door';
+              setSurface(next);
+              document.getElementById(`${tabsId}-${next}`)?.focus();
+            }}
+          >
+            <button type="button" {...tab('door')}>
+              {m['studio.door']}
+            </button>
+            <button type="button" {...tab('floor')}>
+              {m['studio.floor']}
+            </button>
+          </div>
+        )}
         {surface === 'door' ? (
-          <div role="tabpanel" id={`${tabsId}-door-panel`} aria-labelledby={`${tabsId}-door`} className="studio-tabpanel">
+          <div
+            role={floorShown ? 'tabpanel' : undefined}
+            id={`${tabsId}-door-panel`}
+            aria-labelledby={floorShown ? `${tabsId}-door` : undefined}
+            className="studio-tabpanel"
+          >
             {models.length > 1 && (
               <section className="studio-section" aria-labelledby={`${tabsId}-model`}>
                 <h2 className="eyebrow" id={`${tabsId}-model`}>
@@ -236,13 +264,15 @@ export function StudioPanel({
                 onChange={degrees => onAction({ type: 'rotate', degrees })}
               />
             </section>
-            <TrimSetting
-              label={m['inquiry.skirting']}
-              allowed={scene.allowedSkirtingModes}
-              value={requested.skirtingMode}
-              options={modes(scene.allowedSkirtingModes)}
-              onChange={mode => onAction({ type: 'skirting', mode })}
-            />
+            {sceneShowsSkirting(scene) && (
+              <TrimSetting
+                label={m['inquiry.skirting']}
+                allowed={scene.allowedSkirtingModes}
+                value={requested.skirtingMode}
+                options={modes(scene.allowedSkirtingModes)}
+                onChange={mode => onAction({ type: 'skirting', mode })}
+              />
+            )}
           </div>
         )}
         <p className="studio-disclaimer">{m['studio.disclaimer']}</p>

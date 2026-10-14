@@ -1,0 +1,3909 @@
+{
+  "schemaVersion": 1,
+  "kind": "rendered",
+  "scene": {
+    "id": "kitchen-render-01",
+    "name": {
+      "sq": "Kuzhina dhe ngrënia",
+      "en": "Kitchen & dining",
+      "de": "Küche & Essbereich"
+    },
+    "description": {
+      "sq": "Kuzhinë e hapur me tavolinë ngrënieje dhe dritë dite",
+      "en": "Open kitchen with a dining table in daylight",
+      "de": "Offene Küche mit Esstisch bei Tageslicht"
+    },
+    "roomType": "kitchen",
+    "width": 2400,
+    "height": 1800,
+    "base": "/media/scenes/kitchen-render-01/base.webp",
+    "original": "/media/scenes/kitchen-render-01/original.webp",
+    "render": {
+      "source": "blender",
+      "partitionedMasks": true,
+      "toneShoulder": 0.6
+    },
+    "thumbnail": "/media/scenes/kitchen-render-01/thumbnail.webp",
+    "fallback": "/media/scenes/kitchen-render-01/fallback.webp",
+    "frameType": "standard-casing",
+    "depictedDoorSizeMm": {
+      "width": 900,
+      "height": 2000
+    },
+    "surfaces": [
+      {
+        "id": "floor",
+        "role": "floor",
+        "mask": {
+          "alpha": "/media/scenes/kitchen-render-01/floor-mask.png",
+          "boundsPx": [
+            0,
+            848,
+            2400,
+            952
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kitchen-render-01/floor-light.png",
+          "baselineLinear": 0.33103262288779045,
+          "shadeMin": 0,
+          "shadeMax": 3.021,
+          "specular": "/media/scenes/kitchen-render-01/floor-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 1.1330533027648926,
+          "tint": [
+            1.0321799516677856,
+            0.9992300271987915,
+            0.8952599763870239
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              4600,
+              0
+            ],
+            [
+              4600,
+              5000
+            ],
+            [
+              0,
+              5000
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.324442982673645,
+              0.4632163643836975
+            ],
+            [
+              0.7516433596611023,
+              0.4901120066642761
+            ],
+            [
+              1.9273967742919922,
+              2.1056264638900757
+            ],
+            [
+              -0.6139602065086365,
+              1.0567446202039719
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 4600,
+            "referenceImageSegment01": [
+              [
+                0.324442982673645,
+                0.4632163643836976
+              ],
+              [
+                0.7516433596611022,
+                0.4901120066642761
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                4600,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0,
+        "positionMap": {
+          "image": "/media/scenes/kitchen-render-01/floor-position.png",
+          "boundsPx": [
+            0,
+            848,
+            2400,
+            952
+          ],
+          "originMm": [
+            -300,
+            -300
+          ],
+          "unitMm": 0.1,
+          "stepPx": 4
+        }
+      },
+      {
+        "id": "leaf",
+        "role": "door-leaf",
+        "mask": {
+          "alpha": "/media/scenes/kitchen-render-01/leaf-mask.png",
+          "boundsPx": [
+            905,
+            408,
+            189,
+            361
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kitchen-render-01/leaf-light.png",
+          "baselineLinear": 0.33103262288779045,
+          "shadeMin": 0,
+          "shadeMax": 3.021,
+          "specular": "/media/scenes/kitchen-render-01/leaf-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.025816289708018303,
+          "tint": [
+            1.0593199729919434,
+            0.9926999807357788,
+            0.8923199772834778
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              900,
+              0
+            ],
+            [
+              900,
+              2000
+            ],
+            [
+              0,
+              2000
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.3778250813484192,
+              0.22890615463256836
+            ],
+            [
+              0.4551848769187927,
+              0.22734248638153076
+            ],
+            [
+              0.4551848769187927,
+              0.47047507762908936
+            ],
+            [
+              0.3778250813484192,
+              0.46563029289245605
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 900,
+            "referenceImageSegment01": [
+              [
+                0.37782508134841913,
+                0.22890615463256825
+              ],
+              [
+                0.4551848769187926,
+                0.2273424863815307
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                900,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-left",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/kitchen-render-01/frame-left-mask.png",
+          "boundsPx": [
+            888,
+            414,
+            20,
+            336
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kitchen-render-01/frame-left-light.png",
+          "baselineLinear": 0.33103262288779045,
+          "shadeMin": 0,
+          "shadeMax": 3.021,
+          "specular": "/media/scenes/kitchen-render-01/frame-left-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.023529885336756706,
+          "tint": [
+            1.0621999502182007,
+            0.9930599927902222,
+            0.8855699896812439
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              70,
+              0
+            ],
+            [
+              70,
+              2088
+            ],
+            [
+              0,
+              2088
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.37056130170822144,
+              0.21942567825317383
+            ],
+            [
+              0.37641769647598267,
+              0.21928757429122925
+            ],
+            [
+              0.37641769647598267,
+              0.4669775366783142
+            ],
+            [
+              0.37056130170822144,
+              0.46660780906677246
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 70,
+            "referenceImageSegment01": [
+              [
+                0.3705613017082215,
+                0.2194256782531739
+              ],
+              [
+                0.37641769647598267,
+                0.21928757429122933
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-right",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/kitchen-render-01/frame-right-mask.png",
+          "boundsPx": [
+            1092,
+            390,
+            18,
+            461
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kitchen-render-01/frame-right-light.png",
+          "baselineLinear": 0.33103262288779045,
+          "shadeMin": 0,
+          "shadeMax": 3.021,
+          "specular": "/media/scenes/kitchen-render-01/frame-right-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.02465769089758396,
+          "tint": [
+            1.056879997253418,
+            0.9936500191688538,
+            0.8953499794006348
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              70,
+              0
+            ],
+            [
+              70,
+              2088
+            ],
+            [
+              0,
+              2088
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.455686092376709,
+              0.21741753816604614
+            ],
+            [
+              0.4618978798389435,
+              0.21727102994918823
+            ],
+            [
+              0.4618978798389435,
+              0.4723738431930542
+            ],
+            [
+              0.455686092376709,
+              0.4719817042350769
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 70,
+            "referenceImageSegment01": [
+              [
+                0.455686092376709,
+                0.21741753816604611
+              ],
+              [
+                0.4618978798389435,
+                0.21727102994918823
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                70,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 90
+      },
+      {
+        "id": "frame-top",
+        "role": "frame",
+        "mask": {
+          "alpha": "/media/scenes/kitchen-render-01/frame-top-mask.png",
+          "boundsPx": [
+            911,
+            390,
+            199,
+            22
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kitchen-render-01/frame-top-light.png",
+          "baselineLinear": 0.33103262288779045,
+          "shadeMin": 0,
+          "shadeMax": 3.021,
+          "specular": "/media/scenes/kitchen-render-01/frame-top-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.020381322130560875,
+          "tint": [
+            1.0612000226974487,
+            0.9929500222206116,
+            0.8895599842071533
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              1060,
+              0
+            ],
+            [
+              1060,
+              70
+            ],
+            [
+              0,
+              70
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.37056130170822144,
+              0.21942567825317383
+            ],
+            [
+              0.4618978798389435,
+              0.21727102994918823
+            ],
+            [
+              0.4618978798389435,
+              0.22582334280014038
+            ],
+            [
+              0.37056130170822144,
+              0.2277125120162964
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 1060,
+            "referenceImageSegment01": [
+              [
+                0.37056130170822155,
+                0.21942567825317386
+              ],
+              [
+                0.46189787983894354,
+                0.21727102994918823
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                1060,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-left",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/kitchen-render-01/skirting-left-mask.png",
+          "boundsPx": [
+            0,
+            975,
+            430,
+            233
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kitchen-render-01/skirting-left-light.png",
+          "baselineLinear": 0.33103262288779045,
+          "shadeMin": 0,
+          "shadeMax": 3.021,
+          "specular": "/media/scenes/kitchen-render-01/skirting-left-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.06565368175506592,
+          "tint": [
+            1.0564500093460083,
+            0.9937099814414978,
+            0.8961300253868103
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              5000,
+              0
+            ],
+            [
+              5000,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.3257330358028412,
+              0.45400118827819824
+            ],
+            [
+              -0.6102104187011719,
+              1.0176804102957249
+            ],
+            [
+              -0.6102104187011719,
+              1.0582922957837582
+            ],
+            [
+              0.3257330358028412,
+              0.4632975459098816
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 80,
+            "referenceImageSegment01": [
+              [
+                0.2593810840228043,
+                0.4939621670945261
+              ],
+              [
+                0.25938108402280424,
+                0.5054785802053005
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                1250,
+                0
+              ],
+              [
+                1250,
+                80
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-back-right",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/kitchen-render-01/skirting-back-right-mask.png",
+          "boundsPx": [
+            1107,
+            831,
+            67,
+            23
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kitchen-render-01/skirting-back-right-light.png",
+          "baselineLinear": 0.33103262288779045,
+          "shadeMin": 0,
+          "shadeMax": 3.021,
+          "specular": "/media/scenes/kitchen-render-01/skirting-back-right-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.027755534276366234,
+          "tint": [
+            1.0548100471496582,
+            0.9941499829292297,
+            0.8965799808502197
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              2970,
+              0
+            ],
+            [
+              2970,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              0.4618978798389435,
+              0.4625997543334961
+            ],
+            [
+              0.7520653605461121,
+              0.47995370626449585
+            ],
+            [
+              0.7520653605461121,
+              0.4906918406486511
+            ],
+            [
+              0.4618978798389435,
+              0.4723738431930542
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 2970,
+            "referenceImageSegment01": [
+              [
+                0.4618978798389434,
+                0.46259975433349604
+              ],
+              [
+                0.7520653605461121,
+                0.47995370626449585
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                0,
+                0
+              ],
+              [
+                2970,
+                0
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      },
+      {
+        "id": "skirting-right",
+        "role": "skirting",
+        "mask": {
+          "alpha": "/media/scenes/kitchen-render-01/skirting-right-mask.png",
+          "boundsPx": [
+            2111,
+            1170,
+            289,
+            338
+          ]
+        },
+        "lighting": {
+          "diffuse": "/media/scenes/kitchen-render-01/skirting-right-light.png",
+          "baselineLinear": 0.33103262288779045,
+          "shadeMin": 0,
+          "shadeMax": 3.021,
+          "specular": "/media/scenes/kitchen-render-01/skirting-right-reflection.png",
+          "specularIncludedInDiffuse": false,
+          "specularScale": 0.053983237594366074,
+          "tint": [
+            1.05253005027771,
+            0.9945499897003174,
+            0.8993200063705444
+          ]
+        },
+        "mapping": {
+          "worldQuadMm": [
+            [
+              0,
+              0
+            ],
+            [
+              5000,
+              0
+            ],
+            [
+              5000,
+              80
+            ],
+            [
+              0,
+              80
+            ]
+          ],
+          "imageQuad01": [
+            [
+              1.9066162109375,
+              2.0017664432525635
+            ],
+            [
+              0.749932050704956,
+              0.4793023467063904
+            ],
+            [
+              0.749932050704956,
+              0.490004301071167
+            ],
+            [
+              1.9066165685653687,
+              2.0970500707626343
+            ]
+          ],
+          "calibration": {
+            "method": "measured-plane",
+            "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+            "referenceLengthMm": 80,
+            "referenceImageSegment01": [
+              [
+                0.9901214555913955,
+                0.795447201008604
+              ],
+              [
+                0.9901214776212353,
+                0.8237127552695707
+              ]
+            ],
+            "referenceWorldSegmentMm": [
+              [
+                1500,
+                0
+              ],
+              [
+                1500,
+                80
+              ]
+            ]
+          }
+        },
+        "uvRotationDeg": 0
+      }
+    ],
+    "protectedMask": {
+      "alpha": "/media/scenes/kitchen-render-01/protected-mask.png",
+      "boundsPx": [
+        903,
+        443,
+        182,
+        199
+      ]
+    },
+    "foreground": null,
+    "doorInserts": [],
+    "doorModels": [
+      {
+        "modelId": "flat",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            712,
+            214,
+            574,
+            814
+          ],
+          "base": "/media/scenes/kitchen-render-01/model-flat-base.webp",
+          "original": "/media/scenes/kitchen-render-01/model-flat-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-floor-mask.png",
+              "over": "/media/scenes/kitchen-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-floor-light.png",
+              "over": "/media/scenes/kitchen-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-floor-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-leaf-mask.png",
+              "over": "/media/scenes/kitchen-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-leaf-light.png",
+              "over": "/media/scenes/kitchen-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-leaf-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-frame-left-mask.png",
+              "over": "/media/scenes/kitchen-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-frame-left-light.png",
+              "over": "/media/scenes/kitchen-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-frame-left-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-frame-right-mask.png",
+              "over": "/media/scenes/kitchen-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-frame-right-light.png",
+              "over": "/media/scenes/kitchen-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-frame-right-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-frame-top-mask.png",
+              "over": "/media/scenes/kitchen-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-frame-top-light.png",
+              "over": "/media/scenes/kitchen-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-frame-top-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/frame-top-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-skirting-back-right-mask.png",
+              "over": "/media/scenes/kitchen-render-01/skirting-back-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-skirting-back-right-light.png",
+              "over": "/media/scenes/kitchen-render-01/skirting-back-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-flat-skirting-back-right-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/skirting-back-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-flat-floor-mask.png",
+                "boundsPx": [
+                  0,
+                  848,
+                  2400,
+                  952
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-flat-floor-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-flat-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 1.1330533027648926,
+                "tint": [
+                  1.0321799516677856,
+                  0.9992300271987915,
+                  0.8952599763870239
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4600,
+                    0
+                  ],
+                  [
+                    4600,
+                    5000
+                  ],
+                  [
+                    0,
+                    5000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.324442982673645,
+                    0.4632163643836975
+                  ],
+                  [
+                    0.7516433596611023,
+                    0.4901120066642761
+                  ],
+                  [
+                    1.9273967742919922,
+                    2.1056264638900757
+                  ],
+                  [
+                    -0.6139602065086365,
+                    1.0567446202039719
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 4600,
+                  "referenceImageSegment01": [
+                    [
+                      0.324442982673645,
+                      0.4632163643836976
+                    ],
+                    [
+                      0.7516433596611022,
+                      0.4901120066642761
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      4600,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/kitchen-render-01/floor-position.png",
+                "boundsPx": [
+                  0,
+                  848,
+                  2400,
+                  952
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-flat-leaf-mask.png",
+                "boundsPx": [
+                  905,
+                  408,
+                  189,
+                  361
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-flat-leaf-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-flat-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.025816289708018303,
+                "tint": [
+                  1.0593199729919434,
+                  0.9926999807357788,
+                  0.8923199772834778
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3778250813484192,
+                    0.22890615463256836
+                  ],
+                  [
+                    0.4551848769187927,
+                    0.22734248638153076
+                  ],
+                  [
+                    0.4551848769187927,
+                    0.47047507762908936
+                  ],
+                  [
+                    0.3778250813484192,
+                    0.46563029289245605
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.37782508134841913,
+                      0.22890615463256825
+                    ],
+                    [
+                      0.4551848769187926,
+                      0.2273424863815307
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-flat-frame-left-mask.png",
+                "boundsPx": [
+                  888,
+                  414,
+                  20,
+                  336
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-flat-frame-left-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-flat-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.023529885336756706,
+                "tint": [
+                  1.0621999502182007,
+                  0.9930599927902222,
+                  0.8855699896812439
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.37056130170822144,
+                    0.21942567825317383
+                  ],
+                  [
+                    0.37641769647598267,
+                    0.21928757429122925
+                  ],
+                  [
+                    0.37641769647598267,
+                    0.4669775366783142
+                  ],
+                  [
+                    0.37056130170822144,
+                    0.46660780906677246
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.3705613017082215,
+                      0.2194256782531739
+                    ],
+                    [
+                      0.37641769647598267,
+                      0.21928757429122933
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-flat-frame-right-mask.png",
+                "boundsPx": [
+                  1092,
+                  390,
+                  18,
+                  461
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-flat-frame-right-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-flat-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02465769089758396,
+                "tint": [
+                  1.056879997253418,
+                  0.9936500191688538,
+                  0.8953499794006348
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.455686092376709,
+                    0.21741753816604614
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.21727102994918823
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.4723738431930542
+                  ],
+                  [
+                    0.455686092376709,
+                    0.4719817042350769
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.455686092376709,
+                      0.21741753816604611
+                    ],
+                    [
+                      0.4618978798389435,
+                      0.21727102994918823
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-flat-frame-top-mask.png",
+                "boundsPx": [
+                  911,
+                  390,
+                  199,
+                  22
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-flat-frame-top-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-flat-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.020381322130560875,
+                "tint": [
+                  1.0612000226974487,
+                  0.9929500222206116,
+                  0.8895599842071533
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.37056130170822144,
+                    0.21942567825317383
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.21727102994918823
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.22582334280014038
+                  ],
+                  [
+                    0.37056130170822144,
+                    0.2277125120162964
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.37056130170822155,
+                      0.21942567825317386
+                    ],
+                    [
+                      0.46189787983894354,
+                      0.21727102994918823
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/skirting-left-mask.png",
+                "boundsPx": [
+                  0,
+                  975,
+                  430,
+                  233
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/skirting-left-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/skirting-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.06565368175506592,
+                "tint": [
+                  1.0564500093460083,
+                  0.9937099814414978,
+                  0.8961300253868103
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5000,
+                    0
+                  ],
+                  [
+                    5000,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3257330358028412,
+                    0.45400118827819824
+                  ],
+                  [
+                    -0.6102104187011719,
+                    1.0176804102957249
+                  ],
+                  [
+                    -0.6102104187011719,
+                    1.0582922957837582
+                  ],
+                  [
+                    0.3257330358028412,
+                    0.4632975459098816
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.2593810840228043,
+                      0.4939621670945261
+                    ],
+                    [
+                      0.25938108402280424,
+                      0.5054785802053005
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1250,
+                      0
+                    ],
+                    [
+                      1250,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-flat-skirting-back-right-mask.png",
+                "boundsPx": [
+                  1107,
+                  831,
+                  67,
+                  23
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-flat-skirting-back-right-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-flat-skirting-back-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.027755534276366234,
+                "tint": [
+                  1.0548100471496582,
+                  0.9941499829292297,
+                  0.8965799808502197
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2970,
+                    0
+                  ],
+                  [
+                    2970,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.4618978798389435,
+                    0.4625997543334961
+                  ],
+                  [
+                    0.7520653605461121,
+                    0.47995370626449585
+                  ],
+                  [
+                    0.7520653605461121,
+                    0.4906918406486511
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.4723738431930542
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 2970,
+                  "referenceImageSegment01": [
+                    [
+                      0.4618978798389434,
+                      0.46259975433349604
+                    ],
+                    [
+                      0.7520653605461121,
+                      0.47995370626449585
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      2970,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/skirting-right-mask.png",
+                "boundsPx": [
+                  2111,
+                  1170,
+                  289,
+                  338
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/skirting-right-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.053983237594366074,
+                "tint": [
+                  1.05253005027771,
+                  0.9945499897003174,
+                  0.8993200063705444
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5000,
+                    0
+                  ],
+                  [
+                    5000,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    1.9066162109375,
+                    2.0017664432525635
+                  ],
+                  [
+                    0.749932050704956,
+                    0.4793023467063904
+                  ],
+                  [
+                    0.749932050704956,
+                    0.490004301071167
+                  ],
+                  [
+                    1.9066165685653687,
+                    2.0970500707626343
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.9901214555913955,
+                      0.795447201008604
+                    ],
+                    [
+                      0.9901214776212353,
+                      0.8237127552695707
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1500,
+                      0
+                    ],
+                    [
+                      1500,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/kitchen-render-01/model-flat-protected-mask.png",
+            "boundsPx": [
+              903,
+              443,
+              182,
+              199
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "floor",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "grooved",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            712,
+            214,
+            574,
+            814
+          ],
+          "base": "/media/scenes/kitchen-render-01/model-grooved-base.webp",
+          "original": "/media/scenes/kitchen-render-01/model-grooved-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-floor-mask.png",
+              "over": "/media/scenes/kitchen-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-floor-light.png",
+              "over": "/media/scenes/kitchen-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-floor-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-leaf-mask.png",
+              "over": "/media/scenes/kitchen-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-leaf-light.png",
+              "over": "/media/scenes/kitchen-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-leaf-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-frame-left-mask.png",
+              "over": "/media/scenes/kitchen-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-frame-left-light.png",
+              "over": "/media/scenes/kitchen-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-frame-left-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-frame-right-mask.png",
+              "over": "/media/scenes/kitchen-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-frame-right-light.png",
+              "over": "/media/scenes/kitchen-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-frame-right-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-frame-top-mask.png",
+              "over": "/media/scenes/kitchen-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-frame-top-light.png",
+              "over": "/media/scenes/kitchen-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-frame-top-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/frame-top-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-skirting-back-right-mask.png",
+              "over": "/media/scenes/kitchen-render-01/skirting-back-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-skirting-back-right-light.png",
+              "over": "/media/scenes/kitchen-render-01/skirting-back-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-grooved-skirting-back-right-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/skirting-back-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-grooved-floor-mask.png",
+                "boundsPx": [
+                  0,
+                  848,
+                  2400,
+                  952
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-grooved-floor-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-grooved-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 1.1330533027648926,
+                "tint": [
+                  1.0321799516677856,
+                  0.9992300271987915,
+                  0.8952599763870239
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4600,
+                    0
+                  ],
+                  [
+                    4600,
+                    5000
+                  ],
+                  [
+                    0,
+                    5000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.324442982673645,
+                    0.4632163643836975
+                  ],
+                  [
+                    0.7516433596611023,
+                    0.4901120066642761
+                  ],
+                  [
+                    1.9273967742919922,
+                    2.1056264638900757
+                  ],
+                  [
+                    -0.6139602065086365,
+                    1.0567446202039719
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 4600,
+                  "referenceImageSegment01": [
+                    [
+                      0.324442982673645,
+                      0.4632163643836976
+                    ],
+                    [
+                      0.7516433596611022,
+                      0.4901120066642761
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      4600,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/kitchen-render-01/floor-position.png",
+                "boundsPx": [
+                  0,
+                  848,
+                  2400,
+                  952
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-grooved-leaf-mask.png",
+                "boundsPx": [
+                  905,
+                  408,
+                  189,
+                  361
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-grooved-leaf-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-grooved-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02583424746990204,
+                "tint": [
+                  1.0593199729919434,
+                  0.9927600026130676,
+                  0.8922500014305115
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3778250813484192,
+                    0.22890615463256836
+                  ],
+                  [
+                    0.4551848769187927,
+                    0.22734248638153076
+                  ],
+                  [
+                    0.4551848769187927,
+                    0.47047507762908936
+                  ],
+                  [
+                    0.3778250813484192,
+                    0.46563029289245605
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.37782508134841913,
+                      0.22890615463256825
+                    ],
+                    [
+                      0.4551848769187926,
+                      0.2273424863815307
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-grooved-frame-left-mask.png",
+                "boundsPx": [
+                  888,
+                  414,
+                  20,
+                  336
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-grooved-frame-left-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-grooved-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.023905610665678978,
+                "tint": [
+                  1.062150001525879,
+                  0.9930899739265442,
+                  0.8854799866676331
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.37056130170822144,
+                    0.21942567825317383
+                  ],
+                  [
+                    0.37641769647598267,
+                    0.21928757429122925
+                  ],
+                  [
+                    0.37641769647598267,
+                    0.4669775366783142
+                  ],
+                  [
+                    0.37056130170822144,
+                    0.46660780906677246
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.3705613017082215,
+                      0.2194256782531739
+                    ],
+                    [
+                      0.37641769647598267,
+                      0.21928757429122933
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-grooved-frame-right-mask.png",
+                "boundsPx": [
+                  1092,
+                  390,
+                  18,
+                  461
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-grooved-frame-right-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-grooved-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.024509316310286522,
+                "tint": [
+                  1.0569499731063843,
+                  0.9936500191688538,
+                  0.8952199816703796
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.455686092376709,
+                    0.21741753816604614
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.21727102994918823
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.4723738431930542
+                  ],
+                  [
+                    0.455686092376709,
+                    0.4719817042350769
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.455686092376709,
+                      0.21741753816604611
+                    ],
+                    [
+                      0.4618978798389435,
+                      0.21727102994918823
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-grooved-frame-top-mask.png",
+                "boundsPx": [
+                  911,
+                  390,
+                  199,
+                  22
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-grooved-frame-top-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-grooved-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02077423594892025,
+                "tint": [
+                  1.0611000061035156,
+                  0.9930099844932556,
+                  0.8893399834632874
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.37056130170822144,
+                    0.21942567825317383
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.21727102994918823
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.22582334280014038
+                  ],
+                  [
+                    0.37056130170822144,
+                    0.2277125120162964
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.37056130170822155,
+                      0.21942567825317386
+                    ],
+                    [
+                      0.46189787983894354,
+                      0.21727102994918823
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-grooved-skirting-back-right-mask.png",
+                "boundsPx": [
+                  1107,
+                  831,
+                  67,
+                  23
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-grooved-skirting-back-right-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-grooved-skirting-back-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.027755534276366234,
+                "tint": [
+                  1.0546200275421143,
+                  0.9941800236701965,
+                  0.8967999815940857
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2970,
+                    0
+                  ],
+                  [
+                    2970,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.4618978798389435,
+                    0.4625997543334961
+                  ],
+                  [
+                    0.7520653605461121,
+                    0.47995370626449585
+                  ],
+                  [
+                    0.7520653605461121,
+                    0.4906918406486511
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.4723738431930542
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 2970,
+                  "referenceImageSegment01": [
+                    [
+                      0.4618978798389434,
+                      0.46259975433349604
+                    ],
+                    [
+                      0.7520653605461121,
+                      0.47995370626449585
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      2970,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/skirting-left-mask.png",
+                "boundsPx": [
+                  0,
+                  975,
+                  430,
+                  233
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/skirting-left-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/skirting-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.06565368175506592,
+                "tint": [
+                  1.0564500093460083,
+                  0.9937099814414978,
+                  0.8961300253868103
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5000,
+                    0
+                  ],
+                  [
+                    5000,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3257330358028412,
+                    0.45400118827819824
+                  ],
+                  [
+                    -0.6102104187011719,
+                    1.0176804102957249
+                  ],
+                  [
+                    -0.6102104187011719,
+                    1.0582922957837582
+                  ],
+                  [
+                    0.3257330358028412,
+                    0.4632975459098816
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.2593810840228043,
+                      0.4939621670945261
+                    ],
+                    [
+                      0.25938108402280424,
+                      0.5054785802053005
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1250,
+                      0
+                    ],
+                    [
+                      1250,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/skirting-right-mask.png",
+                "boundsPx": [
+                  2111,
+                  1170,
+                  289,
+                  338
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/skirting-right-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.053983237594366074,
+                "tint": [
+                  1.05253005027771,
+                  0.9945499897003174,
+                  0.8993200063705444
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5000,
+                    0
+                  ],
+                  [
+                    5000,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    1.9066162109375,
+                    2.0017664432525635
+                  ],
+                  [
+                    0.749932050704956,
+                    0.4793023467063904
+                  ],
+                  [
+                    0.749932050704956,
+                    0.490004301071167
+                  ],
+                  [
+                    1.9066165685653687,
+                    2.0970500707626343
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.9901214555913955,
+                      0.795447201008604
+                    ],
+                    [
+                      0.9901214776212353,
+                      0.8237127552695707
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1500,
+                      0
+                    ],
+                    [
+                      1500,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/kitchen-render-01/model-grooved-protected-mask.png",
+            "boundsPx": [
+              903,
+              443,
+              182,
+              199
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "floor",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "glass-insert",
+        "frameType": "standard-casing",
+        "patch": {
+          "regionPx": [
+            712,
+            214,
+            574,
+            814
+          ],
+          "base": "/media/scenes/kitchen-render-01/model-glass-insert-base.webp",
+          "original": "/media/scenes/kitchen-render-01/model-glass-insert-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-floor-mask.png",
+              "over": "/media/scenes/kitchen-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-floor-light.png",
+              "over": "/media/scenes/kitchen-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-floor-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-leaf-mask.png",
+              "over": "/media/scenes/kitchen-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-leaf-light.png",
+              "over": "/media/scenes/kitchen-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-leaf-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-frame-left-mask.png",
+              "over": "/media/scenes/kitchen-render-01/frame-left-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-frame-left-light.png",
+              "over": "/media/scenes/kitchen-render-01/frame-left-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-frame-left-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/frame-left-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-frame-right-mask.png",
+              "over": "/media/scenes/kitchen-render-01/frame-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-frame-right-light.png",
+              "over": "/media/scenes/kitchen-render-01/frame-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-frame-right-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/frame-right-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-frame-top-mask.png",
+              "over": "/media/scenes/kitchen-render-01/frame-top-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-frame-top-light.png",
+              "over": "/media/scenes/kitchen-render-01/frame-top-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-frame-top-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/frame-top-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-skirting-back-right-mask.png",
+              "over": "/media/scenes/kitchen-render-01/skirting-back-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-skirting-back-right-light.png",
+              "over": "/media/scenes/kitchen-render-01/skirting-back-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-glass-insert-skirting-back-right-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/skirting-back-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-glass-insert-floor-mask.png",
+                "boundsPx": [
+                  0,
+                  848,
+                  2400,
+                  952
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-glass-insert-floor-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-glass-insert-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 1.1330533027648926,
+                "tint": [
+                  1.0321799516677856,
+                  0.9992300271987915,
+                  0.8952599763870239
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4600,
+                    0
+                  ],
+                  [
+                    4600,
+                    5000
+                  ],
+                  [
+                    0,
+                    5000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.324442982673645,
+                    0.4632163643836975
+                  ],
+                  [
+                    0.7516433596611023,
+                    0.4901120066642761
+                  ],
+                  [
+                    1.9273967742919922,
+                    2.1056264638900757
+                  ],
+                  [
+                    -0.6139602065086365,
+                    1.0567446202039719
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 4600,
+                  "referenceImageSegment01": [
+                    [
+                      0.324442982673645,
+                      0.4632163643836976
+                    ],
+                    [
+                      0.7516433596611022,
+                      0.4901120066642761
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      4600,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/kitchen-render-01/floor-position.png",
+                "boundsPx": [
+                  0,
+                  848,
+                  2400,
+                  952
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-glass-insert-leaf-mask.png",
+                "boundsPx": [
+                  905,
+                  408,
+                  189,
+                  361
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-glass-insert-leaf-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-glass-insert-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.05436022952198982,
+                "tint": [
+                  1.0592700242996216,
+                  0.9930300116539001,
+                  0.8920900225639343
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3778250813484192,
+                    0.22890615463256836
+                  ],
+                  [
+                    0.4551848769187927,
+                    0.22734248638153076
+                  ],
+                  [
+                    0.4551848769187927,
+                    0.47047507762908936
+                  ],
+                  [
+                    0.3778250813484192,
+                    0.46563029289245605
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.37782508134841913,
+                      0.22890615463256825
+                    ],
+                    [
+                      0.4551848769187926,
+                      0.2273424863815307
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-left",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-glass-insert-frame-left-mask.png",
+                "boundsPx": [
+                  888,
+                  414,
+                  20,
+                  336
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-glass-insert-frame-left-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-glass-insert-frame-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.023986784741282463,
+                "tint": [
+                  1.0621600151062012,
+                  0.9930999875068665,
+                  0.8853499889373779
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.37056130170822144,
+                    0.21942567825317383
+                  ],
+                  [
+                    0.37641769647598267,
+                    0.21928757429122925
+                  ],
+                  [
+                    0.37641769647598267,
+                    0.4669775366783142
+                  ],
+                  [
+                    0.37056130170822144,
+                    0.46660780906677246
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.3705613017082215,
+                      0.2194256782531739
+                    ],
+                    [
+                      0.37641769647598267,
+                      0.21928757429122933
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-right",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-glass-insert-frame-right-mask.png",
+                "boundsPx": [
+                  1092,
+                  390,
+                  18,
+                  461
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-glass-insert-frame-right-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-glass-insert-frame-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.02468256652355194,
+                "tint": [
+                  1.056920051574707,
+                  0.9936599731445312,
+                  0.8951900005340576
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    70,
+                    0
+                  ],
+                  [
+                    70,
+                    2088
+                  ],
+                  [
+                    0,
+                    2088
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.455686092376709,
+                    0.21741753816604614
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.21727102994918823
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.4723738431930542
+                  ],
+                  [
+                    0.455686092376709,
+                    0.4719817042350769
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 70,
+                  "referenceImageSegment01": [
+                    [
+                      0.455686092376709,
+                      0.21741753816604611
+                    ],
+                    [
+                      0.4618978798389435,
+                      0.21727102994918823
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      70,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "frame-top",
+              "role": "frame",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-glass-insert-frame-top-mask.png",
+                "boundsPx": [
+                  911,
+                  390,
+                  199,
+                  22
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-glass-insert-frame-top-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-glass-insert-frame-top-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.020923681557178497,
+                "tint": [
+                  1.0611000061035156,
+                  0.9930099844932556,
+                  0.8893100023269653
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1060,
+                    0
+                  ],
+                  [
+                    1060,
+                    70
+                  ],
+                  [
+                    0,
+                    70
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.37056130170822144,
+                    0.21942567825317383
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.21727102994918823
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.22582334280014038
+                  ],
+                  [
+                    0.37056130170822144,
+                    0.2277125120162964
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 1060,
+                  "referenceImageSegment01": [
+                    [
+                      0.37056130170822155,
+                      0.21942567825317386
+                    ],
+                    [
+                      0.46189787983894354,
+                      0.21727102994918823
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1060,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-back-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-glass-insert-skirting-back-right-mask.png",
+                "boundsPx": [
+                  1107,
+                  831,
+                  67,
+                  23
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-glass-insert-skirting-back-right-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-glass-insert-skirting-back-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.027755534276366234,
+                "tint": [
+                  1.0547000169754028,
+                  0.9941700100898743,
+                  0.8967300057411194
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2970,
+                    0
+                  ],
+                  [
+                    2970,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.4618978798389435,
+                    0.4625997543334961
+                  ],
+                  [
+                    0.7520653605461121,
+                    0.47995370626449585
+                  ],
+                  [
+                    0.7520653605461121,
+                    0.4906918406486511
+                  ],
+                  [
+                    0.4618978798389435,
+                    0.4723738431930542
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 2970,
+                  "referenceImageSegment01": [
+                    [
+                      0.4618978798389434,
+                      0.46259975433349604
+                    ],
+                    [
+                      0.7520653605461121,
+                      0.47995370626449585
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      2970,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/skirting-left-mask.png",
+                "boundsPx": [
+                  0,
+                  975,
+                  430,
+                  233
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/skirting-left-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/skirting-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.06565368175506592,
+                "tint": [
+                  1.0564500093460083,
+                  0.9937099814414978,
+                  0.8961300253868103
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5000,
+                    0
+                  ],
+                  [
+                    5000,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3257330358028412,
+                    0.45400118827819824
+                  ],
+                  [
+                    -0.6102104187011719,
+                    1.0176804102957249
+                  ],
+                  [
+                    -0.6102104187011719,
+                    1.0582922957837582
+                  ],
+                  [
+                    0.3257330358028412,
+                    0.4632975459098816
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.2593810840228043,
+                      0.4939621670945261
+                    ],
+                    [
+                      0.25938108402280424,
+                      0.5054785802053005
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1250,
+                      0
+                    ],
+                    [
+                      1250,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/skirting-right-mask.png",
+                "boundsPx": [
+                  2111,
+                  1170,
+                  289,
+                  338
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/skirting-right-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.053983237594366074,
+                "tint": [
+                  1.05253005027771,
+                  0.9945499897003174,
+                  0.8993200063705444
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5000,
+                    0
+                  ],
+                  [
+                    5000,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    1.9066162109375,
+                    2.0017664432525635
+                  ],
+                  [
+                    0.749932050704956,
+                    0.4793023467063904
+                  ],
+                  [
+                    0.749932050704956,
+                    0.490004301071167
+                  ],
+                  [
+                    1.9066165685653687,
+                    2.0970500707626343
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.9901214555913955,
+                      0.795447201008604
+                    ],
+                    [
+                      0.9901214776212353,
+                      0.8237127552695707
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1500,
+                      0
+                    ],
+                    [
+                      1500,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/kitchen-render-01/model-glass-insert-protected-mask.png",
+            "boundsPx": [
+              903,
+              443,
+              182,
+              199
+            ]
+          },
+          "allowedFrameModes": [
+            "door",
+            "floor",
+            "black"
+          ]
+        }
+      },
+      {
+        "modelId": "filomuro",
+        "frameType": "concealed-aluminium",
+        "patch": {
+          "regionPx": [
+            712,
+            214,
+            574,
+            814
+          ],
+          "base": "/media/scenes/kitchen-render-01/model-filomuro-base.webp",
+          "original": "/media/scenes/kitchen-render-01/model-filomuro-original.webp",
+          "layers": [
+            {
+              "image": "/media/scenes/kitchen-render-01/model-filomuro-floor-mask.png",
+              "over": "/media/scenes/kitchen-render-01/floor-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-filomuro-floor-light.png",
+              "over": "/media/scenes/kitchen-render-01/floor-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-filomuro-floor-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/floor-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-filomuro-leaf-mask.png",
+              "over": "/media/scenes/kitchen-render-01/leaf-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-filomuro-leaf-light.png",
+              "over": "/media/scenes/kitchen-render-01/leaf-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-filomuro-leaf-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/leaf-reflection.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-filomuro-skirting-back-right-mask.png",
+              "over": "/media/scenes/kitchen-render-01/skirting-back-right-mask.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-filomuro-skirting-back-right-light.png",
+              "over": "/media/scenes/kitchen-render-01/skirting-back-right-light.png"
+            },
+            {
+              "image": "/media/scenes/kitchen-render-01/model-filomuro-skirting-back-right-reflection.png",
+              "over": "/media/scenes/kitchen-render-01/skirting-back-right-reflection.png"
+            }
+          ],
+          "surfaces": [
+            {
+              "id": "floor",
+              "role": "floor",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-filomuro-floor-mask.png",
+                "boundsPx": [
+                  0,
+                  848,
+                  2400,
+                  952
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-filomuro-floor-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-filomuro-floor-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 1.1330533027648926,
+                "tint": [
+                  1.0321799516677856,
+                  0.9992300271987915,
+                  0.8952599763870239
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4600,
+                    0
+                  ],
+                  [
+                    4600,
+                    5000
+                  ],
+                  [
+                    0,
+                    5000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.324442982673645,
+                    0.4632163643836975
+                  ],
+                  [
+                    0.7516433596611023,
+                    0.4901120066642761
+                  ],
+                  [
+                    1.9273967742919922,
+                    2.1056264638900757
+                  ],
+                  [
+                    -0.6139602065086365,
+                    1.0567446202039719
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 4600,
+                  "referenceImageSegment01": [
+                    [
+                      0.324442982673645,
+                      0.4632163643836976
+                    ],
+                    [
+                      0.7516433596611022,
+                      0.4901120066642761
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      4600,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0,
+              "positionMap": {
+                "image": "/media/scenes/kitchen-render-01/floor-position.png",
+                "boundsPx": [
+                  0,
+                  848,
+                  2400,
+                  952
+                ],
+                "originMm": [
+                  -300,
+                  -300
+                ],
+                "unitMm": 0.1,
+                "stepPx": 4
+              }
+            },
+            {
+              "id": "leaf",
+              "role": "door-leaf",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-filomuro-leaf-mask.png",
+                "boundsPx": [
+                  906,
+                  408,
+                  188,
+                  361
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-filomuro-leaf-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-filomuro-leaf-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.026552174240350723,
+                "tint": [
+                  1.0594300031661987,
+                  0.9927600026130676,
+                  0.8916000127792358
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    900,
+                    0
+                  ],
+                  [
+                    900,
+                    2000
+                  ],
+                  [
+                    0,
+                    2000
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3778250813484192,
+                    0.22890615463256836
+                  ],
+                  [
+                    0.4551848769187927,
+                    0.22734248638153076
+                  ],
+                  [
+                    0.4551848769187927,
+                    0.47047507762908936
+                  ],
+                  [
+                    0.3778250813484192,
+                    0.46563029289245605
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 900,
+                  "referenceImageSegment01": [
+                    [
+                      0.37782508134841913,
+                      0.22890615463256825
+                    ],
+                    [
+                      0.4551848769187926,
+                      0.2273424863815307
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      900,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 90
+            },
+            {
+              "id": "skirting-back-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/model-filomuro-skirting-back-right-mask.png",
+                "boundsPx": [
+                  1097,
+                  831,
+                  77,
+                  23
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/model-filomuro-skirting-back-right-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/model-filomuro-skirting-back-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.027755534276366234,
+                "tint": [
+                  1.054819941520691,
+                  0.99413001537323,
+                  0.8967499732971191
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3047,
+                    0
+                  ],
+                  [
+                    3047,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.45506635308265686,
+                    0.4621911644935608
+                  ],
+                  [
+                    0.7520653605461121,
+                    0.47995370626449585
+                  ],
+                  [
+                    0.7520653605461121,
+                    0.4906918406486511
+                  ],
+                  [
+                    0.45506635308265686,
+                    0.4719425439834595
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 3047,
+                  "referenceImageSegment01": [
+                    [
+                      0.4550663530826569,
+                      0.4621911644935609
+                    ],
+                    [
+                      0.7520653605461122,
+                      0.47995370626449596
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      3047,
+                      0
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-left",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/skirting-left-mask.png",
+                "boundsPx": [
+                  0,
+                  975,
+                  430,
+                  233
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/skirting-left-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/skirting-left-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.06565368175506592,
+                "tint": [
+                  1.0564500093460083,
+                  0.9937099814414978,
+                  0.8961300253868103
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5000,
+                    0
+                  ],
+                  [
+                    5000,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    0.3257330358028412,
+                    0.45400118827819824
+                  ],
+                  [
+                    -0.6102104187011719,
+                    1.0176804102957249
+                  ],
+                  [
+                    -0.6102104187011719,
+                    1.0582922957837582
+                  ],
+                  [
+                    0.3257330358028412,
+                    0.4632975459098816
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.2593810840228043,
+                      0.4939621670945261
+                    ],
+                    [
+                      0.25938108402280424,
+                      0.5054785802053005
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1250,
+                      0
+                    ],
+                    [
+                      1250,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            },
+            {
+              "id": "skirting-right",
+              "role": "skirting",
+              "mask": {
+                "alpha": "/media/scenes/kitchen-render-01/skirting-right-mask.png",
+                "boundsPx": [
+                  2111,
+                  1170,
+                  289,
+                  338
+                ]
+              },
+              "lighting": {
+                "diffuse": "/media/scenes/kitchen-render-01/skirting-right-light.png",
+                "baselineLinear": 0.33103262288779045,
+                "shadeMin": 0,
+                "shadeMax": 3.021,
+                "specular": "/media/scenes/kitchen-render-01/skirting-right-reflection.png",
+                "specularIncludedInDiffuse": false,
+                "specularScale": 0.053983237594366074,
+                "tint": [
+                  1.05253005027771,
+                  0.9945499897003174,
+                  0.8993200063705444
+                ]
+              },
+              "mapping": {
+                "worldQuadMm": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5000,
+                    0
+                  ],
+                  [
+                    5000,
+                    80
+                  ],
+                  [
+                    0,
+                    80
+                  ]
+                ],
+                "imageQuad01": [
+                  [
+                    1.9066162109375,
+                    2.0017664432525635
+                  ],
+                  [
+                    0.749932050704956,
+                    0.4793023467063904
+                  ],
+                  [
+                    0.749932050704956,
+                    0.490004301071167
+                  ],
+                  [
+                    1.9066165685653687,
+                    2.0970500707626343
+                  ]
+                ],
+                "calibration": {
+                  "method": "measured-plane",
+                  "note": "Exact projection of the modelled plane through the Blender camera (tools/blender/render_layers.py).",
+                  "referenceLengthMm": 80,
+                  "referenceImageSegment01": [
+                    [
+                      0.9901214555913955,
+                      0.795447201008604
+                    ],
+                    [
+                      0.9901214776212353,
+                      0.8237127552695707
+                    ]
+                  ],
+                  "referenceWorldSegmentMm": [
+                    [
+                      1500,
+                      0
+                    ],
+                    [
+                      1500,
+                      80
+                    ]
+                  ]
+                }
+              },
+              "uvRotationDeg": 0
+            }
+          ],
+          "protectedMask": {
+            "alpha": "/media/scenes/kitchen-render-01/model-filomuro-protected-mask.png",
+            "boundsPx": [
+              1046,
+              612,
+              39,
+              30
+            ]
+          },
+          "allowedFrameModes": [
+            "door"
+          ]
+        }
+      }
+    ],
+    "allowedDoorProductIds": [
+      "dera-bardhe",
+      "dera-lis",
+      "dera-kashmir",
+      "dera-antracit"
+    ],
+    "allowedFloorProductIds": [
+      "peshk-natyral-12",
+      "kronotex-d4955",
+      "kronotex-d80582",
+      "kronotex-d80612",
+      "kronotex-d4954",
+      "kronotex-d4763",
+      "kronotex-d4956",
+      "kronotex-d3179",
+      "kronotex-d81162"
+    ],
+    "allowedFrameModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "allowedSkirtingModes": [
+      "door",
+      "floor",
+      "black"
+    ],
+    "defaultSelection": {
+      "version": 1,
+      "sceneId": "kitchen-render-01",
+      "doorProductId": "dera-bardhe",
+      "doorModelId": "flat",
+      "doorFinishId": "bardhe-mat",
+      "floorProductId": "kronotex-d4955",
+      "frameMode": "door",
+      "skirtingMode": "door",
+      "floorRotationDeg": 0
+    },
+    "assetRevision": "pending"
+  },
+  "renderManifest": "render-manifest.json"
+}

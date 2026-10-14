@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "buildId": "jgeAX0SD5wrLvN7B4F3-n",
+  "buildId": "vyKZA_eIOakSpWf2Mnwm1",
   "method": "Production export. Unique initial script tags per route; gzip and Brotli per file. CSS gzip plus used WOFF2 bytes. Images: conservative 640px variants at 390px viewport. File sizes do not establish LCP, INP, CLS or device latency.",
   "limits": {
     "feedInitialJsGzip": 204800,
@@ -11,7 +11,8 @@
     "cardAvif640": 61440,
     "sceneFallback960": 225280,
     "studioFirstScene": 2621440,
-    "studioOfflinePack": 20971520,
+    "studioOfflinePack": 50331648,
+    "studioOfflinePackDecision": "Phase 3 (owner, 2026-10-14): one 'Save offline' keeps saving every Studio room. Seven Blender rooms are about 3.5 MB each plus about 7 MB of floor plank sheets, so the single pack limit rises from 20 MiB to 48 MiB (also brand.json offline.maxStudioDownloadBytes) instead of per-room saving. It is a one-time presenter download on showroom Wi-Fi; customer pages never download it.",
     "ownedRenderBuffers": 209715200,
     "ownedRenderBuffersRenderedFull": 335544320,
     "cls": 0.1,
@@ -25,6 +26,12 @@
       "js": {
         "files": [
           {
+            "url": "/_next/static/chunks/0aofbdcqaf-2p.js",
+            "raw": 34929,
+            "gzip": 12167,
+            "brotli": 10606
+          },
+          {
             "url": "/_next/static/chunks/0cz1d0mv5g_q7.js",
             "raw": 112594,
             "gzip": 39627,
@@ -67,12 +74,6 @@
             "brotli": 7506
           },
           {
-            "url": "/_next/static/chunks/2bp91fr7vi65w.js",
-            "raw": 33680,
-            "gzip": 11809,
-            "brotli": 10299
-          },
-          {
             "url": "/_next/static/chunks/3eawq3h7yvchp.js",
             "raw": 5346,
             "gzip": 2079,
@@ -91,22 +92,22 @@
             "brotli": 3512
           }
         ],
-        "raw": 636028,
-        "gzip": 198914,
-        "brotli": 172000
+        "raw": 637277,
+        "gzip": 199272,
+        "brotli": 172307
       },
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/231z-e7xp12g_.css",
-            "raw": 31806,
-            "gzip": 6674,
-            "brotli": 5935
+            "url": "/_next/static/chunks/3ksz_51d9q8x5.css",
+            "raw": 32441,
+            "gzip": 6715,
+            "brotli": 5969
           }
         ],
-        "raw": 31806,
-        "gzip": 6674,
-        "brotli": 5935
+        "raw": 32441,
+        "gzip": 6715,
+        "brotli": 5969
       },
       "fonts": {
         "files": [
@@ -145,14 +146,20 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 105810,
-      "firstScreen": 437098
+      "cssAndFonts": 105851,
+      "firstScreen": 437936
     },
     {
       "route": "/en/",
       "js": {
         "files": [
           {
+            "url": "/_next/static/chunks/0aofbdcqaf-2p.js",
+            "raw": 34929,
+            "gzip": 12167,
+            "brotli": 10606
+          },
+          {
             "url": "/_next/static/chunks/0cz1d0mv5g_q7.js",
             "raw": 112594,
             "gzip": 39627,
@@ -195,12 +202,6 @@
             "brotli": 7506
           },
           {
-            "url": "/_next/static/chunks/2bp91fr7vi65w.js",
-            "raw": 33680,
-            "gzip": 11809,
-            "brotli": 10299
-          },
-          {
             "url": "/_next/static/chunks/3eawq3h7yvchp.js",
             "raw": 5346,
             "gzip": 2079,
@@ -219,22 +220,22 @@
             "brotli": 3512
           }
         ],
-        "raw": 636028,
-        "gzip": 198914,
-        "brotli": 172000
+        "raw": 637277,
+        "gzip": 199272,
+        "brotli": 172307
       },
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/231z-e7xp12g_.css",
-            "raw": 31806,
-            "gzip": 6674,
-            "brotli": 5935
+            "url": "/_next/static/chunks/3ksz_51d9q8x5.css",
+            "raw": 32441,
+            "gzip": 6715,
+            "brotli": 5969
           }
         ],
-        "raw": 31806,
-        "gzip": 6674,
-        "brotli": 5935
+        "raw": 32441,
+        "gzip": 6715,
+        "brotli": 5969
       },
       "fonts": {
         "files": [
@@ -273,14 +274,20 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 105810,
-      "firstScreen": 436458
+      "cssAndFonts": 105851,
+      "firstScreen": 437301
     },
     {
       "route": "/de/",
       "js": {
         "files": [
           {
+            "url": "/_next/static/chunks/0aofbdcqaf-2p.js",
+            "raw": 34929,
+            "gzip": 12167,
+            "brotli": 10606
+          },
+          {
             "url": "/_next/static/chunks/0cz1d0mv5g_q7.js",
             "raw": 112594,
             "gzip": 39627,
@@ -323,12 +330,6 @@
             "brotli": 7506
           },
           {
-            "url": "/_next/static/chunks/2bp91fr7vi65w.js",
-            "raw": 33680,
-            "gzip": 11809,
-            "brotli": 10299
-          },
-          {
             "url": "/_next/static/chunks/3eawq3h7yvchp.js",
             "raw": 5346,
             "gzip": 2079,
@@ -347,22 +348,22 @@
             "brotli": 3512
           }
         ],
-        "raw": 636028,
-        "gzip": 198914,
-        "brotli": 172000
+        "raw": 637277,
+        "gzip": 199272,
+        "brotli": 172307
       },
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/231z-e7xp12g_.css",
-            "raw": 31806,
-            "gzip": 6674,
-            "brotli": 5935
+            "url": "/_next/static/chunks/3ksz_51d9q8x5.css",
+            "raw": 32441,
+            "gzip": 6715,
+            "brotli": 5969
           }
         ],
-        "raw": 31806,
-        "gzip": 6674,
-        "brotli": 5935
+        "raw": 32441,
+        "gzip": 6715,
+        "brotli": 5969
       },
       "fonts": {
         "files": [
@@ -401,8 +402,8 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 105810,
-      "firstScreen": 437180
+      "cssAndFonts": 105851,
+      "firstScreen": 438013
     }
   ],
   "firstImages": {
@@ -447,94 +448,208 @@
       ]
     },
     {
-      "id": "living-standard",
-      "bytes": 1344951,
+      "id": "kitchen-render-01",
+      "bytes": 2009962,
       "files": [
-        "/media/scenes/living-standard/base.webp",
-        "/media/scenes/living-standard/fallback.webp",
-        "/media/scenes/living-standard/protected-mask.png",
-        "/media/scenes/living-standard/floor-mask.png",
-        "/media/scenes/living-standard/floor-diffuse.png",
-        "/media/scenes/living-standard/leaf-mask.png",
-        "/media/scenes/living-standard/leaf-diffuse.png",
-        "/media/scenes/living-standard/frame-left-mask.png",
-        "/media/scenes/living-standard/frame-left-diffuse.png",
-        "/media/scenes/living-standard/frame-right-mask.png",
-        "/media/scenes/living-standard/frame-right-diffuse.png",
-        "/media/scenes/living-standard/frame-top-mask.png",
-        "/media/scenes/living-standard/frame-top-diffuse.png",
-        "/media/scenes/living-standard/skirting-back-left-mask.png",
-        "/media/scenes/living-standard/skirting-back-left-diffuse.png",
-        "/media/scenes/living-standard/skirting-back-right-mask.png",
-        "/media/scenes/living-standard/skirting-back-right-diffuse.png",
-        "/media/scenes/living-standard/skirting-right-mask.png",
-        "/media/scenes/living-standard/skirting-right-diffuse.png",
-        "/media/textures/floors/kronotex-d4955/atlas.webp",
+        "/media/scenes/kitchen-render-01/base.webp",
+        "/media/scenes/kitchen-render-01/fallback.webp",
+        "/media/scenes/kitchen-render-01/protected-mask.png",
+        "/media/scenes/kitchen-render-01/floor-mask.png",
+        "/media/scenes/kitchen-render-01/floor-light.png",
+        "/media/scenes/kitchen-render-01/floor-reflection.png",
+        "/media/scenes/kitchen-render-01/floor-position.png",
+        "/media/scenes/kitchen-render-01/leaf-mask.png",
+        "/media/scenes/kitchen-render-01/leaf-light.png",
+        "/media/scenes/kitchen-render-01/leaf-reflection.png",
+        "/media/scenes/kitchen-render-01/frame-left-mask.png",
+        "/media/scenes/kitchen-render-01/frame-left-light.png",
+        "/media/scenes/kitchen-render-01/frame-left-reflection.png",
+        "/media/scenes/kitchen-render-01/frame-right-mask.png",
+        "/media/scenes/kitchen-render-01/frame-right-light.png",
+        "/media/scenes/kitchen-render-01/frame-right-reflection.png",
+        "/media/scenes/kitchen-render-01/frame-top-mask.png",
+        "/media/scenes/kitchen-render-01/frame-top-light.png",
+        "/media/scenes/kitchen-render-01/frame-top-reflection.png",
+        "/media/scenes/kitchen-render-01/skirting-left-mask.png",
+        "/media/scenes/kitchen-render-01/skirting-left-light.png",
+        "/media/scenes/kitchen-render-01/skirting-left-reflection.png",
+        "/media/scenes/kitchen-render-01/skirting-back-right-mask.png",
+        "/media/scenes/kitchen-render-01/skirting-back-right-light.png",
+        "/media/scenes/kitchen-render-01/skirting-back-right-reflection.png",
+        "/media/scenes/kitchen-render-01/skirting-right-mask.png",
+        "/media/scenes/kitchen-render-01/skirting-right-light.png",
+        "/media/scenes/kitchen-render-01/skirting-right-reflection.png",
+        "/media/textures/floors/kronotex-d4955/planks.webp",
         "/media/textures/floors/kronotex-d4955/trim.webp"
       ]
     },
     {
-      "id": "corridor-standard",
-      "bytes": 2103619,
+      "id": "bedroom-render-01",
+      "bytes": 2042587,
       "files": [
-        "/media/scenes/corridor-standard/base.webp",
-        "/media/scenes/corridor-standard/fallback.webp",
-        "/media/scenes/corridor-standard/protected-mask.png",
-        "/media/scenes/corridor-standard/floor-mask.png",
-        "/media/scenes/corridor-standard/floor-diffuse.png",
-        "/media/scenes/corridor-standard/leaf-mask.png",
-        "/media/scenes/corridor-standard/leaf-diffuse.png",
-        "/media/scenes/corridor-standard/frame-left-mask.png",
-        "/media/scenes/corridor-standard/frame-left-diffuse.png",
-        "/media/scenes/corridor-standard/frame-right-mask.png",
-        "/media/scenes/corridor-standard/frame-right-diffuse.png",
-        "/media/scenes/corridor-standard/frame-top-mask.png",
-        "/media/scenes/corridor-standard/frame-top-diffuse.png",
-        "/media/scenes/corridor-standard/skirting-back-left-mask.png",
-        "/media/scenes/corridor-standard/skirting-back-left-diffuse.png",
-        "/media/scenes/corridor-standard/skirting-back-right-mask.png",
-        "/media/scenes/corridor-standard/skirting-back-right-diffuse.png",
-        "/media/scenes/corridor-standard/skirting-left-mask.png",
-        "/media/scenes/corridor-standard/skirting-left-diffuse.png",
-        "/media/scenes/corridor-standard/skirting-right-mask.png",
-        "/media/scenes/corridor-standard/skirting-right-diffuse.png",
-        "/media/scenes/corridor-standard/skirting-left-near-mask.png",
-        "/media/scenes/corridor-standard/skirting-left-near-diffuse.png",
-        "/media/scenes/corridor-standard/skirting-right-near-mask.png",
-        "/media/scenes/corridor-standard/skirting-right-near-diffuse.png",
-        "/media/textures/floors/peshk-natyral-12/atlas.webp",
-        "/media/textures/floors/peshk-natyral-12/trim.webp"
+        "/media/scenes/bedroom-render-01/base.webp",
+        "/media/scenes/bedroom-render-01/fallback.webp",
+        "/media/scenes/bedroom-render-01/protected-mask.png",
+        "/media/scenes/bedroom-render-01/floor-mask.png",
+        "/media/scenes/bedroom-render-01/floor-light.png",
+        "/media/scenes/bedroom-render-01/floor-reflection.png",
+        "/media/scenes/bedroom-render-01/floor-position.png",
+        "/media/scenes/bedroom-render-01/leaf-mask.png",
+        "/media/scenes/bedroom-render-01/leaf-light.png",
+        "/media/scenes/bedroom-render-01/leaf-reflection.png",
+        "/media/scenes/bedroom-render-01/frame-left-mask.png",
+        "/media/scenes/bedroom-render-01/frame-left-light.png",
+        "/media/scenes/bedroom-render-01/frame-left-reflection.png",
+        "/media/scenes/bedroom-render-01/frame-right-mask.png",
+        "/media/scenes/bedroom-render-01/frame-right-light.png",
+        "/media/scenes/bedroom-render-01/frame-right-reflection.png",
+        "/media/scenes/bedroom-render-01/frame-top-mask.png",
+        "/media/scenes/bedroom-render-01/frame-top-light.png",
+        "/media/scenes/bedroom-render-01/frame-top-reflection.png",
+        "/media/scenes/bedroom-render-01/skirting-back-left-mask.png",
+        "/media/scenes/bedroom-render-01/skirting-back-left-light.png",
+        "/media/scenes/bedroom-render-01/skirting-back-left-reflection.png",
+        "/media/scenes/bedroom-render-01/skirting-back-right-mask.png",
+        "/media/scenes/bedroom-render-01/skirting-back-right-light.png",
+        "/media/scenes/bedroom-render-01/skirting-back-right-reflection.png",
+        "/media/scenes/bedroom-render-01/skirting-right-mask.png",
+        "/media/scenes/bedroom-render-01/skirting-right-light.png",
+        "/media/scenes/bedroom-render-01/skirting-right-reflection.png",
+        "/media/textures/floors/kronotex-d4955/planks.webp",
+        "/media/textures/floors/kronotex-d4955/trim.webp"
       ]
     },
     {
-      "id": "bedroom-photo",
-      "bytes": 1127050,
+      "id": "hallway-render-01",
+      "bytes": 1668575,
       "files": [
-        "/media/scenes/bedroom-photo/base.webp",
-        "/media/scenes/bedroom-photo/fallback.webp",
-        "/media/scenes/bedroom-photo/protected-mask.png",
-        "/media/scenes/bedroom-photo/floor-mask.png",
-        "/media/scenes/bedroom-photo/floor-diffuse.png",
-        "/media/scenes/bedroom-photo/leaf-mask.png",
-        "/media/scenes/bedroom-photo/leaf-diffuse.png",
-        "/media/scenes/bedroom-photo/frame-left-mask.png",
-        "/media/scenes/bedroom-photo/frame-left-diffuse.png",
-        "/media/scenes/bedroom-photo/frame-right-mask.png",
-        "/media/scenes/bedroom-photo/frame-right-diffuse.png",
-        "/media/scenes/bedroom-photo/frame-top-mask.png",
-        "/media/scenes/bedroom-photo/frame-top-diffuse.png",
-        "/media/scenes/bedroom-photo/skirting-left-mask.png",
-        "/media/scenes/bedroom-photo/skirting-left-diffuse.png",
-        "/media/scenes/bedroom-photo/skirting-right-mask.png",
-        "/media/scenes/bedroom-photo/skirting-right-diffuse.png",
-        "/media/textures/floors/kronotex-d80582/atlas.webp",
-        "/media/textures/floors/kronotex-d80582/trim.webp"
+        "/media/scenes/hallway-render-01/base.webp",
+        "/media/scenes/hallway-render-01/fallback.webp",
+        "/media/scenes/hallway-render-01/protected-mask.png",
+        "/media/scenes/hallway-render-01/floor-mask.png",
+        "/media/scenes/hallway-render-01/floor-light.png",
+        "/media/scenes/hallway-render-01/floor-reflection.png",
+        "/media/scenes/hallway-render-01/floor-position.png",
+        "/media/scenes/hallway-render-01/leaf-mask.png",
+        "/media/scenes/hallway-render-01/leaf-light.png",
+        "/media/scenes/hallway-render-01/leaf-reflection.png",
+        "/media/scenes/hallway-render-01/frame-left-mask.png",
+        "/media/scenes/hallway-render-01/frame-left-light.png",
+        "/media/scenes/hallway-render-01/frame-left-reflection.png",
+        "/media/scenes/hallway-render-01/frame-right-mask.png",
+        "/media/scenes/hallway-render-01/frame-right-light.png",
+        "/media/scenes/hallway-render-01/frame-right-reflection.png",
+        "/media/scenes/hallway-render-01/frame-top-mask.png",
+        "/media/scenes/hallway-render-01/frame-top-light.png",
+        "/media/scenes/hallway-render-01/frame-top-reflection.png",
+        "/media/scenes/hallway-render-01/skirting-left-mask.png",
+        "/media/scenes/hallway-render-01/skirting-left-light.png",
+        "/media/scenes/hallway-render-01/skirting-left-reflection.png",
+        "/media/scenes/hallway-render-01/skirting-back-left-mask.png",
+        "/media/scenes/hallway-render-01/skirting-back-left-light.png",
+        "/media/scenes/hallway-render-01/skirting-back-left-reflection.png",
+        "/media/scenes/hallway-render-01/skirting-right-mask.png",
+        "/media/scenes/hallway-render-01/skirting-right-light.png",
+        "/media/scenes/hallway-render-01/skirting-right-reflection.png",
+        "/media/textures/floors/kronotex-d4955/planks.webp",
+        "/media/textures/floors/kronotex-d4955/trim.webp"
+      ]
+    },
+    {
+      "id": "hallway-render-02",
+      "bytes": 1673321,
+      "files": [
+        "/media/scenes/hallway-render-02/base.webp",
+        "/media/scenes/hallway-render-02/fallback.webp",
+        "/media/scenes/hallway-render-02/protected-mask.png",
+        "/media/scenes/hallway-render-02/floor-mask.png",
+        "/media/scenes/hallway-render-02/floor-light.png",
+        "/media/scenes/hallway-render-02/floor-reflection.png",
+        "/media/scenes/hallway-render-02/floor-position.png",
+        "/media/scenes/hallway-render-02/leaf-mask.png",
+        "/media/scenes/hallway-render-02/leaf-light.png",
+        "/media/scenes/hallway-render-02/leaf-reflection.png",
+        "/media/scenes/hallway-render-02/skirting-left-mask.png",
+        "/media/scenes/hallway-render-02/skirting-left-light.png",
+        "/media/scenes/hallway-render-02/skirting-left-reflection.png",
+        "/media/scenes/hallway-render-02/skirting-back-left-mask.png",
+        "/media/scenes/hallway-render-02/skirting-back-left-light.png",
+        "/media/scenes/hallway-render-02/skirting-back-left-reflection.png",
+        "/media/scenes/hallway-render-02/skirting-back-right-mask.png",
+        "/media/scenes/hallway-render-02/skirting-back-right-light.png",
+        "/media/scenes/hallway-render-02/skirting-back-right-reflection.png",
+        "/media/scenes/hallway-render-02/skirting-right-mask.png",
+        "/media/scenes/hallway-render-02/skirting-right-light.png",
+        "/media/scenes/hallway-render-02/skirting-right-reflection.png",
+        "/media/textures/floors/kronotex-d4955/planks.webp",
+        "/media/textures/floors/kronotex-d4955/trim.webp"
+      ]
+    },
+    {
+      "id": "kids-render-01",
+      "bytes": 2363591,
+      "files": [
+        "/media/scenes/kids-render-01/base.webp",
+        "/media/scenes/kids-render-01/fallback.webp",
+        "/media/scenes/kids-render-01/protected-mask.png",
+        "/media/scenes/kids-render-01/floor-mask.png",
+        "/media/scenes/kids-render-01/floor-light.png",
+        "/media/scenes/kids-render-01/floor-reflection.png",
+        "/media/scenes/kids-render-01/floor-position.png",
+        "/media/scenes/kids-render-01/leaf-mask.png",
+        "/media/scenes/kids-render-01/leaf-light.png",
+        "/media/scenes/kids-render-01/leaf-reflection.png",
+        "/media/scenes/kids-render-01/frame-left-mask.png",
+        "/media/scenes/kids-render-01/frame-left-light.png",
+        "/media/scenes/kids-render-01/frame-left-reflection.png",
+        "/media/scenes/kids-render-01/frame-right-mask.png",
+        "/media/scenes/kids-render-01/frame-right-light.png",
+        "/media/scenes/kids-render-01/frame-right-reflection.png",
+        "/media/scenes/kids-render-01/frame-top-mask.png",
+        "/media/scenes/kids-render-01/frame-top-light.png",
+        "/media/scenes/kids-render-01/frame-top-reflection.png",
+        "/media/scenes/kids-render-01/skirting-left-mask.png",
+        "/media/scenes/kids-render-01/skirting-left-light.png",
+        "/media/scenes/kids-render-01/skirting-left-reflection.png",
+        "/media/scenes/kids-render-01/skirting-back-left-mask.png",
+        "/media/scenes/kids-render-01/skirting-back-left-light.png",
+        "/media/scenes/kids-render-01/skirting-back-left-reflection.png",
+        "/media/scenes/kids-render-01/skirting-back-right-mask.png",
+        "/media/scenes/kids-render-01/skirting-back-right-light.png",
+        "/media/scenes/kids-render-01/skirting-back-right-reflection.png",
+        "/media/scenes/kids-render-01/skirting-right-mask.png",
+        "/media/scenes/kids-render-01/skirting-right-light.png",
+        "/media/scenes/kids-render-01/skirting-right-reflection.png",
+        "/media/textures/floors/kronotex-d4955/planks.webp",
+        "/media/textures/floors/kronotex-d4955/trim.webp"
+      ]
+    },
+    {
+      "id": "bathroom-render-01",
+      "bytes": 547720,
+      "files": [
+        "/media/scenes/bathroom-render-01/base.webp",
+        "/media/scenes/bathroom-render-01/fallback.webp",
+        "/media/scenes/bathroom-render-01/protected-mask.png",
+        "/media/scenes/bathroom-render-01/leaf-mask.png",
+        "/media/scenes/bathroom-render-01/leaf-light.png",
+        "/media/scenes/bathroom-render-01/leaf-reflection.png",
+        "/media/scenes/bathroom-render-01/frame-left-mask.png",
+        "/media/scenes/bathroom-render-01/frame-left-light.png",
+        "/media/scenes/bathroom-render-01/frame-left-reflection.png",
+        "/media/scenes/bathroom-render-01/frame-right-mask.png",
+        "/media/scenes/bathroom-render-01/frame-right-light.png",
+        "/media/scenes/bathroom-render-01/frame-right-reflection.png",
+        "/media/scenes/bathroom-render-01/frame-top-mask.png",
+        "/media/scenes/bathroom-render-01/frame-top-light.png",
+        "/media/scenes/bathroom-render-01/frame-top-reflection.png",
+        "/media/textures/floors/kronotex-d4955/trim.webp"
       ]
     }
   ],
   "offlinePack": {
-    "files": 248,
-    "bytes": 18692456
+    "files": 855,
+    "bytes": 30780518
   },
   "emittedJsChunks": 23,
   "checks": [
@@ -546,55 +661,55 @@
     },
     {
       "metric": "sq.feedInitialJsGzip",
-      "value": 198914,
+      "value": 199272,
       "limit": 204800,
       "status": "pass"
     },
     {
       "metric": "sq.feedCssAndFonts",
-      "value": 105810,
+      "value": 105851,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "sq.firstScreen",
-      "value": 437098,
+      "value": 437936,
       "limit": 716800,
       "status": "pass"
     },
     {
       "metric": "en.feedInitialJsGzip",
-      "value": 198914,
+      "value": 199272,
       "limit": 204800,
       "status": "pass"
     },
     {
       "metric": "en.feedCssAndFonts",
-      "value": 105810,
+      "value": 105851,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "en.firstScreen",
-      "value": 436458,
+      "value": 437301,
       "limit": 716800,
       "status": "pass"
     },
     {
       "metric": "de.feedInitialJsGzip",
-      "value": 198914,
+      "value": 199272,
       "limit": 204800,
       "status": "pass"
     },
     {
       "metric": "de.feedCssAndFonts",
-      "value": 105810,
+      "value": 105851,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "de.firstScreen",
-      "value": 437180,
+      "value": 438013,
       "limit": 716800,
       "status": "pass"
     },
@@ -995,45 +1110,81 @@
       "status": "pass"
     },
     {
-      "metric": "living-standard.fallback",
-      "value": 23852,
+      "metric": "kitchen-render-01.fallback",
+      "value": 37524,
       "limit": 225280,
       "status": "pass"
     },
     {
-      "metric": "living-standard.firstUseful",
-      "value": 1344951,
+      "metric": "kitchen-render-01.firstUseful",
+      "value": 2009962,
       "limit": 2621440,
       "status": "pass"
     },
     {
-      "metric": "corridor-standard.fallback",
-      "value": 34388,
+      "metric": "bedroom-render-01.fallback",
+      "value": 30638,
       "limit": 225280,
       "status": "pass"
     },
     {
-      "metric": "corridor-standard.firstUseful",
-      "value": 2103619,
+      "metric": "bedroom-render-01.firstUseful",
+      "value": 2042587,
       "limit": 2621440,
       "status": "pass"
     },
     {
-      "metric": "bedroom-photo.fallback",
-      "value": 18886,
+      "metric": "hallway-render-01.fallback",
+      "value": 17260,
       "limit": 225280,
       "status": "pass"
     },
     {
-      "metric": "bedroom-photo.firstUseful",
-      "value": 1127050,
+      "metric": "hallway-render-01.firstUseful",
+      "value": 1668575,
+      "limit": 2621440,
+      "status": "pass"
+    },
+    {
+      "metric": "hallway-render-02.fallback",
+      "value": 20628,
+      "limit": 225280,
+      "status": "pass"
+    },
+    {
+      "metric": "hallway-render-02.firstUseful",
+      "value": 1673321,
+      "limit": 2621440,
+      "status": "pass"
+    },
+    {
+      "metric": "kids-render-01.fallback",
+      "value": 31828,
+      "limit": 225280,
+      "status": "pass"
+    },
+    {
+      "metric": "kids-render-01.firstUseful",
+      "value": 2363591,
+      "limit": 2621440,
+      "status": "pass"
+    },
+    {
+      "metric": "bathroom-render-01.fallback",
+      "value": 21626,
+      "limit": 225280,
+      "status": "pass"
+    },
+    {
+      "metric": "bathroom-render-01.firstUseful",
+      "value": 547720,
       "limit": 2621440,
       "status": "pass"
     },
     {
       "metric": "studioOfflinePack",
-      "value": 18692456,
-      "limit": 20971520,
+      "value": 30780518,
+      "limit": 50331648,
       "status": "pass"
     }
   ],

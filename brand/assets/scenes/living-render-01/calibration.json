@@ -4,15 +4,16 @@
   "scene": {
     "id": "living-render-01",
     "name": {
-      "sq": "Dhoma e ndenjes 3D",
-      "en": "Living room 3D",
-      "de": "Wohnzimmer 3D"
+      "sq": "Dhoma e ndenjes",
+      "en": "Living room",
+      "de": "Wohnzimmer"
     },
     "description": {
-      "sq": "Dhomë e mobiluar, e renderuar në Blender me dritë dite",
-      "en": "Furnished room rendered in Blender with daylight",
-      "de": "Möbliertes Zimmer, in Blender mit Tageslicht gerendert"
+      "sq": "Dhomë ndenjeje e mobiluar me dritë dite",
+      "en": "Furnished living room in daylight",
+      "de": "Möbliertes Wohnzimmer bei Tageslicht"
     },
+    "roomType": "living",
     "width": 2400,
     "height": 1800,
     "base": "/media/scenes/living-render-01/base.webp",

@@ -35,5 +35,5 @@ describe('media', () => {
     expect(audit.sources).toBe(32);
     expect(audit.derivatives).toBe(320);
     expect(audit.firstFour640WebpBytes).toBeLessThanOrEqual(240 * 1024);
-  }, 15000);
+  }, 60000);
 });

@@ -538,9 +538,12 @@
       "defaultModelId": "flat",
       "compatibleSceneIds": [
         "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "hallway-render-02",
+        "kids-render-01",
+        "bathroom-render-01"
       ]
     },
     {
@@ -625,9 +628,12 @@
       "defaultModelId": "flat",
       "compatibleSceneIds": [
         "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "hallway-render-02",
+        "kids-render-01",
+        "bathroom-render-01"
       ]
     },
     {
@@ -705,7 +711,13 @@
       ],
       "defaultModelId": "filomuro",
       "compatibleSceneIds": [
-        "living-render-01"
+        "living-render-01",
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "hallway-render-02",
+        "kids-render-01",
+        "bathroom-render-01"
       ]
     },
     {
@@ -745,9 +757,11 @@
       "collectionId": "peshk-natyral-12",
       "compatibleSceneIds": [
         "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "hallway-render-02",
+        "kids-render-01"
       ]
     },
     {
@@ -825,7 +839,13 @@
       ],
       "defaultModelId": "filomuro",
       "compatibleSceneIds": [
-        "living-render-01"
+        "living-render-01",
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "hallway-render-02",
+        "kids-render-01",
+        "bathroom-render-01"
       ]
     },
     {
@@ -889,9 +909,7 @@
         "all-glass"
       ],
       "defaultModelId": "all-glass",
-      "compatibleSceneIds": [
-        "living-standard"
-      ]
+      "compatibleSceneIds": []
     },
     {
       "id": "pervaze-mdf",
@@ -1032,9 +1050,11 @@
       "collectionId": "kronotex-d4955",
       "compatibleSceneIds": [
         "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "hallway-render-02",
+        "kids-render-01"
       ]
     },
     {
@@ -1074,9 +1094,11 @@
       "collectionId": "kronotex-d80582",
       "compatibleSceneIds": [
         "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "hallway-render-02",
+        "kids-render-01"
       ]
     },
     {
@@ -1116,9 +1138,11 @@
       "collectionId": "kronotex-d80612",
       "compatibleSceneIds": [
         "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "hallway-render-02",
+        "kids-render-01"
       ]
     },
     {
@@ -1158,9 +1182,11 @@
       "collectionId": "kronotex-d4954",
       "compatibleSceneIds": [
         "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "hallway-render-02",
+        "kids-render-01"
       ]
     },
     {
@@ -1200,9 +1226,11 @@
       "collectionId": "kronotex-d4763",
       "compatibleSceneIds": [
         "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "hallway-render-02",
+        "kids-render-01"
       ]
     },
     {
@@ -1242,9 +1270,11 @@
       "collectionId": "kronotex-d4956",
       "compatibleSceneIds": [
         "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "hallway-render-02",
+        "kids-render-01"
       ]
     },
     {
@@ -1284,9 +1314,11 @@
       "collectionId": "kronotex-d3179",
       "compatibleSceneIds": [
         "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "hallway-render-02",
+        "kids-render-01"
       ]
     },
     {
@@ -1326,9 +1358,11 @@
       "collectionId": "kronotex-d81162",
       "compatibleSceneIds": [
         "living-render-01",
-        "living-standard",
-        "corridor-standard",
-        "bedroom-photo"
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "hallway-render-02",
+        "kids-render-01"
       ]
     }
   ]

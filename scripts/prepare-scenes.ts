@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir, readdir, copyFile } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir, copyFile, rm } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 import sharp from 'sharp';
@@ -158,7 +158,18 @@ async function validateDoorModels(dir: string, s: RoomScene, W: number, H: numbe
   }
 }
 // Studio scenes, in tab order. Each has brand/assets/scenes/<id>/calibration.json.
-export const STUDIO_SCENES = ['living-render-01', 'living-standard', 'corridor-standard', 'bedroom-photo'];
+// The retired photo rooms (living-standard, corridor-standard, bedroom-photo,
+// corridor-hidden) stay in brand/assets/scenes only as homography/glass test
+// fixtures (tests/legacy-scenes.ts); they are not published.
+export const STUDIO_SCENES = [
+  'living-render-01',
+  'kitchen-render-01',
+  'bedroom-render-01',
+  'hallway-render-01',
+  'hallway-render-02',
+  'kids-render-01',
+  'bathroom-render-01',
+];
 // Canonical sizes: photo plates 1600×1200; Blender-rendered scenes 2400×1800.
 export const sceneSize = (rendered: boolean) => (rendered ? [2400, 1800] : [1600, 1200]);
 export async function prepareScenes(check = false) {
@@ -210,7 +221,14 @@ export async function prepareScenes(check = false) {
       height: meta.height,
     });
   }
+  // Published scene folders are exactly the Studio scenes.
+  for (const entry of await readdir('public/media/scenes', { withFileTypes: true }).catch(() => []))
+    if (entry.isDirectory() && !STUDIO_SCENES.includes(entry.name)) {
+      if (check) throw new Error(`Unpublished scene folder public/media/scenes/${entry.name}`);
+      await rm(`public/media/scenes/${entry.name}`, { recursive: true });
+    }
   for (const id of STUDIO_SCENES) {
+    if (!check) await rm(`public/media/scenes/${id}`, { recursive: true, force: true });
     const dir = `brand/assets/scenes/${id}`,
       calBytes = await readFile(dir + '/calibration.json'),
       cal = calibrationSchema.parse(JSON.parse(calBytes.toString())),

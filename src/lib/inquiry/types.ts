@@ -14,7 +14,15 @@ export interface InquiryData {
   brand: BrandConfig;
   products: readonly Product[];
   materials: Pick<MaterialsConfig, 'doorFinishes' | 'floorCollections' | 'doorModels'>;
-  scenes: readonly { id: Id; name: LocalizedText }[];
+  // showsFloor/showsSkirting: false in a tiled bathroom (only the door changes there).
+  // defaultModelId: the door model a rendered room is drawn with (product links open there).
+  scenes: readonly {
+    id: Id;
+    name: LocalizedText;
+    showsFloor: boolean;
+    showsSkirting: boolean;
+    defaultModelId: Id | null;
+  }[];
 }
 export type ContactChannel = 'phone' | 'whatsapp' | 'viber';
 export type ContactAction =

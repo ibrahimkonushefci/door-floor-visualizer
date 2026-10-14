@@ -574,6 +574,11 @@ function renormaliseCoverage(
 }
 export const prepareScene = (scene: RoomScene, signal: AbortSignal, options?: SceneLoadOptions) =>
   prepareSceneWith(scene, signal, decodeAsset, options);
+/** Whether the selection's room shows a laminate floor at all (a bathroom does not). */
+function floorShown(s: StudioSelection, c: StudioCatalog) {
+  const scene = c.materials.scenes.find(v => v.id === s.sceneId);
+  return !scene || scene.surfaces.some(v => v.role === 'floor');
+}
 /** Plank sheet of the selected floor when the scene lays boards from a position map. */
 export function sheetFor(s: StudioSelection, c: StudioCatalog) {
   const product = c.products.find(p => p.id === s.floorProductId),
@@ -594,7 +599,7 @@ export async function prepareMaterialsWith(
   if (p?.kind !== 'floor') throw new Error('Unknown floor');
   const floor = c.materials.floorCollections.find(f => f.id === p.collectionId)!;
   const sheet = sheetFor(s, c);
-  const paths = new Set(sheet ? [] : [floor.atlas.image]);
+  const paths = new Set(sheet || !floorShown(s, c) ? [] : [floor.atlas.image]);
   for (const a of [
     finish.kind === 'opaque' ? finish.appearance : null,
     finish.trim.appearance,
@@ -633,7 +638,7 @@ export function createMaterialLoader(decode: DecodeAsset = decodeAsset) {
     if (product?.kind !== 'floor') throw new Error('Unknown floor');
     const floor = c.materials.floorCollections.find(f => f.id === product.collectionId)!;
     const sheet = sheetFor(s, c);
-    const paths = new Set(sheet ? [sheet] : [floor.atlas.image]);
+    const paths = new Set(sheet ? [sheet] : floorShown(s, c) ? [floor.atlas.image] : []);
     for (const a of [
       finish.kind === 'opaque' ? finish.appearance : null,
       finish.trim.appearance,

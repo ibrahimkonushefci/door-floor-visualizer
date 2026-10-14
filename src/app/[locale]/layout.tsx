@@ -8,6 +8,7 @@ import { buildThemeVars } from '@/lib/brand/theme';
 import { buildMetadata } from '@/lib/brand/metadata';
 import { AppShell } from '@/components/shell/AppShell';
 import { InquiryProvider } from '@/components/inquiry/InquiryProvider';
+import { inquiryScenes } from '@/lib/inquiry/message';
 export const dynamicParams = false;
 export function generateStaticParams() {
   return locales.map(locale => ({ locale }));
@@ -36,7 +37,7 @@ export default async function LocaleLayout({
       floorCollections: data.materials.floorCollections,
       doorModels: data.materials.doorModels,
     },
-    scenes: data.materials.scenes.map(({ id, name }) => ({ id, name })),
+    scenes: inquiryScenes(data.materials.scenes),
   };
   return (
     <html lang={locale}>

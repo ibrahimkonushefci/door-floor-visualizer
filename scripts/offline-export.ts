@@ -109,7 +109,7 @@ export async function finalizeOffline(data: SiteData) {
     studioBytes: studio.reduce((n, v) => n + v.bytes, 0),
   };
   if (manifest.studioBytes > manifest.maxStudioDownloadBytes)
-    throw new Error(`Offline pack exceeds 20MiB: ${manifest.studioBytes}`);
+    throw new Error(`Offline pack exceeds ${manifest.maxStudioDownloadBytes} bytes: ${manifest.studioBytes}`);
   await writeFile('out/offline-manifest.json', JSON.stringify(manifest, null, 2) + '\n');
   if (data.brand.offline.enabled)
     await build({

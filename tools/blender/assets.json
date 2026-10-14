@@ -8,6 +8,9 @@
       "author": "Fran Calvente",
       "page": "https://polyhaven.com/a/sofa_03",
       "license": "CC0-1.0",
+      "usedIn": [
+        "living-render-01"
+      ],
       "files": [
         {
           "path": "sofa_03_2k.blend",
@@ -47,6 +50,9 @@
       "author": "Kuutti Siitonen",
       "page": "https://polyhaven.com/a/mid_century_lounge_chair",
       "license": "CC0-1.0",
+      "usedIn": [
+        "living-render-01"
+      ],
       "files": [
         {
           "path": "mid_century_lounge_chair_2k.blend",
@@ -86,6 +92,9 @@
       "author": "Amin",
       "page": "https://polyhaven.com/a/modern_coffee_table_01",
       "license": "CC0-1.0",
+      "usedIn": [
+        "living-render-01"
+      ],
       "files": [
         {
           "path": "modern_coffee_table_01_2k.blend",
@@ -119,6 +128,9 @@
       "author": "James Ray Cock",
       "page": "https://polyhaven.com/a/side_table_01",
       "license": "CC0-1.0",
+      "usedIn": [
+        "living-render-01"
+      ],
       "files": [
         {
           "path": "side_table_01_2k.blend",
@@ -158,6 +170,9 @@
       "author": "Serhii Khromov",
       "page": "https://polyhaven.com/a/throw_pillows_01",
       "license": "CC0-1.0",
+      "usedIn": [
+        "living-render-01"
+      ],
       "files": [
         {
           "path": "throw_pillows_01_2k.blend",
@@ -191,6 +206,9 @@
       "author": "James Ray Cock",
       "page": "https://polyhaven.com/a/modern_ceiling_lamp_01",
       "license": "CC0-1.0",
+      "usedIn": [
+        "living-render-01"
+      ],
       "files": [
         {
           "path": "modern_ceiling_lamp_01_2k.blend",
@@ -230,6 +248,11 @@
       "author": "Rico Cilliers",
       "page": "https://polyhaven.com/a/potted_plant_02",
       "license": "CC0-1.0",
+      "usedIn": [
+        "living-render-01",
+        "hallway-render-01",
+        "hallway-render-02"
+      ],
       "files": [
         {
           "path": "potted_plant_02_1k.gltf",
@@ -287,6 +310,9 @@
       "author": "colormass, Rico Cilliers",
       "page": "https://polyhaven.com/a/wool_boucle",
       "license": "CC0-1.0",
+      "usedIn": [
+        "living-render-01"
+      ],
       "files": [
         {
           "path": "wool_boucle_diff_2k.jpg",
@@ -314,12 +340,446 @@
       "author": "Greg Zaal",
       "page": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy",
       "license": "CC0-1.0",
+      "usedIn": [
+        "living-render-01",
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "kids-render-01"
+      ],
       "files": [
         {
           "path": "kloofendal_48d_partly_cloudy_2k.hdr",
           "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_48d_partly_cloudy_2k.hdr",
           "size": 6480797,
           "md5": "72b472b131798b3eb5fc67fce3ab672e"
+        }
+      ]
+    },
+    {
+      "id": "dining_chair_02",
+      "type": "model",
+      "author": "James Ray Cock",
+      "page": "https://polyhaven.com/a/dining_chair_02",
+      "license": "CC0-1.0",
+      "usedIn": [
+        "kitchen-render-01"
+      ],
+      "files": [
+        {
+          "path": "dining_chair_02_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/dining_chair_02/dining_chair_02_2k.blend",
+          "size": 798159,
+          "md5": "a817aab27f6cf6d565daf9a13eeb0d4e"
+        },
+        {
+          "path": "textures/dining_chair_02_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/dining_chair_02/dining_chair_02_diff_2k.jpg",
+          "size": 332586,
+          "md5": "be041803606b5bf7869f08ab58a1581f"
+        },
+        {
+          "path": "textures/dining_chair_02_metal_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/dining_chair_02/dining_chair_02_metal_2k.exr",
+          "size": 21649,
+          "md5": "1463eb9adcff1ace0d4bf3e124df5500"
+        },
+        {
+          "path": "textures/dining_chair_02_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/dining_chair_02/dining_chair_02_nor_gl_2k.exr",
+          "size": 5235765,
+          "md5": "e3151409207335aa92c19146994b2c53"
+        },
+        {
+          "path": "textures/dining_chair_02_rough_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/dining_chair_02/dining_chair_02_rough_2k.jpg",
+          "size": 615889,
+          "md5": "0bd4578133e1e0493706422f19c3aa94"
+        }
+      ]
+    },
+    {
+      "id": "potted_plant_04",
+      "type": "model",
+      "author": "James Ray Cock",
+      "page": "https://polyhaven.com/a/potted_plant_04",
+      "license": "CC0-1.0",
+      "usedIn": [
+        "kitchen-render-01",
+        "kids-render-01",
+        "bathroom-render-01"
+      ],
+      "files": [
+        {
+          "path": "potted_plant_04_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/potted_plant_04/potted_plant_04_2k.blend",
+          "size": 297303,
+          "md5": "563f3900b68d54e8806c41a58b65502f"
+        },
+        {
+          "path": "textures/potted_plant_04_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/potted_plant_04/potted_plant_04_diff_2k.jpg",
+          "size": 1804144,
+          "md5": "5027506c5e268ac90a12c59af29fdd6b"
+        },
+        {
+          "path": "textures/potted_plant_04_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/potted_plant_04/potted_plant_04_nor_gl_2k.exr",
+          "size": 5472710,
+          "md5": "89afbad566bde91b6dc5acabcd8abebc"
+        },
+        {
+          "path": "textures/potted_plant_04_rough_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/potted_plant_04/potted_plant_04_rough_2k.exr",
+          "size": 1458337,
+          "md5": "843a8eba3f2f37a128ac0814de39297c"
+        }
+      ]
+    },
+    {
+      "id": "ceramic_vase_01",
+      "type": "model",
+      "author": "James Ray Cock",
+      "page": "https://polyhaven.com/a/ceramic_vase_01",
+      "license": "CC0-1.0",
+      "usedIn": [
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-02"
+      ],
+      "files": [
+        {
+          "path": "ceramic_vase_01_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/ceramic_vase_01/ceramic_vase_01_2k.blend",
+          "size": 184468,
+          "md5": "7bdb74af231d8f019117b78852fe3c19"
+        },
+        {
+          "path": "textures/ceramic_vase_01_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/ceramic_vase_01/ceramic_vase_01_diff_2k.jpg",
+          "size": 110174,
+          "md5": "1319c32a8430caff72d94c192657fa00"
+        },
+        {
+          "path": "textures/ceramic_vase_01_metal_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/ceramic_vase_01/ceramic_vase_01_metal_2k.exr",
+          "size": 13296,
+          "md5": "20964cace62590d7393d013491e57260"
+        },
+        {
+          "path": "textures/ceramic_vase_01_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/ceramic_vase_01/ceramic_vase_01_nor_gl_2k.exr",
+          "size": 856713,
+          "md5": "836b4b9565f70c84b34c17e0700c3b16"
+        },
+        {
+          "path": "textures/ceramic_vase_01_rough_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/ceramic_vase_01/ceramic_vase_01_rough_2k.jpg",
+          "size": 149890,
+          "md5": "722f0234591de73c647045075da070eb"
+        }
+      ]
+    },
+    {
+      "id": "rough_linen",
+      "type": "texture",
+      "author": "colormass, Rico Cilliers",
+      "page": "https://polyhaven.com/a/rough_linen",
+      "license": "CC0-1.0",
+      "usedIn": [
+        "kitchen-render-01",
+        "bedroom-render-01",
+        "hallway-render-01",
+        "kids-render-01"
+      ],
+      "files": [
+        {
+          "path": "rough_linen_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_diff_1k.jpg",
+          "size": 835801,
+          "md5": "663db789fb075462b685c1f740e58930"
+        },
+        {
+          "path": "rough_linen_rough_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_rough_1k.jpg",
+          "size": 1083725,
+          "md5": "a380b24cc43cff88c39510305ebf0020"
+        },
+        {
+          "path": "rough_linen_nor_gl_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_nor_gl_1k.jpg",
+          "size": 916843,
+          "md5": "3350269a2e9c472aa406bd3cc1eaf2c8"
+        }
+      ]
+    },
+    {
+      "id": "painted_wooden_nightstand",
+      "type": "model",
+      "author": "Kirill Sannikov",
+      "page": "https://polyhaven.com/a/painted_wooden_nightstand",
+      "license": "CC0-1.0",
+      "usedIn": [
+        "bedroom-render-01"
+      ],
+      "files": [
+        {
+          "path": "painted_wooden_nightstand_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/painted_wooden_nightstand/painted_wooden_nightstand_2k.blend",
+          "size": 127555,
+          "md5": "f92045c8099d924e1089e4e098d1fb80"
+        },
+        {
+          "path": "textures/painted_wooden_nightstand_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/painted_wooden_nightstand/painted_wooden_nightstand_diff_2k.jpg",
+          "size": 2270076,
+          "md5": "92d4d5352ca8ad7d18a4fd2a3cbc31f4"
+        },
+        {
+          "path": "textures/painted_wooden_nightstand_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/painted_wooden_nightstand/painted_wooden_nightstand_nor_gl_2k.exr",
+          "size": 6852017,
+          "md5": "464bd27eb8ba497b4b05f87c1ed8966c"
+        },
+        {
+          "path": "textures/painted_wooden_nightstand_rough_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/painted_wooden_nightstand/painted_wooden_nightstand_rough_2k.exr",
+          "size": 2400633,
+          "md5": "7f57426179b2a0b9b6227304335ff07a"
+        }
+      ]
+    },
+    {
+      "id": "hanging_picture_frame_01",
+      "type": "model",
+      "author": "James Ray Cock",
+      "page": "https://polyhaven.com/a/hanging_picture_frame_01",
+      "license": "CC0-1.0",
+      "usedIn": [
+        "bedroom-render-01",
+        "hallway-render-02"
+      ],
+      "files": [
+        {
+          "path": "hanging_picture_frame_01_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/hanging_picture_frame_01/hanging_picture_frame_01_2k.blend",
+          "size": 203009,
+          "md5": "79c4ca4a6bb98fccdf0f4ab376b696c1"
+        },
+        {
+          "path": "textures/hanging_picture_frame_01_artwork_diff_2k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/hanging_picture_frame_01/hanging_picture_frame_01_artwork_diff_2k.png",
+          "size": 103916,
+          "md5": "893b669d122aacaf1400d2cadd35755f"
+        },
+        {
+          "path": "textures/hanging_picture_frame_01_artwork_nor_gl_2k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/hanging_picture_frame_01/hanging_picture_frame_01_artwork_nor_gl_2k.png",
+          "size": 150247,
+          "md5": "af9ccf58e7408aa15e700fffd1a451ab"
+        },
+        {
+          "path": "textures/hanging_picture_frame_01_artwork_roughness_2k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/hanging_picture_frame_01/hanging_picture_frame_01_artwork_roughness_2k.png",
+          "size": 12840,
+          "md5": "7154e4ec9fc34527a50767782e611370"
+        },
+        {
+          "path": "textures/hanging_picture_frame_01_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/hanging_picture_frame_01/hanging_picture_frame_01_diff_2k.jpg",
+          "size": 355335,
+          "md5": "85b15d6ddac811110e9abaa838110fa7"
+        },
+        {
+          "path": "textures/hanging_picture_frame_01_metallic_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/hanging_picture_frame_01/hanging_picture_frame_01_metallic_2k.exr",
+          "size": 33743,
+          "md5": "35b7fc717b5cebe592a6cb3d556ed9c9"
+        },
+        {
+          "path": "textures/hanging_picture_frame_01_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/hanging_picture_frame_01/hanging_picture_frame_01_nor_gl_2k.exr",
+          "size": 1639824,
+          "md5": "ea178a3b3518c7069e34e2785387a463"
+        },
+        {
+          "path": "textures/hanging_picture_frame_01_opacity_2k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/hanging_picture_frame_01/hanging_picture_frame_01_opacity_2k.png",
+          "size": 1311216,
+          "md5": "671fdf3faf1878f0aa86a850746b9417"
+        },
+        {
+          "path": "textures/hanging_picture_frame_01_roughness_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/hanging_picture_frame_01/hanging_picture_frame_01_roughness_2k.jpg",
+          "size": 345007,
+          "md5": "9d1e2bb46ac2ba7955211d14f7918b97"
+        }
+      ]
+    },
+    {
+      "id": "anthurium_botany_01",
+      "type": "model",
+      "author": "Rob Tuytel, Rico Cilliers",
+      "page": "https://polyhaven.com/a/anthurium_botany_01",
+      "license": "CC0-1.0",
+      "usedIn": [
+        "bedroom-render-01"
+      ],
+      "files": [
+        {
+          "path": "anthurium_botany_01_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/anthurium_botany_01/anthurium_botany_01_2k.blend",
+          "size": 200840,
+          "md5": "8605694a10485a9cae73f57e35345b3d"
+        },
+        {
+          "path": "textures/anthurium_botany_01_alpha_2k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/anthurium_botany_01/anthurium_botany_01_alpha_2k.png",
+          "size": 95881,
+          "md5": "2a14dde9381b983427adcba195c7d6c6"
+        },
+        {
+          "path": "textures/anthurium_botany_01_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/anthurium_botany_01/anthurium_botany_01_diff_2k.jpg",
+          "size": 1565878,
+          "md5": "0fc12b2b2db969ff4f5cc783ffdb807c"
+        },
+        {
+          "path": "textures/anthurium_botany_01_disp_2k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/anthurium_botany_01/anthurium_botany_01_disp_2k.png",
+          "size": 3081059,
+          "md5": "da8dce19fe6144cfa166f5a78970efd9"
+        },
+        {
+          "path": "textures/anthurium_botany_01_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/anthurium_botany_01/anthurium_botany_01_nor_gl_2k.exr",
+          "size": 4308519,
+          "md5": "e36c3d061cbf24d761fa0ba92fe71f28"
+        },
+        {
+          "path": "textures/anthurium_botany_01_rough_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/anthurium_botany_01/anthurium_botany_01_rough_2k.exr",
+          "size": 3087710,
+          "md5": "67b2e9bfd7e907dc4007e12f6766c7d1"
+        }
+      ]
+    },
+    {
+      "id": "brass_vase_01",
+      "type": "model",
+      "author": "Rico Cilliers",
+      "page": "https://polyhaven.com/a/brass_vase_01",
+      "license": "CC0-1.0",
+      "usedIn": [
+        "hallway-render-01"
+      ],
+      "files": [
+        {
+          "path": "brass_vase_01_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/brass_vase_01/brass_vase_01_2k.blend",
+          "size": 2156327,
+          "md5": "cc868bc5dbf68f1074b1291b08f8ef41"
+        },
+        {
+          "path": "textures/brass_vase_01_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_vase_01/brass_vase_01_diff_2k.jpg",
+          "size": 520722,
+          "md5": "d1272872c122a54088f915ed8b6ca1ac"
+        },
+        {
+          "path": "textures/brass_vase_01_metal_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/brass_vase_01/brass_vase_01_metal_2k.exr",
+          "size": 14192,
+          "md5": "6fff569b6ac641f6f0c2956d06cabd78"
+        },
+        {
+          "path": "textures/brass_vase_01_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/brass_vase_01/brass_vase_01_nor_gl_2k.exr",
+          "size": 2410369,
+          "md5": "84f3ca4be7fa9a66621b49d52df2f375"
+        },
+        {
+          "path": "textures/brass_vase_01_rough_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_vase_01/brass_vase_01_rough_2k.jpg",
+          "size": 484791,
+          "md5": "492989d135aed8c5aa28e0e78585e4ac"
+        }
+      ]
+    },
+    {
+      "id": "ceramic_vase_03",
+      "type": "model",
+      "author": "James Ray Cock",
+      "page": "https://polyhaven.com/a/ceramic_vase_03",
+      "license": "CC0-1.0",
+      "usedIn": [
+        "hallway-render-02"
+      ],
+      "files": [
+        {
+          "path": "ceramic_vase_03_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/ceramic_vase_03/ceramic_vase_03_2k.blend",
+          "size": 203727,
+          "md5": "45367cf82c1c8b7f07510a3a5cb008a7"
+        },
+        {
+          "path": "textures/ceramic_vase_03_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/ceramic_vase_03/ceramic_vase_03_diff_2k.jpg",
+          "size": 454987,
+          "md5": "c32fd23ffb9c493a99a543365ce4420b"
+        },
+        {
+          "path": "textures/ceramic_vase_03_nor_gl_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/ceramic_vase_03/ceramic_vase_03_nor_gl_2k.exr",
+          "size": 6895746,
+          "md5": "ff91cb72d0acf07ec33266c1c45c06b2"
+        },
+        {
+          "path": "textures/ceramic_vase_03_rough_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/ceramic_vase_03/ceramic_vase_03_rough_2k.jpg",
+          "size": 548035,
+          "md5": "b907ebfb83c544e16704dd8525028a9e"
+        }
+      ]
+    },
+    {
+      "id": "rubber_duck_toy",
+      "type": "model",
+      "author": "Plat251",
+      "page": "https://polyhaven.com/a/rubber_duck_toy",
+      "license": "CC0-1.0",
+      "usedIn": [
+        "kids-render-01"
+      ],
+      "files": [
+        {
+          "path": "rubber_duck_toy_1k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/rubber_duck_toy/rubber_duck_toy_1k.blend",
+          "size": 196797,
+          "md5": "6b732dfbd0b9ca72edd96451c7387843"
+        },
+        {
+          "path": "textures/rubber_duck_toy_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/rubber_duck_toy/rubber_duck_toy_diff_1k.jpg",
+          "size": 231027,
+          "md5": "49b9676f8d253baf6c054771fd023608"
+        },
+        {
+          "path": "textures/rubber_duck_toy_metal_1k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/rubber_duck_toy/rubber_duck_toy_metal_1k.exr",
+          "size": 4784,
+          "md5": "e1e62bd8a1e5e63c00d599f7ab89e6c4"
+        },
+        {
+          "path": "textures/rubber_duck_toy_nor_gl_1k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/rubber_duck_toy/rubber_duck_toy_nor_gl_1k.exr",
+          "size": 110500,
+          "md5": "88f87eb3920a0da911dcc2f0a27941dd"
+        },
+        {
+          "path": "textures/rubber_duck_toy_rough_1k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/rubber_duck_toy/rubber_duck_toy_rough_1k.exr",
+          "size": 519456,
+          "md5": "5a92098d5cd3ad84568ff22dc016f9e3"
         }
       ]
     }

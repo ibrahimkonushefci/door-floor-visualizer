@@ -9,8 +9,8 @@ import {
 } from '../src/lib/studio/render/sampling';
 import { loadSiteData } from '../src/lib/data/load';
 import { syntheticScene } from '../scripts/render-fixtures';
-const data = loadSiteData(),
-  catalog = { products: data.products.products, materials: data.materials };
+import { legacyCatalog, legacyScene } from '../scripts/legacy-scenes';
+const data = loadSiteData();
 afterEach(() => vi.unstubAllGlobals());
 it('uses final resolution on every selection, including narrow high-DPR stages', () => {
   expect(finalFrameWidth(900, 2)).toBe(1600);
@@ -96,12 +96,14 @@ it('reuses unchanged textures and evicts the oldest of three floor chains', asyn
       return { width: 2, height: 2, data: new Uint8ClampedArray(16).fill(128) };
     }),
     signal = new AbortController().signal,
-    base = data.materials.scenes.find(s => s.id === 'living-standard')!.defaultSelection;
-  await loader.prepare(base, catalog, signal);
-  await loader.prepare({ ...base, doorFinishId: 'kashmir' }, catalog, signal);
+    // A photo room (homography floor): it loads the repeating atlas, not a plank sheet.
+    legacy = legacyCatalog(data),
+    base = legacyScene('living-standard').defaultSelection;
+  await loader.prepare(base, legacy, signal);
+  await loader.prepare({ ...base, doorFinishId: 'kashmir' }, legacy, signal);
   expect(paths.filter(p => p.endsWith('/kronotex-d4955/atlas.webp'))).toHaveLength(1);
   for (const floorProductId of ['kronotex-d80582', 'peshk-natyral-12', 'kronotex-d4955'])
-    await loader.prepare({ ...base, floorProductId }, catalog, signal);
+    await loader.prepare({ ...base, floorProductId }, legacy, signal);
   expect(paths.filter(p => p.endsWith('/kronotex-d4955/atlas.webp'))).toHaveLength(2);
   expect(loader.bytes()).toBeLessThanOrEqual(6 * 1024 * 1024);
   loader.clear();
@@ -134,7 +136,7 @@ it('prepares worker scene once, updates only changed materials, and reports cach
     },
     terminate() {},
   };
-  const controller = createRenderController(catalog, {
+  const controller = createRenderController(legacyCatalog(data), {
     workerFactory: () => worker as unknown as Worker,
     sceneLoader: async () => f.scene,
     materialLoader: async () => ({ ...f.materials }),
@@ -202,7 +204,7 @@ it('rejects malformed current worker frames and completes only a validated canon
       terminated++;
     },
   };
-  const controller = createRenderController(catalog, {
+  const controller = createRenderController(legacyCatalog(data), {
     workerFactory: () => worker as unknown as Worker,
     sceneLoader: async () => f.scene,
     materialLoader: async () => f.materials,

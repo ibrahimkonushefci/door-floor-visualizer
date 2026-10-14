@@ -126,7 +126,12 @@ function ProductStudioLink({ productId, finishId }: { productId: Id; finishId?: 
   const { data, locale, messages: m } = useInquiry();
   const p = data.products.find(p => p.id === productId)!;
   if (p.kind === 'trim') return null;
-  const scene = data.scenes.find(s => p.compatibleSceneIds.includes(s.id));
+  // Doors open in the first room whose own door model the line has (flush doors
+  // in the filomuro hall), floors in the first compatible room.
+  const rooms = data.scenes.filter(s => p.compatibleSceneIds.includes(s.id)),
+    scene =
+      (p.kind === 'door' && rooms.find(s => s.defaultModelId && p.modelIds.includes(s.defaultModelId))) ||
+      rooms[0];
   if (!scene) return null;
   const query = new URLSearchParams({ v: '1', scene: scene.id });
   if (p.kind === 'door') {
