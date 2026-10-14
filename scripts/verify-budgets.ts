@@ -6,6 +6,14 @@ import { walkFiles } from './offline-export';
 import limits from '../verification/budgets.json';
 import type { ImageManifest } from '../src/lib/media/types';
 import type { OfflineManifest } from '../src/lib/offline/messages';
+import type { RoomScene } from '../src/lib/data/types';
+import {
+  createMaterialLoader,
+  prepareSceneWith,
+  sceneLoadFor,
+  type DecodeAsset,
+} from '../src/lib/studio/asset-loader';
+import { bytesNode, decodeNode } from './prepare-scenes';
 const data = loadSiteData(),
   images: ImageManifest = JSON.parse(await readFile('verification/image-manifest.json', 'utf8')),
   sceneManifest = JSON.parse(await readFile('verification/scene-manifest.json', 'utf8')) as {
@@ -100,37 +108,38 @@ for (const [id, image] of Object.entries(images))
     );
   }
 const sizes = new Map(sceneManifest.assets.map(a => [a.output, a.bytes]));
+const catalog = { products: data.products.products, materials: data.materials },
+  signal = new AbortController().signal;
+// First useful bytes are the files the Studio's own loader requests for a room's
+// default selection (scene layers, the default door model's region crops, the
+// position map and the selected materials), recorded rather than re-derived,
+// plus the fallback image the stage shows while they load.
+async function firstLoadUrls(scene: RoomScene) {
+  const urls = new Set<string>([scene.fallback]),
+    selection = scene.defaultSelection;
+  const decode: DecodeAsset = (path, s, maxEdge) => {
+    urls.add(path);
+    return decodeNode(path, s, maxEdge);
+  };
+  await prepareSceneWith(sceneLoadFor(scene, selection, catalog).scene, signal, decode, {
+    modelId: selection.doorModelId,
+    loadBytes: path => {
+      urls.add(path);
+      return bytesNode(path);
+    },
+  });
+  await createMaterialLoader(decode).prepare(selection, catalog, signal);
+  return urls;
+}
 const scenes = [];
 for (const scene of data.materials.scenes) {
   gate(`${scene.id}.fallback`, sizes.get(scene.fallback)!, limits.sceneFallback960);
-  const urls = new Set<string>([scene.base, scene.fallback, scene.protectedMask.alpha]);
-  for (const s of scene.surfaces) {
-    urls.add(s.mask.alpha);
-    urls.add(s.lighting.diffuse);
-    if (s.lighting.specular) urls.add(s.lighting.specular);
-    if (s.positionMap) urls.add(s.positionMap.image);
-  }
-  for (const i of data.materials.doorFinishes.find(
-    f => f.id === scene.defaultSelection.doorFinishId,
-  )?.kind === 'glass'
-    ? scene.doorInserts
-    : []) {
-    urls.add(i.rgba);
-    urls.add(i.replacementMask.alpha);
-    urls.add(i.protectedMask.alpha);
-  }
-  if (scene.foreground) urls.add(scene.foreground);
-  const floor = data.materials.floorCollections.find(
-    c => c.id === scene.defaultSelection.floorProductId,
-  )!;
-  // Position-map floors load the plank sheet instead of the repeating atlas;
-  // a tiled bathroom loads no floor texture at all.
-  if (scene.surfaces.some(s => s.role === 'floor')) {
-    const boards = scene.surfaces.some(s => s.positionMap) && floor.planks && floor.atlas.pattern !== 'chevron';
-    urls.add(boards ? floor.planks!.image : floor.atlas.image);
-  }
-  if (floor.trim.appearance.kind === 'texture') urls.add(floor.trim.appearance.texture);
-  const bytes = [...urls].reduce((n, url) => n + sizes.get(url)!, 0);
+  const urls = await firstLoadUrls(scene);
+  const bytes = [...urls].reduce((n, url) => {
+    const size = sizes.get(url);
+    if (size === undefined) throw new Error(`First load requests an unpublished asset: ${url}`);
+    return n + size;
+  }, 0);
   gate(`${scene.id}.firstUseful`, bytes, limits.studioFirstScene);
   scenes.push({ id: scene.id, bytes, files: [...urls] });
 }

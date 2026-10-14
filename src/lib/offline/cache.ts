@@ -31,7 +31,8 @@ export function createOfflineStore(manifest: OfflineManifest, env: OfflineEnviro
     shellName = prefix + 'shell',
     runtimeName = prefix + 'visited';
   const marker = env.origin + '/__offline_pack__';
-  let saveController: AbortController | null = null;
+  let saveController: AbortController | null = null,
+    saving: Promise<void> | null = null;
   const meta = () => env.storage.open(metaName);
   async function activePack() {
     const r = await (await meta()).match(marker);
@@ -89,25 +90,39 @@ export function createOfflineStore(manifest: OfflineManifest, env: OfflineEnviro
     }
   }
   async function save(onProgress: (p: OfflineProgress) => void) {
-    if (saveController) throw new Error('Download already running');
     if (manifest.studioBytes > manifest.maxStudioDownloadBytes)
       throw new Error('Studio pack exceeds download limit');
+    // A new save supersedes one still running or unwinding (a client that timed
+    // out or was closed and retries); the older one ends as cancelled.
+    while (saving) {
+      saveController?.abort();
+      await saving.catch(() => {});
+    }
     const controller = new AbortController();
     saveController = controller;
-    const name = prefix + 'pack-' + env.nonce(),
-      previous = await activePack();
+    const run = (async () => {
+      const name = prefix + 'pack-' + env.nonce(),
+        previous = await activePack();
+      try {
+        const cache = await env.storage.open(name);
+        await download(cache, manifest.studio, controller, onProgress);
+        controller.signal.throwIfAborted();
+        await (await meta()).put(marker, new Response(name));
+        if (previous && previous !== name) await env.storage.delete(previous);
+      } catch (error) {
+        controller.abort();
+        await env.storage.delete(name);
+        throw error;
+      }
+    })();
+    saving = run;
     try {
-      const cache = await env.storage.open(name);
-      await download(cache, manifest.studio, controller, onProgress);
-      controller.signal.throwIfAborted();
-      await (await meta()).put(marker, new Response(name));
-      if (previous && previous !== name) await env.storage.delete(previous);
-    } catch (error) {
-      controller.abort();
-      await env.storage.delete(name);
-      throw error;
+      await run;
     } finally {
-      saveController = null;
+      if (saving === run) {
+        saving = null;
+        saveController = null;
+      }
     }
   }
   async function remove() {

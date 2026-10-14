@@ -6,7 +6,12 @@ import type {
   WorkerResponse,
   RenderJob,
 } from './types';
-import { prepareScene, createMaterialLoader, type prepareMaterials } from './asset-loader';
+import {
+  prepareScene,
+  createMaterialLoader,
+  sceneLoadFor,
+  type prepareMaterials,
+} from './asset-loader';
 import { renderRows, prepareRender } from './render/kernel';
 import { createByteLru } from './render/cache';
 import type { PixelBuffer } from './render/sampling';
@@ -132,9 +137,7 @@ export function createRenderController(
         });
         return { jobId: mine, pixels: cached, selection: job.selection };
       }
-      const needsGlass =
-        catalog.materials.doorFinishes.find(f => f.id === job.selection.doorFinishId)?.kind ===
-        'glass';
+      const { glass: needsGlass, scene: toLoad } = sceneLoadFor(definition, job.selection, catalog);
       const sceneScale = job.sceneScale ?? 1,
         modelId = job.selection.doorModelId;
       if (
@@ -159,11 +162,11 @@ export function createRenderController(
         const previous = sameScene ? scene : null;
         if (!sameScene) scene = null;
         // A model switch on the same scene rebuilds only the door region from `previous`.
-        const next = await (options.sceneLoader || prepareScene)(
-          needsGlass ? definition : { ...definition, doorInserts: [] },
-          signal,
-          { scale: sceneScale, modelId, previous },
-        );
+        const next = await (options.sceneLoader || prepareScene)(toLoad, signal, {
+          scale: sceneScale,
+          modelId,
+          previous,
+        });
         if (mine !== id) throw aborted();
         scene = next;
       }

@@ -574,6 +574,15 @@ function renormaliseCoverage(
 }
 export const prepareScene = (scene: RoomScene, signal: AbortSignal, options?: SceneLoadOptions) =>
   prepareSceneWith(scene, signal, decodeAsset, options);
+/**
+ * The scene definition the renderer prepares for a selection: glass inserts are
+ * decoded only while a glass finish is shown. Shared by the render controller and
+ * the first-load budget (scripts/verify-budgets.ts), so both count the same files.
+ */
+export function sceneLoadFor(definition: RoomScene, s: StudioSelection, c: StudioCatalog) {
+  const glass = c.materials.doorFinishes.find(f => f.id === s.doorFinishId)?.kind === 'glass';
+  return { glass, scene: glass ? definition : { ...definition, doorInserts: [] } };
+}
 /** Whether the selection's room shows a laminate floor at all (a bathroom does not). */
 function floorShown(s: StudioSelection, c: StudioCatalog) {
   const scene = c.materials.scenes.find(v => v.id === s.sceneId);

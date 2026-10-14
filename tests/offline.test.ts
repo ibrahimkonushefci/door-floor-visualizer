@@ -8,7 +8,13 @@ import {
   cachePrefix,
   assetResponse,
 } from '../src/lib/offline/cache';
-import type { OfflineManifest, OfflineAsset } from '../src/lib/offline/messages';
+import { workerRequest } from '../src/lib/offline/register';
+import type {
+  OfflineManifest,
+  OfflineAsset,
+  WorkerCommand,
+  WorkerReply,
+} from '../src/lib/offline/messages';
 const origin = 'https://catalog.test';
 class MemoryCache {
   values = new Map<string, Response>();
@@ -232,5 +238,147 @@ describe('offline pack integrity and lifecycle', () => {
     await expect(s.store.save(() => {})).rejects.toThrow('Not enough space');
     expect(await s.store.ready()).toBe(false);
     expect((await s.memory.keys()).some(n => n.includes('pack-'))).toBe(false);
+  });
+});
+// A slow connection: every pack file takes `delayMs`; `stall()` holds every
+// later download until `release()` (or until the save is cancelled).
+async function slowPack(files: number, delayMs: number) {
+  const s = await setup(),
+    body = 'plank';
+  s.manifest.studio = await Promise.all(
+    Array.from({ length: files }, (_, i) => asset(`/media/slow-${i}?rev=abc`, body)),
+  );
+  s.manifest.studioBytes = s.manifest.studio.reduce((n, a) => n + a.bytes, 0);
+  let gate: Promise<void> | null = null,
+    open = () => {};
+  const wait = (ms: number, signal: AbortSignal) =>
+    new Promise<void>((resolve, reject) => {
+      const t = setTimeout(resolve, ms);
+      signal.addEventListener('abort', () => {
+        clearTimeout(t);
+        reject(signal.reason);
+      });
+    });
+  const store = createOfflineStore(s.manifest, {
+    storage: s.memory as unknown as CacheStorage,
+    origin,
+    nonce: () => crypto.randomUUID(),
+    fetch: async (_url, signal) => {
+      await wait(delayMs, signal);
+      if (gate)
+        await Promise.race([
+          gate,
+          new Promise((_, reject) => signal.addEventListener('abort', () => reject(signal.reason))),
+        ]);
+      return new Response(body);
+    },
+  });
+  return {
+    store,
+    stall: () => {
+      gate = new Promise(r => (open = r));
+    },
+    release: () => {
+      gate = null;
+      open();
+    },
+  };
+}
+// The service worker's message handling (src/service-worker/sw.ts) around a real store.
+function fakeWorker(store: ReturnType<typeof createOfflineStore>) {
+  const posted: string[] = [];
+  const active = {
+    postMessage(command: WorkerCommand, ports?: MessagePort[]) {
+      posted.push(command.type);
+      const send = (reply: WorkerReply) => ports?.[0]?.postMessage(reply);
+      if (command.type === 'CANCEL_SAVE') store.cancel();
+      else if (command.type === 'SAVE_STUDIO')
+        store
+          .save(progress => send({ type: 'PROGRESS', progress }))
+          .then(
+            () => send({ type: 'READY', ready: true }),
+            (e: Error) =>
+              send({ type: e.name === 'AbortError' ? 'CANCELLED' : 'ERROR', error: e.message }),
+          );
+      // STATUS is left unanswered: a worker busy elsewhere.
+    },
+  };
+  return { registration: { active } as unknown as ServiceWorkerRegistration, posted };
+}
+describe('offline saving on a slow connection', () => {
+  it('a slow download that keeps making progress never times out', async () => {
+    // 24 files × 40 ms, three at a time: about 320 ms in all, against a 150 ms idle limit.
+    const pack = await slowPack(24, 40),
+      worker = fakeWorker(pack.store),
+      start = performance.now(),
+      progress: number[] = [];
+    const reply = await workerRequest(
+      worker.registration,
+      { type: 'SAVE_STUDIO' },
+      p => progress.push(p.done),
+      undefined,
+      150,
+    );
+    expect(reply.type).toBe('READY');
+    expect(performance.now() - start).toBeGreaterThan(150);
+    expect(progress.at(-1)).toBe(24);
+    expect(worker.posted).not.toContain('CANCEL_SAVE');
+    expect(await pack.store.ready()).toBe(true);
+  });
+  it('a stalled download times out, cancels the worker save, and a retry completes', async () => {
+    const pack = await slowPack(12, 5),
+      worker = fakeWorker(pack.store);
+    pack.stall();
+    await expect(
+      workerRequest(worker.registration, { type: 'SAVE_STUDIO' }, undefined, undefined, 80),
+    ).rejects.toThrow('timed out');
+    expect(worker.posted).toEqual(['SAVE_STUDIO', 'CANCEL_SAVE']);
+    expect(await pack.store.ready()).toBe(false);
+    // The connection recovers; "Try again" saves the whole pack.
+    pack.release();
+    const reply = await workerRequest(
+      worker.registration,
+      { type: 'SAVE_STUDIO' },
+      undefined,
+      undefined,
+      80,
+    );
+    expect(reply.type).toBe('READY');
+    expect(await pack.store.ready()).toBe(true);
+  });
+  it('a retry supersedes a save the worker is still running', async () => {
+    const pack = await slowPack(6, 5);
+    pack.stall();
+    const first = pack.store.save(() => {});
+    await new Promise(r => setTimeout(r, 20));
+    pack.release();
+    const second = pack.store.save(() => {});
+    await expect(first).rejects.toMatchObject({ name: 'AbortError' });
+    await second;
+    expect(await pack.store.ready()).toBe(true);
+  });
+  it('cancelling a slow save from the page stops the worker download', async () => {
+    const pack = await slowPack(12, 30),
+      worker = fakeWorker(pack.store),
+      abort = new AbortController();
+    const request = workerRequest(
+      worker.registration,
+      { type: 'SAVE_STUDIO' },
+      p => p.done === 2 && abort.abort(),
+      abort.signal,
+      1000,
+    );
+    await expect(request).rejects.toMatchObject({ name: 'AbortError' });
+    expect(worker.posted).toContain('CANCEL_SAVE');
+    await new Promise(r => setTimeout(r, 60));
+    expect(await pack.store.ready()).toBe(false);
+  });
+  it('a status request that times out does not cancel a running save', async () => {
+    const pack = await slowPack(3, 5),
+      worker = fakeWorker(pack.store);
+    await expect(
+      workerRequest(worker.registration, { type: 'STATUS' }, undefined, undefined, 30),
+    ).rejects.toThrow('timed out');
+    expect(worker.posted).toEqual(['STATUS']);
   });
 });
