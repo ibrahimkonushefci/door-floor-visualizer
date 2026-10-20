@@ -1,4 +1,4 @@
-# Porta & Dysheme
+# Door & Floor Visualizer
 
 A mobile-first lookbook catalog and room Studio for interior-door and flooring showrooms in Kosovo, built to replace heavy PDF catalogs. It is a static Next.js export in Albanian (default), English and German, with no backend.
 
