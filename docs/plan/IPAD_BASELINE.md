@@ -12,7 +12,7 @@ You need: the iPad, this Mac, both on the same Wi-Fi, a USB-C (or Lightning) cab
 
 ```sh
 export PATH="$HOME/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin:$HOME/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:$PATH"
-cd "/Users/ibrahimi/Doors & laminate"
+cd "/Users/ibrahimi/Door & Floor Visualizer"
 pnpm build
 pnpm lan-https:cert
 pnpm preview:lan

@@ -13,6 +13,6 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 All work in this repository happens directly on the `main` branch.
 
 - Do not create branches, worktrees or forks of the working copy. Commit straight to `main` with clear messages.
-- If your tool or session starts you in a separate branch or worktree, stop and work in the main checkout (`/Users/ibrahimi/Doors & laminate`, branch `main`) instead.
+- If your tool or session starts you in a separate branch or worktree, stop and work in the main checkout (`/Users/ibrahimi/Door & Floor Visualizer`, branch `main`) instead.
 - Before starting, run `git status -sb` and confirm it says `## main`. If it doesn't, switch back with `git checkout main`.
 - Push to GitHub (`origin/main`) only when the owner asks.
