@@ -27,7 +27,7 @@ Status values: `not started` → `in progress` → `awaiting review` → `done`.
 - **Budget:** total cash spend ≤ **$25**. Prefer free tools and assets (Blender, Poly Haven CC0, free serverless credits). Ask before spending anything.
 - **Machine:** Apple M4, 16 GB RAM, macOS. Blender **5.2.2 LTS** (build 2026-09-15, hash `d13f752e3b9c`) at `/Applications/Blender.app`; Cycles uses the Metal GPU (10-core).
 - **Next.js:** this repo's Next.js has breaking changes. Read `node_modules/next/dist/docs/` before touching framework code (see `AGENTS.md`).
-- **Toolchain:** Node 24.19.0, pnpm 11.25.0 (pinned). See README for commands. This machine has no global pnpm and runs Node 26; the pinned pair lives in `~/.cache/codex-runtimes/codex-primary-runtime/dependencies/{node/bin,bin/fallback}` (put both on `PATH`).
+- **Toolchain:** Node 24.19.0, pnpm 11.25.0 (pinned). See [docs/DEVELOPMENT.md](../DEVELOPMENT.md) for commands. This machine has no global pnpm and runs Node 26; the pinned pair lives in `~/.cache/codex-runtimes/codex-primary-runtime/dependencies/{node/bin,bin/fallback}` (put both on `PATH`).
 
 ### Decisions already made (do not reopen without the owner)
 

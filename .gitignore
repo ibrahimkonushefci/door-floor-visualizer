@@ -1,13 +1,27 @@
+# Dependencies and package store
 node_modules/
+.pnpm-store/
+
+# Build output and caches
 .next/
 out/
 *.tsbuildinfo
-.DS_Store
-docs/review/
+__pycache__/
+
+# Local tools and editor/agent settings
+.claude/
+.vscode/
+.idea/
+.lan-https/
+
+# Large or unlicensed local data (rendered passes, downloads, screenshots)
 tools/blender/.cache/
 tools/blender/out/
-__pycache__/
-.claude/worktrees/
 tools/decors/.cache/
-.lan-https/
 tools/segmentation/.cache/
+docs/review/
+
+# OS, logs and secrets
+.DS_Store
+*.log
+.env*
