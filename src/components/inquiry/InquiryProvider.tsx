@@ -50,7 +50,7 @@ export function InquiryProvider({
     }
     const selected = override || context;
     const canonical = buildInquiryUrl(selected, data, locale, url.href);
-    const message = buildInquiryMessage(selected, data, locale, canonical);
+    const message = buildInquiryMessage(selected, data, locale, canonical, messages);
     const result = resolveContactAction(channel, data.brand, message, canonical);
     if (result.kind === 'preview') setAction(result);
     else if (channel === 'viber') setAction(result);

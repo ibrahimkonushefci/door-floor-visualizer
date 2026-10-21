@@ -1,12 +1,9 @@
 'use client';
-import { useParams } from 'next/navigation';
-import { isLocale } from '@/lib/i18n/locales';
-import { getMessages } from '@/lib/i18n/messages';
+import { useInquiry } from '@/components/inquiry/InquiryProvider';
+// Reads the page's own messages from the layout's provider instead of importing
+// the dictionaries, which would ship every language to every page.
 export default function NotFound() {
-  const params = useParams();
-  const locale =
-    typeof params.locale === 'string' && isLocale(params.locale) ? params.locale : 'sq';
-  const m = getMessages(locale);
+  const { locale, messages: m } = useInquiry();
   return (
     <section className="empty-state">
       <h1>{m['error.title']}</h1>

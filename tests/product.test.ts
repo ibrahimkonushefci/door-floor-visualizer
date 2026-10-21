@@ -3,6 +3,7 @@ import { loadSiteData } from '../src/lib/data/load';
 import { buildSpecRows, relatedProducts } from '../src/lib/catalog/selectors';
 import { catalogReturnQuery, mergeProductQuery, parseProductQuery } from '../src/lib/catalog/query';
 import { buildInquiryMessage, buildInquiryUrl, inquiryScenes } from '../src/lib/inquiry/message';
+import { getMessages } from '../src/lib/i18n/messages';
 import { resolveContactAction } from '../src/lib/inquiry/links';
 import { localeHref } from '../src/lib/i18n/locales';
 const data = loadSiteData();
@@ -105,7 +106,7 @@ describe('product details', () => {
       sizeId: 'leaf-700',
       finishId: 'kashmir',
     });
-    const message = buildInquiryMessage(context, inquiryData, 'sq', source);
+    const message = buildInquiryMessage(context, inquiryData, 'sq', source, getMessages('sq'));
     expect(message).toContain('Derë e bardhë mat (PD-DEMO-01)');
     expect(message).toContain('70 × 200 cm');
     expect(message).toContain('Kashmir');
@@ -119,6 +120,7 @@ describe('product details', () => {
       inquiryData,
       'de',
       'https://demo.example/sq/products/dera-bardhe/?finish=kashmir',
+      getMessages('de'),
     );
     expect(floor).toContain('Naturparkett Fischgrät (PD-DEMO-06)');
     expect(floor).not.toContain('PD-DEMO-01');
@@ -130,6 +132,7 @@ describe('product details', () => {
         inquiryData,
         'en',
         'https://demo.example',
+        getMessages('en'),
       ),
     ).toThrow('Invalid inquiry variant');
   });
@@ -142,7 +145,7 @@ describe('product details', () => {
     };
     const source = 'https://catalog.example.com';
     const url = buildInquiryUrl(context, inquiryData, 'de', source);
-    const message = buildInquiryMessage(context, inquiryData, 'de', source);
+    const message = buildInquiryMessage(context, inquiryData, 'de', source, getMessages('de'));
     const live = {
       ...data.brand,
       demoMode: false,

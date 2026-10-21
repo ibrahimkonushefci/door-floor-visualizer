@@ -2,7 +2,7 @@ import type { StudioSelection, Locale, TrimMode } from '../data/types';
 import type { StudioCatalog, StudioAction } from './types';
 import { compatibleDoor, doorModelsIn, sceneShowsFloor } from './compatibility';
 import { allowedFrameModes } from './door-models';
-import { localize } from '../i18n/messages';
+import { localize } from '../i18n/localize';
 export const isGlass = (finishId: string, catalog: StudioCatalog) =>
   catalog.materials.doorFinishes.find(f => f.id === finishId)?.kind === 'glass';
 export function normalizeSelection(candidate: Partial<StudioSelection>, catalog: StudioCatalog) {

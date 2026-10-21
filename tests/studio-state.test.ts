@@ -3,6 +3,7 @@ import { loadSiteData } from '../src/lib/data/load';
 import { parseStudioQuery, serializeStudioQuery } from '../src/lib/studio/query';
 import { normalizeSelection, reduceSelection } from '../src/lib/studio/state';
 import { buildInquiryMessage, buildInquiryUrl, inquiryScenes } from '../src/lib/inquiry/message';
+import { getMessages } from '../src/lib/i18n/messages';
 import { syntheticScene } from '../scripts/render-fixtures';
 import { legacyCatalog, legacyScene } from '../scripts/legacy-scenes';
 import { createRenderController, renderBatched } from '../src/lib/studio/render-controller';
@@ -110,7 +111,7 @@ it('the tiled bathroom changes only the door and keeps the floor choice for the 
     materials: data.materials,
     scenes: inquiryScenes(data.materials.scenes),
   };
-  const text = buildInquiryMessage({ kind: 'studio', selection: inBath }, input, 'en', 'https://demo.example/en/studio/');
+  const text = buildInquiryMessage({ kind: 'studio', selection: inBath }, input, 'en', 'https://demo.example/en/studio/', getMessages('en'));
   expect(text).toContain('Bathroom');
   expect(text).not.toContain('Kronotex');
   expect(text).not.toContain('Skirting');
@@ -164,7 +165,7 @@ it('completed Studio inquiry contains exact IDs, modes and reopenable canonical 
   );
   expect(new URL(url).pathname).toBe('/de/studio/');
   expect(parseStudioQuery(new URL(url).searchParams, catalog).selection).toEqual(selection);
-  const text = buildInquiryMessage({ kind: 'studio', selection }, input, 'de', url);
+  const text = buildInquiryMessage({ kind: 'studio', selection }, input, 'de', url, getMessages('de'));
   expect(text).toContain('PD-DEMO-01');
   expect(text).toContain('Anthrazit');
   expect(text).toContain('Längs');

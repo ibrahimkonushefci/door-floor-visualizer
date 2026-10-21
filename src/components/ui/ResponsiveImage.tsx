@@ -5,12 +5,15 @@ export function ResponsiveImage({
   eager = false,
   fit = 'cover',
   priority = false,
+  position,
 }: {
   image: ResponsiveImageData;
   sizes: string;
   eager?: boolean;
   fit?: 'cover' | 'contain';
   priority?: boolean;
+  /** Overrides the focal point when a layout crops the photo differently (CSS object-position). */
+  position?: string;
 }) {
   const sourceSet = (variants: ResponsiveImageData['avif']) =>
     variants.map(v => `${v.src} ${v.width}w`).join(', ');
@@ -31,7 +34,7 @@ export function ResponsiveImage({
         decoding="async"
         style={{
           objectFit: fit,
-          objectPosition: `${image.focalPoint[0] * 100}% ${image.focalPoint[1] * 100}%`,
+          objectPosition: position ?? `${image.focalPoint[0] * 100}% ${image.focalPoint[1] * 100}%`,
         }}
       />
     </picture>

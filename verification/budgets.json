@@ -1,7 +1,7 @@
 {
   "feedInitialJsGzip": 204800,
   "feedCssAndFonts": 143360,
-  "firstFourImages": 245760,
+  "firstScreenImages": 245760,
   "firstScreen": 716800,
   "cardWebp640": 81920,
   "cardAvif640": 61440,

@@ -1,5 +1,5 @@
 import type { DoorSize, FloorCollection, Locale, OriginCountry } from '../data/types';
-import { localize } from './messages';
+import { localize } from './localize';
 export function formatDoorSize(size: DoorSize, locale: Locale): string {
   const fmt = new Intl.NumberFormat(locale);
   return `${fmt.format(size.leafWidthMm / 10)} × ${fmt.format(size.leafHeightMm / 10)} cm`;

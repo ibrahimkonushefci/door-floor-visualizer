@@ -70,8 +70,6 @@
 /* Grid and cards */
 .product-grid {
   display: grid;
-  /* dense: the full-width Studio tile never leaves a half-empty row */
-  grid-auto-flow: row dense;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-8) var(--space-3);
 }
@@ -173,55 +171,6 @@
   border-radius: var(--radius-photo);
 }
 
-/* Studio invitation, woven into the grid */
-.studio-invite {
-  grid-column: 1 / -1;
-  display: grid;
-  overflow: hidden;
-  border-radius: var(--radius-panel);
-  background: var(--color-sunk);
-}
-.studio-invite-text {
-  display: grid;
-  align-content: center;
-  justify-items: start;
-  gap: var(--space-3);
-  padding: var(--space-6);
-}
-.studio-invite-title {
-  max-width: 18ch;
-  font-family: var(--font-serif);
-  font-size: var(--display-md);
-  font-weight: 500;
-  line-height: 1.08;
-}
-.studio-invite-body {
-  max-width: 40ch;
-  font-size: var(--text-md);
-  color: var(--color-muted);
-}
-.studio-invite-action {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  margin-top: var(--space-2);
-  font-size: var(--text-md);
-  font-weight: 500;
-}
-.studio-invite-action svg {
-  transition: transform var(--duration) var(--ease);
-}
-.studio-invite:hover .studio-invite-action svg {
-  transform: translateX(4px);
-}
-.studio-invite-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
 /* Empty state */
 .empty-state {
   display: grid;
@@ -247,13 +196,6 @@
   .product-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-10) var(--space-5);
-  }
-  .studio-invite {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
-    min-height: 300px;
-  }
-  .studio-invite-text {
-    padding: var(--space-10);
   }
   .card-title {
     font-size: var(--display-xs);

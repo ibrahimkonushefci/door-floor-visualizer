@@ -11,7 +11,8 @@ export const inquiryScenes = (scenes: readonly RoomScene[]): InquiryData['scenes
     showsSkirting: sceneShowsSkirting(s),
     defaultModelId: s.doorModels?.[0]?.modelId ?? null,
   }));
-import { getMessages, localize } from '../i18n/messages';
+import { localize } from '../i18n/localize';
+import type { Messages } from '../i18n/messages';
 import { formatDoorSize, formatFloorSpec } from '../i18n/format';
 export function buildInquiryUrl(
   context: InquiryContext,
@@ -45,8 +46,8 @@ export function buildInquiryMessage(
   data: InquiryData,
   locale: Locale,
   canonicalUrl: string,
+  m: Messages,
 ): string {
-  const m = getMessages(locale);
   const lines = [m['inquiry.catalog']];
   const addProduct = (id: string, sizeId?: string, finishId?: string) => {
     const p = data.products.find(p => p.id === id);

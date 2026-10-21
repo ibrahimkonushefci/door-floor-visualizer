@@ -8,6 +8,7 @@ import { z } from 'zod';
 import { loadSiteData } from '../src/lib/data/load';
 import { derivativeWidths } from '../src/lib/media/paths';
 import type { ImageManifest, AssetManifest } from '../src/lib/media/types';
+import { heroImages } from '../src/lib/catalog/home';
 export const sourceLedgerSchema = z.strictObject({
   schemaVersion: z.literal(1),
   assets: z.array(
@@ -172,22 +173,21 @@ export async function verifyAssets() {
     ledger.assets.filter(a => a.depictsProductId).length !== data.products.images.length
   )
     throw new Error('Unexpected image inventory');
-  const covers = data.products.products
-    .filter(p => p.published)
-    .sort((a, b) => a.displayOrder - b.displayOrder)
-    .slice(0, 4)
-    .map(p => manifest[p.imageIds[0]]);
-  // 640w is conservative for a 195px card at up to 3x density.
-  const firstScreenBytes = covers.reduce(
-    (n, m) => n + (m.avif.find(v => v.width === 640)?.bytes || m.fallback.bytes),
-    0,
-  );
-  const webpFirstScreenBytes = covers.reduce(
-    (n, m) => n + (m.webp.find(v => v.width === 640)?.bytes || m.fallback.bytes),
-    0,
-  );
+  // The homepage first screen: the hero room (1600w), every floor swatch (320w) and the sample plank (640w).
+  const hero = heroImages(data.products.products, data.materials, manifest);
+  const heroBytes = (format: 'avif' | 'webp') => {
+    const pick = (id: string, width: number) =>
+      manifest[id][format].find(v => v.width === width)?.bytes ?? manifest[id].fallback.bytes;
+    return (
+      (hero.room ? pick(hero.room, 1600) : 0) +
+      hero.textures.reduce((n, id) => n + pick(id, 320), 0) +
+      (hero.textures[0] ? pick(hero.textures[0], 640) : 0)
+    );
+  };
+  const firstScreenBytes = heroBytes('avif'),
+    webpFirstScreenBytes = heroBytes('webp');
   if (Math.max(firstScreenBytes, webpFirstScreenBytes) > 240 * 1024)
-    throw new Error('First four image byte budget exceeded');
+    throw new Error('First screen image byte budget exceeded');
   const sceneAudit = await prepareScenes(true);
   {
     for (const a of ledger.assets) {
@@ -215,8 +215,8 @@ export async function verifyAssets() {
     sources: data.products.images.length,
     derivatives,
     totalDerivativeBytes: bytes,
-    firstFour640AvifBytes: firstScreenBytes,
-    firstFour640WebpBytes: webpFirstScreenBytes,
+    firstScreenAvifBytes: firstScreenBytes,
+    firstScreenWebpBytes: webpFirstScreenBytes,
   };
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href)

@@ -92,11 +92,11 @@ export function Header({
           </a>
           {studioEnabled && (
             <a
-              className="nav-link"
+              className="nav-link nav-studio"
               href={`/${locale}/studio/`}
               aria-current={isStudio ? 'page' : undefined}
             >
-              <Icon name="studio" size={18} />
+              <span className="live-dot" aria-hidden="true" />
               <span>{m['nav.studio']}</span>
             </a>
           )}

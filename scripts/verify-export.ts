@@ -6,7 +6,8 @@ import type { OfflineManifest } from '../src/lib/offline/messages';
 import { load } from 'cheerio';
 import { resolveExportPath } from './serve-export.mjs';
 import { loadSiteData } from '../src/lib/data/load';
-import { buildSpecRows } from '../src/lib/catalog/selectors';
+import { buildSpecRows, categoryForProduct } from '../src/lib/catalog/selectors';
+import { homeOrder } from '../src/lib/catalog/home';
 import { localize } from '../src/lib/i18n/messages';
 export { resolveExportPath } from './serve-export.mjs';
 async function walk(root: string): Promise<string[]> {
@@ -80,10 +81,18 @@ export async function verifyExport() {
       const cards = $('[data-product-id]');
       if (cards.length !== data.products.products.filter(p => p.published).length)
         throw new Error('Missing server-rendered seed cards');
-      const expectedIds = data.products.products
-        .filter(p => p.published)
-        .sort((a, b) => a.displayOrder - b.displayOrder)
-        .map(p => p.id);
+      // Cards follow the homepage chapters; the hero above them carries the first-screen image.
+      const expectedIds = homeOrder(
+        data.products.products
+          .filter(p => p.published)
+          .sort((a, b) => a.displayOrder - b.displayOrder)
+          .map(p => ({ id: p.id, category: categoryForProduct(p, data.materials) })),
+      ).map(p => p.id);
+      if (
+        data.materials.scenes.length &&
+        $('.home-hero img[fetchpriority="high"][loading="eager"]').length !== 1
+      )
+        throw new Error('Missing homepage hero image');
       cards.each((i, el) => {
         const card = $(el);
         const img = card.find('img');
@@ -92,8 +101,8 @@ export async function verifyExport() {
           !img.attr('alt')?.trim() ||
           Number(img.attr('width')) <= 0 ||
           Number(img.attr('height')) <= 0 ||
-          img.attr('loading') !== (i < 4 ? 'eager' : 'lazy') ||
-          img.attr('fetchpriority') !== (i === 0 ? 'high' : 'auto') ||
+          img.attr('loading') !== 'lazy' ||
+          img.attr('fetchpriority') !== 'auto' ||
           card.find('source[type="image/avif"]').length !== 1 ||
           card.find('source[type="image/webp"]').length !== 1 ||
           !img.attr('sizes') ||

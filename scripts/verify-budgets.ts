@@ -7,6 +7,7 @@ import limits from '../verification/budgets.json';
 import type { ImageManifest } from '../src/lib/media/types';
 import type { OfflineManifest } from '../src/lib/offline/messages';
 import { firstLoadBytes, firstLoadUrls } from './first-load';
+import { heroImages } from '../src/lib/catalog/home';
 const data = loadSiteData(),
   images: ImageManifest = JSON.parse(await readFile('verification/image-manifest.json', 'utf8')),
   sceneManifest = JSON.parse(await readFile('verification/scene-manifest.json', 'utf8')) as {
@@ -40,15 +41,20 @@ async function compressed(urls: Iterable<string>) {
     brotli: files.reduce((n, f) => n + f.brotli, 0),
   };
 }
-const first = data.products.products
-  .toSorted((a, b) => a.displayOrder - b.displayOrder)
-  .slice(0, 4)
-  .map(p => images[p.imageIds[0]]);
-const firstImages = {
-  avif: first.reduce((n, m) => n + m.avif.find(v => v.width === 640)!.bytes, 0),
-  webp: first.reduce((n, m) => n + m.webp.find(v => v.width === 640)!.bytes, 0),
+// The homepage hero: one room photo (up to 1600w on a wide 2x screen), every
+// floor swatch (320w) and the sample plank (640w).
+const hero = heroImages(data.products.products, data.materials, images);
+const heroBytes = (format: 'avif' | 'webp') => {
+  const pick = (id: string, width: number) =>
+    images[id][format].find(v => v.width === width)?.bytes ?? images[id].fallback.bytes;
+  return (
+    (hero.room ? pick(hero.room, 1600) : 0) +
+    hero.textures.reduce((n, id) => n + pick(id, 320), 0) +
+    (hero.textures[0] ? pick(hero.textures[0], 640) : 0)
+  );
 };
-gate('firstFourImages', Math.max(firstImages.avif, firstImages.webp), limits.firstFourImages);
+const firstImages = { avif: heroBytes('avif'), webp: heroBytes('webp') };
+gate('firstScreenImages', Math.max(firstImages.avif, firstImages.webp), limits.firstScreenImages);
 const routes = [];
 for (const locale of data.brand.locales) {
   const html = await readFile(`out/${locale}/index.html`),

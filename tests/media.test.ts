@@ -34,6 +34,6 @@ describe('media', () => {
     const audit = await verifyAssets();
     expect(audit.sources).toBe(32);
     expect(audit.derivatives).toBe(320);
-    expect(audit.firstFour640WebpBytes).toBeLessThanOrEqual(240 * 1024);
+    expect(audit.firstScreenWebpBytes).toBeLessThanOrEqual(240 * 1024);
   }, 60000);
 });

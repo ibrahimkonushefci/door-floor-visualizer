@@ -1,12 +1,10 @@
 import sqMessages from '../../../brand/messages/sq.json';
 import enMessages from '../../../brand/messages/en.json';
 import deMessages from '../../../brand/messages/de.json';
-import type { Locale, LocalizedText } from '../data/types';
+import type { Locale } from '../data/types';
+export { localize } from './localize';
 export type Messages = Record<keyof typeof sqMessages, string>;
 const dictionaries: Record<Locale, Messages> = { sq: sqMessages, en: enMessages, de: deMessages };
-export function localize(value: LocalizedText, locale: Locale): string {
-  return value[locale]?.trim() || value.sq.trim();
-}
 export function getMessages(locale: Locale): Messages {
   const merged = { ...sqMessages };
   for (const key of Object.keys(sqMessages) as (keyof Messages)[]) {

@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { loadSiteData } from '../src/lib/data/load';
 import { resolveContactAction, copyInquiryText } from '../src/lib/inquiry/links';
 import { buildInquiryMessage } from '../src/lib/inquiry/message';
+import { getMessages } from '../src/lib/i18n/messages';
 const brand = loadSiteData().brand;
 describe('contact safety', () => {
   it.each(['phone', 'whatsapp', 'viber'] as const)('always previews demo %s', channel => {
@@ -68,6 +69,7 @@ describe('contact safety', () => {
       { brand: d.brand, products: [], materials: d.materials, scenes: [] },
       'de',
       'http://127.0.0.1:4173/de/',
+      getMessages('de'),
     );
     expect(message).toContain('Hallo');
     expect(message).toContain('/de/');
