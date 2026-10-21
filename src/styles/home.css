@@ -32,7 +32,7 @@ body:has(.home-hero) {
 .home-room {
   position: relative;
   order: -1;
-  margin-inline: calc(50% - 50vw);
+  margin-inline: calc(-1 * var(--gutter));
   aspect-ratio: 4 / 3.3;
   background: var(--color-sunk);
 }
@@ -59,48 +59,12 @@ body:has(.home-hero) {
   opacity: 1;
   transform: none;
 }
-.home-sample {
-  --sample-h: 190px;
-  position: absolute;
-  z-index: 2;
-  right: var(--space-4);
-  bottom: calc(-1 * var(--space-2));
-  width: 56px;
-  height: var(--sample-h);
-  transform: rotate(5deg);
-  transition: transform 500ms var(--ease);
-}
-.home-sample-face {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  border-radius: var(--radius-photo);
-  box-shadow:
-    0 18px 32px rgb(32 36 33 / 0.28),
-    0 2px 4px rgb(32 36 33 / 0.2);
-}
-.home-sample-frame {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: var(--sample-h);
-  height: var(--sample-h);
-  opacity: 0;
-  transform: translate(-50%, -50%) rotate(90deg);
-  transition: opacity 500ms var(--ease);
-}
-.home-sample-frame.is-on {
-  opacity: 1;
-}
-.home-sample-frame picture,
-.home-sample-frame img,
 .sample-plank-face picture,
 .sample-plank-face img {
   display: block;
   width: 100%;
   height: 100%;
 }
-.home-sample-hole,
 .sample-hole {
   position: absolute;
   top: 10px;
@@ -111,18 +75,6 @@ body:has(.home-hero) {
   border-radius: 50%;
   background: var(--color-bg);
   box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.4);
-}
-.home-sample-tag {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  padding: 2px 6px;
-  border-radius: 3px;
-  background: var(--color-bg);
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  white-space: nowrap;
-  transform: translateX(-50%);
 }
 .home-room-tag {
   position: absolute;
@@ -489,7 +441,7 @@ body:has(.home-hero) {
   gap: var(--space-5);
 }
 .sample-planks {
-  --plank-h: 260px;
+  --plank-h: 180px;
   display: flex;
   gap: var(--space-2);
   margin-inline: calc(-1 * var(--gutter));
@@ -530,6 +482,15 @@ body:has(.home-hero) {
   width: var(--plank-h);
   height: var(--plank-h);
   transform: translate(-50%, -50%) rotate(90deg);
+}
+.sample-planks:not(.is-touched) .sample-plank-card:first-child .sample-plank {
+  /* the first sample bobs to show the planks can be picked */
+  animation: plank-float 2.4s ease-in-out infinite;
+}
+@keyframes plank-float {
+  50% {
+    transform: translateY(-10px);
+  }
 }
 .sample-plank:hover .sample-plank-face {
   transform: translateY(-8px);
@@ -1013,12 +974,11 @@ body:has(.home-hero) {
   }
 }
 
-/* Wide screens: hero side by side with a room that bleeds to the window edge,
-   the door wall, the sample board beside its inspector. */
+/* Wide screens: hero copy and room side by side in equal halves, the door
+   wall, the sample board beside its inspector. */
 @media (min-width: 1024px) {
   .home-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
-    margin-right: calc(50% - 50vw);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding-top: var(--space-10);
   }
   .home-room {
@@ -1026,28 +986,13 @@ body:has(.home-hero) {
     height: clamp(480px, calc(100dvh - var(--header-height) - 140px), 640px);
     margin-inline: 0;
     aspect-ratio: auto;
-    border-radius: var(--radius-panel) 0 0 var(--radius-panel);
+    border-radius: var(--radius-panel);
   }
   .home-room-frames {
     border-radius: inherit;
   }
-  .home-sample {
-    --sample-h: 300px;
-    left: -46px;
-    right: auto;
-    bottom: 70px;
-    width: 90px;
-    transform: rotate(-4deg);
-  }
-  .home-room:hover .home-sample {
-    transform: rotate(-1deg) translateY(-6px);
-  }
-  .home-sample-tag {
-    bottom: 12px;
-    font-size: 10px;
-  }
   .home-room-tag {
-    left: 72px;
+    left: var(--space-5);
     bottom: var(--space-5);
     padding: 9px var(--space-4) 9px 9px;
   }
@@ -1062,14 +1007,14 @@ body:has(.home-hero) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 88px 0 0;
+    padding: 0 var(--space-12) 0 0;
   }
   .home-hero-title em {
     display: block;
   }
   .home-swatches {
-    display: grid;
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+    flex-wrap: wrap;
+    gap: 10px;
     margin: var(--space-8) 0 0;
     padding: 4px 0;
     overflow: visible;
@@ -1286,8 +1231,6 @@ body:has(.home-hero) {
 
 @media (prefers-reduced-motion: reduce) {
   .home-room-frame,
-  .home-sample,
-  .home-sample-frame,
   .door-panel,
   .door-panel-more,
   .sample-plank-face,
@@ -1299,5 +1242,8 @@ body:has(.home-hero) {
   .details-spot::after {
     animation: none;
     display: none;
+  }
+  .sample-planks .sample-plank-card .sample-plank {
+    animation: none;
   }
 }

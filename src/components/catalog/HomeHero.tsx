@@ -146,19 +146,6 @@ export function HomeHero({
             ) : null,
           )}
         </div>
-        <div className="home-sample" aria-hidden="true">
-          <div className="home-sample-face">
-            {floors.map((f, i) =>
-              seen.has(i) ? (
-                <div key={f.id} className={`home-sample-frame${i === index ? ' is-on' : ''}`}>
-                  <ResponsiveImage image={texture(f)} sizes="320px" eager={i === 0} />
-                </div>
-              ) : null,
-            )}
-            <span className="home-sample-hole" />
-            {current.code && <span className="home-sample-tag">{current.code}</span>}
-          </div>
-        </div>
         <p className="home-room-tag">
           <span className="home-room-chip">
             <ResponsiveImage image={texture(current)} sizes="32px" eager />

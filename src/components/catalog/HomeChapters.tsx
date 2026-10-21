@@ -136,8 +136,14 @@ export function SampleBoard({
   studioHref: string | null;
 }) {
   const productHref = useProductHref(locale);
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(0),
+    // The first plank bobs until the visitor reaches for any sample.
+    [touched, setTouched] = useState(false);
   const current = floors[Math.min(selected, floors.length - 1)];
+  const pick = (i: number) => {
+    setSelected(i);
+    setTouched(true);
+  };
   return (
     <section className="home-chapter" aria-labelledby="chapter-laminate">
       <ChapterHead
@@ -152,7 +158,7 @@ export function SampleBoard({
         action={studioHref && <StudioLink href={studioHref}>{m['home.floorsStudio']}</StudioLink>}
       />
       <div className="sample-board">
-        <div className="sample-planks">
+        <div className={`sample-planks${touched ? ' is-touched' : ''}`}>
           {floors.map((f, i) => (
             <article key={f.id} className="sample-plank-card" data-product-id={f.id}>
               <button
@@ -160,8 +166,8 @@ export function SampleBoard({
                 className="sample-plank"
                 aria-pressed={f.id === current.id}
                 aria-label={f.name}
-                onClick={() => setSelected(i)}
-                onMouseEnter={() => setSelected(i)}
+                onClick={() => pick(i)}
+                onMouseEnter={() => pick(i)}
               >
                 <span className="sample-plank-face">
                   <ResponsiveImage image={f.detail ?? f.image} sizes="400px" />

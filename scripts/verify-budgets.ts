@@ -41,16 +41,14 @@ async function compressed(urls: Iterable<string>) {
     brotli: files.reduce((n, f) => n + f.brotli, 0),
   };
 }
-// The homepage hero: one room photo (up to 1600w on a wide 2x screen), every
-// floor swatch (320w) and the sample plank (640w).
+// The homepage hero: one room photo (up to 1600w on a wide 2x screen) and every
+// floor swatch (320w).
 const hero = heroImages(data.products.products, data.materials, images);
 const heroBytes = (format: 'avif' | 'webp') => {
   const pick = (id: string, width: number) =>
     images[id][format].find(v => v.width === width)?.bytes ?? images[id].fallback.bytes;
   return (
-    (hero.room ? pick(hero.room, 1600) : 0) +
-    hero.textures.reduce((n, id) => n + pick(id, 320), 0) +
-    (hero.textures[0] ? pick(hero.textures[0], 640) : 0)
+    (hero.room ? pick(hero.room, 1600) : 0) + hero.textures.reduce((n, id) => n + pick(id, 320), 0)
   );
 };
 const firstImages = { avif: heroBytes('avif'), webp: heroBytes('webp') };

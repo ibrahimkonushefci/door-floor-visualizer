@@ -173,15 +173,13 @@ export async function verifyAssets() {
     ledger.assets.filter(a => a.depictsProductId).length !== data.products.images.length
   )
     throw new Error('Unexpected image inventory');
-  // The homepage first screen: the hero room (1600w), every floor swatch (320w) and the sample plank (640w).
+  // The homepage first screen: the hero room (1600w) and every floor swatch (320w).
   const hero = heroImages(data.products.products, data.materials, manifest);
   const heroBytes = (format: 'avif' | 'webp') => {
     const pick = (id: string, width: number) =>
       manifest[id][format].find(v => v.width === width)?.bytes ?? manifest[id].fallback.bytes;
     return (
-      (hero.room ? pick(hero.room, 1600) : 0) +
-      hero.textures.reduce((n, id) => n + pick(id, 320), 0) +
-      (hero.textures[0] ? pick(hero.textures[0], 640) : 0)
+      (hero.room ? pick(hero.room, 1600) : 0) + hero.textures.reduce((n, id) => n + pick(id, 320), 0)
     );
   };
   const firstScreenBytes = heroBytes('avif'),
