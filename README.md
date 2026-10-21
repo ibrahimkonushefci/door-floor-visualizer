@@ -13,7 +13,7 @@ A static site in Albanian (default), English and German. No backend, no accounts
 - **Presenting tools.** Full screen, tap a surface to edit it, zoom and pan, A/B compare, product details, a labelled image download, and a share link with a QR code.
 - **Own-room photo** (experimental). Upload a photo of a room, mark the floor (AI first guess plus a brush) and see a new floor in it. Everything runs on the device.
 - **Offline.** A hidden presenter sheet saves the whole Studio (about 31 MB) for meetings without internet and lists a 3-minute demo route.
-- **Rebrandable.** Everything company-specific (name, logo, colours, contacts, texts, products, décors) lives in `brand/`.
+- **Rebrandable.** Everything company-specific (name, logo, colours, contacts, texts, products, décors) lives in `brand/`. Name, logo, colours and contacts change with one command: `pnpm rebrand --name "Company" --logo logo.png --primary "#1F4E3D" --phone "+383 44 123 456"` (about a minute including the checks; `pnpm rebrand --reset` undoes it).
 
 ## Quick start
 

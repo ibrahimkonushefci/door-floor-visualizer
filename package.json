@@ -21,7 +21,8 @@
     "verify:assets": "tsx scripts/verify-assets.ts",
     "assets:scenes": "tsx scripts/prepare-scenes.ts",
     "render:fixtures": "tsx scripts/render-fixtures.ts",
-    "verify:budgets": "tsx scripts/verify-budgets.ts"
+    "verify:budgets": "tsx scripts/verify-budgets.ts",
+    "rebrand": "tsx scripts/rebrand.ts"
   },
   "dependencies": {
     "@fontsource/manrope": "5.3.0",
