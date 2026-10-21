@@ -8,18 +8,20 @@ out/
 *.tsbuildinfo
 __pycache__/
 
-# Local tools and editor/agent settings
+# Local tools, editor/agent settings and working notes (not published)
 .claude/
 .vscode/
 .idea/
 .lan-https/
+AGENTS.md
+CLAUDE.md
+docs/
 
 # Large or unlicensed local data (rendered passes, downloads, screenshots)
 tools/blender/.cache/
 tools/blender/out/
 tools/decors/.cache/
 tools/segmentation/.cache/
-docs/review/
 
 # OS, logs and secrets
 .DS_Store

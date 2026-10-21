@@ -41,7 +41,7 @@ if [ ! -f ca.key ] || [ "$(cat ca-host 2>/dev/null)" != "$name $ip" ]; then
   openssl req -x509 -newkey rsa:2048 -nodes -sha256 -days 30 -keyout ca.key -out porta-dev-ca.crt \
     -config ca.cnf -extensions ext
   echo "$name $ip" > ca-host
-  echo "NEW certificate authority: install porta-dev-ca.crt on the iPad again (docs/plan/IPAD_BASELINE.md, A1-A3)."
+  echo "NEW certificate authority: install porta-dev-ca.crt on the iPad again (docs/IPAD_BASELINE.md, A1-A3)."
 fi
 openssl req -newkey rsa:2048 -nodes -sha256 -keyout server.key -out server.csr -config server.cnf
 openssl x509 -req -in server.csr -CA porta-dev-ca.crt -CAkey ca.key -CAcreateserial -sha256 -days 30 \
