@@ -242,12 +242,13 @@ body:has(.studio-page) .mobile-contact-bar {
   font-size: var(--text-sm);
   color: var(--color-text);
 }
-/* Phones: one row that scrolls sideways, five thumbnails in view. The padding
-   keeps the selection ring clear of the scroll clip. */
+/* Phones: one row that scrolls sideways; the fifth thumbnail is cut in half so
+   the row reads as scrollable. The padding keeps the selection ring clear of
+   the scroll clip. */
 .studio-rooms {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% - 4 * 6px) / 5);
+  grid-auto-columns: calc((100% - 4 * 6px) / 4.5);
   gap: 6px;
   margin: -4px;
   padding: 4px;
@@ -984,5 +985,50 @@ html.is-studio-presenting body {
   }
   .studio-tap {
     animation-duration: 1ms;
+  }
+}
+
+/* Phones in the Studio: a lower header that slides away once the page scrolls
+   (StudioClient sets the class), leaving the room pinned at the very top, and
+   tighter controls so more of the choices fit beneath it. */
+@media (max-width: 767px) {
+  :root:has(.studio-page) {
+    --header-height: 52px;
+  }
+  body:has(.studio-page) .site-header {
+    transition: transform var(--duration) var(--ease);
+  }
+  html.is-studio-header-hidden .site-header {
+    transform: translateY(-100%);
+  }
+  .studio-stage-area {
+    transition: top var(--duration) var(--ease);
+  }
+  html.is-studio-header-hidden .studio-stage-area {
+    top: 0;
+  }
+  .studio-stage-tools {
+    gap: 6px;
+    opacity: 0.5;
+  }
+  .studio-stage-tools .icon-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .studio-tabs button {
+    min-height: 36px;
+  }
+  .studio-tabpanel .swatch-grid.is-tiles {
+    row-gap: 0;
+  }
+  .studio-tabpanel .swatch-grid.is-tiles .swatch {
+    gap: 6px;
+    padding-bottom: var(--space-1);
+  }
+}
+@media (max-width: 767px) and (prefers-reduced-motion: reduce) {
+  body:has(.studio-page) .site-header,
+  .studio-stage-area {
+    transition: none;
   }
 }

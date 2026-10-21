@@ -81,6 +81,20 @@ export default function StudioClient({
     setContext(rendered ? { kind: 'studio', selection: rendered } : { kind: 'catalog', productIds: [] });
     return () => setContext({ kind: 'catalog', productIds: [] });
   }, [rendered, setContext]);
+  // Phones: the header slides away once the page scrolls a little (see studio.css).
+  useEffect(() => {
+    const phone = window.matchMedia('(max-width: 767px)'),
+      root = document.documentElement;
+    const update = () => root.classList.toggle('is-studio-header-hidden', phone.matches && window.scrollY > 12);
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    phone.addEventListener('change', update);
+    return () => {
+      window.removeEventListener('scroll', update);
+      phone.removeEventListener('change', update);
+      root.classList.remove('is-studio-header-hidden');
+    };
+  }, []);
   // Presentation mode: the room fills the screen (true full screen where the
   // browser allows it) and the choices move into a drawer.
   const exitPresenting = useCallback(() => {
