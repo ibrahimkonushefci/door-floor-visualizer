@@ -1,6 +1,6 @@
 'use client';
-import { useId, useState, type ReactNode } from 'react';
-import { ROOM_TYPES, type Locale, type RoomType, type StudioSelection, type TrimMode } from '@/lib/data/types';
+import { useId, type ReactNode } from 'react';
+import type { Locale, StudioSelection, TrimMode } from '@/lib/data/types';
 import type { StudioAction, StudioCatalog } from '@/lib/studio/types';
 import { localize, type Messages } from '@/lib/i18n/messages';
 import { Swatch } from '../ui/Swatch';
@@ -9,6 +9,7 @@ import { Icon } from '../ui/Icon';
 import { DoorModelIcon } from './DoorModelIcon';
 import { compatibleDoor, sceneShowsFloor, sceneShowsSkirting } from '@/lib/studio/compatibility';
 import { sceneModelIds, sceneForModel } from '@/lib/studio/door-models';
+import { PHOTO_SAMPLE } from '@/lib/studio/photo/model-files';
 import type { DoorProduct } from '@/lib/data/types';
 export type Surface = 'door' | 'floor';
 export function StudioPanel({
@@ -38,18 +39,13 @@ export function StudioPanel({
   actions?: ReactNode;
   inert?: boolean;
 }) {
-  const [roomType, setRoomType] = useState<RoomType | 'all'>('all');
   const tabsId = useId();
   const { scenes, doorFinishes, floorCollections, doorModels } = catalog.materials;
   const scene = scenes.find(s => s.id === requested.sceneId)!,
-    finish = doorFinishes.find(f => f.id === requested.doorFinishId)!,
-    model = doorModels.find(d => d.id === requested.doorModelId),
-    floorProduct = catalog.products.find(p => p.id === requested.floorProductId)!;
+    finish = doorFinishes.find(f => f.id === requested.doorFinishId)!;
   // A tiled bathroom has no laminate floor or skirting: only the door changes there.
   const floorShown = sceneShowsFloor(scene),
     surface: Surface = floorShown ? chosenSurface : 'door';
-  const types = ROOM_TYPES.filter(t => scenes.some(s => s.roomType === t)),
-    shownRooms = roomType === 'all' ? scenes : scenes.filter(s => s.roomType === roomType);
   const doors = catalog.products.filter(
     (p): p is DoorProduct => p.kind === 'door' && compatibleDoor(p, scene, catalog),
   );
@@ -95,66 +91,28 @@ export function StudioPanel({
   return (
     <aside className="studio-panel" id="studio-panel" aria-label={m['nav.studio']} inert={inert}>
       <div className="studio-panel-scroll">
-        <header className="studio-summary">
-          <p className="eyebrow">{m['studio.yourCombination']}</p>
-          <dl>
-            <div>
-              <dt>{m['studio.door']}</dt>
-              <dd>
-                {model && models.length > 1 ? `${localize(model.name, locale)} · ` : ''}
-                {localize(finish.name, locale)}
-              </dd>
-            </div>
-            <div>
-              <dt>{m['studio.floor']}</dt>
-              <dd>{floorShown ? localize(floorProduct.name, locale) : m['studio.fixedFloor']}</dd>
-            </div>
-          </dl>
-          {actions && <div className="studio-actions">{actions}</div>}
-        </header>
         {scenes.length > 1 && (
-          <section className="studio-section studio-rooms-section" aria-labelledby={`${tabsId}-room`}>
+          <section className="studio-rooms-section" aria-labelledby={`${tabsId}-room`}>
             <h2 className="eyebrow" id={`${tabsId}-room`}>
-              {m['studio.room']}
+              {m['studio.room']} · <span className="studio-room-current">{localize(scene.name, locale)}</span>
             </h2>
-            {types.length > 1 && (
-              <div className="studio-room-types" role="group" aria-label={m['studio.roomTypes']}>
-                {(['all', ...types] as const).map(t => (
-                  <button
-                    type="button"
-                    key={t}
-                    className="studio-room-type"
-                    aria-pressed={roomType === t}
-                    onClick={() => setRoomType(t)}
-                  >
-                    {m[`studio.roomType.${t}`]}
-                  </button>
-                ))}
-              </div>
-            )}
             <div className="studio-rooms">
-              {shownRooms.map(s => (
+              {scenes.map(s => (
                 <button
                   type="button"
                   key={s.id}
                   className="studio-room"
                   aria-pressed={s.id === scene.id}
+                  aria-label={localize(s.name, locale)}
+                  title={localize(s.name, locale)}
                   onClick={() => s.id !== scene.id && onAction({ type: 'scene', sceneId: s.id })}
                 >
                   <picture>
                     <img src={s.fallback} alt="" width={960} height={720} loading="lazy" decoding="async" />
                   </picture>
-                  <span>{localize(s.name, locale)}</span>
                 </button>
               ))}
             </div>
-            <a className="studio-own-room" href={`/${locale}/studio/photo/?floor=${requested.floorProductId}`}>
-              <Icon name="camera" size={22} />
-              <span>
-                <strong>{m['photo.entry']}</strong>
-                <small>{m['photo.entryHint']}</small>
-              </span>
-            </a>
           </section>
         )}
         {floorShown && (
@@ -170,9 +128,11 @@ export function StudioPanel({
             }}
           >
             <button type="button" {...tab('door')}>
+              <Icon name="door" size={18} />
               {m['studio.door']}
             </button>
             <button type="button" {...tab('floor')}>
+              <Icon name="floor" size={18} />
               {m['studio.floor']}
             </button>
           </div>
@@ -290,13 +250,32 @@ export function StudioPanel({
             )}
           </div>
         )}
+        <a
+          className="studio-own-room"
+          href={`/${locale}/studio/photo/?floor=${requested.floorProductId}`}
+          style={{ backgroundImage: `url("${PHOTO_SAMPLE}")` }}
+        >
+          <span className="studio-own-room-icon">
+            <Icon name="camera" size={20} />
+          </span>
+          <span className="studio-own-room-go">
+            <Icon name="arrow-right" size={18} />
+          </span>
+          <span className="studio-own-room-text">
+            <strong>{m['photo.entry']}</strong>
+            <small>{m['photo.entryHint']}</small>
+          </span>
+        </a>
         <p className="studio-disclaimer">{m['studio.disclaimer']}</p>
       </div>
       <div className="studio-panel-footer">
-        <button type="button" className="btn btn-primary btn-block studio-cta" disabled={!canRequest} onClick={onRequest}>
-          <Icon name="whatsapp" size={18} />
-          {m['studio.inquiry']}
-        </button>
+        <div className="studio-footer-row">
+          {actions && <div className="studio-actions">{actions}</div>}
+          <button type="button" className="btn btn-primary btn-block studio-cta" disabled={!canRequest} onClick={onRequest}>
+            <Icon name="whatsapp" size={18} />
+            {m['studio.inquiry']}
+          </button>
+        </div>
       </div>
     </aside>
   );

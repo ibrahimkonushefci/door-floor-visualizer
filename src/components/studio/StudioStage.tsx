@@ -362,6 +362,11 @@ export function StudioStage({
             <FrameSnapshot source={frontCanvas} />
           </CompareOverlay>
         )}
+        {compare === 'off' && (
+          <p className="studio-room-label" aria-hidden="true">
+            {roomName}
+          </p>
+        )}
         {pending && <span className="studio-progress" aria-hidden="true" />}
         {failed && (
           <div className="studio-error" role="alert">
@@ -412,10 +417,6 @@ export function StudioStage({
             />
           </div>
         )}
-      </div>
-      <div className="studio-caption">
-        <p className="studio-caption-room">{roomName}</p>
-        <p className="studio-caption-note">{m['studio.disclaimer']}</p>
       </div>
     </div>
   );

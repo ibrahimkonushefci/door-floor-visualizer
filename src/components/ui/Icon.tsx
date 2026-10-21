@@ -28,6 +28,8 @@ export type IconName =
   | 'share'
   | 'camera'
   | 'image'
+  | 'door'
+  | 'floor'
   | 'brush'
   | 'eraser'
   | 'undo'
@@ -63,6 +65,8 @@ const paths: Record<IconName, string> = {
   share: 'M12 15V3m-4 4 4-4 4 4M5 11v10h14V11',
   camera: 'M4 7h3l2-3h6l2 3h3v13H4ZM12 10a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z',
   image: 'M3 4h18v16H3ZM3 16l5-5 4 4 3-3 6 6M15.5 8.5h.01',
+  door: 'M3 21h18M6 21V3h12v18M14.5 12.5h1',
+  floor: 'M7 6h10l5 13H2ZM10 6l-2 13M14 6l2 13M4.5 12.5h15',
   brush: 'M13.5 4.5l6 6-8 8h-6v-6ZM5.5 18.5 3 21M10.5 7.5l6 6',
   eraser: 'M7 20h13M4.5 14.5l9-9 6 6-8.5 8.5H9ZM9 10l6 6',
   undo: 'M9 14 4 9l5-5M4 9h10a6 6 0 0 1 0 12h-3',

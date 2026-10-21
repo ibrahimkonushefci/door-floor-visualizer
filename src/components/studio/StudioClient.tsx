@@ -160,17 +160,38 @@ export default function StudioClient({
   };
   const actions = (
     <>
-      <button type="button" className="studio-action" onClick={() => openDialog('details')} disabled={!rendered}>
+      <button
+        type="button"
+        className="studio-action"
+        aria-label={m['studio.details']}
+        title={m['studio.details']}
+        onClick={() => openDialog('details')}
+        disabled={!rendered}
+      >
         <Icon name="info" size={18} />
-        {m['studio.details']}
+        <span className="studio-action-label">{m['studio.detailsShort']}</span>
       </button>
-      <button type="button" className="studio-action" onClick={() => openDialog('export')} disabled={!settled}>
+      <button
+        type="button"
+        className="studio-action"
+        aria-label={m['studio.download']}
+        title={m['studio.download']}
+        onClick={() => openDialog('export')}
+        disabled={!settled}
+      >
         <Icon name="download" size={18} />
-        {m['studio.download']}
+        <span className="studio-action-label">{m['studio.downloadShort']}</span>
       </button>
-      <button type="button" className="studio-action" onClick={() => openDialog('share')} disabled={!rendered}>
+      <button
+        type="button"
+        className="studio-action"
+        aria-label={m['studio.share']}
+        title={m['studio.share']}
+        onClick={() => openDialog('share')}
+        disabled={!rendered}
+      >
         <Icon name="qr" size={18} />
-        {m['studio.share']}
+        <span className="studio-action-label">{m['studio.shareShort']}</span>
       </button>
     </>
   );
