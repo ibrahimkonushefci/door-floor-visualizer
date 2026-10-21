@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "id": "porta-dysheme",
-  "companyName": "Porta & Dysheme",
-  "shortName": "Porta & Dysheme",
+  "companyName": "Dyer & Dysheme",
+  "shortName": "Dyer & Dysheme",
   "tagline": {
     "sq": "Dyer të brendshme dhe dysheme cilësore në Kosovë",
     "en": "Quality interior doors and flooring in Kosovo",
@@ -13,9 +13,9 @@
     "width": 28,
     "height": 28,
     "alt": {
-      "sq": "Porta & Dysheme",
-      "en": "Porta & Dysheme",
-      "de": "Porta & Dysheme"
+      "sq": "Dyer & Dysheme",
+      "en": "Dyer & Dysheme",
+      "de": "Dyer & Dysheme"
     }
   },
   "favicon": "/brand/favicon.svg",

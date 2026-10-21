@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "buildId": "saoFwbNKCC_zPXfCDx5WH",
+  "buildId": "L1-9r9XQDYTtriUR19ngO",
   "method": "Production export. Unique initial script tags per route; gzip and Brotli per file. CSS gzip plus used WOFF2 bytes. Images: conservative 640px variants at 390px viewport. File sizes do not establish LCP, INP, CLS or device latency.",
   "limits": {
     "feedInitialJsGzip": 204800,
@@ -94,15 +94,15 @@
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/13jswo1vcv7f1.css",
-            "raw": 69971,
-            "gzip": 12962,
-            "brotli": 11429
+            "url": "/_next/static/chunks/0lztlsenyryzt.css",
+            "raw": 70152,
+            "gzip": 13005,
+            "brotli": 11455
           }
         ],
-        "raw": 69971,
-        "gzip": 12962,
-        "brotli": 11429
+        "raw": 70152,
+        "gzip": 13005,
+        "brotli": 11455
       },
       "fonts": {
         "files": [
@@ -141,8 +141,8 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 112098,
-      "firstScreen": 544421
+      "cssAndFonts": 112141,
+      "firstScreen": 544452
     },
     {
       "route": "/en/",
@@ -216,15 +216,15 @@
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/13jswo1vcv7f1.css",
-            "raw": 69971,
-            "gzip": 12962,
-            "brotli": 11429
+            "url": "/_next/static/chunks/0lztlsenyryzt.css",
+            "raw": 70152,
+            "gzip": 13005,
+            "brotli": 11455
           }
         ],
-        "raw": 69971,
-        "gzip": 12962,
-        "brotli": 11429
+        "raw": 70152,
+        "gzip": 13005,
+        "brotli": 11455
       },
       "fonts": {
         "files": [
@@ -263,8 +263,8 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 112098,
-      "firstScreen": 543088
+      "cssAndFonts": 112141,
+      "firstScreen": 543124
     },
     {
       "route": "/de/",
@@ -338,15 +338,15 @@
       "css": {
         "files": [
           {
-            "url": "/_next/static/chunks/13jswo1vcv7f1.css",
-            "raw": 69971,
-            "gzip": 12962,
-            "brotli": 11429
+            "url": "/_next/static/chunks/0lztlsenyryzt.css",
+            "raw": 70152,
+            "gzip": 13005,
+            "brotli": 11455
           }
         ],
-        "raw": 69971,
-        "gzip": 12962,
-        "brotli": 11429
+        "raw": 70152,
+        "gzip": 13005,
+        "brotli": 11455
       },
       "fonts": {
         "files": [
@@ -385,8 +385,8 @@
         "gzip": 99115,
         "brotli": 98972
       },
-      "cssAndFonts": 112098,
-      "firstScreen": 544584
+      "cssAndFonts": 112141,
+      "firstScreen": 544622
     }
   ],
   "firstImages": {
@@ -768,7 +768,7 @@
   ],
   "offlinePack": {
     "files": 863,
-    "bytes": 31042584
+    "bytes": 31042723
   },
   "emittedJsChunks": 31,
   "checks": [
@@ -786,13 +786,13 @@
     },
     {
       "metric": "sq.feedCssAndFonts",
-      "value": 112098,
+      "value": 112141,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "sq.firstScreen",
-      "value": 544421,
+      "value": 544452,
       "limit": 716800,
       "status": "pass"
     },
@@ -804,13 +804,13 @@
     },
     {
       "metric": "en.feedCssAndFonts",
-      "value": 112098,
+      "value": 112141,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "en.firstScreen",
-      "value": 543088,
+      "value": 543124,
       "limit": 716800,
       "status": "pass"
     },
@@ -822,13 +822,13 @@
     },
     {
       "metric": "de.feedCssAndFonts",
-      "value": 112098,
+      "value": 112141,
       "limit": 143360,
       "status": "pass"
     },
     {
       "metric": "de.firstScreen",
-      "value": 544584,
+      "value": 544622,
       "limit": 716800,
       "status": "pass"
     },
@@ -1302,7 +1302,7 @@
     },
     {
       "metric": "studioOfflinePack",
-      "value": 31042584,
+      "value": 31042723,
       "limit": 50331648,
       "status": "pass"
     }

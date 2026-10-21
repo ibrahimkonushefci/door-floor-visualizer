@@ -4,7 +4,7 @@ A web catalog and room visualizer for interior-door and flooring showrooms. Cust
 
 Built as a static site in Albanian (default), English and German. No backend and no account; it works offline after one save.
 
-> **Status: sales demo.** All products, prices and contacts are demo content under the **Porta & Dysheme** demo brand (`demoMode: true`). Nothing is sent and nothing is indexed. See [Licensing reminder](#licensing-reminder) before showing it to customers.
+> **Status: sales demo.** All products, prices and contacts are demo content under the **Dyer & Dysheme** demo brand (`demoMode: true`). Nothing is sent and nothing is indexed. See [Licensing reminder](#licensing-reminder) before showing it to customers.
 
 ## Features
 

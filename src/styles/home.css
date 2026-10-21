@@ -128,8 +128,8 @@ body:has(.home-hero) {
 }
 .home-hero-title {
   margin-top: var(--space-3);
-  font-size: clamp(32px, 7.5vw, 46px);
-  line-height: 1.05;
+  font-size: clamp(28px, 6.5vw, 32px);
+  line-height: 1.08;
 }
 .home-hero-title em {
   display: inline;
@@ -700,7 +700,10 @@ body:has(.home-hero) {
   right: auto;
 }
 
-/* Closing Studio invitation */
+/* Closing Studio invitation; the footer follows it directly. */
+body:has(.home-finale) .site-footer {
+  margin-top: 0;
+}
 .home-finale {
   margin-inline: calc(50% - 50vw);
   overflow: hidden;
@@ -974,11 +977,11 @@ body:has(.home-hero) {
   }
 }
 
-/* Wide screens: hero copy and room side by side in equal halves, the door
+/* Wide screens: hero copy (40%) beside the room photo (60%), the door
    wall, the sample board beside its inspector. */
 @media (min-width: 1024px) {
   .home-hero {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
     padding-top: var(--space-10);
   }
   .home-room {
@@ -1007,7 +1010,7 @@ body:has(.home-hero) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 var(--space-12) 0 0;
+    padding: 0 var(--space-10) 0 0;
   }
   .home-hero-title em {
     display: block;
@@ -1019,9 +1022,12 @@ body:has(.home-hero) {
     padding: 4px 0;
     overflow: visible;
   }
+  .home-hero-title {
+    font-size: 36px;
+  }
   .home-swatch-chip {
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
   }
   .home-current-name {
     font-size: 26px;
