@@ -4,6 +4,7 @@ import {
   navigationKey,
   verifyResponse,
   VISITED_LIMIT,
+  VISITED_BYTES,
   rememberNetworkResponse,
   cachePrefix,
   assetResponse,
@@ -136,7 +137,7 @@ describe('offline pack integrity and lifecycle', () => {
   });
   it('evicts visited entries when their byte quota is exceeded', async () => {
     const s = await setup(),
-      body = 'x'.repeat(7 * 1048576);
+      body = 'x'.repeat(VISITED_BYTES / 2 + 1);
     await s.store.remember(origin + '/old', new Response(body));
     await s.store.remember(origin + '/new', new Response(body));
     expect(await s.store.match(origin + '/old')).toBeUndefined();
@@ -169,7 +170,24 @@ describe('offline pack integrity and lifecycle', () => {
     for (let i = 0; i < VISITED_LIMIT + 2; i++)
       await s.store.remember(origin + '/media/' + i, new Response('x'));
     expect(await s.store.match(origin + '/media/0')).toBeUndefined();
-    expect(await s.store.match(origin + '/media/101')).toBeDefined();
+    expect(await s.store.match(origin + '/media/' + (VISITED_LIMIT + 1))).toBeDefined();
+  });
+  it('evicts visited responses by bytes, including ones kept by an earlier worker', async () => {
+    const s = await setup(),
+      half = () => new Response(new Uint8Array(VISITED_BYTES / 2 + 1));
+    await s.store.remember(origin + '/media/a', half());
+    // A restarted service worker builds a new store over the same caches.
+    const restarted = createOfflineStore(s.manifest, {
+      storage: s.memory as unknown as CacheStorage,
+      origin,
+      nonce: () => 'restart',
+      fetch: s.fetch,
+    });
+    await restarted.remember(origin + '/media/b', half());
+    expect(await restarted.match(origin + '/media/a')).toBeUndefined();
+    expect((await restarted.match(origin + '/media/b'))?.headers.get('X-Visited-Bytes')).toBe(
+      String(VISITED_BYTES / 2 + 1),
+    );
   });
   it('removes only current pack, retains unrelated app caches and visited pages', async () => {
     const s = await setup();

@@ -1,6 +1,10 @@
 import type { OfflineAsset, OfflineManifest, OfflineProgress } from './messages';
-export const VISITED_LIMIT = 100,
-  VISITED_BYTES = 12 * 1024 * 1024;
+// A Studio room is 50–130 layer files (2–4 MB); the visited cache holds every
+// room plus browsed pages, so switching back to a room never refetches it.
+export const VISITED_LIMIT = 1000,
+  VISITED_BYTES = 64 * 1024 * 1024;
+// Each visited entry carries its size, so eviction never re-reads cached bodies.
+const VISITED_SIZE_HEADER = 'X-Visited-Bytes';
 export function cachePrefix(brandId: string) {
   return `porta:${brandId}:`;
 }
@@ -140,24 +144,53 @@ export function createOfflineStore(manifest: OfflineManifest, env: OfflineEnviro
       }
     return undefined;
   }
-  async function remember(request: Request | string, response: Response) {
+  // Visited URL → bytes, oldest first; read from the cache once per worker start.
+  let visited: Promise<Map<string, number>> | null = null,
+    remembering: Promise<void> = Promise.resolve();
+  function visitedSizes(cache: Cache) {
+    visited ??= (async () => {
+      const sizes = new Map<string, number>();
+      for (const key of await cache.keys()) {
+        const hit = await cache.match(key);
+        if (hit)
+          sizes.set(
+            key.url,
+            Number(hit.headers.get(VISITED_SIZE_HEADER)) || (await hit.arrayBuffer()).byteLength,
+          );
+      }
+      return sizes;
+    })();
+    return visited;
+  }
+  async function rememberNow(request: Request | string, response: Response) {
     if (!response.ok || response.type === 'opaque') return;
-    const size = (await response.clone().arrayBuffer()).byteLength;
-    if (size > VISITED_BYTES) return;
-    const cache = await env.storage.open(runtimeName);
-    await cache.delete(request);
-    await cache.put(request, response);
-    const keys = [...(await cache.keys())];
-    let total = 0;
-    const sizes = await Promise.all(
-      keys.map(async k => (await (await cache.match(k))!.arrayBuffer()).byteLength),
+    const body = await response.arrayBuffer();
+    if (body.byteLength > VISITED_BYTES) return;
+    const headers = new Headers(response.headers);
+    headers.set(VISITED_SIZE_HEADER, String(body.byteLength));
+    const cache = await env.storage.open(runtimeName),
+      sizes = await visitedSizes(cache),
+      key = new URL(typeof request === 'string' ? request : request.url, env.origin).href;
+    await cache.put(
+      request,
+      new Response(body, { status: response.status, statusText: response.statusText, headers }),
     );
-    for (const n of sizes) total += n;
-    while (keys.length > VISITED_LIMIT || total > VISITED_BYTES) {
-      const oldest = keys.shift()!;
-      total -= sizes.shift()!;
+    sizes.delete(key);
+    sizes.set(key, body.byteLength);
+    let total = 0;
+    for (const n of sizes.values()) total += n;
+    for (const [oldest, n] of sizes) {
+      if (sizes.size <= VISITED_LIMIT && total <= VISITED_BYTES) break;
+      sizes.delete(oldest);
+      total -= n;
       await cache.delete(oldest);
     }
+  }
+  // One at a time: a room switch remembers dozens of layers at once.
+  function remember(request: Request | string, response: Response) {
+    const run = remembering.then(() => rememberNow(request, response));
+    remembering = run.catch(() => {});
+    return run;
   }
   async function cachedPages() {
     const pack = await activePack(),
