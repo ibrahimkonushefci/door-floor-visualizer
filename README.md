@@ -53,7 +53,7 @@ pnpm build && pnpm verify:export && pnpm verify:budgets
 
 ## Hosting
 
-Serve `out/` from any static host with directory `index.html` resolution and a real 404. Serve `/sw.js`, `/offline-manifest.json`, `/build-info.json` and HTML with `no-cache`; `/_next/static/` is immutable; serve `.wasm` as `application/wasm`. Do not use a single-page-app catch-all rewrite. Going live (`demoMode: false`) requires a public HTTPS `siteUrl` and verified contacts.
+Serve `out/` from any static host with directory `index.html` resolution and a real 404. Serve `/sw.js`, `/offline-manifest.json`, `/build-info.json` and HTML with `no-cache`; `/_next/static/` and revisioned `/media/` and `/brand/` files (with a `?rev=` key) are immutable; serve `.wasm` as `application/wasm`. Do not use a single-page-app catch-all rewrite. Going live (`demoMode: false`) requires a public HTTPS `siteUrl` and verified contacts.
 
 ## Licensing reminder
 
